@@ -1,0 +1,74 @@
+
+
+.. _example_experiments_pupillometry_experiment.py:
+
+
+==========================================
+Experiment using eye-tracking pupillometry
+==========================================
+
+Integration with Eyelink functionality makes programming experiments
+using eye-tracking simpler.
+
+
+
+.. image:: images/pupillometry_experiment_001.png
+    :align: center
+
+
+**Script output**::
+
+  2015-05-18 11:20:44,414 - INFO  - Expyfun: Setting up Pyglet audio
+  2015-05-18 11:20:44,457 - INFO  - Expyfun: Setting up screen
+  2015-05-18 11:20:44,697 - EXP   - Expyfun: Set screen visibility True
+  2015-05-18 11:20:44,710 - INFO  - Expyfun: Initializing dummy triggering mode
+  2015-05-18 11:20:44,714 - INFO  - Expyfun: Initialization complete
+  2015-05-18 11:20:44,714 - EXP   - Expyfun: Subject: foo
+  2015-05-18 11:20:44,714 - EXP   - Expyfun: Session: 001
+  2015-05-18 11:20:44,714 - INFO  - EyeLink: Initializing on None
+  2015-05-18 11:20:44,715 - INFO  - Eyelink: Running experiment on a version Dummy tracker.
+  2015-05-18 11:20:44,833 - INFO  - Eyelink: Stopping recording
+  2015-05-18 11:20:44,834 - INFO  - Eyelink: Closing file
+  2015-05-18 11:20:44,834 - INFO  - Eyelink: Stopping recording
+  2015-05-18 11:20:44,834 - INFO  - Eyelink: Closing file
+  2015-05-18 11:20:44,835 - INFO  - Eyelink: Opening remote file with filename 112044
+  2015-05-18 11:20:45,076 - INFO  - EyeLink: Entering calibration
+  2015-05-18 11:20:45,111 - INFO  - EyeLink: Completed calibration
+  2015-05-18 11:20:45,894 - EXP   - Expyfun: Buffer cleared
+  2015-05-18 11:20:46,894 - EXP   - Expyfun: Stamp trial ID to el_id  : [1]
+  2015-05-18 11:20:46,894 - EXP   - Expyfun: Stamp trial ID to ec_id  : FPDR_01
+  2015-05-18 11:20:46,894 - EXP   - Expyfun: Stamp trial ID to ttl_id : ()
+  ...
+
+
+
+**Python source code:** :download:`pupillometry_experiment.py <pupillometry_experiment.py>`
+
+.. literalinclude:: pupillometry_experiment.py
+    :lines: 9-
+
+**Total running time of the example:**   31 seconds
+
+.. raw:: html
+
+    <div class="social-button-container">
+        <div class="social-button">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        </div>
+        <div class="social-button">
+            <g:plusone annotation="inline" width="120" size="medium"></g:plusone>
+        </div>
+        <div class="social-button">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
+        </div>
+    </div>
+    

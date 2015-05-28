@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>expyfun.stimuli.convolve_hrtf &mdash; Expyfun 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Expyfun 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="expyfun.stimuli.compute_mls_impulse_response" href="expyfun.stimuli.compute_mls_impulse_response.html" />
+    <link rel="prev" title="expyfun.wait_secs" href="expyfun.wait_secs.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="expyfun.stimuli.compute_mls_impulse_response.html" title="expyfun.stimuli.compute_mls_impulse_response"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="expyfun.wait_secs.html" title="expyfun.wait_secs"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Expyfun 2.0.0.dev0 documentation</a> &raquo;</li>
+          <li><a href="../expyfun.html" >Expyfun</a> &raquo;</li>
+          <li><a href="../python_reference.html" accesskey="U">API Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="expyfun-stimuli-convolve-hrtf">
+<h1>expyfun.stimuli.convolve_hrtf<a class="headerlink" href="#expyfun-stimuli-convolve-hrtf" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="expyfun.stimuli.convolve_hrtf">
+<tt class="descclassname">expyfun.stimuli.</tt><tt class="descname">convolve_hrtf</tt><big>(</big><em>data</em>, <em>fs</em>, <em>angle</em>, <em>source='barb'</em><big>)</big><a class="headerlink" href="#expyfun.stimuli.convolve_hrtf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convolve a signal with a head-related transfer function</p>
+<p>Technically we will be convolving with binaural room impluse
+responses (BRIRs), but HRTFs (freq-domain equiv. representations)
+are the common terminology.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : 1-dimensional or 1xN array-like</p>
+<blockquote>
+<div><p>Data to operate on.</p>
+</div></blockquote>
+<p><strong>fs</strong> : float</p>
+<blockquote>
+<div><p>The sample rate of the data. (HRTFs will be resampled if necessary.)</p>
+</div></blockquote>
+<p><strong>angle</strong> : float</p>
+<blockquote>
+<div><p>The azimuthal angle of the HRTF.</p>
+</div></blockquote>
+<p><strong>source</strong> : str</p>
+<blockquote>
+<div><p>Source to use for HRTFs. Currently <cite>&#8216;barb&#8217;</cite> and <cite>&#8216;cipic&#8217;</cite> are
+supported. The former is default for legacy purpose. The latter is
+recommended for new experiments.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>data_hrtf</strong> : array</p>
+<blockquote class="last">
+<div><p>A 2D array <tt class="docutils literal"><span class="pre">shape=(2,</span> <span class="pre">n_samples)</span></tt> containing the convolved data.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>CIPIC data downloaded from:</p>
+<blockquote>
+<div><a class="reference external" href="http://earlab.bu.edu/databases/collections/cipic/Default.aspx">http://earlab.bu.edu/databases/collections/cipic/Default.aspx</a>.</div></blockquote>
+<p>Additional documentation:</p>
+<blockquote>
+<div><a class="reference external" href="http://earlab.bu.edu/databases/collections/cipic/documentation/hrir_data_documentation.pdf">http://earlab.bu.edu/databases/collections/cipic/documentation/hrir_data_documentation.pdf</a>  # noqa</div></blockquote>
+<p>The data were modified to suit our experimental needs. Below is the
+liceneing information for the CIPIC data:</p>
+<p><strong>Copyright</strong></p>
+<p>Copyright (c) 2001 The Regents of the University of California. All Rights
+Reserved.</p>
+<p><strong>Disclaimer</strong></p>
+<p>THE REGENTS OF THE UNIVERSITY OF CALIFORNIA MAKE NO REPRESENTATION OR
+WARRANTIES WITH RESPECT TO THE CONTENTS HEREOF AND SPECIFICALLY DISCLAIM
+ANY IMPLIED WARRANTIES OR MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR
+PURPOSE.</p>
+<p>Further, the Regents of the University of California reserve the right to
+revise this software and/or documentation and to make changes from time to
+time in the content hereof without obligation of the Regents of the
+University of California to notify any person of such revision or change.</p>
+<p>Use of Materials
+The Regents of the University of California hereby grant users permission
+to reproduce and/or use materials available therein for any purpose-
+educational, research or commercial. However, each reproduction of any part
+of the materials must include the copyright notice, if it is present.</p>
+<p>In addition, as a courtesy, if these materials are used in published
+research, this use should be acknowledged in the publication. If these
+materials are used in the development of commercial products, the Regents
+of the University of California request that written acknowledgment of such
+use be sent to:</p>
+<p>CIPIC- Center for Image Processing and Integrated Computing University of
+California 1 Shields Avenue Davis, CA 95616-8553</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2015, Expyfun Developers.
+      Last updated on May 18, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

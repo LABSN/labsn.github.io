@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>What’s new &mdash; Expyfun 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="Expyfun 2.0.0.dev0 documentation" href="index.html" />
+    <link rel="up" title="Expyfun" href="expyfun.html" />
+    <link rel="prev" title="expyfun.set_config" href="generated/expyfun.set_config.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="generated/expyfun.set_config.html" title="expyfun.set_config"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Expyfun 2.0.0.dev0 documentation</a> &raquo;</li>
+          <li><a href="expyfun.html" accesskey="U">Expyfun</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="what-s-new">
+<h1>What&#8217;s new<a class="headerlink" href="#what-s-new" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="current">
+<span id="changes-4-0-dev0"></span><h2>Current<a class="headerlink" href="#current" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="changelog">
+<h3>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>change description by <a href="#id2"><span class="problematic" id="id3">`Author`_</span></a>.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="bug">
+<h3>BUG<a class="headerlink" href="#bug" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>change description by <a href="#id4"><span class="problematic" id="id5">`Author`_</span></a>.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="api">
+<h3>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>API change description.</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="version-3-0-0">
+<span id="changes-3-0-0"></span><h2>Version 3.0.0<a class="headerlink" href="#version-3-0-0" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Changelog<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>Support for parallelization via <tt class="docutils literal"><span class="pre">joblib</span></tt>.</li>
+<li>New stimulus generation methods for vocoding.</li>
+<li>New response method: mouse position / mouse clicks.</li>
+<li>New visual classes <tt class="docutils literal"><span class="pre">RawImage</span></tt>, <tt class="docutils literal"><span class="pre">Triangle</span></tt>, <tt class="docutils literal"><span class="pre">Diamond</span></tt>, <tt class="docutils literal"><span class="pre">ConcentricCircles</span></tt> and <tt class="docutils literal"><span class="pre">FixationDot</span></tt>.</li>
+<li>New <tt class="docutils literal"><span class="pre">assert_version</span></tt> function allows experiment scripts to be tied to specific commit hashes.</li>
+<li>Improved <tt class="docutils literal"><span class="pre">hdf5</span></tt> input/output using <tt class="docutils literal"><span class="pre">expyfun.io.read_hdf5</span></tt> and <tt class="docutils literal"><span class="pre">write_hdf5</span></tt>.</li>
+<li>Inline formatting of screen text via pyglet&#8217;s <tt class="docutils literal"><span class="pre">decode_attributed</span></tt> markup scheme.</li>
+<li>Support for Cedrus button boxes.</li>
+<li>Trial sequence safeguard functions added: <tt class="docutils literal"><span class="pre">identify_trial</span></tt> must proceed <tt class="docutils literal"><span class="pre">start_stimulus</span></tt> which must proceed <tt class="docutils literal"><span class="pre">trial_ok</span></tt>.</li>
+<li>Exposed trial metadata through properties <tt class="docutils literal"><span class="pre">ExperimentController.participant</span></tt>, <tt class="docutils literal"><span class="pre">session</span></tt>, <tt class="docutils literal"><span class="pre">exp_name</span></tt>, and <tt class="docutils literal"><span class="pre">data_fname</span></tt>.</li>
+<li>New EyeLink &#8220;dummy mode&#8221; for smoother testing when EyeLink not available.</li>
+<li>Parsing function <tt class="docutils literal"><span class="pre">read_tab</span></tt> for collapsing <tt class="docutils literal"><span class="pre">ExperimentController</span></tt> output to wide-format CSV.</li>
+<li>New conversion functions <tt class="docutils literal"><span class="pre">decimals_to_binary</span></tt> and <tt class="docutils literal"><span class="pre">binary_to_decimals</span></tt>.</li>
+<li>New analysis functions <tt class="docutils literal"><span class="pre">object_diff</span></tt>, <tt class="docutils literal"><span class="pre">press_times_to_hmfc</span></tt>, and <tt class="docutils literal"><span class="pre">rt_chiqsq</span></tt>.</li>
+<li>Improved <tt class="docutils literal"><span class="pre">barplot</span></tt> function, including better bracket collision avoidance and support for various p-value formatting schemes.</li>
+<li>New codeblocks for finding pupil dilation impulse response.</li>
+<li>Integration of HRTFs from CIPIC and BU databases for simulated spatial origins.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="api-changes-summary">
+<h3>API changes summary<a class="headerlink" href="#api-changes-summary" title="Permalink to this headline">¶</a></h3>
+<p>Here are the code migration instructions when upgrading from expyfun
+version 2.0.0:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The biggest difference is the required use of <tt class="docutils literal"><span class="pre">identify_trial</span></tt>, <tt class="docutils literal"><span class="pre">start_stimulus</span></tt>, and <tt class="docutils literal"><span class="pre">trial_ok</span></tt> (in that order) in all scripts using <tt class="docutils literal"><span class="pre">ExperimentController</span></tt>. See the example scripts and documentation for further guidance.</li>
+<li>Removed support for stamping via parallel port (insufficient testing).</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="authors">
+<h3>Authors<a class="headerlink" href="#authors" title="Permalink to this headline">¶</a></h3>
+<p>The committer list for this release is the following (preceded by number
+of commits):</p>
+<blockquote>
+<div><ul class="simple">
+<li>223 <a class="reference external" href="http://faculty.washington.edu/larsoner/">Eric Larson</a></li>
+<li>88  <a class="reference external" href="http://dan.mccloy.info/">Daniel McCloy</a></li>
+<li>72  <a class="reference external" href="http://faculty.washington.edu/rkmaddox/">Ross Maddox</a></li>
+<li>6  <a class="reference external" href="http://ilabs.washington.edu/research-staff/bio/i-labs-lindsey-kishline">Lindsey Kishline</a></li>
+<li>3  <a class="reference external" href="http://ilabs.washington.edu/research-staff/bio/i-labs-dean-pospisil">Dean Pospisil</a></li>
+<li>3  <a class="reference external" href="http://ilabs.washington.edu/graduate-students/bio/i-labs-mark-wronkiewicz">Mark Wronkewicz</a></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2015, Expyfun Developers.
+      Last updated on May 18, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

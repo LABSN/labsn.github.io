@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Generate sample stimuli &mdash; Expyfun 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Expyfun 2.0.0.dev0 documentation" href="../../index.html" />
+    <link rel="up" title="Examples" href="../index.html" />
+    <link rel="next" title="API Reference" href="../../python_reference.html" />
+    <link rel="prev" title="Generate vocoded stimuli" href="vocoded_stimuli.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="../../python_reference.html" title="API Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="vocoded_stimuli.html" title="Generate vocoded stimuli"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Expyfun 2.0.0.dev0 documentation</a> &raquo;</li>
+          <li><a href="../../expyfun.html" >Expyfun</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="generate-sample-stimuli">
+<span id="example-stimuli-generate-stimuli-py"></span><h1>Generate sample stimuli<a class="headerlink" href="#generate-sample-stimuli" title="Permalink to this headline">¶</a></h1>
+<p>This shows how to generate some simple stimuli. It will also play a couple
+of sample stimuli.</p>
+<p class="horizontal"><strong>Python source code:</strong> <a class="reference download internal" href="../../_downloads/generate_stimuli.py"><tt class="xref download docutils literal"><span class="pre">generate_stimuli.py</span></tt></a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">op</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">expyfun.io</span> <span class="kn">import</span> <a href="../../generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5"><span class="n">write_hdf5</span></a><span class="p">,</span> <a href="../../generated/expyfun.io.write_wav.html#expyfun.io.write_wav"><span class="n">write_wav</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="kn">import</span> <a href="../../generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound"><span class="n">play_sound</span></a>
+
+<span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">generate_stimuli</span><span class="p">(</span><span class="n">num_trials</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">num_freqs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">stim_dur</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">min_freq</span><span class="o">=</span><span class="mf">500.0</span><span class="p">,</span>
+                     <span class="n">max_freq</span><span class="o">=</span><span class="mf">4000.0</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="mf">24414.0625</span><span class="p">,</span> <span class="n">rms</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="s">&#39;.&#39;</span><span class="p">,</span>
+                     <span class="n">save_as</span><span class="o">=</span><span class="s">&#39;hdf5&#39;</span><span class="p">,</span> <span class="n">rand_seed</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Make some sine waves and save in various formats. Optimized for saving</span>
+<span class="sd">    as MAT files, but can also save directly as WAV files, or can return a</span>
+<span class="sd">    python dictionary with sinewave data as values.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    num_trials : int</span>
+<span class="sd">        Number of trials you want in your experiment. Ignored if save_as is</span>
+<span class="sd">        not &#39;mat&#39;.</span>
+<span class="sd">    num_freqs : int</span>
+<span class="sd">        Number of frequencies (equally-spaced on a log2-scale) at which to</span>
+<span class="sd">        generate tones.</span>
+<span class="sd">    stim_dur : float</span>
+<span class="sd">        Duration of the tones in seconds.</span>
+<span class="sd">    min_freq : float</span>
+<span class="sd">        Frequency of the lowest tone in Hertz.</span>
+<span class="sd">    max_freq : float</span>
+<span class="sd">        Frequency of the highest tone in Hertz.</span>
+<span class="sd">    fs : float | None</span>
+<span class="sd">        Sampling frequency of resulting sinewaves.  Defaults to 24414.0625 (a</span>
+<span class="sd">        standard rate for TDTs).</span>
+<span class="sd">    rms : float</span>
+<span class="sd">        RMS amplitude to which all sinwaves will be scaled.</span>
+<span class="sd">    output_dir : str</span>
+<span class="sd">        Directory to output the files into.</span>
+<span class="sd">    save_as : str</span>
+<span class="sd">        Format in which to return the sinewaves. &#39;dict&#39; returns sinewave arrays</span>
+<span class="sd">        as values in a python dictionary; &#39;wav&#39; saves them as WAV files at</span>
+<span class="sd">        sampling frequency &#39;fs&#39;; &#39;mat&#39; saves them as a MAT file along with</span>
+<span class="sd">        related variables &#39;fs&#39;, &#39;freqs&#39;, &#39;trial_order&#39;, and &#39;rms&#39;.</span>
+<span class="sd">    rand_seed : int | None</span>
+<span class="sd">        Seed for the random number generator.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    wavs : dict | None</span>
+<span class="sd">        The stimulus dictionary.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">rand_seed</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="n">rand_seed</span><span class="p">)</span>
+
+    <span class="c"># check input arguments</span>
+    <span class="k">if</span> <span class="n">save_as</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;dict&#39;</span><span class="p">,</span> <span class="s">&#39;wav&#39;</span><span class="p">,</span> <span class="s">&#39;hdf5&#39;</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&#39;&quot;save_as&quot; must be &quot;dict&quot;, &quot;wav&quot;, or &quot;hdf5&quot;&#39;</span><span class="p">)</span>
+
+    <span class="n">fs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>
+    <span class="n">t</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">stim_dur</span> <span class="o">*</span> <span class="n">fs</span><span class="p">))</span> <span class="o">/</span> <span class="n">fs</span>
+
+    <span class="c"># frequencies equally spaced on a log-2 scale</span>
+    <span class="n">freqs</span> <span class="o">=</span> <span class="n">min_freq</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.log2.html#numpy.log2"><span class="n">np</span><span class="o">.</span><span class="n">log2</span></a><span class="p">(</span><span class="n">max_freq</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">min_freq</span><span class="p">)),</span>
+                                   <span class="n">num_freqs</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+    <span class="c"># strings for the filenames / dictionary keys</span>
+    <span class="n">freq_names</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">freqs</span><span class="p">]</span>
+    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;stim_</span><span class="si">%s</span><span class="s">_</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">freq_names</span><span class="p">)]</span>
+
+    <span class="c"># generate sinewaves &amp; RMS normalize</span>
+    <span class="n">wavs</span> <span class="o">=</span> <span class="p">[</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sin.html#numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">f</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">freqs</span><span class="p">]</span>
+    <span class="n">wavs</span> <span class="o">=</span> <span class="p">[</span><span class="n">rms</span> <span class="o">/</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sqrt.html#numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.mean.html#numpy.mean"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">w</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">wavs</span><span class="p">]</span>
+
+    <span class="c"># collect into dictionary &amp; save</span>
+    <span class="n">wav_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="n">w</span> <span class="k">for</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">wavs</span><span class="p">)}</span>
+    <span class="k">if</span> <span class="n">save_as</span> <span class="o">==</span> <span class="s">&#39;hdf5&#39;</span><span class="p">:</span>
+        <span class="n">num_reps</span> <span class="o">=</span> <span class="n">num_trials</span> <span class="o">//</span> <span class="n">num_freqs</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">trials</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.tile.html#numpy.tile"><span class="n">np</span><span class="o">.</span><span class="n">tile</span></a><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_freqs</span><span class="p">),</span> <span class="n">num_reps</span><span class="p">)</span>
+        <span class="n">trial_order</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">trials</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">num_trials</span><span class="p">])</span>
+        <span class="n">wav_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s">&#39;trial_order&#39;</span><span class="p">:</span> <span class="n">trial_order</span><span class="p">,</span> <span class="s">&#39;freqs&#39;</span><span class="p">:</span> <span class="n">freqs</span><span class="p">,</span> <span class="s">&#39;fs&#39;</span><span class="p">:</span> <span class="n">fs</span><span class="p">,</span>
+                         <span class="s">&#39;rms&#39;</span><span class="p">:</span> <span class="n">rms</span><span class="p">})</span>
+        <a href="../../generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5"><span class="n">write_hdf5</span></a><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s">&#39;equally_spaced_sinewaves.hdf5&#39;</span><span class="p">),</span>
+                   <span class="n">wav_dict</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">save_as</span> <span class="o">==</span> <span class="s">&#39;wav&#39;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+            <a href="../../generated/expyfun.io.write_wav.html#expyfun.io.write_wav"><span class="n">write_wav</span></a><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="s">&#39;.wav&#39;</span><span class="p">),</span> <span class="n">wav_dict</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">wav_dict</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">wav_dict</span> <span class="o">=</span> <span class="n">generate_stimuli</span><span class="p">()</span>
+    <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.ion"><span class="n">plt</span><span class="o">.</span><span class="n">ion</span></a><span class="p">()</span>
+    <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">wav_dict</span><span class="p">[</span><span class="s">&#39;stim_0_500&#39;</span><span class="p">][:</span><span class="mi">1000</span><span class="p">])</span>
+    <a href="../../generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound"><span class="n">play_sound</span></a><span class="p">(</span><span class="n">wav_dict</span><span class="p">[</span><span class="s">&#39;stim_0_500&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the example:</strong>    0 seconds</p>
+<div class="social-button-container">
+    <div class="social-button">
+        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+    </div>
+    <div class="social-button">
+        <g:plusone annotation="inline" width="120" size="medium"></g:plusone>
+    </div>
+    <div class="social-button">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
+    </div>
+</div></div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2015, Expyfun Developers.
+      Last updated on May 18, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

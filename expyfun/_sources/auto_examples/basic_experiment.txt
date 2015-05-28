@@ -1,0 +1,69 @@
+
+
+.. _example_basic_experiment.py:
+
+
+===========================
+Run a very basic experiment
+===========================
+
+This example demonstrates an (almost) minimum working example of the
+ExperimentController class.
+
+
+
+.. image:: images/basic_experiment_001.png
+    :align: center
+
+
+**Script output**::
+
+  2015-05-18 11:20:34,676 - INFO  - Expyfun: Setting up Pyglet audio
+  2015-05-18 11:20:34,747 - INFO  - Expyfun: Setting up screen
+  2015-05-18 11:20:35,002 - EXP   - Expyfun: Set screen visibility True
+  2015-05-18 11:20:35,021 - INFO  - Expyfun: Initializing dummy triggering mode
+  2015-05-18 11:20:35,025 - INFO  - Expyfun: Initialization complete
+  2015-05-18 11:20:35,025 - EXP   - Expyfun: Subject: foo
+  2015-05-18 11:20:35,025 - EXP   - Expyfun: Session: 001
+  2015-05-18 11:20:36,257 - EXP   - Expyfun: Buffer cleared
+  2015-05-18 11:20:36,267 - EXP   - Expyfun: Loading 48830 samples to buffer
+  2015-05-18 11:20:36,289 - EXP   - Expyfun: Stamp trial ID to ec_id  : tone
+  2015-05-18 11:20:36,289 - EXP   - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+  2015-05-18 11:20:36,348 - EXP   - Expyfun: Starting stimuli: flipping screen and playing audio
+  2015-05-18 11:20:37,384 - EXP   - Expyfun: Audio stopped and reset.
+  Presses:
+  [('8', 0.1411590576171875), ('8', 0.46102023124694824), ('8', 0.6609981060028076)]
+  2015-05-18 11:20:37,397 - EXP   - Expyfun: Audio stopped and reset.
+
+
+
+**Python source code:** :download:`basic_experiment.py <basic_experiment.py>`
+
+.. literalinclude:: basic_experiment.py
+    :lines: 9-
+
+**Total running time of the example:**    3 seconds
+
+.. raw:: html
+
+    <div class="social-button-container">
+        <div class="social-button">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        </div>
+        <div class="social-button">
+            <g:plusone annotation="inline" width="120" size="medium"></g:plusone>
+        </div>
+        <div class="social-button">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
+        </div>
+    </div>
+    

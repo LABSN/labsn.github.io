@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>expyfun.analyze.barplot &mdash; Expyfun 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Expyfun 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="expyfun.analyze.dprime" href="expyfun.analyze.dprime.html" />
+    <link rel="prev" title="expyfun.codeblocks.find_pupil_tone_impulse_response" href="expyfun.codeblocks.find_pupil_tone_impulse_response.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="expyfun.analyze.dprime.html" title="expyfun.analyze.dprime"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="expyfun.codeblocks.find_pupil_tone_impulse_response.html" title="expyfun.codeblocks.find_pupil_tone_impulse_response"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Expyfun 2.0.0.dev0 documentation</a> &raquo;</li>
+          <li><a href="../expyfun.html" >Expyfun</a> &raquo;</li>
+          <li><a href="../python_reference.html" accesskey="U">API Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="expyfun-analyze-barplot">
+<h1>expyfun.analyze.barplot<a class="headerlink" href="#expyfun-analyze-barplot" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="expyfun.analyze.barplot">
+<tt class="descclassname">expyfun.analyze.</tt><tt class="descname">barplot</tt><big>(</big><em>h</em>, <em>axis=-1</em>, <em>ylim=None</em>, <em>err_bars=None</em>, <em>lines=False</em>, <em>groups=None</em>, <em>eq_group_widths=False</em>, <em>gap_size=0.2</em>, <em>brackets=None</em>, <em>bracket_text=None</em>, <em>bracket_group_lines=False</em>, <em>bar_names=None</em>, <em>group_names=None</em>, <em>bar_kwargs=None</em>, <em>err_kwargs=None</em>, <em>line_kwargs=None</em>, <em>bracket_kwargs=None</em>, <em>figure_kwargs=None</em>, <em>smart_defaults=True</em>, <em>fname=None</em>, <em>ax=None</em><big>)</big><a class="headerlink" href="#expyfun.analyze.barplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes barplots w/ optional line overlays, grouping, &amp; signif. brackets.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>h</strong> : array-like</p>
+<blockquote>
+<div><p>If <tt class="docutils literal"><span class="pre">h</span></tt> is 2-dimensional, heights will be calculated as means along
+the axis given by <tt class="docutils literal"><span class="pre">axis</span></tt>. If <tt class="docutils literal"><span class="pre">h</span></tt> is of lower dimension, it is
+treated as raw height values. If <tt class="docutils literal"><span class="pre">h</span></tt> is a pandas <tt class="docutils literal"><span class="pre">DataFrame</span></tt> and
+<tt class="docutils literal"><span class="pre">bar_names</span></tt> is None, <tt class="docutils literal"><span class="pre">bar_names</span></tt> will be inferred from the
+<tt class="docutils literal"><span class="pre">DataFrame</span></tt>&#8216;s <tt class="docutils literal"><span class="pre">column</span></tt> labels (if <tt class="docutils literal"><span class="pre">axis=0</span></tt>) or <tt class="docutils literal"><span class="pre">index</span></tt> labels.</p>
+</div></blockquote>
+<p><strong>axis</strong> : int</p>
+<blockquote>
+<div><p>The axis along which to calculate mean values to determine bar heights.
+Ignored if <tt class="docutils literal"><span class="pre">h</span></tt> is 0- or 1-dimensional.</p>
+</div></blockquote>
+<p><strong>ylim</strong> : tuple | None</p>
+<blockquote>
+<div><p>y-axis limits passed to <tt class="docutils literal"><span class="pre">matplotlib.pyplot.subplot.set_ylim()</span></tt>.</p>
+</div></blockquote>
+<p><strong>err_bars</strong> : str | array-like | None</p>
+<blockquote>
+<div><p>Type of error bars to be added to the barplot. Possible values are
+<tt class="docutils literal"><span class="pre">'sd'</span></tt> for sample standard deviation, <tt class="docutils literal"><span class="pre">'se'</span></tt> for standard error of
+the mean, or <tt class="docutils literal"><span class="pre">'ci'</span></tt> for 95% confidence interval. If <tt class="docutils literal"><span class="pre">None</span></tt>, no
+error bars will be plotted. Custom error bar heights are possible by
+passing an array-like object; in such cases <tt class="docutils literal"><span class="pre">err_bars</span></tt> must have the
+same dimensionality and shape as <tt class="docutils literal"><span class="pre">h</span></tt>.</p>
+</div></blockquote>
+<p><strong>lines</strong> : bool</p>
+<blockquote>
+<div><p>Whether to plot within-subject data as lines overlaid on the barplot.</p>
+</div></blockquote>
+<p><strong>groups</strong> : list | None</p>
+<blockquote>
+<div><p>List of lists containing the integers in <tt class="docutils literal"><span class="pre">range(num_bars)</span></tt>, with
+sub-lists indicating the desired grouping. For example, if <tt class="docutils literal"><span class="pre">h</span></tt> has
+has shape (10, 4) and <tt class="docutils literal"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">-1</span></tt> then &#8220;num_bars&#8221; is 4; if you want
+the first bar isolated and the remaining three grouped, then specify
+<tt class="docutils literal"><span class="pre">groups=[[0],</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]]</span></tt>.</p>
+</div></blockquote>
+<p><strong>eq_group_widths</strong> : bool</p>
+<blockquote>
+<div><p>Should all groups have the same width? If <tt class="docutils literal"><span class="pre">False</span></tt>, all bars will have
+the same width. Ignored if <tt class="docutils literal"><span class="pre">groups=None</span></tt>, since the bar/group
+distinction is meaningless in that case.</p>
+</div></blockquote>
+<p><strong>gap_size</strong> : float</p>
+<blockquote>
+<div><p>Width of the gap between groups (if <tt class="docutils literal"><span class="pre">eq_group_width</span> <span class="pre">=</span> <span class="pre">True</span></tt>) or
+between bars, expressed as a proportion [0,1) of group or bar width.</p>
+</div></blockquote>
+<p><strong>brackets</strong> : list of tuples | None</p>
+<blockquote>
+<div><p>Location of significance brackets. Scheme is similar to <tt class="docutils literal"><span class="pre">grouping</span></tt>;
+if you want a bracket between the first and second bar and another
+between the third and fourth bars, specify as [(0, 1), (2, 3)]. If you
+want brackets between groups of bars instead of between bars, indicate
+the groups as lists within the tuple: [([0, 1], [2, 3])].
+For best results, pairs of adjacent bars should come earlier in the
+list than non-adjacent pairs.</p>
+</div></blockquote>
+<p><strong>bracket_text</strong> : str | list | None</p>
+<blockquote>
+<div><p>Text to display above brackets.</p>
+</div></blockquote>
+<p><strong>bracket_group_lines</strong> : bool</p>
+<blockquote>
+<div><p>When drawing brackets between groups rather than single bars, should a
+horizontal line be drawn at each foot of the bracket to indicate this?</p>
+</div></blockquote>
+<p><strong>bar_names</strong> : array-like | None</p>
+<blockquote>
+<div><p>Optional axis labels for each bar.</p>
+</div></blockquote>
+<p><strong>group_names</strong> : array-like | None</p>
+<blockquote>
+<div><p>Optional axis labels for each group.</p>
+</div></blockquote>
+<p><strong>bar_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>Arguments passed to <tt class="docutils literal"><span class="pre">matplotlib.pyplot.bar()</span></tt> (ex: color, linewidth).</p>
+</div></blockquote>
+<p><strong>err_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>Arguments passed to <tt class="docutils literal"><span class="pre">matplotlib.pyplot.bar(error_kw)</span></tt> (ex: ecolor,
+capsize).</p>
+</div></blockquote>
+<p><strong>line_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>Arguments passed to <tt class="docutils literal"><span class="pre">matplotlib.pyplot.plot()</span></tt> (e.g., color, marker,
+linestyle).</p>
+</div></blockquote>
+<p><strong>bracket_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>arguments passed to <tt class="docutils literal"><span class="pre">matplotlib.pyplot.plot()</span></tt> (e.g., color, marker,
+linestyle).</p>
+</div></blockquote>
+<p><strong>figure_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>arguments passed to <tt class="docutils literal"><span class="pre">matplotlib.pyplot.figure()</span></tt> (e.g., figsize, dpi,
+frameon).</p>
+</div></blockquote>
+<p><strong>smart_defaults</strong> : bool</p>
+<blockquote>
+<div><p>Whether to use pyplot default colors (<tt class="docutils literal"><span class="pre">False</span></tt>), or something more
+pleasing to the eye (<tt class="docutils literal"><span class="pre">True</span></tt>).</p>
+</div></blockquote>
+<p><strong>fname</strong> : str | None</p>
+<blockquote>
+<div><p>Path and name of output file. Type is inferred from <tt class="docutils literal"><span class="pre">fname</span></tt> and
+should work for any of the types supported by pyplot (pdf, eps,
+svg, png, raw).</p>
+</div></blockquote>
+<p><strong>ax</strong> : matplotlib.pyplot.axes | None</p>
+<blockquote>
+<div><p>A <tt class="docutils literal"><span class="pre">matplotlib.pyplot.axes</span></tt> instance.  If none, a new figure with a
+single subplot will be created.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>p</strong> : handle for the <tt class="docutils literal"><span class="pre">matplotlib.pyplot.subplot</span></tt> instance.</p>
+<p class="last"><strong>b</strong> : handle for the <tt class="docutils literal"><span class="pre">matplotlib.pyplot.bar</span></tt> instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<dl class="docutils">
+<dt>Known limitations:</dt>
+<dd><dl class="first last docutils">
+<dt>1 Bracket heights don&#8217;t get properly set when generating multiple</dt>
+<dd>subplots with <tt class="docutils literal"><span class="pre">sharey=True</span></tt> (matplotlib seems to temporarily force
+the <tt class="docutils literal"><span class="pre">ylim</span></tt> to +/- 0.6 in this case). Work around is to use
+<tt class="docutils literal"><span class="pre">sharey=False</span></tt> and manually set <tt class="docutils literal"><span class="pre">ylim</span></tt> for each subplot.</dd>
+<dt>2 Brackets that span groups cannot span partial groups. For example,</dt>
+<dd>if <tt class="docutils literal"><span class="pre">groups=[[0,</span> <span class="pre">1,</span> <span class="pre">2],</span> <span class="pre">[3,</span> <span class="pre">4]]</span></tt> it is impossible to have a bracket
+at <tt class="docutils literal"><span class="pre">[(0,</span> <span class="pre">1),</span> <span class="pre">(3,</span> <span class="pre">4)]</span></tt>...  it is only possible to do, e.g.,
+<tt class="docutils literal"><span class="pre">[0,</span> <span class="pre">(3,</span> <span class="pre">4)]</span></tt> (single bar vs group) or  <tt class="docutils literal"><span class="pre">[(0,</span> <span class="pre">1,</span> <span class="pre">2),</span> <span class="pre">(3,</span> <span class="pre">4)]</span></tt>
+(full group vs full group).</dd>
+<dt>3 Bracket drawing is much better when adjacent pairs of bars are</dt>
+<dd>specified before non-adjacent pairs of bars.</dd>
+</dl>
+</dd>
+<dt>Smart defaults sets the following parameters:</dt>
+<dd>bar color: light gray (70%)
+error bar color: black
+line color: black
+bracket color: dark gray (30%)</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2015, Expyfun Developers.
+      Last updated on May 18, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

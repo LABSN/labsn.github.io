@@ -1,0 +1,61 @@
+
+
+.. _example_experiments_mouse_demo.py:
+
+
+================
+Mouse click demo
+================
+
+This example demonstrates the different mouse click functionality
+in the ExperimentController class.
+
+
+
+.. image:: images/mouse_demo_001.png
+    :align: center
+
+
+**Script output**::
+
+  2015-05-18 11:21:27,814 - INFO  - Expyfun: Setting up Pyglet audio
+  2015-05-18 11:21:27,871 - INFO  - Expyfun: Setting up screen
+  2015-05-18 11:21:28,086 - EXP   - Expyfun: Set screen visibility True
+  2015-05-18 11:21:28,099 - INFO  - Expyfun: Initializing dummy triggering mode
+  2015-05-18 11:21:28,102 - INFO  - Expyfun: Initialization complete
+  2015-05-18 11:21:28,103 - EXP   - Expyfun: Subject: foo
+  2015-05-18 11:21:28,103 - EXP   - Expyfun: Session: 001
+  2015-05-18 11:21:46,798 - EXP   - Expyfun: Audio stopped and reset.
+
+
+
+**Python source code:** :download:`mouse_demo.py <mouse_demo.py>`
+
+.. literalinclude:: mouse_demo.py
+    :lines: 9-
+
+**Total running time of the example:**   19 seconds
+
+.. raw:: html
+
+    <div class="social-button-container">
+        <div class="social-button">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        </div>
+        <div class="social-button">
+            <g:plusone annotation="inline" width="120" size="medium"></g:plusone>
+        </div>
+        <div class="social-button">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
+        </div>
+    </div>
+    

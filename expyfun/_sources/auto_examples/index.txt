@@ -1,0 +1,476 @@
+
+
+
+.. raw:: html
+
+
+    <style type="text/css">
+    div#sidebarbutton {
+        /* hide the sidebar collapser, while ensuring vertical arrangement */
+        display: none;
+    }
+
+    .figure {
+        float: left;
+        margin: 10px;
+        width: auto;
+        height: 200px;
+        width: 180px;
+    }
+
+    .figure img {
+        display: inline;
+        }
+
+    .figure .caption {
+        width: 180px;
+        text-align: center !important;
+    }
+    </style>
+
+.. _examples-index:
+
+Examples
+========
+
+
+
+
+Basic examples
+--------------
+
+Some basic examples of how to use expyfun to show audio and visual stimuli.
+
+
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates an (almost) minimum working example of the ExperimentController class...">
+
+.. figure:: ./images/thumb/basic_experiment.png
+   :target: ./basic_experiment.html
+
+   :ref:`example_basic_experiment.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   ./basic_experiment
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates much of the basic functionality built into the ExperimentController c...">
+
+.. figure:: ./images/thumb/simple_experiment.png
+   :target: ./simple_experiment.html
+
+   :ref:`example_simple_experiment.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   ./simple_experiment
+
+
+.. raw:: html
+
+    <div class="clearer"></div>
+    
+
+
+Analysis examples
+-----------------
+
+Examples of how to analyze data.
+
+
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example shows some of the functionality of ``read_tab``. ">
+
+.. figure:: analysis/images/thumb/parse_demo.png
+   :target: ./analysis/parse_demo.html
+
+   :ref:`example_analysis_parse_demo.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   analysis/parse_demo
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example simulates some 2AFC data and demonstrates the analysis functions ``dprime_2afc()``...">
+
+.. figure:: analysis/images/thumb/analysis_demo.png
+   :target: ./analysis/analysis_demo.html
+
+   :ref:`example_analysis_analysis_demo.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   analysis/analysis_demo
+
+
+.. raw:: html
+
+    <div class="clearer"></div>
+    
+
+
+Experiments
+-----------
+
+More specialized experiment code and examples.
+
+
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example tests synchronization between the screen and the audio playback.">
+
+.. figure:: experiments/images/thumb/sync_test.png
+   :target: ./experiments/sync_test.html
+
+   :ref:`example_experiments_sync_test.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   experiments/sync_test
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example tests the audio level and video size. For audio, it produces a 65 db SPL 1000 Hz t...">
+
+.. figure:: experiments/images/thumb/level_test.png
+   :target: ./experiments/level_test.html
+
+   :ref:`example_experiments_level_test.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   experiments/level_test
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This demonstrates how the version checking functions work. ">
+
+.. figure:: experiments/images/thumb/version_checking.png
+   :target: ./experiments/version_checking.html
+
+   :ref:`example_experiments_version_checking.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   experiments/version_checking
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates differences between the Text and AttrText classes. ">
+
+.. figure:: experiments/images/thumb/formatted_text_demo.png
+   :target: ./experiments/formatted_text_demo.html
+
+   :ref:`example_experiments_formatted_text_demo.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   experiments/formatted_text_demo
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler...">
+
+.. figure:: experiments/images/thumb/pupillometry_experiment.png
+   :target: ./experiments/pupillometry_experiment.html
+
+   :ref:`example_experiments_pupillometry_experiment.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   experiments/pupillometry_experiment
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="expyfun provides multiple methods for drawing simple screen objects. ">
+
+.. figure:: experiments/images/thumb/drawing_methods.png
+   :target: ./experiments/drawing_methods.html
+
+   :ref:`example_experiments_drawing_methods.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   experiments/drawing_methods
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler...">
+
+.. figure:: experiments/images/thumb/eyetracking_experiment.png
+   :target: ./experiments/eyetracking_experiment.html
+
+   :ref:`example_experiments_eyetracking_experiment.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   experiments/eyetracking_experiment
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates the different mouse click functionality in the ExperimentController c...">
+
+.. figure:: experiments/images/thumb/mouse_demo.png
+   :target: ./experiments/mouse_demo.html
+
+   :ref:`example_experiments_mouse_demo.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   experiments/mouse_demo
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example demonstrates the different keypress-gathering techniques available in the Experime...">
+
+.. figure:: experiments/images/thumb/keypress_demo.png
+   :target: ./experiments/keypress_demo.html
+
+   :ref:`example_experiments_keypress_demo.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   experiments/keypress_demo
+
+
+.. raw:: html
+
+    <div class="clearer"></div>
+    
+
+
+Stimulus generation examples
+----------------------------
+
+Examples of how to generate stimuli for experiments.
+
+
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This shows the methods that we provide that facilitate generation of more advanced stimuli. ">
+
+.. figure:: stimuli/images/thumb/advanced_stimuli.png
+   :target: ./stimuli/advanced_stimuli.html
+
+   :ref:`example_stimuli_advanced_stimuli.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   stimuli/advanced_stimuli
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This shows how to make simple vocoded stimuli.">
+
+.. figure:: stimuli/images/thumb/vocoded_stimuli.png
+   :target: ./stimuli/vocoded_stimuli.html
+
+   :ref:`example_stimuli_vocoded_stimuli.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   stimuli/vocoded_stimuli
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This shows how to generate some simple stimuli. It will also play a couple of sample stimuli. ">
+
+.. figure:: stimuli/images/thumb/generate_stimuli.png
+   :target: ./stimuli/generate_stimuli.html
+
+   :ref:`example_stimuli_generate_stimuli.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   stimuli/generate_stimuli
+
+
+.. raw:: html
+
+    <div class="clearer"></div>
+    

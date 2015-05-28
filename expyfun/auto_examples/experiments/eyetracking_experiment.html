@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Experiment with eye-tracking &mdash; Expyfun 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Expyfun 2.0.0.dev0 documentation" href="../../index.html" />
+    <link rel="up" title="Examples" href="../index.html" />
+    <link rel="next" title="Mouse click demo" href="mouse_demo.html" />
+    <link rel="prev" title="Experiment drawing methods" href="drawing_methods.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="mouse_demo.html" title="Mouse click demo"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="drawing_methods.html" title="Experiment drawing methods"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Expyfun 2.0.0.dev0 documentation</a> &raquo;</li>
+          <li><a href="../../expyfun.html" >Expyfun</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="experiment-with-eye-tracking">
+<span id="example-experiments-eyetracking-experiment-py"></span><h1>Experiment with eye-tracking<a class="headerlink" href="#experiment-with-eye-tracking" title="Permalink to this headline">¶</a></h1>
+<p>Integration with Eyelink functionality makes programming experiments
+using eye-tracking simpler.</p>
+<img alt="../../_images/eyetracking_experiment_001.png" class="align-center" src="../../_images/eyetracking_experiment_001.png" />
+<p><strong>Script output</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>2015-05-18 11:21:17,106 - INFO  - Expyfun: Setting up Pyglet audio
+2015-05-18 11:21:17,149 - INFO  - Expyfun: Setting up screen
+2015-05-18 11:21:17,404 - EXP   - Expyfun: Set screen visibility True
+2015-05-18 11:21:17,443 - INFO  - Expyfun: Initializing dummy triggering mode
+2015-05-18 11:21:17,447 - INFO  - Expyfun: Initialization complete
+2015-05-18 11:21:17,447 - EXP   - Expyfun: Subject: foo
+2015-05-18 11:21:17,447 - EXP   - Expyfun: Session: 001
+2015-05-18 11:21:17,447 - INFO  - EyeLink: Initializing on None
+2015-05-18 11:21:17,448 - INFO  - Eyelink: Running experiment on a version Dummy tracker.
+2015-05-18 11:21:19,789 - INFO  - Eyelink: Stopping recording
+2015-05-18 11:21:19,789 - INFO  - Eyelink: Closing file
+2015-05-18 11:21:19,789 - INFO  - Eyelink: Opening remote file with filename 112119
+2015-05-18 11:21:20,139 - INFO  - EyeLink: Entering calibration
+2015-05-18 11:21:20,172 - INFO  - EyeLink: Completed calibration
+2015-05-18 11:21:21,022 - EXP   - Expyfun: Stamp trial ID to el_id  : [0]
+2015-05-18 11:21:21,023 - EXP   - Expyfun: Stamp trial ID to ec_id  : Circle
+2015-05-18 11:21:21,023 - EXP   - Expyfun: Stamp trial ID to ttl_id : [0]
+2015-05-18 11:21:21,052 - EXP   - Expyfun: Starting stimuli: flipping screen and playing audio
+2015-05-18 11:21:26,392 - INFO  - Eyelink: Stopping recording
+2015-05-18 11:21:26,392 - INFO  - Eyelink: Closing file
+...
+</pre></div>
+</div>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../../_downloads/eyetracking_experiment.py"><tt class="xref download docutils literal"><span class="pre">eyetracking_experiment.py</span></tt></a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Author: Eric Larson &lt;larsoner@uw.edu&gt;</span>
+<span class="c">#</span>
+<span class="c"># License: BSD (3-clause)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">,</span> <span class="n">visual</span>
+<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="kn">as</span> <span class="nn">ea</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
+
+
+<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s">&#39;testExp&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s">&#39;foo&#39;</span><span class="p">,</span>
+                          <span class="n">session</span><span class="o">=</span><span class="s">&#39;001&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+    <span class="n">el</span> <span class="o">=</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s">&#39;Welcome to the experiment!</span><span class="se">\n\n</span><span class="s">First, we will &#39;</span>
+                     <span class="s">&#39;perform a screen calibration.</span><span class="se">\n\n</span><span class="s">Press a button &#39;</span>
+                     <span class="s">&#39;to continue.&#39;</span><span class="p">)</span>
+    <span class="n">el</span><span class="o">.</span><span class="n">calibrate</span><span class="p">()</span>  <span class="c"># by default this starts recording EyeLink data</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s">&#39;Excellent! Now, follow the red circle around the edge &#39;</span>
+                     <span class="s">&#39;of the big white circle.</span><span class="se">\n\n</span><span class="s">Press a button to &#39;</span>
+                     <span class="s">&#39;continue&#39;</span><span class="p">)</span>
+
+    <span class="c"># make some circles to be drawn</span>
+    <span class="n">radius</span> <span class="o">=</span> <span class="mf">7.5</span>  <span class="c"># degrees</span>
+    <span class="n">targ_rad</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c"># degrees</span>
+    <span class="n">theta</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.linspace.html#numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.cos.html#numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">radius</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sin.html#numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">big_circ</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s">&#39;deg&#39;</span><span class="p">,</span>
+                             <span class="n">fill_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s">&#39;white&#39;</span><span class="p">,</span>
+                             <span class="n">line_width</span><span class="o">=</span><span class="mf">3.0</span><span class="p">)</span>
+    <span class="n">targ_circ</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">targ_rad</span><span class="p">,</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+                              <span class="n">units</span><span class="o">=</span><span class="s">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s">&#39;red&#39;</span><span class="p">)</span>
+    <span class="n">fix_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="c"># start out by waiting for a 1 sec fixation at the start</span>
+    <span class="n">big_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">targ_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s">&#39;Circle&#39;</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">el_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>  <span class="c"># automatically stamps to EL</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">(</span><span class="n">fix_pos</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s">&#39;deg&#39;</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&#39;Initial fixation failed&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">:])):</span>
+        <span class="n">targ_circ</span><span class="o">.</span><span class="n">set_pos</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s">&#39;deg&#39;</span><span class="p">)</span>
+        <span class="n">big_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">targ_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s">&#39;deg&#39;</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&#39;Fixation {0} failed&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ii</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
+    <span class="n">el</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>  <span class="c"># stop recording to save the file</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s">&#39;All done!&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="c"># eyelink auto-closes (el.close()) because it gets registered with EC</span>
+
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.ion"><span class="n">plt</span><span class="o">.</span><span class="n">ion</span></a><span class="p">()</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the example:</strong>   10 seconds</p>
+<div class="social-button-container">
+    <div class="social-button">
+        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+    </div>
+    <div class="social-button">
+        <g:plusone annotation="inline" width="120" size="medium"></g:plusone>
+    </div>
+    <div class="social-button">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
+    </div>
+</div></div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2015, Expyfun Developers.
+      Last updated on May 18, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

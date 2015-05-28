@@ -1,0 +1,61 @@
+
+
+.. _example_experiments_keypress_demo.py:
+
+
+=============
+Keypress demo
+=============
+
+This example demonstrates the different keypress-gathering techniques available
+in the ExperimentController class.
+
+
+
+.. image:: images/keypress_demo_001.png
+    :align: center
+
+
+**Script output**::
+
+  2015-05-18 11:21:46,979 - INFO  - Expyfun: Setting up Pyglet audio
+  2015-05-18 11:21:47,023 - INFO  - Expyfun: Setting up screen
+  2015-05-18 11:21:47,235 - EXP   - Expyfun: Set screen visibility True
+  2015-05-18 11:21:47,261 - INFO  - Expyfun: Initializing dummy triggering mode
+  2015-05-18 11:21:47,265 - INFO  - Expyfun: Initialization complete
+  2015-05-18 11:21:47,265 - EXP   - Expyfun: Subject: foo
+  2015-05-18 11:21:47,265 - EXP   - Expyfun: Session: 001
+  2015-05-18 11:22:14,674 - EXP   - Expyfun: Audio stopped and reset.
+
+
+
+**Python source code:** :download:`keypress_demo.py <keypress_demo.py>`
+
+.. literalinclude:: keypress_demo.py
+    :lines: 9-
+
+**Total running time of the example:**   27 seconds
+
+.. raw:: html
+
+    <div class="social-button-container">
+        <div class="social-button">
+            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        </div>
+        <div class="social-button">
+            <g:plusone annotation="inline" width="120" size="medium"></g:plusone>
+        </div>
+        <div class="social-button">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+            <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
+        </div>
+    </div>
+    

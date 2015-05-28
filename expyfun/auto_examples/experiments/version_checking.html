@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Version checking functions &mdash; Expyfun 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Expyfun 2.0.0.dev0 documentation" href="../../index.html" />
+    <link rel="up" title="Examples" href="../index.html" />
+    <link rel="next" title="Display text with different formatting methods" href="formatted_text_demo.html" />
+    <link rel="prev" title="Sound level test and visual size calibration" href="level_test.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="formatted_text_demo.html" title="Display text with different formatting methods"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="level_test.html" title="Sound level test and visual size calibration"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Expyfun 2.0.0.dev0 documentation</a> &raquo;</li>
+          <li><a href="../../expyfun.html" >Expyfun</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="version-checking-functions">
+<span id="example-experiments-version-checking-py"></span><h1>Version checking functions<a class="headerlink" href="#version-checking-functions" title="Permalink to this headline">¶</a></h1>
+<p>This demonstrates how the version checking functions work.</p>
+<p class="horizontal"><strong>Script output</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>Successfully checked out expyfun version:
+
+c18133c
+
+into destination directory:
+
+/tmp/tmp4i99Yu
+
+Failure: Command &#39;[&#39;python&#39;, &#39;-c&#39;, &quot;\nfrom expyfun import assert_version\n\nassert_version(&#39;c18133c&#39;)\n&quot;]&#39; returned non-zero exit status 1
+</pre></div>
+</div>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../../_downloads/version_checking.py"><tt class="xref download docutils literal"><span class="pre">version_checking.py</span></tt></a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Author: Eric Larson &lt;larson.eric.d@gmail.com&gt;</span>
+<span class="c">#</span>
+<span class="c"># License: BSD (3-clause)</span>
+
+<span class="kn">import</span> <span class="nn">tempfile</span>
+
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">download_version</span><span class="p">,</span> <span class="n">run_subprocess</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
+
+
+<span class="c"># Let&#39;s say we want to fix our experiment to use a specific version of</span>
+<span class="c"># expyfun. First we&#39;d want to install that version (referenced by the</span>
+<span class="c"># commit number) to the proper directory. Here we&#39;ll use a temporary</span>
+<span class="c"># directory so we don&#39;t break any other code examples, but usually you&#39;d</span>
+<span class="c"># want to do it in the experiment directory:</span>
+<span class="n">temp_dir</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkdtemp</span><span class="p">()</span>
+<span class="n">download_version</span><span class="p">(</span><span class="s">&#39;c18133c&#39;</span><span class="p">,</span> <span class="n">temp_dir</span><span class="p">)</span>
+
+<span class="c"># Now we would normally need to restart Python so the next ``import expyfun``</span>
+<span class="c"># call imported the proper version. We&#39;d want to add an ``assert_version``</span>
+<span class="c"># call to the top of our script We can simulate that here just by</span>
+<span class="c"># launching a new Python instance in the ``temp_dir`` and using our assertion</span>
+<span class="c"># function:</span>
+
+<span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;</span>
+<span class="s">from expyfun import assert_version</span>
+
+<span class="s">assert_version(&#39;c18133c&#39;)</span>
+<span class="s">&quot;&quot;&quot;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">run_subprocess</span><span class="p">([</span><span class="s">&#39;python&#39;</span><span class="p">,</span> <span class="s">&#39;-c&#39;</span><span class="p">,</span> <span class="n">cmd</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">temp_dir</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exp</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Failure: {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exp</span><span class="p">))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Success!&#39;</span><span class="p">)</span>
+
+<span class="c"># Try modifying the commit number to something invalid, and you should</span>
+<span class="c"># see a failure.</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the example:</strong>    1 seconds</p>
+<div class="social-button-container">
+    <div class="social-button">
+        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+    </div>
+    <div class="social-button">
+        <g:plusone annotation="inline" width="120" size="medium"></g:plusone>
+    </div>
+    <div class="social-button">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
+    </div>
+</div></div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2015, Expyfun Developers.
+      Last updated on May 18, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

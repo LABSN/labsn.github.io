@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Experiment using eye-tracking pupillometry &mdash; Expyfun 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="Expyfun 2.0.0.dev0 documentation" href="../../index.html" />
+    <link rel="up" title="Examples" href="../index.html" />
+    <link rel="next" title="Experiment drawing methods" href="drawing_methods.html" />
+    <link rel="prev" title="Display text with different formatting methods" href="formatted_text_demo.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="drawing_methods.html" title="Experiment drawing methods"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="formatted_text_demo.html" title="Display text with different formatting methods"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">Expyfun 2.0.0.dev0 documentation</a> &raquo;</li>
+          <li><a href="../../expyfun.html" >Expyfun</a> &raquo;</li>
+          <li><a href="../index.html" accesskey="U">Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="experiment-using-eye-tracking-pupillometry">
+<span id="example-experiments-pupillometry-experiment-py"></span><h1>Experiment using eye-tracking pupillometry<a class="headerlink" href="#experiment-using-eye-tracking-pupillometry" title="Permalink to this headline">¶</a></h1>
+<p>Integration with Eyelink functionality makes programming experiments
+using eye-tracking simpler.</p>
+<img alt="../../_images/pupillometry_experiment_001.png" class="align-center" src="../../_images/pupillometry_experiment_001.png" />
+<p><strong>Script output</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>2015-05-18 11:20:44,414 - INFO  - Expyfun: Setting up Pyglet audio
+2015-05-18 11:20:44,457 - INFO  - Expyfun: Setting up screen
+2015-05-18 11:20:44,697 - EXP   - Expyfun: Set screen visibility True
+2015-05-18 11:20:44,710 - INFO  - Expyfun: Initializing dummy triggering mode
+2015-05-18 11:20:44,714 - INFO  - Expyfun: Initialization complete
+2015-05-18 11:20:44,714 - EXP   - Expyfun: Subject: foo
+2015-05-18 11:20:44,714 - EXP   - Expyfun: Session: 001
+2015-05-18 11:20:44,714 - INFO  - EyeLink: Initializing on None
+2015-05-18 11:20:44,715 - INFO  - Eyelink: Running experiment on a version Dummy tracker.
+2015-05-18 11:20:44,833 - INFO  - Eyelink: Stopping recording
+2015-05-18 11:20:44,834 - INFO  - Eyelink: Closing file
+2015-05-18 11:20:44,834 - INFO  - Eyelink: Stopping recording
+2015-05-18 11:20:44,834 - INFO  - Eyelink: Closing file
+2015-05-18 11:20:44,835 - INFO  - Eyelink: Opening remote file with filename 112044
+2015-05-18 11:20:45,076 - INFO  - EyeLink: Entering calibration
+2015-05-18 11:20:45,111 - INFO  - EyeLink: Completed calibration
+2015-05-18 11:20:45,894 - EXP   - Expyfun: Buffer cleared
+2015-05-18 11:20:46,894 - EXP   - Expyfun: Stamp trial ID to el_id  : [1]
+2015-05-18 11:20:46,894 - EXP   - Expyfun: Stamp trial ID to ec_id  : FPDR_01
+2015-05-18 11:20:46,894 - EXP   - Expyfun: Stamp trial ID to ttl_id : ()
+...
+</pre></div>
+</div>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../../_downloads/pupillometry_experiment.py"><tt class="xref download docutils literal"><span class="pre">pupillometry_experiment.py</span></tt></a></p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Author: Eric Larson &lt;larsoner@uw.edu&gt;</span>
+<span class="c">#</span>
+<span class="c"># License: BSD (3-clause)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController"><span class="n">EyelinkController</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.codeblocks</span> <span class="kn">import</span> <span class="p">(</span><a href="../../generated/expyfun.codeblocks.find_pupil_dynamic_range.html#expyfun.codeblocks.find_pupil_dynamic_range"><span class="n">find_pupil_dynamic_range</span></a><span class="p">,</span>
+                                <a href="../../generated/expyfun.codeblocks.find_pupil_tone_impulse_response.html#expyfun.codeblocks.find_pupil_tone_impulse_response"><span class="n">find_pupil_tone_impulse_response</span></a><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
+
+
+<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s">&#39;pupilExp&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s">&#39;foo&#39;</span><span class="p">,</span>
+                          <span class="n">session</span><span class="o">=</span><span class="s">&#39;001&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+    <span class="n">el</span> <span class="o">=</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
+    <span class="n">bgcolor</span><span class="p">,</span> <span class="n">fcolor</span><span class="p">,</span> <span class="n">lev</span><span class="p">,</span> <span class="n">resp</span> <span class="o">=</span> <a href="../../generated/expyfun.codeblocks.find_pupil_dynamic_range.html#expyfun.codeblocks.find_pupil_dynamic_range"><span class="n">find_pupil_dynamic_range</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span>
+    <span class="n">prf</span><span class="p">,</span> <span class="n">t_srf</span><span class="p">,</span> <span class="n">e_prf</span> <span class="o">=</span> <a href="../../generated/expyfun.codeblocks.find_pupil_tone_impulse_response.html#expyfun.codeblocks.find_pupil_tone_impulse_response"><span class="n">find_pupil_tone_impulse_response</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bgcolor</span><span class="p">,</span>
+                                                         <span class="n">fcolor</span><span class="p">)</span>
+
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.ion"><span class="n">plt</span><span class="o">.</span><span class="n">ion</span></a><span class="p">()</span>
+
+<span class="n">uni_lev</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.unique.html#numpy.unique"><span class="n">np</span><span class="o">.</span><span class="n">unique</span></a><span class="p">(</span><span class="n">lev</span><span class="p">)</span>
+<span class="n">uni_lev_label</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span> <span class="o">*</span> <span class="n">uni_lev</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">uni_lev</span><span class="p">[</span><span class="n">uni_lev</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sort.html#numpy.sort"><span class="n">np</span><span class="o">.</span><span class="n">sort</span></a><span class="p">(</span><span class="n">uni_lev</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mf">2.</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">lev</span><span class="p">)</span> <span class="o">//</span> <span class="nb">len</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">)))</span>
+<span class="n">r_span</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">r</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
+<span class="c"># Grayscale responses</span>
+<span class="n">ax</span> <span class="o">=</span> <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">&#39;Screen level&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&#39;Pupil dilation (AU)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">bgcolor</span><span class="p">,</span> <span class="n">bgcolor</span><span class="p">],</span> <span class="n">r_span</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">facecolor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                <span class="n">edgecolor</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.mean.html#numpy.mean"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">r_span</span><span class="p">)</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.xticks"><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span></a><span class="p">(</span><span class="n">uni_lev</span><span class="p">,</span> <span class="n">uni_lev_label</span><span class="p">)</span>
+
+<span class="c"># PRF</span>
+<span class="n">ax</span> <span class="o">=</span> <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">xlabel</span><span class="o">=</span><span class="s">&#39;Time (s)&#39;</span><span class="p">,</span> <span class="n">ylabel</span><span class="o">=</span><span class="s">&#39;Pupil response (AU)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">t_srf</span><span class="p">,</span> <span class="n">prf</span> <span class="o">-</span> <span class="n">e_prf</span><span class="p">,</span> <span class="n">prf</span> <span class="o">+</span> <span class="n">e_prf</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                <span class="n">edgecolor</span><span class="o">=</span><span class="s">&#39;none&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t_srf</span><span class="p">,</span> <span class="n">prf</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">t_srf</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the example:</strong>   31 seconds</p>
+<div class="social-button-container">
+    <div class="social-button">
+        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+    </div>
+    <div class="social-button">
+        <g:plusone annotation="inline" width="120" size="medium"></g:plusone>
+    </div>
+    <div class="social-button">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <div class="fb-like" data-send="false" data-width="450" data-show-faces="false"></div>
+    </div>
+</div></div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2015, Expyfun Developers.
+      Last updated on May 18, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

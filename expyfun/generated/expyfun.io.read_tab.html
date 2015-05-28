@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>expyfun.io.read_tab &mdash; Expyfun 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Expyfun 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="expyfun.io.read_wav" href="expyfun.io.read_wav.html" />
+    <link rel="prev" title="expyfun.io.read_hdf5" href="expyfun.io.read_hdf5.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="expyfun.io.read_wav.html" title="expyfun.io.read_wav"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="expyfun.io.read_hdf5.html" title="expyfun.io.read_hdf5"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">Expyfun 2.0.0.dev0 documentation</a> &raquo;</li>
+          <li><a href="../expyfun.html" >Expyfun</a> &raquo;</li>
+          <li><a href="../python_reference.html" accesskey="U">API Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="expyfun-io-read-tab">
+<h1>expyfun.io.read_tab<a class="headerlink" href="#expyfun-io-read-tab" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="expyfun.io.read_tab">
+<tt class="descclassname">expyfun.io.</tt><tt class="descname">read_tab</tt><big>(</big><em>fname</em>, <em>group_start='trial_id'</em>, <em>group_end='trial_ok'</em><big>)</big><a class="headerlink" href="#expyfun.io.read_tab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read .tab file from expyfun output</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fname</strong> : str</p>
+<blockquote>
+<div><p>Input filename.</p>
+</div></blockquote>
+<p><strong>group_start</strong> : str</p>
+<blockquote>
+<div><p>Key to use to start a trial/row.</p>
+</div></blockquote>
+<p><strong>group_end</strong> : str | None</p>
+<blockquote>
+<div><p>Key to use to end a trial/row. If None, the next <tt class="docutils literal"><span class="pre">group_start</span></tt>
+will end the current group.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>data</strong> : list of dict</p>
+<blockquote class="last">
+<div><p>The data, with a dict for each trial. Each value in the dict
+is a list of tuples (event, time) for each occurrence of that
+key.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013-2015, Expyfun Developers.
+      Last updated on May 18, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
