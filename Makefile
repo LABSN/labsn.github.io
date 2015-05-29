@@ -3,6 +3,7 @@
 
 copy: pull
 	cp -R ../expyfun/doc/build/html/* expyfun/
+	cp -R ../mnefun/doc/build/html/* mnefun/
 
 pull:
 	git fetch origin
