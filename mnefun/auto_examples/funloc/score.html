@@ -85,7 +85,7 @@ out the data to the location mnefun expects.</p>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">op</span>
 <span class="kn">import</span> <span class="nn">mne</span>
-<span class="kn">from</span> <span class="nn">mnefun</span> <span class="kn">import</span> <span class="n">extract_expyfun_events</span>
+<span class="kn">from</span> <span class="nn">mnefun</span> <span class="kn">import</span> <a href="../../generated/mnefun.extract_expyfun_events.html#mnefun.extract_expyfun_events"><span class="n">extract_expyfun_events</span></a>
 
 
 <span class="c"># Original coding used 8XX8 to code event types, here we translate to</span>
@@ -111,7 +111,7 @@ out the data to the location mnefun expects.</p>
         <span class="k">for</span> <span class="n">run_name</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">run_names</span><span class="p">:</span>
             <span class="n">fname</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">subj</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">,</span>
                             <span class="p">(</span><span class="n">run_name</span> <span class="o">%</span> <span class="n">subj</span><span class="p">)</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">raw_fif_tag</span><span class="p">)</span>
-            <span class="n">events</span><span class="p">,</span> <span class="n">presses</span> <span class="o">=</span> <span class="n">extract_expyfun_events</span><span class="p">(</span><span class="n">fname</span><span class="p">)[:</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">events</span><span class="p">,</span> <span class="n">presses</span> <span class="o">=</span> <a href="../../generated/mnefun.extract_expyfun_events.html#mnefun.extract_expyfun_events"><span class="n">extract_expyfun_events</span></a><span class="p">(</span><span class="n">fname</span><span class="p">)[:</span><span class="mi">2</span><span class="p">]</span>
             <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)):</span>
                 <span class="n">events</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">_expyfun_dict</span><span class="p">[</span><span class="n">events</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
             <span class="n">fname_out</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span>
