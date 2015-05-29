@@ -1,0 +1,160 @@
+
+
+
+.. raw:: html
+
+
+    <style type="text/css">
+    div#sidebarbutton {
+        /* hide the sidebar collapser, while ensuring vertical arrangement */
+        display: none;
+    }
+
+    .figure {
+        float: left;
+        margin: 10px;
+        width: auto;
+        height: 200px;
+        width: 180px;
+    }
+
+    .figure img {
+        display: inline;
+        }
+
+    .figure .caption {
+        width: 180px;
+        text-align: center !important;
+    }
+    </style>
+
+.. _examples-index:
+
+Examples
+========
+
+
+
+
+Basic examples
+--------------
+
+Some basic examples of mnefun usage.
+
+
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="Show how to use the command-line interface to simulation. Typically the command would be called...">
+
+.. figure:: ./images/thumb/simulation_command_line.png
+   :target: ./simulation_command_line.html
+
+   :ref:`example_simulation_command_line.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   ./simulation_command_line
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This example shows how to use mnefun to simulate data with head movements.">
+
+.. figure:: ./images/thumb/plot_simulation.png
+   :target: ./plot_simulation.html
+
+   :ref:`example_plot_simulation.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   ./plot_simulation
+
+
+.. raw:: html
+
+    <div class="clearer"></div>
+    
+
+
+Analysis example
+----------------
+
+An example of using mnefun to preprocess an experiment.
+
+
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This sample scoring script shows how to convert the serial binary stamping from expyfun into me...">
+
+.. figure:: funloc/images/thumb/score.png
+   :target: ./funloc/score.html
+
+   :ref:`example_funloc_score.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   funloc/score
+
+
+
+.. raw:: html
+
+
+    <div class="thumbnailContainer" tooltip="This sample script shows how to preprocess a simple MEG experiment from start to finish.">
+
+.. figure:: funloc/images/thumb/analysis_fun.png
+   :target: ./funloc/analysis_fun.html
+
+   :ref:`example_funloc_analysis_fun.py`
+
+
+.. raw:: html
+
+    </div>
+
+
+
+.. toctree::
+   :hidden:
+
+   funloc/analysis_fun
+
+
+.. raw:: html
+
+    <div class="clearer"></div>
+    

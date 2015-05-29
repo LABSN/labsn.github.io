@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Example experiment analysis script &mdash; mnefun 0.1.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="mnefun 0.1.0.dev0 documentation" href="../../index.html" />
+    <link rel="up" title="Examples" href="../index.html" />
+    <link rel="next" title="API Reference" href="../../python_reference.html" />
+    <link rel="prev" title="Score experiment" href="score.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="../../python_reference.html" title="API Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="score.html" title="Score experiment"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">mnefun 0.1.0.dev0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="example-experiment-analysis-script">
+<span id="example-funloc-analysis-fun-py"></span><h1>Example experiment analysis script<a class="headerlink" href="#example-experiment-analysis-script" title="Permalink to this headline">¶</a></h1>
+<p>This sample script shows how to preprocess a simple MEG experiment
+from start to finish.</p>
+<p>The experiment was a simple audio/visual oddball detection task. One
+potential purpose would be e.g. functional localization of auditory and
+visual cortices.</p>
+<p>Note that you will need to change the &#8220;acq_ssh&#8221; and &#8220;sss_ssh&#8221; parameters
+to reflect your username/password on the relevant machines. You will also
+need to set up public key authentication between your machine and the
+two remote machines (acquisition/minea and SSS/kasga). Tutorial here:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="https://help.ubuntu.com/community/SSH/OpenSSH/Keys">https://help.ubuntu.com/community/SSH/OpenSSH/Keys</a></li>
+</ul>
+</div></blockquote>
+<p>The deidentified structural directories for the one subject is needed
+to do the forward and inverse solutions, extract this into your
+SUBJECTS_DIR directory:</p>
+<blockquote>
+<div><ul class="simple">
+<li><a class="reference external" href="http://lester.ilabs.uw.edu/files/AKCLEE_110_slim.tar.gz">http://lester.ilabs.uw.edu/files/AKCLEE_110_slim.tar.gz</a></li>
+</ul>
+</div></blockquote>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../../_downloads/analysis_fun.py"><code class="xref download docutils literal"><span class="pre">analysis_fun.py</span></code></a></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">mnefun</span>
+<span class="kn">from</span> <span class="nn">score</span> <span class="kn">import</span> <span class="n">score</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="c"># Use niprov as handler for events, or if it&#39;s not installed, ignore</span>
+    <span class="kn">from</span> <span class="nn">niprov.mnefunsupport</span> <span class="kn">import</span> <span class="n">handler</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">handler</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="n">mnefun</span><span class="o">.</span><span class="n">Params</span><span class="p">(</span><span class="n">tmin</span><span class="o">=-</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">tmax</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">t_adjust</span><span class="o">=-</span><span class="mf">4e-3</span><span class="p">,</span>
+                       <span class="n">n_jobs</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">n_jobs_mkl</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                       <span class="n">n_jobs_fir</span><span class="o">=</span><span class="s">&#39;cuda&#39;</span><span class="p">,</span> <span class="n">n_jobs_resample</span><span class="o">=</span><span class="s">&#39;cuda&#39;</span><span class="p">,</span>
+                       <span class="n">decim</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">proj_sfreq</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">filter_length</span><span class="o">=</span><span class="s">&#39;5s&#39;</span><span class="p">)</span>
+<span class="n">params</span><span class="o">.</span><span class="n">subjects</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;subj_01&#39;</span><span class="p">,</span> <span class="s">&#39;subj_02&#39;</span><span class="p">]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">structurals</span> <span class="o">=</span> <span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="s">&#39;AKCLEE_110_slim&#39;</span><span class="p">]</span>  <span class="c"># None means use sphere</span>
+<span class="n">params</span><span class="o">.</span><span class="n">dates</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">score</span> <span class="o">=</span> <span class="n">score</span>  <span class="c"># scoring function to use</span>
+<span class="n">params</span><span class="o">.</span><span class="n">subject_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c"># which subjects to run</span>
+<span class="n">params</span><span class="o">.</span><span class="n">plot_drop_logs</span> <span class="o">=</span> <span class="bp">False</span>  <span class="c"># turn off for demo or plots will block</span>
+
+<span class="n">params</span><span class="o">.</span><span class="n">acq_ssh</span> <span class="o">=</span> <span class="s">&#39;minea&#39;</span>  <span class="c"># can also be e.g., &quot;eric@minea.ilabs.uw.edu&quot;</span>
+<span class="n">params</span><span class="o">.</span><span class="n">acq_dir</span> <span class="o">=</span> <span class="s">&#39;/sinuhe/data01/eric_non_space&#39;</span>
+<span class="n">params</span><span class="o">.</span><span class="n">sws_ssh</span> <span class="o">=</span> <span class="s">&#39;kasga&#39;</span>
+<span class="n">params</span><span class="o">.</span><span class="n">sws_dir</span> <span class="o">=</span> <span class="s">&#39;/data06/larsoner&#39;</span>
+
+<span class="c"># set the niprov handler to deal with events:</span>
+<span class="n">params</span><span class="o">.</span><span class="n">on_process</span> <span class="o">=</span> <span class="n">handler</span>
+
+<span class="n">params</span><span class="o">.</span><span class="n">run_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">_funloc&#39;</span><span class="p">]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">get_projs_from</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">params</span><span class="o">.</span><span class="n">inv_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">&#39;</span><span class="p">]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">inv_runs</span> <span class="o">=</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">)]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">runs_empty</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;</span><span class="si">%s</span><span class="s">_erm&#39;</span><span class="p">]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">proj_nums</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>  <span class="c"># ECG: grad/mag/eeg</span>
+                    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>  <span class="c"># EOG</span>
+                    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>  <span class="c"># Continuous (from ERM)</span>
+<span class="n">params</span><span class="o">.</span><span class="n">cov_method</span> <span class="o">=</span> <span class="s">&#39;shrunk&#39;</span>  <span class="c"># cleaner noise covariance regularization</span>
+
+<span class="c"># The scoring function needs to produce an event file with these values</span>
+<span class="n">params</span><span class="o">.</span><span class="n">in_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;Aud&#39;</span><span class="p">,</span> <span class="s">&#39;Vis&#39;</span><span class="p">,</span> <span class="s">&#39;AudDev&#39;</span><span class="p">,</span> <span class="s">&#39;VisDev&#39;</span><span class="p">]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">in_numbers</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">]</span>
+
+<span class="c"># These lines define how to translate the above event types into evoked files</span>
+<span class="n">params</span><span class="o">.</span><span class="n">analyses</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s">&#39;All&#39;</span><span class="p">,</span>
+    <span class="s">&#39;AV&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">out_names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="s">&#39;All&#39;</span><span class="p">],</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">in_names</span><span class="p">,</span>
+<span class="p">]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">out_numbers</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>    <span class="c"># Combine all trials</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">in_numbers</span><span class="p">,</span>  <span class="c"># Leave events split the same way they were scored</span>
+<span class="p">]</span>
+<span class="n">params</span><span class="o">.</span><span class="n">must_match</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>  <span class="c"># only make the standard event counts match</span>
+<span class="p">]</span>
+
+<span class="c"># Set what will run</span>
+<span class="n">mnefun</span><span class="o">.</span><span class="n">do_processing</span><span class="p">(</span>
+    <span class="n">params</span><span class="p">,</span>
+    <span class="n">fetch_raw</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Fetch raw recording files from acq machine</span>
+    <span class="n">do_score</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># do scoring</span>
+    <span class="c"># Make SUBJ/raw_fif/SUBJ_prebad.txt file with space-separated</span>
+    <span class="c"># list of bad MEG channel numbers, needed for running SSS.</span>
+    <span class="n">push_raw</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Push raw files and SSS script to SSS workstation</span>
+    <span class="n">do_sss</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Run SSS remotely</span>
+    <span class="n">fetch_sss</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Fetch SSSed files</span>
+    <span class="n">do_ch_fix</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Fix channel ordering</span>
+    <span class="c"># Examine SSS&#39;ed files and make SUBJ/bads/bad_ch_SUBJ_post-sss.txt,</span>
+    <span class="c"># usually only contains EEG channels, needed for preprocessing.</span>
+    <span class="n">gen_ssp</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Generate SSP vectors</span>
+    <span class="n">apply_ssp</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Apply SSP vectors and filtering</span>
+    <span class="n">write_epochs</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Write epochs to disk</span>
+    <span class="n">gen_covs</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Generate covariances</span>
+    <span class="c"># Make SUBJ/trans/SUBJ-trans.fif file in mne_analyze, needed for fwd calc.</span>
+    <span class="n">gen_fwd</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Generate forward solutions (and source space if needed)</span>
+    <span class="n">gen_inv</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Generate inverses</span>
+    <span class="n">gen_report</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Write mne report html of results to disk</span>
+    <span class="n">print_status</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="c"># Print completeness status update</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015, mnefun Developers.
+      Last updated on May 29, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4a0+.
+    </div>
+  </body>
+</html>

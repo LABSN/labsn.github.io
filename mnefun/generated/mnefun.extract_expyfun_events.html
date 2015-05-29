@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>mnefun.extract_expyfun_events &mdash; mnefun 0.1.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="mnefun 0.1.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="mnefun.get_fsaverage_medial_vertices" href="mnefun.get_fsaverage_medial_vertices.html" />
+    <link rel="prev" title="mnefun.do_processing" href="mnefun.do_processing.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="mnefun.get_fsaverage_medial_vertices.html" title="mnefun.get_fsaverage_medial_vertices"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mnefun.do_processing.html" title="mnefun.do_processing"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">mnefun 0.1.0.dev0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../python_reference.html" accesskey="U">API Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mnefun-extract-expyfun-events">
+<h1>mnefun.extract_expyfun_events<a class="headerlink" href="#mnefun-extract-expyfun-events" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="mnefun.extract_expyfun_events">
+<code class="descclassname">mnefun.</code><code class="descname">extract_expyfun_events</code><span class="sig-paren">(</span><em>fname</em>, <em>return_offsets=False</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.extract_expyfun_events" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract expyfun-style serial-coded events from file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fname</strong> : str</p>
+<blockquote>
+<div><p>Filename to use.</p>
+</div></blockquote>
+<p><strong>return_offsets</strong> : bool</p>
+<blockquote>
+<div><p>If True, return the time of each press relative to trial onset
+in addition to the press number.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>events</strong> : array</p>
+<blockquote>
+<div><p>Array of events of shape (N, 3), re-coded such that 1 triggers
+are renamed according to their binary expyfun representation.</p>
+</div></blockquote>
+<p><strong>presses</strong> : list of arrays</p>
+<blockquote>
+<div><p>List of all press events that occurred between each one
+trigger. Each array has shape (N_presses,). If return_offset is True,
+then each array has shape (N_presses, 2), with the first column
+as the time offset from the trial trigger.</p>
+</div></blockquote>
+<p><strong>orig_events</strong> : array</p>
+<blockquote class="last">
+<div><p>Original events array.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>When this function translates binary event codes into decimal integers, it
+adds 1 to the value of all events. This is done to prevent the occurrence
+of events with a value of 0 (which downstream processing would treat as
+non-events). If you need to convert the integer event codes back to binary,
+subtract 1 before doing so to yield the original binary values.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015, mnefun Developers.
+      Last updated on May 29, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4a0+.
+    </div>
+  </body>
+</html>

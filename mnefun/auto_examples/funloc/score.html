@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Score experiment &mdash; mnefun 0.1.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="top" title="mnefun 0.1.0.dev0 documentation" href="../../index.html" />
+    <link rel="up" title="Examples" href="../index.html" />
+    <link rel="next" title="Example experiment analysis script" href="analysis_fun.html" />
+    <link rel="prev" title="Simulate data" href="../plot_simulation.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="analysis_fun.html" title="Example experiment analysis script"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../plot_simulation.html" title="Simulate data"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">mnefun 0.1.0.dev0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="score-experiment">
+<span id="example-funloc-score-py"></span><h1>Score experiment<a class="headerlink" href="#score-experiment" title="Permalink to this headline">¶</a></h1>
+<p>This sample scoring script shows how to convert the serial binary stamping
+from expyfun into meaningful event numbers using mnefun, and then write
+out the data to the location mnefun expects.</p>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../../_downloads/score.py"><code class="xref download docutils literal"><span class="pre">score.py</span></code></a></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">op</span>
+<span class="kn">import</span> <span class="nn">mne</span>
+<span class="kn">from</span> <span class="nn">mnefun</span> <span class="kn">import</span> <span class="n">extract_expyfun_events</span>
+
+
+<span class="c"># Original coding used 8XX8 to code event types, here we translate to</span>
+<span class="c"># a nicer decimal scheme</span>
+<span class="n">_expyfun_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">10</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>  <span class="c"># 8448  (9) + 1 = 10: auditory std, recode as 10</span>
+    <span class="mi">12</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>  <span class="c"># 8488 (11) + 1 = 12: visual std, recode as 11</span>
+    <span class="mi">14</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>  <span class="c"># 8848 (13) + 1 = 14: auditory dev, recode as 20</span>
+    <span class="mi">16</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>  <span class="c"># 8888 (15) + 1 = 16: visual dev, recode as 21</span>
+<span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">score</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">subjects</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Scoring function&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">subj</span> <span class="ow">in</span> <span class="n">subjects</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&#39;  Running subject </span><span class="si">%s</span><span class="s">... &#39;</span> <span class="o">%</span> <span class="n">subj</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;&#39;</span><span class="p">)</span>
+
+        <span class="c"># Figure out what our filenames should be</span>
+        <span class="n">out_dir</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">subj</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">list_dir</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">op</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">out_dir</span><span class="p">):</span>
+            <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">out_dir</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">run_name</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">run_names</span><span class="p">:</span>
+            <span class="n">fname</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">work_dir</span><span class="p">,</span> <span class="n">subj</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">,</span>
+                            <span class="p">(</span><span class="n">run_name</span> <span class="o">%</span> <span class="n">subj</span><span class="p">)</span> <span class="o">+</span> <span class="n">p</span><span class="o">.</span><span class="n">raw_fif_tag</span><span class="p">)</span>
+            <span class="n">events</span><span class="p">,</span> <span class="n">presses</span> <span class="o">=</span> <span class="n">extract_expyfun_events</span><span class="p">(</span><span class="n">fname</span><span class="p">)[:</span><span class="mi">2</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">)):</span>
+                <span class="n">events</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">_expyfun_dict</span><span class="p">[</span><span class="n">events</span><span class="p">[</span><span class="n">ii</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+            <span class="n">fname_out</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">out_dir</span><span class="p">,</span>
+                                <span class="s">&#39;ALL_&#39;</span> <span class="o">+</span> <span class="p">(</span><span class="n">run_name</span> <span class="o">%</span> <span class="n">subj</span><span class="p">)</span> <span class="o">+</span> <span class="s">&#39;-eve.lst&#39;</span><span class="p">)</span>
+            <span class="n">mne</span><span class="o">.</span><span class="n">write_events</span><span class="p">(</span><span class="n">fname_out</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
+
+            <span class="c"># get subject performance</span>
+            <span class="n">devs</span> <span class="o">=</span> <span class="p">(</span><span class="n">events</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="n">has_presses</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">len</span><span class="p">(</span><span class="n">pr</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">pr</span> <span class="ow">in</span> <span class="n">presses</span><span class="p">],</span> <span class="nb">bool</span><span class="p">)</span>
+            <span class="n">n_devs</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sum.html#numpy.sum"><span class="n">np</span><span class="o">.</span><span class="n">sum</span></a><span class="p">(</span><span class="n">devs</span><span class="p">)</span>
+            <span class="n">hits</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sum.html#numpy.sum"><span class="n">np</span><span class="o">.</span><span class="n">sum</span></a><span class="p">(</span><span class="n">has_presses</span><span class="p">[</span><span class="n">devs</span><span class="p">])</span>
+            <span class="n">fas</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.sum.html#numpy.sum"><span class="n">np</span><span class="o">.</span><span class="n">sum</span></a><span class="p">(</span><span class="n">has_presses</span><span class="p">[</span><span class="o">~</span><span class="n">devs</span><span class="p">])</span>
+            <span class="n">misses</span> <span class="o">=</span> <span class="n">n_devs</span> <span class="o">-</span> <span class="n">hits</span>
+            <span class="n">crs</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">devs</span><span class="p">)</span> <span class="o">-</span> <span class="n">n_devs</span><span class="p">)</span> <span class="o">-</span> <span class="n">fas</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&#39;HMFC: </span><span class="si">%s</span><span class="s">, </span><span class="si">%s</span><span class="s">, </span><span class="si">%s</span><span class="s">, </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">hits</span><span class="p">,</span> <span class="n">misses</span><span class="p">,</span> <span class="n">fas</span><span class="p">,</span> <span class="n">crs</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015, mnefun Developers.
+      Last updated on May 29, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4a0+.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>mnefun.Params &mdash; mnefun 0.1.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="mnefun 0.1.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="mnefun.do_processing" href="mnefun.do_processing.html" />
+    <link rel="prev" title="mnefun.anova_time" href="mnefun.anova_time.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="mnefun.do_processing.html" title="mnefun.do_processing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mnefun.anova_time.html" title="mnefun.anova_time"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">mnefun 0.1.0.dev0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../python_reference.html" accesskey="U">API Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mnefun-params">
+<h1>mnefun.Params<a class="headerlink" href="#mnefun-params" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="mnefun.Params">
+<em class="property">class </em><code class="descclassname">mnefun.</code><code class="descname">Params</code><span class="sig-paren">(</span><em>tmin=None</em>, <em>tmax=None</em>, <em>t_adjust=0</em>, <em>bmin=-0.2</em>, <em>bmax=0.0</em>, <em>n_jobs=6</em>, <em>lp_cut=55</em>, <em>decim=5</em>, <em>proj_sfreq=None</em>, <em>n_jobs_mkl=1</em>, <em>n_jobs_fir='cuda'</em>, <em>n_jobs_resample='cuda'</em>, <em>filter_length=32768</em>, <em>drop_thresh=1</em>, <em>epochs_type='fif'</em>, <em>fwd_mindist=2.0</em>, <em>bem_type='5120-5120-5120'</em>, <em>auto_bad=None</em>, <em>ecg_channel=None</em>, <em>eog_channel=None</em>, <em>plot_raw=False</em>, <em>match_fun=None</em>, <em>hp_cut=None</em>, <em>cov_method='empirical'</em>, <em>ssp_eog_reject=None</em>, <em>ssp_ecg_reject=None</em>, <em>baseline='individual'</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a parameter structure for use with <cite>do_processing</cite></p>
+<p>This is technically a class, but it doesn&#8217;t currently have any methods
+other than init.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tmin</strong> : float</p>
+<blockquote>
+<div><p>tmin for events.</p>
+</div></blockquote>
+<p><strong>tmax</strong> : float</p>
+<blockquote>
+<div><p>tmax for events.</p>
+</div></blockquote>
+<p><strong>t_adjust</strong> : float</p>
+<blockquote>
+<div><p>Adjustment for delays (e.g., -4e-3 compensates for a 4 ms delay
+in the trigger.</p>
+</div></blockquote>
+<p><strong>bmin</strong> : float</p>
+<blockquote>
+<div><p>Lower limit for baseline compensation.</p>
+</div></blockquote>
+<p><strong>bmax</strong> : float</p>
+<blockquote>
+<div><p>Upper limit for baseline compensation.</p>
+</div></blockquote>
+<p><strong>n_jobs</strong> : int</p>
+<blockquote>
+<div><p>Number of jobs to use in parallel operations.</p>
+</div></blockquote>
+<p><strong>lp_cut</strong> : float</p>
+<blockquote>
+<div><p>Cutoff for lowpass filtering.</p>
+</div></blockquote>
+<p><strong>decim</strong> : int</p>
+<blockquote>
+<div><p>Amount to decimate the data after filtering when epoching data
+(e.g., a factor of 5 on 1000 Hz data yields 200 Hz data).</p>
+</div></blockquote>
+<p><strong>proj_sfreq</strong> : float | None</p>
+<blockquote>
+<div><p>The sample freq to use for calculating projectors. Useful since
+time points are not independent following low-pass. Also saves
+computation to downsample.</p>
+</div></blockquote>
+<p><strong>n_jobs_mkl</strong> : int</p>
+<blockquote>
+<div><p>Number of jobs to spawn in parallel for operations that can make
+use of MKL threading. If Numpy/Scipy has been compiled with MKL
+support, it is best to leave this at 1 or 2 since MKL will
+automatically spawn threads. Otherwise, n_cpu is a good choice.</p>
+</div></blockquote>
+<p><strong>n_jobs_fir</strong> : int | str</p>
+<blockquote>
+<div><p>Number of threads to use for FIR filtering. Can also be &#8216;cuda&#8217;
+if the system supports CUDA.</p>
+</div></blockquote>
+<p><strong>n_jobs_resample</strong> : int | str</p>
+<blockquote>
+<div><p>Number of threads to use for resampling. Can also be &#8216;cuda&#8217;
+if the system supports CUDA.</p>
+</div></blockquote>
+<p><strong>filter_length</strong> : int</p>
+<blockquote>
+<div><p>Filter length to use in FIR filtering. Longer filters generally
+have better roll-off characteristics, but more ringing.</p>
+</div></blockquote>
+<p><strong>drop_thresh</strong> : float</p>
+<blockquote>
+<div><p>The percentage threshold to use when deciding whether or not to
+plot Epochs drop_log.</p>
+</div></blockquote>
+<p><strong>epochs_type</strong> : str | list</p>
+<blockquote>
+<div><p>Can be &#8216;fif&#8217;, &#8216;mat&#8217;, or a list containing both.</p>
+</div></blockquote>
+<p><strong>fwd_mindist</strong> : float</p>
+<blockquote>
+<div><p>Minimum distance for sources in the brain from the skull in order
+for them to be included in the forward solution source space.</p>
+</div></blockquote>
+<p><strong>bem_type</strong> : str</p>
+<blockquote>
+<div><p>Defaults to <code class="docutils literal"><span class="pre">'5120-5120-5120'</span></code>, use <code class="docutils literal"><span class="pre">'5120'</span></code> for a
+single-layer BEM.</p>
+</div></blockquote>
+<p><strong>auto_bad</strong> : float | None</p>
+<blockquote>
+<div><p>If not None, bad channels will be automatically excluded if
+they disqualify a proportion of events exceeding <code class="docutils literal"><span class="pre">autobad</span></code>.</p>
+</div></blockquote>
+<p><strong>ecg_channel</strong> : str | None</p>
+<blockquote>
+<div><p>The channel to use to detect ECG events. None will use ECG063.
+In lieu of an ECG recording, MEG1531 may work.</p>
+</div></blockquote>
+<p><strong>eog_channel</strong> : str</p>
+<blockquote>
+<div><p>The channel to use to detect EOG events. None will use EOG*.
+In lieu of an EOG recording, MEG1411 may work.</p>
+</div></blockquote>
+<p><strong>plot_raw</strong> : bool</p>
+<blockquote>
+<div><p>If True, plot the raw files with the ECG/EOG events overlaid.</p>
+</div></blockquote>
+<p><strong>match_fun</strong> : function | None</p>
+<blockquote>
+<div><p>If None, standard matching will be performed. If a function,
+must_match will be ignored, and <code class="docutils literal"><span class="pre">match_fun</span></code> will be called
+to equalize event counts.</p>
+</div></blockquote>
+<p><strong>hp_cut</strong> : float | None</p>
+<blockquote>
+<div><p>Highpass cutoff in Hz. Use None for no highpassing.</p>
+</div></blockquote>
+<p><strong>cov_method</strong> : str</p>
+<blockquote>
+<div><p>Covariance calculation method.</p>
+</div></blockquote>
+<p><strong>ssp_eog_reject</strong> : dict | None</p>
+<blockquote>
+<div><p>Amplitude rejection criteria for EOG SSP computation. None will
+use the mne-python default.</p>
+</div></blockquote>
+<p><strong>ssp_ecg_reject</strong> : dict | None</p>
+<blockquote>
+<div><p>Amplitude rejection criteria for ECG SSP computation. None will
+use the mne-python default.</p>
+</div></blockquote>
+<p><strong>baseline</strong> : tuple | None | str</p>
+<blockquote>
+<div><p>Baseline to use. If &#8220;individual&#8221;, use <code class="docutils literal"><span class="pre">params.bmin</span></code> and
+<code class="docutils literal"><span class="pre">params.bmax</span></code>, otherwise pass as the baseline parameter to
+mne-python Epochs. <code class="docutils literal"><span class="pre">params.bmin</span></code> and <code class="docutils literal"><span class="pre">params.bmax</span></code> will always
+be used for covariance calculation. This is useful e.g. when using
+a high-pass filter and no baselining is desired (but evoked
+covariances should still be calculated from the baseline period).</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>params</strong> : instance of Params</p>
+<blockquote class="last">
+<div><p>The parameters to use.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="mnefun.do_processing.html#mnefun.do_processing" title="mnefun.do_processing"><code class="xref py py-obj docutils literal"><span class="pre">do_processing</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>Params has additional properties. Use <code class="docutils literal"><span class="pre">dir(params)</span></code> to see
+all the possible options.
+.. automethod:: __init__</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015, mnefun Developers.
+      Last updated on May 29, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4a0+.
+    </div>
+  </body>
+</html>

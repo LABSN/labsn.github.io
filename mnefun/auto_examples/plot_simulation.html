@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Simulate data &mdash; mnefun 0.1.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="mnefun 0.1.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="Examples" href="index.html" />
+    <link rel="next" title="Score experiment" href="funloc/score.html" />
+    <link rel="prev" title="Demo of the command-line interface" href="simulation_command_line.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="funloc/score.html" title="Score experiment"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="simulation_command_line.html" title="Demo of the command-line interface"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">mnefun 0.1.0.dev0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="simulate-data">
+<span id="example-plot-simulation-py"></span><h1>Simulate data<a class="headerlink" href="#simulate-data" title="Permalink to this headline">¶</a></h1>
+<p>This example shows how to use mnefun to simulate data with head movements.</p>
+<p>Note: you need to run the <code class="docutils literal"><span class="pre">analysis_fun.py</span></code> example to have the
+necessary raw data.</p>
+<p><strong>Python source code:</strong> <a class="reference download internal" href="../_downloads/plot_simulation.py"><code class="xref download docutils literal"><span class="pre">plot_simulation.py</span></code></a></p>
+<div class="highlight-python"><div class="highlight"><pre>
+<span class="kn">import</span> <span class="nn">os.path</span> <span class="kn">as</span> <span class="nn">op</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">mne</span> <span class="kn">import</span> <span class="p">(</span><span class="n">get_config</span><span class="p">,</span> <span class="n">read_source_spaces</span><span class="p">,</span> <span class="n">SourceEstimate</span><span class="p">,</span>
+                 <span class="n">read_labels_from_annot</span><span class="p">,</span> <span class="n">get_chpi_positions</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">mne.io</span> <span class="kn">import</span> <span class="n">read_info</span><span class="p">,</span> <span class="n">Raw</span>
+<span class="kn">from</span> <span class="nn">mnefun</span> <span class="kn">import</span> <span class="n">simulate_movement</span>
+
+<span class="n">pulse_tmin</span><span class="p">,</span> <span class="n">pulse_tmax</span> <span class="o">=</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.1</span>
+
+<span class="n">this_dir</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">)</span>
+<span class="n">subjects_dir</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">(</span><span class="s">&#39;SUBJECTS_DIR&#39;</span><span class="p">)</span>
+<span class="n">subj</span><span class="p">,</span> <span class="n">subject</span> <span class="o">=</span> <span class="s">&#39;subj_01&#39;</span><span class="p">,</span> <span class="s">&#39;AKCLEE_107_slim&#39;</span>
+
+<span class="c"># This is a position file that has been modified/truncated for speed</span>
+<span class="n">fname_pos_orig</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_dir</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">_funloc_hp_trunc.txt&#39;</span> <span class="o">%</span> <span class="n">subj</span><span class="p">)</span>
+<span class="c"># These were generated using Maxfilter after simulation</span>
+<span class="n">fname_pos_move</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_dir</span><span class="p">,</span> <span class="s">&#39;hp_move.txt&#39;</span><span class="p">)</span>
+<span class="n">fname_pos_stat</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_dir</span><span class="p">,</span> <span class="s">&#39;hp_stat.txt&#39;</span><span class="p">)</span>
+
+<span class="c"># Set up paths</span>
+<span class="n">data_dir</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">this_dir</span><span class="p">,</span> <span class="s">&#39;funloc&#39;</span><span class="p">,</span> <span class="n">subj</span><span class="p">)</span>
+<span class="n">bem_dir</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">subjects_dir</span><span class="p">,</span> <span class="n">subject</span><span class="p">,</span> <span class="s">&#39;bem&#39;</span><span class="p">)</span>
+<span class="n">fname_raw</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;raw_fif&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">_funloc_raw.fif&#39;</span> <span class="o">%</span> <span class="n">subj</span><span class="p">)</span>
+<span class="n">fname_erm</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;raw_fif&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">_erm_raw.fif&#39;</span> <span class="o">%</span> <span class="n">subj</span><span class="p">)</span>
+<span class="n">trans</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">data_dir</span><span class="p">,</span> <span class="s">&#39;trans&#39;</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">-trans.fif&#39;</span> <span class="o">%</span> <span class="n">subj</span><span class="p">)</span>
+<span class="n">bem</span> <span class="o">=</span> <span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">bem_dir</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">-5120-5120-5120-bem-sol.fif&#39;</span> <span class="o">%</span> <span class="n">subject</span><span class="p">)</span>
+<span class="n">src</span> <span class="o">=</span> <span class="n">read_source_spaces</span><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">bem_dir</span><span class="p">,</span> <span class="s">&#39;</span><span class="si">%s</span><span class="s">-oct-6-src.fif&#39;</span> <span class="o">%</span> <span class="n">subject</span><span class="p">))</span>
+<span class="n">sfreq</span> <span class="o">=</span> <span class="n">read_info</span><span class="p">(</span><span class="n">fname_raw</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">False</span><span class="p">)[</span><span class="s">&#39;sfreq&#39;</span><span class="p">]</span>
+
+<span class="c"># ############################################################################</span>
+<span class="c"># construct appropriate brain activity</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;Constructing original (simulated) sources&#39;</span><span class="p">)</span>
+<span class="n">tmin</span><span class="p">,</span> <span class="n">tmax</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.8</span>
+<span class="n">vertices</span> <span class="o">=</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="s">&#39;vertno&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">src</span><span class="p">]</span>
+<span class="n">n_vertices</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="s">&#39;nuse&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">src</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.ones.html#numpy.ones"><span class="n">np</span><span class="o">.</span><span class="n">ones</span></a><span class="p">((</span><span class="n">n_vertices</span><span class="p">,</span> <span class="nb">int</span><span class="p">((</span><span class="n">tmax</span> <span class="o">-</span> <span class="n">tmin</span><span class="p">)</span> <span class="o">*</span> <span class="n">sfreq</span><span class="p">)))</span>
+<span class="n">stc</span> <span class="o">=</span> <span class="n">SourceEstimate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">vertices</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">sfreq</span><span class="p">,</span> <span class="n">subject</span><span class="p">)</span>
+
+<span class="c"># limit activation to a square pulse in time at two vertices in space</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="n">read_labels_from_annot</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span> <span class="s">&#39;aparc.a2009s&#39;</span><span class="p">,</span> <span class="n">hemi</span><span class="p">,</span>
+                                 <span class="n">regexp</span><span class="o">=</span><span class="s">&#39;G_temp_sup-G_T_transv&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+          <span class="k">for</span> <span class="n">hi</span><span class="p">,</span> <span class="n">hemi</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">((</span><span class="s">&#39;lh&#39;</span><span class="p">,</span> <span class="s">&#39;rh&#39;</span><span class="p">))]</span>
+<span class="n">stc</span> <span class="o">=</span> <span class="n">stc</span><span class="o">.</span><span class="n">in_label</span><span class="p">(</span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">labels</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">stc</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">stc</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <a href="http://docs.scipy.org/doc/numpy-1.6.0/reference/generated/numpy.where.html#numpy.where"><span class="n">np</span><span class="o">.</span><span class="n">where</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">stc</span><span class="o">.</span><span class="n">times</span> <span class="o">&gt;=</span> <span class="n">pulse_tmin</span><span class="p">,</span>
+                                    <span class="n">stc</span><span class="o">.</span><span class="n">times</span> <span class="o">&lt;=</span> <span class="n">pulse_tmax</span><span class="p">))[</span><span class="mi">0</span><span class="p">]]</span> <span class="o">=</span> <span class="mf">10e-9</span>
+
+<span class="c"># ############################################################################</span>
+<span class="c"># Simulate data</span>
+
+<span class="c"># Simulate data with movement</span>
+<span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">(</span><span class="n">record</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="n">raw</span> <span class="o">=</span> <span class="n">Raw</span><span class="p">(</span><span class="n">fname_raw</span><span class="p">,</span> <span class="n">allow_maxshield</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">raw_movement</span> <span class="o">=</span> <span class="n">simulate_movement</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="n">fname_pos_orig</span><span class="p">,</span> <span class="n">stc</span><span class="p">,</span> <span class="n">trans</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">bem</span><span class="p">,</span>
+                                 <span class="n">interp</span><span class="o">=</span><span class="s">&#39;zero&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c"># Simulate data with no movement (use initial head position)</span>
+<span class="n">raw_stationary</span> <span class="o">=</span> <span class="n">simulate_movement</span><span class="p">(</span><span class="n">raw</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">stc</span><span class="p">,</span> <span class="n">trans</span><span class="p">,</span> <span class="n">src</span><span class="p">,</span> <span class="n">bem</span><span class="p">,</span>
+                                   <span class="n">interp</span><span class="o">=</span><span class="s">&#39;zero&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c"># Extract positions</span>
+<span class="n">trans_move</span><span class="p">,</span> <span class="n">rot_move</span><span class="p">,</span> <span class="n">t_move</span> <span class="o">=</span> <span class="n">get_chpi_positions</span><span class="p">(</span><span class="n">fname_pos_move</span><span class="p">)</span>
+<span class="n">trans_stat</span><span class="p">,</span> <span class="n">rot_stat</span><span class="p">,</span> <span class="n">t_stat</span> <span class="o">=</span> <span class="n">get_chpi_positions</span><span class="p">(</span><span class="n">fname_pos_stat</span><span class="p">)</span>
+<span class="n">trans_orig</span><span class="p">,</span> <span class="n">rot_orig</span><span class="p">,</span> <span class="n">t_orig</span> <span class="o">=</span> <span class="n">get_chpi_positions</span><span class="p">(</span><span class="n">fname_pos_orig</span><span class="p">)</span>
+
+<span class="c"># ############################################################################</span>
+<span class="c"># Let&#39;s look at the results, just translation for simplicity</span>
+
+<span class="n">axes</span> <span class="o">=</span> <span class="s">&#39;XYZ&#39;</span>
+<span class="n">fig</span> <span class="o">=</span> <a href="http://matplotlib.org/api/figure_api.html#matplotlib.figure"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span></a><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+<span class="n">ts</span> <span class="o">=</span> <span class="p">[</span><span class="n">t_orig</span><span class="p">,</span> <span class="n">t_stat</span><span class="p">,</span> <span class="n">t_move</span><span class="p">]</span>
+<span class="n">transs</span> <span class="o">=</span> <span class="p">[</span><span class="n">trans_orig</span><span class="p">,</span> <span class="n">trans_stat</span><span class="p">,</span> <span class="n">trans_move</span><span class="p">]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;original&#39;</span><span class="p">,</span> <span class="s">&#39;stationary&#39;</span><span class="p">,</span> <span class="s">&#39;simulated&#39;</span><span class="p">]</span>
+<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="s">&#39;kyr&#39;</span>
+<span class="k">for</span> <span class="n">ai</span><span class="p">,</span> <span class="n">axis</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="p">):</span>
+    <span class="n">ax</span> <span class="o">=</span> <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.subplot"><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span></a><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ai</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">t</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">transs</span><span class="p">,</span> <span class="n">sizes</span><span class="p">,</span> <span class="n">colors</span><span class="p">,</span> <span class="n">labels</span><span class="p">):</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">1000</span> <span class="o">*</span> <span class="n">data</span><span class="p">[:,</span> <span class="n">ai</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s">&#39;o&#39;</span><span class="p">,</span>
+                             <span class="n">markersize</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="s">&#39;post&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="n">axis</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ai</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <a href="http://matplotlib.org/api/legend_api.html#matplotlib.legend"><span class="n">plt</span><span class="o">.</span><span class="n">legend</span></a><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ai</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">&#39;Time (sec)&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_axes</span><span class="p">(</span><span class="s">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015, mnefun Developers.
+      Last updated on May 29, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4a0+.
+    </div>
+  </body>
+</html>

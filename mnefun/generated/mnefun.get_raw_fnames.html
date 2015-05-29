@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>mnefun.get_raw_fnames &mdash; mnefun 0.1.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="mnefun 0.1.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="mnefun.run_sss_command" href="mnefun.run_sss_command.html" />
+    <link rel="prev" title="mnefun.get_fsaverage_medial_vertices" href="mnefun.get_fsaverage_medial_vertices.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="mnefun.run_sss_command.html" title="mnefun.run_sss_command"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="mnefun.get_fsaverage_medial_vertices.html" title="mnefun.get_fsaverage_medial_vertices"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">mnefun 0.1.0.dev0 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../python_reference.html" accesskey="U">API Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mnefun-get-raw-fnames">
+<h1>mnefun.get_raw_fnames<a class="headerlink" href="#mnefun-get-raw-fnames" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="mnefun.get_raw_fnames">
+<code class="descclassname">mnefun.</code><code class="descname">get_raw_fnames</code><span class="sig-paren">(</span><em>p</em>, <em>subj</em>, <em>which='raw'</em>, <em>erm=True</em>, <em>add_splits=False</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.get_raw_fnames" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get raw filenames</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>p</strong> : instance of Params</p>
+<blockquote>
+<div><p>Parameters structure.</p>
+</div></blockquote>
+<p><strong>subj</strong> : str</p>
+<blockquote>
+<div><p>Subject name.</p>
+</div></blockquote>
+<p><strong>which</strong> : str</p>
+<blockquote>
+<div><p>Type of raw filenames. Must be &#8216;sss&#8217;, &#8216;raw&#8217;, or &#8216;pca&#8217;.</p>
+</div></blockquote>
+<p><strong>erm</strong> : bool | str</p>
+<blockquote>
+<div><p>If True, include empty-room files (appended to end). If &#8216;only&#8217;, then
+only return empty-room files.</p>
+</div></blockquote>
+<p><strong>add_splits</strong> : bool</p>
+<blockquote>
+<div><p>If True, add split filenames if they exist. This should only
+be necessary for Maxfilter-related things. Will only return files
+that actually already exist.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fnames</strong> : list</p>
+<blockquote class="last">
+<div><p>List of filenames.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015, mnefun Developers.
+      Last updated on May 29, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4a0+.
+    </div>
+  </body>
+</html>

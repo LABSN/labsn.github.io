@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API Reference &mdash; mnefun 0.1.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/navy.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="mnefun 0.1.0.dev0 documentation" href="index.html" />
+    <link rel="next" title="API Reference" href="" />
+    <link rel="prev" title="Example experiment analysis script" href="auto_examples/funloc/analysis_fun.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+ 
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="np-modindex.html" title="Python Module Index"
+             >modules</a></li>
+        <li class="right" >
+          <a href="#" title="API Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="auto_examples/funloc/analysis_fun.html" title="Example experiment analysis script"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">mnefun 0.1.0.dev0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-mnefun">
+<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-mnefun" title="Permalink to this headline">¶</a></h1>
+<p>This is the classes and functions reference of expyfun. Functions are
+grouped by hardware control type.</p>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#experiment-analysis">Experiment analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#simulation">Simulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#statistics-helpers">Statistics helpers</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="experiment-analysis">
+<h2>Experiment analysis<a class="headerlink" href="#experiment-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Classes:</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/mnefun.Params.html#mnefun.Params" title="mnefun.Params"><code class="xref py py-obj docutils literal"><span class="pre">Params</span></code></a>([tmin,&nbsp;tmax,&nbsp;t_adjust,&nbsp;bmin,&nbsp;bmax,&nbsp;...])</td>
+<td>Make a parameter structure for use with <cite>do_processing</cite></td>
+</tr>
+</tbody>
+</table>
+<p>Functions:</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/mnefun.do_processing.html#mnefun.do_processing" title="mnefun.do_processing"><code class="xref py py-obj docutils literal"><span class="pre">do_processing</span></code></a>(p[,&nbsp;fetch_raw,&nbsp;do_score,&nbsp;...])</td>
+<td>Do M/EEG data processing</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/mnefun.extract_expyfun_events.html#mnefun.extract_expyfun_events" title="mnefun.extract_expyfun_events"><code class="xref py py-obj docutils literal"><span class="pre">extract_expyfun_events</span></code></a>(fname[,&nbsp;return_offsets])</td>
+<td>Extract expyfun-style serial-coded events from file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/mnefun.get_fsaverage_medial_vertices.html#mnefun.get_fsaverage_medial_vertices" title="mnefun.get_fsaverage_medial_vertices"><code class="xref py py-obj docutils literal"><span class="pre">get_fsaverage_medial_vertices</span></code></a>([concatenate])</td>
+<td>Returns fsaverage medial wall vertex numbers</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/mnefun.get_raw_fnames.html#mnefun.get_raw_fnames" title="mnefun.get_raw_fnames"><code class="xref py py-obj docutils literal"><span class="pre">get_raw_fnames</span></code></a>(p,&nbsp;subj[,&nbsp;which,&nbsp;erm,&nbsp;add_splits])</td>
+<td>Get raw filenames</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/mnefun.run_sss_command.html#mnefun.run_sss_command" title="mnefun.run_sss_command"><code class="xref py py-obj docutils literal"><span class="pre">run_sss_command</span></code></a>(fname_in,&nbsp;options,&nbsp;fname_out)</td>
+<td>Run Maxfilter remotely and fetch resulting file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/mnefun.run_sss_positions.html#mnefun.run_sss_positions" title="mnefun.run_sss_positions"><code class="xref py py-obj docutils literal"><span class="pre">run_sss_positions</span></code></a>(fname_in,&nbsp;fname_out[,&nbsp;host])</td>
+<td>Run Maxfilter remotely and fetch resulting file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/mnefun.safe_inserter.html#mnefun.safe_inserter" title="mnefun.safe_inserter"><code class="xref py py-obj docutils literal"><span class="pre">safe_inserter</span></code></a>(string,&nbsp;inserter)</td>
+<td>Helper to insert a subject name into a string if %s is present</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="simulation">
+<h2>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/mnefun.simulate_movement.html#mnefun.simulate_movement" title="mnefun.simulate_movement"><code class="xref py py-obj docutils literal"><span class="pre">simulate_movement</span></code></a>(raw,&nbsp;pos,&nbsp;stc,&nbsp;trans,&nbsp;src,&nbsp;bem)</td>
+<td>Simulate raw data with head movements</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="statistics-helpers">
+<h2>Statistics helpers<a class="headerlink" href="#statistics-helpers" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="generated/mnefun.anova_time.html#mnefun.anova_time" title="mnefun.anova_time"><code class="xref py py-obj docutils literal"><span class="pre">anova_time</span></code></a>(X)</td>
+<td>A mass-univariate two-way ANOVA (with time as a co-variate)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2015, mnefun Developers.
+      Last updated on May 29, 2015.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4a0+.
+    </div>
+  </body>
+</html>
