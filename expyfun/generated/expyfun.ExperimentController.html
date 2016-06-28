@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>expyfun.ExperimentController &mdash; MNE 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MNE 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="expyfun.EyelinkController" href="expyfun.EyelinkController.html" />
+    <link rel="prev" title="API Reference" href="../python_reference.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/favicon.ico">
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../python_reference.html">API</a></li>
+                <li><a href="../auto_examples/index.html">Gallery</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Basic examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.ExperimentController</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="expyfun-experimentcontroller">
+<h1>expyfun.ExperimentController<a class="headerlink" href="#expyfun-experimentcontroller" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="expyfun.ExperimentController">
+<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">ExperimentController</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>verbose=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>exp_name</strong> : str</p>
+<blockquote>
+<div><p>Name of the experiment.</p>
+</div></blockquote>
+<p><strong>audio_controller</strong> : str | dict | None</p>
+<blockquote>
+<div><p>If audio_controller is None, the type will be read from the system
+configuration file. If a string, can be &#8216;pyglet&#8217; or &#8216;tdt&#8217;, and the
+remaining audio parameters will be read from the machine configuration
+file. If a dict, must include a key &#8216;TYPE&#8217; that is either &#8216;pyglet&#8217;
+or &#8216;tdt&#8217;; the dict can contain other parameters specific to the TDT
+(see documentation for expyfun.TDTController).</p>
+</div></blockquote>
+<p><strong>response_device</strong> : str | None</p>
+<blockquote>
+<div><p>Must be &#8216;keyboard&#8217;, &#8216;cedrus&#8217;, or &#8216;tdt&#8217;.  If None, the type will be read
+from the machine configuration file.</p>
+</div></blockquote>
+<p><strong>stim_rms</strong> : float</p>
+<blockquote>
+<div><p>The RMS amplitude that the stimuli were generated at (strongly
+recommended to be 0.01).</p>
+</div></blockquote>
+<p><strong>stim_fs</strong> : int | float</p>
+<blockquote>
+<div><p>The sampling frequency that the stimuli were generated with (samples
+per second).</p>
+</div></blockquote>
+<p><strong>stim_db</strong> : float</p>
+<blockquote>
+<div><p>The desired dB SPL at which to play the stimuli.</p>
+</div></blockquote>
+<p><strong>noise_db</strong> : float</p>
+<blockquote>
+<div><p>The desired dB SPL at which to play the dichotic noise.</p>
+</div></blockquote>
+<p><strong>output_dir</strong> : str | None</p>
+<blockquote>
+<div><p>An absolute or relative path to a directory in which raw experiment
+data will be stored. If output_folder does not exist, it will be
+created. Data will be saved to <code class="docutils literal"><span class="pre">output_dir/SUBJECT_DATE</span></code>.
+If None, no output data or logs will be saved (ONLY FOR TESTING!).</p>
+</div></blockquote>
+<p><strong>window_size</strong> : list | array | None</p>
+<blockquote>
+<div><p>Window size to use. If list or array, it must have two elements.
+If None, the default will be read from the system config,
+falling back to [1920, 1080] if no system config is found.</p>
+</div></blockquote>
+<p><strong>screen_num</strong> : int | None</p>
+<blockquote>
+<div><p>Screen to use. If None, the default will be read from the system
+config, falling back to 0 if no system config is found.</p>
+</div></blockquote>
+<p><strong>full_screen</strong> : bool</p>
+<blockquote>
+<div><p>Should the experiment window be fullscreen?</p>
+</div></blockquote>
+<p><strong>force_quit</strong> : list</p>
+<blockquote>
+<div><p>Keyboard key(s) to utilize as an experiment force-quit button. Can be
+a zero-element list for no force quit support. If None, defaults to
+<code class="docutils literal"><span class="pre">['lctrl',</span> <span class="pre">'rctrl']</span></code>.  Using <code class="docutils literal"><span class="pre">['escape']</span></code> is not recommended due to
+default handling of &#8216;escape&#8217; in pyglet.</p>
+</div></blockquote>
+<p><strong>participant</strong> : str | None</p>
+<blockquote>
+<div><p>If <code class="docutils literal"><span class="pre">None</span></code>, a GUI will be used to acquire this information.</p>
+</div></blockquote>
+<p><strong>session</strong> : str | None</p>
+<blockquote>
+<div><p>If <code class="docutils literal"><span class="pre">None</span></code>, a GUI will be used to acquire this information.</p>
+</div></blockquote>
+<p><strong>trigger_controller</strong> : str | None</p>
+<blockquote>
+<div><p>If <code class="docutils literal"><span class="pre">None</span></code>, the type will be read from the system configuration file.
+If a string, must be &#8216;dummy&#8217;, &#8216;parallel&#8217;, or &#8216;tdt&#8217;. Note that by
+default the mode is &#8216;dummy&#8217;, since setting up the parallel port
+can be a pain. Can also be a dict with entries &#8216;type&#8217; (&#8216;parallel&#8217;)
+and &#8216;address&#8217; (e.g., &#8216;/dev/parport0&#8217;).</p>
+</div></blockquote>
+<p><strong>verbose</strong> : bool, str, int, or None</p>
+<blockquote>
+<div><p>If not None, override default verbose level (see expyfun.verbose).</p>
+</div></blockquote>
+<p><strong>check_rms</strong> : str | None</p>
+<blockquote>
+<div><p>Method to use in checking stimulus RMS to ensure appropriate levels.
+Possible values are <code class="docutils literal"><span class="pre">None</span></code>, <code class="docutils literal"><span class="pre">wholefile</span></code>, and <code class="docutils literal"><span class="pre">windowed</span></code> (the
+default); see <cite>set_rms_checking</cite> for details.</p>
+</div></blockquote>
+<p><strong>suppress_resamp</strong> : bool</p>
+<blockquote>
+<div><p>If <code class="docutils literal"><span class="pre">True</span></code>, will suppress resampling of stimuli to the sampling
+frequency of the sound output device.</p>
+</div></blockquote>
+<p><strong>version</strong> : str | None</p>
+<blockquote>
+<div><p>A length-7 string passed to <code class="docutils literal"><span class="pre">expyfun.assert_version()</span></code> to ensure that
+the expected version of the expyfun codebase is being used when running
+experiments. To override version checking (e.g., during development)
+use <code class="docutils literal"><span class="pre">version='dev'</span></code>.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>exp_controller</strong> : instance of ExperimentController</p>
+<blockquote class="last">
+<div><p>The experiment control interface.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>When debugging, it&#8217;s useful to use the flush_logs() method to get
+information (based on the level of verbosity) printed to the console.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.current_time" title="expyfun.ExperimentController.current_time"><code class="xref py py-obj docutils literal"><span class="pre">current_time</span></code></a></td>
+<td>Timestamp from the experiment master clock.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.data_fname" title="expyfun.ExperimentController.data_fname"><code class="xref py py-obj docutils literal"><span class="pre">data_fname</span></code></a></td>
+<td>Date filename</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">dpi</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">exp_name</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.fs" title="expyfun.ExperimentController.fs"><code class="xref py py-obj docutils literal"><span class="pre">fs</span></code></a></td>
+<td>Playback frequency of the audio controller (samples / second).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.id_types" title="expyfun.ExperimentController.id_types"><code class="xref py py-obj docutils literal"><span class="pre">id_types</span></code></a></td>
+<td>Trial ID types needed for each trial.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">monitor_size_pix</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.noise_db" title="expyfun.ExperimentController.noise_db"><code class="xref py py-obj docutils literal"><span class="pre">noise_db</span></code></a></td>
+<td>Sound power in dB of the background noise.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.on_every_flip_functions" title="expyfun.ExperimentController.on_every_flip_functions"><code class="xref py py-obj docutils literal"><span class="pre">on_every_flip_functions</span></code></a></td>
+<td>Current stack of functions called on every flip.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.on_next_flip_functions" title="expyfun.ExperimentController.on_next_flip_functions"><code class="xref py py-obj docutils literal"><span class="pre">on_next_flip_functions</span></code></a></td>
+<td>Current stack of functions to be called on next flip.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">participant</span></code></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">session</span></code></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.stim_db" title="expyfun.ExperimentController.stim_db"><code class="xref py py-obj docutils literal"><span class="pre">stim_db</span></code></a></td>
+<td>Sound power in dB of the stimuli.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.stim_fs" title="expyfun.ExperimentController.stim_fs"><code class="xref py py-obj docutils literal"><span class="pre">stim_fs</span></code></a></td>
+<td>Sampling rate at which the stimuli were generated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.window" title="expyfun.ExperimentController.window"><code class="xref py py-obj docutils literal"><span class="pre">window</span></code></a></td>
+<td>Pyglet visual window handle.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">window_size_pix</span></code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.call_on_every_flip" title="expyfun.ExperimentController.call_on_every_flip"><code class="xref py py-obj docutils literal"><span class="pre">call_on_every_flip</span></code></a>(function)</td>
+<td>Add a function to be executed on every flip.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.call_on_next_flip" title="expyfun.ExperimentController.call_on_next_flip"><code class="xref py py-obj docutils literal"><span class="pre">call_on_next_flip</span></code></a>(function)</td>
+<td>Add a function to be executed on next flip only.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.check_force_quit" title="expyfun.ExperimentController.check_force_quit"><code class="xref py py-obj docutils literal"><span class="pre">check_force_quit</span></code></a>()</td>
+<td>Check to see if any force quit keys were pressed</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.close" title="expyfun.ExperimentController.close"><code class="xref py py-obj docutils literal"><span class="pre">close</span></code></a>()</td>
+<td>Close all connections in experiment controller.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">delete_video</span></code>()</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.estimate_screen_fs" title="expyfun.ExperimentController.estimate_screen_fs"><code class="xref py py-obj docutils literal"><span class="pre">estimate_screen_fs</span></code></a>([n_rep])</td>
+<td>Estimate screen refresh rate using repeated flip() calls</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.flip" title="expyfun.ExperimentController.flip"><code class="xref py py-obj docutils literal"><span class="pre">flip</span></code></a>([when])</td>
+<td>Flip screen, then run any &#8220;on-flip&#8221; functions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.flush" title="expyfun.ExperimentController.flush"><code class="xref py py-obj docutils literal"><span class="pre">flush</span></code></a>()</td>
+<td>Flush logs and data files</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal"><span class="pre">get_clicks</span></code></a>([live_buttons,&nbsp;timestamp,&nbsp;...])</td>
+<td>Get the entire keyboard / button box buffer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal"><span class="pre">get_mouse_position</span></code></a>([units])</td>
+<td>Mouse position in screen coordinates</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.get_presses" title="expyfun.ExperimentController.get_presses"><code class="xref py py-obj docutils literal"><span class="pre">get_presses</span></code></a>([live_keys,&nbsp;timestamp,&nbsp;...])</td>
+<td>Get the entire keyboard / button box buffer.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.get_time" title="expyfun.ExperimentController.get_time"><code class="xref py py-obj docutils literal"><span class="pre">get_time</span></code></a>()</td>
+<td>Return current master clock time</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal"><span class="pre">identify_trial</span></code></a>(**ids)</td>
+<td>Identify trial type before beginning the trial</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal"><span class="pre">listen_clicks</span></code></a>()</td>
+<td>Start listening for mouse clicks.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.listen_presses" title="expyfun.ExperimentController.listen_presses"><code class="xref py py-obj docutils literal"><span class="pre">listen_presses</span></code></a>()</td>
+<td>Start listening for keypresses.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal"><span class="pre">load_buffer</span></code></a>(samples)</td>
+<td>Load audio data into the audio buffer</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">load_video</span></code>(file_name[,&nbsp;pos,&nbsp;units,&nbsp;center])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal"><span class="pre">play</span></code></a>()</td>
+<td>Start audio playback</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.screen_prompt" title="expyfun.ExperimentController.screen_prompt"><code class="xref py py-obj docutils literal"><span class="pre">screen_prompt</span></code></a>(text[,&nbsp;max_wait,&nbsp;min_wait,&nbsp;...])</td>
+<td>Display text and (optionally) wait for user continuation</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.screen_text" title="expyfun.ExperimentController.screen_text"><code class="xref py py-obj docutils literal"><span class="pre">screen_text</span></code></a>(text[,&nbsp;pos,&nbsp;color,&nbsp;font_name,&nbsp;...])</td>
+<td>Show some text on the screen.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.screenshot" title="expyfun.ExperimentController.screenshot"><code class="xref py py-obj docutils literal"><span class="pre">screenshot</span></code></a>()</td>
+<td>Capture the current displayed buffer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.set_background_color" title="expyfun.ExperimentController.set_background_color"><code class="xref py py-obj docutils literal"><span class="pre">set_background_color</span></code></a>([color])</td>
+<td>Set and draw a solid background color</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.set_noise_db" title="expyfun.ExperimentController.set_noise_db"><code class="xref py py-obj docutils literal"><span class="pre">set_noise_db</span></code></a>(new_db)</td>
+<td>Set the level of the background noise</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.set_rms_checking" title="expyfun.ExperimentController.set_rms_checking"><code class="xref py py-obj docutils literal"><span class="pre">set_rms_checking</span></code></a>(check_rms)</td>
+<td>Set the RMS checking flag.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.set_stim_db" title="expyfun.ExperimentController.set_stim_db"><code class="xref py py-obj docutils literal"><span class="pre">set_stim_db</span></code></a>(new_db)</td>
+<td>Set the level of the stimuli</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.set_visible" title="expyfun.ExperimentController.set_visible"><code class="xref py py-obj docutils literal"><span class="pre">set_visible</span></code></a>([visible,&nbsp;flip])</td>
+<td>Set the window visibility</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.stamp_triggers" title="expyfun.ExperimentController.stamp_triggers"><code class="xref py py-obj docutils literal"><span class="pre">stamp_triggers</span></code></a>(ids[,&nbsp;check,&nbsp;wait_for_last])</td>
+<td>Stamp binary values</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.start_noise" title="expyfun.ExperimentController.start_noise"><code class="xref py py-obj docutils literal"><span class="pre">start_noise</span></code></a>()</td>
+<td>Start the background masker noise</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal"><span class="pre">start_stimulus</span></code></a>([start_of_trial,&nbsp;flip,&nbsp;when])</td>
+<td>Play audio, (optionally) flip screen, run any &#8220;on_flip&#8221; functions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal"><span class="pre">stop</span></code></a>()</td>
+<td>Stop audio buffer playback and reset cursor to beginning of buffer</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.stop_noise" title="expyfun.ExperimentController.stop_noise"><code class="xref py py-obj docutils literal"><span class="pre">stop_noise</span></code></a>()</td>
+<td>Stop the background masker noise</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.system_beep" title="expyfun.ExperimentController.system_beep"><code class="xref py py-obj docutils literal"><span class="pre">system_beep</span></code></a>()</td>
+<td>Play a system beep</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.toggle_cursor" title="expyfun.ExperimentController.toggle_cursor"><code class="xref py py-obj docutils literal"><span class="pre">toggle_cursor</span></code></a>(visibility[,&nbsp;flip])</td>
+<td>Show or hide the mouse</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.trial_ok" title="expyfun.ExperimentController.trial_ok"><code class="xref py py-obj docutils literal"><span class="pre">trial_ok</span></code></a>()</td>
+<td>Report that the trial was okay and do post-trial tasks.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_for_click_on" title="expyfun.ExperimentController.wait_for_click_on"><code class="xref py py-obj docutils literal"><span class="pre">wait_for_click_on</span></code></a>(objects[,&nbsp;max_wait,&nbsp;...])</td>
+<td>Returns the first click after min_wait over a visual object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_for_clicks" title="expyfun.ExperimentController.wait_for_clicks"><code class="xref py py-obj docutils literal"><span class="pre">wait_for_clicks</span></code></a>([max_wait,&nbsp;min_wait,&nbsp;...])</td>
+<td>Returns all clicks between min_wait and max_wait.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_for_presses" title="expyfun.ExperimentController.wait_for_presses"><code class="xref py py-obj docutils literal"><span class="pre">wait_for_presses</span></code></a>(max_wait[,&nbsp;min_wait,&nbsp;...])</td>
+<td>Returns all button presses between min_wait and max_wait.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_one_click" title="expyfun.ExperimentController.wait_one_click"><code class="xref py py-obj docutils literal"><span class="pre">wait_one_click</span></code></a>([max_wait,&nbsp;min_wait,&nbsp;...])</td>
+<td>Returns only the first mouse button clicked after min_wait.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_one_press" title="expyfun.ExperimentController.wait_one_press"><code class="xref py py-obj docutils literal"><span class="pre">wait_one_press</span></code></a>([max_wait,&nbsp;min_wait,&nbsp;...])</td>
+<td>Returns only the first button pressed after min_wait.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_secs" title="expyfun.ExperimentController.wait_secs"><code class="xref py py-obj docutils literal"><span class="pre">wait_secs</span></code></a>(secs)</td>
+<td>Wait a specified number of seconds.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_until" title="expyfun.ExperimentController.wait_until"><code class="xref py py-obj docutils literal"><span class="pre">wait_until</span></code></a>(timestamp)</td>
+<td>Wait until the given time is reached.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.write_data_line" title="expyfun.ExperimentController.write_data_line"><code class="xref py py-obj docutils literal"><span class="pre">write_data_line</span></code></a>(event_type[,&nbsp;value,&nbsp;timestamp])</td>
+<td>Add a line of data to the output CSV.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="expyfun.ExperimentController.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>verbose=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.call_on_every_flip">
+<code class="descname">call_on_every_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.call_on_every_flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a function to be executed on every flip.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>function</strong> : function | None</p>
+<blockquote class="last">
+<div><p>The function to call. If <code class="docutils literal"><span class="pre">None</span></code>, all the &#8220;on every flip&#8221;
+functions will be cleared.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.call_on_next_flip" title="expyfun.ExperimentController.call_on_next_flip"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.call_on_next_flip</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>See <cite>flip_and_play</cite> for order of operations. Can be called multiple
+times to add multiple functions to the queue. If the function must be
+called with arguments, use <cite>functools.partial</cite> before passing to
+<cite>call_on_every_flip</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.call_on_next_flip">
+<code class="descname">call_on_next_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.call_on_next_flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a function to be executed on next flip only.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>function</strong> : function | None</p>
+<blockquote class="last">
+<div><p>The function to call. If <code class="docutils literal"><span class="pre">None</span></code>, all the &#8220;on every flip&#8221;
+functions will be cleared.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.call_on_every_flip" title="expyfun.ExperimentController.call_on_every_flip"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.call_on_every_flip</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>See <cite>flip_and_play</cite> for order of operations. Can be called multiple
+times to add multiple functions to the queue. If the function must be
+called with arguments, use <cite>functools.partial</cite> before passing to
+<cite>call_on_next_flip</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.check_force_quit">
+<code class="descname">check_force_quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.check_force_quit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if any force quit keys were pressed</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close all connections in experiment controller.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.current_time">
+<code class="descname">current_time</code><a class="headerlink" href="#expyfun.ExperimentController.current_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timestamp from the experiment master clock.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.data_fname">
+<code class="descname">data_fname</code><a class="headerlink" href="#expyfun.ExperimentController.data_fname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Date filename</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.estimate_screen_fs">
+<code class="descname">estimate_screen_fs</code><span class="sig-paren">(</span><em>n_rep=10</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.estimate_screen_fs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate screen refresh rate using repeated flip() calls</p>
+<p>Useful for verifying that a system is operating at the proper
+sample rate.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>n_rep</strong> : int</p>
+<blockquote>
+<div><p>Number of flips to use. The higher the number, the more accurate
+the estimate but the more time will be consumed.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>screen_fs</strong> : float</p>
+<blockquote class="last">
+<div><p>The screen refresh rate.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.flip">
+<code class="descname">flip</code><span class="sig-paren">(</span><em>when=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.flip" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flip screen, then run any &#8220;on-flip&#8221; functions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>when</strong> : float | None</p>
+<blockquote>
+<div><p>Time to flip. If None, flip immediately. Note that due to flip
+timing limitations, this is only a guaranteed <em>minimum</em> (not
+absolute) wait time before the flip completes. As a result, in
+some cases <cite>when</cite> should be set to a value smaller than your
+true intended flip time.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>flip_time</strong> : float</p>
+<blockquote class="last">
+<div><p>The timestamp of the screen flip.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.identify_trial</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.play</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.start_stimulus</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stop</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.trial_ok" title="expyfun.ExperimentController.trial_ok"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.trial_ok</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>Order of operations is: screen flip, functions added with
+<cite>call_on_next_flip</cite>, followed by functions added with
+<cite>call_on_every_flip</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.flush">
+<code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush logs and data files</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.fs">
+<code class="descname">fs</code><a class="headerlink" href="#expyfun.ExperimentController.fs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Playback frequency of the audio controller (samples / second).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.get_clicks">
+<code class="descname">get_clicks</code><span class="sig-paren">(</span><em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.get_clicks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the entire keyboard / button box buffer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>live_buttons</strong> : list | None</p>
+<blockquote>
+<div><p>List of strings indicating acceptable buttons.
+<code class="docutils literal"><span class="pre">None</span></code> accepts all mouse clicks.</p>
+</div></blockquote>
+<p><strong>timestamp</strong> : bool</p>
+<blockquote>
+<div><p>Whether the mouse click should be timestamped. If True, returns the
+button click time relative to the value given in <cite>relative_to</cite>.</p>
+</div></blockquote>
+<p><strong>relative_to</strong> : None | float</p>
+<blockquote>
+<div><p>A time relative to which timestamping is done. Ignored if
+timestamp==False.  If <code class="docutils literal"><span class="pre">None</span></code>, timestamps are relative to the time
+<cite>listen_clicks</cite> was last called.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clicks</strong> : list of tuple</p>
+<blockquote class="last">
+<div><p>Returns a list of the clicks between min_wait and max_wait.
+If <code class="docutils literal"><span class="pre">timestamp==True</span></code>, each entry is a tuple (str, int, int,
+float) indicating the button clicked and its timestamp.
+If <code class="docutils literal"><span class="pre">timestamp==False</span></code>, each entry is a tuple (str, int, int)
+indicating the button clicked.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_mouse_position</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.listen_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.toggle_cursor" title="expyfun.ExperimentController.toggle_cursor"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.toggle_cursor</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_one_click" title="expyfun.ExperimentController.wait_one_click"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_one_click</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_for_clicks" title="expyfun.ExperimentController.wait_for_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_for_clicks</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.get_mouse_position">
+<code class="descname">get_mouse_position</code><span class="sig-paren">(</span><em>units='pix'</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.get_mouse_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mouse position in screen coordinates</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>units</strong> : str</p>
+<blockquote>
+<div><p>Units to return. See <cite>check_units</cite> for options.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>position</strong> : ndarray</p>
+<blockquote class="last">
+<div><p>The mouse position.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.listen_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.toggle_cursor" title="expyfun.ExperimentController.toggle_cursor"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.toggle_cursor</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_one_click" title="expyfun.ExperimentController.wait_one_click"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_one_click</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_for_clicks" title="expyfun.ExperimentController.wait_for_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_for_clicks</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.get_presses">
+<code class="descname">get_presses</code><span class="sig-paren">(</span><em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>kind='presses'</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.get_presses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the entire keyboard / button box buffer. This will also clear
+events that are not requested per <code class="docutils literal"><span class="pre">type</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>live_keys</strong> : list | None</p>
+<blockquote>
+<div><p>List of strings indicating acceptable keys or buttons. Other data
+types are cast as strings, so a list of ints will also work.
+<code class="docutils literal"><span class="pre">None</span></code> accepts all keypresses.</p>
+</div></blockquote>
+<p><strong>timestamp</strong> : bool</p>
+<blockquote>
+<div><p>Whether the keypress should be timestamped. If True, returns the
+button press time relative to the value given in <cite>relative_to</cite>.</p>
+</div></blockquote>
+<p><strong>relative_to</strong> : None | float</p>
+<blockquote>
+<div><p>A time relative to which timestamping is done. Ignored if
+timestamp==False.  If <code class="docutils literal"><span class="pre">None</span></code>, timestamps are relative to the time
+<cite>listen_presses</cite> was last called.</p>
+</div></blockquote>
+<p><strong>kind</strong> : string</p>
+<blockquote>
+<div><p>Which key events to return. One of <code class="docutils literal"><span class="pre">presses</span></code>, <code class="docutils literal"><span class="pre">releases</span></code> or
+<code class="docutils literal"><span class="pre">both</span></code>. (default <code class="docutils literal"><span class="pre">presses</span></code>)</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>presses</strong> : list</p>
+<blockquote class="last">
+<div><p>Returns a list of tuples with key events. Each tuple&#8217;s first value
+will be the key pressed. If <code class="docutils literal"><span class="pre">timestamp==True</span></code>, the second value
+is the time for the event. The last value is a string indicating if
+this was a key press or release event.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.listen_presses" title="expyfun.ExperimentController.listen_presses"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.listen_presses</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_one_press" title="expyfun.ExperimentController.wait_one_press"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_one_press</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_for_presses" title="expyfun.ExperimentController.wait_for_presses"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_for_presses</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.get_time">
+<code class="descname">get_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.get_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return current master clock time</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>time</strong> : float</p>
+<blockquote class="last">
+<div><p>Time since ExperimentController was created.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.id_types">
+<code class="descname">id_types</code><a class="headerlink" href="#expyfun.ExperimentController.id_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trial ID types needed for each trial.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.identify_trial">
+<code class="descname">identify_trial</code><span class="sig-paren">(</span><em>**ids</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.identify_trial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Identify trial type before beginning the trial</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>**ids</strong> : keyword arguments</p>
+<blockquote class="last">
+<div><p>Ids to stamp, e.g. <code class="docutils literal"><span class="pre">ec_id='TL90,MR45'.</span> <span class="pre">Use</span> <span class="pre">`id_types`</span>
+<span class="pre">to</span> <span class="pre">see</span> <span class="pre">valid</span> <span class="pre">options.</span> <span class="pre">Typical</span> <span class="pre">choices</span> <span class="pre">are</span> <span class="pre">``ec_id</span></code>, <code class="docutils literal"><span class="pre">el_id</span></code>,
+and <code class="docutils literal"><span class="pre">ttl_id</span></code> for experiment controller, eyelink, and TDT
+(or parallel port) respectively. If the value passed is a <code class="docutils literal"><span class="pre">dict</span></code>,
+its entries will be passed as keywords to the underlying function.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.id_types" title="expyfun.ExperimentController.id_types"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.id_types</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stamp_triggers" title="expyfun.ExperimentController.stamp_triggers"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stamp_triggers</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.start_stimulus</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stop</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.trial_ok" title="expyfun.ExperimentController.trial_ok"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.trial_ok</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.listen_clicks">
+<code class="descname">listen_clicks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.listen_clicks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start listening for mouse clicks.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_mouse_position</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.toggle_cursor" title="expyfun.ExperimentController.toggle_cursor"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.toggle_cursor</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.listen_presses">
+<code class="descname">listen_presses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.listen_presses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start listening for keypresses.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.get_presses" title="expyfun.ExperimentController.get_presses"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_presses</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_one_press" title="expyfun.ExperimentController.wait_one_press"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_one_press</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_for_presses" title="expyfun.ExperimentController.wait_for_presses"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_for_presses</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.load_buffer">
+<code class="descname">load_buffer</code><span class="sig-paren">(</span><em>samples</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.load_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load audio data into the audio buffer</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>samples</strong> : np.array</p>
+<blockquote class="last">
+<div><p>Audio data as floats scaled to (-1,+1), formatted as numpy array
+with shape (1, N), (2, N), or (N,) dtype float32.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.play</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.set_stim_db" title="expyfun.ExperimentController.set_stim_db"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.set_stim_db</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.start_stimulus</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stop</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.noise_db">
+<code class="descname">noise_db</code><a class="headerlink" href="#expyfun.ExperimentController.noise_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sound power in dB of the background noise.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.on_every_flip_functions">
+<code class="descname">on_every_flip_functions</code><a class="headerlink" href="#expyfun.ExperimentController.on_every_flip_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current stack of functions called on every flip.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.on_next_flip_functions">
+<code class="descname">on_next_flip_functions</code><a class="headerlink" href="#expyfun.ExperimentController.on_next_flip_functions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current stack of functions to be called on next flip.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.play">
+<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start audio playback</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>play_time</strong> : float</p>
+<blockquote class="last">
+<div><p>The timestamp of the audio playback.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.load_buffer</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.set_stim_db" title="expyfun.ExperimentController.set_stim_db"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.set_stim_db</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.start_stimulus</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stop</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.screen_prompt">
+<code class="descname">screen_prompt</code><span class="sig-paren">(</span><em>text, max_wait=inf, min_wait=0, live_keys=None, timestamp=False, clear_after=True, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.screen_prompt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display text and (optionally) wait for user continuation</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>text</strong> : str | list</p>
+<blockquote>
+<div><p>The text to display. It will automatically wrap lines.
+If list, the prompts will be displayed sequentially.</p>
+</div></blockquote>
+<p><strong>max_wait</strong> : float</p>
+<blockquote>
+<div><p>The maximum amount of time to wait before returning. Can be np.inf
+to wait until the user responds.</p>
+</div></blockquote>
+<p><strong>min_wait</strong> : float</p>
+<blockquote>
+<div><p>The minimum amount of time to wait before returning. Useful for
+avoiding subjects missing instructions.</p>
+</div></blockquote>
+<p><strong>live_keys</strong> : list | None</p>
+<blockquote>
+<div><p>The acceptable list of buttons or keys to use to advance the trial.
+If None, all buttons / keys will be accepted.  If an empty list,
+the prompt displays until max_wait seconds have passed.</p>
+</div></blockquote>
+<p><strong>clear_after</strong> : bool</p>
+<blockquote>
+<div><p>If True, the screen will be cleared before returning.</p>
+</div></blockquote>
+<p><strong>pos</strong> : list | tuple</p>
+<blockquote>
+<div><p>x, y position of the text. In the default units (-1 to 1, with
+positive going up and right) the default is dead center (0, 0).</p>
+</div></blockquote>
+<p><strong>color</strong> : matplotlib color</p>
+<blockquote>
+<div><p>The text color.</p>
+</div></blockquote>
+<p><strong>font_name</strong> : str</p>
+<blockquote>
+<div><p>The name of the font to use.</p>
+</div></blockquote>
+<p><strong>font_size</strong> : float</p>
+<blockquote>
+<div><p>The font size (in points) to use.</p>
+</div></blockquote>
+<p><strong>wrap</strong> : bool</p>
+<blockquote>
+<div><p>Whether or not the text will wrap to fit in screen, appropriate
+for multi-line text. Inappropriate for text requiring
+precise positioning or centering.</p>
+</div></blockquote>
+<p><strong>units</strong> : str</p>
+<blockquote>
+<div><p>Units for <cite>pos</cite>. See <cite>check_units</cite> for options. Applies to
+<cite>pos</cite> but not <cite>font_size</cite>.</p>
+</div></blockquote>
+<p><strong>attr</strong> : bool</p>
+<blockquote>
+<div><p>Should the text be interpreted with pyglet&#8217;s <code class="docutils literal"><span class="pre">decode_attributed</span></code>
+method? This allows inline formatting for text color, e.g.,
+<code class="docutils literal"><span class="pre">'This</span> <span class="pre">is</span> <span class="pre">{color</span> <span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">255)}red</span> <span class="pre">text'</span></code>.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>pressed</strong> : tuple | str | None</p>
+<blockquote class="last">
+<div><p>If <code class="docutils literal"><span class="pre">timestamp==True</span></code>, returns a tuple <code class="docutils literal"><span class="pre">(str,</span> <span class="pre">float)</span></code> indicating
+the first key pressed and its timestamp (or <code class="docutils literal"><span class="pre">(None,</span> <span class="pre">None)</span></code> if no
+acceptable key was pressed between <code class="docutils literal"><span class="pre">min_wait</span></code> and <code class="docutils literal"><span class="pre">max_wait</span></code>).
+If <code class="docutils literal"><span class="pre">timestamp==False</span></code>, returns a string indicating the first key
+pressed (or <code class="docutils literal"><span class="pre">None</span></code> if no acceptable key was pressed).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.screen_text" title="expyfun.ExperimentController.screen_text"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.screen_text</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.screen_text">
+<code class="descname">screen_text</code><span class="sig-paren">(</span><em>text, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.screen_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show some text on the screen.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>text</strong> : str</p>
+<blockquote>
+<div><p>The text to be rendered.</p>
+</div></blockquote>
+<p><strong>pos</strong> : list | tuple</p>
+<blockquote>
+<div><p>x, y position of the text. In the default units (-1 to 1, with
+positive going up and right) the default is dead center (0, 0).</p>
+</div></blockquote>
+<p><strong>color</strong> : matplotlib color</p>
+<blockquote>
+<div><p>The text color.</p>
+</div></blockquote>
+<p><strong>font_name</strong> : str</p>
+<blockquote>
+<div><p>The name of the font to use.</p>
+</div></blockquote>
+<p><strong>font_size</strong> : float</p>
+<blockquote>
+<div><p>The font size (in points) to use.</p>
+</div></blockquote>
+<p><strong>wrap</strong> : bool</p>
+<blockquote>
+<div><p>Whether or not the text will wrap to fit in screen, appropriate
+for multi-line text. Inappropriate for text requiring
+precise positioning or centering.</p>
+</div></blockquote>
+<p><strong>units</strong> : str</p>
+<blockquote>
+<div><p>Units for <cite>pos</cite>. See <cite>check_units</cite> for options. Applies to
+<cite>pos</cite> but not <cite>font_size</cite>.</p>
+</div></blockquote>
+<p><strong>attr</strong> : bool</p>
+<blockquote>
+<div><p>Should the text be interpreted with pyglet&#8217;s <code class="docutils literal"><span class="pre">decode_attributed</span></code>
+method? This allows inline formatting for text color, e.g.,
+<code class="docutils literal"><span class="pre">'This</span> <span class="pre">is</span> <span class="pre">{color</span> <span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">255)}red</span> <span class="pre">text'</span></code>.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Instance of visual.Text</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.screen_prompt" title="expyfun.ExperimentController.screen_prompt"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.screen_prompt</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.screenshot">
+<code class="descname">screenshot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.screenshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Capture the current displayed buffer</p>
+<p>This method must be called <em>before</em> flipping, because it captures
+the back buffer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>scr</strong> : array</p>
+<blockquote class="last">
+<div><p>N x M x 3 array of screen pixel colors.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.set_background_color">
+<code class="descname">set_background_color</code><span class="sig-paren">(</span><em>color='black'</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_background_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set and draw a solid background color</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>color</strong> : matplotlib color</p>
+<blockquote class="last">
+<div><p>The background color.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>This should be called before anything else is drawn to the buffer,
+since it will draw a filled rectangle over everything. On subsequent
+flips, the rectangle will automatically be &#8220;drawn&#8221; because
+<code class="docutils literal"><span class="pre">glClearColor</span></code> will be set so the buffer starts out with the
+appropriate backgound color.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.set_noise_db">
+<code class="descname">set_noise_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_noise_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the level of the background noise</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.start_noise" title="expyfun.ExperimentController.start_noise"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.start_noise</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop_noise" title="expyfun.ExperimentController.stop_noise"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stop_noise</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.set_rms_checking">
+<code class="descname">set_rms_checking</code><span class="sig-paren">(</span><em>check_rms</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_rms_checking" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the RMS checking flag.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check_rms</strong> : str | None</p>
+<blockquote class="last">
+<div><p>Method to use in checking stimulus RMS to ensure appropriate
+levels. <code class="docutils literal"><span class="pre">'windowed'</span></code> uses a 10ms window to find the max RMS in
+each channel and checks to see that it is within 6 dB of the stated
+<code class="docutils literal"><span class="pre">stim_rms</span></code>.  <code class="docutils literal"><span class="pre">'wholefile'</span></code> checks the RMS of the stimulus as a
+whole, while <code class="docutils literal"><span class="pre">None</span></code> disables RMS checking.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.set_stim_db">
+<code class="descname">set_stim_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_stim_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the level of the stimuli</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.load_buffer</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.play</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.start_stimulus</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stop</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.set_visible">
+<code class="descname">set_visible</code><span class="sig-paren">(</span><em>visible=True</em>, <em>flip=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the window visibility</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>visible</strong> : bool</p>
+<blockquote>
+<div><p>The visibility.</p>
+</div></blockquote>
+<p><strong>flip</strong> : bool</p>
+<blockquote class="last">
+<div><p>If <cite>visible</cite> is <code class="docutils literal"><span class="pre">True</span></code>, call <cite>flip</cite> after setting visible.
+This fixes an issue with the window background color not
+being set properly for the first draw after setting visible;
+by default (at least on Linux) the background is black when
+the window is restored, regardless of what the glClearColor
+had been set to.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.stamp_triggers">
+<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>ids</em>, <em>check='binary'</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stamp binary values</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ids</strong> : int | list of int</p>
+<blockquote>
+<div><p>Value(s) to stamp.</p>
+</div></blockquote>
+<p><strong>check</strong> : str</p>
+<blockquote>
+<div><p>If &#8216;binary&#8217;, enforce standard binary value stamping of only values
+<code class="docutils literal"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">4,</span> <span class="pre">8]</span></code>. If &#8216;int4&#8217;, enforce values as integers between
+1 and 15.</p>
+</div></blockquote>
+<p><strong>wait_for_last</strong> : bool</p>
+<blockquote class="last">
+<div><p>If True, wait for last trigger to be stamped before returning.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.identify_trial</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>This may be (nearly) instantaneous, or take a while, depending
+on the type of triggering (TDT or parallel).</p>
+<p>If absolute minimal latency is required, consider using the
+private function _stamp_ttl_triggers (for advanced use only,
+subject to change!).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.start_noise">
+<code class="descname">start_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.start_noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the background masker noise</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.set_noise_db" title="expyfun.ExperimentController.set_noise_db"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.set_noise_db</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop_noise" title="expyfun.ExperimentController.stop_noise"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stop_noise</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.start_stimulus">
+<code class="descname">start_stimulus</code><span class="sig-paren">(</span><em>start_of_trial=True</em>, <em>flip=True</em>, <em>when=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.start_stimulus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play audio, (optionally) flip screen, run any &#8220;on_flip&#8221; functions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>start_of_trial</strong> : bool</p>
+<blockquote>
+<div><p>If True, it checks to make sure that the trial ID has been
+stamped appropriately. Set to False only in cases where
+<code class="docutils literal"><span class="pre">flip_and_play</span></code> is to be used mid-trial (should be rare!).</p>
+</div></blockquote>
+<p><strong>flip</strong> : bool</p>
+<blockquote>
+<div><p>If False, don&#8217;t flip the screen.</p>
+</div></blockquote>
+<p><strong>when</strong> : float | None</p>
+<blockquote>
+<div><p>Time to start stimulus. If None, start immediately.
+Note that due to flip timing limitations, this is only a
+guaranteed <em>minimum</em> (not absolute) wait time before the
+flip completes (if <cite>flip</cite> is <code class="docutils literal"><span class="pre">True</span></code>). As a result, in some
+cases <cite>when</cite> should be set to a value smaller than your true
+intended flip time.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>flip_time</strong> : float</p>
+<blockquote class="last">
+<div><p>The timestamp of the screen flip.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.identify_trial</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.flip" title="expyfun.ExperimentController.flip"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.flip</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.play</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stop</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.trial_ok" title="expyfun.ExperimentController.trial_ok"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.trial_ok</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>Order of operations is: screen flip (optional), audio start, then
+(only if <code class="docutils literal"><span class="pre">flip=True</span></code>) additional functions added with
+<cite>call_on_next_flip</cite> and <cite>call_on_every_flip</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.stim_db">
+<code class="descname">stim_db</code><a class="headerlink" href="#expyfun.ExperimentController.stim_db" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sound power in dB of the stimuli.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.stim_fs">
+<code class="descname">stim_fs</code><a class="headerlink" href="#expyfun.ExperimentController.stim_fs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sampling rate at which the stimuli were generated.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop audio buffer playback and reset cursor to beginning of buffer</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.load_buffer</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.play</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.set_stim_db" title="expyfun.ExperimentController.set_stim_db"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.set_stim_db</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.start_stimulus</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.stop_noise">
+<code class="descname">stop_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.stop_noise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the background masker noise</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentControlller.set_noise_db</span></code>, <a class="reference internal" href="#expyfun.ExperimentController.start_noise" title="expyfun.ExperimentController.start_noise"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.start_noise</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.system_beep">
+<code class="descname">system_beep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.system_beep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play a system beep</p>
+<p>This will play through the system audio, <em>not</em> through the
+audio controller (unless that is set to be the system audio).
+This is useful for e.g., notifying that it&#8217;s time for an
+eye-tracker calibration.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.toggle_cursor">
+<code class="descname">toggle_cursor</code><span class="sig-paren">(</span><em>visibility</em>, <em>flip=False</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.toggle_cursor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show or hide the mouse</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>visibility</strong> : bool</p>
+<blockquote class="last">
+<div><p>If True, show; if False, hide.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_mouse_position</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.listen_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_one_click" title="expyfun.ExperimentController.wait_one_click"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_one_click</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_for_clicks" title="expyfun.ExperimentController.wait_for_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_for_clicks</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.trial_ok">
+<code class="descname">trial_ok</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.trial_ok" title="Permalink to this definition">¶</a></dt>
+<dd><p>Report that the trial was okay and do post-trial tasks.</p>
+<p>For example, logs and data files can be flushed at the end of each
+trial.</p>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.identify_trial</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.start_stimulus</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.stop</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.wait_for_click_on">
+<code class="descname">wait_for_click_on</code><span class="sig-paren">(</span><em>objects</em>, <em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_for_click_on" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the first click after min_wait over a visual object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>objects</strong> : list | Rectangle | Circle</p>
+<blockquote>
+<div><p>A list of objects (or a single object) that the user may click on.
+Supported types are: Rectangle, Circle</p>
+</div></blockquote>
+<p><strong>max_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration after which control is returned if no button is clicked.</p>
+</div></blockquote>
+<p><strong>min_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration for which to ignore button clicks.</p>
+</div></blockquote>
+<p><strong>live_buttons</strong> : list | None</p>
+<blockquote>
+<div><p>List of strings indicating acceptable buttons.
+<code class="docutils literal"><span class="pre">None</span></code> accepts all mouse clicks.</p>
+</div></blockquote>
+<p><strong>timestamp</strong> : bool</p>
+<blockquote>
+<div><p>Whether the mouse click should be timestamped. If <code class="docutils literal"><span class="pre">True</span></code>, returns
+the mouse click time relative to the value given in
+<cite>relative_to</cite>.</p>
+</div></blockquote>
+<p><strong>relative_to</strong> : None | float</p>
+<blockquote>
+<div><p>A time relative to which timestamping is done. Ignored if
+<code class="docutils literal"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal"><span class="pre">None</span></code>, timestamps are relative to the
+time <cite>wait_one_click</cite> was called.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clicked</strong> : tuple | str | None</p>
+<blockquote>
+<div><p>If <code class="docutils literal"><span class="pre">timestamp==True</span></code>, returns a tuple (str, int, int, float)
+indicating the first valid button clicked and its timestamp (or
+<code class="docutils literal"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable button was clicked
+between <cite>min_wait</cite> and <cite>max_wait</cite>). If <code class="docutils literal"><span class="pre">timestamp==False</span></code>,
+returns a tuple (str, int, int) indicating the first button clicked
+(or <code class="docutils literal"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable key was clicked).</p>
+</div></blockquote>
+<p><strong>index</strong> : the index of the object in the list of objects that was clicked</p>
+<blockquote class="last">
+<div><p>on. Returns None if time ran out before a valid click. If objects
+were overlapping, it returns the index of the object that comes
+first in the <cite>objects</cite> argument.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.wait_for_clicks">
+<code class="descname">wait_for_clicks</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_for_clicks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all clicks between min_wait and max_wait.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>max_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration after which control is returned if no button is clicked.</p>
+</div></blockquote>
+<p><strong>min_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration for which to ignore button clicks.</p>
+</div></blockquote>
+<p><strong>live_buttons</strong> : list | None</p>
+<blockquote>
+<div><p>List of strings indicating acceptable buttons.
+<code class="docutils literal"><span class="pre">None</span></code> accepts all mouse clicks.</p>
+</div></blockquote>
+<p><strong>timestamp</strong> : bool</p>
+<blockquote>
+<div><p>Whether the mouse click should be timestamped. If <code class="docutils literal"><span class="pre">True</span></code>, returns
+the mouse click time relative to the value given in
+<code class="docutils literal"><span class="pre">relative_to</span></code>.</p>
+</div></blockquote>
+<p><strong>relative_to</strong> : None | float</p>
+<blockquote>
+<div><p>A time relative to which timestamping is done. Ignored if
+<code class="docutils literal"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal"><span class="pre">None</span></code>, timestamps are relative to the
+time <code class="docutils literal"><span class="pre">wait_one_click</span></code> was called.</p>
+</div></blockquote>
+<p><strong>visible</strong> : None | bool</p>
+<blockquote>
+<div><p>Whether to show the cursor while in the function. <code class="docutils literal"><span class="pre">None</span></code> has no
+effect and is the default. A boolean will show it (or not) while
+the function has control and then set visibility back to its
+previous value afterwards.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clicks</strong> : list of tuple</p>
+<blockquote class="last">
+<div><p>Returns a list of the clicks between min_wait and max_wait.
+If <code class="docutils literal"><span class="pre">timestamp==True</span></code>, each entry is a tuple (str, int, int,
+float) indicating the button clicked and its timestamp.
+If <code class="docutils literal"><span class="pre">timestamp==False</span></code>, each entry is a tuple (str, int, int)
+indicating the button clicked.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_mouse_position</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.listen_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.toggle_cursor" title="expyfun.ExperimentController.toggle_cursor"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.toggle_cursor</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_one_click" title="expyfun.ExperimentController.wait_one_click"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_one_click</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.wait_for_presses">
+<code class="descname">wait_for_presses</code><span class="sig-paren">(</span><em>max_wait</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns all button presses between min_wait and max_wait.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>max_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration after which control is returned.</p>
+</div></blockquote>
+<p><strong>min_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration for which to ignore keypresses (force-quit keys will
+still be checked at the end of the wait).</p>
+</div></blockquote>
+<p><strong>live_keys</strong> : list | None</p>
+<blockquote>
+<div><p>List of strings indicating acceptable keys or buttons. Other data
+types are cast as strings, so a list of ints will also work.
+<code class="docutils literal"><span class="pre">None</span></code> accepts all keypresses.</p>
+</div></blockquote>
+<p><strong>timestamp</strong> : bool</p>
+<blockquote>
+<div><p>Whether the keypresses should be timestamped. If <code class="docutils literal"><span class="pre">True</span></code>, returns
+the button press time relative to the value given in
+<cite>relative_to</cite>.</p>
+</div></blockquote>
+<p><strong>relative_to</strong> : None | float</p>
+<blockquote>
+<div><p>A time relative to which timestamping is done. Ignored if
+<cite>timestamp</cite> is <code class="docutils literal"><span class="pre">False</span></code>.  If <code class="docutils literal"><span class="pre">None</span></code>, timestamps are relative
+to the time <cite>wait_for_presses</cite> was called.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>presses</strong> : list</p>
+<blockquote class="last">
+<div><p>If timestamp==False, returns a list of strings indicating which
+keys were pressed. Otherwise, returns a list of tuples
+(str, float) of keys and their timestamps.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.listen_presses" title="expyfun.ExperimentController.listen_presses"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.listen_presses</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.get_presses" title="expyfun.ExperimentController.get_presses"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_presses</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_one_press" title="expyfun.ExperimentController.wait_one_press"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_one_press</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.wait_one_click">
+<code class="descname">wait_one_click</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_one_click" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns only the first mouse button clicked after min_wait.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>max_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration after which control is returned if no button is clicked.</p>
+</div></blockquote>
+<p><strong>min_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration for which to ignore button clicks.</p>
+</div></blockquote>
+<p><strong>live_buttons</strong> : list | None</p>
+<blockquote>
+<div><p>List of strings indicating acceptable buttons.
+<code class="docutils literal"><span class="pre">None</span></code> accepts all mouse clicks.</p>
+</div></blockquote>
+<p><strong>timestamp</strong> : bool</p>
+<blockquote>
+<div><p>Whether the mouse click should be timestamped. If <code class="docutils literal"><span class="pre">True</span></code>, returns
+the mouse click time relative to the value given in
+<code class="docutils literal"><span class="pre">relative_to</span></code>.</p>
+</div></blockquote>
+<p><strong>relative_to</strong> : None | float</p>
+<blockquote>
+<div><p>A time relative to which timestamping is done. Ignored if
+<code class="docutils literal"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal"><span class="pre">None</span></code>, timestamps are relative to the
+time <cite>wait_one_click</cite> was called.</p>
+</div></blockquote>
+<p><strong>visible</strong> : None | bool</p>
+<blockquote>
+<div><p>Whether to show the cursor while in the function. <code class="docutils literal"><span class="pre">None</span></code> has no
+effect and is the default. A boolean will show it (or not) while
+the function has control and then set visibility back to its
+previous value afterwards.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clicked</strong> : tuple | str | None</p>
+<blockquote class="last">
+<div><p>If <code class="docutils literal"><span class="pre">timestamp==True</span></code>, returns a tuple (str, int, int, float)
+indicating the first button clicked and its timestamp (or
+<code class="docutils literal"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable button was clicked
+between <cite>min_wait</cite> and <cite>max_wait</cite>). If <code class="docutils literal"><span class="pre">timestamp==False</span></code>,
+returns a tuple (str, int, int) indicating the first button clicked
+(or <code class="docutils literal"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable key was clicked).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_mouse_position</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.listen_clicks</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.toggle_cursor" title="expyfun.ExperimentController.toggle_cursor"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.toggle_cursor</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_for_clicks" title="expyfun.ExperimentController.wait_for_clicks"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_for_clicks</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.wait_one_press">
+<code class="descname">wait_one_press</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_one_press" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns only the first button pressed after min_wait.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>max_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration after which control is returned if no key is pressed.</p>
+</div></blockquote>
+<p><strong>min_wait</strong> : float</p>
+<blockquote>
+<div><p>Duration for which to ignore keypresses (force-quit keys will
+still be checked at the end of the wait).</p>
+</div></blockquote>
+<p><strong>live_keys</strong> : list | None</p>
+<blockquote>
+<div><p>List of strings indicating acceptable keys or buttons. Other data
+types are cast as strings, so a list of ints will also work.
+<code class="docutils literal"><span class="pre">None</span></code> accepts all keypresses.</p>
+</div></blockquote>
+<p><strong>timestamp</strong> : bool</p>
+<blockquote>
+<div><p>Whether the keypress should be timestamped. If <code class="docutils literal"><span class="pre">True</span></code>, returns
+the button press time relative to the value given in
+<cite>relative_to</cite>.</p>
+</div></blockquote>
+<p><strong>relative_to</strong> : None | float</p>
+<blockquote>
+<div><p>A time relative to which timestamping is done. Ignored if
+<code class="docutils literal"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal"><span class="pre">None</span></code>, timestamps are relative to the
+time <cite>wait_one_press</cite> was called.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>pressed</strong> : tuple | str | None</p>
+<blockquote class="last">
+<div><p>If <code class="docutils literal"><span class="pre">timestamp==True</span></code>, returns a tuple (str, float) indicating the
+first key pressed and its timestamp (or <code class="docutils literal"><span class="pre">(None,</span> <span class="pre">None)</span></code> if no
+acceptable key was pressed between <cite>min_wait</cite> and <cite>max_wait</cite>).
+If <code class="docutils literal"><span class="pre">timestamp==False</span></code>, returns a string indicating the first key
+pressed (or <code class="docutils literal"><span class="pre">None</span></code> if no acceptable key was pressed).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.listen_presses" title="expyfun.ExperimentController.listen_presses"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.listen_presses</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.get_presses" title="expyfun.ExperimentController.get_presses"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.get_presses</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.wait_for_presses" title="expyfun.ExperimentController.wait_for_presses"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_for_presses</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.wait_secs">
+<code class="descname">wait_secs</code><span class="sig-paren">(</span><em>secs</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_secs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait a specified number of seconds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>secs</strong> : float</p>
+<blockquote class="last">
+<div><p>Number of seconds to wait.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.wait_until" title="expyfun.ExperimentController.wait_until"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_until</span></code></a>, <a class="reference internal" href="expyfun.wait_secs.html#expyfun.wait_secs" title="expyfun.wait_secs"><code class="xref py py-obj docutils literal"><span class="pre">wait_secs</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.wait_until">
+<code class="descname">wait_until</code><span class="sig-paren">(</span><em>timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_until" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until the given time is reached.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>timestamp</strong> : float</p>
+<blockquote>
+<div><p>A time to wait until, evaluated against the experiment master
+clock.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>remaining_time</strong> : float</p>
+<blockquote class="last">
+<div><p>The difference between <code class="docutils literal"><span class="pre">timestamp</span></code> and the time <cite>wait_until</cite>
+was called.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference internal" href="#expyfun.ExperimentController.wait_secs" title="expyfun.ExperimentController.wait_secs"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController.wait_secs</span></code></a>, <a class="reference internal" href="expyfun.wait_secs.html#expyfun.wait_secs" title="expyfun.wait_secs"><code class="xref py py-obj docutils literal"><span class="pre">wait_secs</span></code></a></p>
+</div>
+<p class="rubric">Notes</p>
+<p>Unlike <cite>wait_secs</cite>, there is no guarantee of precise timing with this
+function. It is the responsibility of the user to do choose a
+reasonable timestamp (or equivalently, do a reasonably small amount of
+processing prior to calling <cite>wait_until</cite>).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.window">
+<code class="descname">window</code><a class="headerlink" href="#expyfun.ExperimentController.window" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pyglet visual window handle.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.write_data_line">
+<code class="descname">write_data_line</code><span class="sig-paren">(</span><em>event_type</em>, <em>value=None</em>, <em>timestamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.write_data_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a line of data to the output CSV.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>event_type</strong> : str</p>
+<blockquote>
+<div><p>Type of event (e.g., keypress, screen flip, etc.)</p>
+</div></blockquote>
+<p><strong>value</strong> : None | str</p>
+<blockquote>
+<div><p>Anything that can be cast to a string is okay here.</p>
+</div></blockquote>
+<p><strong>timestamp</strong> : float | None</p>
+<blockquote class="last">
+<div><p>The timestamp when the event occurred.  If <code class="docutils literal"><span class="pre">None</span></code>, will use the
+time the data line was written from the master clock.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Writing a data line does not cause the file to be flushed.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-06-28.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

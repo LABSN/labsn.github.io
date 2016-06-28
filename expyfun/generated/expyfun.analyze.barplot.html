@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>expyfun.analyze.barplot &mdash; MNE 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MNE 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="expyfun.analyze.dprime" href="expyfun.analyze.dprime.html" />
+    <link rel="prev" title="expyfun.codeblocks.find_pupil_tone_impulse_response" href="expyfun.codeblocks.find_pupil_tone_impulse_response.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/favicon.ico">
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../python_reference.html">API</a></li>
+                <li><a href="../auto_examples/index.html">Gallery</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Basic examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.analyze.barplot</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="expyfun-analyze-barplot">
+<h1>expyfun.analyze.barplot<a class="headerlink" href="#expyfun-analyze-barplot" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="expyfun.analyze.barplot">
+<code class="descclassname">expyfun.analyze.</code><code class="descname">barplot</code><span class="sig-paren">(</span><em>h</em>, <em>axis=-1</em>, <em>ylim=None</em>, <em>err_bars=None</em>, <em>lines=False</em>, <em>groups=None</em>, <em>eq_group_widths=False</em>, <em>gap_size=0.2</em>, <em>brackets=None</em>, <em>bracket_text=None</em>, <em>bracket_inline=False</em>, <em>bracket_group_lines=False</em>, <em>bar_names=None</em>, <em>group_names=None</em>, <em>bar_kwargs=None</em>, <em>err_kwargs=None</em>, <em>line_kwargs=None</em>, <em>bracket_kwargs=None</em>, <em>pval_kwargs=None</em>, <em>figure_kwargs=None</em>, <em>smart_defaults=True</em>, <em>fname=None</em>, <em>ax=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.analyze.barplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes barplots w/ optional line overlays, grouping, &amp; signif. brackets.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>h</strong> : array-like</p>
+<blockquote>
+<div><p>If <cite>h</cite> is 2-dimensional, heights will be calculated as means along
+the axis given by <cite>axis</cite>. If <cite>h</cite> is of lower dimension, it is
+treated as raw height values. If <cite>h</cite> is a <cite>pandas.DataFrame</cite> and
+<cite>bar_names</cite> is <code class="docutils literal"><span class="pre">None</span></code>, <cite>bar_names</cite> will be inferred from the
+DataFrame&#8217;s <cite>column</cite> labels (if <code class="docutils literal"><span class="pre">axis=0</span></code>) or <cite>index</cite> labels.</p>
+</div></blockquote>
+<p><strong>axis</strong> : int</p>
+<blockquote>
+<div><p>The axis along which to calculate mean values to determine bar heights.
+Ignored if <cite>h</cite> is 0- or 1-dimensional.</p>
+</div></blockquote>
+<p><strong>ylim</strong> : tuple | None</p>
+<blockquote>
+<div><p>y-axis limits passed to <cite>matplotlib.pyplot.subplot.set_ylim</cite>.</p>
+</div></blockquote>
+<p><strong>err_bars</strong> : str | array-like | None</p>
+<blockquote>
+<div><p>Type of error bars to be added to the barplot. Possible values are
+<code class="docutils literal"><span class="pre">'sd'</span></code> for sample standard deviation, <code class="docutils literal"><span class="pre">'se'</span></code> for standard error of
+the mean, or <code class="docutils literal"><span class="pre">'ci'</span></code> for 95% confidence interval. If <code class="docutils literal"><span class="pre">None</span></code>, no
+error bars will be plotted. Custom error bar heights are possible by
+passing an array-like object; in such cases <cite>err_bars</cite> must have the
+same dimensionality and shape as <cite>h</cite>.</p>
+</div></blockquote>
+<p><strong>lines</strong> : bool</p>
+<blockquote>
+<div><p>Whether to plot within-subject data as lines overlaid on the barplot.</p>
+</div></blockquote>
+<p><strong>groups</strong> : list | None</p>
+<blockquote>
+<div><p>List of lists containing the integers in <code class="docutils literal"><span class="pre">range(num_bars)</span></code>, with
+sub-lists indicating the desired grouping. For example, if <cite>h</cite> has
+has shape (10, 4) and <code class="docutils literal"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">-1</span></code> then &#8220;num_bars&#8221; is 4; if you want
+the first bar isolated and the remaining three grouped, then specify
+<code class="docutils literal"><span class="pre">groups=[[0],</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]]</span></code>.</p>
+</div></blockquote>
+<p><strong>eq_group_widths</strong> : bool</p>
+<blockquote>
+<div><p>Should all groups have the same width? If <code class="docutils literal"><span class="pre">False</span></code>, all bars will have
+the same width. Ignored if <cite>groups</cite> is <code class="docutils literal"><span class="pre">None</span></code>, since the bar/group
+distinction is meaningless in that case.</p>
+</div></blockquote>
+<p><strong>gap_size</strong> : float</p>
+<blockquote>
+<div><p>Width of the gap between groups (if <cite>eq_group_width</cite> is <code class="docutils literal"><span class="pre">True</span></code>) or
+between bars, expressed as a proportion [0,1) of group or bar width.
+Half the width of <cite>gap_size</cite> will be added between the outermost bars
+and the plot edges.</p>
+</div></blockquote>
+<p><strong>brackets</strong> : list of tuples | None</p>
+<blockquote>
+<div><p>Location of significance brackets. Scheme is similar to the
+specification of <cite>groups</cite>; a bracket between the first and second bar
+and another between the third and fourth bars would be specified as
+<code class="docutils literal"><span class="pre">brackets=[(0,</span> <span class="pre">1),</span> <span class="pre">(2,</span> <span class="pre">3)]</span></code>. Brackets between groups of bars instead
+of individual bars are specified as lists within the tuple:
+<code class="docutils literal"><span class="pre">brackets=[([0,</span> <span class="pre">1],</span> <span class="pre">[2,</span> <span class="pre">3])]</span></code> draws a single bracket between group
+<code class="docutils literal"><span class="pre">[0,</span> <span class="pre">1]</span></code> and group <code class="docutils literal"><span class="pre">[2,</span> <span class="pre">3]</span></code>. For best results, pairs of adjacent
+bars should come earlier in the list than non-adjacent pairs.</p>
+</div></blockquote>
+<p><strong>bracket_text</strong> : str | list | None</p>
+<blockquote>
+<div><p>Text to display above brackets.</p>
+</div></blockquote>
+<p><strong>bracket_inline</strong> : bool</p>
+<blockquote>
+<div><p>If <code class="docutils literal"><span class="pre">True</span></code>, bracket text will be vertically centered along a broken
+bracket line. If <code class="docutils literal"><span class="pre">False</span></code>, text will be above the line.</p>
+</div></blockquote>
+<p><strong>bracket_group_lines</strong> : bool</p>
+<blockquote>
+<div><p>When drawing brackets between groups rather than single bars, should a
+horizontal line be drawn at each foot of the bracket to indicate this?</p>
+</div></blockquote>
+<p><strong>bar_names</strong> : array-like | None</p>
+<blockquote>
+<div><p>Optional axis labels for each bar.</p>
+</div></blockquote>
+<p><strong>group_names</strong> : array-like | None</p>
+<blockquote>
+<div><p>Optional axis labels for each group.</p>
+</div></blockquote>
+<p><strong>bar_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>Arguments passed to <code class="docutils literal"><span class="pre">matplotlib.pyplot.bar()</span></code> (ex: color, linewidth).</p>
+</div></blockquote>
+<p><strong>err_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>Arguments passed to <code class="docutils literal"><span class="pre">matplotlib.pyplot.bar(error_kw)</span></code> (ex: ecolor,
+capsize).</p>
+</div></blockquote>
+<p><strong>line_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>Arguments passed to <code class="docutils literal"><span class="pre">matplotlib.pyplot.plot()</span></code> (e.g., color, marker,
+linestyle).</p>
+</div></blockquote>
+<p><strong>pval_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>Arguments passed to <code class="docutils literal"><span class="pre">matplotlib.pyplot.annotate()</span></code> when drawing
+bracket labels.</p>
+</div></blockquote>
+<p><strong>bracket_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>arguments passed to <code class="docutils literal"><span class="pre">matplotlib.pyplot.plot()</span></code> (e.g., color, marker,
+linestyle).</p>
+</div></blockquote>
+<p><strong>figure_kwargs</strong> : dict</p>
+<blockquote>
+<div><p>arguments passed to <code class="docutils literal"><span class="pre">matplotlib.pyplot.figure()</span></code> (e.g., figsize, dpi,
+frameon).</p>
+</div></blockquote>
+<p><strong>smart_defaults</strong> : bool</p>
+<blockquote>
+<div><p>Whether to use pyplot default colors (<code class="docutils literal"><span class="pre">False</span></code>), or something more
+pleasing to the eye (<code class="docutils literal"><span class="pre">True</span></code>).</p>
+</div></blockquote>
+<p><strong>fname</strong> : str | None</p>
+<blockquote>
+<div><p>Path and name of output file. File type is inferred from the file
+extension of <cite>fname</cite> and should work for any of the types supported by
+pyplot (pdf, eps, svg, png, raw).</p>
+</div></blockquote>
+<p><strong>ax</strong> : matplotlib.pyplot.axes | None</p>
+<blockquote>
+<div><p>A <code class="docutils literal"><span class="pre">matplotlib.pyplot.axes</span></code> instance.  If <code class="docutils literal"><span class="pre">None</span></code>, a new figure with
+a single subplot will be created.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>p</strong> : handle for the <code class="docutils literal"><span class="pre">matplotlib.pyplot.subplot</span></code> instance.</p>
+<p class="last"><strong>b</strong> : handle for the <code class="docutils literal"><span class="pre">matplotlib.pyplot.bar</span></code> instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<dl class="docutils">
+<dt>Known limitations:</dt>
+<dd><dl class="first last docutils">
+<dt>1 Bracket heights don&#8217;t get properly set when generating multiple</dt>
+<dd>subplots with <code class="docutils literal"><span class="pre">sharey=True</span></code> (matplotlib seems to temporarily force
+the <code class="docutils literal"><span class="pre">ylim</span></code> to +/- 0.6 in this case). Work around is to use
+<code class="docutils literal"><span class="pre">sharey=False</span></code> and manually set <code class="docutils literal"><span class="pre">ylim</span></code> for each subplot.</dd>
+<dt>2 Brackets that span groups cannot span partial groups. For example,</dt>
+<dd>if <code class="docutils literal"><span class="pre">groups=[[0,</span> <span class="pre">1,</span> <span class="pre">2],</span> <span class="pre">[3,</span> <span class="pre">4]]</span></code> it is impossible to have a bracket
+at <code class="docutils literal"><span class="pre">[(0,</span> <span class="pre">1),</span> <span class="pre">(3,</span> <span class="pre">4)]</span></code>...  it is only possible to do, e.g.,
+<code class="docutils literal"><span class="pre">[0,</span> <span class="pre">(3,</span> <span class="pre">4)]</span></code> (single bar vs group) or  <code class="docutils literal"><span class="pre">[(0,</span> <span class="pre">1,</span> <span class="pre">2),</span> <span class="pre">(3,</span> <span class="pre">4)]</span></code>
+(full group vs full group).</dd>
+<dt>3 Bracket drawing is much better when adjacent pairs of bars are</dt>
+<dd>specified before non-adjacent pairs of bars.</dd>
+</dl>
+</dd>
+<dt>Smart defaults sets the following parameters:</dt>
+<dd>bar color: light gray (70%)
+error bar color: black
+line color: black
+bracket color: dark gray (30%)</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-06-28.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

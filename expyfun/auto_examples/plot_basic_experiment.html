@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Run a very basic experiment &mdash; MNE 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MNE 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="Basic examples" href="index.html" />
+    <link rel="next" title="Run a simple experiment" href="simple_experiment.html" />
+    <link rel="prev" title="Basic examples" href="index.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/favicon.ico">
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../python_reference.html">API</a></li>
+                <li><a href="index.html">Gallery</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Basic examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Run a very basic experiment</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="run-a-very-basic-experiment">
+<span id="sphx-glr-auto-examples-plot-basic-experiment-py"></span><h1>Run a very basic experiment<a class="headerlink" href="#run-a-very-basic-experiment" title="Permalink to this headline">¶</a></h1>
+<p>This example demonstrates an (almost) minimum working example of the
+ExperimentController class.</p>
+<img alt="../_images/sphx_glr_plot_basic_experiment_001.png" class="align-center" src="../_images/sphx_glr_plot_basic_experiment_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">531</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">Pyglet</span> <span class="n">audio</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">585</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">screen</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">598</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Set</span> <span class="n">screen</span> <span class="n">visibility</span> <span class="kc">True</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">637</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initializing</span> <span class="n">dummy</span> <span class="n">triggering</span> <span class="n">mode</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">641</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initialization</span> <span class="n">complete</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">641</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Subject</span><span class="p">:</span> <span class="n">foo</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">642</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Session</span><span class="p">:</span> <span class="mi">001</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">858</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Loading</span> <span class="mi">48828</span> <span class="n">samples</span> <span class="n">to</span> <span class="n">buffer</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">915</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Stamp</span> <span class="n">trial</span> <span class="n">ID</span> <span class="n">to</span> <span class="n">ec_id</span>  <span class="p">:</span> <span class="n">tone</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">915</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Stamp</span> <span class="n">trial</span> <span class="n">ID</span> <span class="n">to</span> <span class="n">ttl_id</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span><span class="mi">974</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Starting</span> <span class="n">stimuli</span><span class="p">:</span> <span class="n">flipping</span> <span class="n">screen</span> <span class="ow">and</span> <span class="n">playing</span> <span class="n">audio</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">06</span><span class="p">,</span><span class="mi">008</span> <span class="o">-</span> <span class="n">WARNING</span> <span class="o">-</span> <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span> <span class="n">called</span> <span class="n">before</span> <span class="n">stimulus</span> <span class="n">had</span> <span class="n">stopped</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">06</span><span class="p">,</span><span class="mi">008</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Trial</span> <span class="n">OK</span>
+<span class="n">Presses</span><span class="p">:</span>
+<span class="p">[]</span>
+<span class="mi">2016</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">28</span> <span class="mi">18</span><span class="p">:</span><span class="mi">48</span><span class="p">:</span><span class="mi">06</span><span class="p">,</span><span class="mi">010</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Audio</span> <span class="n">stopped</span> <span class="ow">and</span> <span class="n">reset</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larson.eric.d@gmail.com&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># License: BSD (3-clause)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../generated/expyfun.ExperimentController.html#expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="kn">import</span> <a href="../generated/expyfun.visual.FixationDot.html#expyfun.visual.FixationDot"><span class="n">FixationDot</span></a>
+
+<span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
+
+<span class="c1"># set configuration</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="mf">24414.</span>  <span class="c1"># default for ExperimentController</span>
+<span class="n">dur</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">tone</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.sin.html#numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.arange.html#numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">fs</span> <span class="o">*</span> <span class="n">dur</span><span class="p">))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
+<span class="n">tone</span> <span class="o">*=</span> <span class="mf">0.01</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.sqrt.html#numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Set RMS to 0.01</span>
+<span class="n">max_wait</span> <span class="o">=</span> <span class="mf">1.</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
+
+<span class="k">with</span> <a href="../generated/expyfun.ExperimentController.html#expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;testExp&#39;</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span>
+                          <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Press a button when you hear the tone&#39;</span><span class="p">,</span>
+                     <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
+
+    <span class="n">dot</span> <span class="o">=</span> <a href="../generated/expyfun.visual.FixationDot.html#expyfun.visual.FixationDot"><span class="n">FixationDot</span></a><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><span class="n">tone</span><span class="p">)</span>
+    <span class="n">dot</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+    <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>  <span class="c1"># only because we want to show it in the docs</span>
+
+    <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s1">&#39;tone&#39;</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>
+    <span class="n">presses</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_for_presses</span><span class="p">(</span><span class="n">dur</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Presses:</span><span class="se">\n</span><span class="s1">{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">presses</span><span class="p">))</span>
+
+<span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the script:</strong>
+(0 minutes 0.652 seconds)</p>
+<div class="sphx-glr-download container">
+<strong>Download Python source code:</strong> <a class="reference download internal" href="../_downloads/plot_basic_experiment.py" download=""><code class="xref download docutils literal"><span class="pre">plot_basic_experiment.py</span></code></a></div>
+<div class="sphx-glr-download container">
+<strong>Download IPython notebook:</strong> <a class="reference download internal" href="../_downloads/plot_basic_experiment.ipynb" download=""><code class="xref download docutils literal"><span class="pre">plot_basic_experiment.ipynb</span></code></a></div>
+<p class="sphx-glr-signature"><a class="reference external" href="http://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-06-28.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

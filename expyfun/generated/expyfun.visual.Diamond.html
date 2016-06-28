@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>expyfun.visual.Diamond &mdash; MNE 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MNE 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="expyfun.visual.FixationDot" href="expyfun.visual.FixationDot.html" />
+    <link rel="prev" title="expyfun.visual.ConcentricCircles" href="expyfun.visual.ConcentricCircles.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/favicon.ico">
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../python_reference.html">API</a></li>
+                <li><a href="../auto_examples/index.html">Gallery</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Basic examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.visual.Diamond</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="expyfun-visual-diamond">
+<h1>expyfun.visual.Diamond<a class="headerlink" href="#expyfun-visual-diamond" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="expyfun.visual.Diamond">
+<em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Diamond</code><span class="sig-paren">(</span><em>ec</em>, <em>pos</em>, <em>units='norm'</em>, <em>fill_color='white'</em>, <em>line_color=None</em>, <em>line_width=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Diamond" title="Permalink to this definition">¶</a></dt>
+<dd><p>A diamond</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ec</strong> : instance of ExperimentController</p>
+<blockquote>
+<div><p>Parent EC.</p>
+</div></blockquote>
+<p><strong>pos</strong> : array-like</p>
+<blockquote>
+<div><p>4-element array-like with X, Y center and width, height.</p>
+</div></blockquote>
+<p><strong>units</strong> : str</p>
+<blockquote>
+<div><p>Units to use. These will apply to all spatial aspects of the drawing.
+shape e.g. size, position. See <code class="docutils literal"><span class="pre">check_units</span></code> for options.</p>
+</div></blockquote>
+<p><strong>fill_color</strong> : matplotlib Color | None</p>
+<blockquote>
+<div><p>Color to fill with. None is transparent.</p>
+</div></blockquote>
+<p><strong>line_color</strong> : matplotlib Color | None</p>
+<blockquote>
+<div><p>Color of the border line. None is transparent.</p>
+</div></blockquote>
+<p><strong>line_width</strong> : float</p>
+<blockquote>
+<div><p>Line width in pixels.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>line</strong> : instance of Rectangle</p>
+<blockquote class="last">
+<div><p>The rectangle object.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.Diamond.draw" title="expyfun.visual.Diamond.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>()</td>
+<td>Draw the object to the display buffer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.Diamond.set_fill_color" title="expyfun.visual.Diamond.set_fill_color"><code class="xref py py-obj docutils literal"><span class="pre">set_fill_color</span></code></a>(fill_color)</td>
+<td>Set the object color</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.Diamond.set_line_color" title="expyfun.visual.Diamond.set_line_color"><code class="xref py py-obj docutils literal"><span class="pre">set_line_color</span></code></a>(line_color)</td>
+<td>Set the object color</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.Diamond.set_line_width" title="expyfun.visual.Diamond.set_line_width"><code class="xref py py-obj docutils literal"><span class="pre">set_line_width</span></code></a>(line_width)</td>
+<td>Set the line width in pixels</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.Diamond.set_pos" title="expyfun.visual.Diamond.set_pos"><code class="xref py py-obj docutils literal"><span class="pre">set_pos</span></code></a>(pos[,&nbsp;units])</td>
+<td>Set the position of the rectangle</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="expyfun.visual.Diamond.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>pos</em>, <em>units='norm'</em>, <em>fill_color='white'</em>, <em>line_color=None</em>, <em>line_width=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Diamond.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Diamond.draw">
+<code class="descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Diamond.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw the object to the display buffer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Diamond.set_fill_color">
+<code class="descname">set_fill_color</code><span class="sig-paren">(</span><em>fill_color</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Diamond.set_fill_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the object color</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fill_color</strong> : matplotlib Color | None</p>
+<blockquote class="last">
+<div><p>The fill color. Use None for no fill.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Diamond.set_line_color">
+<code class="descname">set_line_color</code><span class="sig-paren">(</span><em>line_color</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Diamond.set_line_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the object color</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fill_color</strong> : matplotlib Color | None</p>
+<blockquote class="last">
+<div><p>The fill color. Use None for no fill.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Diamond.set_line_width">
+<code class="descname">set_line_width</code><span class="sig-paren">(</span><em>line_width</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Diamond.set_line_width" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the line width in pixels</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>line_width</strong> : float</p>
+<blockquote class="last">
+<div><p>The line width. Must be given in pixels. Due to OpenGL
+limitations, it must be <cite>0.0 &lt;= line_width &lt;= 10.0</cite>.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Diamond.set_pos">
+<code class="descname">set_pos</code><span class="sig-paren">(</span><em>pos</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Diamond.set_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position of the rectangle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>pos</strong> : array-like</p>
+<blockquote>
+<div><p>X, Y, width, height of the rectangle.</p>
+</div></blockquote>
+<p><strong>units</strong> : str</p>
+<blockquote class="last">
+<div><p>Units to use. See <code class="docutils literal"><span class="pre">check_units</span></code> for options.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-06-28.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

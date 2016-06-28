@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>expyfun.visual.Text &mdash; MNE 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MNE 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="expyfun.codeblocks.find_pupil_dynamic_range" href="expyfun.codeblocks.find_pupil_dynamic_range.html" />
+    <link rel="prev" title="expyfun.visual.Rectangle" href="expyfun.visual.Rectangle.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/favicon.ico">
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../python_reference.html">API</a></li>
+                <li><a href="../auto_examples/index.html">Gallery</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Basic examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.visual.Text</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="expyfun-visual-text">
+<h1>expyfun.visual.Text<a class="headerlink" href="#expyfun-visual-text" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="expyfun.visual.Text">
+<em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Text</code><span class="sig-paren">(</span><em>ec</em>, <em>text</em>, <em>pos=(0</em>, <em>0)</em>, <em>color='white'</em>, <em>font_name='Arial'</em>, <em>font_size=24</em>, <em>height=None</em>, <em>width='auto'</em>, <em>anchor_x='center'</em>, <em>anchor_y='center'</em>, <em>units='norm'</em>, <em>wrap=False</em>, <em>attr=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Text" title="Permalink to this definition">¶</a></dt>
+<dd><p>A text object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ec</strong> : instance of ExperimentController</p>
+<blockquote>
+<div><p>Parent EC.</p>
+</div></blockquote>
+<p><strong>text</strong> : str</p>
+<blockquote>
+<div><p>The text to display.</p>
+</div></blockquote>
+<p><strong>pos</strong> : array</p>
+<blockquote>
+<div><p>2-element array consisting of X- and Y-position coordinates.</p>
+</div></blockquote>
+<p><strong>color</strong> : matplotlib Color</p>
+<blockquote>
+<div><p>Color of the text.</p>
+</div></blockquote>
+<p><strong>font_name</strong> : str</p>
+<blockquote>
+<div><p>Font to use.</p>
+</div></blockquote>
+<p><strong>font_size</strong> : float</p>
+<blockquote>
+<div><p>Font size (points) to use.</p>
+</div></blockquote>
+<p><strong>height</strong> : float | None</p>
+<blockquote>
+<div><p>Height of the text region. None will automatically allocate the
+necessary size.</p>
+</div></blockquote>
+<p><strong>width</strong> : float | None | str</p>
+<blockquote>
+<div><p>Width (in pixels) of the text region. <cite>&#8216;auto&#8217;</cite> will allocate 80% of
+the screen width, useful for instructions. None will automatically
+allocate sufficient space, but not that this disables text wrapping.</p>
+</div></blockquote>
+<p><strong>anchor_x</strong> : str</p>
+<blockquote>
+<div><p>Horizontal text anchor (e.g., <code class="docutils literal"><span class="pre">'center'</span></code>).</p>
+</div></blockquote>
+<p><strong>anchor_y</strong> : str</p>
+<blockquote>
+<div><p>Vertical text anchor (e.g., <code class="docutils literal"><span class="pre">'center'</span></code>).</p>
+</div></blockquote>
+<p><strong>units</strong> : str</p>
+<blockquote>
+<div><p>Units to use. These will apply to all spatial aspects of the drawing.
+shape e.g. size, position. See <code class="docutils literal"><span class="pre">check_units</span></code> for options.</p>
+</div></blockquote>
+<p><strong>wrap</strong> : bool</p>
+<blockquote>
+<div><p>Whether or not the text will wrap to fit in screen, appropriate for
+multiline text. Inappropriate for text requiring precise positioning.</p>
+</div></blockquote>
+<p><strong>attr</strong> : bool</p>
+<blockquote>
+<div><p>Should the text be interpreted with pyglet&#8217;s <code class="docutils literal"><span class="pre">decode_attributed</span></code>
+method? This allows inline formatting for text color, e.g.,
+<code class="docutils literal"><span class="pre">'This</span> <span class="pre">is</span> <span class="pre">{color</span> <span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">255)}red</span> <span class="pre">text'</span></code>. If <code class="docutils literal"><span class="pre">attr=True</span></code>, the
+values of <code class="docutils literal"><span class="pre">font_name</span></code>, <code class="docutils literal"><span class="pre">font_size</span></code>, and <code class="docutils literal"><span class="pre">color</span></code> are automatically
+prepended to <code class="docutils literal"><span class="pre">text</span></code> (though they will be overridden by any inline
+formatting within <code class="docutils literal"><span class="pre">text</span></code> itself).</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>text</strong> : instance of Text</p>
+<blockquote class="last">
+<div><p>The text object.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.Text.draw" title="expyfun.visual.Text.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>()</td>
+<td>Draw the object to the display buffer</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.Text.set_color" title="expyfun.visual.Text.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(color)</td>
+<td>Set the text color</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="expyfun.visual.Text.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>text</em>, <em>pos=(0</em>, <em>0)</em>, <em>color='white'</em>, <em>font_name='Arial'</em>, <em>font_size=24</em>, <em>height=None</em>, <em>width='auto'</em>, <em>anchor_x='center'</em>, <em>anchor_y='center'</em>, <em>units='norm'</em>, <em>wrap=False</em>, <em>attr=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Text.__init__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Text.draw">
+<code class="descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Text.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw the object to the display buffer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Text.set_color">
+<code class="descname">set_color</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Text.set_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the text color</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>color</strong> : matplotlib Color | None</p>
+<blockquote class="last">
+<div><p>The color. Use None for no color.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-06-28.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

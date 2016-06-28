@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Basic examples &mdash; MNE 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MNE 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="next" title="Run a very basic experiment" href="plot_basic_experiment.html" />
+    <link rel="prev" title="Expyfun home" href="../index.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/favicon.ico">
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../python_reference.html">API</a></li>
+                <li><a href="#">Gallery</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Basic examples</a><ul>
+<li><a class="reference internal" href="#analysis-examples">Analysis examples</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#experiments">Experiments</a><ul>
+</ul>
+</li>
+<li><a class="reference internal" href="#stimulus-generation-examples">Stimulus generation examples</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="basic-examples">
+<h1>Basic examples<a class="headerlink" href="#basic-examples" title="Permalink to this headline">¶</a></h1>
+<p>Some basic examples of how to use expyfun to show audio and visual stimuli.</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#analysis-examples" id="id20">Analysis examples</a></li>
+<li><a class="reference internal" href="#experiments" id="id21">Experiments</a></li>
+<li><a class="reference internal" href="#stimulus-generation-examples" id="id22">Stimulus generation examples</a></li>
+</ul>
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates an (almost) minimum working example of the ExperimentController class..."><div class="figure" id="id1">
+<img alt="../_images/sphx_glr_plot_basic_experiment_thumb.png" src="../_images/sphx_glr_plot_basic_experiment_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="plot_basic_experiment.html#sphx-glr-auto-examples-plot-basic-experiment-py"><span class="std std-ref">Run a very basic experiment</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates much of the basic functionality built into the ExperimentController c..."><div class="figure" id="id2">
+<img alt="../_images/sphx_glr_simple_experiment_thumb.png" src="../_images/sphx_glr_simple_experiment_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="simple_experiment.html#sphx-glr-auto-examples-simple-experiment-py"><span class="std std-ref">Run a simple experiment</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div><div class="section" id="analysis-examples">
+<h2><a class="toc-backref" href="#id20">Analysis examples</a><a class="headerlink" href="#analysis-examples" title="Permalink to this headline">¶</a></h2>
+<p>Examples of how to analyze data.</p>
+<div class="sphx-glr-thumbcontainer" tooltip="This example shows some of the functionality of ``read_tab``. "><div class="figure" id="id3">
+<img alt="../_images/sphx_glr_plot_parse_demo_thumb.png" src="../_images/sphx_glr_plot_parse_demo_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="analysis/plot_parse_demo.html#sphx-glr-auto-examples-analysis-plot-parse-demo-py"><span class="std std-ref">Parsing demo</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This example simulates some 2AFC data and demonstrates the analysis functions ``dprime_2afc()``..."><div class="figure" id="id4">
+<img alt="../_images/sphx_glr_plot_analysis_demo_thumb.png" src="../_images/sphx_glr_plot_analysis_demo_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="analysis/plot_analysis_demo.html#sphx-glr-auto-examples-analysis-plot-analysis-demo-py"><span class="std std-ref">Analysis demo</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="experiments">
+<h2><a class="toc-backref" href="#id21">Experiments</a><a class="headerlink" href="#experiments" title="Permalink to this headline">¶</a></h2>
+<p>More specialized experiment code and examples.</p>
+<div class="sphx-glr-thumbcontainer" tooltip="This demonstrates how the version checking functions work. "><div class="figure" id="id5">
+<img alt="../_images/sphx_glr_version_checking_thumb.png" src="../_images/sphx_glr_version_checking_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/version_checking.html#sphx-glr-auto-examples-experiments-version-checking-py"><span class="std std-ref">Version checking functions</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This example tests synchronization between the screen and the audio playback."><div class="figure" id="id6">
+<img alt="../_images/sphx_glr_plot_sync_test_thumb.png" src="../_images/sphx_glr_plot_sync_test_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/plot_sync_test.html#sphx-glr-auto-examples-experiments-plot-sync-test-py"><span class="std std-ref">A-V sync test</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="expyfun provides multiple methods for drawing simple screen objects. "><div class="figure" id="id7">
+<img alt="../_images/sphx_glr_plot_drawing_methods_thumb.png" src="../_images/sphx_glr_plot_drawing_methods_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/plot_drawing_methods.html#sphx-glr-auto-examples-experiments-plot-drawing-methods-py"><span class="std std-ref">Experiment drawing methods</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This example tests the audio level and video size. For audio, it produces an 80 db SPL 1000 Hz ..."><div class="figure" id="id8">
+<img alt="../_images/sphx_glr_plot_level_test_thumb.png" src="../_images/sphx_glr_plot_level_test_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/plot_level_test.html#sphx-glr-auto-examples-experiments-plot-level-test-py"><span class="std std-ref">Sound level test and visual size calibration</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler..."><div class="figure" id="id9">
+<img alt="../_images/sphx_glr_pupillometry_experiment_thumb.png" src="../_images/sphx_glr_pupillometry_experiment_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/pupillometry_experiment.html#sphx-glr-auto-examples-experiments-pupillometry-experiment-py"><span class="std std-ref">Experiment using eye-tracking pupillometry</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates gathering key-releases as well as presses with the ExperimentControll..."><div class="figure" id="id10">
+<img alt="../_images/sphx_glr_plot_keyrelease_demo_thumb.png" src="../_images/sphx_glr_plot_keyrelease_demo_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/plot_keyrelease_demo.html#sphx-glr-auto-examples-experiments-plot-keyrelease-demo-py"><span class="std std-ref">KeyPressAndRelease demo</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates differences between the Text and AttrText classes. "><div class="figure" id="id11">
+<img alt="../_images/sphx_glr_plot_formatted_text_demo_thumb.png" src="../_images/sphx_glr_plot_formatted_text_demo_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/plot_formatted_text_demo.html#sphx-glr-auto-examples-experiments-plot-formatted-text-demo-py"><span class="std std-ref">Display text with different formatting methods</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler..."><div class="figure" id="id12">
+<img alt="../_images/sphx_glr_eyetracking_experiment_thumb.png" src="../_images/sphx_glr_eyetracking_experiment_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/eyetracking_experiment.html#sphx-glr-auto-examples-experiments-eyetracking-experiment-py"><span class="std std-ref">Experiment with eye-tracking</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the different mouse click functionality in the ExperimentController c..."><div class="figure" id="id13">
+<img alt="../_images/sphx_glr_plot_mouse_demo_thumb.png" src="../_images/sphx_glr_plot_mouse_demo_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/plot_mouse_demo.html#sphx-glr-auto-examples-experiments-plot-mouse-demo-py"><span class="std std-ref">Mouse click demo</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the different keypress-gathering techniques available in the Experime..."><div class="figure" id="id14">
+<img alt="../_images/sphx_glr_plot_keypress_demo_thumb.png" src="../_images/sphx_glr_plot_keypress_demo_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="experiments/plot_keypress_demo.html#sphx-glr-auto-examples-experiments-plot-keypress-demo-py"><span class="std std-ref">Keypress demo</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="stimulus-generation-examples">
+<h2><a class="toc-backref" href="#id22">Stimulus generation examples</a><a class="headerlink" href="#stimulus-generation-examples" title="Permalink to this headline">¶</a></h2>
+<p>Examples of how to generate stimuli for experiments.</p>
+<div class="sphx-glr-thumbcontainer" tooltip="This shows the methods that we provide that facilitate generation of more advanced stimuli. "><div class="figure" id="id15">
+<img alt="../_images/sphx_glr_plot_advanced_stimuli_thumb.png" src="../_images/sphx_glr_plot_advanced_stimuli_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="stimuli/plot_advanced_stimuli.html#sphx-glr-auto-examples-stimuli-plot-advanced-stimuli-py"><span class="std std-ref">Generate more advanced auditory stimuli</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This shows how to play a video file in expyfun. It requires that AVbin has already been install..."><div class="figure" id="id16">
+<img alt="../_images/sphx_glr_plot_simple_video_thumb.png" src="../_images/sphx_glr_plot_simple_video_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="stimuli/plot_simple_video.html#sphx-glr-auto-examples-stimuli-plot-simple-video-py"><span class="std std-ref">Play sample video file</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This shows how to make simple vocoded stimuli."><div class="figure" id="id17">
+<img alt="../_images/sphx_glr_plot_vocoded_stimuli_thumb.png" src="../_images/sphx_glr_plot_vocoded_stimuli_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="stimuli/plot_vocoded_stimuli.html#sphx-glr-auto-examples-stimuli-plot-vocoded-stimuli-py"><span class="std std-ref">Generate vocoded stimuli</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This shows how to control various properties of a video file in expyfun."><div class="figure" id="id18">
+<img alt="../_images/sphx_glr_plot_advanced_video_thumb.png" src="../_images/sphx_glr_plot_advanced_video_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="stimuli/plot_advanced_video.html#sphx-glr-auto-examples-stimuli-plot-advanced-video-py"><span class="std std-ref">Play sample video file</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="This shows how to generate some simple stimuli. It will also play a couple of sample stimuli. "><div class="figure" id="id19">
+<img alt="../_images/sphx_glr_generate_stimuli_thumb.png" src="../_images/sphx_glr_generate_stimuli_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="stimuli/generate_stimuli.html#sphx-glr-auto-examples-stimuli-generate-stimuli-py"><span class="std std-ref">Generate sample stimuli</span></a></span></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div><p class="sphx-glr-signature"><a class="reference external" href="http://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-06-28.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

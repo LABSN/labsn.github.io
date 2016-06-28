@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>expyfun.stimuli.vocode &mdash; MNE 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MNE 2.0.0.dev0 documentation" href="../index.html" />
+    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="next" title="expyfun.stimuli.window_edges" href="expyfun.stimuli.window_edges.html" />
+    <link rel="prev" title="expyfun.stimuli.rms" href="expyfun.stimuli.rms.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><img src="../_static/favicon.ico">
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../python_reference.html">API</a></li>
+                <li><a href="../auto_examples/index.html">Gallery</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Basic examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.stimuli.vocode</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="expyfun-stimuli-vocode">
+<h1>expyfun.stimuli.vocode<a class="headerlink" href="#expyfun-stimuli-vocode" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="expyfun.stimuli.vocode">
+<code class="descclassname">expyfun.stimuli.</code><code class="descname">vocode</code><span class="sig-paren">(</span><em>data</em>, <em>fs</em>, <em>n_bands=16</em>, <em>freq_lims=(200.0</em>, <em>8000.0)</em>, <em>scale='erb'</em>, <em>order=2</em>, <em>lp_cutoff=160.0</em>, <em>lp_order=4</em>, <em>mode='noise'</em>, <em>rate=200</em>, <em>seed=None</em>, <em>axis=-1</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.vocode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vocode stimuli using a variety of methods</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like</p>
+<blockquote>
+<div><p>Data array.</p>
+</div></blockquote>
+<p><strong>fs</strong> : float</p>
+<blockquote>
+<div><p>Sample rate.</p>
+</div></blockquote>
+<p><strong>n_bands</strong> : int</p>
+<blockquote>
+<div><p>Number of bands to use.</p>
+</div></blockquote>
+<p><strong>freq_lims</strong> : tuple</p>
+<blockquote>
+<div><p>2-element list of lower and upper frequency bounds.</p>
+</div></blockquote>
+<p><strong>scale</strong> : str</p>
+<blockquote>
+<div><p>Scale on which to equally space the bands. Possible values are &#8220;erb&#8221;,
+&#8220;log&#8221; (base-2), and &#8220;hz&#8221;.</p>
+</div></blockquote>
+<p><strong>order</strong> : int</p>
+<blockquote>
+<div><p>Order of analysis and synthesis.
+NOTE: Using too high an order can cause instability,
+always check outputs for order &gt; 2!</p>
+</div></blockquote>
+<p><strong>lp_cutoff</strong> : float</p>
+<blockquote>
+<div><p>Frequency of the envelope low-pass.</p>
+</div></blockquote>
+<p><strong>lp_order</strong> : int</p>
+<blockquote>
+<div><p>Order of the envelope low-pass.</p>
+</div></blockquote>
+<p><strong>mode</strong> : str</p>
+<blockquote>
+<div><p>The type of signal used to excite each band. Options are &#8220;noise&#8221; for
+band-limited noise, &#8220;tone&#8221; for sinewave-at-center-frequency, or
+&#8220;poisson&#8221; for a poisson process of band-limited clicks at the rate
+given by <code class="docutils literal"><span class="pre">poisson_rate</span></code>.</p>
+</div></blockquote>
+<p><strong>rate</strong> : int</p>
+<blockquote>
+<div><p>Average number of clicks per second for the poisson train used to
+excite each band (when mode==&#8221;poisson&#8221;).</p>
+</div></blockquote>
+<p><strong>seed</strong> : int | None</p>
+<blockquote>
+<div><p>Random seed to use. If <code class="docutils literal"><span class="pre">None</span></code>, no seeding is done.</p>
+</div></blockquote>
+<p><strong>axis</strong> : int</p>
+<blockquote>
+<div><p>Axis to operate over.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>voc</strong> : array-like</p>
+<blockquote class="last">
+<div><p>Vocoded stimuli of the same shape as data.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The default settings are adapted from a cochlear implant simulation
+algorithm described by Zachary Smith (Cochlear Corp.).</p>
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-06-28.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
