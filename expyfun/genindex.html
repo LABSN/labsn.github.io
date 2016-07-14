@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
-    <link rel="stylesheet" href="_static/bootswatch-3.3.6/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootswatch-3.3.6/sandstone/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -53,16 +53,17 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><img src="_static/favicon.ico">
-           </a>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/favicon.ico"></span>
+          expyfun</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
       </div>
 
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="python_reference.html">API</a></li>
-                <li><a href="auto_examples/index.html">Gallery</a></li>
+                <li><a href="python_reference.html">API reference</a></li>
+                <li><a href="auto_examples/index.html">Examples</a></li>
+                <li><a href="whats_new.html">Whats new</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -74,22 +75,11 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
-<li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Basic examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="whats_new.html">What&#8217;s new</a></li>
 </ul>
 </ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"></ul>
 </li>
               
             
@@ -220,6 +210,10 @@
   <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="generated/expyfun.visual.RawImage.html#expyfun.visual.RawImage.bounds">bounds (expyfun.visual.RawImage attribute)</a>
+  </dt>
+
+      
+  <dt><a href="generated/expyfun.analyze.box_off.html#expyfun.analyze.box_off">box_off() (in module expyfun.analyze)</a>
   </dt>
 
   </dl></td>
@@ -397,6 +391,10 @@
   </dt>
 
       
+  <dt><a href="generated/expyfun.analyze.fit_sigmoid.html#expyfun.analyze.fit_sigmoid">fit_sigmoid() (in module expyfun.analyze)</a>
+  </dt>
+
+      
   <dt><a href="generated/expyfun.visual.FixationDot.html#expyfun.visual.FixationDot">FixationDot (class in expyfun.visual)</a>
   </dt>
 
@@ -408,6 +406,10 @@
 
       
   <dt><a href="generated/expyfun.ExperimentController.html#expyfun.ExperimentController.flush">flush() (expyfun.ExperimentController method)</a>
+  </dt>
+
+      
+  <dt><a href="generated/expyfun.analyze.format_pval.html#expyfun.analyze.format_pval">format_pval() (in module expyfun.analyze)</a>
   </dt>
 
       
@@ -502,8 +504,6 @@
   <dt><a href="generated/expyfun.ExperimentController.html#expyfun.ExperimentController.listen_clicks">listen_clicks() (expyfun.ExperimentController method)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="generated/expyfun.ExperimentController.html#expyfun.ExperimentController.listen_presses">listen_presses() (expyfun.ExperimentController method)</a>
   </dt>
@@ -514,6 +514,8 @@
   </dt>
 
       </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="generated/expyfun.ExperimentController.html#expyfun.ExperimentController.load_buffer">load_buffer() (expyfun.ExperimentController method)</a>
   </dt>
@@ -524,6 +526,10 @@
   </dt>
 
       </dl></dd>
+      
+  <dt><a href="generated/expyfun.analyze.logit.html#expyfun.analyze.logit">logit() (in module expyfun.analyze)</a>
+  </dt>
+
   </dl></td>
 </tr></table>
 
@@ -580,14 +586,18 @@
   <dt><a href="generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound">play_sound() (in module expyfun.stimuli)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="generated/expyfun.TDTController.html#expyfun.TDTController.playing">playing (expyfun.TDTController attribute)</a>
   </dt>
 
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen">plot_screen() (in module expyfun.analyze)</a>
+  </dt>
+
+      
+  <dt><a href="generated/expyfun.analyze.press_times_to_hmfc.html#expyfun.analyze.press_times_to_hmfc">press_times_to_hmfc() (in module expyfun.analyze)</a>
   </dt>
 
   </dl></td>
@@ -632,6 +642,10 @@
 
       
   <dt><a href="generated/expyfun.stimuli.rms.html#expyfun.stimuli.rms">rms() (in module expyfun.stimuli)</a>
+  </dt>
+
+      
+  <dt><a href="generated/expyfun.analyze.rt_chisq.html#expyfun.analyze.rt_chisq">rt_chisq() (in module expyfun.analyze)</a>
   </dt>
 
   </dl></td>
@@ -758,8 +772,6 @@
   <dt><a href="generated/expyfun.TDTController.html#expyfun.TDTController.set_noise_level">set_noise_level() (expyfun.TDTController method)</a>
   </dt>
 
-  </dl></td>
-  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="generated/expyfun.visual.Circle.html#expyfun.visual.Circle.set_pos">set_pos() (expyfun.visual.Circle method)</a>
   </dt>
@@ -786,6 +798,8 @@
   </dt>
 
       </dl></dd>
+  </dl></td>
+  <td style="width: 33%" valign="top"><dl>
       
   <dt><a href="generated/expyfun.visual.ConcentricCircles.html#expyfun.visual.ConcentricCircles.set_radii">set_radii() (expyfun.visual.ConcentricCircles method)</a>
   </dt>
@@ -824,6 +838,10 @@
 
       
   <dt><a href="generated/expyfun.ExperimentController.html#expyfun.ExperimentController.set_visible">set_visible() (expyfun.ExperimentController method)</a>
+  </dt>
+
+      
+  <dt><a href="generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid">sigmoid() (in module expyfun.analyze)</a>
   </dt>
 
       
@@ -1021,7 +1039,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-06-28.<br/>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-07-14.<br/>
     </p>
   </div>
 </footer>
