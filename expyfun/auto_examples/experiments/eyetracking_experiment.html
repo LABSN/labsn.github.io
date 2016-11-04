@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Experiment with eye-tracking &mdash; MNE 2.0.0.dev0 documentation</title>
+    <title>Experiment with eye-tracking &#8212; expyfun 2.0.0.dev0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -31,7 +31,9 @@
     <script type="text/javascript" src="../../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-    <link rel="top" title="MNE 2.0.0.dev0 documentation" href="../../index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="expyfun 2.0.0.dev0 documentation" href="../../index.html" />
     <link rel="up" title="Examples" href="../index.html" />
     <link rel="next" title="Mouse click demo" href="plot_mouse_demo.html" />
     <link rel="prev" title="Display text with different formatting methods" href="plot_formatted_text_demo.html" />
@@ -119,15 +121,15 @@ using eye-tracking simpler.</p>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">,</span> <span class="n">visual</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">,</span> <span class="n">visual</span>
 <span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="kn">as</span> <span class="nn">ea</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
 
 
-<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;testExp&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;testExp&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
                           <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <span class="n">el</span> <span class="o">=</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
+    <span class="n">el</span> <span class="o">=</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Welcome to the experiment!</span><span class="se">\n\n</span><span class="s1">First, we will &#39;</span>
                      <span class="s1">&#39;perform a screen calibration.</span><span class="se">\n\n</span><span class="s1">Press a button &#39;</span>
                      <span class="s1">&#39;to continue.&#39;</span><span class="p">)</span>
@@ -139,12 +141,12 @@ using eye-tracking simpler.</p>
     <span class="c1"># make some circles to be drawn</span>
     <span class="n">radius</span> <span class="o">=</span> <span class="mf">7.5</span>  <span class="c1"># degrees</span>
     <span class="n">targ_rad</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c1"># degrees</span>
-    <span class="n">theta</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.linspace.html#numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-    <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.cos.html#numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">radius</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.sin.html#numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-    <span class="n">big_circ</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span>
+    <span class="n">theta</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.linspace.html#numpy.linspace" class="sphx-glr-code-links" tooltip="Link to documentation for numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.cos.html#numpy.cos" class="sphx-glr-code-links" tooltip="Link to documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">radius</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.sin.html#numpy.sin" class="sphx-glr-code-links" tooltip="Link to documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">big_circ</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span>
                              <span class="n">fill_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
                              <span class="n">line_width</span><span class="o">=</span><span class="mf">3.0</span><span class="p">)</span>
-    <span class="n">targ_circ</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">targ_rad</span><span class="p">,</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
+    <span class="n">targ_circ</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">targ_rad</span><span class="p">,</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span>
                               <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
     <span class="n">fix_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
@@ -171,12 +173,13 @@ using eye-tracking simpler.</p>
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong>
-(0 minutes 0.000 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<div class="sphx-glr-footer container">
 <div class="sphx-glr-download container">
-<strong>Download Python source code:</strong> <a class="reference download internal" href="../../_downloads/eyetracking_experiment.py" download=""><code class="xref download docutils literal"><span class="pre">eyetracking_experiment.py</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/eyetracking_experiment.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">eyetracking_experiment.py</span></code></a></div>
 <div class="sphx-glr-download container">
-<strong>Download IPython notebook:</strong> <a class="reference download internal" href="../../_downloads/eyetracking_experiment.ipynb" download=""><code class="xref download docutils literal"><span class="pre">eyetracking_experiment.ipynb</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/eyetracking_experiment.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eyetracking_experiment.ipynb</span></code></a></div>
+</div>
 <p class="sphx-glr-signature"><a class="reference external" href="http://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
 </div>
 
@@ -195,7 +198,7 @@ using eye-tracking simpler.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-07-27.<br/>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-11-04.<br/>
     </p>
   </div>
 </footer>
