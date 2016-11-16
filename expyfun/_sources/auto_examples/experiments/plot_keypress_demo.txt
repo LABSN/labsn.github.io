@@ -21,14 +21,14 @@ in the ExperimentController class.
 
  Out::
 
-    2016-11-15 15:48:51,358 - INFO    - Expyfun: Setting up Pyglet audio
-    2016-11-15 15:48:51,401 - INFO    - Expyfun: Setting up screen
-    2016-11-15 15:48:51,412 - EXP     - Expyfun: Set screen visibility True
-    2016-11-15 15:48:51,442 - INFO    - Expyfun: Initializing dummy triggering mode
-    2016-11-15 15:48:51,445 - INFO    - Expyfun: Initialization complete
-    2016-11-15 15:48:51,445 - EXP     - Expyfun: Subject: foo
-    2016-11-15 15:48:51,446 - EXP     - Expyfun: Session: 001
-    2016-11-15 15:48:55,141 - EXP     - Expyfun: Audio stopped and reset.
+    2016-11-16 19:49:05,743 - INFO    - Expyfun: Setting up Pyglet audio
+    2016-11-16 19:49:05,786 - INFO    - Expyfun: Setting up screen
+    2016-11-16 19:49:05,796 - EXP     - Expyfun: Set screen visibility True
+    2016-11-16 19:49:05,826 - INFO    - Expyfun: Initializing dummy triggering mode
+    2016-11-16 19:49:05,829 - INFO    - Expyfun: Initialization complete
+    2016-11-16 19:49:05,829 - EXP     - Expyfun: Subject: foo
+    2016-11-16 19:49:05,830 - EXP     - Expyfun: Session: 001
+    2016-11-16 19:49:09,518 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -85,7 +85,7 @@ in the ExperimentController class.
             message = 'no keys pressed'
         else:
             message = ['{} pressed after {} secs\n'
-                       ''.format(key, round(time, 4)) for key, time, _ in pressed]
+                       ''.format(key, round(time, 4)) for key, time in pressed]
             message = ''.join(message)
         ec.screen_prompt(message, msg_dur)
         ec.wait_secs(isi)
@@ -101,7 +101,7 @@ in the ExperimentController class.
             message = 'no keys pressed'
         else:
             message = ['{} pressed at {} secs\n'
-                       ''.format(key, round(time, 4)) for key, time, _ in pressed]
+                       ''.format(key, round(time, 4)) for key, time in pressed]
             message = ''.join(message)
         ec.screen_prompt(message, msg_dur)
         ec.wait_secs(isi)
@@ -119,7 +119,7 @@ in the ExperimentController class.
             message = 'no keys pressed'
         else:
             message = ['{} pressed after {} secs\n'
-                       ''.format(key, round(time, 4)) for key, time, _ in pressed]
+                       ''.format(key, round(time, 4)) for key, time in pressed]
             message = ''.join(message)
         ec.screen_prompt(message, msg_dur)
         ec.wait_secs(isi)
@@ -138,7 +138,7 @@ in the ExperimentController class.
             message = 'no keys pressed'
         else:
             message = ['{} pressed at {} secs\n'
-                       ''.format(key, round(time, 4)) for key, time, _ in pressed]
+                       ''.format(key, round(time, 4)) for key, time in pressed]
             message = ''.join(message)
         ec.screen_prompt(message, msg_dur)
         ec.wait_secs(isi)
@@ -165,7 +165,7 @@ in the ExperimentController class.
             message = 'no keys pressed'
         else:
             message = ['{} pressed after {} secs\n'
-                       ''.format(key, round(time, 4)) for key, time, _ in pressed]
+                       ''.format(key, round(time, 4)) for key, time in pressed]
             message = ''.join(message)
         ec.screen_prompt(message, msg_dur)
         ec.wait_secs(isi)
@@ -193,13 +193,13 @@ in the ExperimentController class.
             message = 'no keys pressed'
         else:
             message = ['{} pressed at {} secs\n'
-                       ''.format(key, round(time, 4)) for key, time, _ in pressed]
+                       ''.format(key, round(time, 4)) for key, time in pressed]
             message = ''.join(message)
         ec.screen_prompt(message, msg_dur)
 
     ea.plot_screen(screenshot)
 
-**Total running time of the script:** ( 0 minutes  3.853 seconds)
+**Total running time of the script:** ( 0 minutes  3.843 seconds)
 
 
 

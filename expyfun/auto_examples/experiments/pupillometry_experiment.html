@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootswatch-3.3.6/sandstone/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -35,7 +35,7 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="top" title="expyfun 2.0.0.dev0 documentation" href="../../index.html" />
     <link rel="up" title="Examples" href="../index.html" />
-    <link rel="next" title="KeyPressAndRelease demo" href="plot_keyrelease_demo.html" />
+    <link rel="next" title="Display text with different formatting methods" href="plot_formatted_text_demo.html" />
     <link rel="prev" title="Sound level test and visual size calibration" href="plot_level_test.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 
@@ -91,6 +91,8 @@
             
             
             
+              <li class="hidden-sm"></li>
+            
           </ul>
 
           
@@ -136,9 +138,9 @@ using eye-tracking simpler.</p>
     <span class="n">prf</span><span class="p">,</span> <span class="n">t_srf</span><span class="p">,</span> <span class="n">e_prf</span> <span class="o">=</span> <a href="../../generated/expyfun.codeblocks.find_pupil_tone_impulse_response.html#expyfun.codeblocks.find_pupil_tone_impulse_response" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.codeblocks.find_pupil_tone_impulse_response"><span class="n">find_pupil_tone_impulse_response</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bgcolor</span><span class="p">,</span>
                                                          <span class="n">fcolor</span><span class="p">)</span>
 
-<span class="n">uni_lev</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.unique.html#numpy.unique" class="sphx-glr-code-links" tooltip="Link to documentation for numpy.unique"><span class="n">np</span><span class="o">.</span><span class="n">unique</span></a><span class="p">(</span><span class="n">lev</span><span class="p">)</span>
+<span class="n">uni_lev</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">lev</span><span class="p">)</span>
 <span class="n">uni_lev_label</span> <span class="o">=</span> <span class="p">(</span><span class="mi">255</span> <span class="o">*</span> <span class="n">uni_lev</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">uni_lev</span><span class="p">[</span><span class="n">uni_lev</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.sort.html#numpy.sort" class="sphx-glr-code-links" tooltip="Link to documentation for numpy.sort"><span class="n">np</span><span class="o">.</span><span class="n">sort</span></a><span class="p">(</span><span class="n">uni_lev</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mf">2.</span>
+<span class="n">uni_lev</span><span class="p">[</span><span class="n">uni_lev</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="mf">2.</span>
 <span class="n">r</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">lev</span><span class="p">)</span> <span class="o">//</span> <span class="nb">len</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">)))</span>
 <span class="n">r_span</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">r</span><span class="o">.</span><span class="n">max</span><span class="p">()]</span>
 <span class="c1"># Grayscale responses</span>
@@ -146,7 +148,7 @@ using eye-tracking simpler.</p>
 <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">bgcolor</span><span class="p">,</span> <span class="n">bgcolor</span><span class="p">],</span> <span class="n">r_span</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">facecolor</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
                 <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">,</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.mean.html#numpy.mean" class="sphx-glr-code-links" tooltip="Link to documentation for numpy.mean"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="n">uni_lev</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="n">r_span</span><span class="p">)</span>
 <a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.xticks" class="sphx-glr-code-links" tooltip="Link to documentation for matplotlib.pyplot.xticks"><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span></a><span class="p">(</span><span class="n">uni_lev</span><span class="p">,</span> <span class="n">uni_lev_label</span><span class="p">)</span>
@@ -181,12 +183,9 @@ using eye-tracking simpler.</p>
     <p class="pull-right">
       <a href="#">Back to top</a>
       
-        <br/>
-        
-      
     </p>
     <p>
-        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-11-15.<br/>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-11-16.<br/>
     </p>
   </div>
 </footer>

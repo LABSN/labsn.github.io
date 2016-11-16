@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootswatch-3.3.6/sandstone/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -36,7 +36,7 @@
     <link rel="top" title="expyfun 2.0.0.dev0 documentation" href="../../index.html" />
     <link rel="up" title="Examples" href="../index.html" />
     <link rel="next" title="Mouse click demo" href="plot_mouse_demo.html" />
-    <link rel="prev" title="Display text with different formatting methods" href="plot_formatted_text_demo.html" />
+    <link rel="prev" title="KeyPressAndRelease demo" href="plot_keyrelease_demo.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 
 <meta charset='utf-8'>
@@ -91,6 +91,8 @@
             
             
             
+              <li class="hidden-sm"></li>
+            
           </ul>
 
           
@@ -141,8 +143,8 @@ using eye-tracking simpler.</p>
     <span class="c1"># make some circles to be drawn</span>
     <span class="n">radius</span> <span class="o">=</span> <span class="mf">7.5</span>  <span class="c1"># degrees</span>
     <span class="n">targ_rad</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c1"># degrees</span>
-    <span class="n">theta</span> <span class="o">=</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.linspace.html#numpy.linspace" class="sphx-glr-code-links" tooltip="Link to documentation for numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-    <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.cos.html#numpy.cos" class="sphx-glr-code-links" tooltip="Link to documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">radius</span> <span class="o">*</span> <a href="http://docs.scipy.org/doc/numpy-1.10.1/reference/generated/numpy.sin.html#numpy.sin" class="sphx-glr-code-links" tooltip="Link to documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
     <span class="n">big_circ</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span>
                              <span class="n">fill_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
                              <span class="n">line_width</span><span class="o">=</span><span class="mf">3.0</span><span class="p">)</span>
@@ -193,12 +195,9 @@ using eye-tracking simpler.</p>
     <p class="pull-right">
       <a href="#">Back to top</a>
       
-        <br/>
-        
-      
     </p>
     <p>
-        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-11-15.<br/>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-11-16.<br/>
     </p>
   </div>
 </footer>

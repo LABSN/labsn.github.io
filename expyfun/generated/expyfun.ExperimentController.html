@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/sandstone/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -91,6 +91,8 @@
             
             
             
+              <li class="hidden-sm"></li>
+            
           </ul>
 
           
@@ -115,7 +117,7 @@
 <h1>expyfun.ExperimentController<a class="headerlink" href="#expyfun-experimentcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.ExperimentController">
-<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">ExperimentController</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>verbose=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">ExperimentController</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L38-L1879"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -132,7 +134,7 @@ configuration file. If a string, can be &#8216;pyglet&#8217; or &#8216;tdt&#8217
 remaining audio parameters will be read from the machine configuration
 file. If a dict, must include a key &#8216;TYPE&#8217; that is either &#8216;pyglet&#8217;
 or &#8216;tdt&#8217;; the dict can contain other parameters specific to the TDT
-(see documentation for expyfun.TDTController).</p>
+(see documentation for <a class="reference internal" href="expyfun.TDTController.html#expyfun.TDTController" title="expyfun.TDTController"><code class="xref py py-class docutils literal"><span class="pre">TDTController</span></code></a>).</p>
 </div></blockquote>
 <p><strong>response_device</strong> : str | None</p>
 <blockquote>
@@ -202,10 +204,6 @@ default the mode is &#8216;dummy&#8217;, since setting up the parallel port
 can be a pain. Can also be a dict with entries &#8216;type&#8217; (&#8216;parallel&#8217;)
 and &#8216;address&#8217; (e.g., &#8216;/dev/parport0&#8217;).</p>
 </div></blockquote>
-<p><strong>verbose</strong> : bool, str, int, or None</p>
-<blockquote>
-<div><p>If not None, override default verbose level (see expyfun.verbose).</p>
-</div></blockquote>
 <p><strong>check_rms</strong> : str | None</p>
 <blockquote>
 <div><p>Method to use in checking stimulus RMS to ensure appropriate levels.
@@ -223,6 +221,10 @@ frequency of the sound output device.</p>
 the expected version of the expyfun codebase is being used when running
 experiments. To override version checking (e.g., during development)
 use <code class="docutils literal"><span class="pre">version='dev'</span></code>.</p>
+</div></blockquote>
+<p><strong>verbose</strong> : bool, str, int, or None</p>
+<blockquote>
+<div><p>If not None, override default verbose level (see expyfun.verbose).</p>
 </div></blockquote>
 </td>
 </tr>
@@ -308,7 +310,7 @@ information (based on the level of verbosity) printed to the console.</p>
 <td>Add a function to be executed on next flip only.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.check_force_quit" title="expyfun.ExperimentController.check_force_quit"><code class="xref py py-obj docutils literal"><span class="pre">check_force_quit</span></code></a>()</td>
-<td>Check to see if any force quit keys were pressed</td>
+<td>Check to see if any force quit keys were pressed.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.close" title="expyfun.ExperimentController.close"><code class="xref py py-obj docutils literal"><span class="pre">close</span></code></a>()</td>
 <td>Close all connections in experiment controller.</td>
@@ -431,12 +433,12 @@ information (based on the level of verbosity) printed to the console.</p>
 </table>
 <dl class="method">
 <dt id="expyfun.ExperimentController.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>verbose=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.call_on_every_flip">
-<code class="descname">call_on_every_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.call_on_every_flip" title="Permalink to this definition">¶</a></dt>
+<code class="descname">call_on_every_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L628-L651"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_every_flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a function to be executed on every flip.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -464,7 +466,7 @@ called with arguments, use <cite>functools.partial</cite> before passing to
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.call_on_next_flip">
-<code class="descname">call_on_next_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.call_on_next_flip" title="Permalink to this definition">¶</a></dt>
+<code class="descname">call_on_next_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L603-L626"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_next_flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a function to be executed on next flip only.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -492,13 +494,13 @@ called with arguments, use <cite>functools.partial</cite> before passing to
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.check_force_quit">
-<code class="descname">check_force_quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.check_force_quit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check to see if any force quit keys were pressed</p>
+<code class="descname">check_force_quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1068-L1070"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.check_force_quit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if any force quit keys were pressed.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.close" title="Permalink to this definition">¶</a></dt>
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1798-L1801"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Close all connections in experiment controller.</p>
 </dd></dl>
 
@@ -516,7 +518,7 @@ called with arguments, use <cite>functools.partial</cite> before passing to
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.estimate_screen_fs">
-<code class="descname">estimate_screen_fs</code><span class="sig-paren">(</span><em>n_rep=10</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.estimate_screen_fs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">estimate_screen_fs</code><span class="sig-paren">(</span><em>n_rep=10</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L877-L896"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.estimate_screen_fs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate screen refresh rate using repeated flip() calls</p>
 <p>Useful for verifying that a system is operating at the proper
 sample rate.</p>
@@ -543,7 +545,7 @@ the estimate but the more time will be consumed.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.flip">
-<code class="descname">flip</code><span class="sig-paren">(</span><em>when=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.flip" title="Permalink to this definition">¶</a></dt>
+<code class="descname">flip</code><span class="sig-paren">(</span><em>when=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L824-L875"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flip screen, then run any &#8220;on-flip&#8221; functions.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -579,7 +581,7 @@ true intended flip time.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.flush">
-<code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.flush" title="Permalink to this definition">¶</a></dt>
+<code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1791-L1796"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flush" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flush logs and data files</p>
 </dd></dl>
 
@@ -591,7 +593,7 @@ true intended flip time.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.get_clicks">
-<code class="descname">get_clicks</code><span class="sig-paren">(</span><em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.get_clicks" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_clicks</code><span class="sig-paren">(</span><em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1084-L1118"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_clicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the entire keyboard / button box buffer.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -635,7 +637,7 @@ indicating the button clicked.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.get_mouse_position">
-<code class="descname">get_mouse_position</code><span class="sig-paren">(</span><em>units='pix'</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.get_mouse_position" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_mouse_position</code><span class="sig-paren">(</span><em>units='pix'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1120-L1144"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_mouse_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mouse position in screen coordinates</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -663,9 +665,9 @@ indicating the button clicked.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.get_presses">
-<code class="descname">get_presses</code><span class="sig-paren">(</span><em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>kind='presses'</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.get_presses" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the entire keyboard / button box buffer. This will also clear
-events that are not requested per <code class="docutils literal"><span class="pre">type</span></code>.</p>
+<code class="descname">get_presses</code><span class="sig-paren">(</span><em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>kind='presses'</em>, <em>return_kinds=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L930-L977"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_presses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the entire keyboard / button box buffer.</p>
+<p>This will also clear events that are not requested per <code class="docutils literal"><span class="pre">type</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -692,14 +694,19 @@ timestamp==False.  If <code class="docutils literal"><span class="pre">None</spa
 <div><p>Which key events to return. One of <code class="docutils literal"><span class="pre">presses</span></code>, <code class="docutils literal"><span class="pre">releases</span></code> or
 <code class="docutils literal"><span class="pre">both</span></code>. (default <code class="docutils literal"><span class="pre">presses</span></code>)</p>
 </div></blockquote>
+<p><strong>return_kinds</strong> : bool</p>
+<blockquote>
+<div><p>Return the kinds of presses.</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>presses</strong> : list</p>
 <blockquote class="last">
 <div><p>Returns a list of tuples with key events. Each tuple&#8217;s first value
 will be the key pressed. If <code class="docutils literal"><span class="pre">timestamp==True</span></code>, the second value
-is the time for the event. The last value is a string indicating if
-this was a key press or release event.</p>
+is the time for the event. If <code class="docutils literal"><span class="pre">return_kinds==True</span></code>, then the
+last value is a string indicating if this was a key press or
+release event.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -713,7 +720,7 @@ this was a key press or release event.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.get_time">
-<code class="descname">get_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.get_time" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1566-L1574"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return current master clock time</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -737,7 +744,7 @@ this was a key press or release event.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.identify_trial">
-<code class="descname">identify_trial</code><span class="sig-paren">(</span><em>**ids</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.identify_trial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">identify_trial</code><span class="sig-paren">(</span><em>**ids</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1672-L1707"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.identify_trial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identify trial type before beginning the trial</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -763,7 +770,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.listen_clicks">
-<code class="descname">listen_clicks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.listen_clicks" title="Permalink to this definition">¶</a></dt>
+<code class="descname">listen_clicks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1073-L1082"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_clicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start listening for mouse clicks.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -773,7 +780,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.listen_presses">
-<code class="descname">listen_presses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.listen_presses" title="Permalink to this definition">¶</a></dt>
+<code class="descname">listen_presses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L919-L928"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start listening for keypresses.</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -783,7 +790,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.load_buffer">
-<code class="descname">load_buffer</code><span class="sig-paren">(</span><em>samples</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.load_buffer" title="Permalink to this definition">¶</a></dt>
+<code class="descname">load_buffer</code><span class="sig-paren">(</span><em>samples</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1359-L1382"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.load_buffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load audio data into the audio buffer</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -824,7 +831,7 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.play">
-<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.play" title="Permalink to this definition">¶</a></dt>
+<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1384-L1402"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start audio playback</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -846,7 +853,7 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.screen_prompt">
-<code class="descname">screen_prompt</code><span class="sig-paren">(</span><em>text, max_wait=inf, min_wait=0, live_keys=None, timestamp=False, clear_after=True, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.screen_prompt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">screen_prompt</code><span class="sig-paren">(</span><em>text, max_wait=inf, min_wait=0, live_keys=None, timestamp=False, clear_after=True, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L448-L518"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_prompt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display text and (optionally) wait for user continuation</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -933,7 +940,7 @@ pressed (or <code class="docutils literal"><span class="pre">None</span></code> 
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.screen_text">
-<code class="descname">screen_text</code><span class="sig-paren">(</span><em>text, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.screen_text" title="Permalink to this definition">¶</a></dt>
+<code class="descname">screen_text</code><span class="sig-paren">(</span><em>text, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L403-L446"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show some text on the screen.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -992,7 +999,7 @@ method? This allows inline formatting for text color, e.g.,
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.screenshot">
-<code class="descname">screenshot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.screenshot" title="Permalink to this definition">¶</a></dt>
+<code class="descname">screenshot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L707-L725"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screenshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Capture the current displayed buffer</p>
 <p>This method must be called <em>before</em> flipping, because it captures
 the back buffer.</p>
@@ -1012,7 +1019,7 @@ the back buffer.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_background_color">
-<code class="descname">set_background_color</code><span class="sig-paren">(</span><em>color='black'</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_background_color" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_background_color</code><span class="sig-paren">(</span><em>color='black'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L520-L540"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_background_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set and draw a solid background color</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1036,7 +1043,7 @@ appropriate backgound color.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_noise_db">
-<code class="descname">set_noise_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_noise_db" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_noise_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1433-L1443"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_noise_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the level of the background noise</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -1046,7 +1053,7 @@ appropriate backgound color.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_rms_checking">
-<code class="descname">set_rms_checking</code><span class="sig-paren">(</span><em>check_rms</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_rms_checking" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_rms_checking</code><span class="sig-paren">(</span><em>check_rms</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1531-L1546"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_rms_checking" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the RMS checking flag.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1068,7 +1075,7 @@ whole, while <code class="docutils literal"><span class="pre">None</span></code>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_stim_db">
-<code class="descname">set_stim_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_stim_db" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_stim_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1445-L1456"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_stim_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the level of the stimuli</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -1078,7 +1085,7 @@ whole, while <code class="docutils literal"><span class="pre">None</span></code>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_visible">
-<code class="descname">set_visible</code><span class="sig-paren">(</span><em>visible=True</em>, <em>flip=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.set_visible" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_visible</code><span class="sig-paren">(</span><em>visible=True</em>, <em>flip=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L898-L916"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_visible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the window visibility</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1105,7 +1112,7 @@ had been set to.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.stamp_triggers">
-<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>ids</em>, <em>check='binary'</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>ids</em>, <em>check='binary'</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1752-L1789"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stamp binary values</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1143,7 +1150,7 @@ subject to change!).</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.start_noise">
-<code class="descname">start_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.start_noise" title="Permalink to this definition">¶</a></dt>
+<code class="descname">start_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1338-L1346"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.start_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start the background masker noise</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -1153,7 +1160,7 @@ subject to change!).</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.start_stimulus">
-<code class="descname">start_stimulus</code><span class="sig-paren">(</span><em>start_of_trial=True</em>, <em>flip=True</em>, <em>when=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.start_stimulus" title="Permalink to this definition">¶</a></dt>
+<code class="descname">start_stimulus</code><span class="sig-paren">(</span><em>start_of_trial=True</em>, <em>flip=True</em>, <em>when=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L542-L601"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.start_stimulus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play audio, (optionally) flip screen, run any &#8220;on_flip&#8221; functions.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1212,7 +1219,7 @@ intended flip time.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.stop">
-<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.stop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1418-L1431"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop audio buffer playback and reset cursor to beginning of buffer</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -1222,7 +1229,7 @@ intended flip time.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.stop_noise">
-<code class="descname">stop_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.stop_noise" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stop_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1348-L1357"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stop_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop the background masker noise</p>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
@@ -1232,7 +1239,7 @@ intended flip time.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.system_beep">
-<code class="descname">system_beep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.system_beep" title="Permalink to this definition">¶</a></dt>
+<code class="descname">system_beep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1325-L1336"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.system_beep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play a system beep</p>
 <p>This will play through the system audio, <em>not</em> through the
 audio controller (unless that is set to be the system audio).
@@ -1242,7 +1249,7 @@ eye-tracker calibration.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.toggle_cursor">
-<code class="descname">toggle_cursor</code><span class="sig-paren">(</span><em>visibility</em>, <em>flip=False</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.toggle_cursor" title="Permalink to this definition">¶</a></dt>
+<code class="descname">toggle_cursor</code><span class="sig-paren">(</span><em>visibility</em>, <em>flip=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1146-L1168"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.toggle_cursor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show or hide the mouse</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1264,7 +1271,7 @@ eye-tracker calibration.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.trial_ok">
-<code class="descname">trial_ok</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.trial_ok" title="Permalink to this definition">¶</a></dt>
+<code class="descname">trial_ok</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1709-L1730"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.trial_ok" title="Permalink to this definition">¶</a></dt>
 <dd><p>Report that the trial was okay and do post-trial tasks.</p>
 <p>For example, logs and data files can be flushed at the end of each
 trial.</p>
@@ -1276,7 +1283,7 @@ trial.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_for_click_on">
-<code class="descname">wait_for_click_on</code><span class="sig-paren">(</span><em>objects</em>, <em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_for_click_on" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_click_on</code><span class="sig-paren">(</span><em>objects</em>, <em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1267-L1313"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_click_on" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the first click after min_wait over a visual object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1337,7 +1344,7 @@ first in the <cite>objects</cite> argument.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_for_clicks">
-<code class="descname">wait_for_clicks</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_for_clicks" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_clicks</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1219-L1265"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_clicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all clicks between min_wait and max_wait.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1397,7 +1404,7 @@ indicating the button clicked.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_for_presses">
-<code class="descname">wait_for_presses</code><span class="sig-paren">(</span><em>max_wait</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_presses</code><span class="sig-paren">(</span><em>max_wait</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1021-L1059"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all button presses between min_wait and max_wait.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1450,7 +1457,7 @@ keys were pressed. Otherwise, returns a list of tuples
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_one_click">
-<code class="descname">wait_one_click</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_one_click" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_one_click</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1170-L1217"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_click" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns only the first mouse button clicked after min_wait.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1511,7 +1518,7 @@ returns a tuple (str, int, int) indicating the first button clicked
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_one_press">
-<code class="descname">wait_one_press</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_one_press" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_one_press</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L979-L1019"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_press" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns only the first button pressed after min_wait.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1566,7 +1573,7 @@ pressed (or <code class="docutils literal"><span class="pre">None</span></code> 
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_secs">
-<code class="descname">wait_secs</code><span class="sig-paren">(</span><em>secs</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_secs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_secs</code><span class="sig-paren">(</span><em>secs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1621-L1634"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_secs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait a specified number of seconds.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1588,7 +1595,7 @@ pressed (or <code class="docutils literal"><span class="pre">None</span></code> 
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_until">
-<code class="descname">wait_until</code><span class="sig-paren">(</span><em>timestamp</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.wait_until" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_until</code><span class="sig-paren">(</span><em>timestamp</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1636-L1670"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_until" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait until the given time is reached.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1629,7 +1636,7 @@ processing prior to calling <cite>wait_until</cite>).</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.write_data_line">
-<code class="descname">write_data_line</code><span class="sig-paren">(</span><em>event_type</em>, <em>value=None</em>, <em>timestamp=None</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.write_data_line" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write_data_line</code><span class="sig-paren">(</span><em>event_type</em>, <em>value=None</em>, <em>timestamp=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1576-L1598"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.write_data_line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a line of data to the output CSV.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1670,12 +1677,9 @@ time the data line was written from the master clock.</p>
     <p class="pull-right">
       <a href="#">Back to top</a>
       
-        <br/>
-        
-      
     </p>
     <p>
-        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-11-15.<br/>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-11-16.<br/>
     </p>
   </div>
 </footer>

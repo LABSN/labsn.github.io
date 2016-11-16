@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/sandstone/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     
     <script type="text/javascript">
@@ -91,6 +91,8 @@
             
             
             
+              <li class="hidden-sm"></li>
+            
           </ul>
 
           
@@ -115,7 +117,7 @@
 <h1>expyfun.visual.Line<a class="headerlink" href="#expyfun-visual-line" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.visual.Line">
-<em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Line</code><span class="sig-paren">(</span><em>ec</em>, <em>coords</em>, <em>units='norm'</em>, <em>line_color='white'</em>, <em>line_width=1.0</em>, <em>line_loop=False</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Line" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Line</code><span class="sig-paren">(</span><em>ec</em>, <em>coords</em>, <em>units='norm'</em>, <em>line_color='white'</em>, <em>line_width=1.0</em>, <em>line_loop=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L350-L397"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Line" title="Permalink to this definition">¶</a></dt>
 <dd><p>A connected set of line segments</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -182,18 +184,18 @@ shape e.g. size, position. See <code class="docutils literal"><span class="pre">
 </table>
 <dl class="method">
 <dt id="expyfun.visual.Line.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>coords</em>, <em>units='norm'</em>, <em>line_color='white'</em>, <em>line_width=1.0</em>, <em>line_loop=False</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Line.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>coords</em>, <em>units='norm'</em>, <em>line_color='white'</em>, <em>line_width=1.0</em>, <em>line_loop=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L374-L379"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Line.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.Line.draw">
-<code class="descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Line.draw" title="Permalink to this definition">¶</a></dt>
+<code class="descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L313-L347"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Line.draw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draw the object to the display buffer</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.Line.set_coords">
-<code class="descname">set_coords</code><span class="sig-paren">(</span><em>coords</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Line.set_coords" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_coords</code><span class="sig-paren">(</span><em>coords</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L381-L397"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Line.set_coords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set line coordinates</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -211,7 +213,7 @@ shape e.g. size, position. See <code class="docutils literal"><span class="pre">
 
 <dl class="method">
 <dt id="expyfun.visual.Line.set_fill_color">
-<code class="descname">set_fill_color</code><span class="sig-paren">(</span><em>fill_color</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Line.set_fill_color" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_fill_color</code><span class="sig-paren">(</span><em>fill_color</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L279-L287"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Line.set_fill_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the object color</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -229,7 +231,7 @@ shape e.g. size, position. See <code class="docutils literal"><span class="pre">
 
 <dl class="method">
 <dt id="expyfun.visual.Line.set_line_color">
-<code class="descname">set_line_color</code><span class="sig-paren">(</span><em>line_color</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Line.set_line_color" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_line_color</code><span class="sig-paren">(</span><em>line_color</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L289-L297"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Line.set_line_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the object color</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -247,7 +249,7 @@ shape e.g. size, position. See <code class="docutils literal"><span class="pre">
 
 <dl class="method">
 <dt id="expyfun.visual.Line.set_line_width">
-<code class="descname">set_line_width</code><span class="sig-paren">(</span><em>line_width</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Line.set_line_width" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_line_width</code><span class="sig-paren">(</span><em>line_width</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L299-L311"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Line.set_line_width" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the line width in pixels</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -278,12 +280,9 @@ limitations, it must be <cite>0.0 &lt;= line_width &lt;= 10.0</cite>.</p>
     <p class="pull-right">
       <a href="#">Back to top</a>
       
-        <br/>
-        
-      
     </p>
     <p>
-        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-11-15.<br/>
+        &copy; Copyright 2013-2016, expyfun developers. Last updated on 2016-11-16.<br/>
     </p>
   </div>
 </footer>

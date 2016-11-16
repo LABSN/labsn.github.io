@@ -13,11 +13,11 @@ the ExperimentController class.
 Please note that this currently only works for the keyboard, which has
 inprecise timing.
 
-.. warning:
-
-    It is currently not possible to get key-release events for Cedrus boxes or
-    TDT. Therefore, using get_presses(kind='releases') or
-    get_presses(kind='both') will throw an exception.
+.. warning: It is currently not possible to get key-release events for
+            Cedrus boxes or TDT. Therefore, key releases should not be
+            used in timing-critical experiments. Using
+            ``get_presses(kind='releases')`` or ``get_presses(kind='both')``
+            when using the TDT or Cedrus will throw an exception.
 
 
 
@@ -31,14 +31,14 @@ inprecise timing.
 
  Out::
 
-    2016-11-15 15:48:55,348 - INFO    - Expyfun: Setting up Pyglet audio
-    2016-11-15 15:48:55,394 - INFO    - Expyfun: Setting up screen
-    2016-11-15 15:48:55,406 - EXP     - Expyfun: Set screen visibility True
-    2016-11-15 15:48:55,443 - INFO    - Expyfun: Initializing dummy triggering mode
-    2016-11-15 15:48:55,446 - INFO    - Expyfun: Initialization complete
-    2016-11-15 15:48:55,446 - EXP     - Expyfun: Subject: foo
-    2016-11-15 15:48:55,446 - EXP     - Expyfun: Session: 001
-    2016-11-15 15:48:56,548 - EXP     - Expyfun: Audio stopped and reset.
+    2016-11-16 19:49:09,720 - INFO    - Expyfun: Setting up Pyglet audio
+    2016-11-16 19:49:09,765 - INFO    - Expyfun: Setting up screen
+    2016-11-16 19:49:09,776 - EXP     - Expyfun: Set screen visibility True
+    2016-11-16 19:49:09,810 - INFO    - Expyfun: Initializing dummy triggering mode
+    2016-11-16 19:49:09,813 - INFO    - Expyfun: Initialization complete
+    2016-11-16 19:49:09,813 - EXP     - Expyfun: Subject: foo
+    2016-11-16 19:49:09,813 - EXP     - Expyfun: Session: 001
+    2016-11-16 19:49:10,915 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -64,13 +64,14 @@ inprecise timing.
                               window_size=[1280, 960], full_screen=False,
                               stim_db=0, noise_db=0, output_dir=None,
                               participant='foo', session='001',
-                              version='dev') as ec:
+                              version='dev', response_device='keyboard') as ec:
         ec.wait_secs(isi)
 
         ###########################################
         # listen_presses / while loop / get_presses(kind='both')
         instruction = ("Press and release some keys\n\nlisten_presses()"
-                       "\nwhile loop {}\nget_presses(kind='both')")
+                       "\nwhile loop {}\n"
+                       "get_presses(kind='both', return_kinds=True)")
         disp_time = wait_dur
         countdown = ec.current_time + disp_time
         ec.call_on_next_flip(ec.listen_presses)
@@ -84,7 +85,7 @@ inprecise timing.
                 # redraw text with updated disp_time
                 ec.screen_text(instruction.format(disp_time))
                 ec.flip()
-        events = ec.get_presses(kind='both')
+        events = ec.get_presses(kind='both', return_kinds=True)
         ec.write_data_line('listen / while / get_presses', events)
         if not len(events):
             message = 'no keys pressed'
@@ -97,7 +98,7 @@ inprecise timing.
 
     ea.plot_screen(screenshot)
 
-**Total running time of the script:** ( 0 minutes  1.320 seconds)
+**Total running time of the script:** ( 0 minutes  1.313 seconds)
 
 
 
