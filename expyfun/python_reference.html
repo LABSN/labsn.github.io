@@ -201,10 +201,13 @@ grouped by hardware control type.</p>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.rms.html#expyfun.stimuli.rms" title="expyfun.stimuli.rms"><code class="xref py py-obj docutils literal"><span class="pre">rms</span></code></a>(data[,&nbsp;axis,&nbsp;keepdims])</td>
 <td>Calculate the RMS of a signal</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.vocode.html#expyfun.stimuli.vocode" title="expyfun.stimuli.vocode"><code class="xref py py-obj docutils literal"><span class="pre">vocode</span></code></a>(data,&nbsp;fs[,&nbsp;n_bands,&nbsp;freq_lims,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.texture_ERB.html#expyfun.stimuli.texture_ERB" title="expyfun.stimuli.texture_ERB"><code class="xref py py-obj docutils literal"><span class="pre">texture_ERB</span></code></a>([n_freqs,&nbsp;n_coh,&nbsp;rho,&nbsp;seq,&nbsp;fs,&nbsp;...])</td>
+<td>Create ERB texture stimulus</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.vocode.html#expyfun.stimuli.vocode" title="expyfun.stimuli.vocode"><code class="xref py py-obj docutils literal"><span class="pre">vocode</span></code></a>(data,&nbsp;fs[,&nbsp;n_bands,&nbsp;freq_lims,&nbsp;...])</td>
 <td>Vocode stimuli using a variety of methods</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.window_edges.html#expyfun.stimuli.window_edges" title="expyfun.stimuli.window_edges"><code class="xref py py-obj docutils literal"><span class="pre">window_edges</span></code></a>(sig,&nbsp;fs[,&nbsp;dur,&nbsp;axis,&nbsp;window,&nbsp;edges])</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.window_edges.html#expyfun.stimuli.window_edges" title="expyfun.stimuli.window_edges"><code class="xref py py-obj docutils literal"><span class="pre">window_edges</span></code></a>(sig,&nbsp;fs[,&nbsp;dur,&nbsp;axis,&nbsp;window,&nbsp;edges])</td>
 <td>Window the edges of a signal (e.g., to prevent &#8220;pops&#8221;)</td>
 </tr>
 </tbody>
@@ -323,12 +326,12 @@ grouped by hardware control type.</p>
 <td>Plot a captured screenshot</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.analyze.press_times_to_hmfc.html#expyfun.analyze.press_times_to_hmfc" title="expyfun.analyze.press_times_to_hmfc"><code class="xref py py-obj docutils literal"><span class="pre">press_times_to_hmfc</span></code></a>(presses,&nbsp;targets,&nbsp;foils,&nbsp;...)</td>
-<td>Convert press times to hits/misses/FA/CR</td>
+<td>Convert press times to hits/misses/FA/CR and reaction times</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.analyze.restore_values.html#expyfun.analyze.restore_values" title="expyfun.analyze.restore_values"><code class="xref py py-obj docutils literal"><span class="pre">restore_values</span></code></a>(correct,&nbsp;other,&nbsp;idx)</td>
 <td>Restore missing values from one sequence using another</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.analyze.rt_chisq.html#expyfun.analyze.rt_chisq" title="expyfun.analyze.rt_chisq"><code class="xref py py-obj docutils literal"><span class="pre">rt_chisq</span></code></a>(x[,&nbsp;axis])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.analyze.rt_chisq.html#expyfun.analyze.rt_chisq" title="expyfun.analyze.rt_chisq"><code class="xref py py-obj docutils literal"><span class="pre">rt_chisq</span></code></a>(x[,&nbsp;axis,&nbsp;warn])</td>
 <td>Chi square fit for reaction times (a better summary statistic than mean)</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid" title="expyfun.analyze.sigmoid"><code class="xref py py-obj docutils literal"><span class="pre">sigmoid</span></code></a>(x[,&nbsp;lower,&nbsp;upper,&nbsp;midpt,&nbsp;slope])</td>
@@ -370,7 +373,7 @@ grouped by hardware control type.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-01-11.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-03-23.<br/>
     </p>
   </div>
 </footer>

@@ -118,9 +118,9 @@
 <p>This example simulates some 2AFC data and demonstrates the analysis
 functions <code class="docutils literal"><span class="pre">dprime_2afc()</span></code> and <code class="docutils literal"><span class="pre">barplot()</span></code>.</p>
 <ul class="sphx-glr-horizontal">
-<li><a class="first reference internal image-reference" href="../../_images/sphx_glr_plot_analysis_demo_001.png"><img alt="../../_images/sphx_glr_plot_analysis_demo_001.png" src="../../_images/sphx_glr_plot_analysis_demo_001.png" style="width: 376.0px; height: 282.0px;" /></a>
+<li><a class="first reference internal image-reference" href="../../_images/sphx_glr_plot_analysis_demo_001.png"><img alt="../../_images/sphx_glr_plot_analysis_demo_001.png" src="../../_images/sphx_glr_plot_analysis_demo_001.png" style="width: 300.8px; height: 225.6px;" /></a>
 </li>
-<li><a class="first reference internal image-reference" href="../../_images/sphx_glr_plot_analysis_demo_002.png"><img alt="../../_images/sphx_glr_plot_analysis_demo_002.png" src="../../_images/sphx_glr_plot_analysis_demo_002.png" style="width: 376.0px; height: 282.0px;" /></a>
+<li><a class="first reference internal image-reference" href="../../_images/sphx_glr_plot_analysis_demo_002.png"><img alt="../../_images/sphx_glr_plot_analysis_demo_002.png" src="../../_images/sphx_glr_plot_analysis_demo_002.png" style="width: 300.8px; height: 225.6px;" /></a>
 </li>
 </ul>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Author: Dan McCloy &lt;drmccloy@uw.edu&gt;</span>
@@ -133,7 +133,7 @@ functions <code class="docutils literal"><span class="pre">dprime_2afc()</span><
 
 <span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="kn">as</span> <span class="nn">ea</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">__doc__</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 <span class="c1"># simulate some 2AFC data</span>
 <span class="n">trials</span> <span class="o">=</span> <span class="mi">100</span>
@@ -151,8 +151,8 @@ functions <code class="docutils literal"><span class="pre">dprime_2afc()</span><
 <span class="n">test_dprime</span> <span class="o">=</span> <span class="n">ea</span><span class="o">.</span><span class="n">dprime_2afc</span><span class="p">(</span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;test_hit&#39;</span><span class="p">,</span> <span class="s1">&#39;test_miss&#39;</span><span class="p">]])</span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">ctrl</span><span class="o">=</span><span class="n">ctrl_dprime</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="n">test_dprime</span><span class="p">))</span>
 <span class="c1"># plot</span>
-<span class="n">subplt</span><span class="p">,</span> <span class="n">barplt</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.analyze.barplot"><span class="n">ea</span><span class="o">.</span><span class="n">barplot</span></a><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">err_bars</span><span class="o">=</span><span class="s1">&#39;sd&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
-                            <span class="n">brackets</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">bracket_text</span><span class="o">=</span><span class="p">[</span><span class="s1">r&#39;$p &lt; 10^{-9}$&#39;</span><span class="p">])</span>
+<span class="n">subplt</span><span class="p">,</span> <span class="n">barplt</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" title="View documentation for expyfun.analyze.barplot"><span class="n">ea</span><span class="o">.</span><span class="n">barplot</span></a><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">err_bars</span><span class="o">=</span><span class="s1">&#39;sd&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                            <span class="n">brackets</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">bracket_text</span><span class="o">=</span><span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$p &lt; 10^{-9}$&#39;</span><span class="p">])</span>
 <span class="n">subplt</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_text</span><span class="p">(</span><span class="s1">&#39;d-prime +/- 1 s.d.&#39;</span><span class="p">)</span>
 <span class="n">subplt</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Each line represents a different subject&#39;</span><span class="p">)</span>
 
@@ -173,7 +173,7 @@ functions <code class="docutils literal"><span class="pre">dprime_2afc()</span><
 <span class="n">hitmiss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span><span class="n">rawscores</span><span class="o">.</span><span class="n">ravel</span><span class="p">(),</span> <span class="p">(</span><span class="n">trials_per_cond</span> <span class="o">-</span> <span class="n">rawscores</span><span class="p">)</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
 <span class="n">dprimes</span> <span class="o">=</span> <span class="n">ea</span><span class="o">.</span><span class="n">dprime_2afc</span><span class="p">(</span><span class="n">hitmiss</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">rawscores</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dprimes</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">subjs</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">colnames</span><span class="p">)</span>
-<span class="n">subplt</span><span class="p">,</span> <span class="n">barplt</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" class="sphx-glr-code-links" tooltip="Link to documentation for expyfun.analyze.barplot"><span class="n">ea</span><span class="o">.</span><span class="n">barplot</span></a><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">err_bars</span><span class="o">=</span><span class="s1">&#39;sd&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="n">subplt</span><span class="p">,</span> <span class="n">barplt</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" title="View documentation for expyfun.analyze.barplot"><span class="n">ea</span><span class="o">.</span><span class="n">barplot</span></a><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">err_bars</span><span class="o">=</span><span class="s1">&#39;sd&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
                             <span class="n">groups</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)],</span> <span class="n">group_names</span><span class="o">=</span><span class="n">diffs</span><span class="p">,</span>
                             <span class="n">bar_names</span><span class="o">=</span><span class="n">conds</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">bracket_group_lines</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
                             <span class="n">brackets</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
@@ -182,14 +182,14 @@ functions <code class="docutils literal"><span class="pre">dprime_2afc()</span><
                                           <span class="s1">&#39;foobar&#39;</span><span class="p">])</span>
 <span class="n">subplt</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_text</span><span class="p">(</span><span class="s1">&#39;d-prime +/- 1 s.d.&#39;</span><span class="p">)</span>
 <span class="n">subplt</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Each line represents a different subject&#39;</span><span class="p">)</span>
-<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show" class="sphx-glr-code-links" tooltip="Link to documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
+<a href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.722 seconds)</p>
-<div class="sphx-glr-footer container">
-<div class="sphx-glr-download container">
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.849 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/plot_analysis_demo.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_analysis_demo.py</span></code></a></div>
-<div class="sphx-glr-download container">
+<div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/plot_analysis_demo.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">plot_analysis_demo.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="http://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
@@ -207,7 +207,7 @@ functions <code class="docutils literal"><span class="pre">dprime_2afc()</span><
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-01-11.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-03-23.<br/>
     </p>
   </div>
 </footer>

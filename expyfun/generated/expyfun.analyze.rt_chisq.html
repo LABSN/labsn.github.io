@@ -117,7 +117,7 @@
 <h1>expyfun.analyze.rt_chisq<a class="headerlink" href="#expyfun-analyze-rt-chisq" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.analyze.rt_chisq">
-<code class="descclassname">expyfun.analyze.</code><code class="descname">rt_chisq</code><span class="sig-paren">(</span><em>x</em>, <em>axis=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L219-L271"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.rt_chisq" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">expyfun.analyze.</code><code class="descname">rt_chisq</code><span class="sig-paren">(</span><em>x</em>, <em>axis=None</em>, <em>warn=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L260-L314"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.rt_chisq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Chi square fit for reaction times (a better summary statistic than mean)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -131,6 +131,10 @@
 <blockquote>
 <div><p>The axis along which to calculate the chi-square fit. If none, <code class="docutils literal"><span class="pre">x</span></code>
 will be flattened before fitting.</p>
+</div></blockquote>
+<p><strong>warn</strong> : bool</p>
+<blockquote>
+<div><p>If True, warn about possible bad reaction times.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -172,7 +176,7 @@ will be flattened before fitting.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-01-11.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-03-23.<br/>
     </p>
   </div>
 </footer>

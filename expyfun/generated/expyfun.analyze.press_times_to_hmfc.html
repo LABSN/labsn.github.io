@@ -117,8 +117,8 @@
 <h1>expyfun.analyze.press_times_to_hmfc<a class="headerlink" href="#expyfun-analyze-press-times-to-hmfc" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.analyze.press_times_to_hmfc">
-<code class="descclassname">expyfun.analyze.</code><code class="descname">press_times_to_hmfc</code><span class="sig-paren">(</span><em>presses</em>, <em>targets</em>, <em>foils</em>, <em>tmin</em>, <em>tmax</em>, <em>return_type='counts'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L12-L77"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.press_times_to_hmfc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert press times to hits/misses/FA/CR</p>
+<code class="descclassname">expyfun.analyze.</code><code class="descname">press_times_to_hmfc</code><span class="sig-paren">(</span><em>presses</em>, <em>targets</em>, <em>foils</em>, <em>tmin</em>, <em>tmax</em>, <em>return_type='counts'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L14-L118"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.press_times_to_hmfc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert press times to hits/misses/FA/CR and reaction times</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -137,23 +137,39 @@
 </div></blockquote>
 <p><strong>tmin</strong> : float</p>
 <blockquote>
-<div><p>Minimum time after a target/foil to consider a press.</p>
+<div><p>Minimum time after a target/foil to consider a press, exclusive.</p>
 </div></blockquote>
 <p><strong>tmax</strong> : float</p>
 <blockquote>
-<div><p>Maximum time after a target/foil to consider a press.</p>
+<div><p>Maximum time after a target/foil to consider a press, inclusive.
+The final bounds will be <span class="math">\((t_{min}, t_{max}]\)</span>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Do do not rely on floating point arithmetic to get
+exclusive/inclusive bounds right consistently. Such
+exact equivalence in floating point arithmetic should
+not be relied upon.</p>
+</div>
 </div></blockquote>
-<p><strong>return_type</strong> : str</p>
+<p><strong>return_type</strong> : str | list of str</p>
 <blockquote>
-<div><p>Currently only <code class="docutils literal"><span class="pre">'counts'</span></code> is supported. Eventually we will
-add rection-time support as well.</p>
+<div><p>A list containing one or more of <code class="docutils literal"><span class="pre">['counts',</span> <span class="pre">'rts']</span></code> to return
+a tuple of outputs (see below for description).
+Can also be a single string, in which case only the single
+requested type is returned (not within a tuple).</p>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>hmfco</strong> : list</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>hmfco</strong> : tuple</p>
+<blockquote>
+<div><p>5-element tuple of hits, misses, false alarms, correct rejections,
+and other presses (not within the window for a target or a masker).
+Only returned if <code class="docutils literal"><span class="pre">'counts'</span></code> is in <code class="docutils literal"><span class="pre">return_type</span></code>.</p>
+</div></blockquote>
+<p><strong>rts</strong> : tuple</p>
 <blockquote class="last">
-<div><p>Hits, misses, false alarms, correct rejections, and other presses
-(not within the window for a target or a masker).</p>
+<div><p>2-element tuple of reaction times for hits and false alarms.
+Only returned if <code class="docutils literal"><span class="pre">'rts'</span></code> is in <code class="docutils literal"><span class="pre">return_type</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -180,7 +196,7 @@ to &#8220;other&#8221; times.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-01-11.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-03-23.<br/>
     </p>
   </div>
 </footer>
