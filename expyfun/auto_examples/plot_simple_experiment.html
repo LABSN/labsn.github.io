@@ -118,10 +118,24 @@
 <p>This example demonstrates much of the basic functionality built into
 the ExperimentController class.</p>
 <img alt="../_images/sphx_glr_plot_simple_experiment_001.png" class="align-center" src="../_images/sphx_glr_plot_simple_experiment_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="o">=======================</span>
+<span class="n">Generate</span> <span class="n">sample</span> <span class="n">stimuli</span>
+<span class="o">=======================</span>
+
+<span class="n">This</span> <span class="n">shows</span> <span class="n">how</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">some</span> <span class="n">simple</span> <span class="n">stimuli</span><span class="o">.</span> <span class="n">It</span> <span class="n">will</span> <span class="n">also</span> <span class="n">play</span> <span class="n">a</span> <span class="n">couple</span>
+<span class="n">of</span> <span class="n">sample</span> <span class="n">stimuli</span><span class="o">.</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Author: Dan McCloy &lt;drmccloy@uw.edu&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">op</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
@@ -148,7 +162,13 @@ the ExperimentController class.</p>
 <span class="c1"># make the stimuli if necessary and then load them</span>
 <span class="n">fname</span> <span class="o">=</span> <span class="s1">&#39;equally_spaced_sinewaves.hdf5&#39;</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">op</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">stimuli.plot_generate_simple_stimuli</span> <span class="kn">import</span> <span class="n">generate_stimuli</span>
+    <span class="c1"># This sys.path wrangling is only necessary for Sphinx automatic</span>
+    <span class="c1"># documentation building</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">plot_generate_simple_stimuli</span> <span class="kn">import</span> <span class="n">generate_stimuli</span>
+    <span class="k">finally</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">generate_stimuli</span><span class="p">()</span>
 <span class="n">stims</span> <span class="o">=</span> <a href="../generated/expyfun.io.read_hdf5.html#expyfun.io.read_hdf5" title="View documentation for expyfun.io.read_hdf5"><span class="n">read_hdf5</span></a><span class="p">(</span><span class="n">fname</span><span class="p">)</span>
 <span class="n">orig_rms</span> <span class="o">=</span> <span class="n">stims</span><span class="p">[</span><span class="s1">&#39;rms&#39;</span><span class="p">]</span>
@@ -287,7 +307,7 @@ the ExperimentController class.</p>
 <a href="../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  2.463 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  3.104 seconds)</p>
 <div class="sphx-glr-footer docutils container">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../_downloads/plot_simple_experiment.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">plot_simple_experiment.py</span></code></a></div>

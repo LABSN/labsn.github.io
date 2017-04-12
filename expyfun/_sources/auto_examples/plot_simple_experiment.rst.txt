@@ -17,7 +17,21 @@ the ExperimentController class.
     :align: center
 
 
+.. rst-class:: sphx-glr-script-out
 
+ Out::
+
+    =======================
+    Generate sample stimuli
+    =======================
+
+    This shows how to generate some simple stimuli. It will also play a couple
+    of sample stimuli.
+
+
+
+
+|
 
 
 .. code-block:: python
@@ -26,6 +40,8 @@ the ExperimentController class.
     #
     # License: BSD (3-clause)
 
+    import os
+    import sys
     from os import path as op
     import numpy as np
 
@@ -52,7 +68,13 @@ the ExperimentController class.
     # make the stimuli if necessary and then load them
     fname = 'equally_spaced_sinewaves.hdf5'
     if not op.isfile(fname):
-        from stimuli.plot_generate_simple_stimuli import generate_stimuli
+        # This sys.path wrangling is only necessary for Sphinx automatic
+        # documentation building
+        sys.path.insert(0, os.getcwd())
+        try:
+            from plot_generate_simple_stimuli import generate_stimuli
+        finally:
+            sys.path.pop(0)
         generate_stimuli()
     stims = read_hdf5(fname)
     orig_rms = stims['rms']
@@ -190,7 +212,7 @@ the ExperimentController class.
 
     ea.plot_screen(screenshot)
 
-**Total running time of the script:** ( 0 minutes  2.463 seconds)
+**Total running time of the script:** ( 0 minutes  3.104 seconds)
 
 
 
