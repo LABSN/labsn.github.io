@@ -339,7 +339,7 @@ information (based on the level of verbosity) printed to the console.</p>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.get_time" title="expyfun.ExperimentController.get_time"><code class="xref py py-obj docutils literal"><span class="pre">get_time</span></code></a>()</td>
 <td>Return current master clock time</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal"><span class="pre">identify_trial</span></code></a>(\*\*ids)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal"><span class="pre">identify_trial</span></code></a>(**ids)</td>
 <td>Identify trial type before beginning the trial</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal"><span class="pre">listen_clicks</span></code></a>()</td>
@@ -518,7 +518,7 @@ called with arguments, use <cite>functools.partial</cite> before passing to
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.estimate_screen_fs">
-<code class="descname">estimate_screen_fs</code><span class="sig-paren">(</span><em>n_rep=10</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L878-L897"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.estimate_screen_fs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">estimate_screen_fs</code><span class="sig-paren">(</span><em>n_rep=10</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L877-L896"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.estimate_screen_fs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate screen refresh rate using repeated flip() calls</p>
 <p>Useful for verifying that a system is operating at the proper
 sample rate.</p>
@@ -545,7 +545,7 @@ the estimate but the more time will be consumed.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.flip">
-<code class="descname">flip</code><span class="sig-paren">(</span><em>when=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L824-L876"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flip" title="Permalink to this definition">¶</a></dt>
+<code class="descname">flip</code><span class="sig-paren">(</span><em>when=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L823-L875"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flip screen, then run any &#8220;on-flip&#8221; functions.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1085,7 +1085,7 @@ whole, while <code class="docutils literal"><span class="pre">None</span></code>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_visible">
-<code class="descname">set_visible</code><span class="sig-paren">(</span><em>visible=True</em>, <em>flip=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L899-L917"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_visible" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_visible</code><span class="sig-paren">(</span><em>visible=True</em>, <em>flip=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L898-L917"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_visible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the window visibility</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1679,7 +1679,7 @@ time the data line was written from the master clock.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-03-23.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-04-12.<br/>
     </p>
   </div>
 </footer>
