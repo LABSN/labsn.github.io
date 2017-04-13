@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Do an adaptive track staircase &#8212; expyfun 2.0.0.dev0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootswatch-3.3.6/yeti/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.0.0.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Generate vocoded stimuli" href="vocoded_stimuli.html" />
+    <link rel="prev" title="Generate texture stimuli" href="texture_stimuli.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+  </head>
+  <body role="document">
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/favicon.ico"></span>
+          expyfun</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../python_reference.html">API reference</a></li>
+                <li><a href="../index.html">Examples</a></li>
+                <li><a href="../../whats_new.html">Whats new</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../python_reference.html">API Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html#synchronization">Synchronization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../whats_new.html">What&#8217;s new</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 content">
+      
+  <div class="section" id="do-an-adaptive-track-staircase">
+<span id="sphx-glr-auto-examples-stimuli-tracker-staircase-py"></span><h1>Do an adaptive track staircase<a class="headerlink" href="#do-an-adaptive-track-staircase" title="Permalink to this headline">¶</a></h1>
+<p>This shows how to make and use an adaptive track using
+<a class="reference internal" href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><code class="xref py py-class docutils literal"><span class="pre">expyfun.stimuli.TrackerUD</span></code></a>.</p>
+<p>&#64;author: rkmaddox</p>
+<img alt="../../_images/sphx_glr_tracker_staircase_001.png" class="align-center" src="../../_images/sphx_glr_tracker_staircase_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">tracker_identify</span><span class="p">:</span>                       <span class="p">{</span><span class="s2">&quot;tracker_id&quot;</span><span class="p">:</span> <span class="mi">47760529498512</span><span class="p">,</span> <span class="s2">&quot;tracker_type&quot;</span><span class="p">:</span> <span class="s2">&quot;TrackerUD&quot;</span><span class="p">}</span>
+<span class="n">tracker_47760529498512_init</span><span class="p">:</span>            <span class="p">{</span><span class="s2">&quot;stop_rule&quot;</span><span class="p">:</span> <span class="s2">&quot;reversals&quot;</span><span class="p">,</span> <span class="s2">&quot;change_criteria&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;up&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;stop_criterion&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s2">&quot;down&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;callback&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span> <span class="s2">&quot;step_size_up&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s2">&quot;x_max&quot;</span><span class="p">:</span> <span class="n">Infinity</span><span class="p">,</span> <span class="s2">&quot;x_min&quot;</span><span class="p">:</span> <span class="o">-</span><span class="n">Infinity</span><span class="p">,</span> <span class="s2">&quot;start_value&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="s2">&quot;change_rule&quot;</span><span class="p">:</span> <span class="s2">&quot;reversals&quot;</span><span class="p">,</span> <span class="s2">&quot;step_size_down&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">True</span>
+<span class="n">tracker_47760529498512_respond</span><span class="p">:</span>         <span class="kc">False</span>
+<span class="n">tracker_47760529498512_stop</span><span class="p">:</span>            <span class="p">{</span><span class="s2">&quot;reversals&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">48</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">47</span><span class="p">,</span> <span class="mi">46</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">37</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">37</span><span class="p">],</span> <span class="s2">&quot;responses&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]}</span>
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="kn">import</span> <a href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="View documentation for expyfun.stimuli.TrackerUD"><span class="n">TrackerUD</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.analyze</span> <span class="kn">import</span> <a href="../../generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid" title="View documentation for expyfun.analyze.sigmoid"><span class="n">sigmoid</span></a>
+
+<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+
+
+<span class="c1"># Make a callback function that prints to the console, rather than log file</span>
+<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">event_type</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+
+
+<span class="c1"># Define parameters for modeled human subject (sigmoid probability)</span>
+<span class="n">true_thresh</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">slope</span> <span class="o">=</span> <span class="mf">0.1</span>
+<span class="n">chance</span> <span class="o">=</span> <span class="mf">0.5</span>
+
+<span class="c1"># Make a tracker that uses the weighted up-down procedure to find 75%</span>
+<span class="n">tr</span> <span class="o">=</span> <a href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="View documentation for expyfun.stimuli.TrackerUD"><span class="n">TrackerUD</span></a><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;reversals&#39;</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="c1"># Initialize human state</span>
+<span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Do the task until the tracker stops</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">tr</span><span class="o">.</span><span class="n">stopped</span><span class="p">:</span>
+    <span class="n">tr</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <a href="../../generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid" title="View documentation for expyfun.analyze.sigmoid"><span class="n">sigmoid</span></a><span class="p">(</span><span class="n">tr</span><span class="o">.</span><span class="n">x_current</span> <span class="o">-</span> <span class="n">true_thresh</span><span class="p">,</span>
+                                    <span class="n">lower</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">slope</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
+
+<span class="c1"># Plot the results</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="n">lines</span> <span class="o">+=</span> <span class="n">tr</span><span class="o">.</span><span class="n">plot_thresh</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Trials&#39;</span><span class="p">)</span>
+<span class="n">lines</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Reversals&#39;</span><span class="p">)</span>
+<span class="n">lines</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;Estimated threshold&#39;</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Adaptive track of model human (true threshold is {})&#39;</span>
+             <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">true_thresh</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.139 seconds)</p>
+<div class="sphx-glr-footer docutils container">
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/tracker_staircase.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tracker_staircase.py</span></code></a></div>
+<div class="sphx-glr-download docutils container">
+<a class="reference download internal" href="../../_downloads/tracker_staircase.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">tracker_staircase.ipynb</span></code></a></div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="http://sphinx-gallery.readthedocs.io">Generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-04-13.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
