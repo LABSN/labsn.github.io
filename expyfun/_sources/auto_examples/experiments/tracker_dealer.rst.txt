@@ -1,0 +1,303 @@
+
+
+.. _sphx_glr_auto_examples_experiments_tracker_dealer.py:
+
+
+======================
+Tracker Dealer Example
+======================
+
+This file shows how to interleave multiple Tracker objects using
+:class:`expyfun.stimuli.TrackerDealer`.
+
+In this case, a modeled human subject generates two curves (one for each trial
+type: 1 & 2).
+
+@author: maddycapp27
+
+
+
+.. code-block:: python
+
+
+    import numpy as np
+    from expyfun.stimuli import TrackerUD, TrackerDealer
+    from expyfun.analyze import sigmoid
+    import matplotlib.pyplot as plt
+
+    # define parameters of modeled subject (using sigmoid probability)
+    true_thresh = [30, 40]  # true thresholds for trial types 1 and 2
+    slope = 0.1
+    chance = 0.5
+
+
+
+
+
+
+
+Defining Tracker Parameters
+---------------------------
+In this example, the tracker parameters are exactly the same for each
+instance of the up-down adaptive tracker. These are defined such that the
+step sizes vary for both up v. down (the up step size is larger by a factor
+of 3) and based on the number of reversals (the first element in each
+list is the step size until the number of reversals dictacted by the second
+element in change_criteria have occured (i.e. the up step size will be 9
+until 5 reversals have occured, then the up step size will be 3.))
+
+
+
+.. code-block:: python
+
+    up = 1
+    down = 1
+    step_size_up = [9, 3]
+    step_size_down = [3, 1]
+    stop_criterion = 30
+    stop_rule = 'reversals'
+    start_value = 45
+    change_criteria = [0, 5]
+    change_rule = 'reversals'
+    x_min = 0
+    x_max = 90
+
+
+    # callback function that prints to console
+    def callback(event_type, value=None, timestamp=None):
+        print((str(event_type) + ':').ljust(40) + str(value))
+
+
+    # parameters for the tracker dealer
+    max_lag = 2
+    rng_dealer = np.random.RandomState(3)  # random seed for selecting trial type
+
+
+
+
+
+
+
+Initializing and Running Trackers
+---------------------------------
+The two trackers in this example use all of the same parameters and then are
+passed into the dealer. After the dealer is created, the type of each trial
+(returned as an index of the array of individual trackers) and trial level
+for that trial can be acquired.
+
+
+
+.. code-block:: python
+
+
+    # initialize two tracker objects--one for each trial type
+    tr_ud = [TrackerUD(callback, up, down, step_size_up, step_size_down,
+                       stop_criterion, stop_rule, start_value,
+                       change_criteria, change_rule, x_min, x_max) for i in [0, 1]]
+
+    # initialize TrackerDealer object
+    tr = TrackerDealer(tr_ud, max_lag, rng_dealer)
+
+    # Initialize human state
+    rng_human = np.random.RandomState(1)  # random seed for modeled subject
+
+    while not tr.stopped:
+        # Get information of which trial type is next and what the level is at
+        # that time from TrackerDealer
+        ss, level = tr.get_trial()
+        tr.respond(rng_human.rand() < sigmoid(level - true_thresh[sum(ss)],
+                                              lower=chance, slope=slope))
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out::
+
+    tracker_identify:                       {"tracker_id": 46974125665104, "tracker_type": "TrackerUD"}
+    tracker_46974125665104_init:            {"stop_rule": "reversals", "change_criteria": [0, 5], "up": 1, "stop_criterion": 30, "down": 1, "callback": null, "step_size_up": [9, 3], "x_max": 90, "x_min": 0, "start_value": 45, "change_rule": "reversals", "step_size_down": [3, 1]}
+    tracker_identify:                       {"tracker_id": 46974125664144, "tracker_type": "TrackerUD"}
+    tracker_46974125664144_init:            {"stop_rule": "reversals", "change_criteria": [0, 5], "up": 1, "stop_criterion": 30, "down": 1, "callback": null, "step_size_up": [9, 3], "x_max": 90, "x_min": 0, "start_value": 45, "change_rule": "reversals", "step_size_down": [3, 1]}
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125665104_respond:         True
+    tracker_46974125665104_respond:         False
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         True
+    tracker_46974125664144_respond:         False
+    tracker_46974125664144_stop:            {"reversals": [0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 3, 4, 5, 6, 0, 7, 8, 9, 10, 0, 0, 11, 12, 0, 0, 0, 0, 0, 13, 0, 14, 15, 16, 0, 0, 17, 18, 19, 20, 0, 0, 0, 0, 0, 21, 22, 0, 23, 24, 0, 25, 26, 0, 0, 27, 28, 0, 0, 0, 29, 30], "x": [45, 42, 39, 36, 33, 30, 39, 36, 33, 30, 27, 36, 33, 36, 35, 34, 37, 36, 39, 38, 37, 36, 39, 38, 37, 36, 35, 34, 33, 36, 39, 38, 41, 40, 39, 38, 41, 40, 43, 42, 41, 40, 39, 38, 37, 40, 39, 38, 41, 40, 39, 42, 41, 40, 39, 42, 41, 40, 39, 38, 41], "responses": [1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1]}
+    tracker_46974125665104_stop:            {"reversals": [0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 3, 4, 5, 6, 0, 0, 7, 8, 0, 0, 0, 0, 9, 10, 11, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 14, 0, 0, 0, 15, 16, 17, 18, 0, 19, 20, 21, 22, 0, 0, 0, 23, 24, 25, 26, 27, 0, 28, 0, 0, 0, 0, 29, 30], "x": [45, 42, 39, 36, 33, 30, 27, 24, 33, 30, 27, 36, 33, 36, 35, 34, 33, 36, 35, 34, 33, 32, 31, 34, 33, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 25, 24, 23, 22, 21, 24, 23, 26, 25, 24, 27, 26, 29, 28, 27, 26, 25, 28, 27, 30, 29, 32, 35, 34, 33, 32, 31, 30, 33], "responses": [1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1]}
+
+
+Plotting the Results
+---------------------------
+
+
+
+.. code-block:: python
+
+    axes = plt.subplots(2, 1)[1]
+    for i in [0, 1]:
+        fig, ax, lines = tr[i].plot(ax=axes[i])
+        lines += tr[i].plot_thresh(4, ax=ax)
+
+        lines[0].set_label('Trials')
+        lines[1].set_label('Reversals')
+        lines[2].set_label('Estimated threshold')
+
+        ax.legend(loc='best')
+        ax.set_title('Adaptive track of model human trial type {} (true threshold '
+                     'is {})'.format(i + 1, true_thresh[i]))
+        fig.tight_layout()
+
+
+
+.. image:: /auto_examples/experiments/images/sphx_glr_tracker_dealer_001.png
+    :align: center
+
+
+
+
+**Total running time of the script:** ( 0 minutes  0.284 seconds)
+
+
+
+.. container:: sphx-glr-footer
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Python source code: tracker_dealer.py <tracker_dealer.py>`
+
+
+
+  .. container:: sphx-glr-download
+
+     :download:`Download Jupyter notebook: tracker_dealer.ipynb <tracker_dealer.ipynb>`
+
+.. rst-class:: sphx-glr-signature
+
+    `Generated by Sphinx-Gallery <https://sphinx-gallery.readthedocs.io>`_
