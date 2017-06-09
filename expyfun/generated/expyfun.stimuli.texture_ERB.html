@@ -117,7 +117,7 @@
 <h1>expyfun.stimuli.texture_ERB<a class="headerlink" href="#expyfun-stimuli-texture-erb" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.stimuli.texture_ERB">
-<code class="descclassname">expyfun.stimuli.</code><code class="descname">texture_ERB</code><span class="sig-paren">(</span><em>n_freqs=20</em>, <em>n_coh=None</em>, <em>rho=1.0</em>, <em>seq=('inc'</em>, <em>'nb'</em>, <em>'inc'</em>, <em>'nb')</em>, <em>fs=24414.0625</em>, <em>dur=1.0</em>, <em>SAM_freq=7.0</em>, <em>random_state=None</em>, <em>freq_lims=(200</em>, <em>8000)</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_texture.py#L43-L159"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.texture_ERB" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">expyfun.stimuli.</code><code class="descname">texture_ERB</code><span class="sig-paren">(</span><em>n_freqs=20</em>, <em>n_coh=None</em>, <em>rho=1.0</em>, <em>seq=('inc'</em>, <em>'nb'</em>, <em>'inc'</em>, <em>'nb')</em>, <em>fs=24414.0625</em>, <em>dur=1.0</em>, <em>SAM_freq=7.0</em>, <em>random_state=None</em>, <em>freq_lims=(200</em>, <em>8000)</em>, <em>verbose=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_texture.py#L43-L162"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.texture_ERB" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create ERB texture stimulus</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -162,6 +162,10 @@ SAM (&#8216;sam&#8217;) mixtures. Default is <code class="docutils literal"><spa
 <div><p>The random generator state used for band selection and noise
 envelope generation.</p>
 </div></blockquote>
+<p><strong>verbose</strong> : bool</p>
+<blockquote>
+<div><p>If True, print the resulting ERB spacing.</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>x</strong> : ndarray, shape (n_samples,)</p>
@@ -191,7 +195,7 @@ envelope generation.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-08.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-09.<br/>
     </p>
   </div>
 </footer>
