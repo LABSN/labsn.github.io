@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -34,7 +33,7 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Generate texture stimuli" href="texture_stimuli.html" />
+    <link rel="next" title="Do an adaptive track staircase" href="tracker_staircase.html" />
     <link rel="prev" title="Generate more advanced auditory stimuli" href="advanced_stimuli.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 
@@ -45,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -81,7 +80,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../python_reference.html">API Reference</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../whats_new.html">What&#8217;s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../whats_new.html">What’s new</a></li>
 </ul>
 </ul>
 </li>
@@ -120,15 +119,15 @@ already been installed.</p>
 <p>&#64;author: drmccloy</p>
 <img alt="../../_images/sphx_glr_simple_video_001.png" class="align-center" src="../../_images/sphx_glr_simple_video_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">09</span> <span class="mi">19</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">844</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">Pyglet</span> <span class="n">audio</span>
-<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">09</span> <span class="mi">19</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">891</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">screen</span>
-<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">09</span> <span class="mi">19</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">902</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Set</span> <span class="n">screen</span> <span class="n">visibility</span> <span class="kc">True</span>
-<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">09</span> <span class="mi">19</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">928</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initializing</span> <span class="n">dummy</span> <span class="n">triggering</span> <span class="n">mode</span>
-<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">09</span> <span class="mi">19</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">931</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initialization</span> <span class="n">complete</span>
-<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">09</span> <span class="mi">19</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">931</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Subject</span><span class="p">:</span> <span class="n">foo</span>
-<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">09</span> <span class="mi">19</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">931</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Session</span><span class="p">:</span> <span class="n">foo</span>
-<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">09</span> <span class="mi">19</span><span class="p">:</span><span class="mi">06</span><span class="p">:</span><span class="mi">59</span><span class="p">,</span><span class="mi">935</span> <span class="o">-</span> <span class="n">WARNING</span> <span class="o">-</span> <span class="n">Frame</span> <span class="n">rate</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">determined</span>
-<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">09</span> <span class="mi">19</span><span class="p">:</span><span class="mi">07</span><span class="p">:</span><span class="mi">01</span><span class="p">,</span><span class="mi">060</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Audio</span> <span class="n">stopped</span> <span class="ow">and</span> <span class="n">reset</span><span class="o">.</span>
+<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span><span class="mi">496</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">Pyglet</span> <span class="n">audio</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span><span class="mi">544</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">screen</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span><span class="mi">555</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Set</span> <span class="n">screen</span> <span class="n">visibility</span> <span class="kc">True</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span><span class="mi">581</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initializing</span> <span class="n">dummy</span> <span class="n">triggering</span> <span class="n">mode</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span><span class="mi">584</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initialization</span> <span class="n">complete</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span><span class="mi">584</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Subject</span><span class="p">:</span> <span class="n">foo</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span><span class="mi">584</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Session</span><span class="p">:</span> <span class="n">foo</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">43</span><span class="p">,</span><span class="mi">589</span> <span class="o">-</span> <span class="n">WARNING</span> <span class="o">-</span> <span class="n">Frame</span> <span class="n">rate</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">determined</span>
+<span class="mi">2017</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">15</span> <span class="mi">17</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">44</span><span class="p">,</span><span class="mi">715</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Audio</span> <span class="n">stopped</span> <span class="ow">and</span> <span class="n">reset</span><span class="o">.</span>
 </pre></div>
 </div>
 <div class="line-block">
@@ -162,7 +161,7 @@ already been installed.</p>
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  1.294 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  1.295 seconds)</p>
 <div class="sphx-glr-footer docutils container">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/simple_video.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">simple_video.py</span></code></a></div>
@@ -184,7 +183,7 @@ already been installed.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-09.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-15.<br/>
     </p>
   </div>
 </footer>

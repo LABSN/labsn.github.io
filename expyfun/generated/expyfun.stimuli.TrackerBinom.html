@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -81,7 +80,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
 </ul>
 </ul>
 </li>
@@ -117,14 +116,14 @@
 <h1>expyfun.stimuli.TrackerBinom<a class="headerlink" href="#expyfun-stimuli-trackerbinom" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.stimuli.TrackerBinom">
-<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">TrackerBinom</code><span class="sig-paren">(</span><em>callback</em>, <em>alpha</em>, <em>chance</em>, <em>max_trials</em>, <em>min_trials=0</em>, <em>stop_early=True</em>, <em>x_current=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L458-L668"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">TrackerBinom</code><span class="sig-paren">(</span><em>callback</em>, <em>alpha</em>, <em>chance</em>, <em>max_trials</em>, <em>min_trials=0</em>, <em>stop_early=True</em>, <em>x_current=nan</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L492-L702"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Binomial hypothesis testing tracker</p>
 <p>This class implements a tracker that runs a test at each trial with the
-null hypothesis that the stimulus presented has no effect on the subject&#8217;s
-response. This would happen in the case where the subject couldn&#8217;t hear a
+null hypothesis that the stimulus presented has no effect on the subject’s
+response. This would happen in the case where the subject couldn’t hear a
 stimulus, they were not able to do a task, or they did not understand the
-task. This function&#8217;s main use is training: a subject may move on to the
-experiment when the null hypothesis that they aren&#8217;t doing the task has
+task. This function’s main use is training: a subject may move on to the
+experiment when the null hypothesis that they aren’t doing the task has
 been rejected.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -135,7 +134,7 @@ been rejected.</p>
 <div><p>The function that will be used to print the data, usually to the
 experiment .tab file. It should follow the prototype of
 <code class="docutils literal"><span class="pre">ExperimentController.write_data_line</span></code>. If an instance of
-<code class="docutils literal"><span class="pre">ExperimentController</span></code> is given, then it will take that object&#8217;s
+<code class="docutils literal"><span class="pre">ExperimentController</span></code> is given, then it will take that object’s
 <code class="docutils literal"><span class="pre">write_data_line</span></code> function. If <code class="docutils literal"><span class="pre">None</span></code> is given, then it will not
 write the data anywhere.</p>
 </div></blockquote>
@@ -165,11 +164,11 @@ on reaching <code class="docutils literal"><span class="pre">alpha</span></code>
 <div><p>Whether to stop the adaptive track as soon as <code class="docutils literal"><span class="pre">alpha</span></code> is reached and
 at least <code class="docutils literal"><span class="pre">min_trials</span></code> have been presented.</p>
 </div></blockquote>
-<p><strong>x_current</strong> : float | None</p>
+<p><strong>x_current</strong> : float</p>
 <blockquote>
 <div><p>The level that you want to run the test at. This has no bearing on how
-the track runs, and it will never change, but it is required to be
-here for <code class="docutils literal"><span class="pre">TrackerDealer</span></code>.</p>
+the track runs, and it will never change, but it is both useful to
+document the level and required to exist if using <code class="docutils literal"><span class="pre">TrackerDealer</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -260,7 +259,7 @@ of following them.</p>
 </table>
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>callback</em>, <em>alpha</em>, <em>chance</em>, <em>max_trials</em>, <em>min_trials=0</em>, <em>stop_early=True</em>, <em>x_current=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L511-L543"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>callback</em>, <em>alpha</em>, <em>chance</em>, <em>max_trials</em>, <em>min_trials=0</em>, <em>stop_early=True</em>, <em>x_current=nan</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L545-L577"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -283,7 +282,7 @@ of following them.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.respond">
-<code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L545-L581"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.respond" title="Permalink to this definition">¶</a></dt>
+<code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L579-L615"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the tracker based on the last response.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -345,7 +344,7 @@ of following them.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-09.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-15.<br/>
     </p>
   </div>
 </footer>

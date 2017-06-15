@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -81,7 +80,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
 </ul>
 </ul>
 </li>
@@ -117,7 +116,7 @@
 <h1>expyfun.stimuli.vocode<a class="headerlink" href="#expyfun-stimuli-vocode" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.stimuli.vocode">
-<code class="descclassname">expyfun.stimuli.</code><code class="descname">vocode</code><span class="sig-paren">(</span><em>data</em>, <em>fs</em>, <em>n_bands=16</em>, <em>freq_lims=(200.0</em>, <em>8000.0)</em>, <em>scale='erb'</em>, <em>order=2</em>, <em>lp_cutoff=160.0</em>, <em>lp_order=4</em>, <em>mode='noise'</em>, <em>rate=200</em>, <em>seed=None</em>, <em>axis=-1</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_vocoder.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.vocode" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">expyfun.stimuli.</code><code class="descname">vocode</code><span class="sig-paren">(</span><em>data</em>, <em>fs</em>, <em>n_bands=16</em>, <em>freq_lims=(200.0</em>, <em>8000.0)</em>, <em>scale=’erb’</em>, <em>order=2</em>, <em>lp_cutoff=160.0</em>, <em>lp_order=4</em>, <em>mode=’noise’</em>, <em>rate=200</em>, <em>seed=None</em>, <em>axis=-1</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_vocoder.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.vocode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Vocode stimuli using a variety of methods</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -141,8 +140,8 @@
 </div></blockquote>
 <p><strong>scale</strong> : str</p>
 <blockquote>
-<div><p>Scale on which to equally space the bands. Possible values are &#8220;erb&#8221;,
-&#8220;log&#8221; (base-2), and &#8220;hz&#8221;.</p>
+<div><p>Scale on which to equally space the bands. Possible values are “erb”,
+“log” (base-2), and “hz”.</p>
 </div></blockquote>
 <p><strong>order</strong> : int</p>
 <blockquote>
@@ -160,15 +159,15 @@ always check outputs for order &gt; 2!</p>
 </div></blockquote>
 <p><strong>mode</strong> : str</p>
 <blockquote>
-<div><p>The type of signal used to excite each band. Options are &#8220;noise&#8221; for
-band-limited noise, &#8220;tone&#8221; for sinewave-at-center-frequency, or
-&#8220;poisson&#8221; for a poisson process of band-limited clicks at the rate
+<div><p>The type of signal used to excite each band. Options are “noise” for
+band-limited noise, “tone” for sinewave-at-center-frequency, or
+“poisson” for a poisson process of band-limited clicks at the rate
 given by <code class="docutils literal"><span class="pre">poisson_rate</span></code>.</p>
 </div></blockquote>
 <p><strong>rate</strong> : int</p>
 <blockquote>
 <div><p>Average number of clicks per second for the poisson train used to
-excite each band (when mode==&#8221;poisson&#8221;).</p>
+excite each band (when mode==”poisson”).</p>
 </div></blockquote>
 <p><strong>seed</strong> : int | None</p>
 <blockquote>
@@ -207,7 +206,7 @@ algorithm described by Zachary Smith (Cochlear Corp.).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-09.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-15.<br/>
     </p>
   </div>
 </footer>

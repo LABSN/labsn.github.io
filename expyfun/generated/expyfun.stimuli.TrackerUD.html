@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -81,7 +80,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
 </ul>
 </ul>
 </li>
@@ -117,7 +116,7 @@
 <h1>expyfun.stimuli.TrackerUD<a class="headerlink" href="#expyfun-stimuli-trackerud" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.stimuli.TrackerUD">
-<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">TrackerUD</code><span class="sig-paren">(</span><em>callback</em>, <em>up</em>, <em>down</em>, <em>step_size_up</em>, <em>step_size_down</em>, <em>stop_criterion</em>, <em>stop_rule</em>, <em>start_value</em>, <em>change_criteria=None</em>, <em>change_rule='reversals'</em>, <em>x_min=None</em>, <em>x_max=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L41-L452"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">TrackerUD</code><span class="sig-paren">(</span><em>callback</em>, <em>up</em>, <em>down</em>, <em>step_size_up</em>, <em>step_size_down</em>, <em>stop_reversals</em>, <em>stop_trials</em>, <em>start_value</em>, <em>change_indices=None</em>, <em>change_rule=’reversals’</em>, <em>x_min=None</em>, <em>x_max=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L41-L486"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Up-down adaptive tracker</p>
 <p>This class implements a standard up-down adaptive tracker object. Based on
 how it is configured, it can be used to run a fixed-step m-down n-up
@@ -131,7 +130,7 @@ tracker (staircase), or it can implement a weighted up-down procedure.</p>
 <div><p>The function that will be used to print the data, usually to the
 experiment .tab file. It should follow the prototype of
 <code class="docutils literal"><span class="pre">ExperimentController.write_data_line</span></code>. If an instance of
-<code class="docutils literal"><span class="pre">ExperimentController</span></code> is given, then it will take that object&#8217;s
+<code class="docutils literal"><span class="pre">ExperimentController</span></code> is given, then it will take that object’s
 <code class="docutils literal"><span class="pre">write_data_line</span></code> function. If None is given, then it will not write
 the data anywhere.</p>
 </div></blockquote>
@@ -146,42 +145,47 @@ the data anywhere.</p>
 <p><strong>step_size_up</strong> : float | list of float</p>
 <blockquote>
 <div><p>The size of the step when the tracker moves up. If float it will stay
-the same. If list of float then it will change when <code class="docutils literal"><span class="pre">change_criteria</span></code>
+the same. If list of float then it will change when <code class="docutils literal"><span class="pre">change_indices</span></code>
 are encountered. See note below for more specific information on
 dynamic tracker parameters specified with a list.</p>
 </div></blockquote>
 <p><strong>step_size_down</strong> : float | list of float</p>
 <blockquote>
 <div><p>The size of the step when the tracker moves down. If float it will stay
-the same. If list of float then it will change when <code class="docutils literal"><span class="pre">change_criteria</span></code>
+the same. If list of float then it will change when <code class="docutils literal"><span class="pre">change_indices</span></code>
 are encountered. See note below for more specific information on
 dynamic tracker parameters specified with a list.</p>
 </div></blockquote>
-<p><strong>stop_criterion</strong> : int</p>
+<p><strong>stop_reversals</strong> : int | np.inf</p>
 <blockquote>
-<div><p>The number of reversals or trials that will stop the tracker.</p>
+<div><p>The minimum number of reversals before the tracker stops. If
+<code class="docutils literal"><span class="pre">stop_trials</span></code> is also specified, the tracker will stop when either
+condition is satisfied.</p>
 </div></blockquote>
-<p><strong>stop_rule</strong> : str</p>
+<p><strong>stop_trials</strong> : int | np.inf</p>
 <blockquote>
-<div><p>How to determine when the tracker stops. Can be &#8216;reversals&#8217; or
-&#8216;trials&#8217;.</p>
+<div><p>The minimum number of trials before the tracker stops. If
+<code class="docutils literal"><span class="pre">stop_reversals</span></code> is also specified, the tracker will stop when either
+condition is satisfied. Only use np.inf if you are sure that the
+tracker will reach the reversal stopping criteria without getting stuck
+on either x_min or x_max.</p>
 </div></blockquote>
 <p><strong>start_value</strong> : float</p>
 <blockquote>
 <div><p>The starting level of the tracker.</p>
 </div></blockquote>
-<p><strong>change_criteria</strong> : list of int | None</p>
+<p><strong>change_indices</strong> : list of int | None</p>
 <blockquote>
 <div><p>The points along the tracker to change its step sizes. Has an effect
 where <code class="docutils literal"><span class="pre">step_size_up</span></code> and <code class="docutils literal"><span class="pre">step_size_down</span></code> are
-lists. The length of <code class="docutils literal"><span class="pre">change_criteria</span></code> must be the same as the
-length of <code class="docutils literal"><span class="pre">step_size_up</span></code> and <code class="docutils literal"><span class="pre">step_size_down</span></code>. See note below for
-more specific usage information. Should be None if static step sizes
-are used.</p>
+lists. The length of <code class="docutils literal"><span class="pre">change_indices</span></code> must be the same as the
+length of <code class="docutils literal"><span class="pre">step_size_up</span></code> and <code class="docutils literal"><span class="pre">step_size_down</span></code> minus 1. See note
+below for more specific usage information. Should be None if static
+step sizes are used.</p>
 </div></blockquote>
 <p><strong>change_rule</strong> : str</p>
 <blockquote>
-<div><p>Whether to change parameters based on &#8216;trials&#8217; or &#8216;reversals&#8217;.</p>
+<div><p>Whether to change parameters based on ‘trials’ or ‘reversals’.</p>
 </div></blockquote>
 <p><strong>x_min</strong> : float</p>
 <blockquote>
@@ -209,15 +213,14 @@ This class allows that functionality by defining that parameter with a list
 of values rather than a scalar. The parameter will change to the next value
 in the list whenever a change criterion (number of trials or reversals) is
 encountered. This means that the length of the list defining a dynamic
-parameter must always be the same as that of <code class="docutils literal"><span class="pre">change_criteria</span></code>, and the
-first element of change_criteria must always be 0.
+parameter must always be the 1 longer than that of <code class="docutils literal"><span class="pre">change_indices</span></code>.
 For the example given above:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">...</span><span class="p">,</span> <span class="n">step_size_up</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> <span class="n">step_size_down</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>         <span class="n">change_criteria</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">change_rule</span><span class="o">=</span><span class="s1">&#39;reversals&#39;</span><span class="p">,</span> <span class="o">...</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">...</span><span class="p">,</span> <span class="n">step_size_up</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> <span class="n">step_size_down</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span>         <span class="n">change_indices</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">change_rule</span><span class="o">=</span><span class="s1">&#39;reversals&#39;</span><span class="p">,</span> <span class="o">...</span>
 </pre></div>
 </div>
 <p>would change the step sizes from 1 to 0.2 after two reversals.</p>
 <p>If static step sizes are used, both <code class="docutils literal"><span class="pre">step_size_up</span></code>
-and <code class="docutils literal"><span class="pre">step_sizedownp</span></code> must be scalars and <code class="docutils literal"><span class="pre">change_criteria</span></code> must be
+and <code class="docutils literal"><span class="pre">step_size_down</span></code> must be scalars and <code class="docutils literal"><span class="pre">change_indices</span></code> must be
 None.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="longtable docutils">
@@ -253,10 +256,10 @@ None.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_size_up</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">stop_criterion</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">stop_reversals</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">stop_rule</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">stop_trials</span></code></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.stopped" title="expyfun.stimuli.TrackerUD.stopped"><code class="xref py py-obj docutils literal"><span class="pre">stopped</span></code></a></td>
@@ -286,7 +289,7 @@ None.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.plot" title="expyfun.stimuli.TrackerUD.plot"><code class="xref py py-obj docutils literal"><span class="pre">plot</span></code></a>([ax])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.plot" title="expyfun.stimuli.TrackerUD.plot"><code class="xref py py-obj docutils literal"><span class="pre">plot</span></code></a>([ax,&nbsp;threshold,&nbsp;n_skip])</td>
 <td>Plot the adaptive track.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.plot_thresh" title="expyfun.stimuli.TrackerUD.plot_thresh"><code class="xref py py-obj docutils literal"><span class="pre">plot_thresh</span></code></a>([n_skip,&nbsp;ax])</td>
@@ -296,13 +299,13 @@ None.</p>
 <td>Update the tracker based on the last response.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.threshold" title="expyfun.stimuli.TrackerUD.threshold"><code class="xref py py-obj docutils literal"><span class="pre">threshold</span></code></a>([n_skip])</td>
-<td>Compute the track&#8217;s threshold.</td>
+<td>Compute the track’s threshold.</td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerUD.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>callback</em>, <em>up</em>, <em>down</em>, <em>step_size_up</em>, <em>step_size_down</em>, <em>stop_criterion</em>, <em>stop_rule</em>, <em>start_value</em>, <em>change_criteria=None</em>, <em>change_rule='reversals'</em>, <em>x_min=None</em>, <em>x_max=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L119-L185"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>callback</em>, <em>up</em>, <em>down</em>, <em>step_size_up</em>, <em>step_size_down</em>, <em>stop_reversals</em>, <em>stop_trials</em>, <em>start_value</em>, <em>change_indices=None</em>, <em>change_rule=’reversals’</em>, <em>x_min=None</em>, <em>x_max=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L123-L200"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -319,7 +322,7 @@ None.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerUD.plot">
-<code class="descname">plot</code><span class="sig-paren">(</span><em>ax=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L372-L399"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot" title="Permalink to this definition">¶</a></dt>
+<code class="descname">plot</code><span class="sig-paren">(</span><em>ax=None</em>, <em>threshold=True</em>, <em>n_skip=2</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L395-L433"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the adaptive track.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -328,6 +331,15 @@ None.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ax</strong> : AxesSubplot | None</p>
 <blockquote>
 <div><p>The axes to make the plot on. If <code class="docutils literal"><span class="pre">None</span></code> defaults to current axes.</p>
+</div></blockquote>
+<p><strong>threshold</strong> : bool</p>
+<blockquote>
+<div><p>Whether to plot the estimated threshold on the axes. Default is
+True.</p>
+</div></blockquote>
+<p><strong>n_skip</strong> : int</p>
+<blockquote>
+<div><p>See documentation for <code class="docutils literal"><span class="pre">TrackerUD.threshold</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -351,7 +363,7 @@ None.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerUD.plot_thresh">
-<code class="descname">plot_thresh</code><span class="sig-paren">(</span><em>n_skip=2</em>, <em>ax=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L401-L422"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot_thresh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">plot_thresh</code><span class="sig-paren">(</span><em>n_skip=2</em>, <em>ax=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L435-L456"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot_thresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a line showing the threshold.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -380,7 +392,7 @@ be used.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerUD.respond">
-<code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L187-L259"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.respond" title="Permalink to this definition">¶</a></dt>
+<code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L202-L275"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the tracker based on the last response.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -422,8 +434,8 @@ be used.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerUD.threshold">
-<code class="descname">threshold</code><span class="sig-paren">(</span><em>n_skip=2</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L424-L452"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.threshold" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the track&#8217;s threshold.</p>
+<code class="descname">threshold</code><span class="sig-paren">(</span><em>n_skip=2</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L458-L486"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the track’s threshold.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -445,8 +457,8 @@ the threshold.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>The threshold is computed as the average of the up reversals and the
-average of the down reversals. In this way if there&#8217;s an unequal number
-of them the assymetry won&#8217;t bias the threshold estimate.</p>
+average of the down reversals. In this way if there’s an unequal number
+of them the assymetry won’t bias the threshold estimate.</p>
 <p>This can also be used before the track is stopped if the experimenter
 wishes.</p>
 </dd></dl>
@@ -479,7 +491,7 @@ wishes.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-09.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-15.<br/>
     </p>
   </div>
 </footer>

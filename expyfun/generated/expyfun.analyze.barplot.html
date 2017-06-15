@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -81,7 +80,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
 </ul>
 </ul>
 </li>
@@ -129,7 +128,7 @@
 the axis given by <cite>axis</cite>. If <cite>h</cite> is of lower dimension, it is
 treated as raw height values. If <cite>h</cite> is a <cite>pandas.DataFrame</cite> and
 <cite>bar_names</cite> is <code class="docutils literal"><span class="pre">None</span></code>, <cite>bar_names</cite> will be inferred from the
-DataFrame&#8217;s <cite>column</cite> labels (if <code class="docutils literal"><span class="pre">axis=0</span></code>) or <cite>index</cite> labels.</p>
+DataFrame’s <cite>column</cite> labels (if <code class="docutils literal"><span class="pre">axis=0</span></code>) or <cite>index</cite> labels.</p>
 </div></blockquote>
 <p><strong>axis</strong> : int</p>
 <blockquote>
@@ -157,7 +156,7 @@ same dimensionality and shape as <cite>h</cite>.</p>
 <blockquote>
 <div><p>List of lists containing the integers in <code class="docutils literal"><span class="pre">range(num_bars)</span></code>, with
 sub-lists indicating the desired grouping. For example, if <cite>h</cite> has
-has shape (10, 4) and <code class="docutils literal"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">-1</span></code> then &#8220;num_bars&#8221; is 4; if you want
+has shape (10, 4) and <code class="docutils literal"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">-1</span></code> then “num_bars” is 4; if you want
 the first bar isolated and the remaining three grouped, then specify
 <code class="docutils literal"><span class="pre">groups=[[0],</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]]</span></code>.</p>
 </div></blockquote>
@@ -264,13 +263,13 @@ a single subplot will be created.</p>
 <dl class="docutils">
 <dt>Known limitations:</dt>
 <dd><dl class="first last docutils">
-<dt>1 Bracket heights don&#8217;t get properly set when generating multiple</dt>
+<dt>1 Bracket heights don’t get properly set when generating multiple</dt>
 <dd>subplots with <code class="docutils literal"><span class="pre">sharey=True</span></code> (matplotlib seems to temporarily force
 the <code class="docutils literal"><span class="pre">ylim</span></code> to +/- 0.6 in this case). Work around is to use
 <code class="docutils literal"><span class="pre">sharey=False</span></code> and manually set <code class="docutils literal"><span class="pre">ylim</span></code> for each subplot.</dd>
 <dt>2 Brackets that span groups cannot span partial groups. For example,</dt>
 <dd>if <code class="docutils literal"><span class="pre">groups=[[0,</span> <span class="pre">1,</span> <span class="pre">2],</span> <span class="pre">[3,</span> <span class="pre">4]]</span></code> it is impossible to have a bracket
-at <code class="docutils literal"><span class="pre">[(0,</span> <span class="pre">1),</span> <span class="pre">(3,</span> <span class="pre">4)]</span></code>...  it is only possible to do, e.g.,
+at <code class="docutils literal"><span class="pre">[(0,</span> <span class="pre">1),</span> <span class="pre">(3,</span> <span class="pre">4)]</span></code>…  it is only possible to do, e.g.,
 <code class="docutils literal"><span class="pre">[0,</span> <span class="pre">(3,</span> <span class="pre">4)]</span></code> (single bar vs group) or  <code class="docutils literal"><span class="pre">[(0,</span> <span class="pre">1,</span> <span class="pre">2),</span> <span class="pre">(3,</span> <span class="pre">4)]</span></code>
 (full group vs full group).</dd>
 <dt>3 Bracket drawing is much better when adjacent pairs of bars are</dt>
@@ -299,7 +298,7 @@ bracket color: dark gray (30%)</dd>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-09.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-15.<br/>
     </p>
   </div>
 </footer>

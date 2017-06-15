@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -81,7 +80,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whats_new.html">What&#8217;s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whats_new.html">What’s new</a></li>
 </ul>
 </ul>
 </li>
@@ -137,7 +136,7 @@ grouped by hardware control type.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController</span></code></a>(exp_name[,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><code class="xref py py-obj docutils literal"><span class="pre">ExperimentController</span></code></a>(exp_name[,&nbsp;…])</td>
 <td>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.EyelinkController.html#expyfun.EyelinkController" title="expyfun.EyelinkController"><code class="xref py py-obj docutils literal"><span class="pre">EyelinkController</span></code></a>(ec[,&nbsp;link,&nbsp;fs,&nbsp;verbose])</td>
@@ -167,7 +166,7 @@ grouped by hardware control type.</p>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.download_version.html#expyfun.download_version" title="expyfun.download_version"><code class="xref py py-obj docutils literal"><span class="pre">download_version</span></code></a>([version,&nbsp;dest_dir])</td>
 <td>Download specific expyfun version</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.get_keyboard_input.html#expyfun.get_keyboard_input" title="expyfun.get_keyboard_input"><code class="xref py py-obj docutils literal"><span class="pre">get_keyboard_input</span></code></a>(prompt[,&nbsp;default,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.get_keyboard_input.html#expyfun.get_keyboard_input" title="expyfun.get_keyboard_input"><code class="xref py py-obj docutils literal"><span class="pre">get_keyboard_input</span></code></a>(prompt[,&nbsp;default,&nbsp;…])</td>
 <td>Get keyboard input of a specific type</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.wait_secs.html#expyfun.wait_secs" title="expyfun.wait_secs"><code class="xref py py-obj docutils literal"><span class="pre">wait_secs</span></code></a>(secs[,&nbsp;ec])</td>
@@ -189,10 +188,10 @@ grouped by hardware control type.</p>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerBinom.html#expyfun.stimuli.TrackerBinom" title="expyfun.stimuli.TrackerBinom"><code class="xref py py-obj docutils literal"><span class="pre">TrackerBinom</span></code></a>(callback,&nbsp;alpha,&nbsp;chance,&nbsp;max_trials)</td>
 <td>Binomial hypothesis testing tracker</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><code class="xref py py-obj docutils literal"><span class="pre">TrackerDealer</span></code></a>(trackers[,&nbsp;max_lag,&nbsp;rand])</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><code class="xref py py-obj docutils literal"><span class="pre">TrackerDealer</span></code></a>(callback,&nbsp;trackers[,&nbsp;max_lag,&nbsp;…])</td>
 <td>Class for selecting and pacing independent simultaneous trackers</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><code class="xref py py-obj docutils literal"><span class="pre">TrackerUD</span></code></a>(callback,&nbsp;up,&nbsp;down,&nbsp;step_size_up,&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><code class="xref py py-obj docutils literal"><span class="pre">TrackerUD</span></code></a>(callback,&nbsp;up,&nbsp;down,&nbsp;step_size_up,&nbsp;…)</td>
 <td>Up-down adaptive tracker</td>
 </tr>
 </tbody>
@@ -207,7 +206,7 @@ grouped by hardware control type.</p>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.convolve_hrtf.html#expyfun.stimuli.convolve_hrtf" title="expyfun.stimuli.convolve_hrtf"><code class="xref py py-obj docutils literal"><span class="pre">convolve_hrtf</span></code></a>(data,&nbsp;fs,&nbsp;angle[,&nbsp;source,&nbsp;interp])</td>
 <td>Convolve a signal with a head-related transfer function</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.compute_mls_impulse_response.html#expyfun.stimuli.compute_mls_impulse_response" title="expyfun.stimuli.compute_mls_impulse_response"><code class="xref py py-obj docutils literal"><span class="pre">compute_mls_impulse_response</span></code></a>(response,&nbsp;mls,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.compute_mls_impulse_response.html#expyfun.stimuli.compute_mls_impulse_response" title="expyfun.stimuli.compute_mls_impulse_response"><code class="xref py py-obj docutils literal"><span class="pre">compute_mls_impulse_response</span></code></a>(response,&nbsp;mls,&nbsp;…)</td>
 <td>Compute the impulse response from data obtained using MLS</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound" title="expyfun.stimuli.play_sound"><code class="xref py py-obj docutils literal"><span class="pre">play_sound</span></code></a>(sound[,&nbsp;fs,&nbsp;norm,&nbsp;wait])</td>
@@ -219,14 +218,14 @@ grouped by hardware control type.</p>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.rms.html#expyfun.stimuli.rms" title="expyfun.stimuli.rms"><code class="xref py py-obj docutils literal"><span class="pre">rms</span></code></a>(data[,&nbsp;axis,&nbsp;keepdims])</td>
 <td>Calculate the RMS of a signal</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.texture_ERB.html#expyfun.stimuli.texture_ERB" title="expyfun.stimuli.texture_ERB"><code class="xref py py-obj docutils literal"><span class="pre">texture_ERB</span></code></a>([n_freqs,&nbsp;n_coh,&nbsp;rho,&nbsp;seq,&nbsp;fs,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.texture_ERB.html#expyfun.stimuli.texture_ERB" title="expyfun.stimuli.texture_ERB"><code class="xref py py-obj docutils literal"><span class="pre">texture_ERB</span></code></a>([n_freqs,&nbsp;n_coh,&nbsp;rho,&nbsp;seq,&nbsp;fs,&nbsp;…])</td>
 <td>Create ERB texture stimulus</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.vocode.html#expyfun.stimuli.vocode" title="expyfun.stimuli.vocode"><code class="xref py py-obj docutils literal"><span class="pre">vocode</span></code></a>(data,&nbsp;fs[,&nbsp;n_bands,&nbsp;freq_lims,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.vocode.html#expyfun.stimuli.vocode" title="expyfun.stimuli.vocode"><code class="xref py py-obj docutils literal"><span class="pre">vocode</span></code></a>(data,&nbsp;fs[,&nbsp;n_bands,&nbsp;freq_lims,&nbsp;…])</td>
 <td>Vocode stimuli using a variety of methods</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.window_edges.html#expyfun.stimuli.window_edges" title="expyfun.stimuli.window_edges"><code class="xref py py-obj docutils literal"><span class="pre">window_edges</span></code></a>(sig,&nbsp;fs[,&nbsp;dur,&nbsp;axis,&nbsp;window,&nbsp;edges])</td>
-<td>Window the edges of a signal (e.g., to prevent &#8220;pops&#8221;)</td>
+<td>Window the edges of a signal (e.g., to prevent “pops”)</td>
 </tr>
 </tbody>
 </table>
@@ -250,7 +249,7 @@ grouped by hardware control type.</p>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5" title="expyfun.io.write_hdf5"><code class="xref py py-obj docutils literal"><span class="pre">write_hdf5</span></code></a>(fname,&nbsp;data[,&nbsp;overwrite,&nbsp;compression])</td>
 <td>Write python object to HDF5 format using h5io/h5py</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.write_wav.html#expyfun.io.write_wav" title="expyfun.io.write_wav"><code class="xref py py-obj docutils literal"><span class="pre">write_wav</span></code></a>(fname,&nbsp;data,&nbsp;fs[,&nbsp;dtype,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.write_wav.html#expyfun.io.write_wav" title="expyfun.io.write_wav"><code class="xref py py-obj docutils literal"><span class="pre">write_wav</span></code></a>(fname,&nbsp;data,&nbsp;fs[,&nbsp;dtype,&nbsp;…])</td>
 <td>Write a WAV file</td>
 </tr>
 </tbody>
@@ -263,28 +262,28 @@ grouped by hardware control type.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="expyfun.visual.Circle"><code class="xref py py-obj docutils literal"><span class="pre">Circle</span></code></a>(ec[,&nbsp;radius,&nbsp;pos,&nbsp;units,&nbsp;n_edges,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="expyfun.visual.Circle"><code class="xref py py-obj docutils literal"><span class="pre">Circle</span></code></a>(ec[,&nbsp;radius,&nbsp;pos,&nbsp;units,&nbsp;n_edges,&nbsp;…])</td>
 <td>A circle or ellipse</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.visual.ConcentricCircles.html#expyfun.visual.ConcentricCircles" title="expyfun.visual.ConcentricCircles"><code class="xref py py-obj docutils literal"><span class="pre">ConcentricCircles</span></code></a>(ec[,&nbsp;radii,&nbsp;pos,&nbsp;units,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.visual.ConcentricCircles.html#expyfun.visual.ConcentricCircles" title="expyfun.visual.ConcentricCircles"><code class="xref py py-obj docutils literal"><span class="pre">ConcentricCircles</span></code></a>(ec[,&nbsp;radii,&nbsp;pos,&nbsp;units,&nbsp;…])</td>
 <td>A set of filled concentric circles drawn without edges</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.visual.Diamond.html#expyfun.visual.Diamond" title="expyfun.visual.Diamond"><code class="xref py py-obj docutils literal"><span class="pre">Diamond</span></code></a>(ec,&nbsp;pos[,&nbsp;units,&nbsp;fill_color,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.visual.Diamond.html#expyfun.visual.Diamond" title="expyfun.visual.Diamond"><code class="xref py py-obj docutils literal"><span class="pre">Diamond</span></code></a>(ec,&nbsp;pos[,&nbsp;units,&nbsp;fill_color,&nbsp;…])</td>
 <td>A diamond</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.visual.FixationDot.html#expyfun.visual.FixationDot" title="expyfun.visual.FixationDot"><code class="xref py py-obj docutils literal"><span class="pre">FixationDot</span></code></a>(ec[,&nbsp;colors])</td>
 <td>A reasonable centered fixation dot</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.visual.Line.html#expyfun.visual.Line" title="expyfun.visual.Line"><code class="xref py py-obj docutils literal"><span class="pre">Line</span></code></a>(ec,&nbsp;coords[,&nbsp;units,&nbsp;line_color,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.visual.Line.html#expyfun.visual.Line" title="expyfun.visual.Line"><code class="xref py py-obj docutils literal"><span class="pre">Line</span></code></a>(ec,&nbsp;coords[,&nbsp;units,&nbsp;line_color,&nbsp;…])</td>
 <td>A connected set of line segments</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.visual.RawImage.html#expyfun.visual.RawImage" title="expyfun.visual.RawImage"><code class="xref py py-obj docutils literal"><span class="pre">RawImage</span></code></a>(ec,&nbsp;image_buffer[,&nbsp;pos,&nbsp;scale,&nbsp;units])</td>
 <td>Create image from array for on-screen display</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="expyfun.visual.Rectangle"><code class="xref py py-obj docutils literal"><span class="pre">Rectangle</span></code></a>(ec,&nbsp;pos[,&nbsp;units,&nbsp;fill_color,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="expyfun.visual.Rectangle"><code class="xref py py-obj docutils literal"><span class="pre">Rectangle</span></code></a>(ec,&nbsp;pos[,&nbsp;units,&nbsp;fill_color,&nbsp;…])</td>
 <td>A rectangle</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.visual.Text.html#expyfun.visual.Text" title="expyfun.visual.Text"><code class="xref py py-obj docutils literal"><span class="pre">Text</span></code></a>(ec,&nbsp;text[,&nbsp;pos,&nbsp;color,&nbsp;font_name,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.visual.Text.html#expyfun.visual.Text" title="expyfun.visual.Text"><code class="xref py py-obj docutils literal"><span class="pre">Text</span></code></a>(ec,&nbsp;text[,&nbsp;pos,&nbsp;color,&nbsp;font_name,&nbsp;…])</td>
 <td>A text object</td>
 </tr>
 </tbody>
@@ -300,10 +299,10 @@ grouped by hardware control type.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.codeblocks.find_pupil_dynamic_range.html#expyfun.codeblocks.find_pupil_dynamic_range" title="expyfun.codeblocks.find_pupil_dynamic_range"><code class="xref py py-obj docutils literal"><span class="pre">find_pupil_dynamic_range</span></code></a>(ec,&nbsp;el[,&nbsp;prompt,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.codeblocks.find_pupil_dynamic_range.html#expyfun.codeblocks.find_pupil_dynamic_range" title="expyfun.codeblocks.find_pupil_dynamic_range"><code class="xref py py-obj docutils literal"><span class="pre">find_pupil_dynamic_range</span></code></a>(ec,&nbsp;el[,&nbsp;prompt,&nbsp;…])</td>
 <td>Find pupil dynamic range</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.codeblocks.find_pupil_tone_impulse_response.html#expyfun.codeblocks.find_pupil_tone_impulse_response" title="expyfun.codeblocks.find_pupil_tone_impulse_response"><code class="xref py py-obj docutils literal"><span class="pre">find_pupil_tone_impulse_response</span></code></a>(ec,&nbsp;el,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.codeblocks.find_pupil_tone_impulse_response.html#expyfun.codeblocks.find_pupil_tone_impulse_response" title="expyfun.codeblocks.find_pupil_tone_impulse_response"><code class="xref py py-obj docutils literal"><span class="pre">find_pupil_tone_impulse_response</span></code></a>(ec,&nbsp;el,&nbsp;…)</td>
 <td>Find pupil impulse response using responses to tones</td>
 </tr>
 </tbody>
@@ -319,7 +318,7 @@ grouped by hardware control type.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" title="expyfun.analyze.barplot"><code class="xref py py-obj docutils literal"><span class="pre">barplot</span></code></a>(h[,&nbsp;axis,&nbsp;ylim,&nbsp;err_bars,&nbsp;lines,&nbsp;...])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" title="expyfun.analyze.barplot"><code class="xref py py-obj docutils literal"><span class="pre">barplot</span></code></a>(h[,&nbsp;axis,&nbsp;ylim,&nbsp;err_bars,&nbsp;lines,&nbsp;…])</td>
 <td>Makes barplots w/ optional line overlays, grouping, &amp; signif.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.analyze.box_off.html#expyfun.analyze.box_off" title="expyfun.analyze.box_off"><code class="xref py py-obj docutils literal"><span class="pre">box_off</span></code></a>(ax)</td>
@@ -343,7 +342,7 @@ grouped by hardware control type.</p>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="expyfun.analyze.plot_screen"><code class="xref py py-obj docutils literal"><span class="pre">plot_screen</span></code></a>(screen[,&nbsp;ax])</td>
 <td>Plot a captured screenshot</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.analyze.press_times_to_hmfc.html#expyfun.analyze.press_times_to_hmfc" title="expyfun.analyze.press_times_to_hmfc"><code class="xref py py-obj docutils literal"><span class="pre">press_times_to_hmfc</span></code></a>(presses,&nbsp;targets,&nbsp;foils,&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.analyze.press_times_to_hmfc.html#expyfun.analyze.press_times_to_hmfc" title="expyfun.analyze.press_times_to_hmfc"><code class="xref py py-obj docutils literal"><span class="pre">press_times_to_hmfc</span></code></a>(presses,&nbsp;targets,&nbsp;foils,&nbsp;…)</td>
 <td>Convert press times to hits/misses/FA/CR and reaction times</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.analyze.restore_values.html#expyfun.analyze.restore_values" title="expyfun.analyze.restore_values"><code class="xref py py-obj docutils literal"><span class="pre">restore_values</span></code></a>(correct,&nbsp;other,&nbsp;idx)</td>
@@ -391,7 +390,7 @@ grouped by hardware control type.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-09.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-15.<br/>
     </p>
   </div>
 </footer>

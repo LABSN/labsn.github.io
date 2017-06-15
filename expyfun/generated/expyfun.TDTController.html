@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -45,7 +44,7 @@
 
 
   </head>
-  <body role="document">
+  <body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -81,7 +80,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What&#8217;s new</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
 </ul>
 </ul>
 </li>
@@ -134,18 +133,18 @@ appropriate call to <a class="reference internal" href="expyfun.ExperimentContro
 <div><p>A dictionary containing keys with string values:</p>
 <blockquote>
 <div><ul class="simple">
-<li>&#8216;TYPE&#8217;: this should always be &#8216;tdt&#8217;.</li>
-<li>&#8216;TDT_MODEL&#8217;: String name of the TDT model, can be &#8216;RM1&#8217;, &#8216;RP2&#8217;,
-&#8216;RP2legacy&#8217;, &#8216;RZ6&#8217;, or &#8216;dummy&#8217; (default). For historical
-reasons, &#8216;RP2&#8217; corresponds to the RP2.1, and &#8216;RP2legacy&#8217;
+<li>‘TYPE’: this should always be ‘tdt’.</li>
+<li>‘TDT_MODEL’: String name of the TDT model, can be ‘RM1’, ‘RP2’,
+‘RP2legacy’, ‘RZ6’, or ‘dummy’ (default). For historical
+reasons, ‘RP2’ corresponds to the RP2.1, and ‘RP2legacy’
 corresponds to the first-revision RP2.</li>
-<li>&#8216;TDT_CIRCUIT_PATH&#8217;: Path to the TDT circuit. Defaults to an
+<li>‘TDT_CIRCUIT_PATH’: Path to the TDT circuit. Defaults to an
 internal expyfun circuit.</li>
-<li>&#8216;TDT_INTERFACE&#8217;: Type of connection, either &#8216;USB&#8217; (default)
-or &#8216;GB&#8217;).</li>
-<li>&#8216;TDT_DELAY&#8217;: the delay (in ms) for the circuit (default: &#8216;0&#8217;).</li>
-<li>&#8216;TDT_TRIG_DELAY&#8217;: additional delay for the triggers
-(default: &#8216;0&#8217;).</li>
+<li>‘TDT_INTERFACE’: Type of connection, either ‘USB’ (default)
+or ‘GB’).</li>
+<li>‘TDT_DELAY’: the delay (in ms) for the circuit (default: ‘0’).</li>
+<li>‘TDT_TRIG_DELAY’: additional delay for the triggers
+(default: ‘0’).</li>
 </ul>
 </div></blockquote>
 <p>Note that the defaults are overridden on individual machines by
@@ -175,10 +174,10 @@ the configuration file.</p>
 <td>Playback frequency of the audio (samples / second).</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.interface" title="expyfun.TDTController.interface"><code class="xref py py-obj docutils literal"><span class="pre">interface</span></code></a></td>
-<td>String representation of TDT interface (&#8216;USB&#8217; or &#8216;GB&#8217;).</td>
+<td>String representation of TDT interface (‘USB’ or ‘GB’).</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.model" title="expyfun.TDTController.model"><code class="xref py py-obj docutils literal"><span class="pre">model</span></code></a></td>
-<td>String representation of TDT model name (&#8216;RM1&#8217;, &#8216;RP2&#8217;, etc).</td>
+<td>String representation of TDT model name (‘RM1’, ‘RP2’, etc).</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.playing" title="expyfun.TDTController.playing"><code class="xref py py-obj docutils literal"><span class="pre">playing</span></code></a></td>
 <td>Is a sound currently playing</td>
@@ -225,10 +224,10 @@ the configuration file.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.stop_noise" title="expyfun.TDTController.stop_noise"><code class="xref py py-obj docutils literal"><span class="pre">stop_noise</span></code></a>()</td>
 <td>Send the soft trigger to stop the noise generator.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.wait_for_presses" title="expyfun.TDTController.wait_for_presses"><code class="xref py py-obj docutils literal"><span class="pre">wait_for_presses</span></code></a>(max_wait,&nbsp;min_wait,&nbsp;...)</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.wait_for_presses" title="expyfun.TDTController.wait_for_presses"><code class="xref py py-obj docutils literal"><span class="pre">wait_for_presses</span></code></a>(max_wait,&nbsp;min_wait,&nbsp;…)</td>
 <td>Return all button presses between min_wait and max_wait.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.wait_one_press" title="expyfun.TDTController.wait_one_press"><code class="xref py py-obj docutils literal"><span class="pre">wait_one_press</span></code></a>(max_wait,&nbsp;min_wait,&nbsp;...)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.wait_one_press" title="expyfun.TDTController.wait_one_press"><code class="xref py py-obj docutils literal"><span class="pre">wait_one_press</span></code></a>(max_wait,&nbsp;min_wait,&nbsp;…)</td>
 <td>Return the first button pressed after min_wait.</td>
 </tr>
 </tbody>
@@ -259,7 +258,7 @@ the configuration file.</p>
 
 <dl class="method">
 <dt id="expyfun.TDTController.get_presses">
-<code class="descname">get_presses</code><span class="sig-paren">(</span><em>live_keys</em>, <em>timestamp</em>, <em>relative_to</em>, <em>kind='presses'</em>, <em>return_kinds=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L105-L120"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.get_presses" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_presses</code><span class="sig-paren">(</span><em>live_keys</em>, <em>timestamp</em>, <em>relative_to</em>, <em>kind=’presses’</em>, <em>return_kinds=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L105-L120"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.get_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current entire keyboard / button box buffer.</p>
 </dd></dl>
 
@@ -272,7 +271,7 @@ the configuration file.</p>
 <dl class="attribute">
 <dt id="expyfun.TDTController.interface">
 <code class="descname">interface</code><a class="headerlink" href="#expyfun.TDTController.interface" title="Permalink to this definition">¶</a></dt>
-<dd><p>String representation of TDT interface (&#8216;USB&#8217; or &#8216;GB&#8217;).</p>
+<dd><p>String representation of TDT interface (‘USB’ or ‘GB’).</p>
 </dd></dl>
 
 <dl class="method">
@@ -292,7 +291,7 @@ the configuration file.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : np.array</p>
 <blockquote class="last">
 <div><p>Audio data as floats scaled to (-1,+1), formatted as an Nx2 numpy
-array with dtype &#8216;float32&#8217;.</p>
+array with dtype ‘float32’.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -303,7 +302,7 @@ array with dtype &#8216;float32&#8217;.</p>
 <dl class="attribute">
 <dt id="expyfun.TDTController.model">
 <code class="descname">model</code><a class="headerlink" href="#expyfun.TDTController.model" title="Permalink to this definition">¶</a></dt>
-<dd><p>String representation of TDT model name (&#8216;RM1&#8217;, &#8216;RP2&#8217;, etc).</p>
+<dd><p>String representation of TDT model name (‘RM1’, ‘RP2’, etc).</p>
 </dd></dl>
 
 <dl class="method">
@@ -397,7 +396,7 @@ with each entry an integer with fewer than 8 bits (max 255).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-09.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-15.<br/>
     </p>
   </div>
 </footer>
