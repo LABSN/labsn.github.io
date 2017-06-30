@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>expyfun.wait_secs &#8212; expyfun 2.0.0.dev0 documentation</title>
+    <title>expyfun.io.reconstruct_tracker &#8212; expyfun 2.0.0.dev0 documentation</title>
     
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -33,8 +33,8 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="expyfun.stimuli.TrackerBinom" href="expyfun.stimuli.TrackerBinom.html" />
-    <link rel="prev" title="expyfun.get_keyboard_input" href="expyfun.get_keyboard_input.html" />
+    <link rel="next" title="expyfun.io.reconstruct_dealer" href="expyfun.io.reconstruct_dealer.html" />
+    <link rel="prev" title="expyfun.io.write_wav" href="expyfun.io.write_wav.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 
 <meta charset='utf-8'>
@@ -112,28 +112,33 @@
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="expyfun-wait-secs">
-<h1>expyfun.wait_secs<a class="headerlink" href="#expyfun-wait-secs" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="expyfun-io-reconstruct-tracker">
+<h1>expyfun.io.reconstruct_tracker<a class="headerlink" href="#expyfun-io-reconstruct-tracker" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
-<dt id="expyfun.wait_secs">
-<code class="descclassname">expyfun.</code><code class="descname">wait_secs</code><span class="sig-paren">(</span><em>secs</em>, <em>ec=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_utils.py#L711-L733"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.wait_secs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Wait a specified number of seconds.</p>
+<dt id="expyfun.io.reconstruct_tracker">
+<code class="descclassname">expyfun.io.</code><code class="descname">reconstruct_tracker</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L111-L155"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.reconstruct_tracker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct TrackerUD and TrackerBinom objects from .tab files.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>secs</strong> : float</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fname</strong> : str</p>
 <blockquote>
-<div><p>Number of seconds to wait.</p>
+<div><p>Input filename.</p>
 </div></blockquote>
-<p class="last"><strong>ec</strong> : None | expyfun.ExperimentController instance</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>tr</strong> : list of TrackerUD or TrackerBinom</p>
+<blockquote class="last">
+<div><p>The tracker objects with all responses such that they are in their
+stopped state (as long as the trackers were allowed to stop during
+the generation of the file.) If only one tracker is found in the file,
+it will still be stored in a list and will be accessible as <code class="docutils literal"><span class="pre">tr[0]</span></code>.</p>
+</div></blockquote>
 </td>
 </tr>
 </tbody>
 </table>
-<p class="rubric">Notes</p>
-<p>This function uses a while loop. Although this slams the CPU, it will
-guarantee that events (keypresses, etc.) are processed.</p>
 </dd></dl>
 
 </div>

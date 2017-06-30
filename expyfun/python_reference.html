@@ -240,17 +240,26 @@ grouped by hardware control type.</p>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.read_hdf5.html#expyfun.io.read_hdf5" title="expyfun.io.read_hdf5"><code class="xref py py-obj docutils literal"><span class="pre">read_hdf5</span></code></a>(fname)</td>
 <td>Read python object from HDF5 format using h5io/h5py</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.read_tab.html#expyfun.io.read_tab" title="expyfun.io.read_tab"><code class="xref py py-obj docutils literal"><span class="pre">read_tab</span></code></a>(fname[,&nbsp;group_start,&nbsp;group_end])</td>
-<td>Read .tab file from expyfun output</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.read_tab_raw.html#expyfun.io.read_tab_raw" title="expyfun.io.read_tab_raw"><code class="xref py py-obj docutils literal"><span class="pre">read_tab_raw</span></code></a>(fname)</td>
+<td>Read .tab file from expyfun output without segmenting into trials.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.read_wav.html#expyfun.io.read_wav" title="expyfun.io.read_wav"><code class="xref py py-obj docutils literal"><span class="pre">read_wav</span></code></a>(fname[,&nbsp;verbose])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.read_tab.html#expyfun.io.read_tab" title="expyfun.io.read_tab"><code class="xref py py-obj docutils literal"><span class="pre">read_tab</span></code></a>(fname[,&nbsp;group_start,&nbsp;group_end])</td>
+<td>Read .tab file from expyfun output and segment into trials.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.read_wav.html#expyfun.io.read_wav" title="expyfun.io.read_wav"><code class="xref py py-obj docutils literal"><span class="pre">read_wav</span></code></a>(fname[,&nbsp;verbose])</td>
 <td>Read in a WAV file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5" title="expyfun.io.write_hdf5"><code class="xref py py-obj docutils literal"><span class="pre">write_hdf5</span></code></a>(fname,&nbsp;data[,&nbsp;overwrite,&nbsp;compression])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5" title="expyfun.io.write_hdf5"><code class="xref py py-obj docutils literal"><span class="pre">write_hdf5</span></code></a>(fname,&nbsp;data[,&nbsp;overwrite,&nbsp;compression])</td>
 <td>Write python object to HDF5 format using h5io/h5py</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.write_wav.html#expyfun.io.write_wav" title="expyfun.io.write_wav"><code class="xref py py-obj docutils literal"><span class="pre">write_wav</span></code></a>(fname,&nbsp;data,&nbsp;fs[,&nbsp;dtype,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.write_wav.html#expyfun.io.write_wav" title="expyfun.io.write_wav"><code class="xref py py-obj docutils literal"><span class="pre">write_wav</span></code></a>(fname,&nbsp;data,&nbsp;fs[,&nbsp;dtype,&nbsp;…])</td>
 <td>Write a WAV file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.reconstruct_tracker.html#expyfun.io.reconstruct_tracker" title="expyfun.io.reconstruct_tracker"><code class="xref py py-obj docutils literal"><span class="pre">reconstruct_tracker</span></code></a>(fname)</td>
+<td>Reconstruct TrackerUD and TrackerBinom objects from .tab files.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.reconstruct_dealer.html#expyfun.io.reconstruct_dealer" title="expyfun.io.reconstruct_dealer"><code class="xref py py-obj docutils literal"><span class="pre">reconstruct_dealer</span></code></a>(fname)</td>
+<td>Reconstruct TrackerDealer object from .tab files.</td>
 </tr>
 </tbody>
 </table>
@@ -390,7 +399,7 @@ grouped by hardware control type.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-19.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-06-30.<br/>
     </p>
   </div>
 </footer>
