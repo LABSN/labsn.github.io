@@ -23,89 +23,89 @@ This shows how to make and use an adaptive track using
 
  Out::
 
-    tracker_identify:                       {"tracker_id": 47942830367824, "tracker_type": "TrackerUD"}
-    tracker_47942830367824_init:            {"stop_trials": Infinity, "change_indices": [4], "up": 1, "step_size_up": [9.0, 3.0], "down": 1, "callback": null, "stop_reversals": 30, "x_max": Infinity, "x_min": -Infinity, "start_value": 60, "change_rule": "reversals", "step_size_down": [3.0, 1.0]}
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_respond:         False
-    tracker_47942830367824_respond:         True
-    tracker_47942830367824_stop:            {"reversals": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 0, 0, 0, 0, 0, 5, 0, 6, 0, 7, 0, 8, 0, 0, 9, 10, 0, 11, 12, 0, 0, 0, 0, 0, 0, 13, 14, 0, 0, 0, 0, 15, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 18, 0, 19, 20, 0, 0, 0, 0, 21, 22, 23, 24, 0, 25, 26, 0, 27, 28, 29, 30, 31], "x": [60.0, 57.0, 54.0, 51.0, 48.0, 45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 36.0, 33.0, 42.0, 41.0, 40.0, 39.0, 38.0, 37.0, 36.0, 39.0, 42.0, 41.0, 40.0, 43.0, 46.0, 45.0, 44.0, 43.0, 46.0, 45.0, 44.0, 47.0, 46.0, 45.0, 44.0, 43.0, 42.0, 41.0, 40.0, 43.0, 42.0, 41.0, 40.0, 39.0, 38.0, 41.0, 40.0, 39.0, 38.0, 37.0, 36.0, 35.0, 34.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 34.0, 33.0, 32.0, 35.0, 34.0, 37.0, 36.0], "responses": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0]}
+    tracker_identify:                       {"tracker_id": 47290084686672, "tracker_type": "TrackerUD"}
+    tracker_47290084686672_init:            {"stop_trials": Infinity, "change_indices": [4], "up": 1, "step_size_up": [9.0, 3.0], "down": 1, "callback": null, "stop_reversals": 30, "x_max": Infinity, "x_min": -Infinity, "start_value": 60, "change_rule": "reversals", "step_size_down": [3.0, 1.0]}
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_respond:         False
+    tracker_47290084686672_respond:         True
+    tracker_47290084686672_stop:            {"reversals": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 0, 0, 0, 0, 0, 5, 0, 6, 0, 7, 0, 8, 0, 0, 9, 10, 0, 11, 12, 0, 0, 0, 0, 0, 0, 13, 14, 0, 0, 0, 0, 15, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 17, 18, 0, 19, 20, 0, 0, 0, 0, 21, 22, 23, 24, 0, 25, 26, 0, 27, 28, 29, 30, 31], "x": [60.0, 57.0, 54.0, 51.0, 48.0, 45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 36.0, 33.0, 42.0, 41.0, 40.0, 39.0, 38.0, 37.0, 36.0, 39.0, 42.0, 41.0, 40.0, 43.0, 46.0, 45.0, 44.0, 43.0, 46.0, 45.0, 44.0, 47.0, 46.0, 45.0, 44.0, 43.0, 42.0, 41.0, 40.0, 43.0, 42.0, 41.0, 40.0, 39.0, 38.0, 41.0, 40.0, 39.0, 38.0, 37.0, 36.0, 35.0, 34.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 34.0, 33.0, 32.0, 35.0, 34.0, 37.0, 36.0], "responses": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0]}
 
 
 
@@ -152,7 +152,7 @@ This shows how to make and use an adaptive track using
     ax.set_title('Adaptive track of model human (true threshold is {})'
                  .format(true_thresh))
 
-**Total running time of the script:** ( 0 minutes  0.084 seconds)
+**Total running time of the script:** ( 0 minutes  0.085 seconds)
 
 
 
