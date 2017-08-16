@@ -183,13 +183,16 @@ grouped by hardware control type.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerBinom.html#expyfun.stimuli.TrackerBinom" title="expyfun.stimuli.TrackerBinom"><code class="xref py py-obj docutils literal"><span class="pre">TrackerBinom</span></code></a>(callback,&nbsp;alpha,&nbsp;chance,&nbsp;max_trials)</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.CRMPreload.html#expyfun.stimuli.CRMPreload" title="expyfun.stimuli.CRMPreload"><code class="xref py py-obj docutils literal"><span class="pre">CRMPreload</span></code></a>(fs[,&nbsp;ref_rms,&nbsp;ramp_dur,&nbsp;stereo,&nbsp;path])</td>
+<td>Store the CRM corpus in memory for fast access.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerBinom.html#expyfun.stimuli.TrackerBinom" title="expyfun.stimuli.TrackerBinom"><code class="xref py py-obj docutils literal"><span class="pre">TrackerBinom</span></code></a>(callback,&nbsp;alpha,&nbsp;chance,&nbsp;max_trials)</td>
 <td>Binomial hypothesis testing tracker</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><code class="xref py py-obj docutils literal"><span class="pre">TrackerDealer</span></code></a>(callback,&nbsp;trackers[,&nbsp;max_lag,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><code class="xref py py-obj docutils literal"><span class="pre">TrackerDealer</span></code></a>(callback,&nbsp;trackers[,&nbsp;max_lag,&nbsp;…])</td>
 <td>Class for selecting and pacing independent simultaneous trackers</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><code class="xref py py-obj docutils literal"><span class="pre">TrackerUD</span></code></a>(callback,&nbsp;up,&nbsp;down,&nbsp;step_size_up,&nbsp;…)</td>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><code class="xref py py-obj docutils literal"><span class="pre">TrackerUD</span></code></a>(callback,&nbsp;up,&nbsp;down,&nbsp;step_size_up,&nbsp;…)</td>
 <td>Up-down adaptive tracker</td>
 </tr>
 </tbody>
@@ -206,6 +209,18 @@ grouped by hardware control type.</p>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.compute_mls_impulse_response.html#expyfun.stimuli.compute_mls_impulse_response" title="expyfun.stimuli.compute_mls_impulse_response"><code class="xref py py-obj docutils literal"><span class="pre">compute_mls_impulse_response</span></code></a>(response,&nbsp;mls,&nbsp;…)</td>
 <td>Compute the impulse response from data obtained using MLS</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.crm_info.html#expyfun.stimuli.crm_info" title="expyfun.stimuli.crm_info"><code class="xref py py-obj docutils literal"><span class="pre">crm_info</span></code></a>()</td>
+<td>Get allowable options for CRM stimuli.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="expyfun.stimuli.crm_prepare_corpus"><code class="xref py py-obj docutils literal"><span class="pre">crm_prepare_corpus</span></code></a>(fs[,&nbsp;path_out,&nbsp;…])</td>
+<td>Prepare the CRM corpus for a given sampling rate and convert to wav</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.crm_response_menu.html#expyfun.stimuli.crm_response_menu" title="expyfun.stimuli.crm_response_menu"><code class="xref py py-obj docutils literal"><span class="pre">crm_response_menu</span></code></a>(ec[,&nbsp;colors,&nbsp;numbers,&nbsp;…])</td>
+<td>Create a mouse-driven CRM response menu.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.crm_sentence.html#expyfun.stimuli.crm_sentence" title="expyfun.stimuli.crm_sentence"><code class="xref py py-obj docutils literal"><span class="pre">crm_sentence</span></code></a>(fs,&nbsp;sex,&nbsp;talker_num,&nbsp;callsign,&nbsp;…)</td>
+<td>Get a specific sentence from the hard drive.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound" title="expyfun.stimuli.play_sound"><code class="xref py py-obj docutils literal"><span class="pre">play_sound</span></code></a>(sound[,&nbsp;fs,&nbsp;norm,&nbsp;wait])</td>
 <td>Play a sound</td>
@@ -397,7 +412,7 @@ grouped by hardware control type.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-08-14.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-08-16.<br/>
     </p>
   </div>
 </footer>
