@@ -3,13 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
     <title>expyfun.EyelinkController &#8212; expyfun 2.0.0.dev0 documentation</title>
-    
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
@@ -23,7 +20,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
     <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
@@ -114,7 +111,7 @@
 <h1>expyfun.EyelinkController<a class="headerlink" href="#expyfun-eyelinkcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.EyelinkController">
-<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">EyelinkController</code><span class="sig-paren">(</span><em>ec</em>, <em>link=’default’</em>, <em>fs=1000</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L124-L633"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">EyelinkController</code><span class="sig-paren">(</span><em>ec</em>, <em>link='default'</em>, <em>fs=1000</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L124-L633"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Eyelink communication and control methods</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -199,7 +196,7 @@ If this was <cite>None</cite>, data will be saved to the current working dir.</p
 </table>
 <dl class="method">
 <dt id="expyfun.EyelinkController.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>link=’default’</em>, <em>fs=1000</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>link='default'</em>, <em>fs=1000</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -241,7 +238,7 @@ will be started.</p>
 
 <dl class="method">
 <dt id="expyfun.EyelinkController.custom_calibration">
-<code class="descname">custom_calibration</code><span class="sig-paren">(</span><em>ctype=’HV5’</em>, <em>horiz=0.6666666666666666</em>, <em>vert=0.6666666666666666</em>, <em>units=’norm’</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L531-L577"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.custom_calibration" title="Permalink to this definition">¶</a></dt>
+<code class="descname">custom_calibration</code><span class="sig-paren">(</span><em>ctype='HV5'</em>, <em>horiz=0.6666666666666666</em>, <em>vert=0.6666666666666666</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L531-L577"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.custom_calibration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set Eyetracker to use a custom calibration sequence</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -366,7 +363,7 @@ eye is lost.</p>
 
 <dl class="method">
 <dt id="expyfun.EyelinkController.wait_for_fix">
-<code class="descname">wait_for_fix</code><span class="sig-paren">(</span><em>fix_pos</em>, <em>fix_time=0.0</em>, <em>tol=100.0</em>, <em>max_wait=inf</em>, <em>check_interval=0.001</em>, <em>units=’norm’</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L478-L529"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.wait_for_fix" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_fix</code><span class="sig-paren">(</span><em>fix_pos</em>, <em>fix_time=0.0</em>, <em>tol=100.0</em>, <em>max_wait=inf</em>, <em>check_interval=0.001</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L478-L529"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.wait_for_fix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for gaze to settle within a defined region</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -428,7 +425,7 @@ eye is lost.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-08-16.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-08-30.<br/>
     </p>
   </div>
 </footer>
