@@ -111,7 +111,7 @@
 <h1>expyfun.visual.Diamond<a class="headerlink" href="#expyfun-visual-diamond" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.visual.Diamond">
-<em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Diamond</code><span class="sig-paren">(</span><em>ec</em>, <em>pos</em>, <em>units='norm'</em>, <em>fill_color='white'</em>, <em>line_color=None</em>, <em>line_width=1.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L510-L567"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Diamond" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Diamond</code><span class="sig-paren">(</span><em>ec</em>, <em>pos</em>, <em>units='norm'</em>, <em>fill_color='white'</em>, <em>line_color=None</em>, <em>line_width=1.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L511-L569"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Diamond" title="Permalink to this definition">¶</a></dt>
 <dd><p>A diamond</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -123,7 +123,8 @@
 </div></blockquote>
 <p><strong>pos</strong> : array-like</p>
 <blockquote>
-<div><p>4-element array-like with X, Y center and width, height.</p>
+<div><p>4-element array-like with X, Y center and width, height where x and y
+are coordinates of the center.</p>
 </div></blockquote>
 <p><strong>units</strong> : str</p>
 <blockquote>
@@ -178,7 +179,7 @@ shape e.g. size, position. See <code class="docutils literal"><span class="pre">
 </table>
 <dl class="method">
 <dt id="expyfun.visual.Diamond.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>pos</em>, <em>units='norm'</em>, <em>fill_color='white'</em>, <em>line_color=None</em>, <em>line_width=1.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L534-L539"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Diamond.__init__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>pos</em>, <em>units='norm'</em>, <em>fill_color='white'</em>, <em>line_color=None</em>, <em>line_width=1.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L536-L541"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Diamond.__init__" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -244,7 +245,7 @@ limitations, it must be <cite>0.0 &lt;= line_width &lt;= 10.0</cite>.</p>
 
 <dl class="method">
 <dt id="expyfun.visual.Diamond.set_pos">
-<code class="descname">set_pos</code><span class="sig-paren">(</span><em>pos</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L541-L567"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Diamond.set_pos" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_pos</code><span class="sig-paren">(</span><em>pos</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L543-L569"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Diamond.set_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the position of the rectangle</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -280,7 +281,7 @@ limitations, it must be <cite>0.0 &lt;= line_width &lt;= 10.0</cite>.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-08-30.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-09-01.<br/>
     </p>
   </div>
 </footer>
