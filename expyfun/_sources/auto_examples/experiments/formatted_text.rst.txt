@@ -20,14 +20,20 @@ This example demonstrates differences between the Text and AttrText classes.
 
  Out::
 
-    2017-09-01 00:07:01,536 - INFO    - Expyfun: Setting up Pyglet audio
-    2017-09-01 00:07:01,586 - INFO    - Expyfun: Setting up screen
-    2017-09-01 00:07:01,602 - EXP     - Expyfun: Set screen visibility True
-    2017-09-01 00:07:01,635 - INFO    - Expyfun: Initializing dummy triggering mode
-    2017-09-01 00:07:01,638 - INFO    - Expyfun: Initialization complete
-    2017-09-01 00:07:01,638 - EXP     - Expyfun: Subject: foo
-    2017-09-01 00:07:01,638 - EXP     - Expyfun: Session: 001
-    2017-09-01 00:07:01,947 - EXP     - Expyfun: Audio stopped and reset.
+    exp_name: textDemo
+    date: 2017-09-07 18_36_05.926587
+    file: /home/ubuntu/expyfun/examples/experiments/formatted_text.py
+    participant: foo
+    session: 001
+    2017-09-07 18:36:05,926 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2017-09-07 18:36:05,927 - INFO    - Expyfun: Setting up Pyglet audio
+    2017-09-07 18:36:05,975 - INFO    - Expyfun: Setting up screen
+    2017-09-07 18:36:05,990 - EXP     - Expyfun: Set screen visibility True
+    2017-09-07 18:36:06,023 - INFO    - Expyfun: Initializing dummy triggering mode
+    2017-09-07 18:36:06,026 - INFO    - Expyfun: Initialization complete
+    2017-09-07 18:36:06,027 - EXP     - Expyfun: Participant: foo
+    2017-09-07 18:36:06,027 - EXP     - Expyfun: Session: 001
+    2017-09-07 18:36:06,344 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -80,7 +86,7 @@ This example demonstrates differences between the Text and AttrText classes.
 
     analyze.plot_screen(screenshot)
 
-**Total running time of the script:** ( 0 minutes  0.539 seconds)
+**Total running time of the script:** ( 0 minutes  0.555 seconds)
 
 
 

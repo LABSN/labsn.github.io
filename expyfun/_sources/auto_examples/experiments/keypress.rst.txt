@@ -21,14 +21,20 @@ in the ExperimentController class.
 
  Out::
 
-    2017-09-01 00:07:08,127 - INFO    - Expyfun: Setting up Pyglet audio
-    2017-09-01 00:07:08,177 - INFO    - Expyfun: Setting up screen
-    2017-09-01 00:07:08,188 - EXP     - Expyfun: Set screen visibility True
-    2017-09-01 00:07:08,220 - INFO    - Expyfun: Initializing dummy triggering mode
-    2017-09-01 00:07:08,223 - INFO    - Expyfun: Initialization complete
-    2017-09-01 00:07:08,223 - EXP     - Expyfun: Subject: foo
-    2017-09-01 00:07:08,223 - EXP     - Expyfun: Session: 001
-    2017-09-01 00:07:11,933 - EXP     - Expyfun: Audio stopped and reset.
+    exp_name: KeypressDemo
+    date: 2017-09-07 18_36_11.277122
+    file: /home/ubuntu/expyfun/examples/experiments/keypress.py
+    participant: foo
+    session: 001
+    2017-09-07 18:36:11,277 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2017-09-07 18:36:11,277 - INFO    - Expyfun: Setting up Pyglet audio
+    2017-09-07 18:36:11,326 - INFO    - Expyfun: Setting up screen
+    2017-09-07 18:36:11,337 - EXP     - Expyfun: Set screen visibility True
+    2017-09-07 18:36:11,373 - INFO    - Expyfun: Initializing dummy triggering mode
+    2017-09-07 18:36:11,376 - INFO    - Expyfun: Initialization complete
+    2017-09-07 18:36:11,376 - EXP     - Expyfun: Participant: foo
+    2017-09-07 18:36:11,376 - EXP     - Expyfun: Session: 001
+    2017-09-07 18:36:15,099 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -199,7 +205,7 @@ in the ExperimentController class.
 
     ea.plot_screen(screenshot)
 
-**Total running time of the script:** ( 0 minutes  3.883 seconds)
+**Total running time of the script:** ( 0 minutes  3.903 seconds)
 
 
 

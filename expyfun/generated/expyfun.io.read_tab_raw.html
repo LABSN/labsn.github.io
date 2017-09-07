@@ -111,7 +111,7 @@
 <h1>expyfun.io.read_tab_raw<a class="headerlink" href="#expyfun-io-read-tab-raw" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.io.read_tab_raw">
-<code class="descclassname">expyfun.io.</code><code class="descname">read_tab_raw</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L11-L43"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.read_tab_raw" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">expyfun.io.</code><code class="descname">read_tab_raw</code><span class="sig-paren">(</span><em>fname</em>, <em>return_params=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L13-L53"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.read_tab_raw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read .tab file from expyfun output without segmenting into trials.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -121,12 +121,21 @@
 <blockquote>
 <div><p>Input filename.</p>
 </div></blockquote>
+<p><strong>return_params</strong> : bool</p>
+<blockquote>
+<div><p>If True, return the JSON-parsed comment header.</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>data</strong> : list of tuple</p>
-<blockquote class="last">
+<blockquote>
 <div><p>The data with each line from the tab file being a tuple in a list.
 Each tuple is of the form (<code class="docutils literal"><span class="pre">timestamp</span></code>, <code class="docutils literal"><span class="pre">key</span></code>, <code class="docutils literal"><span class="pre">value</span></code>).</p>
+</div></blockquote>
+<p><strong>params</strong> : dict</p>
+<blockquote class="last">
+<div><p>The JSON-parsed comment header. Only returned if
+<code class="docutils literal"><span class="pre">return_params=True</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -152,7 +161,7 @@ Each tuple is of the form (<code class="docutils literal"><span class="pre">time
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-09-01.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-09-07.<br/>
     </p>
   </div>
 </footer>

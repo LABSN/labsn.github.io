@@ -21,14 +21,20 @@ in the ExperimentController class.
 
  Out::
 
-    2017-09-01 00:07:06,077 - INFO    - Expyfun: Setting up Pyglet audio
-    2017-09-01 00:07:06,125 - INFO    - Expyfun: Setting up screen
-    2017-09-01 00:07:06,136 - EXP     - Expyfun: Set screen visibility True
-    2017-09-01 00:07:06,169 - INFO    - Expyfun: Initializing dummy triggering mode
-    2017-09-01 00:07:06,172 - INFO    - Expyfun: Initialization complete
-    2017-09-01 00:07:06,172 - EXP     - Expyfun: Subject: foo
-    2017-09-01 00:07:06,172 - EXP     - Expyfun: Session: 001
-    2017-09-01 00:07:07,964 - EXP     - Expyfun: Audio stopped and reset.
+    exp_name: MouseDemo
+    date: 2017-09-07 18_36_09.195736
+    file: /home/ubuntu/expyfun/examples/experiments/mouse.py
+    participant: foo
+    session: 001
+    2017-09-07 18:36:09,195 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2017-09-07 18:36:09,196 - INFO    - Expyfun: Setting up Pyglet audio
+    2017-09-07 18:36:09,243 - INFO    - Expyfun: Setting up screen
+    2017-09-07 18:36:09,254 - EXP     - Expyfun: Set screen visibility True
+    2017-09-07 18:36:09,288 - INFO    - Expyfun: Initializing dummy triggering mode
+    2017-09-07 18:36:09,292 - INFO    - Expyfun: Initialization complete
+    2017-09-07 18:36:09,292 - EXP     - Expyfun: Participant: foo
+    2017-09-07 18:36:09,292 - EXP     - Expyfun: Session: 001
+    2017-09-07 18:36:11,102 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -128,7 +134,7 @@ in the ExperimentController class.
 
     ea.plot_screen(screenshot)
 
-**Total running time of the script:** ( 0 minutes  1.962 seconds)
+**Total running time of the script:** ( 0 minutes  1.987 seconds)
 
 
 
