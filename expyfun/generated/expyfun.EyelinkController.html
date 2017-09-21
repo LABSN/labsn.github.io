@@ -111,7 +111,7 @@
 <h1>expyfun.EyelinkController<a class="headerlink" href="#expyfun-eyelinkcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.EyelinkController">
-<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">EyelinkController</code><span class="sig-paren">(</span><em>ec</em>, <em>link='default'</em>, <em>fs=1000</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L124-L644"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">EyelinkController</code><span class="sig-paren">(</span><em>ec</em>, <em>link='default'</em>, <em>fs=1000</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L124-L718"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Eyelink communication and control methods</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -177,19 +177,22 @@ If this was <cite>None</cite>, data will be saved to the current working dir.</p
 <tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.calibrate" title="expyfun.EyelinkController.calibrate"><code class="xref py py-obj docutils literal"><span class="pre">calibrate</span></code></a>([beep,&nbsp;prompt])</td>
 <td>Calibrate the eyetracker</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.custom_calibration" title="expyfun.EyelinkController.custom_calibration"><code class="xref py py-obj docutils literal"><span class="pre">custom_calibration</span></code></a>([ctype,&nbsp;horiz,&nbsp;vert,&nbsp;units])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.custom_calibration" title="expyfun.EyelinkController.custom_calibration"><code class="xref py py-obj docutils literal"><span class="pre">custom_calibration</span></code></a>([ctype,&nbsp;horiz,&nbsp;vert,&nbsp;…])</td>
 <td>Set Eyetracker to use a custom calibration sequence</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.get_eye_position" title="expyfun.EyelinkController.get_eye_position"><code class="xref py py-obj docutils literal"><span class="pre">get_eye_position</span></code></a>()</td>
 <td>The current eye position in pixels</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.stop" title="expyfun.EyelinkController.stop"><code class="xref py py-obj docutils literal"><span class="pre">stop</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.maintain_fix" title="expyfun.EyelinkController.maintain_fix"><code class="xref py py-obj docutils literal"><span class="pre">maintain_fix</span></code></a>(fix_pos,&nbsp;check_duration[,&nbsp;tol,&nbsp;…])</td>
+<td>Check to see if subject is fixating in a region.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.stop" title="expyfun.EyelinkController.stop"><code class="xref py py-obj docutils literal"><span class="pre">stop</span></code></a>()</td>
 <td>Stop Eyelink recording and close current file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.transfer_remote_file" title="expyfun.EyelinkController.transfer_remote_file"><code class="xref py py-obj docutils literal"><span class="pre">transfer_remote_file</span></code></a>(remote_name)</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.transfer_remote_file" title="expyfun.EyelinkController.transfer_remote_file"><code class="xref py py-obj docutils literal"><span class="pre">transfer_remote_file</span></code></a>(remote_name)</td>
 <td>Pull remote file (from Eyelink) to local machine</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.wait_for_fix" title="expyfun.EyelinkController.wait_for_fix"><code class="xref py py-obj docutils literal"><span class="pre">wait_for_fix</span></code></a>(fix_pos[,&nbsp;fix_time,&nbsp;tol,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.wait_for_fix" title="expyfun.EyelinkController.wait_for_fix"><code class="xref py py-obj docutils literal"><span class="pre">wait_for_fix</span></code></a>(fix_pos[,&nbsp;fix_time,&nbsp;tol,&nbsp;…])</td>
 <td>Wait for gaze to settle within a defined region</td>
 </tr>
 </tbody>
@@ -238,7 +241,7 @@ will be started.</p>
 
 <dl class="method">
 <dt id="expyfun.EyelinkController.custom_calibration">
-<code class="descname">custom_calibration</code><span class="sig-paren">(</span><em>ctype='HV5'</em>, <em>horiz=0.6666666666666666</em>, <em>vert=0.6666666666666666</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L531-L588"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.custom_calibration" title="Permalink to this definition">¶</a></dt>
+<code class="descname">custom_calibration</code><span class="sig-paren">(</span><em>ctype='HV5'</em>, <em>horiz=0.6666666666666666</em>, <em>vert=0.6666666666666666</em>, <em>coordinates=None</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L592-L662"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.custom_calibration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set Eyetracker to use a custom calibration sequence</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -247,7 +250,7 @@ will be started.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ctype</strong> : str</p>
 <blockquote>
 <div><p>Type of calibration. Currently ‘H3’, ‘HV5’, ‘HV9’, and ‘HV13’
-are supported.</p>
+are supported. If ‘custom’ coordinates can be directly input.</p>
 </div></blockquote>
 <p><strong>horiz</strong> : float</p>
 <blockquote>
@@ -256,6 +259,11 @@ are supported.</p>
 <p><strong>vert</strong> : float</p>
 <blockquote>
 <div><p>Vertical distance (up and down, each) to use.</p>
+</div></blockquote>
+<p><strong>coordinates</strong> : list of list of float or int</p>
+<blockquote>
+<div><p>List of coordinates to use for calibration. Each entry in the list
+must be a list with 2 elements corresponding to x and y position.</p>
 </div></blockquote>
 <p><strong>units</strong> : str</p>
 <blockquote class="last">
@@ -297,7 +305,7 @@ are supported.</p>
 
 <dl class="method">
 <dt id="expyfun.EyelinkController.get_eye_position">
-<code class="descname">get_eye_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L590-L620"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.get_eye_position" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_eye_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L664-L694"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.get_eye_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current eye position in pixels</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -316,6 +324,63 @@ eye is lost.</p>
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference internal" href="#expyfun.EyelinkController.wait_for_fix" title="expyfun.EyelinkController.wait_for_fix"><code class="xref py py-obj docutils literal"><span class="pre">EyelinkController.wait_for_fix</span></code></a></p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.EyelinkController.maintain_fix">
+<code class="descname">maintain_fix</code><span class="sig-paren">(</span><em>fix_pos</em>, <em>check_duration</em>, <em>tol=100.0</em>, <em>period=0.25</em>, <em>check_interval=0.001</em>, <em>units='norm'</em>, <em>stop_early=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L531-L590"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.maintain_fix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if subject is fixating in a region.</p>
+<p>This checks to make sure that the subjects gaze falls within a region
+at least once in any given period. In other words it checks to make
+sure that the gaze falls in the target region at least every
+<cite>period</cite> seconds.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fix_pos</strong> : tuple (length 2)</p>
+<blockquote>
+<div><p>The screen position (in specified units) required.</p>
+</div></blockquote>
+<p><strong>check_duration</strong> : float</p>
+<blockquote>
+<div><p>Total amount of time to check.</p>
+</div></blockquote>
+<p><strong>tol</strong> : float</p>
+<blockquote>
+<div><p>The tolerance (in pixels) to consider the target hit.</p>
+</div></blockquote>
+<p><strong>max_wait</strong> : float</p>
+<blockquote>
+<div><p>Maximum time to wait (seconds) before returning.</p>
+</div></blockquote>
+<p><strong>period</strong> : float</p>
+<blockquote>
+<div><p>Maximum time between gazes in region</p>
+</div></blockquote>
+<p><strong>check_interval</strong> : float</p>
+<blockquote>
+<div><p>Time to use between position checks (seconds).</p>
+</div></blockquote>
+<p><strong>units</strong> : str</p>
+<blockquote>
+<div><p>Units for <cite>fix_pos</cite>. See <code class="docutils literal"><span class="pre">check_units</span></code> for options.</p>
+</div></blockquote>
+<p><strong>stop_early</strong> : bool</p>
+<blockquote>
+<div><p>Whether to exit the function when fix_success is False or not.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fix_success</strong> : bool</p>
+<blockquote class="last">
+<div><p>Whether or not the subject successfully fixated throughout the
+<cite>check_duration</cite>.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="attribute">
@@ -372,7 +437,7 @@ eye is lost.</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fix_pos</strong> : tuple (length 2)</p>
 <blockquote>
-<div><p>The screen position (in pixels) required.</p>
+<div><p>The screen position (in specified units) required.</p>
 </div></blockquote>
 <p><strong>fix_time</strong> : float</p>
 <blockquote>
@@ -426,7 +491,7 @@ eye is lost.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-09-13.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-09-21.<br/>
     </p>
   </div>
 </footer>
