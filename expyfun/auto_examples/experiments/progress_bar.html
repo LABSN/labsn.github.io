@@ -114,7 +114,7 @@
 <img alt="../../_images/sphx_glr_progress_bar_001.png" class="align-center" src="../../_images/sphx_glr_progress_bar_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">exp_name</span><span class="p">:</span> <span class="n">name</span>
-<span class="n">date</span><span class="p">:</span> <span class="mi">2017</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">21</span> <span class="mi">15</span><span class="n">_49_00</span><span class="o">.</span><span class="mi">468042</span>
+<span class="n">date</span><span class="p">:</span> <span class="mi">2017</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">27</span> <span class="mi">19</span><span class="n">_00_42</span><span class="o">.</span><span class="mi">847762</span>
 <span class="n">file</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span><span class="n">expyfun</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">experiments</span><span class="o">/</span><span class="n">progress_bar</span><span class="o">.</span><span class="n">py</span>
 <span class="n">participant</span><span class="p">:</span> <span class="n">foo</span>
 <span class="n">session</span><span class="p">:</span> <span class="n">foo</span>
@@ -142,9 +142,9 @@
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Press the number shown on the screen. Start by pressing&#39;</span>
                      <span class="s1">&#39; 1.&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_trials</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <a href="https://docs.scipy.org/doc/numpy-dev/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">n_trials</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
         <span class="c1"># subject does some task</span>
-        <span class="n">number</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="n">number</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy-dev/reference/generated/numpy.random.randint.html#numpy.random.randint" title="View documentation for numpy.random.randint"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="n">number</span><span class="p">],</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
@@ -172,7 +172,7 @@
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  3.029 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  2.964 seconds)</p>
 <div class="sphx-glr-footer docutils container">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/progress_bar.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">progress_bar.py</span></code></a></div>
@@ -194,7 +194,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-09-21.<br/>
+        &copy; Copyright 2013-2017, expyfun developers. Last updated on 2017-11-27.<br/>
     </p>
   </div>
 </footer>
