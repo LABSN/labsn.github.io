@@ -111,8 +111,8 @@
 <h1>expyfun.analyze.dprime<a class="headerlink" href="#expyfun-analyze-dprime" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.analyze.dprime">
-<code class="descclassname">expyfun.analyze.</code><code class="descname">dprime</code><span class="sig-paren">(</span><em>hmfc</em>, <em>zero_correction=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L317-L347"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.dprime" title="Permalink to this definition">¶</a></dt>
-<dd><p>Estimates d-prime, with optional correction factor to avoid infinites.</p>
+<code class="descclassname">expyfun.analyze.</code><code class="descname">dprime</code><span class="sig-paren">(</span><em>hmfc</em>, <em>zero_correction=True</em>, <em>return_bias=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L318-L363"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.dprime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimate d′ and bias.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -127,17 +127,34 @@ array-like data with last dimension having size 4.</p>
 <div><p>Whether to add a correction factor of 0.5 to each category to prevent
 division-by-zero leading to infinite d-prime values.</p>
 </div></blockquote>
+<p><strong>return_bias</strong> : bool</p>
+<blockquote>
+<div><p>If True, also return the bias.</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>dp</strong> : array-like</p>
-<blockquote class="last">
+<blockquote>
 <div><p>Array of dprimes with shape <code class="docutils literal"><span class="pre">hmfc.shape[:-1]</span></code>.</p>
+</div></blockquote>
+<p><strong>bias</strong> : array-like</p>
+<blockquote class="last">
+<div><p>Array of bias values with shape <code class="docutils literal"><span class="pre">hmfc.shape[:-1]</span></code>.
+Only returned if <code class="docutils literal"><span class="pre">return_bias=True</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
+<p>The traditional d′ is given by:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Z</span><span class="p">(</span><span class="n">hit_rate</span><span class="p">)</span> <span class="o">-</span> <span class="n">Z</span><span class="p">(</span><span class="n">false_alarm_rate</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>And the bias:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="p">(</span><span class="n">Z</span><span class="p">(</span><span class="n">hit_rate</span><span class="p">)</span> <span class="o">+</span> <span class="n">Z</span><span class="p">(</span><span class="n">false_alarm_rate</span><span class="p">))</span> <span class="o">/</span> <span class="mf">2.</span>
+</pre></div>
+</div>
 <p>For two-alternative forced-choice tasks, it is recommended to enter correct
 trials as hits and incorrect trials as false alarms, and enter misses and
 correct rejections as 0. An alternative is to use <code class="docutils literal"><span class="pre">dprime_2afc()</span></code>, which
