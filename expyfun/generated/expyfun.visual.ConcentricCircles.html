@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>expyfun.visual.ConcentricCircles &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.0.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -38,8 +30,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -105,7 +96,29 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">expyfun.visual.ConcentricCircles</a></li>
+</ul>
+
+  <li>
+    <a href="expyfun.visual.Circle.html" title="Previous Chapter: expyfun.visual.Circle"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.visual.Circle</span>
+    </a>
+  </li>
+  <li>
+    <a href="expyfun.visual.Diamond.html" title="Next Chapter: expyfun.visual.Diamond"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.visua... &raquo;</span>
+    </a>
+  </li>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="expyfun-visual-concentriccircles">
 <h1>expyfun.visual.ConcentricCircles<a class="headerlink" href="#expyfun-visual-concentriccircles" title="Permalink to this headline">¶</a></h1>
@@ -134,7 +147,7 @@ covered by the second.</p>
 <p><strong>units</strong> : str</p>
 <blockquote>
 <div><p>Units to use. These will apply to all spatial aspects of the drawing.
-See <code class="docutils literal"><span class="pre">check_units</span></code> for options.</p>
+See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </div></blockquote>
 <p><strong>colors</strong> : list or tuple of matplotlib Colors</p>
 <blockquote>
@@ -157,22 +170,22 @@ See <code class="docutils literal"><span class="pre">check_units</span></code> f
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.draw" title="expyfun.visual.ConcentricCircles.draw"><code class="xref py py-obj docutils literal"><span class="pre">draw</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.draw" title="expyfun.visual.ConcentricCircles.draw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw</span></code></a>()</td>
 <td>Draw the fixation dot</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_color" title="expyfun.visual.ConcentricCircles.set_color"><code class="xref py py-obj docutils literal"><span class="pre">set_color</span></code></a>(color,&nbsp;idx)</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_color" title="expyfun.visual.ConcentricCircles.set_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_color</span></code></a>(color,&nbsp;idx)</td>
 <td>Set the color of one of the circles</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_colors" title="expyfun.visual.ConcentricCircles.set_colors"><code class="xref py py-obj docutils literal"><span class="pre">set_colors</span></code></a>(colors)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_colors" title="expyfun.visual.ConcentricCircles.set_colors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_colors</span></code></a>(colors)</td>
 <td>Set the color of each circle</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_pos" title="expyfun.visual.ConcentricCircles.set_pos"><code class="xref py py-obj docutils literal"><span class="pre">set_pos</span></code></a>(pos[,&nbsp;units])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_pos" title="expyfun.visual.ConcentricCircles.set_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_pos</span></code></a>(pos[,&nbsp;units])</td>
 <td>Set the position of the circles</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_radii" title="expyfun.visual.ConcentricCircles.set_radii"><code class="xref py py-obj docutils literal"><span class="pre">set_radii</span></code></a>(radii[,&nbsp;units])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_radii" title="expyfun.visual.ConcentricCircles.set_radii"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_radii</span></code></a>(radii[,&nbsp;units])</td>
 <td>Set the color of each circle</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_radius" title="expyfun.visual.ConcentricCircles.set_radius"><code class="xref py py-obj docutils literal"><span class="pre">set_radius</span></code></a>(radius,&nbsp;idx[,&nbsp;units])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.ConcentricCircles.set_radius" title="expyfun.visual.ConcentricCircles.set_radius"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_radius</span></code></a>(radius,&nbsp;idx[,&nbsp;units])</td>
 <td>Set the radius of one of the circles</td>
 </tr>
 </tbody>
@@ -180,7 +193,8 @@ See <code class="docutils literal"><span class="pre">check_units</span></code> f
 <dl class="method">
 <dt id="expyfun.visual.ConcentricCircles.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>radii=(0.2</em>, <em>0.05)</em>, <em>pos=(0</em>, <em>0)</em>, <em>units='norm'</em>, <em>colors=('w'</em>, <em>'k')</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L706-L717"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.ConcentricCircles.draw">
@@ -206,7 +220,7 @@ See <code class="docutils literal"><span class="pre">check_units</span></code> f
 </div></blockquote>
 <p><strong>units</strong> : str</p>
 <blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal"><span class="pre">check_units</span></code> for options.</p>
+<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -247,7 +261,7 @@ colors as the number of circles.</p>
 </div></blockquote>
 <p><strong>units</strong> : str</p>
 <blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal"><span class="pre">check_units</span></code> for options.</p>
+<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -270,7 +284,7 @@ number of radii as the number of circles.</p>
 </div></blockquote>
 <p><strong>units</strong> : str</p>
 <blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal"><span class="pre">check_units</span></code> for options.</p>
+<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -296,7 +310,7 @@ number of radii as the number of circles.</p>
 </div></blockquote>
 <p><strong>units</strong> : str</p>
 <blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal"><span class="pre">check_units</span></code> for options.</p>
+<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -320,7 +334,7 @@ number of radii as the number of circles.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-01-31.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-16.<br/>
     </p>
   </div>
 </footer>

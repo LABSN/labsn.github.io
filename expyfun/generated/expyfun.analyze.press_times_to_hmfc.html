@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>expyfun.analyze.press_times_to_hmfc &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.0.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -38,8 +30,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -105,7 +96,29 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">expyfun.analyze.press_times_to_hmfc</a></li>
+</ul>
+
+  <li>
+    <a href="expyfun.analyze.plot_screen.html" title="Previous Chapter: expyfun.analyze.plot_screen"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.analy...</span>
+    </a>
+  </li>
+  <li>
+    <a href="expyfun.analyze.restore_values.html" title="Next Chapter: expyfun.analyze.restore_values"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analy... &raquo;</span>
+    </a>
+  </li>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="expyfun-analyze-press-times-to-hmfc">
 <h1>expyfun.analyze.press_times_to_hmfc<a class="headerlink" href="#expyfun-analyze-press-times-to-hmfc" title="Permalink to this headline">¶</a></h1>
@@ -136,7 +149,7 @@
 <p><strong>tmax</strong> : float</p>
 <blockquote>
 <div><p>Maximum time after a target/foil to consider a press, inclusive.
-The final bounds will be <span class="math">\((t_{min}, t_{max}]\)</span>.</p>
+The final bounds will be <span class="math notranslate">\((t_{min}, t_{max}]\)</span>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Do do not rely on floating point arithmetic to get
@@ -147,7 +160,7 @@ not be relied upon.</p>
 </div></blockquote>
 <p><strong>return_type</strong> : str | list of str</p>
 <blockquote>
-<div><p>A list containing one or more of <code class="docutils literal"><span class="pre">['counts',</span> <span class="pre">'rts']</span></code> to return
+<div><p>A list containing one or more of <code class="docutils literal notranslate"><span class="pre">['counts',</span> <span class="pre">'rts']</span></code> to return
 a tuple of outputs (see below for description).
 Can also be a single string, in which case only the single
 requested type is returned (not within a tuple).</p>
@@ -158,20 +171,20 @@ requested type is returned (not within a tuple).</p>
 <blockquote>
 <div><p>5-element tuple of hits, misses, false alarms, correct rejections,
 and other presses (not within the window for a target or a masker).
-Only returned if <code class="docutils literal"><span class="pre">'counts'</span></code> is in <code class="docutils literal"><span class="pre">return_type</span></code>.</p>
+Only returned if <code class="docutils literal notranslate"><span class="pre">'counts'</span></code> is in <code class="docutils literal notranslate"><span class="pre">return_type</span></code>.</p>
 </div></blockquote>
 <p><strong>rts</strong> : tuple</p>
 <blockquote class="last">
 <div><p>2-element tuple of reaction times for hits and false alarms.
-Only returned if <code class="docutils literal"><span class="pre">'rts'</span></code> is in <code class="docutils literal"><span class="pre">return_type</span></code>.</p>
+Only returned if <code class="docutils literal notranslate"><span class="pre">'rts'</span></code> is in <code class="docutils literal notranslate"><span class="pre">return_type</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>Multiple presses within a single “target window” (i.e., between <code class="docutils literal"><span class="pre">tmin</span></code>
-and <code class="docutils literal"><span class="pre">tmax</span></code> of a target) or “masker window” get treated as a single
+<p>Multiple presses within a single “target window” (i.e., between <code class="docutils literal notranslate"><span class="pre">tmin</span></code>
+and <code class="docutils literal notranslate"><span class="pre">tmax</span></code> of a target) or “masker window” get treated as a single
 press by this function. However, there is no such de-bouncing of responses
 to “other” times.</p>
 </dd></dl>
@@ -190,7 +203,7 @@ to “other” times.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-01-31.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-16.<br/>
     </p>
   </div>
 </footer>

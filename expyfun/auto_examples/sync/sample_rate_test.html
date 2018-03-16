@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Audio sample rate test &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '2.0.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
@@ -38,8 +30,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -105,11 +96,33 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Audio sample rate test</a></li>
+</ul>
+
+  <li>
+    <a href="../stimuli/advanced_video.html" title="Previous Chapter: Play sample video file"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Play sample v...</span>
+    </a>
+  </li>
+  <li>
+    <a href="sync_test.html" title="Next Chapter: A-V sync test"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">A-V sync test &raquo;</span>
+    </a>
+  </li>
+<form action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="audio-sample-rate-test">
 <span id="sphx-glr-auto-examples-sync-sample-rate-test-py"></span><h1>Audio sample rate test<a class="headerlink" href="#audio-sample-rate-test" title="Permalink to this headline">¶</a></h1>
-<p>This example tests the TDT sample rate, which we expect to be <code class="docutils literal"><span class="pre">24414.0625</span></code>.
+<p>This example tests the TDT sample rate, which we expect to be <code class="docutils literal notranslate"><span class="pre">24414.0625</span></code>.
 To test this:</p>
 <ol class="arabic">
 <li><p class="first">Connect the TDT audio output to the sound card input. This can be on
@@ -133,46 +146,46 @@ One peak should occur toward the beginning and the other toward the end.</p>
 </li>
 <li><p class="first">The sound that was played put 1e6 (1,000,000) samples between the two
 peaks. So you can get the effective sample rate as:</p>
-<div class="math">
+<div class="math notranslate">
 \[f_s = \frac{1000000}{t_{stop} - t_{start}}\]</div>
-<p>For example, Eric’s RM1 (2017/01/10) had a start time of <code class="docutils literal"><span class="pre">19.854330</span></code> sec
-and an end time of <code class="docutils literal"><span class="pre">60.813690</span></code> sec for a difference of of <code class="docutils literal"><span class="pre">40.95936</span></code>,
-yielding an effective sample rate of <code class="docutils literal"><span class="pre">24414.44</span></code> Hz.</p>
+<p>For example, Eric’s RM1 (2017/01/10) had a start time of <code class="docutils literal notranslate"><span class="pre">19.854330</span></code> sec
+and an end time of <code class="docutils literal notranslate"><span class="pre">60.813690</span></code> sec for a difference of of <code class="docutils literal notranslate"><span class="pre">40.95936</span></code>,
+yielding an effective sample rate of <code class="docutils literal notranslate"><span class="pre">24414.44</span></code> Hz.</p>
 </li>
 </ol>
 <p>If the audio output can also be connected simultaneously to other equipment,
 e.g., an EEG system, the output can be split (or left/right outputs used) to
 test multiple system synchronization at once.</p>
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-default"><div class="highlight"><pre><span></span><span class="n">exp_name</span><span class="p">:</span> <span class="n">FsTest</span>
-<span class="n">date</span><span class="p">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="n">_19_14</span><span class="o">.</span><span class="mi">181448</span>
+<div class="sphx-glr-script-out highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">exp_name</span><span class="p">:</span> <span class="n">FsTest</span>
+<span class="n">date</span><span class="p">:</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="n">_30_34</span><span class="o">.</span><span class="mi">698572</span>
 <span class="n">file</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">ubuntu</span><span class="o">/</span><span class="n">expyfun</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">sync</span><span class="o">/</span><span class="n">sample_rate_test</span><span class="o">.</span><span class="n">py</span>
 <span class="n">participant</span><span class="p">:</span> <span class="n">s</span>
 <span class="n">session</span><span class="p">:</span> <span class="mi">0</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">181</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Using</span> <span class="n">version</span> <span class="mf">2.0</span><span class="o">.</span><span class="mf">0.</span><span class="n">dev0</span> <span class="p">(</span><span class="n">requested</span> <span class="n">dev</span><span class="p">)</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">182</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">Pyglet</span> <span class="n">audio</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">223</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">screen</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">235</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Set</span> <span class="n">screen</span> <span class="n">visibility</span> <span class="kc">True</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">273</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initializing</span> <span class="n">dummy</span> <span class="n">triggering</span> <span class="n">mode</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">276</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initialization</span> <span class="n">complete</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">276</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Participant</span><span class="p">:</span> <span class="n">s</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">276</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Session</span><span class="p">:</span> <span class="mi">0</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">279</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Stamp</span> <span class="n">trial</span> <span class="n">ID</span> <span class="n">to</span> <span class="n">ec_id</span>  <span class="p">:</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">279</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Stamp</span> <span class="n">trial</span> <span class="n">ID</span> <span class="n">to</span> <span class="n">ttl_id</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">315</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Loading</span> <span class="mi">2000002</span> <span class="n">samples</span> <span class="n">to</span> <span class="n">buffer</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">698</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Using</span> <span class="n">version</span> <span class="mf">2.0</span><span class="o">.</span><span class="mf">0.</span><span class="n">dev0</span> <span class="p">(</span><span class="n">requested</span> <span class="n">dev</span><span class="p">)</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">699</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">Pyglet</span> <span class="n">audio</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">740</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Setting</span> <span class="n">up</span> <span class="n">screen</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">753</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Set</span> <span class="n">screen</span> <span class="n">visibility</span> <span class="kc">True</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">792</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initializing</span> <span class="n">dummy</span> <span class="n">triggering</span> <span class="n">mode</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">795</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Initialization</span> <span class="n">complete</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">795</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Participant</span><span class="p">:</span> <span class="n">s</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">795</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Session</span><span class="p">:</span> <span class="mi">0</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">798</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Stamp</span> <span class="n">trial</span> <span class="n">ID</span> <span class="n">to</span> <span class="n">ec_id</span>  <span class="p">:</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">798</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Stamp</span> <span class="n">trial</span> <span class="n">ID</span> <span class="n">to</span> <span class="n">ttl_id</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">835</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Loading</span> <span class="mi">2000002</span> <span class="n">samples</span> <span class="n">to</span> <span class="n">buffer</span>
 <span class="n">Starting</span> <span class="n">stimulus</span><span class="o">.</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">330</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Starting</span> <span class="n">stimuli</span><span class="p">:</span> <span class="n">flipping</span> <span class="n">screen</span> <span class="ow">and</span> <span class="n">playing</span> <span class="n">audio</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">850</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Starting</span> <span class="n">stimuli</span><span class="p">:</span> <span class="n">flipping</span> <span class="n">screen</span> <span class="ow">and</span> <span class="n">playing</span> <span class="n">audio</span>
 <span class="n">Stimulus</span> <span class="n">started</span><span class="o">.</span> <span class="n">Please</span> <span class="n">wait</span> <span class="mi">41</span> <span class="n">seconds</span><span class="o">.</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">362</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Audio</span> <span class="n">stopped</span> <span class="ow">and</span> <span class="n">reset</span><span class="o">.</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">859</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Audio</span> <span class="n">stopped</span> <span class="ow">and</span> <span class="n">reset</span><span class="o">.</span>
 <span class="n">Stimulus</span> <span class="n">done</span><span class="o">.</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">363</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Exiting</span>
-<span class="mi">2018</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">31</span> <span class="mi">19</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">364</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Audio</span> <span class="n">stopped</span> <span class="ow">and</span> <span class="n">reset</span><span class="o">.</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">859</span> <span class="o">-</span> <span class="n">INFO</span>    <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Exiting</span>
+<span class="mi">2018</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">16</span> <span class="mi">20</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">34</span><span class="p">,</span><span class="mi">860</span> <span class="o">-</span> <span class="n">EXP</span>     <span class="o">-</span> <span class="n">Expyfun</span><span class="p">:</span> <span class="n">Audio</span> <span class="n">stopped</span> <span class="ow">and</span> <span class="n">reset</span><span class="o">.</span>
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larson.eric.d@gmail.com&gt;</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larson.eric.d@gmail.com&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
@@ -200,12 +213,12 @@ test multiple system synchronization at once.</p>
     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Stimulus done.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.186 seconds)</p>
+<p><strong>Total running time of the script:</strong> ( 0 minutes  0.165 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../../_downloads/sample_rate_test.py" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sample_rate_test.py</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/sample_rate_test.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sample_rate_test.py</span></code></a></div>
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" href="../../_downloads/sample_rate_test.ipynb" download=""><code class="xref download docutils literal"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sample_rate_test.ipynb</span></code></a></div>
+<a class="reference download internal" href="../../_downloads/sample_rate_test.ipynb" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sample_rate_test.ipynb</span></code></a></div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
 </div>
@@ -222,7 +235,7 @@ test multiple system synchronization at once.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-01-31.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-16.<br/>
     </p>
   </div>
 </footer>

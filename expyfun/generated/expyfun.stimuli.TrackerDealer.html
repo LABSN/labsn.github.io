@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>expyfun.stimuli.TrackerDealer &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.0.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -38,8 +30,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -105,7 +96,29 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">expyfun.stimuli.TrackerDealer</a></li>
+</ul>
+
+  <li>
+    <a href="expyfun.stimuli.TrackerBinom.html" title="Previous Chapter: expyfun.stimuli.TrackerBinom"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.stimu...</span>
+    </a>
+  </li>
+  <li>
+    <a href="expyfun.stimuli.TrackerUD.html" title="Next Chapter: expyfun.stimuli.TrackerUD"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.stimu... &raquo;</span>
+    </a>
+  </li>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="expyfun-stimuli-trackerdealer">
 <h1>expyfun.stimuli.TrackerDealer<a class="headerlink" href="#expyfun-stimuli-trackerdealer" title="Permalink to this headline">¶</a></h1>
@@ -120,18 +133,18 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>trackers</strong> : array-like</p>
 <blockquote>
 <div><p>The trackers to use. Must be instances of
-<a class="reference internal" href="expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><code class="xref py py-class docutils literal"><span class="pre">expyfun.stimuli.TrackerUD</span></code></a> or
-<a class="reference internal" href="expyfun.stimuli.TrackerBinom.html#expyfun.stimuli.TrackerBinom" title="expyfun.stimuli.TrackerBinom"><code class="xref py py-class docutils literal"><span class="pre">expyfun.stimuli.TrackerBinom</span></code></a>.</p>
+<a class="reference internal" href="expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerUD</span></code></a> or
+<a class="reference internal" href="expyfun.stimuli.TrackerBinom.html#expyfun.stimuli.TrackerBinom" title="expyfun.stimuli.TrackerBinom"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerBinom</span></code></a>.</p>
 </div></blockquote>
 <p><strong>max_lag</strong> : int</p>
 <blockquote>
 <div><p>The number of reversals or trials by which the leading tracker may lead
-the lagging one. The <code class="docutils literal"><span class="pre">pace_rule</span></code> dictates whether reversals or trials
+the lagging one. The <code class="docutils literal notranslate"><span class="pre">pace_rule</span></code> dictates whether reversals or trials
 are used.</p>
 </div></blockquote>
 <p><strong>pace_rule</strong> : str</p>
 <blockquote>
-<div><p>Must be <code class="docutils literal"><span class="pre">reversals</span></code> or <code class="docutils literal"><span class="pre">trials</span></code>.</p>
+<div><p>Must be <code class="docutils literal notranslate"><span class="pre">reversals</span></code> or <code class="docutils literal notranslate"><span class="pre">trials</span></code>.</p>
 </div></blockquote>
 <p><strong>rand</strong> : numpy.random.RandomState | None</p>
 <blockquote>
@@ -150,9 +163,9 @@ seeded based on the current time.</p>
 </table>
 <p class="rubric">Notes</p>
 <p>The trackers can be accessed like a numpy array through the trackers
-property, e.g. <code class="docutils literal"><span class="pre">dealer.trackers[0,</span> <span class="pre">1,</span> <span class="pre">:]</span></code>.</p>
+property, e.g. <code class="docutils literal notranslate"><span class="pre">dealer.trackers[0,</span> <span class="pre">1,</span> <span class="pre">:]</span></code>.</p>
 <p>If dealing from TrackerBinom objects (which is probably not a good idea),
-<code class="docutils literal"><span class="pre">stop_early</span></code> must be <code class="docutils literal"><span class="pre">False</span></code> or else they cannot be ensured to keep
+<code class="docutils literal notranslate"><span class="pre">stop_early</span></code> must be <code class="docutils literal notranslate"><span class="pre">False</span></code> or else they cannot be ensured to keep
 pace.</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="longtable docutils">
@@ -161,13 +174,13 @@ pace.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">shape</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">shape</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.stopped" title="expyfun.stimuli.TrackerDealer.stopped"><code class="xref py py-obj docutils literal"><span class="pre">stopped</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.stopped" title="expyfun.stimuli.TrackerDealer.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></td>
 <td>Are all the trackers stopped</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.trackers" title="expyfun.stimuli.TrackerDealer.trackers"><code class="xref py py-obj docutils literal"><span class="pre">trackers</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.trackers" title="expyfun.stimuli.TrackerDealer.trackers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackers</span></code></a></td>
 <td>All of the tracker objects in the container</td>
 </tr>
 </tbody>
@@ -179,13 +192,13 @@ pace.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.history" title="expyfun.stimuli.TrackerDealer.history"><code class="xref py py-obj docutils literal"><span class="pre">history</span></code></a>([include_skips])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.history" title="expyfun.stimuli.TrackerDealer.history"><code class="xref py py-obj docutils literal notranslate"><span class="pre">history</span></code></a>([include_skips])</td>
 <td>The history of the dealt trials and the responses</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.next" title="expyfun.stimuli.TrackerDealer.next"><code class="xref py py-obj docutils literal"><span class="pre">next</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.next" title="expyfun.stimuli.TrackerDealer.next"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next</span></code></a>()</td>
 <td>Selects the tracker from which the next trial should be run</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.respond" title="expyfun.stimuli.TrackerDealer.respond"><code class="xref py py-obj docutils literal"><span class="pre">respond</span></code></a>(correct)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.respond" title="expyfun.stimuli.TrackerDealer.respond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">respond</span></code></a>(correct)</td>
 <td>Update the current tracker based on the last response</td>
 </tr>
 </tbody>
@@ -193,7 +206,8 @@ pace.</p>
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>callback</em>, <em>trackers</em>, <em>max_lag=1</em>, <em>pace_rule='reversals'</em>, <em>rand=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L805-L849"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.history">
@@ -297,7 +311,7 @@ the ints in this list correspond the the raveled index.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-01-31.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-16.<br/>
     </p>
   </div>
 </footer>

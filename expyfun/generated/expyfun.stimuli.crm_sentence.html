@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>expyfun.stimuli.crm_sentence &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.0.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -38,8 +30,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -105,7 +96,29 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">expyfun.stimuli.crm_sentence</a></li>
+</ul>
+
+  <li>
+    <a href="expyfun.stimuli.crm_response_menu.html" title="Previous Chapter: expyfun.stimuli.crm_response_menu"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.stimu...</span>
+    </a>
+  </li>
+  <li>
+    <a href="expyfun.stimuli.play_sound.html" title="Next Chapter: expyfun.stimuli.play_sound"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.stimu... &raquo;</span>
+    </a>
+  </li>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="expyfun-stimuli-crm-sentence">
 <h1>expyfun.stimuli.crm_sentence<a class="headerlink" href="#expyfun-stimuli-crm-sentence" title="Permalink to this headline">¶</a></h1>
@@ -120,7 +133,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fs</strong> : float</p>
 <blockquote>
 <div><p>The sampling rate of the corpus to load. You must have run
-<a class="reference internal" href="expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="expyfun.stimuli.crm_prepare_corpus"><code class="xref py py-func docutils literal"><span class="pre">expyfun.stimuli.crm_prepare_corpus()</span></code></a> for that sampling
+<a class="reference internal" href="expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="expyfun.stimuli.crm_prepare_corpus"><code class="xref py py-func docutils literal notranslate"><span class="pre">expyfun.stimuli.crm_prepare_corpus()</span></code></a> for that sampling
 rate first.</p>
 </div></blockquote>
 <p><strong>sex</strong> : str | int</p>
@@ -143,7 +156,7 @@ different talker from female 2.</p>
 <p><strong>number</strong> : str | int</p>
 <blockquote>
 <div><p>The number of the sentence. Note that due to zero-indexing, a value of
-<code class="docutils literal"><span class="pre">'3'</span></code> will cause the talker to say “three”, while a value of <code class="docutils literal"><span class="pre">3</span></code>
+<code class="docutils literal notranslate"><span class="pre">'3'</span></code> will cause the talker to say “three”, while a value of <code class="docutils literal notranslate"><span class="pre">3</span></code>
 will cause the talker to say “four” (see Notes below for more
 information).</p>
 </div></blockquote>
@@ -178,14 +191,14 @@ where the raw CRM originals are stored.</p>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="expyfun.stimuli.crm_info.html#expyfun.stimuli.crm_info" title="expyfun.stimuli.crm_info"><code class="xref py py-obj docutils literal"><span class="pre">crm_info</span></code></a>, <a class="reference internal" href="expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="expyfun.stimuli.crm_prepare_corpus"><code class="xref py py-obj docutils literal"><span class="pre">crm_prepare_corpus</span></code></a></p>
+<p class="last"><a class="reference internal" href="expyfun.stimuli.crm_info.html#expyfun.stimuli.crm_info" title="expyfun.stimuli.crm_info"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crm_info</span></code></a>, <a class="reference internal" href="expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="expyfun.stimuli.crm_prepare_corpus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">crm_prepare_corpus</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
-<p>Use <a class="reference internal" href="expyfun.stimuli.crm_info.html#expyfun.stimuli.crm_info" title="expyfun.stimuli.crm_info"><code class="xref py py-func docutils literal"><span class="pre">expyfun.stimuli.crm_info()</span></code></a> to see allowable values.</p>
+<p>Use <a class="reference internal" href="expyfun.stimuli.crm_info.html#expyfun.stimuli.crm_info" title="expyfun.stimuli.crm_info"><code class="xref py py-func docutils literal notranslate"><span class="pre">expyfun.stimuli.crm_info()</span></code></a> to see allowable values.</p>
 <p>When getting a CRM sentence, you can use the full word (e.g., ‘male’,
 ‘green’), the first letter of that word (‘m’, ‘g’), or the index of
 that word in the list of options (0, 3). It should be noted that the
-index of <code class="docutils literal"><span class="pre">'1'</span></code> is 0, so care must be taken if using indices for the
+index of <code class="docutils literal notranslate"><span class="pre">'1'</span></code> is 0, so care must be taken if using indices for the
 number argument.</p>
 </dd></dl>
 
@@ -203,7 +216,7 @@ number argument.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-01-31.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-16.<br/>
     </p>
   </div>
 </footer>

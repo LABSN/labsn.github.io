@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>expyfun.TDTController &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.0.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -29,7 +21,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="expyfun.assert_version" href="expyfun.assert_version.html" />
-    <link rel="prev" title="expyfun.EyelinkController" href="expyfun.EyelinkController.html" />
+    <link rel="prev" title="expyfun.ParallelTrigger" href="expyfun.ParallelTrigger.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 
 <meta charset='utf-8'>
@@ -38,8 +30,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -105,7 +96,29 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">expyfun.TDTController</a></li>
+</ul>
+
+  <li>
+    <a href="expyfun.ParallelTrigger.html" title="Previous Chapter: expyfun.ParallelTrigger"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.Paral...</span>
+    </a>
+  </li>
+  <li>
+    <a href="expyfun.assert_version.html" title="Next Chapter: expyfun.assert_version"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.asser... &raquo;</span>
+    </a>
+  </li>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="expyfun-tdtcontroller">
 <h1>expyfun.TDTController<a class="headerlink" href="#expyfun-tdtcontroller" title="Permalink to this headline">¶</a></h1>
@@ -117,7 +130,7 @@
 <p class="first admonition-title">Warning</p>
 <p class="last">This class should not be instantiated manually,
 but rather should be created automatically by an
-appropriate call to <a class="reference internal" href="expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><code class="xref py py-class docutils literal"><span class="pre">ExperimentController</span></code></a>.</p>
+appropriate call to <a class="reference internal" href="expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExperimentController</span></code></a>.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -162,19 +175,19 @@ the configuration file.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.circuit" title="expyfun.TDTController.circuit"><code class="xref py py-obj docutils literal"><span class="pre">circuit</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.circuit" title="expyfun.TDTController.circuit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">circuit</span></code></a></td>
 <td>TDT circuit path.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.fs" title="expyfun.TDTController.fs"><code class="xref py py-obj docutils literal"><span class="pre">fs</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.fs" title="expyfun.TDTController.fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fs</span></code></a></td>
 <td>Playback frequency of the audio (samples / second).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.interface" title="expyfun.TDTController.interface"><code class="xref py py-obj docutils literal"><span class="pre">interface</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.interface" title="expyfun.TDTController.interface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interface</span></code></a></td>
 <td>String representation of TDT interface (‘USB’ or ‘GB’).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.model" title="expyfun.TDTController.model"><code class="xref py py-obj docutils literal"><span class="pre">model</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.model" title="expyfun.TDTController.model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></a></td>
 <td>String representation of TDT model name (‘RM1’, ‘RP2’, etc).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.playing" title="expyfun.TDTController.playing"><code class="xref py py-obj docutils literal"><span class="pre">playing</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.playing" title="expyfun.TDTController.playing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playing</span></code></a></td>
 <td>Is a sound currently playing</td>
 </tr>
 </tbody>
@@ -186,43 +199,43 @@ the configuration file.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.check_force_quit" title="expyfun.TDTController.check_force_quit"><code class="xref py py-obj docutils literal"><span class="pre">check_force_quit</span></code></a>([keys])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.check_force_quit" title="expyfun.TDTController.check_force_quit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_force_quit</span></code></a>([keys])</td>
 <td>Compare key buffer to list of force-quit keys and quit if matched.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.get_presses" title="expyfun.TDTController.get_presses"><code class="xref py py-obj docutils literal"><span class="pre">get_presses</span></code></a>(live_keys,&nbsp;timestamp,&nbsp;relative_to)</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.get_presses" title="expyfun.TDTController.get_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_presses</span></code></a>(live_keys,&nbsp;timestamp,&nbsp;relative_to)</td>
 <td>Get the current entire keyboard / button box buffer.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.halt" title="expyfun.TDTController.halt"><code class="xref py py-obj docutils literal"><span class="pre">halt</span></code></a>()</td>
-<td>Wrapper for tdt.util.RPcoX.Halt().</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.halt" title="expyfun.TDTController.halt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halt</span></code></a>()</td>
+<td>Wrapper for tdt.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.listen_presses" title="expyfun.TDTController.listen_presses"><code class="xref py py-obj docutils literal"><span class="pre">listen_presses</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.listen_presses" title="expyfun.TDTController.listen_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_presses</span></code></a>()</td>
 <td>Start listening for keypresses.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.load_buffer" title="expyfun.TDTController.load_buffer"><code class="xref py py-obj docutils literal"><span class="pre">load_buffer</span></code></a>(data)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.load_buffer" title="expyfun.TDTController.load_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_buffer</span></code></a>(data)</td>
 <td>Load audio samples into TDT buffer.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.play" title="expyfun.TDTController.play"><code class="xref py py-obj docutils literal"><span class="pre">play</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.play" title="expyfun.TDTController.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>()</td>
 <td>Send the soft trigger to start the ring buffer playback.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.set_noise_level" title="expyfun.TDTController.set_noise_level"><code class="xref py py-obj docutils literal"><span class="pre">set_noise_level</span></code></a>(new_level)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.set_noise_level" title="expyfun.TDTController.set_noise_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_noise_level</span></code></a>(new_level)</td>
 <td>Set the amplitude of stationary background noise.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.stamp_triggers" title="expyfun.TDTController.stamp_triggers"><code class="xref py py-obj docutils literal"><span class="pre">stamp_triggers</span></code></a>(triggers[,&nbsp;delay,&nbsp;wait_for_last])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.stamp_triggers" title="expyfun.TDTController.stamp_triggers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stamp_triggers</span></code></a>(triggers[,&nbsp;delay,&nbsp;wait_for_last])</td>
 <td>Stamp a list of triggers with a given inter-trigger delay</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.start_noise" title="expyfun.TDTController.start_noise"><code class="xref py py-obj docutils literal"><span class="pre">start_noise</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.start_noise" title="expyfun.TDTController.start_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_noise</span></code></a>()</td>
 <td>Send the soft trigger to start the noise generator.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.stop" title="expyfun.TDTController.stop"><code class="xref py py-obj docutils literal"><span class="pre">stop</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.stop" title="expyfun.TDTController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>()</td>
 <td>Send the soft trigger to stop and reset the ring buffer playback.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.stop_noise" title="expyfun.TDTController.stop_noise"><code class="xref py py-obj docutils literal"><span class="pre">stop_noise</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.stop_noise" title="expyfun.TDTController.stop_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_noise</span></code></a>()</td>
 <td>Send the soft trigger to stop the noise generator.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.wait_for_presses" title="expyfun.TDTController.wait_for_presses"><code class="xref py py-obj docutils literal"><span class="pre">wait_for_presses</span></code></a>(max_wait,&nbsp;min_wait,&nbsp;…)</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.wait_for_presses" title="expyfun.TDTController.wait_for_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_presses</span></code></a>(max_wait,&nbsp;min_wait,&nbsp;…)</td>
 <td>Return all button presses between min_wait and max_wait.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.wait_one_press" title="expyfun.TDTController.wait_one_press"><code class="xref py py-obj docutils literal"><span class="pre">wait_one_press</span></code></a>(max_wait,&nbsp;min_wait,&nbsp;…)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.wait_one_press" title="expyfun.TDTController.wait_one_press"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_one_press</span></code></a>(max_wait,&nbsp;min_wait,&nbsp;…)</td>
 <td>Return the first button pressed after min_wait.</td>
 </tr>
 </tbody>
@@ -230,7 +243,8 @@ the configuration file.</p>
 <dl class="method">
 <dt id="expyfun.TDTController.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>tdt_params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L96-L209"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="expyfun.TDTController.check_force_quit">
@@ -391,7 +405,7 @@ with each entry an integer with fewer than 8 bits (max 255).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-01-31.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-16.<br/>
     </p>
   </div>
 </footer>

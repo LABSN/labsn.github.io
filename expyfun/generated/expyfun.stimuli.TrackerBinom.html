@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>expyfun.stimuli.TrackerBinom &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.0.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -38,8 +30,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -105,7 +96,29 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">expyfun.stimuli.TrackerBinom</a></li>
+</ul>
+
+  <li>
+    <a href="expyfun.stimuli.CRMPreload.html" title="Previous Chapter: expyfun.stimuli.CRMPreload"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.stimu...</span>
+    </a>
+  </li>
+  <li>
+    <a href="expyfun.stimuli.TrackerDealer.html" title="Next Chapter: expyfun.stimuli.TrackerDealer"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.stimu... &raquo;</span>
+    </a>
+  </li>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="expyfun-stimuli-trackerbinom">
 <h1>expyfun.stimuli.TrackerBinom<a class="headerlink" href="#expyfun-stimuli-trackerbinom" title="Permalink to this headline">¶</a></h1>
@@ -128,16 +141,16 @@ been rejected.</p>
 <blockquote>
 <div><p>The function that will be used to print the data, usually to the
 experiment .tab file. It should follow the prototype of
-<code class="docutils literal"><span class="pre">ExperimentController.write_data_line</span></code>. If an instance of
-<code class="docutils literal"><span class="pre">ExperimentController</span></code> is given, then it will take that object’s
-<code class="docutils literal"><span class="pre">write_data_line</span></code> function. If <code class="docutils literal"><span class="pre">None</span></code> is given, then it will not
+<code class="docutils literal notranslate"><span class="pre">ExperimentController.write_data_line</span></code>. If an instance of
+<code class="docutils literal notranslate"><span class="pre">ExperimentController</span></code> is given, then it will take that object’s
+<code class="docutils literal notranslate"><span class="pre">write_data_line</span></code> function. If <code class="docutils literal notranslate"><span class="pre">None</span></code> is given, then it will not
 write the data anywhere.</p>
 </div></blockquote>
 <p><strong>alpha</strong> : float</p>
 <blockquote>
 <div><p>The p-value which is considered significant. Must be between 0 and 1.
-Note that if <code class="docutils literal"><span class="pre">stop_early</span></code> is <code class="docutils literal"><span class="pre">True</span></code> there is the potential for
-multiple comparisons issues and a more stringent <code class="docutils literal"><span class="pre">alpha</span></code> should be
+Note that if <code class="docutils literal notranslate"><span class="pre">stop_early</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> there is the potential for
+multiple comparisons issues and a more stringent <code class="docutils literal notranslate"><span class="pre">alpha</span></code> should be
 considered.</p>
 </div></blockquote>
 <p><strong>chance</strong> : float</p>
@@ -147,24 +160,24 @@ considered.</p>
 <p><strong>max_trials</strong> : int</p>
 <blockquote>
 <div><p>The maximum number of trials to run before stopping the track without
-reaching <code class="docutils literal"><span class="pre">alpha</span></code>.</p>
+reaching <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p>
 </div></blockquote>
 <p><strong>min_trials</strong> : int</p>
 <blockquote>
 <div><p>The minimum number of trials to run before allowing the track to stop
-on reaching <code class="docutils literal"><span class="pre">alpha</span></code>. Has no effect if <code class="docutils literal"><span class="pre">stop_early</span></code> is <code class="docutils literal"><span class="pre">False</span></code>.</p>
+on reaching <code class="docutils literal notranslate"><span class="pre">alpha</span></code>. Has no effect if <code class="docutils literal notranslate"><span class="pre">stop_early</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </div></blockquote>
 <p><strong>stop_early</strong> : boolean</p>
 <blockquote>
 <div><p>Whether to stop the adaptive track as soon as the track is not able to
-reach <code class="docutils literal"><span class="pre">alpha</span></code> even if the remaining responses are all correct and
-at least <code class="docutils literal"><span class="pre">min_trials</span></code> have been presented.</p>
+reach <code class="docutils literal notranslate"><span class="pre">alpha</span></code> even if the remaining responses are all correct and
+at least <code class="docutils literal notranslate"><span class="pre">min_trials</span></code> have been presented.</p>
 </div></blockquote>
 <p><strong>x_current</strong> : float</p>
 <blockquote>
 <div><p>The level that you want to run the test at. This has no bearing on how
 the track runs, and it will never change, but it is both useful to
-document the level and required to exist if using <code class="docutils literal"><span class="pre">TrackerDealer</span></code>.</p>
+document the level and required to exist if using <code class="docutils literal notranslate"><span class="pre">TrackerDealer</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -188,55 +201,55 @@ of following them.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">alpha</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">alpha</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">chance</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">chance</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">max_p_val</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_p_val</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">max_trials</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_trials</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">min_p_val</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">min_p_val</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_correct" title="expyfun.stimuli.TrackerBinom.n_correct"><code class="xref py py-obj docutils literal"><span class="pre">n_correct</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_correct" title="expyfun.stimuli.TrackerBinom.n_correct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_correct</span></code></a></td>
 <td>The number of correct trials so far</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">n_trials</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_trials</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_wrong" title="expyfun.stimuli.TrackerBinom.n_wrong"><code class="xref py py-obj docutils literal"><span class="pre">n_wrong</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_wrong" title="expyfun.stimuli.TrackerBinom.n_wrong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_wrong</span></code></a></td>
 <td>The number of incorrect trials so far</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">p_val</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">p_val</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.pc" title="expyfun.stimuli.TrackerBinom.pc"><code class="xref py py-obj docutils literal"><span class="pre">pc</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.pc" title="expyfun.stimuli.TrackerBinom.pc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pc</span></code></a></td>
 <td>Proportion correct (0-1, NaN before any responses made)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.responses" title="expyfun.stimuli.TrackerBinom.responses"><code class="xref py py-obj docutils literal"><span class="pre">responses</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.responses" title="expyfun.stimuli.TrackerBinom.responses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">responses</span></code></a></td>
 <td>The response history</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">stop_early</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_early</span></code></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">stop_rule</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_rule</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.stopped" title="expyfun.stimuli.TrackerBinom.stopped"><code class="xref py py-obj docutils literal"><span class="pre">stopped</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.stopped" title="expyfun.stimuli.TrackerBinom.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></td>
 <td>Is the tracker stopped</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.success" title="expyfun.stimuli.TrackerBinom.success"><code class="xref py py-obj docutils literal"><span class="pre">success</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.success" title="expyfun.stimuli.TrackerBinom.success"><code class="xref py py-obj docutils literal notranslate"><span class="pre">success</span></code></a></td>
 <td>Has the p-value reached significance</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x" title="expyfun.stimuli.TrackerBinom.x"><code class="xref py py-obj docutils literal"><span class="pre">x</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x" title="expyfun.stimuli.TrackerBinom.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></td>
 <td>Included only for compatibility with TrackerDealer</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x_current" title="expyfun.stimuli.TrackerBinom.x_current"><code class="xref py py-obj docutils literal"><span class="pre">x_current</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x_current" title="expyfun.stimuli.TrackerBinom.x_current"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x_current</span></code></a></td>
 <td>Included only for compatibility with TrackerDealer</td>
 </tr>
 </tbody>
@@ -248,7 +261,7 @@ of following them.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.respond" title="expyfun.stimuli.TrackerBinom.respond"><code class="xref py py-obj docutils literal"><span class="pre">respond</span></code></a>(correct)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.respond" title="expyfun.stimuli.TrackerBinom.respond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">respond</span></code></a>(correct)</td>
 <td>Update the tracker based on the last response.</td>
 </tr>
 </tbody>
@@ -256,7 +269,8 @@ of following them.</p>
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>callback</em>, <em>alpha</em>, <em>chance</em>, <em>max_trials</em>, <em>min_trials=0</em>, <em>stop_early=True</em>, <em>x_current=nan</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L604-L636"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>x.__init__(…) initializes x; see help(type(x)) for signature</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="expyfun.stimuli.TrackerBinom.n_correct">
@@ -340,7 +354,7 @@ of following them.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-01-31.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-16.<br/>
     </p>
   </div>
 </footer>

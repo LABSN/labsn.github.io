@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>expyfun.stimuli.crm_prepare_corpus &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.0.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -38,8 +30,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -105,7 +96,29 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">expyfun.stimuli.crm_prepare_corpus</a></li>
+</ul>
+
+  <li>
+    <a href="expyfun.stimuli.crm_info.html" title="Previous Chapter: expyfun.stimuli.crm_info"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.stimu...</span>
+    </a>
+  </li>
+  <li>
+    <a href="expyfun.stimuli.crm_response_menu.html" title="Next Chapter: expyfun.stimuli.crm_response_menu"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.stimu... &raquo;</span>
+    </a>
+  </li>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="expyfun-stimuli-crm-prepare-corpus">
 <h1>expyfun.stimuli.crm_prepare_corpus<a class="headerlink" href="#expyfun-stimuli-crm-prepare-corpus" title="Permalink to this headline">¶</a></h1>
@@ -124,23 +137,23 @@
 <p><strong>path_out</strong> : str</p>
 <blockquote>
 <div><p>The path to write the prepared CRM corpus. In most cases this will be
-the <code class="docutils literal"><span class="pre">expyfun</span></code> data directory (default), but it allows for other
+the <code class="docutils literal notranslate"><span class="pre">expyfun</span></code> data directory (default), but it allows for other
 options.</p>
 </div></blockquote>
 <p><strong>overwrite</strong> : bool</p>
 <blockquote>
 <div><p>Whether or not to overwrite the files that may already exist in
-<code class="docutils literal"><span class="pre">path_out</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">path_out</span></code>.</p>
 </div></blockquote>
 <p><strong>dtype</strong> : type</p>
 <blockquote>
-<div><p>The data type for saving the data. <code class="docutils literal"><span class="pre">np.float64</span></code> is the default for
-maintaining fidelity. <code class="docutils literal"><span class="pre">np.int16</span></code> is standard for wav files.</p>
+<div><p>The data type for saving the data. <code class="docutils literal notranslate"><span class="pre">np.float64</span></code> is the default for
+maintaining fidelity. <code class="docutils literal notranslate"><span class="pre">np.int16</span></code> is standard for wav files.</p>
 </div></blockquote>
-<p><strong>n_jobs</strong> : int | <code class="docutils literal"><span class="pre">'cuda'</span></code> | <code class="docutils literal"><span class="pre">None</span></code></p>
+<p><strong>n_jobs</strong> : int | <code class="docutils literal notranslate"><span class="pre">'cuda'</span></code> | <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 <blockquote>
-<div><p>Number of cores to use. The fastest option, if enabled, is <code class="docutils literal"><span class="pre">'cuda'</span></code>.
-If <code class="docutils literal"><span class="pre">None</span></code> it will use all available cores except for one.</p>
+<div><p>Number of cores to use. The fastest option, if enabled, is <code class="docutils literal notranslate"><span class="pre">'cuda'</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code> it will use all available cores except for one.</p>
 </div></blockquote>
 <p><strong>verbose</strong> : bool</p>
 <blockquote>
@@ -149,7 +162,7 @@ If <code class="docutils literal"><span class="pre">None</span></code> it will u
 <p><strong>talker_list</strong> : list of dict</p>
 <blockquote class="last">
 <div><p>A list of dicts to define which talkers should be prepared. Each dict
-should have keys <code class="docutils literal"><span class="pre">sex</span></code> and <code class="docutils literal"><span class="pre">talker_num</span></code>. Default is to prepare all
+should have keys <code class="docutils literal notranslate"><span class="pre">sex</span></code> and <code class="docutils literal notranslate"><span class="pre">talker_num</span></code>. Default is to prepare all
 eight talkers (four female, four male), and it is strongly recommended
 to that you do so to avoid headaches. This option is mainly for
 expedient nose tests.</p>
@@ -174,7 +187,7 @@ expedient nose tests.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-01-31.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-16.<br/>
     </p>
   </div>
 </footer>

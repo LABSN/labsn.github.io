@@ -2,21 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>expyfun.analyze.fit_sigmoid &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '2.0.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
+    <script type="text/javascript" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
@@ -38,8 +30,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 
-  </head>
-  <body>
+  </head><body>
 
   <div id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -105,7 +96,29 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">expyfun.analyze.fit_sigmoid</a></li>
+</ul>
+
+  <li>
+    <a href="expyfun.analyze.dprime_2afc.html" title="Previous Chapter: expyfun.analyze.dprime_2afc"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.analy...</span>
+    </a>
+  </li>
+  <li>
+    <a href="expyfun.analyze.format_pval.html" title="Next Chapter: expyfun.analyze.format_pval"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analy... &raquo;</span>
+    </a>
+  </li>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="col-md-9 content">
       
   <div class="section" id="expyfun-analyze-fit-sigmoid">
 <h1>expyfun.analyze.fit_sigmoid<a class="headerlink" href="#expyfun-analyze-fit-sigmoid" title="Permalink to this headline">¶</a></h1>
@@ -113,8 +126,8 @@
 <dt id="expyfun.analyze.fit_sigmoid">
 <code class="descclassname">expyfun.analyze.</code><code class="descname">fit_sigmoid</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>p0=None</em>, <em>fixed=()</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L186-L258"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.fit_sigmoid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit a sigmoid to summary data</p>
-<p>Given a set of average values <code class="docutils literal"><span class="pre">y</span></code> (e.g., response probabilities) as a
-function of a variable <code class="docutils literal"><span class="pre">x</span></code> (e.g., presented target level), this
+<p>Given a set of average values <code class="docutils literal notranslate"><span class="pre">y</span></code> (e.g., response probabilities) as a
+function of a variable <code class="docutils literal notranslate"><span class="pre">x</span></code> (e.g., presented target level), this
 will estimate the underlying sigmoidal response. Note that the fitting
 function can be sensitive to the shape of the data, so always inspect
 your results.</p>
@@ -166,7 +179,7 @@ estimated.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-01-31.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-16.<br/>
     </p>
   </div>
 </footer>
