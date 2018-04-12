@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.codeblocks.find_pupil_dynamic_range</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.visual.Text.html" title="Previous Chapter: expyfun.visual.Text"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.visual.Text</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.codeblocks.find_pupil_tone_impulse_response.html" title="Next Chapter: expyfun.codeblocks.find_pupil_tone_impulse_response"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.codeb... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-codeblocks-find-pupil-dynamic-range">
 <h1>expyfun.codeblocks.find_pupil_dynamic_range<a class="headerlink" href="#expyfun-codeblocks-find-pupil-dynamic-range" title="Permalink to this headline">¶</a></h1>
@@ -130,45 +108,40 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ec</strong> : instance of ExperimentController</p>
-<blockquote>
-<div><p>The experiment controller.</p>
-</div></blockquote>
-<p><strong>el</strong> : instance of EyelinkController</p>
-<blockquote>
-<div><p>The Eyelink controller.</p>
-</div></blockquote>
-<p><strong>fname</strong> : str | None</p>
-<blockquote>
-<div><p>If str, the filename will be used to process the data from the
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController</span></dt>
+<dd><p class="first last">The experiment controller.</p>
+</dd>
+<dt><strong>el</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of EyelinkController</span></dt>
+<dd><p class="first last">The Eyelink controller.</p>
+</dd>
+<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">If str, the filename will be used to process the data from the
 eyelink. If None, a recording will be started.</p>
-</div></blockquote>
-<p><strong>prompt</strong> : bool</p>
-<blockquote>
-<div><p>If True, a standard prompt message will be displayed.</p>
-</div></blockquote>
-<p><strong>verbose</strong> : bool, str, int, or None</p>
-<blockquote>
-<div><p>If not None, override default verbose level (see expyfun.verbose).</p>
-</div></blockquote>
+</dd>
+<dt><strong>prompt</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, a standard prompt message will be displayed.</p>
+</dd>
+<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, str, int, or None</span></dt>
+<dd><p class="first last">If not None, override default verbose level (see expyfun.verbose).</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>bgcolor</strong> : array</p>
-<blockquote>
-<div><p>The background color that maximizes dynamic range.</p>
-</div></blockquote>
-<p><strong>fcolor</strong> : array</p>
-<blockquote>
-<div><p>The corresponding fixation dot color.</p>
-</div></blockquote>
-<p><strong>levels</strong> : array</p>
-<blockquote>
-<div><p>The levels shown.</p>
-</div></blockquote>
-<p><strong>responses</strong> : array</p>
-<blockquote class="last">
-<div><p>The average responses to each level.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>bgcolor</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The background color that maximizes dynamic range.</p>
+</dd>
+<dt><strong>fcolor</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The corresponding fixation dot color.</p>
+</dd>
+<dt><strong>levels</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The levels shown.</p>
+</dd>
+<dt><strong>responses</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The average responses to each level.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -191,7 +164,7 @@ eyelink. If None, a recording will be started.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

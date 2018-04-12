@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.TDTController</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.ParallelTrigger.html" title="Previous Chapter: expyfun.ParallelTrigger"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.Paral...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.assert_version.html" title="Next Chapter: expyfun.assert_version"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.asser... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-tdtcontroller">
 <h1>expyfun.TDTController<a class="headerlink" href="#expyfun-tdtcontroller" title="Permalink to this headline">¶</a></h1>
@@ -136,9 +114,9 @@ appropriate call to <a class="reference internal" href="expyfun.ExperimentContro
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tdt_params</strong> : dict | None</p>
-<blockquote>
-<div><p>A dictionary containing keys with string values:</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>tdt_params</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict | None</span></dt>
+<dd><p class="first">A dictionary containing keys with string values:</p>
 <blockquote>
 <div><ul class="simple">
 <li>‘TYPE’: this should always be ‘tdt’.</li>
@@ -155,40 +133,37 @@ or ‘GB’).</li>
 (default: ‘0’).</li>
 </ul>
 </div></blockquote>
-<p>Note that the defaults are overridden on individual machines by
+<p class="last">Note that the defaults are overridden on individual machines by
 the configuration file.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>tdt_obj</strong> : instance of a TDTObject.</p>
-<blockquote class="last">
-<div><p>The object containing all relevant info about the TDT in use.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>tdt_obj</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of a TDTObject.</span></dt>
+<dd><p class="first last">The object containing all relevant info about the TDT in use.</p>
+</dd>
+</dl>
 </td>
 </tr>
-</tbody>
-</table>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.circuit" title="expyfun.TDTController.circuit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">circuit</span></code></a></td>
-<td>TDT circuit path.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.fs" title="expyfun.TDTController.fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fs</span></code></a></td>
-<td>Playback frequency of the audio (samples / second).</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.interface" title="expyfun.TDTController.interface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interface</span></code></a></td>
-<td>String representation of TDT interface (‘USB’ or ‘GB’).</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.model" title="expyfun.TDTController.model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></a></td>
-<td>String representation of TDT model name (‘RM1’, ‘RP2’, etc).</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.playing" title="expyfun.TDTController.playing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playing</span></code></a></td>
-<td>Is a sound currently playing</td>
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><a class="reference internal" href="#expyfun.TDTController.circuit" title="expyfun.TDTController.circuit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">circuit</span></code></a></dt>
+<dd><p class="first last">TDT circuit path.</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.TDTController.fs" title="expyfun.TDTController.fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fs</span></code></a></dt>
+<dd><p class="first last">Playback frequency of the audio (samples / second).</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.TDTController.interface" title="expyfun.TDTController.interface"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interface</span></code></a></dt>
+<dd><p class="first last">String representation of TDT interface (‘USB’ or ‘GB’).</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.TDTController.model" title="expyfun.TDTController.model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model</span></code></a></dt>
+<dd><p class="first last">String representation of TDT model name (‘RM1’, ‘RP2’, etc).</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.TDTController.playing" title="expyfun.TDTController.playing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playing</span></code></a></dt>
+<dd><p class="first last">Is a sound currently playing</p>
+</dd>
+</dl>
+</td>
 </tr>
 </tbody>
 </table>
@@ -206,7 +181,7 @@ the configuration file.</p>
 <td>Get the current entire keyboard / button box buffer.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#expyfun.TDTController.halt" title="expyfun.TDTController.halt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halt</span></code></a>()</td>
-<td>Wrapper for tdt.</td>
+<td>Wrapper for tdt.util.RPcoX.Halt().</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.TDTController.listen_presses" title="expyfun.TDTController.listen_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_presses</span></code></a>()</td>
 <td>Start listening for keypresses.</td>
@@ -297,11 +272,12 @@ the configuration file.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : np.array</p>
-<blockquote class="last">
-<div><p>Audio data as floats scaled to (-1,+1), formatted as an Nx2 numpy
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>data</strong> <span class="classifier-delimiter">:</span> <span class="classifier">np.array</span></dt>
+<dd><p class="first last">Audio data as floats scaled to (-1,+1), formatted as an Nx2 numpy
 array with dtype ‘float32’.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -340,19 +316,18 @@ array with dtype ‘float32’.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>triggers</strong> : list</p>
-<blockquote>
-<div><p>No input checking is done, so ensure triggers is a list,
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>triggers</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">No input checking is done, so ensure triggers is a list,
 with each entry an integer with fewer than 8 bits (max 255).</p>
-</div></blockquote>
-<p><strong>delay</strong> : float</p>
-<blockquote>
-<div><p>The inter-trigger delay.</p>
-</div></blockquote>
-<p><strong>wait_for_last</strong> : bool</p>
-<blockquote class="last">
-<div><p>If True, wait for last trigger to be stamped before returning.</p>
-</div></blockquote>
+</dd>
+<dt><strong>delay</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The inter-trigger delay.</p>
+</dd>
+<dt><strong>wait_for_last</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, wait for last trigger to be stamped before returning.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -405,7 +380,7 @@ with each entry an integer with fewer than 8 bits (max 255).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

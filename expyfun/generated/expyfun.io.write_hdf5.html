@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.io.write_hdf5</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.io.read_wav.html" title="Previous Chapter: expyfun.io.read_wav"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.io.read_wav</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.io.write_wav.html" title="Next Chapter: expyfun.io.write_wav"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.io.write_wav &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-io-write-hdf5">
 <h1>expyfun.io.write_hdf5<a class="headerlink" href="#expyfun-io-write-hdf5" title="Permalink to this headline">¶</a></h1>
@@ -130,26 +108,24 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fname</strong> : str</p>
-<blockquote>
-<div><p>Filename to use.</p>
-</div></blockquote>
-<p><strong>data</strong> : object</p>
-<blockquote>
-<div><p>Object to write. Can be of any of these types:</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Filename to use.</p>
+</dd>
+<dt><strong>data</strong> <span class="classifier-delimiter">:</span> <span class="classifier">object</span></dt>
+<dd><p class="first">Object to write. Can be of any of these types:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">ndarray</span><span class="p">,</span> <span class="nb">dict</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">,</span> <span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>Note that dict objects must only have <code class="docutils literal notranslate"><span class="pre">str</span></code> keys.</p>
-</div></blockquote>
-<p><strong>overwrite</strong> : bool</p>
-<blockquote>
-<div><p>If True, overwrite file (if it exists).</p>
-</div></blockquote>
-<p><strong>compression</strong> : int</p>
-<blockquote class="last">
-<div><p>Compression level to use (0-9) to compress data using gzip.</p>
-</div></blockquote>
+<p class="last">Note that dict objects must only have <code class="docutils literal notranslate"><span class="pre">str</span></code> keys.</p>
+</dd>
+<dt><strong>overwrite</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, overwrite file (if it exists).</p>
+</dd>
+<dt><strong>compression</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Compression level to use (0-9) to compress data using gzip.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -174,7 +150,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

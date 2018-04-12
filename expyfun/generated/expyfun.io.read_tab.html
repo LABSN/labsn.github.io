@@ -96,70 +96,46 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.io.read_tab</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.io.read_tab_raw.html" title="Previous Chapter: expyfun.io.read_tab_raw"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.io.re...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.io.read_wav.html" title="Next Chapter: expyfun.io.read_wav"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.io.read_wav &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-io-read-tab">
 <h1>expyfun.io.read_tab<a class="headerlink" href="#expyfun-io-read-tab" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.io.read_tab">
-<code class="descclassname">expyfun.io.</code><code class="descname">read_tab</code><span class="sig-paren">(</span><em>fname</em>, <em>group_start='trial_id'</em>, <em>group_end='trial_ok'</em>, <em>return_params=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L56-L125"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.read_tab" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">expyfun.io.</code><code class="descname">read_tab</code><span class="sig-paren">(</span><em>fname</em>, <em>group_start='trial_id'</em>, <em>group_end='trial_ok'</em>, <em>return_params=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L56-L126"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.read_tab" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read .tab file from expyfun output and segment into trials.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fname</strong> : str</p>
-<blockquote>
-<div><p>Input filename.</p>
-</div></blockquote>
-<p><strong>group_start</strong> : str</p>
-<blockquote>
-<div><p>Key to use to start a trial/row.</p>
-</div></blockquote>
-<p><strong>group_end</strong> : str | None</p>
-<blockquote>
-<div><p>Key to use to end a trial/row. If None, the next <code class="docutils literal notranslate"><span class="pre">group_start</span></code>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Input filename.</p>
+</dd>
+<dt><strong>group_start</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Key to use to start a trial/row.</p>
+</dd>
+<dt><strong>group_end</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">Key to use to end a trial/row. If None, the next <code class="docutils literal notranslate"><span class="pre">group_start</span></code>
 will end the current group.</p>
-</div></blockquote>
-<p><strong>return_params</strong> : bool</p>
-<blockquote>
-<div><p>If True, return the JSON-parsed comment header.</p>
-</div></blockquote>
+</dd>
+<dt><strong>return_params</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, return the JSON-parsed comment header.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>data</strong> : list of dict</p>
-<blockquote>
-<div><p>The data, with a dict for each trial. Each value in the dict
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>data</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of dict</span></dt>
+<dd><p class="first last">The data, with a dict for each trial. Each value in the dict
 is a list of tuples (event, time) for each occurrence of that
 key.</p>
-</div></blockquote>
-<p><strong>params</strong> : dict</p>
-<blockquote class="last">
-<div><p>The JSON-parsed comment header. Only returned if
+</dd>
+<dt><strong>params</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">The JSON-parsed comment header. Only returned if
 <code class="docutils literal notranslate"><span class="pre">return_params=True</span></code>.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -184,7 +160,7 @@ key.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

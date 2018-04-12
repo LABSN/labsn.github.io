@@ -96,35 +96,13 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.io.reconstruct_dealer</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.io.reconstruct_tracker.html" title="Previous Chapter: expyfun.io.reconstruct_tracker"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.io.re...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.visual.Circle.html" title="Next Chapter: expyfun.visual.Circle"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.visual.Circle &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-io-reconstruct-dealer">
 <h1>expyfun.io.reconstruct_dealer<a class="headerlink" href="#expyfun-io-reconstruct-dealer" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.io.reconstruct_dealer">
-<code class="descclassname">expyfun.io.</code><code class="descname">reconstruct_dealer</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L183-L248"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.reconstruct_dealer" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">expyfun.io.</code><code class="descname">reconstruct_dealer</code><span class="sig-paren">(</span><em>fname</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L184-L249"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.reconstruct_dealer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reconstruct TrackerDealer object from .tab files.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">reconstruct_tracker</span></code> function will be called to retrieve the
 trackers.</p>
@@ -132,18 +110,20 @@ trackers.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fname</strong> : str</p>
-<blockquote>
-<div><p>Input filename.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Input filename.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>dealer</strong> : list of TrackerDealer</p>
-<blockquote class="last">
-<div><p>The TrackerDealer objects with all responses such that they are in
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>dealer</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of TrackerDealer</span></dt>
+<dd><p class="first last">The TrackerDealer objects with all responses such that they are in
 their stopped state. If only one dealer is found in the file, it will
 still be stored in a list and will be assessible as <code class="docutils literal notranslate"><span class="pre">td[0]</span></code>.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -164,7 +144,7 @@ still be stored in a list and will be assessible as <code class="docutils litera
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

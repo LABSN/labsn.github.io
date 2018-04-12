@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.stimuli.window_edges</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.stimuli.vocode.html" title="Previous Chapter: expyfun.stimuli.vocode"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.stimu...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.io.read_hdf5.html" title="Next Chapter: expyfun.io.read_hdf5"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.io.read_hdf5 &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-stimuli-window-edges">
 <h1>expyfun.stimuli.window_edges<a class="headerlink" href="#expyfun-stimuli-window-edges" title="Permalink to this headline">¶</a></h1>
@@ -130,37 +108,34 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sig</strong> : array-like</p>
-<blockquote>
-<div><p>The array to window.</p>
-</div></blockquote>
-<p><strong>fs</strong> : float</p>
-<blockquote>
-<div><p>The sample rate.</p>
-</div></blockquote>
-<p><strong>dur</strong> : float</p>
-<blockquote>
-<div><p>The duration to window on each edge. The default is 0.01 (10 ms).</p>
-</div></blockquote>
-<p><strong>axis</strong> : int</p>
-<blockquote>
-<div><p>The axis to operate over.</p>
-</div></blockquote>
-<p><strong>window</strong> : str</p>
-<blockquote>
-<div><p>The window to use. For a list of valid options, see
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>sig</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">The array to window.</p>
+</dd>
+<dt><strong>fs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The sample rate.</p>
+</dd>
+<dt><strong>dur</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The duration to window on each edge. The default is 0.01 (10 ms).</p>
+</dd>
+<dt><strong>axis</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">The axis to operate over.</p>
+</dd>
+<dt><strong>window</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">The window to use. For a list of valid options, see
 <code class="docutils literal notranslate"><span class="pre">scipy.signal.get_window()</span></code>, but can also be ‘dpss’.</p>
-</div></blockquote>
-<p><strong>edges</strong> : str</p>
-<blockquote>
-<div><p>Can be <code class="docutils literal notranslate"><span class="pre">'leading'</span></code>, <code class="docutils literal notranslate"><span class="pre">'trailing'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'both'</span></code> (default).</p>
-</div></blockquote>
+</dd>
+<dt><strong>edges</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Can be <code class="docutils literal notranslate"><span class="pre">'leading'</span></code>, <code class="docutils literal notranslate"><span class="pre">'trailing'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'both'</span></code> (default).</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>windowed_sig</strong> : array-like</p>
-<blockquote class="last">
-<div><p>The modified array (float64).</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>windowed_sig</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">The modified array (float64).</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -181,7 +156,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

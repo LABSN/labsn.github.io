@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.visual.Text</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.visual.Rectangle.html" title="Previous Chapter: expyfun.visual.Rectangle"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.visua...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.codeblocks.find_pupil_dynamic_range.html" title="Next Chapter: expyfun.codeblocks.find_pupil_dynamic_range"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.codeb... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-visual-text">
 <h1>expyfun.visual.Text<a class="headerlink" href="#expyfun-visual-text" title="Permalink to this headline">¶</a></h1>
@@ -130,74 +108,64 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ec</strong> : instance of ExperimentController</p>
-<blockquote>
-<div><p>Parent EC.</p>
-</div></blockquote>
-<p><strong>text</strong> : str</p>
-<blockquote>
-<div><p>The text to display.</p>
-</div></blockquote>
-<p><strong>pos</strong> : array</p>
-<blockquote>
-<div><p>2-element array consisting of X- and Y-position coordinates.</p>
-</div></blockquote>
-<p><strong>color</strong> : matplotlib Color</p>
-<blockquote>
-<div><p>Color of the text.</p>
-</div></blockquote>
-<p><strong>font_name</strong> : str</p>
-<blockquote>
-<div><p>Font to use.</p>
-</div></blockquote>
-<p><strong>font_size</strong> : float</p>
-<blockquote>
-<div><p>Font size (points) to use.</p>
-</div></blockquote>
-<p><strong>height</strong> : float | None</p>
-<blockquote>
-<div><p>Height of the text region. None will automatically allocate the
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController</span></dt>
+<dd><p class="first last">Parent EC.</p>
+</dd>
+<dt><strong>text</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">The text to display.</p>
+</dd>
+<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">2-element array consisting of X- and Y-position coordinates.</p>
+</dd>
+<dt><strong>color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color</span></dt>
+<dd><p class="first last">Color of the text.</p>
+</dd>
+<dt><strong>font_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Font to use.</p>
+</dd>
+<dt><strong>font_size</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Font size (points) to use.</p>
+</dd>
+<dt><strong>height</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | None</span></dt>
+<dd><p class="first last">Height of the text region. None will automatically allocate the
 necessary size.</p>
-</div></blockquote>
-<p><strong>width</strong> : float | None | str</p>
-<blockquote>
-<div><p>Width (in pixels) of the text region. <cite>‘auto’</cite> will allocate 80% of
+</dd>
+<dt><strong>width</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | None | str</span></dt>
+<dd><p class="first last">Width (in pixels) of the text region. <cite>‘auto’</cite> will allocate 80% of
 the screen width, useful for instructions. None will automatically
 allocate sufficient space, but not that this disables text wrapping.</p>
-</div></blockquote>
-<p><strong>anchor_x</strong> : str</p>
-<blockquote>
-<div><p>Horizontal text anchor (e.g., <code class="docutils literal notranslate"><span class="pre">'center'</span></code>).</p>
-</div></blockquote>
-<p><strong>anchor_y</strong> : str</p>
-<blockquote>
-<div><p>Vertical text anchor (e.g., <code class="docutils literal notranslate"><span class="pre">'center'</span></code>).</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote>
-<div><p>Units to use. These will apply to all spatial aspects of the drawing.
+</dd>
+<dt><strong>anchor_x</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Horizontal text anchor (e.g., <code class="docutils literal notranslate"><span class="pre">'center'</span></code>).</p>
+</dd>
+<dt><strong>anchor_y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Vertical text anchor (e.g., <code class="docutils literal notranslate"><span class="pre">'center'</span></code>).</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. These will apply to all spatial aspects of the drawing.
 shape e.g. size, position. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
-<p><strong>wrap</strong> : bool</p>
-<blockquote>
-<div><p>Whether or not the text will wrap to fit in screen, appropriate for
+</dd>
+<dt><strong>wrap</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether or not the text will wrap to fit in screen, appropriate for
 multiline text. Inappropriate for text requiring precise positioning.</p>
-</div></blockquote>
-<p><strong>attr</strong> : bool</p>
-<blockquote>
-<div><p>Should the text be interpreted with pyglet’s <code class="docutils literal notranslate"><span class="pre">decode_attributed</span></code>
+</dd>
+<dt><strong>attr</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Should the text be interpreted with pyglet’s <code class="docutils literal notranslate"><span class="pre">decode_attributed</span></code>
 method? This allows inline formatting for text color, e.g.,
 <code class="docutils literal notranslate"><span class="pre">'This</span> <span class="pre">is</span> <span class="pre">{color</span> <span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">255)}red</span> <span class="pre">text'</span></code>. If <code class="docutils literal notranslate"><span class="pre">attr=True</span></code>, the
 values of <code class="docutils literal notranslate"><span class="pre">font_name</span></code>, <code class="docutils literal notranslate"><span class="pre">font_size</span></code>, and <code class="docutils literal notranslate"><span class="pre">color</span></code> are automatically
 prepended to <code class="docutils literal notranslate"><span class="pre">text</span></code> (though they will be overridden by any inline
 formatting within <code class="docutils literal notranslate"><span class="pre">text</span></code> itself).</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>text</strong> : instance of Text</p>
-<blockquote class="last">
-<div><p>The text object.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>text</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of Text</span></dt>
+<dd><p class="first last">The text object.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -237,10 +205,11 @@ formatting within <code class="docutils literal notranslate"><span class="pre">t
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>color</strong> : matplotlib Color | None</p>
-<blockquote class="last">
-<div><p>The color. Use None for no color.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color | None</span></dt>
+<dd><p class="first last">The color. Use None for no color.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -263,7 +232,7 @@ formatting within <code class="docutils literal notranslate"><span class="pre">t
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

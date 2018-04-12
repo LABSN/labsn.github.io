@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.format_pval</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.analyze.fit_sigmoid.html" title="Previous Chapter: expyfun.analyze.fit_sigmoid"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.analy...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.analyze.logit.html" title="Next Chapter: expyfun.analyze.logit"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analyze.logit &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-analyze-format-pval">
 <h1>expyfun.analyze.format_pval<a class="headerlink" href="#expyfun-analyze-format-pval" title="Permalink to this headline">¶</a></h1>
@@ -130,27 +108,27 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>pval</strong> : float | array-like</p>
-<blockquote>
-<div><p>The raw p-value(s).</p>
-</div></blockquote>
-<p><strong>latex</strong> : bool</p>
-<blockquote>
-<div><p>Whether to use LaTeX wrappers suitable for use with matplotlib.</p>
-</div></blockquote>
-<p><strong>scheme</strong> : str</p>
-<blockquote>
-<div><p>A keyword indicating the formatting scheme. Currently supports “stars”,
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>pval</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | array-like</span></dt>
+<dd><p class="first last">The raw p-value(s).</p>
+</dd>
+<dt><strong>latex</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether to use LaTeX wrappers suitable for use with matplotlib.</p>
+</dd>
+<dt><strong>scheme</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">A keyword indicating the formatting scheme. Currently supports “stars”,
 “ross”, and “default”; any other string will yield the same as
 “default”.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>pv</strong> : str | np.objectarray</p>
-<blockquote class="last">
-<div><p>A string or array of strings of formatted p-values. If a list output is
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>pv</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | np.objectarray</span></dt>
+<dd><p class="first last">A string or array of strings of formatted p-values. If a list output is
 preferred, users may call <code class="docutils literal notranslate"><span class="pre">.tolist()</span></code> on the output of the function.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -171,7 +149,7 @@ preferred, users may call <code class="docutils literal notranslate"><span class
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

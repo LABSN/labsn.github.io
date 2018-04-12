@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.dprime_2afc</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.analyze.dprime.html" title="Previous Chapter: expyfun.analyze.dprime"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.analy...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.analyze.fit_sigmoid.html" title="Next Chapter: expyfun.analyze.fit_sigmoid"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analy... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-analyze-dprime-2afc">
 <h1>expyfun.analyze.dprime_2afc<a class="headerlink" href="#expyfun-analyze-dprime-2afc" title="Permalink to this headline">¶</a></h1>
@@ -130,22 +108,23 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>hm</strong> : array-like</p>
-<blockquote>
-<div><p>Correct trials (hits) and incorrect trials (misses), in that order, as
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>hm</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">Correct trials (hits) and incorrect trials (misses), in that order, as
 array-like data with last dimension having size 4.</p>
-</div></blockquote>
-<p><strong>zero_correction</strong> : bool</p>
-<blockquote>
-<div><p>Whether to add a correction factor of 0.5 to each category to prevent
+</dd>
+<dt><strong>zero_correction</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether to add a correction factor of 0.5 to each category to prevent
 division-by-zero leading to infinite d-prime values.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>dp</strong> : array-like</p>
-<blockquote class="last">
-<div><p>Array of dprimes with shape <code class="docutils literal notranslate"><span class="pre">hmfc.shape[:-1]</span></code>.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>dp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">Array of dprimes with shape <code class="docutils literal notranslate"><span class="pre">hmfc.shape[:-1]</span></code>.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -166,7 +145,7 @@ division-by-zero leading to infinite d-prime values.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

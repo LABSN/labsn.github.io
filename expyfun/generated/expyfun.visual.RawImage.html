@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.visual.RawImage</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.visual.Line.html" title="Previous Chapter: expyfun.visual.Line"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.visual.Line</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.visual.Rectangle.html" title="Next Chapter: expyfun.visual.Rectangle"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.visua... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-visual-rawimage">
 <h1>expyfun.visual.RawImage<a class="headerlink" href="#expyfun-visual-rawimage" title="Permalink to this headline">¶</a></h1>
@@ -130,49 +108,41 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ec</strong> : instance of ExperimentController</p>
-<blockquote>
-<div><p>Parent EC.</p>
-</div></blockquote>
-<p><strong>image_buffer</strong> : array</p>
-<blockquote>
-<div><p>Array, shape (N, M[, 3/4]). Color values should range between 0 and 1.</p>
-</div></blockquote>
-<p><strong>pos</strong> : array-like</p>
-<blockquote>
-<div><p>2-element array-like with X, Y (center) arguments.</p>
-</div></blockquote>
-<p><strong>scale</strong> : float</p>
-<blockquote>
-<div><p>The scale factor. 1 is native size (pixel-to-pixel), 2 is twice as
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController</span></dt>
+<dd><p class="first last">Parent EC.</p>
+</dd>
+<dt><strong>image_buffer</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Array, shape (N, M[, 3/4]). Color values should range between 0 and 1.</p>
+</dd>
+<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">2-element array-like with X, Y (center) arguments.</p>
+</dd>
+<dt><strong>scale</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The scale factor. 1 is native size (pixel-to-pixel), 2 is twice as
 large, etc.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote>
-<div><p>Units to use for the position. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use for the position. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>img</strong> : instance of RawImage</p>
-<blockquote class="last">
-<div><p>The image object.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>img</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of RawImage</span></dt>
+<dd><p class="first last">The image object.</p>
+</dd>
+</dl>
 </td>
 </tr>
-</tbody>
-</table>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.RawImage.bounds" title="expyfun.visual.RawImage.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></td>
-<td>L, B, W, H (in pixels) of the image</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">scale</span></code></td>
-<td></td>
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><a class="reference internal" href="#expyfun.visual.RawImage.bounds" title="expyfun.visual.RawImage.bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">bounds</span></code></a></dt>
+<dd><p class="first last">L, B, W, H (in pixels) of the image</p>
+</dd>
+<dt><strong>scale</strong></dt>
+<dd></dd>
+</dl>
+</td>
 </tr>
 </tbody>
 </table>
@@ -223,12 +193,13 @@ large, etc.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>image_buffer</strong> : array</p>
-<blockquote class="last">
-<div><p>N x M x 3 (or 4) array. Can be type <code class="docutils literal notranslate"><span class="pre">np.float64</span></code> or <code class="docutils literal notranslate"><span class="pre">np.uint8</span></code>.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>image_buffer</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">N x M x 3 (or 4) array. Can be type <code class="docutils literal notranslate"><span class="pre">np.float64</span></code> or <code class="docutils literal notranslate"><span class="pre">np.uint8</span></code>.
 If <code class="docutils literal notranslate"><span class="pre">np.float64</span></code>, color values must range between 0 and 1.
 <code class="docutils literal notranslate"><span class="pre">np.uint8</span></code> is slightly more efficient.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -243,14 +214,14 @@ If <code class="docutils literal notranslate"><span class="pre">np.float64</span
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>pos</strong> : array-like</p>
-<blockquote>
-<div><p>2-element array-like with X, Y (center) arguments.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">2-element array-like with X, Y (center) arguments.</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -265,11 +236,12 @@ If <code class="docutils literal notranslate"><span class="pre">np.float64</span
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>scale</strong> : float</p>
-<blockquote class="last">
-<div><p>The scale factor. 1 is native size (pixel-to-pixel), 2 is twice as
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scale</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The scale factor. 1 is native size (pixel-to-pixel), 2 is twice as
 large, etc.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -292,7 +264,7 @@ large, etc.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

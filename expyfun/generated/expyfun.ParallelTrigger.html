@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.ParallelTrigger</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.EyelinkController.html" title="Previous Chapter: expyfun.EyelinkController"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.Eyeli...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.TDTController.html" title="Next Chapter: expyfun.TDTController"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.TDTController &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-paralleltrigger">
 <h1>expyfun.ParallelTrigger<a class="headerlink" href="#expyfun-paralleltrigger" title="Permalink to this headline">¶</a></h1>
@@ -138,25 +116,23 @@ This can effect e.g. <a class="reference internal" href="expyfun.EyelinkControll
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>mode</strong> : str</p>
-<blockquote>
-<div><p>‘parallel’ for real use. ‘dummy’, passes all calls.</p>
-</div></blockquote>
-<p><strong>address</strong> : str | int | None</p>
-<blockquote>
-<div><p>The address to use. On Linux this should be a string path like
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>mode</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">‘parallel’ for real use. ‘dummy’, passes all calls.</p>
+</dd>
+<dt><strong>address</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | int | None</span></dt>
+<dd><p class="first last">The address to use. On Linux this should be a string path like
 <code class="docutils literal notranslate"><span class="pre">'/dev/parport0'</span></code> (equivalent to None), on Windows it should be an
 integer address like <code class="docutils literal notranslate"><span class="pre">888</span></code> or <code class="docutils literal notranslate"><span class="pre">0x378</span></code> (equivalent to None).</p>
-</div></blockquote>
-<p><strong>high_duration</strong> : float</p>
-<blockquote>
-<div><p>Amount of time (seconds) to leave the trigger high whenever
+</dd>
+<dt><strong>high_duration</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Amount of time (seconds) to leave the trigger high whenever
 sending a trigger.</p>
-</div></blockquote>
-<p><strong>verbose</strong> : bool, str, int, or None</p>
-<blockquote class="last">
-<div><p>If not None, override default verbose level (see expyfun.verbose).</p>
-</div></blockquote>
+</dd>
+<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, str, int, or None</span></dt>
+<dd><p class="first last">If not None, override default verbose level (see expyfun.verbose).</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -211,19 +187,18 @@ like <a class="reference external" href="http://www.highrez.co.uk/downloads/inpo
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>triggers</strong> : list</p>
-<blockquote>
-<div><p>No input checking is done, so ensure triggers is a list,
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>triggers</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">No input checking is done, so ensure triggers is a list,
 with each entry an integer with fewer than 8 bits (max 255).</p>
-</div></blockquote>
-<p><strong>delay</strong> : float</p>
-<blockquote>
-<div><p>The inter-trigger delay.</p>
-</div></blockquote>
-<p><strong>wait_for_last</strong> : bool</p>
-<blockquote class="last">
-<div><p>If True, wait for last trigger to be stamped before returning.</p>
-</div></blockquote>
+</dd>
+<dt><strong>delay</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The inter-trigger delay.</p>
+</dd>
+<dt><strong>wait_for_last</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, wait for last trigger to be stamped before returning.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -246,7 +221,7 @@ with each entry an integer with fewer than 8 bits (max 255).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.stimuli.texture_ERB</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.stimuli.rms.html" title="Previous Chapter: expyfun.stimuli.rms"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.stimuli.rms</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.stimuli.vocode.html" title="Next Chapter: expyfun.stimuli.vocode"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.stimu... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-stimuli-texture-erb">
 <h1>expyfun.stimuli.texture_ERB<a class="headerlink" href="#expyfun-stimuli-texture-erb" title="Permalink to this headline">¶</a></h1>
@@ -130,56 +108,49 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>n_freqs</strong> : int</p>
-<blockquote>
-<div><p>Number of tones in mixture (default 20).</p>
-</div></blockquote>
-<p><strong>n_coh</strong> : int | None</p>
-<blockquote>
-<div><p>Number of tones to be temporally coherent. Default (None) is
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>n_freqs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of tones in mixture (default 20).</p>
+</dd>
+<dt><strong>n_coh</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | None</span></dt>
+<dd><p class="first last">Number of tones to be temporally coherent. Default (None) is
 <code class="docutils literal notranslate"><span class="pre">int(np.round(n_freqs</span> <span class="pre">*</span> <span class="pre">0.8))</span></code>.</p>
-</div></blockquote>
-<p><strong>rho</strong> : float</p>
-<blockquote>
-<div><p>Correlation between the envelopes of grouped tones (default is 1.0).</p>
-</div></blockquote>
-<p><strong>seq</strong> : list</p>
-<blockquote>
-<div><p>Sequence of incoherent (‘inc’), coherent noise envelope (‘nb’), and
+</dd>
+<dt><strong>rho</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Correlation between the envelopes of grouped tones (default is 1.0).</p>
+</dd>
+<dt><strong>seq</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">Sequence of incoherent (‘inc’), coherent noise envelope (‘nb’), and
 SAM (‘sam’) mixtures. Default is <code class="docutils literal notranslate"><span class="pre">('inc',</span> <span class="pre">'nb',</span> <span class="pre">'inc',</span> <span class="pre">'nb')</span></code>.</p>
-</div></blockquote>
-<p><strong>fs</strong> : float</p>
-<blockquote>
-<div><p>Sampling rate in Hz.</p>
-</div></blockquote>
-<p><strong>dur</strong> : float</p>
-<blockquote>
-<div><p>Duration (in seconds) of each token in seq (default is 1.0).</p>
-</div></blockquote>
-<p><strong>SAM_freq</strong> : float</p>
-<blockquote>
-<div><p>The SAM frequency to use.</p>
-</div></blockquote>
-<p><strong>freq_lims</strong> : tuple</p>
-<blockquote>
-<div><p>The lower and upper frequency limits (default is (200, 8000)).</p>
-</div></blockquote>
-<p><strong>random_state</strong> : None | int | np.random.RandomState</p>
-<blockquote>
-<div><p>The random generator state used for band selection and noise
+</dd>
+<dt><strong>fs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Sampling rate in Hz.</p>
+</dd>
+<dt><strong>dur</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration (in seconds) of each token in seq (default is 1.0).</p>
+</dd>
+<dt><strong>SAM_freq</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The SAM frequency to use.</p>
+</dd>
+<dt><strong>freq_lims</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple</span></dt>
+<dd><p class="first last">The lower and upper frequency limits (default is (200, 8000)).</p>
+</dd>
+<dt><strong>random_state</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | int | np.random.RandomState</span></dt>
+<dd><p class="first last">The random generator state used for band selection and noise
 envelope generation.</p>
-</div></blockquote>
-<p><strong>verbose</strong> : bool</p>
-<blockquote>
-<div><p>If True, print the resulting ERB spacing.</p>
-</div></blockquote>
+</dd>
+<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, print the resulting ERB spacing.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>x</strong> : ndarray, shape (n_samples,)</p>
-<blockquote class="last">
-<div><p>The stimulus, where <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">=</span> <span class="pre">len(seq)</span> <span class="pre">*</span> <span class="pre">(fs</span> <span class="pre">*</span> <span class="pre">dur)</span></code>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>x</strong> <span class="classifier-delimiter">:</span> <span class="classifier">ndarray, shape (n_samples,)</span></dt>
+<dd><p class="first last">The stimulus, where <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">=</span> <span class="pre">len(seq)</span> <span class="pre">*</span> <span class="pre">(fs</span> <span class="pre">*</span> <span class="pre">dur)</span></code>
 (approximately).</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -202,7 +173,7 @@ envelope generation.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

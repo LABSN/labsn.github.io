@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.fit_sigmoid</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.analyze.dprime_2afc.html" title="Previous Chapter: expyfun.analyze.dprime_2afc"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.analy...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.analyze.format_pval.html" title="Next Chapter: expyfun.analyze.format_pval"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analy... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-analyze-fit-sigmoid">
 <h1>expyfun.analyze.fit_sigmoid<a class="headerlink" href="#expyfun-analyze-fit-sigmoid" title="Permalink to this headline">¶</a></h1>
@@ -135,30 +113,29 @@ your results.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : array-like</p>
-<blockquote>
-<div><p>x-values along the sigmoid.</p>
-</div></blockquote>
-<p><strong>y</strong> : array-like</p>
-<blockquote>
-<div><p>y-values at each location in the sigmoid.</p>
-</div></blockquote>
-<p><strong>p0</strong> : array-like | None</p>
-<blockquote>
-<div><p>Initial guesses for the fit. Can be None to estimate all parameters,
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>x</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">x-values along the sigmoid.</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">y-values at each location in the sigmoid.</p>
+</dd>
+<dt><strong>p0</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like | None</span></dt>
+<dd><p class="first last">Initial guesses for the fit. Can be None to estimate all parameters,
 or members of the array can be None to have these automatically
 estimated.</p>
-</div></blockquote>
-<p><strong>fixed</strong> : list of str</p>
-<blockquote>
-<div><p>Which parameters should be fixed.</p>
-</div></blockquote>
+</dd>
+<dt><strong>fixed</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of str</span></dt>
+<dd><p class="first last">Which parameters should be fixed.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>lower, upper, midpt, slope</strong> : floats</p>
-<blockquote class="last">
-<div><p>See expyfun.analyze.sigmoid for descriptions.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>lower, upper, midpt, slope</strong> <span class="classifier-delimiter">:</span> <span class="classifier">floats</span></dt>
+<dd><p class="first last">See expyfun.analyze.sigmoid for descriptions.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -179,7 +156,7 @@ estimated.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

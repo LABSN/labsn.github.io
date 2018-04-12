@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.barplot</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.codeblocks.find_pupil_tone_impulse_response.html" title="Previous Chapter: expyfun.codeblocks.find_pupil_tone_impulse_response"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.codeb...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.analyze.box_off.html" title="Next Chapter: expyfun.analyze.box_off"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analy... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-analyze-barplot">
 <h1>expyfun.analyze.barplot<a class="headerlink" href="#expyfun-analyze-barplot" title="Permalink to this headline">¶</a></h1>
@@ -130,60 +108,52 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>h</strong> : array-like</p>
-<blockquote>
-<div><p>If <cite>h</cite> is 2-dimensional, heights will be calculated as means along
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>h</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">If <cite>h</cite> is 2-dimensional, heights will be calculated as means along
 the axis given by <cite>axis</cite>. If <cite>h</cite> is of lower dimension, it is
 treated as raw height values. If <cite>h</cite> is a <cite>pandas.DataFrame</cite> and
 <cite>bar_names</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, <cite>bar_names</cite> will be inferred from the
 DataFrame’s <cite>column</cite> labels (if <code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or <cite>index</cite> labels.</p>
-</div></blockquote>
-<p><strong>axis</strong> : int</p>
-<blockquote>
-<div><p>The axis along which to calculate mean values to determine bar heights.
+</dd>
+<dt><strong>axis</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">The axis along which to calculate mean values to determine bar heights.
 Ignored if <cite>h</cite> is 0- or 1-dimensional.</p>
-</div></blockquote>
-<p><strong>ylim</strong> : tuple | None</p>
-<blockquote>
-<div><p>y-axis limits passed to <cite>matplotlib.pyplot.subplot.set_ylim</cite>.</p>
-</div></blockquote>
-<p><strong>err_bars</strong> : str | array-like | None</p>
-<blockquote>
-<div><p>Type of error bars to be added to the barplot. Possible values are
+</dd>
+<dt><strong>ylim</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple | None</span></dt>
+<dd><p class="first last">y-axis limits passed to <cite>matplotlib.pyplot.subplot.set_ylim</cite>.</p>
+</dd>
+<dt><strong>err_bars</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | array-like | None</span></dt>
+<dd><p class="first last">Type of error bars to be added to the barplot. Possible values are
 <code class="docutils literal notranslate"><span class="pre">'sd'</span></code> for sample standard deviation, <code class="docutils literal notranslate"><span class="pre">'se'</span></code> for standard error of
 the mean, or <code class="docutils literal notranslate"><span class="pre">'ci'</span></code> for 95% confidence interval. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, no
 error bars will be plotted. Custom error bar heights are possible by
 passing an array-like object; in such cases <cite>err_bars</cite> must have the
 same dimensionality and shape as <cite>h</cite>.</p>
-</div></blockquote>
-<p><strong>lines</strong> : bool</p>
-<blockquote>
-<div><p>Whether to plot within-subject data as lines overlaid on the barplot.</p>
-</div></blockquote>
-<p><strong>groups</strong> : list | None</p>
-<blockquote>
-<div><p>List of lists containing the integers in <code class="docutils literal notranslate"><span class="pre">range(num_bars)</span></code>, with
+</dd>
+<dt><strong>lines</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether to plot within-subject data as lines overlaid on the barplot.</p>
+</dd>
+<dt><strong>groups</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">List of lists containing the integers in <code class="docutils literal notranslate"><span class="pre">range(num_bars)</span></code>, with
 sub-lists indicating the desired grouping. For example, if <cite>h</cite> has
 has shape (10, 4) and <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">-1</span></code> then “num_bars” is 4; if you want
 the first bar isolated and the remaining three grouped, then specify
 <code class="docutils literal notranslate"><span class="pre">groups=[[0],</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]]</span></code>.</p>
-</div></blockquote>
-<p><strong>eq_group_widths</strong> : bool</p>
-<blockquote>
-<div><p>Should all groups have the same width? If <code class="docutils literal notranslate"><span class="pre">False</span></code>, all bars will have
+</dd>
+<dt><strong>eq_group_widths</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Should all groups have the same width? If <code class="docutils literal notranslate"><span class="pre">False</span></code>, all bars will have
 the same width. Ignored if <cite>groups</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, since the bar/group
 distinction is meaningless in that case.</p>
-</div></blockquote>
-<p><strong>gap_size</strong> : float</p>
-<blockquote>
-<div><p>Width of the gap between groups (if <cite>eq_group_width</cite> is <code class="docutils literal notranslate"><span class="pre">True</span></code>) or
+</dd>
+<dt><strong>gap_size</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Width of the gap between groups (if <cite>eq_group_width</cite> is <code class="docutils literal notranslate"><span class="pre">True</span></code>) or
 between bars, expressed as a proportion [0,1) of group or bar width.
 Half the width of <cite>gap_size</cite> will be added between the outermost bars
 and the plot edges.</p>
-</div></blockquote>
-<p><strong>brackets</strong> : list of tuples | None</p>
-<blockquote>
-<div><p>Location of significance brackets. Scheme is similar to the
+</dd>
+<dt><strong>brackets</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of tuples | None</span></dt>
+<dd><p class="first last">Location of significance brackets. Scheme is similar to the
 specification of <cite>groups</cite>; a bracket between the first and second bar
 and another between the third and fourth bars would be specified as
 <code class="docutils literal notranslate"><span class="pre">brackets=[(0,</span> <span class="pre">1),</span> <span class="pre">(2,</span> <span class="pre">3)]</span></code>. Brackets between groups of bars instead
@@ -191,78 +161,69 @@ of individual bars are specified as lists within the tuple:
 <code class="docutils literal notranslate"><span class="pre">brackets=[([0,</span> <span class="pre">1],</span> <span class="pre">[2,</span> <span class="pre">3])]</span></code> draws a single bracket between group
 <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code> and group <code class="docutils literal notranslate"><span class="pre">[2,</span> <span class="pre">3]</span></code>. For best results, pairs of adjacent
 bars should come earlier in the list than non-adjacent pairs.</p>
-</div></blockquote>
-<p><strong>bracket_text</strong> : str | list | None</p>
-<blockquote>
-<div><p>Text to display above brackets.</p>
-</div></blockquote>
-<p><strong>bracket_inline</strong> : bool</p>
-<blockquote>
-<div><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, bracket text will be vertically centered along a broken
+</dd>
+<dt><strong>bracket_text</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | list | None</span></dt>
+<dd><p class="first last">Text to display above brackets.</p>
+</dd>
+<dt><strong>bracket_inline</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">True</span></code>, bracket text will be vertically centered along a broken
 bracket line. If <code class="docutils literal notranslate"><span class="pre">False</span></code>, text will be above the line.</p>
-</div></blockquote>
-<p><strong>bracket_group_lines</strong> : bool</p>
-<blockquote>
-<div><p>When drawing brackets between groups rather than single bars, should a
+</dd>
+<dt><strong>bracket_group_lines</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">When drawing brackets between groups rather than single bars, should a
 horizontal line be drawn at each foot of the bracket to indicate this?</p>
-</div></blockquote>
-<p><strong>bar_names</strong> : array-like | None</p>
-<blockquote>
-<div><p>Optional axis labels for each bar.</p>
-</div></blockquote>
-<p><strong>group_names</strong> : array-like | None</p>
-<blockquote>
-<div><p>Optional axis labels for each group.</p>
-</div></blockquote>
-<p><strong>bar_kwargs</strong> : dict</p>
-<blockquote>
-<div><p>Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.bar()</span></code> (ex: color, linewidth).</p>
-</div></blockquote>
-<p><strong>err_kwargs</strong> : dict</p>
-<blockquote>
-<div><p>Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.bar(error_kw)</span></code> (ex: ecolor,
+</dd>
+<dt><strong>bar_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like | None</span></dt>
+<dd><p class="first last">Optional axis labels for each bar.</p>
+</dd>
+<dt><strong>group_names</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like | None</span></dt>
+<dd><p class="first last">Optional axis labels for each group.</p>
+</dd>
+<dt><strong>bar_kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.bar()</span></code> (ex: color, linewidth).</p>
+</dd>
+<dt><strong>err_kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.bar(error_kw)</span></code> (ex: ecolor,
 capsize).</p>
-</div></blockquote>
-<p><strong>line_kwargs</strong> : dict</p>
-<blockquote>
-<div><p>Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot()</span></code> (e.g., color, marker,
+</dd>
+<dt><strong>line_kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot()</span></code> (e.g., color, marker,
 linestyle).</p>
-</div></blockquote>
-<p><strong>pval_kwargs</strong> : dict</p>
-<blockquote>
-<div><p>Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.annotate()</span></code> when drawing
+</dd>
+<dt><strong>pval_kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.annotate()</span></code> when drawing
 bracket labels.</p>
-</div></blockquote>
-<p><strong>bracket_kwargs</strong> : dict</p>
-<blockquote>
-<div><p>arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot()</span></code> (e.g., color, marker,
+</dd>
+<dt><strong>bracket_kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot()</span></code> (e.g., color, marker,
 linestyle).</p>
-</div></blockquote>
-<p><strong>figure_kwargs</strong> : dict</p>
-<blockquote>
-<div><p>arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.figure()</span></code> (e.g., figsize, dpi,
+</dd>
+<dt><strong>figure_kwargs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dict</span></dt>
+<dd><p class="first last">arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.figure()</span></code> (e.g., figsize, dpi,
 frameon).</p>
-</div></blockquote>
-<p><strong>smart_defaults</strong> : bool</p>
-<blockquote>
-<div><p>Whether to use pyplot default colors (<code class="docutils literal notranslate"><span class="pre">False</span></code>), or something more
+</dd>
+<dt><strong>smart_defaults</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether to use pyplot default colors (<code class="docutils literal notranslate"><span class="pre">False</span></code>), or something more
 pleasing to the eye (<code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
-</div></blockquote>
-<p><strong>fname</strong> : str | None</p>
-<blockquote>
-<div><p>Path and name of output file. File type is inferred from the file
+</dd>
+<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">Path and name of output file. File type is inferred from the file
 extension of <cite>fname</cite> and should work for any of the types supported by
 pyplot (pdf, eps, svg, png, raw).</p>
-</div></blockquote>
-<p><strong>ax</strong> : matplotlib.pyplot.axes | None</p>
-<blockquote>
-<div><p>A <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.axes</span></code> instance.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a new figure with
+</dd>
+<dt><strong>ax</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib.pyplot.axes | None</span></dt>
+<dd><p class="first last">A <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.axes</span></code> instance.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a new figure with
 a single subplot will be created.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>p</strong> : handle for the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.subplot</span></code> instance.</p>
-<p class="last"><strong>b</strong> : handle for the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.bar</span></code> instance.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>p</strong> <span class="classifier-delimiter">:</span> <span class="classifier">handle for the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.subplot</span></code> instance.</span></dt>
+<dd></dd>
+<dt><strong>b</strong> <span class="classifier-delimiter">:</span> <span class="classifier">handle for the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.bar</span></code> instance.</span></dt>
+<dd></dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -306,7 +267,7 @@ bracket color: dark gray (30%)</dd>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

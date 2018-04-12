@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.logit</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.analyze.format_pval.html" title="Previous Chapter: expyfun.analyze.format_pval"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.analy...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.analyze.plot_screen.html" title="Next Chapter: expyfun.analyze.plot_screen"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analy... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-analyze-logit">
 <h1>expyfun.analyze.logit<a class="headerlink" href="#expyfun-analyze-logit" title="Permalink to this headline">¶</a></h1>
@@ -130,26 +108,29 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>prop</strong> : float | array-like</p>
-<blockquote>
-<div><p>the occurrence proportion.</p>
-</div></blockquote>
-<p><strong>max_events</strong> : int | array-like | None</p>
-<blockquote>
-<div><p>the number of events used to calculate <code class="docutils literal notranslate"><span class="pre">prop</span></code>. Used in a correction
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>prop</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | array-like</span></dt>
+<dd><p class="first last">the occurrence proportion.</p>
+</dd>
+<dt><strong>max_events</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | array-like | None</span></dt>
+<dd><p class="first last">the number of events used to calculate <code class="docutils literal notranslate"><span class="pre">prop</span></code>. Used in a correction
 factor for cases when <code class="docutils literal notranslate"><span class="pre">prop</span></code> is 0 or 1, to prevent returning <code class="docutils literal notranslate"><span class="pre">inf</span></code>.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, no correction is done, and <code class="docutils literal notranslate"><span class="pre">inf</span></code> or <code class="docutils literal notranslate"><span class="pre">-inf</span></code> may result.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><strong>lgt</strong> : <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, with shape matching <code class="docutils literal notranslate"><span class="pre">numpy.array(prop).shape</span></code>.</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>lgt</strong> <span class="classifier-delimiter">:</span> <span class="classifier"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, with shape matching <code class="docutils literal notranslate"><span class="pre">numpy.array(prop).shape</span></code>.</span></dt>
+<dd></dd>
+</dl>
 </td>
 </tr>
 </tbody>
 </table>
 <div class="admonition seealso">
 <p class="first admonition-title">See also</p>
-<p class="last"><a class="reference external" href="https://scipy.github.io/devdocs/generated/scipy.special.logit.html#scipy.special.logit" title="(in SciPy v1.1.0.dev0+ecab276)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.special.logit</span></code></a></p>
+<p class="last"><a class="reference external" href="https://scipy.github.io/devdocs/generated/scipy.special.logit.html#scipy.special.logit" title="(in SciPy v1.1.0.dev0+9b7f278)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.special.logit</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -167,7 +148,7 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

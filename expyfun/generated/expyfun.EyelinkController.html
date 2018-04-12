@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.EyelinkController</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.ExperimentController.html" title="Previous Chapter: expyfun.ExperimentController"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.Exper...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.ParallelTrigger.html" title="Next Chapter: expyfun.ParallelTrigger"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.Paral... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-eyelinkcontroller">
 <h1>expyfun.EyelinkController<a class="headerlink" href="#expyfun-eyelinkcontroller" title="Permalink to this headline">¶</a></h1>
@@ -130,25 +108,23 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ec</strong> : instance of ExperimentController | None</p>
-<blockquote>
-<div><p>ExperimentController instance to interface with. Necessary for
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController | None</span></dt>
+<dd><p class="first last">ExperimentController instance to interface with. Necessary for
 doing calibrations.</p>
-</div></blockquote>
-<p><strong>link</strong> : str | None</p>
-<blockquote>
-<div><p>If ‘default’, the default value will be read from EXPYFUN_EYELINK.
+</dd>
+<dt><strong>link</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">If ‘default’, the default value will be read from EXPYFUN_EYELINK.
 If None, dummy (simulation) mode will be used. If str, should be
 the network location of eyelink (e.g., “100.1.1.1”).</p>
-</div></blockquote>
-<p><strong>fs</strong> : int</p>
-<blockquote>
-<div><p>Sample rate to use. Must be one of [250, 500, 1000, 2000].</p>
-</div></blockquote>
-<p><strong>verbose</strong> : bool, str, int, or None</p>
-<blockquote class="last">
-<div><p>If not None, override default verbose level (see expyfun.verbose).</p>
-</div></blockquote>
+</dd>
+<dt><strong>fs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Sample rate to use. Must be one of [250, 500, 1000, 2000].</p>
+</dd>
+<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, str, int, or None</span></dt>
+<dd><p class="first last">If not None, override default verbose level (see expyfun.verbose).</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -156,27 +132,26 @@ the network location of eyelink (e.g., “100.1.1.1”).</p>
 <p class="rubric">Notes</p>
 <p>The data will be saved to the ExperimentController <code class="docutils literal notranslate"><span class="pre">output_dir</span></code>.
 If this was <cite>None</cite>, data will be saved to the current working dir.</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">dummy_mode</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.eye_used" title="expyfun.EyelinkController.eye_used"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eye_used</span></code></a></td>
-<td>Return the eye used ‘left’ or ‘right’</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.file_list" title="expyfun.EyelinkController.file_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">file_list</span></code></a></td>
-<td>The list of files started on the EyeLink</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">fs</span></code></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.recording" title="expyfun.EyelinkController.recording"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recording</span></code></a></td>
-<td>Returns boolean for whether or not the Eyelink is recording</td>
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>dummy_mode</strong></dt>
+<dd></dd>
+<dt><a class="reference internal" href="#expyfun.EyelinkController.eye_used" title="expyfun.EyelinkController.eye_used"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eye_used</span></code></a></dt>
+<dd><p class="first last">Return the eye used ‘left’ or ‘right’</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.EyelinkController.file_list" title="expyfun.EyelinkController.file_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">file_list</span></code></a></dt>
+<dd><p class="first last">The list of files started on the EyeLink</p>
+</dd>
+<dt><strong>fs</strong></dt>
+<dd></dd>
+<dt><a class="reference internal" href="#expyfun.EyelinkController.recording" title="expyfun.EyelinkController.recording"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recording</span></code></a></dt>
+<dd><p class="first last">Returns boolean for whether or not the Eyelink is recording</p>
+</dd>
+</dl>
+</td>
 </tr>
 </tbody>
 </table>
@@ -224,21 +199,22 @@ If this was <cite>None</cite>, data will be saved to the current working dir.</p
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>beep</strong> : bool</p>
-<blockquote>
-<div><p>If True, beep for each calibration target.</p>
-</div></blockquote>
-<p><strong>prompt</strong> : bool</p>
-<blockquote>
-<div><p>If True, a standard screen prompt will be shown.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>beep</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, beep for each calibration target.</p>
+</dd>
+<dt><strong>prompt</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, a standard screen prompt will be shown.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fname</strong> : str | None</p>
-<blockquote class="last">
-<div><p>Filename on the Eyelink of the started data file.
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">Filename on the Eyelink of the started data file.
 Will be None if start is None.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -261,28 +237,25 @@ will be started.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ctype</strong> : str</p>
-<blockquote>
-<div><p>Type of calibration. Currently ‘H3’, ‘HV5’, ‘HV9’, and ‘HV13’
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>ctype</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Type of calibration. Currently ‘H3’, ‘HV5’, ‘HV9’, and ‘HV13’
 are supported. If ‘custom’ coordinates can be directly input.</p>
-</div></blockquote>
-<p><strong>horiz</strong> : float</p>
-<blockquote>
-<div><p>Horizontal distance (left and right, each) to use.</p>
-</div></blockquote>
-<p><strong>vert</strong> : float</p>
-<blockquote>
-<div><p>Vertical distance (up and down, each) to use.</p>
-</div></blockquote>
-<p><strong>coordinates</strong> : list of list of float or int</p>
-<blockquote>
-<div><p>List of coordinates to use for calibration. Each entry in the list
+</dd>
+<dt><strong>horiz</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Horizontal distance (left and right, each) to use.</p>
+</dd>
+<dt><strong>vert</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Vertical distance (up and down, each) to use.</p>
+</dd>
+<dt><strong>coordinates</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of list of float or int</span></dt>
+<dd><p class="first last">List of coordinates to use for calibration. Each entry in the list
 must be a list with 2 elements corresponding to x and y position.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -301,10 +274,11 @@ must be a list with 2 elements corresponding to x and y position.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>eye</strong> : str</p>
-<blockquote class="last">
-<div><p>‘left’ or ‘right’.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>eye</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">‘left’ or ‘right’.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -325,11 +299,12 @@ must be a list with 2 elements corresponding to x and y position.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>eye_pos</strong> : array</p>
-<blockquote class="last">
-<div><p>The current eye position. Will be [np.inf, np.inf] if the
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>eye_pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The current eye position. Will be [np.inf, np.inf] if the
 eye is lost.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -352,45 +327,40 @@ sure that the gaze falls in the target region at least every
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fix_pos</strong> : tuple (length 2)</p>
-<blockquote>
-<div><p>The screen position (in specified units) required.</p>
-</div></blockquote>
-<p><strong>check_duration</strong> : float</p>
-<blockquote>
-<div><p>Total amount of time to check.</p>
-</div></blockquote>
-<p><strong>tol</strong> : float</p>
-<blockquote>
-<div><p>The tolerance (in pixels) to consider the target hit.</p>
-</div></blockquote>
-<p><strong>max_wait</strong> : float</p>
-<blockquote>
-<div><p>Maximum time to wait (seconds) before returning.</p>
-</div></blockquote>
-<p><strong>period</strong> : float</p>
-<blockquote>
-<div><p>Maximum time between gazes in region</p>
-</div></blockquote>
-<p><strong>check_interval</strong> : float</p>
-<blockquote>
-<div><p>Time to use between position checks (seconds).</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote>
-<div><p>Units for <cite>fix_pos</cite>. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
-<p><strong>stop_early</strong> : bool</p>
-<blockquote>
-<div><p>Whether to exit the function when fix_success is False or not.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>fix_pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple (length 2)</span></dt>
+<dd><p class="first last">The screen position (in specified units) required.</p>
+</dd>
+<dt><strong>check_duration</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Total amount of time to check.</p>
+</dd>
+<dt><strong>tol</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The tolerance (in pixels) to consider the target hit.</p>
+</dd>
+<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Maximum time to wait (seconds) before returning.</p>
+</dd>
+<dt><strong>period</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Maximum time between gazes in region</p>
+</dd>
+<dt><strong>check_interval</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Time to use between position checks (seconds).</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units for <cite>fix_pos</cite>. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+<dt><strong>stop_early</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether to exit the function when fix_success is False or not.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fix_success</strong> : bool</p>
-<blockquote class="last">
-<div><p>Whether or not the subject successfully fixated throughout the
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>fix_success</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether or not the subject successfully fixated throughout the
 <cite>check_duration</cite>.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -421,16 +391,18 @@ sure that the gaze falls in the target region at least every
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>remote_name</strong> : str</p>
-<blockquote>
-<div><p>The filename on the Eyelink.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>remote_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">The filename on the Eyelink.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fname</strong> : str</p>
-<blockquote class="last">
-<div><p>The filename on the local machine following the transfer.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">The filename on the local machine following the transfer.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -449,36 +421,33 @@ sure that the gaze falls in the target region at least every
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fix_pos</strong> : tuple (length 2)</p>
-<blockquote>
-<div><p>The screen position (in specified units) required.</p>
-</div></blockquote>
-<p><strong>fix_time</strong> : float</p>
-<blockquote>
-<div><p>Amount of time required to call a fixation.</p>
-</div></blockquote>
-<p><strong>tol</strong> : float</p>
-<blockquote>
-<div><p>The tolerance (in pixels) to consider the target hit.</p>
-</div></blockquote>
-<p><strong>max_wait</strong> : float</p>
-<blockquote>
-<div><p>Maximum time to wait (seconds) before returning.</p>
-</div></blockquote>
-<p><strong>check_interval</strong> : float</p>
-<blockquote>
-<div><p>Time to use between position checks (seconds).</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote>
-<div><p>Units for <cite>fix_pos</cite>. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>fix_pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple (length 2)</span></dt>
+<dd><p class="first last">The screen position (in specified units) required.</p>
+</dd>
+<dt><strong>fix_time</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Amount of time required to call a fixation.</p>
+</dd>
+<dt><strong>tol</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The tolerance (in pixels) to consider the target hit.</p>
+</dd>
+<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Maximum time to wait (seconds) before returning.</p>
+</dd>
+<dt><strong>check_interval</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Time to use between position checks (seconds).</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units for <cite>fix_pos</cite>. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fix_success</strong> : bool</p>
-<blockquote class="last">
-<div><p>Whether or not the subject successfully fixated.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>fix_success</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether or not the subject successfully fixated.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -505,7 +474,7 @@ sure that the gaze falls in the target region at least every
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

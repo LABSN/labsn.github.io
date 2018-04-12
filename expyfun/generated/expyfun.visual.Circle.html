@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.visual.Circle</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.io.reconstruct_dealer.html" title="Previous Chapter: expyfun.io.reconstruct_dealer"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.io.re...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.visual.ConcentricCircles.html" title="Next Chapter: expyfun.visual.ConcentricCircles"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.visua... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-visual-circle">
 <h1>expyfun.visual.Circle<a class="headerlink" href="#expyfun-visual-circle" title="Permalink to this headline">¶</a></h1>
@@ -130,46 +108,41 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ec</strong> : instance of ExperimentController</p>
-<blockquote>
-<div><p>Parent EC.</p>
-</div></blockquote>
-<p><strong>radius</strong> : float | array-like</p>
-<blockquote>
-<div><p>Radius of the circle. Can be array-like with two elements to
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController</span></dt>
+<dd><p class="first last">Parent EC.</p>
+</dd>
+<dt><strong>radius</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | array-like</span></dt>
+<dd><p class="first last">Radius of the circle. Can be array-like with two elements to
 make an ellipse.</p>
-</div></blockquote>
-<p><strong>pos</strong> : array-like</p>
-<blockquote>
-<div><p>2-element array-like with X, Y center positions.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote>
-<div><p>Units to use. These will apply to all spatial aspects of the drawing.
+</dd>
+<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">2-element array-like with X, Y center positions.</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. These will apply to all spatial aspects of the drawing.
 shape e.g. size, position. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
-<p><strong>n_edges</strong> : int</p>
-<blockquote>
-<div><p>Number of edges to use (must be &gt;= 4) to approximate a circle.</p>
-</div></blockquote>
-<p><strong>fill_color</strong> : matplotlib Color | None</p>
-<blockquote>
-<div><p>Color to fill with. None is transparent.</p>
-</div></blockquote>
-<p><strong>line_color</strong> : matplotlib Color | None</p>
-<blockquote>
-<div><p>Color of the border line. None is transparent.</p>
-</div></blockquote>
-<p><strong>line_width</strong> : float</p>
-<blockquote>
-<div><p>Line width in pixels.</p>
-</div></blockquote>
+</dd>
+<dt><strong>n_edges</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of edges to use (must be &gt;= 4) to approximate a circle.</p>
+</dd>
+<dt><strong>fill_color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color | None</span></dt>
+<dd><p class="first last">Color to fill with. None is transparent.</p>
+</dd>
+<dt><strong>line_color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color | None</span></dt>
+<dd><p class="first last">Color of the border line. None is transparent.</p>
+</dd>
+<dt><strong>line_width</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Line width in pixels.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>circle</strong> : instance of Circle</p>
-<blockquote class="last">
-<div><p>The circle object.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>circle</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of Circle</span></dt>
+<dd><p class="first last">The circle object.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -221,10 +194,11 @@ shape e.g. size, position. See <code class="docutils literal notranslate"><span 
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fill_color</strong> : matplotlib Color | None</p>
-<blockquote class="last">
-<div><p>The fill color. Use None for no fill.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>fill_color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color | None</span></dt>
+<dd><p class="first last">The fill color. Use None for no fill.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -239,10 +213,11 @@ shape e.g. size, position. See <code class="docutils literal notranslate"><span 
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fill_color</strong> : matplotlib Color | None</p>
-<blockquote class="last">
-<div><p>The fill color. Use None for no fill.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>fill_color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color | None</span></dt>
+<dd><p class="first last">The fill color. Use None for no fill.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -257,11 +232,12 @@ shape e.g. size, position. See <code class="docutils literal notranslate"><span 
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>line_width</strong> : float</p>
-<blockquote class="last">
-<div><p>The line width. Must be given in pixels. Due to OpenGL
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>line_width</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The line width. Must be given in pixels. Due to OpenGL
 limitations, it must be <cite>0.0 &lt;= line_width &lt;= 10.0</cite>.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -276,14 +252,14 @@ limitations, it must be <cite>0.0 &lt;= line_width &lt;= 10.0</cite>.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>pos</strong> : array-like</p>
-<blockquote>
-<div><p>X, Y center of the circle.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">X, Y center of the circle.</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -298,15 +274,15 @@ limitations, it must be <cite>0.0 &lt;= line_width &lt;= 10.0</cite>.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>radius</strong> : array-like | float</p>
-<blockquote>
-<div><p>X- and Y-direction extents (radii) of the circle / ellipse.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>radius</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like | float</span></dt>
+<dd><p class="first last">X- and Y-direction extents (radii) of the circle / ellipse.
 A single value (float) will be replicated for both directions.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -329,7 +305,7 @@ A single value (float) will be replicated for both directions.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

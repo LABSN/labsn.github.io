@@ -96,40 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">API Reference</a><ul>
-<li><a class="reference internal" href="#experiment-control">Experiment control</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#stimulus-design">Stimulus design</a><ul>
-</ul>
-</li>
-<li><a class="reference internal" href="#code-blocks">Code blocks</a></li>
-<li><a class="reference internal" href="#analysis">Analysis</a></li>
-<li><a class="reference internal" href="#logging-and-configuration">Logging and configuration</a></li>
-</ul>
-</li>
-</ul>
-
-  <li>
-    <a href="index.html" title="Previous Chapter: Expyfun home"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; Expyfun home</span>
-    </a>
-  </li>
-  <li>
-    <a href="generated/expyfun.ExperimentController.html" title="Next Chapter: expyfun.ExperimentController"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.Exper... &raquo;</span>
-    </a>
-  </li>
-<form action="search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="module-expyfun">
 <span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-expyfun" title="Permalink to this headline">¶</a></h1>
@@ -156,7 +123,7 @@ grouped by hardware control type.</p>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController</span></code></a>(exp_name[,&nbsp;…])</td>
-<td>Interface for hardware control (audio, buttonbox, eye tracker, etc.</td>
+<td>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.EyelinkController.html#expyfun.EyelinkController" title="expyfun.EyelinkController"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController</span></code></a>(ec[,&nbsp;link,&nbsp;fs,&nbsp;verbose])</td>
 <td>Eyelink communication and control methods</td>
@@ -262,7 +229,7 @@ grouped by hardware control type.</p>
 <td>Vocode stimuli using a variety of methods</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.stimuli.window_edges.html#expyfun.stimuli.window_edges" title="expyfun.stimuli.window_edges"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_edges</span></code></a>(sig,&nbsp;fs[,&nbsp;dur,&nbsp;axis,&nbsp;window,&nbsp;edges])</td>
-<td>Window the edges of a signal (e.</td>
+<td>Window the edges of a signal (e.g., to prevent “pops”)</td>
 </tr>
 </tbody>
 </table>
@@ -278,10 +245,10 @@ grouped by hardware control type.</p>
 <td>Read python object from HDF5 format using h5io/h5py</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.read_tab_raw.html#expyfun.io.read_tab_raw" title="expyfun.io.read_tab_raw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_tab_raw</span></code></a>(fname[,&nbsp;return_params])</td>
-<td>Read .</td>
+<td>Read .tab file from expyfun output without segmenting into trials.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.read_tab.html#expyfun.io.read_tab" title="expyfun.io.read_tab"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_tab</span></code></a>(fname[,&nbsp;group_start,&nbsp;group_end,&nbsp;…])</td>
-<td>Read .</td>
+<td>Read .tab file from expyfun output and segment into trials.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.read_wav.html#expyfun.io.read_wav" title="expyfun.io.read_wav"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_wav</span></code></a>(fname[,&nbsp;verbose])</td>
 <td>Read in a WAV file</td>
@@ -293,10 +260,10 @@ grouped by hardware control type.</p>
 <td>Write a WAV file</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="generated/expyfun.io.reconstruct_tracker.html#expyfun.io.reconstruct_tracker" title="expyfun.io.reconstruct_tracker"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reconstruct_tracker</span></code></a>(fname)</td>
-<td>Reconstruct TrackerUD and TrackerBinom objects from .</td>
+<td>Reconstruct TrackerUD and TrackerBinom objects from .tab files.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="generated/expyfun.io.reconstruct_dealer.html#expyfun.io.reconstruct_dealer" title="expyfun.io.reconstruct_dealer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reconstruct_dealer</span></code></a>(fname)</td>
-<td>Reconstruct TrackerDealer object from .</td>
+<td>Reconstruct TrackerDealer object from .tab files.</td>
 </tr>
 </tbody>
 </table>
@@ -436,7 +403,7 @@ grouped by hardware control type.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

@@ -96,53 +96,31 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.set_log_level</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.analyze.sigmoid.html" title="Previous Chapter: expyfun.analyze.sigmoid"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.analy...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.set_config.html" title="Next Chapter: expyfun.set_config"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.set_config &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-set-log-level">
 <h1>expyfun.set_log_level<a class="headerlink" href="#expyfun-set-log-level" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.set_log_level">
-<code class="descclassname">expyfun.</code><code class="descname">set_log_level</code><span class="sig-paren">(</span><em>verbose=None</em>, <em>return_old_level=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_utils.py#L79-L109"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.set_log_level" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">expyfun.</code><code class="descname">set_log_level</code><span class="sig-paren">(</span><em>verbose=None</em>, <em>return_old_level=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_utils.py#L82-L112"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.set_log_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convenience function for setting the logging level</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>verbose</strong> : bool, str, int, or None</p>
-<blockquote>
-<div><p>The verbosity of messages to print. If a str, it can be either DEBUG,
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, str, int, or None</span></dt>
+<dd><p class="first last">The verbosity of messages to print. If a str, it can be either DEBUG,
 INFO, WARNING, ERROR, or CRITICAL. Note that these are for
 convenience and are equivalent to passing in logging.DEBUG, etc.
 For bool, True is the same as ‘INFO’, False is the same as ‘WARNING’.
 If None, the environment variable EXPYFUN_LOGGING_LEVEL is read, and if
 it doesn’t exist, defaults to INFO.</p>
-</div></blockquote>
-<p><strong>return_old_level</strong> : bool</p>
-<blockquote class="last">
-<div><p>If True, return the old verbosity level.</p>
-</div></blockquote>
+</dd>
+<dt><strong>return_old_level</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, return the old verbosity level.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -163,7 +141,7 @@ it doesn’t exist, defaults to INFO.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

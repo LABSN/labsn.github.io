@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.ExperimentController</a></li>
-</ul>
-
-  <li>
-    <a href="../python_reference.html" title="Previous Chapter: API Reference"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; API Reference</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.EyelinkController.html" title="Next Chapter: expyfun.EyelinkController"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.Eyeli... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-experimentcontroller">
 <h1>expyfun.ExperimentController<a class="headerlink" href="#expyfun-experimentcontroller" title="Permalink to this headline">¶</a></h1>
@@ -130,115 +108,99 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>exp_name</strong> : str</p>
-<blockquote>
-<div><p>Name of the experiment.</p>
-</div></blockquote>
-<p><strong>audio_controller</strong> : str | dict | None</p>
-<blockquote>
-<div><p>If audio_controller is None, the type will be read from the system
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>exp_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Name of the experiment.</p>
+</dd>
+<dt><strong>audio_controller</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | dict | None</span></dt>
+<dd><p class="first last">If audio_controller is None, the type will be read from the system
 configuration file. If a string, can be ‘pyglet’ or ‘tdt’, and the
 remaining audio parameters will be read from the machine configuration
 file. If a dict, must include a key ‘TYPE’ that is either ‘pyglet’
 or ‘tdt’; the dict can contain other parameters specific to the TDT
 (see documentation for <a class="reference internal" href="expyfun.TDTController.html#expyfun.TDTController" title="expyfun.TDTController"><code class="xref py py-class docutils literal notranslate"><span class="pre">TDTController</span></code></a>).</p>
-</div></blockquote>
-<p><strong>response_device</strong> : str | None</p>
-<blockquote>
-<div><p>Must be ‘keyboard’, ‘cedrus’, or ‘tdt’.  If None, the type will be read
+</dd>
+<dt><strong>response_device</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">Must be ‘keyboard’, ‘cedrus’, or ‘tdt’.  If None, the type will be read
 from the machine configuration file.</p>
-</div></blockquote>
-<p><strong>stim_rms</strong> : float</p>
-<blockquote>
-<div><p>The RMS amplitude that the stimuli were generated at (strongly
+</dd>
+<dt><strong>stim_rms</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The RMS amplitude that the stimuli were generated at (strongly
 recommended to be 0.01).</p>
-</div></blockquote>
-<p><strong>stim_fs</strong> : int | float</p>
-<blockquote>
-<div><p>The sampling frequency that the stimuli were generated with (samples
+</dd>
+<dt><strong>stim_fs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | float</span></dt>
+<dd><p class="first last">The sampling frequency that the stimuli were generated with (samples
 per second).</p>
-</div></blockquote>
-<p><strong>stim_db</strong> : float</p>
-<blockquote>
-<div><p>The desired dB SPL at which to play the stimuli.</p>
-</div></blockquote>
-<p><strong>noise_db</strong> : float</p>
-<blockquote>
-<div><p>The desired dB SPL at which to play the dichotic noise.</p>
-</div></blockquote>
-<p><strong>output_dir</strong> : str | None</p>
-<blockquote>
-<div><p>An absolute or relative path to a directory in which raw experiment
+</dd>
+<dt><strong>stim_db</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The desired dB SPL at which to play the stimuli.</p>
+</dd>
+<dt><strong>noise_db</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The desired dB SPL at which to play the dichotic noise.</p>
+</dd>
+<dt><strong>output_dir</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">An absolute or relative path to a directory in which raw experiment
 data will be stored. If output_folder does not exist, it will be
 created. Data will be saved to <code class="docutils literal notranslate"><span class="pre">output_dir/SUBJECT_DATE</span></code>.
 If None, no output data or logs will be saved (ONLY FOR TESTING!).</p>
-</div></blockquote>
-<p><strong>window_size</strong> : list | array | None</p>
-<blockquote>
-<div><p>Window size to use. If list or array, it must have two elements.
+</dd>
+<dt><strong>window_size</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | array | None</span></dt>
+<dd><p class="first last">Window size to use. If list or array, it must have two elements.
 If None, the default will be read from the system config,
 falling back to [1920, 1080] if no system config is found.</p>
-</div></blockquote>
-<p><strong>screen_num</strong> : int | None</p>
-<blockquote>
-<div><p>Screen to use. If None, the default will be read from the system
+</dd>
+<dt><strong>screen_num</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | None</span></dt>
+<dd><p class="first last">Screen to use. If None, the default will be read from the system
 config, falling back to 0 if no system config is found.</p>
-</div></blockquote>
-<p><strong>full_screen</strong> : bool</p>
-<blockquote>
-<div><p>Should the experiment window be fullscreen?</p>
-</div></blockquote>
-<p><strong>force_quit</strong> : list</p>
-<blockquote>
-<div><p>Keyboard key(s) to utilize as an experiment force-quit button. Can be
+</dd>
+<dt><strong>full_screen</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Should the experiment window be fullscreen?</p>
+</dd>
+<dt><strong>force_quit</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">Keyboard key(s) to utilize as an experiment force-quit button. Can be
 a zero-element list for no force quit support. If None, defaults to
 <code class="docutils literal notranslate"><span class="pre">['lctrl',</span> <span class="pre">'rctrl']</span></code>.  Using <code class="docutils literal notranslate"><span class="pre">['escape']</span></code> is not recommended due to
 default handling of ‘escape’ in pyglet.</p>
-</div></blockquote>
-<p><strong>participant</strong> : str | None</p>
-<blockquote>
-<div><p>If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a GUI will be used to acquire this information.</p>
-</div></blockquote>
-<p><strong>session</strong> : str | None</p>
-<blockquote>
-<div><p>If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a GUI will be used to acquire this information.</p>
-</div></blockquote>
-<p><strong>trigger_controller</strong> : str | None</p>
-<blockquote>
-<div><p>If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the type will be read from the system configuration file.
+</dd>
+<dt><strong>participant</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a GUI will be used to acquire this information.</p>
+</dd>
+<dt><strong>session</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a GUI will be used to acquire this information.</p>
+</dd>
+<dt><strong>trigger_controller</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the type will be read from the system configuration file.
 If a string, must be ‘dummy’, ‘parallel’, or ‘tdt’. Note that by
 default the mode is ‘dummy’, since setting up the parallel port
 can be a pain. Can also be a dict with entries ‘type’ (‘parallel’),
 ‘address’ (None), and ‘high_duration’ (0.005).</p>
-</div></blockquote>
-<p><strong>check_rms</strong> : str | None</p>
-<blockquote>
-<div><p>Method to use in checking stimulus RMS to ensure appropriate levels.
+</dd>
+<dt><strong>check_rms</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">Method to use in checking stimulus RMS to ensure appropriate levels.
 Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">wholefile</span></code>, and <code class="docutils literal notranslate"><span class="pre">windowed</span></code> (the
 default); see <cite>set_rms_checking</cite> for details.</p>
-</div></blockquote>
-<p><strong>suppress_resamp</strong> : bool</p>
-<blockquote>
-<div><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, will suppress resampling of stimuli to the sampling
+</dd>
+<dt><strong>suppress_resamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">True</span></code>, will suppress resampling of stimuli to the sampling
 frequency of the sound output device.</p>
-</div></blockquote>
-<p><strong>version</strong> : str | None</p>
-<blockquote>
-<div><p>A length-7 string passed to <code class="docutils literal notranslate"><span class="pre">expyfun.assert_version()</span></code> to ensure that
+</dd>
+<dt><strong>version</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">A length-7 string passed to <code class="docutils literal notranslate"><span class="pre">expyfun.assert_version()</span></code> to ensure that
 the expected version of the expyfun codebase is being used when running
 experiments. To override version checking (e.g., during development)
 use <code class="docutils literal notranslate"><span class="pre">version='dev'</span></code>.</p>
-</div></blockquote>
-<p><strong>verbose</strong> : bool, str, int, or None</p>
-<blockquote>
-<div><p>If not None, override default verbose level (see expyfun.verbose).</p>
-</div></blockquote>
+</dd>
+<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, str, int, or None</span></dt>
+<dd><p class="first last">If not None, override default verbose level (see expyfun.verbose).</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>exp_controller</strong> : instance of ExperimentController</p>
-<blockquote class="last">
-<div><p>The experiment control interface.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>exp_controller</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController</span></dt>
+<dd><p class="first last">The experiment control interface.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -246,60 +208,55 @@ use <code class="docutils literal notranslate"><span class="pre">version='dev'</
 <p class="rubric">Notes</p>
 <p>When debugging, it’s useful to use the flush_logs() method to get
 information (based on the level of verbosity) printed to the console.</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.current_time" title="expyfun.ExperimentController.current_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">current_time</span></code></a></td>
-<td>Timestamp from the experiment master clock.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.data_fname" title="expyfun.ExperimentController.data_fname"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_fname</span></code></a></td>
-<td>Date filename</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">dpi</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">exp_name</span></code></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.fs" title="expyfun.ExperimentController.fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fs</span></code></a></td>
-<td>Playback frequency of the audio controller (samples / second).</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.id_types" title="expyfun.ExperimentController.id_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id_types</span></code></a></td>
-<td>Trial ID types needed for each trial.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">monitor_size_pix</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.noise_db" title="expyfun.ExperimentController.noise_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">noise_db</span></code></a></td>
-<td>Sound power in dB of the background noise.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.on_every_flip_functions" title="expyfun.ExperimentController.on_every_flip_functions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_every_flip_functions</span></code></a></td>
-<td>Current stack of functions called on every flip.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.on_next_flip_functions" title="expyfun.ExperimentController.on_next_flip_functions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_next_flip_functions</span></code></a></td>
-<td>Current stack of functions to be called on next flip.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">participant</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">session</span></code></td>
-<td></td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.stim_db" title="expyfun.ExperimentController.stim_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stim_db</span></code></a></td>
-<td>Sound power in dB of the stimuli.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.stim_fs" title="expyfun.ExperimentController.stim_fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stim_fs</span></code></a></td>
-<td>Sampling rate at which the stimuli were generated.</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.window" title="expyfun.ExperimentController.window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window</span></code></a></td>
-<td>Pyglet visual window handle.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">window_size_pix</span></code></td>
-<td></td>
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><a class="reference internal" href="#expyfun.ExperimentController.current_time" title="expyfun.ExperimentController.current_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">current_time</span></code></a></dt>
+<dd><p class="first last">Timestamp from the experiment master clock.</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.ExperimentController.data_fname" title="expyfun.ExperimentController.data_fname"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data_fname</span></code></a></dt>
+<dd><p class="first last">Date filename</p>
+</dd>
+<dt><strong>dpi</strong></dt>
+<dd></dd>
+<dt><strong>exp_name</strong></dt>
+<dd></dd>
+<dt><a class="reference internal" href="#expyfun.ExperimentController.fs" title="expyfun.ExperimentController.fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fs</span></code></a></dt>
+<dd><p class="first last">Playback frequency of the audio controller (samples / second).</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.ExperimentController.id_types" title="expyfun.ExperimentController.id_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">id_types</span></code></a></dt>
+<dd><p class="first last">Trial ID types needed for each trial.</p>
+</dd>
+<dt><strong>monitor_size_pix</strong></dt>
+<dd></dd>
+<dt><a class="reference internal" href="#expyfun.ExperimentController.noise_db" title="expyfun.ExperimentController.noise_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">noise_db</span></code></a></dt>
+<dd><p class="first last">Sound power in dB of the background noise.</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.ExperimentController.on_every_flip_functions" title="expyfun.ExperimentController.on_every_flip_functions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_every_flip_functions</span></code></a></dt>
+<dd><p class="first last">Current stack of functions called on every flip.</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.ExperimentController.on_next_flip_functions" title="expyfun.ExperimentController.on_next_flip_functions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_next_flip_functions</span></code></a></dt>
+<dd><p class="first last">Current stack of functions to be called on next flip.</p>
+</dd>
+<dt><strong>participant</strong></dt>
+<dd></dd>
+<dt><strong>session</strong></dt>
+<dd></dd>
+<dt><a class="reference internal" href="#expyfun.ExperimentController.stim_db" title="expyfun.ExperimentController.stim_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stim_db</span></code></a></dt>
+<dd><p class="first last">Sound power in dB of the stimuli.</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.ExperimentController.stim_fs" title="expyfun.ExperimentController.stim_fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stim_fs</span></code></a></dt>
+<dd><p class="first last">Sampling rate at which the stimuli were generated.</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.ExperimentController.window" title="expyfun.ExperimentController.window"><code class="xref py py-obj docutils literal notranslate"><span class="pre">window</span></code></a></dt>
+<dd><p class="first last">Pyglet visual window handle.</p>
+</dd>
+<dt><strong>window_size_pix</strong></dt>
+<dd></dd>
+</dl>
+</td>
 </tr>
 </tbody>
 </table>
@@ -322,44 +279,38 @@ information (based on the level of verbosity) printed to the console.</p>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.close" title="expyfun.ExperimentController.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</td>
 <td>Close all connections in experiment controller.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_video</span></code>()</td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.estimate_screen_fs" title="expyfun.ExperimentController.estimate_screen_fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_screen_fs</span></code></a>([n_rep])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.estimate_screen_fs" title="expyfun.ExperimentController.estimate_screen_fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_screen_fs</span></code></a>([n_rep])</td>
 <td>Estimate screen refresh rate using repeated flip() calls</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.flip" title="expyfun.ExperimentController.flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code></a>([when])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.flip" title="expyfun.ExperimentController.flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code></a>([when])</td>
 <td>Flip screen, then run any “on-flip” functions.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.flush" title="expyfun.ExperimentController.flush"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flush</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.flush" title="expyfun.ExperimentController.flush"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flush</span></code></a>()</td>
 <td>Flush logs and data files</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_clicks</span></code></a>([live_buttons,&nbsp;timestamp,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_clicks</span></code></a>([live_buttons,&nbsp;timestamp,&nbsp;…])</td>
 <td>Get the entire keyboard / button box buffer.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mouse_position</span></code></a>([units])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mouse_position</span></code></a>([units])</td>
 <td>Mouse position in screen coordinates</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.get_presses" title="expyfun.ExperimentController.get_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_presses</span></code></a>([live_keys,&nbsp;timestamp,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.get_presses" title="expyfun.ExperimentController.get_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_presses</span></code></a>([live_keys,&nbsp;timestamp,&nbsp;…])</td>
 <td>Get the entire keyboard / button box buffer.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.get_time" title="expyfun.ExperimentController.get_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.get_time" title="expyfun.ExperimentController.get_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code></a>()</td>
 <td>Return current master clock time</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identify_trial</span></code></a>(**ids)</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identify_trial</span></code></a>(**ids)</td>
 <td>Identify trial type before beginning the trial</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_clicks</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_clicks</span></code></a>()</td>
 <td>Start listening for mouse clicks.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.listen_presses" title="expyfun.ExperimentController.listen_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_presses</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.listen_presses" title="expyfun.ExperimentController.listen_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_presses</span></code></a>()</td>
 <td>Start listening for keypresses.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_buffer</span></code></a>(samples)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_buffer</span></code></a>(samples)</td>
 <td>Load audio data into the audio buffer</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_video</span></code>(file_name[,&nbsp;pos,&nbsp;units,&nbsp;center])</td>
-<td></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>()</td>
 <td>Start audio playback</td>
@@ -438,6 +389,20 @@ information (based on the level of verbosity) printed to the console.</p>
 </tr>
 </tbody>
 </table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="62%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>delete_video</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>load_video</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="expyfun.ExperimentController.__init__">
 <code class="descname">__init__</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.__init__" title="Permalink to this definition">¶</a></dt>
@@ -452,11 +417,12 @@ information (based on the level of verbosity) printed to the console.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>function</strong> : function | None</p>
-<blockquote class="last">
-<div><p>The function to call. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, all the “on every flip”
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>function</strong> <span class="classifier-delimiter">:</span> <span class="classifier">function | None</span></dt>
+<dd><p class="first last">The function to call. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, all the “on every flip”
 functions will be cleared.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -480,11 +446,12 @@ called with arguments, use <cite>functools.partial</cite> before passing to
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>function</strong> : function | None</p>
-<blockquote class="last">
-<div><p>The function to call. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, all the “on every flip”
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>function</strong> <span class="classifier-delimiter">:</span> <span class="classifier">function | None</span></dt>
+<dd><p class="first last">The function to call. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, all the “on every flip”
 functions will be cleared.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -534,17 +501,19 @@ sample rate.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>n_rep</strong> : int</p>
-<blockquote>
-<div><p>Number of flips to use. The higher the number, the more accurate
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>n_rep</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Number of flips to use. The higher the number, the more accurate
 the estimate but the more time will be consumed.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>screen_fs</strong> : float</p>
-<blockquote class="last">
-<div><p>The screen refresh rate.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>screen_fs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The screen refresh rate.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -559,20 +528,22 @@ the estimate but the more time will be consumed.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>when</strong> : float | None</p>
-<blockquote>
-<div><p>Time to flip. If None, flip immediately. Note that due to flip
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>when</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | None</span></dt>
+<dd><p class="first last">Time to flip. If None, flip immediately. Note that due to flip
 timing limitations, this is only a guaranteed <em>minimum</em> (not
 absolute) wait time before the flip completes. As a result, in
 some cases <cite>when</cite> should be set to a value smaller than your
 true intended flip time.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>flip_time</strong> : float</p>
-<blockquote class="last">
-<div><p>The timestamp of the screen flip.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>flip_time</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The timestamp of the screen flip.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -607,32 +578,32 @@ true intended flip time.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>live_buttons</strong> : list | None</p>
-<blockquote>
-<div><p>List of strings indicating acceptable buttons.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>live_buttons</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">List of strings indicating acceptable buttons.
 <code class="docutils literal notranslate"><span class="pre">None</span></code> accepts all mouse clicks.</p>
-</div></blockquote>
-<p><strong>timestamp</strong> : bool</p>
-<blockquote>
-<div><p>Whether the mouse click should be timestamped. If True, returns the
+</dd>
+<dt><strong>timestamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether the mouse click should be timestamped. If True, returns the
 button click time relative to the value given in <cite>relative_to</cite>.</p>
-</div></blockquote>
-<p><strong>relative_to</strong> : None | float</p>
-<blockquote>
-<div><p>A time relative to which timestamping is done. Ignored if
+</dd>
+<dt><strong>relative_to</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | float</span></dt>
+<dd><p class="first last">A time relative to which timestamping is done. Ignored if
 timestamp==False.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the time
 <cite>listen_clicks</cite> was last called.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clicks</strong> : list of tuple</p>
-<blockquote class="last">
-<div><p>Returns a list of the clicks between min_wait and max_wait.
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>clicks</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of tuple</span></dt>
+<dd><p class="first last">Returns a list of the clicks between min_wait and max_wait.
 If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, each entry is a tuple (str, int, int,
 float) indicating the button clicked and its timestamp.
 If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>, each entry is a tuple (str, int, int)
 indicating the button clicked.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -651,16 +622,18 @@ indicating the button clicked.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>units</strong> : str</p>
-<blockquote>
-<div><p>Units to return. See <cite>check_units</cite> for options.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to return. See <cite>check_units</cite> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>position</strong> : ndarray</p>
-<blockquote class="last">
-<div><p>The mouse position.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>position</strong> <span class="classifier-delimiter">:</span> <span class="classifier">ndarray</span></dt>
+<dd><p class="first last">The mouse position.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -680,42 +653,40 @@ indicating the button clicked.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>live_keys</strong> : list | None</p>
-<blockquote>
-<div><p>List of strings indicating acceptable keys or buttons. Other data
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>live_keys</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">List of strings indicating acceptable keys or buttons. Other data
 types are cast as strings, so a list of ints will also work.
 <code class="docutils literal notranslate"><span class="pre">None</span></code> accepts all keypresses.</p>
-</div></blockquote>
-<p><strong>timestamp</strong> : bool</p>
-<blockquote>
-<div><p>Whether the keypress should be timestamped. If True, returns the
+</dd>
+<dt><strong>timestamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether the keypress should be timestamped. If True, returns the
 button press time relative to the value given in <cite>relative_to</cite>.</p>
-</div></blockquote>
-<p><strong>relative_to</strong> : None | float</p>
-<blockquote>
-<div><p>A time relative to which timestamping is done. Ignored if
+</dd>
+<dt><strong>relative_to</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | float</span></dt>
+<dd><p class="first last">A time relative to which timestamping is done. Ignored if
 timestamp==False.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the time
 <cite>listen_presses</cite> was last called.</p>
-</div></blockquote>
-<p><strong>kind</strong> : string</p>
-<blockquote>
-<div><p>Which key events to return. One of <code class="docutils literal notranslate"><span class="pre">presses</span></code>, <code class="docutils literal notranslate"><span class="pre">releases</span></code> or
+</dd>
+<dt><strong>kind</strong> <span class="classifier-delimiter">:</span> <span class="classifier">string</span></dt>
+<dd><p class="first last">Which key events to return. One of <code class="docutils literal notranslate"><span class="pre">presses</span></code>, <code class="docutils literal notranslate"><span class="pre">releases</span></code> or
 <code class="docutils literal notranslate"><span class="pre">both</span></code>. (default <code class="docutils literal notranslate"><span class="pre">presses</span></code>)</p>
-</div></blockquote>
-<p><strong>return_kinds</strong> : bool</p>
-<blockquote>
-<div><p>Return the kinds of presses.</p>
-</div></blockquote>
+</dd>
+<dt><strong>return_kinds</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Return the kinds of presses.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>presses</strong> : list</p>
-<blockquote class="last">
-<div><p>Returns a list of tuples with key events. Each tuple’s first value
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>presses</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">Returns a list of tuples with key events. Each tuple’s first value
 will be the key pressed. If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, the second value
 is the time for the event. If <code class="docutils literal notranslate"><span class="pre">return_kinds==True</span></code>, then the
 last value is a string indicating if this was a key press or
 release event.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -734,10 +705,11 @@ release event.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>time</strong> : float</p>
-<blockquote class="last">
-<div><p>Time since ExperimentController was created.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>time</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Time since ExperimentController was created.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -758,14 +730,15 @@ release event.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>**ids</strong> : keyword arguments</p>
-<blockquote class="last">
-<div><p>Ids to stamp, e.g. <code class="docutils literal notranslate"><span class="pre">ec_id='TL90,MR45'.</span> <span class="pre">Use</span> <span class="pre">`id_types`</span>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>**ids</strong> <span class="classifier-delimiter">:</span> <span class="classifier">keyword arguments</span></dt>
+<dd><p class="first last">Ids to stamp, e.g. <code class="docutils literal notranslate"><span class="pre">ec_id='TL90,MR45'.</span> <span class="pre">Use</span> <span class="pre">`id_types`</span>
 <span class="pre">to</span> <span class="pre">see</span> <span class="pre">valid</span> <span class="pre">options.</span> <span class="pre">Typical</span> <span class="pre">choices</span> <span class="pre">are</span> <span class="pre">``ec_id</span></code>, <code class="docutils literal notranslate"><span class="pre">el_id</span></code>,
 and <code class="docutils literal notranslate"><span class="pre">ttl_id</span></code> for experiment controller, eyelink, and TDT
 (or parallel port) respectively. If the value passed is a <code class="docutils literal notranslate"><span class="pre">dict</span></code>,
 its entries will be passed as keywords to the underlying function.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -804,11 +777,12 @@ its entries will be passed as keywords to the underlying function.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>samples</strong> : np.array</p>
-<blockquote class="last">
-<div><p>Audio data as floats scaled to (-1,+1), formatted as numpy array
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>samples</strong> <span class="classifier-delimiter">:</span> <span class="classifier">np.array</span></dt>
+<dd><p class="first last">Audio data as floats scaled to (-1,+1), formatted as numpy array
 with shape (1, N), (2, N), or (N,) dtype float32.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -845,10 +819,11 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>play_time</strong> : float</p>
-<blockquote class="last">
-<div><p>The timestamp of the audio playback.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>play_time</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The timestamp of the audio playback.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -867,79 +842,69 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>text</strong> : str | list</p>
-<blockquote>
-<div><p>The text to display. It will automatically wrap lines.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>text</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | list</span></dt>
+<dd><p class="first last">The text to display. It will automatically wrap lines.
 If list, the prompts will be displayed sequentially.</p>
-</div></blockquote>
-<p><strong>max_wait</strong> : float</p>
-<blockquote>
-<div><p>The maximum amount of time to wait before returning. Can be np.inf
+</dd>
+<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The maximum amount of time to wait before returning. Can be np.inf
 to wait until the user responds.</p>
-</div></blockquote>
-<p><strong>min_wait</strong> : float</p>
-<blockquote>
-<div><p>The minimum amount of time to wait before returning. Useful for
+</dd>
+<dt><strong>min_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The minimum amount of time to wait before returning. Useful for
 avoiding subjects missing instructions.</p>
-</div></blockquote>
-<p><strong>live_keys</strong> : list | None</p>
-<blockquote>
-<div><p>The acceptable list of buttons or keys to use to advance the trial.
+</dd>
+<dt><strong>live_keys</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">The acceptable list of buttons or keys to use to advance the trial.
 If None, all buttons / keys will be accepted.  If an empty list,
 the prompt displays until max_wait seconds have passed.</p>
-</div></blockquote>
-<p><strong>click</strong> : bool</p>
-<blockquote>
-<div><p>Whether to use clicks to advance rather than key presses.</p>
-</div></blockquote>
-<p><strong>clear_after</strong> : bool</p>
-<blockquote>
-<div><p>If True, the screen will be cleared before returning.</p>
-</div></blockquote>
-<p><strong>pos</strong> : list | tuple</p>
-<blockquote>
-<div><p>x, y position of the text. In the default units (-1 to 1, with
+</dd>
+<dt><strong>click</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether to use clicks to advance rather than key presses.</p>
+</dd>
+<dt><strong>clear_after</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, the screen will be cleared before returning.</p>
+</dd>
+<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | tuple</span></dt>
+<dd><p class="first last">x, y position of the text. In the default units (-1 to 1, with
 positive going up and right) the default is dead center (0, 0).</p>
-</div></blockquote>
-<p><strong>color</strong> : matplotlib color</p>
-<blockquote>
-<div><p>The text color.</p>
-</div></blockquote>
-<p><strong>font_name</strong> : str</p>
-<blockquote>
-<div><p>The name of the font to use.</p>
-</div></blockquote>
-<p><strong>font_size</strong> : float</p>
-<blockquote>
-<div><p>The font size (in points) to use.</p>
-</div></blockquote>
-<p><strong>wrap</strong> : bool</p>
-<blockquote>
-<div><p>Whether or not the text will wrap to fit in screen, appropriate
+</dd>
+<dt><strong>color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib color</span></dt>
+<dd><p class="first last">The text color.</p>
+</dd>
+<dt><strong>font_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">The name of the font to use.</p>
+</dd>
+<dt><strong>font_size</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The font size (in points) to use.</p>
+</dd>
+<dt><strong>wrap</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether or not the text will wrap to fit in screen, appropriate
 for multi-line text. Inappropriate for text requiring
 precise positioning or centering.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote>
-<div><p>Units for <cite>pos</cite>. See <cite>check_units</cite> for options. Applies to
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units for <cite>pos</cite>. See <cite>check_units</cite> for options. Applies to
 <cite>pos</cite> but not <cite>font_size</cite>.</p>
-</div></blockquote>
-<p><strong>attr</strong> : bool</p>
-<blockquote>
-<div><p>Should the text be interpreted with pyglet’s <code class="docutils literal notranslate"><span class="pre">decode_attributed</span></code>
+</dd>
+<dt><strong>attr</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Should the text be interpreted with pyglet’s <code class="docutils literal notranslate"><span class="pre">decode_attributed</span></code>
 method? This allows inline formatting for text color, e.g.,
 <code class="docutils literal notranslate"><span class="pre">'This</span> <span class="pre">is</span> <span class="pre">{color</span> <span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">255)}red</span> <span class="pre">text'</span></code>.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>pressed</strong> : tuple | str | None</p>
-<blockquote class="last">
-<div><p>If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple <code class="docutils literal notranslate"><span class="pre">(str,</span> <span class="pre">float)</span></code> indicating
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>pressed</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple | str | None</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple <code class="docutils literal notranslate"><span class="pre">(str,</span> <span class="pre">float)</span></code> indicating
 the first key pressed and its timestamp (or <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None)</span></code> if no
 acceptable key was pressed between <code class="docutils literal notranslate"><span class="pre">min_wait</span></code> and <code class="docutils literal notranslate"><span class="pre">max_wait</span></code>).
 If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>, returns a string indicating the first key
 pressed (or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no acceptable key was pressed).</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -958,47 +923,44 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>text</strong> : str</p>
-<blockquote>
-<div><p>The text to be rendered.</p>
-</div></blockquote>
-<p><strong>pos</strong> : list | tuple</p>
-<blockquote>
-<div><p>x, y position of the text. In the default units (-1 to 1, with
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>text</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">The text to be rendered.</p>
+</dd>
+<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | tuple</span></dt>
+<dd><p class="first last">x, y position of the text. In the default units (-1 to 1, with
 positive going up and right) the default is dead center (0, 0).</p>
-</div></blockquote>
-<p><strong>color</strong> : matplotlib color</p>
-<blockquote>
-<div><p>The text color.</p>
-</div></blockquote>
-<p><strong>font_name</strong> : str</p>
-<blockquote>
-<div><p>The name of the font to use.</p>
-</div></blockquote>
-<p><strong>font_size</strong> : float</p>
-<blockquote>
-<div><p>The font size (in points) to use.</p>
-</div></blockquote>
-<p><strong>wrap</strong> : bool</p>
-<blockquote>
-<div><p>Whether or not the text will wrap to fit in screen, appropriate
+</dd>
+<dt><strong>color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib color</span></dt>
+<dd><p class="first last">The text color.</p>
+</dd>
+<dt><strong>font_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">The name of the font to use.</p>
+</dd>
+<dt><strong>font_size</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The font size (in points) to use.</p>
+</dd>
+<dt><strong>wrap</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether or not the text will wrap to fit in screen, appropriate
 for multi-line text. Inappropriate for text requiring
 precise positioning or centering.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote>
-<div><p>Units for <cite>pos</cite>. See <cite>check_units</cite> for options. Applies to
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units for <cite>pos</cite>. See <cite>check_units</cite> for options. Applies to
 <cite>pos</cite> but not <cite>font_size</cite>.</p>
-</div></blockquote>
-<p><strong>attr</strong> : bool</p>
-<blockquote>
-<div><p>Should the text be interpreted with pyglet’s <code class="docutils literal notranslate"><span class="pre">decode_attributed</span></code>
+</dd>
+<dt><strong>attr</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Should the text be interpreted with pyglet’s <code class="docutils literal notranslate"><span class="pre">decode_attributed</span></code>
 method? This allows inline formatting for text color, e.g.,
 <code class="docutils literal notranslate"><span class="pre">'This</span> <span class="pre">is</span> <span class="pre">{color</span> <span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">255)}red</span> <span class="pre">text'</span></code>.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">Instance of visual.Text</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>Instance of visual.Text</strong></dt>
+<dd></dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1019,10 +981,11 @@ the back buffer.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>scr</strong> : array</p>
-<blockquote class="last">
-<div><p>N x M x 3 array of screen pixel colors.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>scr</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">N x M x 3 array of screen pixel colors.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1037,10 +1000,11 @@ the back buffer.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>color</strong> : matplotlib color</p>
-<blockquote class="last">
-<div><p>The background color.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib color</span></dt>
+<dd><p class="first last">The background color.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1071,14 +1035,15 @@ appropriate backgound color.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>check_rms</strong> : str | None</p>
-<blockquote class="last">
-<div><p>Method to use in checking stimulus RMS to ensure appropriate
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>check_rms</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
+<dd><p class="first last">Method to use in checking stimulus RMS to ensure appropriate
 levels. <code class="docutils literal notranslate"><span class="pre">'windowed'</span></code> uses a 10ms window to find the max RMS in
 each channel and checks to see that it is within 6 dB of the stated
 <code class="docutils literal notranslate"><span class="pre">stim_rms</span></code>.  <code class="docutils literal notranslate"><span class="pre">'wholefile'</span></code> checks the RMS of the stimulus as a
 whole, while <code class="docutils literal notranslate"><span class="pre">None</span></code> disables RMS checking.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1103,19 +1068,19 @@ whole, while <code class="docutils literal notranslate"><span class="pre">None</
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>visible</strong> : bool</p>
-<blockquote>
-<div><p>The visibility.</p>
-</div></blockquote>
-<p><strong>flip</strong> : bool</p>
-<blockquote class="last">
-<div><p>If <cite>visible</cite> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, call <cite>flip</cite> after setting visible.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>visible</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">The visibility.</p>
+</dd>
+<dt><strong>flip</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If <cite>visible</cite> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, call <cite>flip</cite> after setting visible.
 This fixes an issue with the window background color not
 being set properly for the first draw after setting visible;
 by default (at least on Linux) the background is black when
 the window is restored, regardless of what the glClearColor
 had been set to.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1130,20 +1095,19 @@ had been set to.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ids</strong> : int | list of int</p>
-<blockquote>
-<div><p>Value(s) to stamp.</p>
-</div></blockquote>
-<p><strong>check</strong> : str</p>
-<blockquote>
-<div><p>If ‘binary’, enforce standard binary value stamping of only values
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>ids</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | list of int</span></dt>
+<dd><p class="first last">Value(s) to stamp.</p>
+</dd>
+<dt><strong>check</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">If ‘binary’, enforce standard binary value stamping of only values
 <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">4,</span> <span class="pre">8]</span></code>. If ‘int4’, enforce values as integers between
 1 and 15.</p>
-</div></blockquote>
-<p><strong>wait_for_last</strong> : bool</p>
-<blockquote class="last">
-<div><p>If True, wait for last trigger to be stamped before returning.</p>
-</div></blockquote>
+</dd>
+<dt><strong>wait_for_last</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, wait for last trigger to be stamped before returning.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1178,31 +1142,31 @@ subject to change!).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>start_of_trial</strong> : bool</p>
-<blockquote>
-<div><p>If True, it checks to make sure that the trial ID has been
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>start_of_trial</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, it checks to make sure that the trial ID has been
 stamped appropriately. Set to False only in cases where
 <code class="docutils literal notranslate"><span class="pre">flip_and_play</span></code> is to be used mid-trial (should be rare!).</p>
-</div></blockquote>
-<p><strong>flip</strong> : bool</p>
-<blockquote>
-<div><p>If False, don’t flip the screen.</p>
-</div></blockquote>
-<p><strong>when</strong> : float | None</p>
-<blockquote>
-<div><p>Time to start stimulus. If None, start immediately.
+</dd>
+<dt><strong>flip</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If False, don’t flip the screen.</p>
+</dd>
+<dt><strong>when</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | None</span></dt>
+<dd><p class="first last">Time to start stimulus. If None, start immediately.
 Note that due to flip timing limitations, this is only a
 guaranteed <em>minimum</em> (not absolute) wait time before the
 flip completes (if <cite>flip</cite> is <code class="docutils literal notranslate"><span class="pre">True</span></code>). As a result, in some
 cases <cite>when</cite> should be set to a value smaller than your true
 intended flip time.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>flip_time</strong> : float</p>
-<blockquote class="last">
-<div><p>The timestamp of the screen flip.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>flip_time</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The timestamp of the screen flip.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1267,10 +1231,11 @@ eye-tracker calibration.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>visibility</strong> : bool</p>
-<blockquote class="last">
-<div><p>If True, show; if False, hide.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>visibility</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, show; if False, hide.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1301,53 +1266,49 @@ trial.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>objects</strong> : list | Rectangle | Circle</p>
-<blockquote>
-<div><p>A list of objects (or a single object) that the user may click on.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>objects</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | Rectangle | Circle</span></dt>
+<dd><p class="first last">A list of objects (or a single object) that the user may click on.
 Supported types are: Rectangle, Circle</p>
-</div></blockquote>
-<p><strong>max_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration after which control is returned if no button is clicked.</p>
-</div></blockquote>
-<p><strong>min_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration for which to ignore button clicks.</p>
-</div></blockquote>
-<p><strong>live_buttons</strong> : list | None</p>
-<blockquote>
-<div><p>List of strings indicating acceptable buttons.
+</dd>
+<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration after which control is returned if no button is clicked.</p>
+</dd>
+<dt><strong>min_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration for which to ignore button clicks.</p>
+</dd>
+<dt><strong>live_buttons</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">List of strings indicating acceptable buttons.
 <code class="docutils literal notranslate"><span class="pre">None</span></code> accepts all mouse clicks.</p>
-</div></blockquote>
-<p><strong>timestamp</strong> : bool</p>
-<blockquote>
-<div><p>Whether the mouse click should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
+</dd>
+<dt><strong>timestamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether the mouse click should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
 the mouse click time relative to the value given in
 <cite>relative_to</cite>.</p>
-</div></blockquote>
-<p><strong>relative_to</strong> : None | float</p>
-<blockquote>
-<div><p>A time relative to which timestamping is done. Ignored if
+</dd>
+<dt><strong>relative_to</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | float</span></dt>
+<dd><p class="first last">A time relative to which timestamping is done. Ignored if
 <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the
 time <cite>wait_one_click</cite> was called.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clicked</strong> : tuple | str | None</p>
-<blockquote>
-<div><p>If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple (str, int, int, float)
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>clicked</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple | str | None</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple (str, int, int, float)
 indicating the first valid button clicked and its timestamp (or
 <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable button was clicked
 between <cite>min_wait</cite> and <cite>max_wait</cite>). If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>,
 returns a tuple (str, int, int) indicating the first button clicked
 (or <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable key was clicked).</p>
-</div></blockquote>
-<p><strong>index</strong> : the index of the object in the list of objects that was clicked</p>
-<blockquote class="last">
-<div><p>on. Returns None if time ran out before a valid click. If objects
+</dd>
+<dt><strong>index</strong> <span class="classifier-delimiter">:</span> <span class="classifier">the index of the object in the list of objects that was clicked</span></dt>
+<dd><p class="first last">on. Returns None if time ran out before a valid click. If objects
 were overlapping, it returns the index of the object that comes
 first in the <cite>objects</cite> argument.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1362,48 +1323,45 @@ first in the <cite>objects</cite> argument.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>max_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration after which control is returned if no button is clicked.</p>
-</div></blockquote>
-<p><strong>min_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration for which to ignore button clicks.</p>
-</div></blockquote>
-<p><strong>live_buttons</strong> : list | None</p>
-<blockquote>
-<div><p>List of strings indicating acceptable buttons.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration after which control is returned if no button is clicked.</p>
+</dd>
+<dt><strong>min_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration for which to ignore button clicks.</p>
+</dd>
+<dt><strong>live_buttons</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">List of strings indicating acceptable buttons.
 <code class="docutils literal notranslate"><span class="pre">None</span></code> accepts all mouse clicks.</p>
-</div></blockquote>
-<p><strong>timestamp</strong> : bool</p>
-<blockquote>
-<div><p>Whether the mouse click should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
+</dd>
+<dt><strong>timestamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether the mouse click should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
 the mouse click time relative to the value given in
 <code class="docutils literal notranslate"><span class="pre">relative_to</span></code>.</p>
-</div></blockquote>
-<p><strong>relative_to</strong> : None | float</p>
-<blockquote>
-<div><p>A time relative to which timestamping is done. Ignored if
+</dd>
+<dt><strong>relative_to</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | float</span></dt>
+<dd><p class="first last">A time relative to which timestamping is done. Ignored if
 <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the
 time <code class="docutils literal notranslate"><span class="pre">wait_one_click</span></code> was called.</p>
-</div></blockquote>
-<p><strong>visible</strong> : None | bool</p>
-<blockquote>
-<div><p>Whether to show the cursor while in the function. <code class="docutils literal notranslate"><span class="pre">None</span></code> has no
+</dd>
+<dt><strong>visible</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | bool</span></dt>
+<dd><p class="first last">Whether to show the cursor while in the function. <code class="docutils literal notranslate"><span class="pre">None</span></code> has no
 effect and is the default. A boolean will show it (or not) while
 the function has control and then set visibility back to its
 previous value afterwards.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clicks</strong> : list of tuple</p>
-<blockquote class="last">
-<div><p>Returns a list of the clicks between min_wait and max_wait.
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>clicks</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of tuple</span></dt>
+<dd><p class="first last">Returns a list of the clicks between min_wait and max_wait.
 If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, each entry is a tuple (str, int, int,
 float) indicating the button clicked and its timestamp.
 If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>, each entry is a tuple (str, int, int)
 indicating the button clicked.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1422,41 +1380,39 @@ indicating the button clicked.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>max_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration after which control is returned.</p>
-</div></blockquote>
-<p><strong>min_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration for which to ignore keypresses (force-quit keys will
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration after which control is returned.</p>
+</dd>
+<dt><strong>min_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration for which to ignore keypresses (force-quit keys will
 still be checked at the end of the wait).</p>
-</div></blockquote>
-<p><strong>live_keys</strong> : list | None</p>
-<blockquote>
-<div><p>List of strings indicating acceptable keys or buttons. Other data
+</dd>
+<dt><strong>live_keys</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">List of strings indicating acceptable keys or buttons. Other data
 types are cast as strings, so a list of ints will also work.
 <code class="docutils literal notranslate"><span class="pre">None</span></code> accepts all keypresses.</p>
-</div></blockquote>
-<p><strong>timestamp</strong> : bool</p>
-<blockquote>
-<div><p>Whether the keypresses should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
+</dd>
+<dt><strong>timestamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether the keypresses should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
 the button press time relative to the value given in
 <cite>relative_to</cite>.</p>
-</div></blockquote>
-<p><strong>relative_to</strong> : None | float</p>
-<blockquote>
-<div><p>A time relative to which timestamping is done. Ignored if
+</dd>
+<dt><strong>relative_to</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | float</span></dt>
+<dd><p class="first last">A time relative to which timestamping is done. Ignored if
 <cite>timestamp</cite> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative
 to the time <cite>wait_for_presses</cite> was called.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>presses</strong> : list</p>
-<blockquote class="last">
-<div><p>If timestamp==False, returns a list of strings indicating which
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>presses</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">If timestamp==False, returns a list of strings indicating which
 keys were pressed. Otherwise, returns a list of tuples
 (str, float) of keys and their timestamps.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1475,49 +1431,46 @@ keys were pressed. Otherwise, returns a list of tuples
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>max_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration after which control is returned if no button is clicked.</p>
-</div></blockquote>
-<p><strong>min_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration for which to ignore button clicks.</p>
-</div></blockquote>
-<p><strong>live_buttons</strong> : list | None</p>
-<blockquote>
-<div><p>List of strings indicating acceptable buttons.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration after which control is returned if no button is clicked.</p>
+</dd>
+<dt><strong>min_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration for which to ignore button clicks.</p>
+</dd>
+<dt><strong>live_buttons</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">List of strings indicating acceptable buttons.
 <code class="docutils literal notranslate"><span class="pre">None</span></code> accepts all mouse clicks.</p>
-</div></blockquote>
-<p><strong>timestamp</strong> : bool</p>
-<blockquote>
-<div><p>Whether the mouse click should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
+</dd>
+<dt><strong>timestamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether the mouse click should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
 the mouse click time relative to the value given in
 <code class="docutils literal notranslate"><span class="pre">relative_to</span></code>.</p>
-</div></blockquote>
-<p><strong>relative_to</strong> : None | float</p>
-<blockquote>
-<div><p>A time relative to which timestamping is done. Ignored if
+</dd>
+<dt><strong>relative_to</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | float</span></dt>
+<dd><p class="first last">A time relative to which timestamping is done. Ignored if
 <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the
 time <cite>wait_one_click</cite> was called.</p>
-</div></blockquote>
-<p><strong>visible</strong> : None | bool</p>
-<blockquote>
-<div><p>Whether to show the cursor while in the function. <code class="docutils literal notranslate"><span class="pre">None</span></code> has no
+</dd>
+<dt><strong>visible</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | bool</span></dt>
+<dd><p class="first last">Whether to show the cursor while in the function. <code class="docutils literal notranslate"><span class="pre">None</span></code> has no
 effect and is the default. A boolean will show it (or not) while
 the function has control and then set visibility back to its
 previous value afterwards.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>clicked</strong> : tuple | str | None</p>
-<blockquote class="last">
-<div><p>If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple (str, int, int, float)
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>clicked</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple | str | None</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple (str, int, int, float)
 indicating the first button clicked and its timestamp (or
 <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable button was clicked
 between <cite>min_wait</cite> and <cite>max_wait</cite>). If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>,
 returns a tuple (str, int, int) indicating the first button clicked
 (or <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable key was clicked).</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1536,43 +1489,41 @@ returns a tuple (str, int, int) indicating the first button clicked
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>max_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration after which control is returned if no key is pressed.</p>
-</div></blockquote>
-<p><strong>min_wait</strong> : float</p>
-<blockquote>
-<div><p>Duration for which to ignore keypresses (force-quit keys will
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration after which control is returned if no key is pressed.</p>
+</dd>
+<dt><strong>min_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Duration for which to ignore keypresses (force-quit keys will
 still be checked at the end of the wait).</p>
-</div></blockquote>
-<p><strong>live_keys</strong> : list | None</p>
-<blockquote>
-<div><p>List of strings indicating acceptable keys or buttons. Other data
+</dd>
+<dt><strong>live_keys</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">List of strings indicating acceptable keys or buttons. Other data
 types are cast as strings, so a list of ints will also work.
 <code class="docutils literal notranslate"><span class="pre">None</span></code> accepts all keypresses.</p>
-</div></blockquote>
-<p><strong>timestamp</strong> : bool</p>
-<blockquote>
-<div><p>Whether the keypress should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
+</dd>
+<dt><strong>timestamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether the keypress should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
 the button press time relative to the value given in
 <cite>relative_to</cite>.</p>
-</div></blockquote>
-<p><strong>relative_to</strong> : None | float</p>
-<blockquote>
-<div><p>A time relative to which timestamping is done. Ignored if
+</dd>
+<dt><strong>relative_to</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | float</span></dt>
+<dd><p class="first last">A time relative to which timestamping is done. Ignored if
 <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the
 time <cite>wait_one_press</cite> was called.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>pressed</strong> : tuple | str | None</p>
-<blockquote class="last">
-<div><p>If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple (str, float) indicating the
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>pressed</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple | str | None</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple (str, float) indicating the
 first key pressed and its timestamp (or <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None)</span></code> if no
 acceptable key was pressed between <cite>min_wait</cite> and <cite>max_wait</cite>).
 If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>, returns a string indicating the first key
 pressed (or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no acceptable key was pressed).</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1591,10 +1542,11 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>secs</strong> : float</p>
-<blockquote class="last">
-<div><p>Number of seconds to wait.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>secs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Number of seconds to wait.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1613,18 +1565,20 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>timestamp</strong> : float</p>
-<blockquote>
-<div><p>A time to wait until, evaluated against the experiment master
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>timestamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">A time to wait until, evaluated against the experiment master
 clock.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>remaining_time</strong> : float</p>
-<blockquote class="last">
-<div><p>The difference between <code class="docutils literal notranslate"><span class="pre">timestamp</span></code> and the time <cite>wait_until</cite>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>remaining_time</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The difference between <code class="docutils literal notranslate"><span class="pre">timestamp</span></code> and the time <cite>wait_until</cite>
 was called.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1654,19 +1608,18 @@ processing prior to calling <cite>wait_until</cite>).</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>event_type</strong> : str</p>
-<blockquote>
-<div><p>Type of event (e.g., keypress, screen flip, etc.)</p>
-</div></blockquote>
-<p><strong>value</strong> : None | str</p>
-<blockquote>
-<div><p>Anything that can be cast to a string is okay here.</p>
-</div></blockquote>
-<p><strong>timestamp</strong> : float | None</p>
-<blockquote class="last">
-<div><p>The timestamp when the event occurred.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, will use the
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>event_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Type of event (e.g., keypress, screen flip, etc.)</p>
+</dd>
+<dt><strong>value</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None | str</span></dt>
+<dd><p class="first last">Anything that can be cast to a string is okay here.</p>
+</dd>
+<dt><strong>timestamp</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | None</span></dt>
+<dd><p class="first last">The timestamp when the event occurred.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, will use the
 time the data line was written from the master clock.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -1691,7 +1644,7 @@ time the data line was written from the master clock.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

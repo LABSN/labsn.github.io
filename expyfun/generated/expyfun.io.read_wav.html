@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.io.read_wav</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.io.read_tab.html" title="Previous Chapter: expyfun.io.read_tab"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.io.read_tab</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.io.write_hdf5.html" title="Next Chapter: expyfun.io.write_hdf5"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.io.write_hdf5 &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-io-read-wav">
 <h1>expyfun.io.read_wav<a class="headerlink" href="#expyfun-io-read-wav" title="Permalink to this headline">¶</a></h1>
@@ -130,23 +108,24 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fname</strong> : str</p>
-<blockquote>
-<div><p>Filename to load.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Filename to load.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>data</strong> : array</p>
-<blockquote>
-<div><p>The WAV file data. Will be of datatype np.float64. If the data
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>data</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The WAV file data. Will be of datatype np.float64. If the data
 had been saved as integers (typical), this function will
 automatically rescale the data to be between -1 and +1.
 The result will have dimension n_channels x n_samples.</p>
-</div></blockquote>
-<p><strong>fs</strong> : int</p>
-<blockquote class="last">
-<div><p>The wav sample rate</p>
-</div></blockquote>
+</dd>
+<dt><strong>fs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">The wav sample rate</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -167,7 +146,7 @@ The result will have dimension n_channels x n_samples.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

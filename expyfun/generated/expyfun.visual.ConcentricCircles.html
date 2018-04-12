@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.visual.ConcentricCircles</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.visual.Circle.html" title="Previous Chapter: expyfun.visual.Circle"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.visual.Circle</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.visual.Diamond.html" title="Next Chapter: expyfun.visual.Diamond"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.visua... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-visual-concentriccircles">
 <h1>expyfun.visual.ConcentricCircles<a class="headerlink" href="#expyfun-visual-concentriccircles" title="Permalink to this headline">¶</a></h1>
@@ -130,35 +108,33 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ec</strong> : instance of ExperimentController</p>
-<blockquote>
-<div><p>Parent EC.</p>
-</div></blockquote>
-<p><strong>radii</strong> : list of float</p>
-<blockquote>
-<div><p>Radii of the circles. Note that circles will be drawn in order,
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController</span></dt>
+<dd><p class="first last">Parent EC.</p>
+</dd>
+<dt><strong>radii</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of float</span></dt>
+<dd><p class="first last">Radii of the circles. Note that circles will be drawn in order,
 so using e.g., radii=[1., 2.] will cause the first circle to be
 covered by the second.</p>
-</div></blockquote>
-<p><strong>pos</strong> : array-like</p>
-<blockquote>
-<div><p>2-element array-like with the X, Y center position.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote>
-<div><p>Units to use. These will apply to all spatial aspects of the drawing.
+</dd>
+<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">2-element array-like with the X, Y center position.</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. These will apply to all spatial aspects of the drawing.
 See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
-<p><strong>colors</strong> : list or tuple of matplotlib Colors</p>
-<blockquote>
-<div><p>Color to fill each circle with.</p>
-</div></blockquote>
+</dd>
+<dt><strong>colors</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list or tuple of matplotlib Colors</span></dt>
+<dd><p class="first last">Color to fill each circle with.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>circle</strong> : instance of Circle</p>
-<blockquote class="last">
-<div><p>The circle object.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>circle</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of Circle</span></dt>
+<dd><p class="first last">The circle object.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -210,18 +186,17 @@ See <code class="docutils literal notranslate"><span class="pre">check_units</sp
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>color</strong> : matplotlib Color</p>
-<blockquote>
-<div><p>Color of the circle.</p>
-</div></blockquote>
-<p><strong>idx</strong> : int</p>
-<blockquote>
-<div><p>Index of the circle.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color</span></dt>
+<dd><p class="first last">Color of the circle.</p>
+</dd>
+<dt><strong>idx</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Index of the circle.</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -236,11 +211,12 @@ See <code class="docutils literal notranslate"><span class="pre">check_units</sp
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>colors</strong> : list or tuple of matplotlib Colors</p>
-<blockquote class="last">
-<div><p>Must be of type list or tuple, and contain the same number of
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>colors</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list or tuple of matplotlib Colors</span></dt>
+<dd><p class="first last">Must be of type list or tuple, and contain the same number of
 colors as the number of circles.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -255,14 +231,14 @@ colors as the number of circles.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>pos</strong> : array-like</p>
-<blockquote>
-<div><p>X, Y center of the circle.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">X, Y center of the circle.</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -277,15 +253,15 @@ colors as the number of circles.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>radii</strong> : array-like</p>
-<blockquote>
-<div><p>List of radii to assign to the circles. Must contain the same
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>radii</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">List of radii to assign to the circles. Must contain the same
 number of radii as the number of circles.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -300,18 +276,17 @@ number of radii as the number of circles.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>radius</strong> : float</p>
-<blockquote>
-<div><p>Radius the circle.</p>
-</div></blockquote>
-<p><strong>idx</strong> : int</p>
-<blockquote>
-<div><p>Index of the circle.</p>
-</div></blockquote>
-<p><strong>units</strong> : str</p>
-<blockquote class="last">
-<div><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>radius</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Radius the circle.</p>
+</dd>
+<dt><strong>idx</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">Index of the circle.</p>
+</dd>
+<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -334,7 +309,7 @@ number of radii as the number of circles.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.stimuli.crm_sentence</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.stimuli.crm_response_menu.html" title="Previous Chapter: expyfun.stimuli.crm_response_menu"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.stimu...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.stimuli.play_sound.html" title="Next Chapter: expyfun.stimuli.play_sound"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.stimu... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-stimuli-crm-sentence">
 <h1>expyfun.stimuli.crm_sentence<a class="headerlink" href="#expyfun-stimuli-crm-sentence" title="Permalink to this headline">¶</a></h1>
@@ -130,61 +108,54 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fs</strong> : float</p>
-<blockquote>
-<div><p>The sampling rate of the corpus to load. You must have run
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>fs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The sampling rate of the corpus to load. You must have run
 <a class="reference internal" href="expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="expyfun.stimuli.crm_prepare_corpus"><code class="xref py py-func docutils literal notranslate"><span class="pre">expyfun.stimuli.crm_prepare_corpus()</span></code></a> for that sampling
 rate first.</p>
-</div></blockquote>
-<p><strong>sex</strong> : str | int</p>
-<blockquote>
-<div><p>The sex of the talker</p>
-</div></blockquote>
-<p><strong>talker_num</strong> : str | int</p>
-<blockquote>
-<div><p>The zero-indexed talker number. Note that, obviously, male 2 is a
+</dd>
+<dt><strong>sex</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | int</span></dt>
+<dd><p class="first last">The sex of the talker</p>
+</dd>
+<dt><strong>talker_num</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | int</span></dt>
+<dd><p class="first last">The zero-indexed talker number. Note that, obviously, male 2 is a
 different talker from female 2.</p>
-</div></blockquote>
-<p><strong>callsign</strong> : str | int</p>
-<blockquote>
-<div><p>The callsign of the sentence.</p>
-</div></blockquote>
-<p><strong>color</strong> : str | int</p>
-<blockquote>
-<div><p>The color of the sentence.</p>
-</div></blockquote>
-<p><strong>number</strong> : str | int</p>
-<blockquote>
-<div><p>The number of the sentence. Note that due to zero-indexing, a value of
+</dd>
+<dt><strong>callsign</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | int</span></dt>
+<dd><p class="first last">The callsign of the sentence.</p>
+</dd>
+<dt><strong>color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | int</span></dt>
+<dd><p class="first last">The color of the sentence.</p>
+</dd>
+<dt><strong>number</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | int</span></dt>
+<dd><p class="first last">The number of the sentence. Note that due to zero-indexing, a value of
 <code class="docutils literal notranslate"><span class="pre">'3'</span></code> will cause the talker to say “three”, while a value of <code class="docutils literal notranslate"><span class="pre">3</span></code>
 will cause the talker to say “four” (see Notes below for more
 information).</p>
-</div></blockquote>
-<p><strong>ref_rms</strong> : float</p>
-<blockquote>
-<div><p>The baseline RMS value to normalize the stimuli. Default is 0.01.
+</dd>
+<dt><strong>ref_rms</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The baseline RMS value to normalize the stimuli. Default is 0.01.
 Normalization is done at the corpus level, not at the sentence or
 talker.</p>
-</div></blockquote>
-<p><strong>ramp_dur</strong> : float</p>
-<blockquote>
-<div><p>The duration (in seconds) of the onset-offset ramps. Use 0 for no ramp.</p>
-</div></blockquote>
-<p><strong>stereo</strong> : bool</p>
-<blockquote>
-<div><p>Whether to return the data as stereo or not.</p>
-</div></blockquote>
-<p><strong>path</strong> : str</p>
-<blockquote>
-<div><p>The location of the stimulus directory. Defaults to the data directory
+</dd>
+<dt><strong>ramp_dur</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The duration (in seconds) of the onset-offset ramps. Use 0 for no ramp.</p>
+</dd>
+<dt><strong>stereo</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether to return the data as stereo or not.</p>
+</dd>
+<dt><strong>path</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">The location of the stimulus directory. Defaults to the data directory
 where the raw CRM originals are stored.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>sentence</strong> : array</p>
-<blockquote class="last">
-<div><p>The requested sentence data.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>sentence</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The requested sentence data.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -216,7 +187,7 @@ number argument.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

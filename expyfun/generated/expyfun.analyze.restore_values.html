@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.restore_values</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.analyze.press_times_to_hmfc.html" title="Previous Chapter: expyfun.analyze.press_times_to_hmfc"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.analy...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.analyze.rt_chisq.html" title="Next Chapter: expyfun.analyze.rt_chisq"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analy... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-analyze-restore-values">
 <h1>expyfun.analyze.restore_values<a class="headerlink" href="#expyfun-analyze-restore-values" title="Permalink to this headline">¶</a></h1>
@@ -130,29 +108,28 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>correct</strong> : array</p>
-<blockquote>
-<div><p>1D array of correct values.</p>
-</div></blockquote>
-<p><strong>other</strong> : array</p>
-<blockquote>
-<div><p>1D array of other values that have missing components.</p>
-</div></blockquote>
-<p><strong>idx</strong> : array</p>
-<blockquote>
-<div><p>Indices of the values in correct that are missing from other.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>correct</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">1D array of correct values.</p>
+</dd>
+<dt><strong>other</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">1D array of other values that have missing components.</p>
+</dd>
+<dt><strong>idx</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Indices of the values in correct that are missing from other.
 If None, they will be estimated from the data.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>other</strong> : array</p>
-<blockquote>
-<div><p>Array of other values, with interpolated values inserted.</p>
-</div></blockquote>
-<p><strong>idx</strong> : array</p>
-<blockquote class="last">
-<div><p>Array of indices that were interpolated.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>other</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Array of other values, with interpolated values inserted.</p>
+</dd>
+<dt><strong>idx</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">Array of indices that were interpolated.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -179,7 +156,7 @@ to be accurately estimated.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.stimuli.TrackerDealer</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.stimuli.TrackerBinom.html" title="Previous Chapter: expyfun.stimuli.TrackerBinom"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.stimu...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.stimuli.TrackerUD.html" title="Next Chapter: expyfun.stimuli.TrackerUD"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.stimu... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-stimuli-trackerdealer">
 <h1>expyfun.stimuli.TrackerDealer<a class="headerlink" href="#expyfun-stimuli-trackerdealer" title="Permalink to this headline">¶</a></h1>
@@ -130,33 +108,32 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>trackers</strong> : array-like</p>
-<blockquote>
-<div><p>The trackers to use. Must be instances of
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>trackers</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
+<dd><p class="first last">The trackers to use. Must be instances of
 <a class="reference internal" href="expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerUD</span></code></a> or
 <a class="reference internal" href="expyfun.stimuli.TrackerBinom.html#expyfun.stimuli.TrackerBinom" title="expyfun.stimuli.TrackerBinom"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerBinom</span></code></a>.</p>
-</div></blockquote>
-<p><strong>max_lag</strong> : int</p>
-<blockquote>
-<div><p>The number of reversals or trials by which the leading tracker may lead
+</dd>
+<dt><strong>max_lag</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd><p class="first last">The number of reversals or trials by which the leading tracker may lead
 the lagging one. The <code class="docutils literal notranslate"><span class="pre">pace_rule</span></code> dictates whether reversals or trials
 are used.</p>
-</div></blockquote>
-<p><strong>pace_rule</strong> : str</p>
-<blockquote>
-<div><p>Must be <code class="docutils literal notranslate"><span class="pre">reversals</span></code> or <code class="docutils literal notranslate"><span class="pre">trials</span></code>.</p>
-</div></blockquote>
-<p><strong>rand</strong> : numpy.random.RandomState | None</p>
-<blockquote>
-<div><p>The random process used to deal the trackers. If None, the process is
+</dd>
+<dt><strong>pace_rule</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Must be <code class="docutils literal notranslate"><span class="pre">reversals</span></code> or <code class="docutils literal notranslate"><span class="pre">trials</span></code>.</p>
+</dd>
+<dt><strong>rand</strong> <span class="classifier-delimiter">:</span> <span class="classifier">numpy.random.RandomState | None</span></dt>
+<dd><p class="first last">The random process used to deal the trackers. If None, the process is
 seeded based on the current time.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>dealer</strong> : instance of TrackerDealer</p>
-<blockquote class="last">
-<div><p>The tracker dealer object.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>dealer</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of TrackerDealer</span></dt>
+<dd><p class="first last">The tracker dealer object.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -167,21 +144,21 @@ property, e.g. <code class="docutils literal notranslate"><span class="pre">deal
 <p>If dealing from TrackerBinom objects (which is probably not a good idea),
 <code class="docutils literal notranslate"><span class="pre">stop_early</span></code> must be <code class="docutils literal notranslate"><span class="pre">False</span></code> or else they cannot be ensured to keep
 pace.</p>
-<p class="rubric">Attributes</p>
-<table border="1" class="longtable docutils">
-<colgroup>
-<col width="10%" />
-<col width="90%" />
-</colgroup>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">shape</span></code></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.stopped" title="expyfun.stimuli.TrackerDealer.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></td>
-<td>Are all the trackers stopped</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.trackers" title="expyfun.stimuli.TrackerDealer.trackers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackers</span></code></a></td>
-<td>All of the tracker objects in the container</td>
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>shape</strong></dt>
+<dd></dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.stopped" title="expyfun.stimuli.TrackerDealer.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></dt>
+<dd><p class="first last">Are all the trackers stopped</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.trackers" title="expyfun.stimuli.TrackerDealer.trackers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackers</span></code></a></dt>
+<dd><p class="first last">All of the tracker objects in the container</p>
+</dd>
+</dl>
+</td>
 </tr>
 </tbody>
 </table>
@@ -217,26 +194,26 @@ pace.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>include_skips</strong> : bool</p>
-<blockquote>
-<div><p>Whether or not to include trials where a tracker was dealt but
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>include_skips</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">Whether or not to include trials where a tracker was dealt but
 no response was made.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>tracker_history</strong> : list of int</p>
-<blockquote>
-<div><p>The index of which tracker was dealt on each trial. Note that
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>tracker_history</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of int</span></dt>
+<dd><p class="first last">The index of which tracker was dealt on each trial. Note that
 the ints in this list correspond the the raveled index.</p>
-</div></blockquote>
-<p><strong>x_history</strong> : list of float</p>
-<blockquote>
-<div><p>The level of the dealt tracker on each trial.</p>
-</div></blockquote>
-<p><strong>response_history</strong> : list of bool</p>
-<blockquote class="last">
-<div><p>The response history (i.e., correct or incorrect)</p>
-</div></blockquote>
+</dd>
+<dt><strong>x_history</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of float</span></dt>
+<dd><p class="first last">The level of the dealt tracker on each trial.</p>
+</dd>
+<dt><strong>response_history</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of bool</span></dt>
+<dd><p class="first last">The response history (i.e., correct or incorrect)</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -251,14 +228,14 @@ the ints in this list correspond the the raveled index.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>subscripts</strong> : list-like</p>
-<blockquote>
-<div><p>The position of the selected tracker.</p>
-</div></blockquote>
-<p><strong>x_current</strong> : float</p>
-<blockquote class="last">
-<div><p>The level of the selected tracker.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>subscripts</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list-like</span></dt>
+<dd><p class="first last">The position of the selected tracker.</p>
+</dd>
+<dt><strong>x_current</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">The level of the selected tracker.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -273,10 +250,11 @@ the ints in this list correspond the the raveled index.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>correct</strong> : boolean</p>
-<blockquote class="last">
-<div><p>Was the most recent subject response correct?</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>correct</strong> <span class="classifier-delimiter">:</span> <span class="classifier">boolean</span></dt>
+<dd><p class="first last">Was the most recent subject response correct?</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -311,7 +289,7 @@ the ints in this list correspond the the raveled index.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

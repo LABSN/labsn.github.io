@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.codeblocks.find_pupil_tone_impulse_response</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.codeblocks.find_pupil_dynamic_range.html" title="Previous Chapter: expyfun.codeblocks.find_pupil_dynamic_range"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.codeb...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.analyze.barplot.html" title="Next Chapter: expyfun.analyze.barplot"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analy... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-codeblocks-find-pupil-tone-impulse-response">
 <h1>expyfun.codeblocks.find_pupil_tone_impulse_response<a class="headerlink" href="#expyfun-codeblocks-find-pupil-tone-impulse-response" title="Permalink to this headline">¶</a></h1>
@@ -130,50 +108,44 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ec</strong> : instance of ExperimentController</p>
-<blockquote>
-<div><p>The experiment controller.</p>
-</div></blockquote>
-<p><strong>el</strong> : instance of EyelinkController</p>
-<blockquote>
-<div><p>The Eyelink controller.</p>
-</div></blockquote>
-<p><strong>bgcolor</strong> : color</p>
-<blockquote>
-<div><p>Background color to use.</p>
-</div></blockquote>
-<p><strong>fcolor</strong> : color</p>
-<blockquote>
-<div><p>Fixation dot color to use.</p>
-</div></blockquote>
-<p><strong>prompt</strong> : bool</p>
-<blockquote>
-<div><p>If True, a standard prompt message will be displayed.</p>
-</div></blockquote>
-<p><strong>verbose</strong> : bool, str, int, or None</p>
-<blockquote>
-<div><p>If not None, override default verbose level (see expyfun.verbose).</p>
-</div></blockquote>
-<p><strong>targ_is_fm</strong> : bool</p>
-<blockquote>
-<div><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code> then use frequency modulated tones as the target and
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController</span></dt>
+<dd><p class="first last">The experiment controller.</p>
+</dd>
+<dt><strong>el</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of EyelinkController</span></dt>
+<dd><p class="first last">The Eyelink controller.</p>
+</dd>
+<dt><strong>bgcolor</strong> <span class="classifier-delimiter">:</span> <span class="classifier">color</span></dt>
+<dd><p class="first last">Background color to use.</p>
+</dd>
+<dt><strong>fcolor</strong> <span class="classifier-delimiter">:</span> <span class="classifier">color</span></dt>
+<dd><p class="first last">Fixation dot color to use.</p>
+</dd>
+<dt><strong>prompt</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, a standard prompt message will be displayed.</p>
+</dd>
+<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, str, int, or None</span></dt>
+<dd><p class="first last">If not None, override default verbose level (see expyfun.verbose).</p>
+</dd>
+<dt><strong>targ_is_fm</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">True</span></code> then use frequency modulated tones as the target and
 constant frequency tones as the non-target stimuli. Otherwise use
 constant frequency tones are targets and fm tones as non-targets.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>srf</strong> : array</p>
-<blockquote>
-<div><p>The pupil response function to sound.</p>
-</div></blockquote>
-<p><strong>t</strong> : array</p>
-<blockquote>
-<div><p>The time points for the response function.</p>
-</div></blockquote>
-<p><strong>std_err</strong> : array</p>
-<blockquote class="last">
-<div><p>The standard error as a function of time.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>srf</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The pupil response function to sound.</p>
+</dd>
+<dt><strong>t</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The time points for the response function.</p>
+</dd>
+<dt><strong>std_err</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
+<dd><p class="first last">The standard error as a function of time.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -196,7 +168,7 @@ constant frequency tones are targets and fm tones as non-targets.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

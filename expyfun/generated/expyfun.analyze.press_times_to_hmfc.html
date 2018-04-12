@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.press_times_to_hmfc</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.analyze.plot_screen.html" title="Previous Chapter: expyfun.analyze.plot_screen"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.analy...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.analyze.restore_values.html" title="Next Chapter: expyfun.analyze.restore_values"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.analy... &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-analyze-press-times-to-hmfc">
 <h1>expyfun.analyze.press_times_to_hmfc<a class="headerlink" href="#expyfun-analyze-press-times-to-hmfc" title="Permalink to this headline">¶</a></h1>
@@ -130,54 +108,50 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>presses</strong> : list</p>
-<blockquote>
-<div><p>List of press times (in seconds).</p>
-</div></blockquote>
-<p><strong>targets</strong> : list</p>
-<blockquote>
-<div><p>List of target times.</p>
-</div></blockquote>
-<p><strong>foils</strong> : list</p>
-<blockquote>
-<div><p>List of foil (distractor) times.</p>
-</div></blockquote>
-<p><strong>tmin</strong> : float</p>
-<blockquote>
-<div><p>Minimum time after a target/foil to consider a press, exclusive.</p>
-</div></blockquote>
-<p><strong>tmax</strong> : float</p>
-<blockquote>
-<div><p>Maximum time after a target/foil to consider a press, inclusive.
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>presses</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">List of press times (in seconds).</p>
+</dd>
+<dt><strong>targets</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">List of target times.</p>
+</dd>
+<dt><strong>foils</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
+<dd><p class="first last">List of foil (distractor) times.</p>
+</dd>
+<dt><strong>tmin</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first last">Minimum time after a target/foil to consider a press, exclusive.</p>
+</dd>
+<dt><strong>tmax</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd><p class="first">Maximum time after a target/foil to consider a press, inclusive.
 The final bounds will be <span class="math notranslate">\((t_{min}, t_{max}]\)</span>.</p>
-<div class="admonition note">
+<div class="last admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Do do not rely on floating point arithmetic to get
 exclusive/inclusive bounds right consistently. Such
 exact equivalence in floating point arithmetic should
 not be relied upon.</p>
 </div>
-</div></blockquote>
-<p><strong>return_type</strong> : str | list of str</p>
-<blockquote>
-<div><p>A list containing one or more of <code class="docutils literal notranslate"><span class="pre">['counts',</span> <span class="pre">'rts']</span></code> to return
+</dd>
+<dt><strong>return_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | list of str</span></dt>
+<dd><p class="first last">A list containing one or more of <code class="docutils literal notranslate"><span class="pre">['counts',</span> <span class="pre">'rts']</span></code> to return
 a tuple of outputs (see below for description).
 Can also be a single string, in which case only the single
 requested type is returned (not within a tuple).</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>hmfco</strong> : tuple</p>
-<blockquote>
-<div><p>5-element tuple of hits, misses, false alarms, correct rejections,
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>hmfco</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple</span></dt>
+<dd><p class="first last">5-element tuple of hits, misses, false alarms, correct rejections,
 and other presses (not within the window for a target or a masker).
 Only returned if <code class="docutils literal notranslate"><span class="pre">'counts'</span></code> is in <code class="docutils literal notranslate"><span class="pre">return_type</span></code>.</p>
-</div></blockquote>
-<p><strong>rts</strong> : tuple</p>
-<blockquote class="last">
-<div><p>2-element tuple of reaction times for hits and false alarms.
+</dd>
+<dt><strong>rts</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple</span></dt>
+<dd><p class="first last">2-element tuple of reaction times for hits and false alarms.
 Only returned if <code class="docutils literal notranslate"><span class="pre">'rts'</span></code> is in <code class="docutils literal notranslate"><span class="pre">return_type</span></code>.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -203,7 +177,7 @@ to “other” times.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>

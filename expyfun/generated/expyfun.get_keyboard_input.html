@@ -96,29 +96,7 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-3">
-        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
-<li><a class="reference internal" href="#">expyfun.get_keyboard_input</a></li>
-</ul>
-
-  <li>
-    <a href="expyfun.download_version.html" title="Previous Chapter: expyfun.download_version"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; expyfun.downl...</span>
-    </a>
-  </li>
-  <li>
-    <a href="expyfun.wait_secs.html" title="Next Chapter: expyfun.wait_secs"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">expyfun.wait_secs &raquo;</span>
-    </a>
-  </li>
-<form action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-        </div>
-      </div>
-    <div class="col-md-9 content">
+    <div class="col-md-12 content">
       
   <div class="section" id="expyfun-get-keyboard-input">
 <h1>expyfun.get_keyboard_input<a class="headerlink" href="#expyfun-get-keyboard-input" title="Permalink to this headline">¶</a></h1>
@@ -130,31 +108,30 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>prompt</strong> : str</p>
-<blockquote>
-<div><p>Prompt to use.</p>
-</div></blockquote>
-<p><strong>default</strong> : object | None</p>
-<blockquote>
-<div><p>If user enters nothing, this will be used. If None, the user
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>prompt</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><p class="first last">Prompt to use.</p>
+</dd>
+<dt><strong>default</strong> <span class="classifier-delimiter">:</span> <span class="classifier">object | None</span></dt>
+<dd><p class="first last">If user enters nothing, this will be used. If None, the user
 will be repeatedly prompted until a valid response is found.</p>
-</div></blockquote>
-<p><strong>out_type</strong> : type</p>
-<blockquote>
-<div><p>Type to coerce to. If coersion fails, the user will be prompted
+</dd>
+<dt><strong>out_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">type</span></dt>
+<dd><p class="first last">Type to coerce to. If coersion fails, the user will be prompted
 again.</p>
-</div></blockquote>
-<p><strong>valid</strong> : list | None</p>
-<blockquote>
-<div><p>An iterable that contains all the allowable inputs. Keeps asking until
+</dd>
+<dt><strong>valid</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list | None</span></dt>
+<dd><p class="first last">An iterable that contains all the allowable inputs. Keeps asking until
 it recceives a valid input. Does not check if None.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>response</strong> : of type <cite>out_type</cite></p>
-<blockquote class="last">
-<div><p>The user response.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>response</strong> <span class="classifier-delimiter">:</span> <span class="classifier">of type <cite>out_type</cite></span></dt>
+<dd><p class="first last">The user response.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -175,7 +152,7 @@ it recceives a valid input. Does not check if None.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-03-19.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
     </p>
   </div>
 </footer>
