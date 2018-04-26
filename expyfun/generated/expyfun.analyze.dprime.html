@@ -20,7 +20,6 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="expyfun.analyze.dprime_2afc" href="expyfun.analyze.dprime_2afc.html" />
     <link rel="prev" title="expyfun.analyze.box_off" href="expyfun.analyze.box_off.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 
@@ -102,7 +101,7 @@
 <h1>expyfun.analyze.dprime<a class="headerlink" href="#expyfun-analyze-dprime" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.analyze.dprime">
-<code class="descclassname">expyfun.analyze.</code><code class="descname">dprime</code><span class="sig-paren">(</span><em>hmfc</em>, <em>zero_correction=True</em>, <em>return_bias=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L318-L363"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.dprime" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">expyfun.analyze.</code><code class="descname">dprime</code><span class="sig-paren">(</span><em>hmfc</em>, <em>zero_correction=True</em>, <em>return_bias=False</em>, <em>two_interval=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L318-L375"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.dprime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate d′ and bias.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -119,6 +118,10 @@ division-by-zero leading to infinite d-prime values.</p>
 </dd>
 <dt><strong>return_bias</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
 <dd><p class="first last">If True, also return the bias.</p>
+</dd>
+<dt><strong>two_interval</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
+<dd><p class="first last">If True, apply a correction factor for two-interval two-alternative
+forced choice paradigms (see Notes).</p>
 </dd>
 </dl>
 </td>
@@ -145,10 +148,22 @@ Only returned if <code class="docutils literal notranslate"><span class="pre">re
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="p">(</span><span class="n">Z</span><span class="p">(</span><span class="n">hit_rate</span><span class="p">)</span> <span class="o">+</span> <span class="n">Z</span><span class="p">(</span><span class="n">false_alarm_rate</span><span class="p">))</span> <span class="o">/</span> <span class="mf">2.</span>
 </pre></div>
 </div>
-<p>For two-alternative forced-choice tasks, it is recommended to enter correct
-trials as hits and incorrect trials as false alarms, and enter misses and
-correct rejections as 0. An alternative is to use <code class="docutils literal notranslate"><span class="pre">dprime_2afc()</span></code>, which
-wraps to <code class="docutils literal notranslate"><span class="pre">dprime()</span></code> and does this assignment for you.</p>
+<p>where <code class="docutils literal notranslate"><span class="pre">Z</span></code> is the inverse of the cumulative distribution function for a
+standard normal distribution (AKA the percent point function). For two-
+interval two-alternative forced-choice tasks, Macmillan &amp; Creelman <a class="reference internal" href="#r22078f6a4c08-1" id="id1">[1]</a>
+recommend modifying the d′ calculation to account for the presentation of
+two stimuli per trial (one in each interval) by dividing by <code class="docutils literal notranslate"><span class="pre">sqrt(2)</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">Z</span><span class="p">(</span><span class="n">hit_rate</span><span class="p">)</span> <span class="o">-</span> <span class="n">Z</span><span class="p">(</span><span class="n">false_alarm_rate</span><span class="p">))</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r22078f6a4c08-1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> Macmillan &amp; Creelman (2005). Detection theory: a user’s guide (2nd
+ed.). Mahwah, NJ: Lawrence Erlbaum Associates, pp. 166-170.</td></tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
@@ -165,7 +180,7 @@ wraps to <code class="docutils literal notranslate"><span class="pre">dprime()</
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-26.<br/>
     </p>
   </div>
 </footer>

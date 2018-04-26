@@ -1,4 +1,8 @@
+.. note::
+    :class: sphx-glr-download-link-note
 
+    Click :ref:`here <sphx_glr_download_auto_examples_sync_sample_rate_test.py>` to download the full example code
+.. rst-class:: sphx-glr-example-title
 
 .. _sphx_glr_auto_examples_sync_sample_rate_test.py:
 
@@ -46,28 +50,28 @@ test multiple system synchronization at once.
  Out::
 
     exp_name: FsTest
-    date: 2018-04-12 19_32_23.939266
+    date: 2018-04-26 18_12_47.626471
     file: /home/ubuntu/expyfun/examples/sync/sample_rate_test.py
     participant: s
     session: 0
-    2018-04-12 19:32:23,939 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-    2018-04-12 19:32:23,940 - INFO    - Expyfun: Setting up Pyglet audio
-    2018-04-12 19:32:23,996 - INFO    - Expyfun: Setting up screen
-    2018-04-12 19:32:24,014 - EXP     - Expyfun: Set screen visibility True
-    2018-04-12 19:32:24,078 - INFO    - Expyfun: Initializing dummy triggering mode
-    2018-04-12 19:32:24,080 - INFO    - Expyfun: Initialization complete
-    2018-04-12 19:32:24,080 - EXP     - Expyfun: Participant: s
-    2018-04-12 19:32:24,081 - EXP     - Expyfun: Session: 0
-    2018-04-12 19:32:24,086 - EXP     - Expyfun: Stamp trial ID to ec_id  : 
-    2018-04-12 19:32:24,087 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0]
-    2018-04-12 19:32:24,128 - EXP     - Expyfun: Loading 2000002 samples to buffer
+    2018-04-26 18:12:47,626 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2018-04-26 18:12:47,627 - INFO    - Expyfun: Setting up Pyglet audio
+    2018-04-26 18:12:47,677 - INFO    - Expyfun: Setting up screen
+    2018-04-26 18:12:47,693 - EXP     - Expyfun: Set screen visibility True
+    2018-04-26 18:12:47,748 - INFO    - Expyfun: Initializing dummy triggering mode
+    2018-04-26 18:12:47,749 - INFO    - Expyfun: Initialization complete
+    2018-04-26 18:12:47,749 - EXP     - Expyfun: Participant: s
+    2018-04-26 18:12:47,750 - EXP     - Expyfun: Session: 0
+    2018-04-26 18:12:47,754 - EXP     - Expyfun: Stamp trial ID to ec_id  : 
+    2018-04-26 18:12:47,754 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0]
+    2018-04-26 18:12:47,794 - EXP     - Expyfun: Loading 2000002 samples to buffer
     Starting stimulus.
-    2018-04-12 19:32:24,154 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+    2018-04-26 18:12:47,819 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
     Stimulus started. Please wait 41 seconds.
-    2018-04-12 19:32:24,165 - EXP     - Expyfun: Audio stopped and reset.
+    2018-04-26 18:12:47,829 - EXP     - Expyfun: Audio stopped and reset.
     Stimulus done.
-    2018-04-12 19:32:24,165 - INFO    - Expyfun: Exiting
-    2018-04-12 19:32:24,168 - EXP     - Expyfun: Audio stopped and reset.
+    2018-04-26 18:12:47,830 - INFO    - Expyfun: Exiting
+    2018-04-26 18:12:47,833 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -104,8 +108,10 @@ test multiple system synchronization at once.
         ec.stop()
         print('Stimulus done.')
 
-**Total running time of the script:** ( 0 minutes  0.232 seconds)
+**Total running time of the script:** ( 0 minutes  0.209 seconds)
 
+
+.. _sphx_glr_download_auto_examples_sync_sample_rate_test.py:
 
 
 .. only :: html

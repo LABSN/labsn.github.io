@@ -98,7 +98,11 @@
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="generate-more-advanced-auditory-stimuli">
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Click <a class="reference internal" href="#sphx-glr-download-auto-examples-stimuli-advanced-stimuli-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="generate-more-advanced-auditory-stimuli">
 <span id="sphx-glr-auto-examples-stimuli-advanced-stimuli-py"></span><h1>Generate more advanced auditory stimuli<a class="headerlink" href="#generate-more-advanced-auditory-stimuli" title="Permalink to this headline">¶</a></h1>
 <p>This shows the methods that we provide that facilitate generation
 of more advanced stimuli.</p>
@@ -113,25 +117,25 @@ of more advanced stimuli.</p>
 <span class="n">dur</span> <span class="o">=</span> <span class="mf">0.5</span>
 <span class="n">freq</span> <span class="o">=</span> <span class="mf">500.</span>
 <span class="c1"># let&#39;s make a square wave</span>
-<span class="n">sig</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy-dev/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">freq</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <a href="https://docs.scipy.org/doc/numpy-dev/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">dur</span> <span class="o">*</span> <span class="n">fs</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span> <span class="o">/</span> <span class="n">fs</span><span class="p">)</span>
+<span class="n">sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">freq</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">dur</span> <span class="o">*</span> <span class="n">fs</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span> <span class="o">/</span> <span class="n">fs</span><span class="p">)</span>
 <span class="n">sig</span> <span class="o">=</span> <span class="p">((</span><span class="n">sig</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="mf">5.</span>  <span class="c1"># make it reasonably quiet for play_sound</span>
 <span class="n">sig</span> <span class="o">=</span> <a href="../../generated/expyfun.stimuli.window_edges.html#expyfun.stimuli.window_edges" title="View documentation for expyfun.stimuli.window_edges"><span class="n">window_edges</span></a><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
 
 <a href="../../generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound" title="View documentation for expyfun.stimuli.play_sound"><span class="n">play_sound</span></a><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
-<span class="n">move_sig</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy-dev/reference/generated/numpy.concatenate.html#numpy.concatenate" title="View documentation for numpy.concatenate"><span class="n">np</span><span class="o">.</span><span class="n">concatenate</span></a><span class="p">([</span><a href="../../generated/expyfun.stimuli.convolve_hrtf.html#expyfun.stimuli.convolve_hrtf" title="View documentation for expyfun.stimuli.convolve_hrtf"><span class="n">convolve_hrtf</span></a><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">ang</span><span class="p">)</span>
+<span class="n">move_sig</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><a href="../../generated/expyfun.stimuli.convolve_hrtf.html#expyfun.stimuli.convolve_hrtf" title="View documentation for expyfun.stimuli.convolve_hrtf"><span class="n">convolve_hrtf</span></a><span class="p">(</span><span class="n">sig</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">ang</span><span class="p">)</span>
                            <span class="k">for</span> <span class="n">ang</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">15</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span><span class="p">:</span>
     <a href="../../generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound" title="View documentation for expyfun.stimuli.play_sound"><span class="n">play_sound</span></a><span class="p">(</span><span class="n">move_sig</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">norm</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">wait</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
-<span class="n">t</span> <span class="o">=</span> <a href="https://docs.scipy.org/doc/numpy-dev/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">move_sig</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">move_sig</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>
 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="View documentation for matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">move_sig</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xlabel.html#matplotlib.pyplot.xlabel" title="View documentation for matplotlib.pyplot.xlabel"><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span></a><span class="p">(</span><span class="s1">&#39;Time (sec)&#39;</span><span class="p">)</span>
 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p><strong>Total running time of the script:</strong> ( 0 minutes  0.923 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container">
+<p><strong>Total running time of the script:</strong> ( 0 minutes  1.022 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-advanced-stimuli-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" href="../../_downloads/advanced_stimuli.py" download=""><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">advanced_stimuli.py</span></code></a></div>
 <div class="sphx-glr-download docutils container">
@@ -152,7 +156,7 @@ of more advanced stimuli.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-12.<br/>
+        &copy; Copyright 2013-2018, expyfun developers. Last updated on 2018-04-26.<br/>
     </p>
   </div>
 </footer>
