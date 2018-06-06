@@ -23,7 +23,9 @@ the ExperimentController class.
 
 .. rst-class:: sphx-glr-script-out
 
- Out::
+ Out:
+
+ .. code-block:: none
 
     =======================
     Generate sample stimuli
@@ -33,58 +35,58 @@ the ExperimentController class.
     of sample stimuli.
 
     exp_name: testExp
-    date: 2018-05-04 14_20_02.402629
+    date: 2018-06-06 18_38_54.472708
     file: /home/circleci/project/examples/simple_experiment.py
     participant: foo
     session: 001
-    2018-05-04 14:20:02,403 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-    2018-05-04 14:20:02,403 - INFO    - Expyfun: Setting up Pyglet audio
-    2018-05-04 14:20:02,457 - INFO    - Expyfun: Setting up screen
-    2018-05-04 14:20:02,477 - EXP     - Expyfun: Set screen visibility True
-    2018-05-04 14:20:02,571 - INFO    - Expyfun: Initializing dummy triggering mode
-    2018-05-04 14:20:02,574 - INFO    - Expyfun: Initialization complete
-    2018-05-04 14:20:02,575 - EXP     - Expyfun: Participant: foo
-    2018-05-04 14:20:02,575 - EXP     - Expyfun: Session: 001
-    2018-05-04 14:20:02,577 - EXP     - Expyfun: Set screen visibility False
-    2018-05-04 14:20:02,577 - EXP     - Expyfun: Set screen visibility True
-    2018-05-04 14:20:03,137 - EXP     - Expyfun: Loading 24414 samples to buffer
-    2018-05-04 14:20:03,138 - EXP     - Expyfun: Stamp trial ID to ec_id  : 2
-    2018-05-04 14:20:03,138 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-    2018-05-04 14:20:03,198 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-    2018-05-04 14:20:03,207 - EXP     - Expyfun: Audio stopped and reset.
-    2018-05-04 14:20:03,207 - EXP     - Expyfun: Trial OK
-    2018-05-04 14:20:03,420 - EXP     - Expyfun: Loading 24414 samples to buffer
-    2018-05-04 14:20:03,421 - EXP     - Expyfun: Stamp trial ID to ec_id  : 0
-    2018-05-04 14:20:03,421 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-    2018-05-04 14:20:03,482 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-    2018-05-04 14:20:03,490 - EXP     - Expyfun: Audio stopped and reset.
-    2018-05-04 14:20:03,490 - EXP     - Expyfun: Trial OK
-    2018-05-04 14:20:03,702 - EXP     - Expyfun: Loading 24414 samples to buffer
-    2018-05-04 14:20:03,703 - EXP     - Expyfun: Stamp trial ID to ec_id  : 0
-    2018-05-04 14:20:03,703 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-    2018-05-04 14:20:03,763 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-    2018-05-04 14:20:03,771 - EXP     - Expyfun: Audio stopped and reset.
-    2018-05-04 14:20:03,772 - EXP     - Expyfun: Trial OK
-    2018-05-04 14:20:03,984 - EXP     - Expyfun: Loading 24414 samples to buffer
-    2018-05-04 14:20:03,985 - EXP     - Expyfun: Stamp trial ID to ec_id  : 1
-    2018-05-04 14:20:03,985 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-    2018-05-04 14:20:04,046 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-    2018-05-04 14:20:04,054 - EXP     - Expyfun: Audio stopped and reset.
-    2018-05-04 14:20:04,054 - EXP     - Expyfun: Trial OK
-    2018-05-04 14:20:04,267 - EXP     - Expyfun: Loading 24414 samples to buffer
-    2018-05-04 14:20:04,268 - EXP     - Expyfun: Stamp trial ID to ec_id  : 1
-    2018-05-04 14:20:04,268 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-    2018-05-04 14:20:04,329 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-    2018-05-04 14:20:04,337 - EXP     - Expyfun: Audio stopped and reset.
-    2018-05-04 14:20:04,338 - EXP     - Expyfun: Trial OK
-    2018-05-04 14:20:04,632 - EXP     - Expyfun: Loading 141598 samples to buffer
-    2018-05-04 14:20:04,634 - EXP     - Expyfun: Stamp trial ID to ec_id  : multi-tone
-    2018-05-04 14:20:04,634 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 1]
-    2018-05-04 14:20:04,695 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-    2018-05-04 14:20:04,722 - WARNING - ec.trial_ok called before stimulus had stopped
-    2018-05-04 14:20:04,722 - EXP     - Expyfun: Trial OK
-    2018-05-04 14:20:04,739 - INFO    - Expyfun: Exiting
-    2018-05-04 14:20:04,743 - EXP     - Expyfun: Audio stopped and reset.
+    2018-06-06 18:38:54,473 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2018-06-06 18:38:54,473 - INFO    - Expyfun: Setting up Pyglet audio
+    2018-06-06 18:38:54,521 - INFO    - Expyfun: Setting up screen
+    2018-06-06 18:38:54,540 - EXP     - Expyfun: Set screen visibility True
+    2018-06-06 18:38:54,621 - INFO    - Expyfun: Initializing dummy triggering mode
+    2018-06-06 18:38:54,624 - INFO    - Expyfun: Initialization complete
+    2018-06-06 18:38:54,624 - EXP     - Expyfun: Participant: foo
+    2018-06-06 18:38:54,624 - EXP     - Expyfun: Session: 001
+    2018-06-06 18:38:54,626 - EXP     - Expyfun: Set screen visibility False
+    2018-06-06 18:38:54,626 - EXP     - Expyfun: Set screen visibility True
+    2018-06-06 18:38:55,173 - EXP     - Expyfun: Loading 24414 samples to buffer
+    2018-06-06 18:38:55,173 - EXP     - Expyfun: Stamp trial ID to ec_id  : 2
+    2018-06-06 18:38:55,174 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+    2018-06-06 18:38:55,234 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+    2018-06-06 18:38:55,241 - EXP     - Expyfun: Audio stopped and reset.
+    2018-06-06 18:38:55,241 - EXP     - Expyfun: Trial OK
+    2018-06-06 18:38:55,452 - EXP     - Expyfun: Loading 24414 samples to buffer
+    2018-06-06 18:38:55,452 - EXP     - Expyfun: Stamp trial ID to ec_id  : 0
+    2018-06-06 18:38:55,452 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+    2018-06-06 18:38:55,513 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+    2018-06-06 18:38:55,520 - EXP     - Expyfun: Audio stopped and reset.
+    2018-06-06 18:38:55,520 - EXP     - Expyfun: Trial OK
+    2018-06-06 18:38:55,731 - EXP     - Expyfun: Loading 24414 samples to buffer
+    2018-06-06 18:38:55,731 - EXP     - Expyfun: Stamp trial ID to ec_id  : 0
+    2018-06-06 18:38:55,731 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+    2018-06-06 18:38:55,791 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+    2018-06-06 18:38:55,799 - EXP     - Expyfun: Audio stopped and reset.
+    2018-06-06 18:38:55,799 - EXP     - Expyfun: Trial OK
+    2018-06-06 18:38:56,009 - EXP     - Expyfun: Loading 24414 samples to buffer
+    2018-06-06 18:38:56,010 - EXP     - Expyfun: Stamp trial ID to ec_id  : 1
+    2018-06-06 18:38:56,010 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+    2018-06-06 18:38:56,070 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+    2018-06-06 18:38:56,078 - EXP     - Expyfun: Audio stopped and reset.
+    2018-06-06 18:38:56,078 - EXP     - Expyfun: Trial OK
+    2018-06-06 18:38:56,288 - EXP     - Expyfun: Loading 24414 samples to buffer
+    2018-06-06 18:38:56,289 - EXP     - Expyfun: Stamp trial ID to ec_id  : 1
+    2018-06-06 18:38:56,289 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+    2018-06-06 18:38:56,349 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+    2018-06-06 18:38:56,356 - EXP     - Expyfun: Audio stopped and reset.
+    2018-06-06 18:38:56,357 - EXP     - Expyfun: Trial OK
+    2018-06-06 18:38:56,616 - EXP     - Expyfun: Loading 141598 samples to buffer
+    2018-06-06 18:38:56,618 - EXP     - Expyfun: Stamp trial ID to ec_id  : multi-tone
+    2018-06-06 18:38:56,618 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 1]
+    2018-06-06 18:38:56,678 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+    2018-06-06 18:38:56,700 - WARNING - ec.trial_ok called before stimulus had stopped
+    2018-06-06 18:38:56,700 - EXP     - Expyfun: Trial OK
+    2018-06-06 18:38:56,714 - INFO    - Expyfun: Exiting
+    2018-06-06 18:38:56,717 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -267,7 +269,7 @@ the ExperimentController class.
 
     ea.plot_screen(screenshot)
 
-**Total running time of the script:** ( 0 minutes  2.496 seconds)
+**Total running time of the script:** ( 0 minutes  2.368 seconds)
 
 
 .. _sphx_glr_download_auto_examples_simple_experiment.py:
