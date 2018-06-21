@@ -142,30 +142,30 @@ Now we actually run the experiment.
  .. code-block:: none
 
     exp_name: CRM corpus example
-    date: 2018-06-19 21_12_34.369024
+    date: 2018-06-21 15_06_30.852233
     file: /home/circleci/project/examples/stimuli/crm_stimuli.py
     participant: foo
     session: foo
-    2018-06-19 21:12:34,369 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-    2018-06-19 21:12:34,370 - INFO    - Expyfun: Setting up Pyglet audio
-    2018-06-19 21:12:34,451 - INFO    - Expyfun: Setting up screen
-    2018-06-19 21:12:34,473 - EXP     - Expyfun: Set screen visibility True
-    2018-06-19 21:12:34,616 - INFO    - Expyfun: Initializing dummy triggering mode
-    2018-06-19 21:12:34,621 - INFO    - Expyfun: Initialization complete
-    2018-06-19 21:12:34,621 - EXP     - Expyfun: Participant: foo
-    2018-06-19 21:12:34,621 - EXP     - Expyfun: Session: foo
-    2018-06-19 21:12:34,830 - WARNING - Expyfun: Stimulus max RMS (0.025983532855792944) exceeds stated RMS (0.01) by more than 6 dB.
-    2018-06-19 21:12:34,832 - EXP     - Expyfun: Loading 161136 samples to buffer
-    2018-06-19 21:12:34,833 - EXP     - Expyfun: Stamp trial ID to ec_id  : 
-    2018-06-19 21:12:34,833 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
-    2018-06-19 21:12:34,834 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-    2018-06-19 21:12:39,127 - WARNING - ec.trial_ok called before stimulus had stopped
-    2018-06-19 21:12:39,127 - EXP     - Expyfun: Trial OK
-    2018-06-19 21:12:39,127 - INFO    - Expyfun: Exiting
-    2018-06-19 21:12:39,131 - EXP     - Expyfun: Audio stopped and reset.
+    2018-06-21 15:06:30,853 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2018-06-21 15:06:30,853 - INFO    - Expyfun: Setting up Pyglet audio
+    2018-06-21 15:06:30,936 - INFO    - Expyfun: Setting up screen
+    2018-06-21 15:06:30,957 - EXP     - Expyfun: Set screen visibility True
+    2018-06-21 15:06:31,043 - INFO    - Expyfun: Initializing dummy triggering mode
+    2018-06-21 15:06:31,046 - INFO    - Expyfun: Initialization complete
+    2018-06-21 15:06:31,046 - EXP     - Expyfun: Participant: foo
+    2018-06-21 15:06:31,047 - EXP     - Expyfun: Session: foo
+    2018-06-21 15:06:31,237 - WARNING - Expyfun: Stimulus max RMS (0.025983532855792944) exceeds stated RMS (0.01) by more than 6 dB.
+    2018-06-21 15:06:31,237 - EXP     - Expyfun: Loading 161136 samples to buffer
+    2018-06-21 15:06:31,239 - EXP     - Expyfun: Stamp trial ID to ec_id  : 
+    2018-06-21 15:06:31,239 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
+    2018-06-21 15:06:31,239 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+    2018-06-21 15:06:35,413 - WARNING - ec.trial_ok called before stimulus had stopped
+    2018-06-21 15:06:35,413 - EXP     - Expyfun: Trial OK
+    2018-06-21 15:06:35,413 - INFO    - Expyfun: Exiting
+    2018-06-21 15:06:35,417 - EXP     - Expyfun: Audio stopped and reset.
 
 
-**Total running time of the script:** ( 0 minutes  9.799 seconds)
+**Total running time of the script:** ( 0 minutes  9.503 seconds)
 
 
 .. _sphx_glr_download_auto_examples_stimuli_crm_stimuli.py:

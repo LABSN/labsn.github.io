@@ -28,20 +28,20 @@ in the ExperimentController class.
  .. code-block:: none
 
     exp_name: MouseDemo
-    date: 2018-06-19 21_12_12.342168
+    date: 2018-06-21 15_06_09.150343
     file: /home/circleci/project/examples/experiments/mouse.py
     participant: foo
     session: 001
-    2018-06-19 21:12:12,342 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-    2018-06-19 21:12:12,342 - INFO    - Expyfun: Setting up Pyglet audio
-    2018-06-19 21:12:12,388 - INFO    - Expyfun: Setting up screen
-    2018-06-19 21:12:12,409 - EXP     - Expyfun: Set screen visibility True
-    2018-06-19 21:12:12,498 - INFO    - Expyfun: Initializing dummy triggering mode
-    2018-06-19 21:12:12,502 - INFO    - Expyfun: Initialization complete
-    2018-06-19 21:12:12,502 - EXP     - Expyfun: Participant: foo
-    2018-06-19 21:12:12,502 - EXP     - Expyfun: Session: 001
-    2018-06-19 21:12:14,717 - INFO    - Expyfun: Exiting
-    2018-06-19 21:12:14,720 - EXP     - Expyfun: Audio stopped and reset.
+    2018-06-21 15:06:09,150 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2018-06-21 15:06:09,151 - INFO    - Expyfun: Setting up Pyglet audio
+    2018-06-21 15:06:09,198 - INFO    - Expyfun: Setting up screen
+    2018-06-21 15:06:09,219 - EXP     - Expyfun: Set screen visibility True
+    2018-06-21 15:06:09,309 - INFO    - Expyfun: Initializing dummy triggering mode
+    2018-06-21 15:06:09,312 - INFO    - Expyfun: Initialization complete
+    2018-06-21 15:06:09,313 - EXP     - Expyfun: Participant: foo
+    2018-06-21 15:06:09,313 - EXP     - Expyfun: Session: 001
+    2018-06-21 15:06:11,478 - INFO    - Expyfun: Exiting
+    2018-06-21 15:06:11,481 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -141,7 +141,7 @@ in the ExperimentController class.
 
     ea.plot_screen(screenshot)
 
-**Total running time of the script:** ( 0 minutes  2.416 seconds)
+**Total running time of the script:** ( 0 minutes  2.365 seconds)
 
 
 .. _sphx_glr_download_auto_examples_experiments_mouse.py:
