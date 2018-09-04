@@ -14,7 +14,6 @@ Generate texture stimuli
 This shows how to generate texture coherence stimuli.
 
 
-
 .. code-block:: python
 
 
@@ -47,7 +46,6 @@ This shows how to generate texture coherence stimuli.
 Let's look at the time course
 
 
-
 .. code-block:: python
 
     t = np.arange(len(sig)) / float(fs)
@@ -66,7 +64,6 @@ Let's look at the time course
 
 
 And now the spectrogram:
-
 
 
 .. code-block:: python
@@ -90,7 +87,6 @@ And now the spectrogram:
 And the long-term spectrum:
 
 
-
 .. code-block:: python
 
     fig, ax = plt.subplots(1)
@@ -110,7 +106,7 @@ And the long-term spectrum:
 
 
 
-**Total running time of the script:** ( 0 minutes  4.467 seconds)
+**Total running time of the script:** ( 0 minutes  4.830 seconds)
 
 
 .. _sphx_glr_download_auto_examples_stimuli_texture_stimuli.py:

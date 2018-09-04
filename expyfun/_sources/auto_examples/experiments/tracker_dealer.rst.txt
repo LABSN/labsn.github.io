@@ -22,7 +22,6 @@ type: 1 & 2).
 @author: maddycapp27
 
 
-
 .. code-block:: python
 
 
@@ -53,7 +52,6 @@ of 3) and based on the number of reversals (the first element in each
 list is the step size until the number of reversals dictacted by the second
 element in change_criteria have occurred (i.e. the up step size will be 9
 until 5 reversals have occurred, then the up step size will be 3.))
-
 
 
 .. code-block:: python
@@ -89,7 +87,6 @@ passed into the dealer. After the dealer is created, the type of each trial
 for that trial can be acquired. :class:`expyfun.ExperimentController` is used
 to generate log files with :class:`expyfun.stimuli.TrackerUD` and
 :class:`expyfun.stimuli.TrackerDealer` information.
-
 
 
 .. code-block:: python
@@ -130,7 +127,7 @@ to generate log files with :class:`expyfun.stimuli.TrackerUD` and
  .. code-block:: none
 
     exp_name: test
-    date: 2018-07-13 18_03_12.350958
+    date: 2018-09-04 16_32_24.910114
     file: /home/circleci/project/examples/experiments/tracker_dealer.py
     participant: foo
     session: 01
@@ -146,7 +143,6 @@ a list of objects. Similar reconstructions of single trackers can be done
 with :func:`expyfun.io.reconstruct_tracker`.
 
 
-
 .. code-block:: python
 
 
@@ -160,7 +156,6 @@ with :func:`expyfun.io.reconstruct_tracker`.
 
 Plotting the Results
 ---------------------------
-
 
 
 .. code-block:: python
@@ -182,7 +177,7 @@ Plotting the Results
 
 
 
-**Total running time of the script:** ( 0 minutes  0.382 seconds)
+**Total running time of the script:** ( 0 minutes  0.503 seconds)
 
 
 .. _sphx_glr_download_auto_examples_experiments_tracker_dealer.py:
