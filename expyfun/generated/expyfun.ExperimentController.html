@@ -103,7 +103,7 @@
 <h1>expyfun.ExperimentController<a class="headerlink" href="#expyfun-experimentcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.ExperimentController">
-<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">ExperimentController</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L39-L1972"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">ExperimentController</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L39-L2004"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -316,79 +316,82 @@ information (based on the level of verbosity) printed to the console.</p>
 <tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>()</td>
 <td>Start audio playback</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.screen_prompt" title="expyfun.ExperimentController.screen_prompt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screen_prompt</span></code></a>(text[,&nbsp;max_wait,&nbsp;min_wait,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.refocus" title="expyfun.ExperimentController.refocus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">refocus</span></code></a>()</td>
+<td>Attempt to grab operating system window manager / keyboard focus.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.screen_prompt" title="expyfun.ExperimentController.screen_prompt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screen_prompt</span></code></a>(text[,&nbsp;max_wait,&nbsp;min_wait,&nbsp;…])</td>
 <td>Display text and (optionally) wait for user continuation</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.screen_text" title="expyfun.ExperimentController.screen_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screen_text</span></code></a>(text[,&nbsp;pos,&nbsp;color,&nbsp;font_name,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.screen_text" title="expyfun.ExperimentController.screen_text"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screen_text</span></code></a>(text[,&nbsp;pos,&nbsp;color,&nbsp;font_name,&nbsp;…])</td>
 <td>Show some text on the screen.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.screenshot" title="expyfun.ExperimentController.screenshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screenshot</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.screenshot" title="expyfun.ExperimentController.screenshot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">screenshot</span></code></a>()</td>
 <td>Capture the current displayed buffer</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.set_background_color" title="expyfun.ExperimentController.set_background_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_background_color</span></code></a>([color])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.set_background_color" title="expyfun.ExperimentController.set_background_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_background_color</span></code></a>([color])</td>
 <td>Set and draw a solid background color</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.set_noise_db" title="expyfun.ExperimentController.set_noise_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_noise_db</span></code></a>(new_db)</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.set_noise_db" title="expyfun.ExperimentController.set_noise_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_noise_db</span></code></a>(new_db)</td>
 <td>Set the level of the background noise</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.set_rms_checking" title="expyfun.ExperimentController.set_rms_checking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_rms_checking</span></code></a>(check_rms)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.set_rms_checking" title="expyfun.ExperimentController.set_rms_checking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_rms_checking</span></code></a>(check_rms)</td>
 <td>Set the RMS checking flag.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.set_stim_db" title="expyfun.ExperimentController.set_stim_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_stim_db</span></code></a>(new_db)</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.set_stim_db" title="expyfun.ExperimentController.set_stim_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_stim_db</span></code></a>(new_db)</td>
 <td>Set the level of the stimuli</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.set_visible" title="expyfun.ExperimentController.set_visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_visible</span></code></a>([visible,&nbsp;flip])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.set_visible" title="expyfun.ExperimentController.set_visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_visible</span></code></a>([visible,&nbsp;flip])</td>
 <td>Set the window visibility</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.stamp_triggers" title="expyfun.ExperimentController.stamp_triggers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stamp_triggers</span></code></a>(ids[,&nbsp;check,&nbsp;wait_for_last])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.stamp_triggers" title="expyfun.ExperimentController.stamp_triggers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stamp_triggers</span></code></a>(ids[,&nbsp;check,&nbsp;wait_for_last])</td>
 <td>Stamp binary values</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.start_noise" title="expyfun.ExperimentController.start_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_noise</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.start_noise" title="expyfun.ExperimentController.start_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_noise</span></code></a>()</td>
 <td>Start the background masker noise</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_stimulus</span></code></a>([start_of_trial,&nbsp;flip,&nbsp;when])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_stimulus</span></code></a>([start_of_trial,&nbsp;flip,&nbsp;when])</td>
 <td>Play audio, (optionally) flip screen, run any “on_flip” functions.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>()</td>
 <td>Stop audio buffer playback and reset cursor to beginning of buffer</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.stop_noise" title="expyfun.ExperimentController.stop_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_noise</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.stop_noise" title="expyfun.ExperimentController.stop_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_noise</span></code></a>()</td>
 <td>Stop the background masker noise</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.system_beep" title="expyfun.ExperimentController.system_beep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">system_beep</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.system_beep" title="expyfun.ExperimentController.system_beep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">system_beep</span></code></a>()</td>
 <td>Play a system beep</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.text_input" title="expyfun.ExperimentController.text_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">text_input</span></code></a>([stop_key,&nbsp;instruction_string,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.text_input" title="expyfun.ExperimentController.text_input"><code class="xref py py-obj docutils literal notranslate"><span class="pre">text_input</span></code></a>([stop_key,&nbsp;instruction_string,&nbsp;…])</td>
 <td>Allows participant to input text and view on the screen.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.toggle_cursor" title="expyfun.ExperimentController.toggle_cursor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle_cursor</span></code></a>(visibility[,&nbsp;flip])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.toggle_cursor" title="expyfun.ExperimentController.toggle_cursor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">toggle_cursor</span></code></a>(visibility[,&nbsp;flip])</td>
 <td>Show or hide the mouse</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.trial_ok" title="expyfun.ExperimentController.trial_ok"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_ok</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.trial_ok" title="expyfun.ExperimentController.trial_ok"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trial_ok</span></code></a>()</td>
 <td>Report that the trial was okay and do post-trial tasks.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_for_click_on" title="expyfun.ExperimentController.wait_for_click_on"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_click_on</span></code></a>(objects[,&nbsp;max_wait,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_for_click_on" title="expyfun.ExperimentController.wait_for_click_on"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_click_on</span></code></a>(objects[,&nbsp;max_wait,&nbsp;…])</td>
 <td>Returns the first click after min_wait over a visual object.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_for_clicks" title="expyfun.ExperimentController.wait_for_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_clicks</span></code></a>([max_wait,&nbsp;min_wait,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_for_clicks" title="expyfun.ExperimentController.wait_for_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_clicks</span></code></a>([max_wait,&nbsp;min_wait,&nbsp;…])</td>
 <td>Returns all clicks between min_wait and max_wait.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_for_presses" title="expyfun.ExperimentController.wait_for_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_presses</span></code></a>(max_wait[,&nbsp;min_wait,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_for_presses" title="expyfun.ExperimentController.wait_for_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_presses</span></code></a>(max_wait[,&nbsp;min_wait,&nbsp;…])</td>
 <td>Returns all button presses between min_wait and max_wait.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_one_click" title="expyfun.ExperimentController.wait_one_click"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_one_click</span></code></a>([max_wait,&nbsp;min_wait,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_one_click" title="expyfun.ExperimentController.wait_one_click"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_one_click</span></code></a>([max_wait,&nbsp;min_wait,&nbsp;…])</td>
 <td>Returns only the first mouse button clicked after min_wait.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_one_press" title="expyfun.ExperimentController.wait_one_press"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_one_press</span></code></a>([max_wait,&nbsp;min_wait,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_one_press" title="expyfun.ExperimentController.wait_one_press"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_one_press</span></code></a>([max_wait,&nbsp;min_wait,&nbsp;…])</td>
 <td>Returns only the first button pressed after min_wait.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_secs" title="expyfun.ExperimentController.wait_secs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_secs</span></code></a>(secs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_secs" title="expyfun.ExperimentController.wait_secs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_secs</span></code></a>(secs)</td>
 <td>Wait a specified number of seconds.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_until" title="expyfun.ExperimentController.wait_until"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_until</span></code></a>(timestamp)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.wait_until" title="expyfun.ExperimentController.wait_until"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_until</span></code></a>(timestamp)</td>
 <td>Wait until the given time is reached.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.ExperimentController.write_data_line" title="expyfun.ExperimentController.write_data_line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_data_line</span></code></a>(event_type[,&nbsp;value,&nbsp;timestamp])</td>
+<tr class="row-even"><td><a class="reference internal" href="#expyfun.ExperimentController.write_data_line" title="expyfun.ExperimentController.write_data_line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">write_data_line</span></code></a>(event_type[,&nbsp;value,&nbsp;timestamp])</td>
 <td>Add a line of data to the output CSV.</td>
 </tr>
 </tbody>
@@ -835,6 +838,20 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 <p class="first admonition-title">See also</p>
 <p class="last"><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.load_buffer</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.set_stim_db" title="expyfun.ExperimentController.set_stim_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.set_stim_db</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.start_stimulus</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.stop</span></code></a></p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.refocus">
+<code class="descname">refocus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1931-L1961"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.refocus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempt to grab operating system window manager / keyboard focus.</p>
+<p>This implements platform-specific trickery to bring the window to the
+top and capture keyboard focus in cases where keyboard input from a
+subject is mandatory (e.g., when using keyboard as a response device).</p>
+<p class="rubric">Notes</p>
+<p>For Windows, the solution as adapted from:</p>
+<blockquote>
+<div><a class="reference external" href="https://stackoverflow.com/questions/916259/win32-bring-a-window-to-top#answer-34414846">https://stackoverflow.com/questions/916259/win32-bring-a-window-to-top#answer-34414846</a></div></blockquote>
+<p>This function currently does nothing on Linux and OSX.</p>
 </dd></dl>
 
 <dl class="method">

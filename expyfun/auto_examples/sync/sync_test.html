@@ -109,23 +109,23 @@
 <img alt="../../_images/sphx_glr_sync_test_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_sync_test_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: SyncTest
-date: 2019-01-30 22_35_44.630538
+date: 2019-01-30 22_36_24.240586
 file: /home/circleci/project/examples/sync/sync_test.py
 participant: s
 session: 0
-2019-01-30 22:35:44,630 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-01-30 22:35:44,631 - INFO    - Expyfun: Setting up Pyglet audio
-2019-01-30 22:35:44,664 - INFO    - Expyfun: Setting up screen
-2019-01-30 22:35:44,679 - EXP     - Expyfun: Set screen visibility True
-2019-01-30 22:35:44,741 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-01-30 22:35:44,743 - INFO    - Expyfun: Initialization complete
-2019-01-30 22:35:44,744 - EXP     - Expyfun: Participant: s
-2019-01-30 22:35:44,744 - EXP     - Expyfun: Session: 0
-2019-01-30 22:35:44,746 - EXP     - Expyfun: Loading 200 samples to buffer
-2019-01-30 22:35:44,794 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-01-30 22:35:45,065 - EXP     - Expyfun: Audio stopped and reset.
-2019-01-30 22:35:45,066 - INFO    - Expyfun: Exiting
-2019-01-30 22:35:45,068 - EXP     - Expyfun: Audio stopped and reset.
+2019-01-30 22:36:24,240 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-01-30 22:36:24,241 - INFO    - Expyfun: Setting up Pyglet audio
+2019-01-30 22:36:24,275 - INFO    - Expyfun: Setting up screen
+2019-01-30 22:36:24,291 - EXP     - Expyfun: Set screen visibility True
+2019-01-30 22:36:24,355 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-01-30 22:36:24,357 - INFO    - Expyfun: Initialization complete
+2019-01-30 22:36:24,358 - EXP     - Expyfun: Participant: s
+2019-01-30 22:36:24,358 - EXP     - Expyfun: Session: 0
+2019-01-30 22:36:24,360 - EXP     - Expyfun: Loading 200 samples to buffer
+2019-01-30 22:36:24,410 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-01-30 22:36:24,687 - EXP     - Expyfun: Audio stopped and reset.
+2019-01-30 22:36:24,687 - INFO    - Expyfun: Exiting
+2019-01-30 22:36:24,690 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -165,13 +165,14 @@ session: 0
         <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span> <span class="k">if</span> <span class="n">screenshot</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">screenshot</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">stamp_triggers</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">refocus</span><span class="p">()</span>
         <span class="n">pressed</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="s1">&#39;8&#39;</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.593 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.608 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sync-test-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/781d95886e23f9aea08cdf972135fc75/sync_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sync_test.py</span></code></a></div>
