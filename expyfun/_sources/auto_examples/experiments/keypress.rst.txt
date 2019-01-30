@@ -27,20 +27,20 @@ in the ExperimentController class.
  .. code-block:: none
 
     exp_name: KeypressDemo
-    date: 2018-09-04 16_32_27.885693
+    date: 2019-01-30 22_35_22.540923
     file: /home/circleci/project/examples/experiments/keypress.py
     participant: foo
     session: 001
-    2018-09-04 16:32:27,886 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-    2018-09-04 16:32:27,886 - INFO    - Expyfun: Setting up Pyglet audio
-    2018-09-04 16:32:27,937 - INFO    - Expyfun: Setting up screen
-    2018-09-04 16:32:27,955 - EXP     - Expyfun: Set screen visibility True
-    2018-09-04 16:32:28,038 - INFO    - Expyfun: Initializing dummy triggering mode
-    2018-09-04 16:32:28,041 - INFO    - Expyfun: Initialization complete
-    2018-09-04 16:32:28,041 - EXP     - Expyfun: Participant: foo
-    2018-09-04 16:32:28,041 - EXP     - Expyfun: Session: 001
-    2018-09-04 16:32:31,821 - INFO    - Expyfun: Exiting
-    2018-09-04 16:32:31,825 - EXP     - Expyfun: Audio stopped and reset.
+    2019-01-30 22:35:22,541 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2019-01-30 22:35:22,541 - INFO    - Expyfun: Setting up Pyglet audio
+    2019-01-30 22:35:22,586 - INFO    - Expyfun: Setting up screen
+    2019-01-30 22:35:22,598 - EXP     - Expyfun: Set screen visibility True
+    2019-01-30 22:35:22,655 - INFO    - Expyfun: Initializing dummy triggering mode
+    2019-01-30 22:35:22,658 - INFO    - Expyfun: Initialization complete
+    2019-01-30 22:35:22,658 - EXP     - Expyfun: Participant: foo
+    2019-01-30 22:35:22,658 - EXP     - Expyfun: Session: 001
+    2019-01-30 22:35:26,325 - INFO    - Expyfun: Exiting
+    2019-01-30 22:35:26,327 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -211,7 +211,10 @@ in the ExperimentController class.
 
     ea.plot_screen(screenshot)
 
-**Total running time of the script:** ( 0 minutes  4.027 seconds)
+
+.. rst-class:: sphx-glr-timing
+
+   **Total running time of the script:** ( 0 minutes  3.906 seconds)
 
 
 .. _sphx_glr_download_auto_examples_experiments_keypress.py:
