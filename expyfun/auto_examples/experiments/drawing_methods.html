@@ -109,40 +109,40 @@
 <img alt="../../_images/sphx_glr_drawing_methods_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_drawing_methods_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2019-01-30 22_35_52.445526
+date: 2019-03-17 23_51_52.642754
 file: /home/circleci/project/examples/experiments/drawing_methods.py
 participant: 2
 session: 1
-2019-01-30 22:35:52,445 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-01-30 22:35:52,446 - INFO    - Expyfun: Setting up Pyglet audio
-2019-01-30 22:35:52,492 - INFO    - Expyfun: Setting up screen
-2019-01-30 22:35:52,504 - EXP     - Expyfun: Set screen visibility True
-2019-01-30 22:35:52,562 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-01-30 22:35:52,565 - INFO    - Expyfun: Initialization complete
-2019-01-30 22:35:52,565 - EXP     - Expyfun: Participant: 2
-2019-01-30 22:35:52,565 - EXP     - Expyfun: Session: 1
-2019-01-30 22:35:53,405 - INFO    - Expyfun: Exiting
-2019-01-30 22:35:53,407 - EXP     - Expyfun: Audio stopped and reset.
+2019-03-17 23:51:52,643 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-03-17 23:51:52,643 - INFO    - Expyfun: Setting up Pyglet audio
+2019-03-17 23:51:52,705 - INFO    - Expyfun: Setting up screen
+2019-03-17 23:51:52,724 - EXP     - Expyfun: Set screen visibility True
+2019-03-17 23:51:52,817 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-03-17 23:51:52,820 - INFO    - Expyfun: Initialization complete
+2019-03-17 23:51:52,821 - EXP     - Expyfun: Participant: 2
+2019-03-17 23:51:52,821 - EXP     - Expyfun: Session: 1
+2019-03-17 23:51:53,848 - INFO    - Expyfun: Exiting
+2019-03-17 23:51:53,852 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larsoner@uw.edu&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larsoner@uw.edu&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">visual</span><span class="p">,</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a>
-<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="kn">as</span> <span class="nn">ea</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">visual</span><span class="p">,</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a>
+<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
 <span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;2&#39;</span><span class="p">,</span>
-                          <span class="n">full_screen</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
-                          <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+                          <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
+                          <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 
     <span class="c1"># make an image with  alpha the x-dimension (columns), RGB upward</span>
@@ -158,7 +158,7 @@ session: 1
     <span class="n">line</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Line.html#expyfun.visual.Line" title="View documentation for expyfun.visual.Line"><span class="n">visual</span><span class="o">.</span><span class="n">Line</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]],</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span>
                        <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
     <span class="n">rect</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="View documentation for expyfun.visual.Rectangle"><span class="n">visual</span><span class="o">.</span><span class="n">Rectangle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-    <span class="n">diamond</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Diamond.html#expyfun.visual.Diamond" title="View documentation for expyfun.visual.Diamond"><span class="n">visual</span><span class="o">.</span><span class="n">Diamond</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+    <span class="n">diamond</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Diamond.html#expyfun.visual.Diamond" title="View documentation for expyfun.visual.Diamond"><span class="n">visual</span><span class="o">.</span><span class="n">Diamond</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                              <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
     <span class="n">circle</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="View documentation for expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span>
                            <span class="n">line_width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
@@ -174,7 +174,7 @@ session: 1
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.084 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.395 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-drawing-methods-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/0fabb5a3713b8ff37a918a525fad3936/drawing_methods.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">drawing_methods.py</span></code></a></div>
@@ -196,7 +196,7 @@ session: 1
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

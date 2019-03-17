@@ -106,15 +106,15 @@
 <div class="sphx-glr-example-title section" id="version-checking-functions">
 <span id="sphx-glr-auto-examples-experiments-version-checking-py"></span><h1>Version checking functions<a class="headerlink" href="#version-checking-functions" title="Permalink to this headline">¶</a></h1>
 <p>This demonstrates how the version checking functions work.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larson.eric.d@gmail.com&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larson.eric.d@gmail.com&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
 <span class="kn">import</span> <span class="nn">tempfile</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.download_version.html#expyfun.download_version" title="View documentation for expyfun.download_version"><span class="n">download_version</span></a><span class="p">,</span> <span class="n">run_subprocess</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.download_version.html#expyfun.download_version" title="View documentation for expyfun.download_version"><span class="n">download_version</span></a><span class="p">,</span> <span class="n">run_subprocess</span>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
 <span class="c1"># Let&#39;s say we want to fix our experiment to use a specific version of</span>
@@ -139,15 +139,15 @@
 <span class="k">try</span><span class="p">:</span>
     <span class="n">run_subprocess</span><span class="p">([</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;-c&#39;</span><span class="p">,</span> <span class="n">cmd</span><span class="p">],</span> <span class="n">cwd</span><span class="o">=</span><span class="n">temp_dir</span><span class="p">)</span>
 <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exp</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Failure: {0}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exp</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Failure: </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">exp</span><span class="p">))</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Success!&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Success!&#39;</span><span class="p">)</span>
 
 <span class="c1"># Try modifying the commit number to something invalid, and you should</span>
 <span class="c1"># see a failure.</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.059 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-version-checking-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/45b4b938eea07d5cd80dda2f335067f3/version_checking_.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">version_checking_.py</span></code></a></div>
@@ -169,7 +169,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

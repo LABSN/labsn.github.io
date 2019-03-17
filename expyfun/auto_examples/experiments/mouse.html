@@ -110,35 +110,35 @@ in the ExperimentController class.</p>
 <img alt="../../_images/sphx_glr_mouse_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_mouse_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: MouseDemo
-date: 2019-01-30 22_36_00.190346
+date: 2019-03-17 23_52_02.392354
 file: /home/circleci/project/examples/experiments/mouse.py
 participant: foo
 session: 001
-2019-01-30 22:36:00,190 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-01-30 22:36:00,190 - INFO    - Expyfun: Setting up Pyglet audio
-2019-01-30 22:36:00,235 - INFO    - Expyfun: Setting up screen
-2019-01-30 22:36:00,248 - EXP     - Expyfun: Set screen visibility True
-2019-01-30 22:36:00,308 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-01-30 22:36:00,311 - INFO    - Expyfun: Initialization complete
-2019-01-30 22:36:00,311 - EXP     - Expyfun: Participant: foo
-2019-01-30 22:36:00,311 - EXP     - Expyfun: Session: 001
-2019-01-30 22:36:02,300 - INFO    - Expyfun: Exiting
-2019-01-30 22:36:02,303 - EXP     - Expyfun: Audio stopped and reset.
+2019-03-17 23:52:02,392 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-03-17 23:52:02,393 - INFO    - Expyfun: Setting up Pyglet audio
+2019-03-17 23:52:02,460 - INFO    - Expyfun: Setting up screen
+2019-03-17 23:52:02,479 - EXP     - Expyfun: Set screen visibility True
+2019-03-17 23:52:02,570 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-03-17 23:52:02,574 - INFO    - Expyfun: Initialization complete
+2019-03-17 23:52:02,574 - EXP     - Expyfun: Participant: foo
+2019-03-17 23:52:02,574 - EXP     - Expyfun: Session: 001
+2019-03-17 23:52:04,793 - INFO    - Expyfun: Exiting
+2019-03-17 23:52:04,797 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Ross Maddox &lt;rkmaddox@uw.edu&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Ross Maddox &lt;rkmaddox@uw.edu&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span>
-<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="kn">as</span> <span class="nn">ea</span>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="kn">import</span> <span class="p">(</span><a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="View documentation for expyfun.visual.Circle"><span class="n">Circle</span></a><span class="p">,</span> <a href="../../generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="View documentation for expyfun.visual.Rectangle"><span class="n">Rectangle</span></a><span class="p">,</span> <a href="../../generated/expyfun.visual.Diamond.html#expyfun.visual.Diamond" title="View documentation for expyfun.visual.Diamond"><span class="n">Diamond</span></a><span class="p">,</span> <a href="../../generated/expyfun.visual.ConcentricCircles.html#expyfun.visual.ConcentricCircles" title="View documentation for expyfun.visual.ConcentricCircles"><span class="n">ConcentricCircles</span></a><span class="p">,</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <span class="p">(</span><a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="View documentation for expyfun.visual.Circle"><span class="n">Circle</span></a><span class="p">,</span> <a href="../../generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="View documentation for expyfun.visual.Rectangle"><span class="n">Rectangle</span></a><span class="p">,</span> <a href="../../generated/expyfun.visual.Diamond.html#expyfun.visual.Diamond" title="View documentation for expyfun.visual.Diamond"><span class="n">Diamond</span></a><span class="p">,</span> <a href="../../generated/expyfun.visual.ConcentricCircles.html#expyfun.visual.ConcentricCircles" title="View documentation for expyfun.visual.ConcentricCircles"><span class="n">ConcentricCircles</span></a><span class="p">,</span>
                             <a href="../../generated/expyfun.visual.FixationDot.html#expyfun.visual.FixationDot" title="View documentation for expyfun.visual.FixationDot"><span class="n">FixationDot</span></a><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
 <span class="n">wait_dur</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
@@ -146,36 +146,36 @@ session: 001
 <span class="n">max_wait</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
 
 <span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;MouseDemo&#39;</span><span class="p">,</span> <span class="n">screen_num</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                          <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">],</span> <span class="n">full_screen</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                          <span class="n">stim_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                          <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">],</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                          <span class="n">stim_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span>
                           <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="c1">###############</span>
     <span class="c1"># toggle_cursor</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Now you see it.&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">msg_dur</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Now you see it.&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">msg_dur</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">&quot;Now you don&#39;t (maybe--Windows is buggy)&quot;</span><span class="p">,</span>
-                     <span class="n">max_wait</span><span class="o">=</span><span class="n">msg_dur</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+                     <span class="n">max_wait</span><span class="o">=</span><span class="n">msg_dur</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="c1">################</span>
     <span class="c1"># wait_one_click</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Press any mouse button.&#39;</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Press any mouse button.&#39;</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_click</span><span class="p">(</span><span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
 
-    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Press the left button.&#39;</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Press the left button.&#39;</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_click</span><span class="p">(</span><span class="n">live_buttons</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">],</span> <span class="n">visible</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_click</span><span class="p">(</span><span class="n">live_buttons</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">],</span> <span class="n">visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 
     <span class="c1">###########################</span>
     <span class="c1"># listen_clicks, get_clicks</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Press a few buttons in a row.&#39;</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Press a few buttons in a row.&#39;</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">listen_clicks</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="n">wait_dur</span><span class="p">)</span>
@@ -184,18 +184,18 @@ session: 001
 
     <span class="c1">###########################</span>
     <span class="c1"># get_mouse_position</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Move the mouse around...&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">msg_dur</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Move the mouse around...&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">msg_dur</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">stop_time</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">current_time</span> <span class="o">+</span> <span class="n">wait_dur</span>
     <span class="k">while</span> <span class="n">ec</span><span class="o">.</span><span class="n">current_time</span> <span class="o">&lt;</span> <span class="n">stop_time</span><span class="p">:</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1">, </span><span class="si">%i</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span>
                                          <span class="n">ec</span><span class="o">.</span><span class="n">get_mouse_position</span><span class="p">()]),</span>
-                       <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+                       <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">check_force_quit</span><span class="p">()</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
 
     <span class="c1">###########################</span>
     <span class="c1"># wait_for_click_on</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">toggle_cursor</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">c</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="View documentation for expyfun.visual.Circle"><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;pix&#39;</span><span class="p">)</span>
     <span class="n">r</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="View documentation for expyfun.visual.Rectangle"><span class="n">Rectangle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
@@ -205,14 +205,14 @@ session: 001
     <span class="n">dot</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.FixationDot.html#expyfun.visual.FixationDot" title="View documentation for expyfun.visual.FixationDot"><span class="n">FixationDot</span></a><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
     <span class="n">objects</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">cc</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">dot</span><span class="p">]</span>
 
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Click on some objects...&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">msg_dur</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Click on some objects...&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">msg_dur</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">ti</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">o</span> <span class="ow">in</span> <span class="n">objects</span><span class="p">:</span>
             <span class="n">o</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
         <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <span class="n">click</span><span class="p">,</span> <span class="n">ind</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_for_click_on</span><span class="p">(</span><span class="n">objects</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">ind</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ind</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">objects</span><span class="p">[</span><span class="n">ind</span><span class="p">]</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
@@ -220,7 +220,7 @@ session: 001
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.245 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.607 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-mouse-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/61e2205d9536526b8dc74390c79882ad/mouse.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mouse.py</span></code></a></div>
@@ -242,7 +242,7 @@ session: 001
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

@@ -110,7 +110,7 @@
 <img alt="../../_images/sphx_glr_progress_bar_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_progress_bar_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: name
-date: 2019-01-30 22_35_54.131371
+date: 2019-03-17 23_51_54.992014
 file: /home/circleci/project/examples/experiments/progress_bar.py
 participant: foo
 session: foo
@@ -119,17 +119,17 @@ session: foo
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="kn">import</span> <span class="n">ProgressBar</span>
-<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="kn">as</span> <span class="nn">ea</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <span class="n">ProgressBar</span>
+<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">n_trials</span> <span class="o">=</span> <span class="mi">6</span>
 <span class="n">max_wait</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
 <span class="n">wait_dur</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.5</span>
 
 <span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
-                          <span class="n">full_screen</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+                          <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
                           <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
 
     <span class="c1"># initialize the progress bar</span>
@@ -141,7 +141,7 @@ session: foo
     <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n_trials</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
         <span class="c1"># subject does some task</span>
         <span class="n">number</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-        <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="n">number</span><span class="p">],</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
@@ -152,8 +152,8 @@ session: foo
             <span class="n">percent</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">n_trials</span><span class="p">)</span>
             <span class="n">pb</span><span class="o">.</span><span class="n">update_bar</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span>
             <span class="c1"># display the progress bar with some text</span>
-            <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;You</span><span class="se">\&#39;</span><span class="s1">ve completed {} %. Press any key to proceed.&#39;</span>
-                           <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">percent</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">],</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+            <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;You</span><span class="se">\&#39;</span><span class="s1">ve completed </span><span class="si">{}</span><span class="s1"> %. Press any key to proceed.&#39;</span>
+                           <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">percent</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">],</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                            <span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
             <span class="n">pb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
@@ -168,7 +168,7 @@ session: foo
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.088 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.379 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-progress-bar-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/c83d103723b35925f9fdbb9e22991fe6/progress_bar.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">progress_bar.py</span></code></a></div>
@@ -190,7 +190,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

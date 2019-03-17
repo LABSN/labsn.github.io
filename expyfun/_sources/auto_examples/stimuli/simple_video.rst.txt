@@ -29,20 +29,20 @@ already been installed.
  .. code-block:: none
 
     exp_name: simple video example
-    date: 2019-01-30 22_36_07.799321
+    date: 2019-03-17 23_52_11.141061
     file: /home/circleci/project/examples/stimuli/simple_video.py
     participant: foo
     session: foo
-    2019-01-30 22:36:07,799 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-    2019-01-30 22:36:07,799 - INFO    - Expyfun: Setting up Pyglet audio
-    2019-01-30 22:36:07,839 - INFO    - Expyfun: Setting up screen
-    2019-01-30 22:36:07,851 - EXP     - Expyfun: Set screen visibility True
-    2019-01-30 22:36:07,899 - INFO    - Expyfun: Initializing dummy triggering mode
-    2019-01-30 22:36:07,902 - INFO    - Expyfun: Initialization complete
-    2019-01-30 22:36:07,902 - EXP     - Expyfun: Participant: foo
-    2019-01-30 22:36:07,902 - EXP     - Expyfun: Session: foo
-    2019-01-30 22:36:09,064 - INFO    - Expyfun: Exiting
-    2019-01-30 22:36:09,066 - EXP     - Expyfun: Audio stopped and reset.
+    2019-03-17 23:52:11,141 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2019-03-17 23:52:11,141 - INFO    - Expyfun: Setting up Pyglet audio
+    2019-03-17 23:52:11,205 - INFO    - Expyfun: Setting up screen
+    2019-03-17 23:52:11,227 - EXP     - Expyfun: Set screen visibility True
+    2019-03-17 23:52:11,337 - INFO    - Expyfun: Initializing dummy triggering mode
+    2019-03-17 23:52:11,341 - INFO    - Expyfun: Initialization complete
+    2019-03-17 23:52:11,341 - EXP     - Expyfun: Participant: foo
+    2019-03-17 23:52:11,341 - EXP     - Expyfun: Session: foo
+    2019-03-17 23:52:12,659 - INFO    - Expyfun: Exiting
+    2019-03-17 23:52:12,663 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -50,7 +50,7 @@ already been installed.
 |
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     from expyfun import (ExperimentController, fetch_data_file, analyze as ea,
@@ -83,7 +83,7 @@ already been installed.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  1.421 seconds)
+   **Total running time of the script:** ( 0 minutes  1.904 seconds)
 
 
 .. _sphx_glr_download_auto_examples_stimuli_simple_video.py:

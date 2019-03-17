@@ -112,12 +112,12 @@ dealer from the .tab file logged by experiment controller with
 <p>In this case, a modeled human subject generates two curves (one for each trial
 type: 1 &amp; 2).</p>
 <p>&#64;author: maddycapp27</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="kn">import</span> <a href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="View documentation for expyfun.stimuli.TrackerUD"><span class="n">TrackerUD</span></a><span class="p">,</span> <a href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="View documentation for expyfun.stimuli.TrackerDealer"><span class="n">TrackerDealer</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.analyze</span> <span class="kn">import</span> <a href="../../generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid" title="View documentation for expyfun.analyze.sigmoid"><span class="n">sigmoid</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.io</span> <span class="kn">import</span> <a href="../../generated/expyfun.io.reconstruct_dealer.html#expyfun.io.reconstruct_dealer" title="View documentation for expyfun.io.reconstruct_dealer"><span class="n">reconstruct_dealer</span></a>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="k">import</span> <a href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="View documentation for expyfun.stimuli.TrackerUD"><span class="n">TrackerUD</span></a><span class="p">,</span> <a href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="View documentation for expyfun.stimuli.TrackerDealer"><span class="n">TrackerDealer</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.analyze</span> <span class="k">import</span> <a href="../../generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid" title="View documentation for expyfun.analyze.sigmoid"><span class="n">sigmoid</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.io</span> <span class="k">import</span> <a href="../../generated/expyfun.io.reconstruct_dealer.html#expyfun.io.reconstruct_dealer" title="View documentation for expyfun.io.reconstruct_dealer"><span class="n">reconstruct_dealer</span></a>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># define parameters of modeled subject (using sigmoid probability)</span>
 <span class="n">true_thresh</span> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>  <span class="c1"># true thresholds for trial types 1 and 2</span>
@@ -134,7 +134,7 @@ of 3) and based on the number of reversals (the first element in each
 list is the step size until the number of reversals dictacted by the second
 element in change_criteria have occurred (i.e. the up step size will be 9
 until 5 reversals have occurred, then the up step size will be 3.))</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">up</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">up</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">down</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">step_size_up</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">step_size_down</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -161,9 +161,9 @@ passed into the dealer. After the dealer is created, the type of each trial
 for that trial can be acquired. <a class="reference internal" href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.ExperimentController</span></code></a> is used
 to generate log files with <a class="reference internal" href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerUD</span></code></a> and
 <a class="reference internal" href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerDealer</span></code></a> information.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">std_args</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>  <span class="c1"># experiment name</span>
-<span class="n">std_kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">full_screen</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
-                  <span class="n">session</span><span class="o">=</span><span class="s1">&#39;01&#39;</span><span class="p">,</span> <span class="n">stim_db</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">std_args</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;test&#39;</span><span class="p">]</span>  <span class="c1"># experiment name</span>
+<span class="n">std_kwargs</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+                  <span class="n">session</span><span class="o">=</span><span class="s1">&#39;01&#39;</span><span class="p">,</span> <span class="n">stim_db</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                   <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span>
 
 <span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="o">*</span><span class="n">std_args</span><span class="p">,</span> <span class="o">**</span><span class="n">std_kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
@@ -189,7 +189,7 @@ to generate log files with <a class="reference internal" href="../../generated/e
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2019-01-30 22_35_59.612049
+date: 2019-03-17 23_52_01.389390
 file: /home/circleci/project/examples/experiments/tracker_dealer.py
 participant: foo
 session: 01
@@ -204,24 +204,24 @@ only be access through the object itself (not the log files alone). By using
 the analysis functions are accessible. Note that the function always returns
 a list of objects. Similar reconstructions of single trackers can be done
 with <a class="reference internal" href="../../generated/expyfun.io.reconstruct_tracker.html#expyfun.io.reconstruct_tracker" title="expyfun.io.reconstruct_tracker"><code class="xref py py-func docutils literal notranslate"><span class="pre">expyfun.io.reconstruct_tracker()</span></code></a>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">td_tab</span> <span class="o">=</span> <a href="../../generated/expyfun.io.reconstruct_dealer.html#expyfun.io.reconstruct_dealer" title="View documentation for expyfun.io.reconstruct_dealer"><span class="n">reconstruct_dealer</span></a><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">data_fname</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">td_tab</span> <span class="o">=</span> <a href="../../generated/expyfun.io.reconstruct_dealer.html#expyfun.io.reconstruct_dealer" title="View documentation for expyfun.io.reconstruct_dealer"><span class="n">reconstruct_dealer</span></a><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">data_fname</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="plotting-the-results">
 <h2>Plotting the Results<a class="headerlink" href="#plotting-the-results" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">axes</span> <span class="o">=</span> <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="View documentation for matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">axes</span> <span class="o">=</span> <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="View documentation for matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
     <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">lines</span> <span class="o">=</span> <span class="n">td_tab</span><span class="o">.</span><span class="n">trackers</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">n_skip</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
     <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Adaptive track of model human trial type {} (true threshold &#39;</span>
-                 <span class="s1">&#39;is {})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">true_thresh</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Adaptive track of model human trial type </span><span class="si">{}</span><span class="s1"> (true threshold &#39;</span>
+                 <span class="s1">&#39;is </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">true_thresh</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
     <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_tracker_dealer_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_tracker_dealer_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.435 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.786 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-tracker-dealer-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/a74475f4664f4ac15f24719c49d46765/tracker_dealer.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tracker_dealer.py</span></code></a></div>
@@ -244,7 +244,7 @@ with <a class="reference internal" href="../../generated/expyfun.io.reconstruct_
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

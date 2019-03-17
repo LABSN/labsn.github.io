@@ -107,22 +107,22 @@
 <span id="sphx-glr-auto-examples-experiments-pupillometry-experiment-py"></span><h1>Experiment using eye-tracking pupillometry<a class="headerlink" href="#experiment-using-eye-tracking-pupillometry" title="Permalink to this headline">¶</a></h1>
 <p>Integration with Eyelink functionality makes programming experiments
 using eye-tracking simpler.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larsoner@uw.edu&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larsoner@uw.edu&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController" title="View documentation for expyfun.EyelinkController"><span class="n">EyelinkController</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.codeblocks</span> <span class="kn">import</span> <span class="p">(</span><a href="../../generated/expyfun.codeblocks.find_pupil_dynamic_range.html#expyfun.codeblocks.find_pupil_dynamic_range" title="View documentation for expyfun.codeblocks.find_pupil_dynamic_range"><span class="n">find_pupil_dynamic_range</span></a><span class="p">,</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController" title="View documentation for expyfun.EyelinkController"><span class="n">EyelinkController</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.codeblocks</span> <span class="k">import</span> <span class="p">(</span><a href="../../generated/expyfun.codeblocks.find_pupil_dynamic_range.html#expyfun.codeblocks.find_pupil_dynamic_range" title="View documentation for expyfun.codeblocks.find_pupil_dynamic_range"><span class="n">find_pupil_dynamic_range</span></a><span class="p">,</span>
                                 <a href="../../generated/expyfun.codeblocks.find_pupil_tone_impulse_response.html#expyfun.codeblocks.find_pupil_tone_impulse_response" title="View documentation for expyfun.codeblocks.find_pupil_tone_impulse_response"><span class="n">find_pupil_tone_impulse_response</span></a><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
-<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;pupilExp&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
-                          <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;pupilExp&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
+                          <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">el</span> <span class="o">=</span> <a href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController" title="View documentation for expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
     <span class="n">bgcolor</span><span class="p">,</span> <span class="n">fcolor</span><span class="p">,</span> <span class="n">lev</span><span class="p">,</span> <span class="n">resp</span> <span class="o">=</span> <a href="../../generated/expyfun.codeblocks.find_pupil_dynamic_range.html#expyfun.codeblocks.find_pupil_dynamic_range" title="View documentation for expyfun.codeblocks.find_pupil_dynamic_range"><span class="n">find_pupil_dynamic_range</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">el</span><span class="p">)</span>
     <span class="n">prf</span><span class="p">,</span> <span class="n">t_srf</span><span class="p">,</span> <span class="n">e_prf</span> <span class="o">=</span> <a href="../../generated/expyfun.codeblocks.find_pupil_tone_impulse_response.html#expyfun.codeblocks.find_pupil_tone_impulse_response" title="View documentation for expyfun.codeblocks.find_pupil_tone_impulse_response"><span class="n">find_pupil_tone_impulse_response</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">el</span><span class="p">,</span> <span class="n">bgcolor</span><span class="p">,</span>
@@ -153,7 +153,7 @@ using eye-tracking simpler.</p>
 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.055 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-pupillometry-experiment-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/3199e30b4915570b0a2cf2b28ba8d07d/pupillometry_experiment_.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">pupillometry_experiment_.py</span></code></a></div>
@@ -175,7 +175,7 @@ using eye-tracking simpler.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

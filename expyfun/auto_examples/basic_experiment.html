@@ -110,43 +110,43 @@ ExperimentController class.</p>
 <img alt="../_images/sphx_glr_basic_experiment_001.png" class="sphx-glr-single-img" src="../_images/sphx_glr_basic_experiment_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: testExp
-date: 2019-01-30 22_35_48.257627
+date: 2019-03-17 23_51_46.500979
 file: /home/circleci/project/examples/basic_experiment.py
 participant: foo
 session: 001
-2019-01-30 22:35:48,257 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-01-30 22:35:48,258 - INFO    - Expyfun: Setting up Pyglet audio
-2019-01-30 22:35:48,309 - INFO    - Expyfun: Setting up screen
-2019-01-30 22:35:48,329 - EXP     - Expyfun: Set screen visibility True
-2019-01-30 22:35:48,403 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-01-30 22:35:48,407 - INFO    - Expyfun: Initialization complete
-2019-01-30 22:35:48,407 - EXP     - Expyfun: Participant: foo
-2019-01-30 22:35:48,407 - EXP     - Expyfun: Session: 001
-2019-01-30 22:35:48,613 - EXP     - Expyfun: Loading 48828 samples to buffer
-2019-01-30 22:35:48,704 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
-2019-01-30 22:35:48,704 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2019-01-30 22:35:48,764 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-01-30 22:35:48,773 - WARNING - ec.trial_ok called before stimulus had stopped
-2019-01-30 22:35:48,773 - EXP     - Expyfun: Trial OK
+2019-03-17 23:51:46,501 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-03-17 23:51:46,501 - INFO    - Expyfun: Setting up Pyglet audio
+2019-03-17 23:51:46,573 - INFO    - Expyfun: Setting up screen
+2019-03-17 23:51:46,622 - EXP     - Expyfun: Set screen visibility True
+2019-03-17 23:51:46,789 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-03-17 23:51:46,797 - INFO    - Expyfun: Initialization complete
+2019-03-17 23:51:46,797 - EXP     - Expyfun: Participant: foo
+2019-03-17 23:51:46,797 - EXP     - Expyfun: Session: 001
+2019-03-17 23:51:47,226 - EXP     - Expyfun: Loading 48828 samples to buffer
+2019-03-17 23:51:47,367 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
+2019-03-17 23:51:47,368 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2019-03-17 23:51:47,434 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-03-17 23:51:47,450 - WARNING - ec.trial_ok called before stimulus had stopped
+2019-03-17 23:51:47,450 - EXP     - Expyfun: Trial OK
 Presses:
 []
-2019-01-30 22:35:48,773 - INFO    - Expyfun: Exiting
-2019-01-30 22:35:48,776 - EXP     - Expyfun: Audio stopped and reset.
+2019-03-17 23:51:47,450 - INFO    - Expyfun: Exiting
+2019-03-17 23:51:47,459 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larson.eric.d@gmail.com&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larson.eric.d@gmail.com&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <span class="n">building_doc</span>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="kn">import</span> <a href="../generated/expyfun.visual.FixationDot.html#expyfun.visual.FixationDot" title="View documentation for expyfun.visual.FixationDot"><span class="n">FixationDot</span></a>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <a href="../generated/expyfun.visual.FixationDot.html#expyfun.visual.FixationDot" title="View documentation for expyfun.visual.FixationDot"><span class="n">FixationDot</span></a>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 <span class="c1"># set configuration</span>
 <span class="n">fs</span> <span class="o">=</span> <span class="mf">24414.</span>  <span class="c1"># default for ExperimentController</span>
@@ -156,7 +156,7 @@ Presses:
 <span class="n">max_wait</span> <span class="o">=</span> <span class="mf">1.</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
 
 <span class="k">with</span> <a href="../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;testExp&#39;</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span>
-                          <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+                          <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Press a button when you hear the tone&#39;</span><span class="p">,</span>
                      <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
 
@@ -169,12 +169,12 @@ Presses:
     <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>
     <span class="n">presses</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_for_presses</span><span class="p">(</span><span class="n">dur</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Presses:</span><span class="se">\n</span><span class="s1">{}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">presses</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Presses:</span><span class="se">\n</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">presses</span><span class="p">))</span>
 
 <a href="../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.668 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.196 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-basic-experiment-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../_downloads/258049ebed87113720aacf743304a7c9/basic_experiment.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">basic_experiment.py</span></code></a></div>
@@ -196,7 +196,7 @@ Presses:
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

@@ -22,7 +22,7 @@ type: 1 & 2).
 @author: maddycapp27
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     import numpy as np
@@ -54,7 +54,7 @@ element in change_criteria have occurred (i.e. the up step size will be 9
 until 5 reversals have occurred, then the up step size will be 3.))
 
 
-.. code-block:: python
+.. code-block:: default
 
     up = 1
     down = 1
@@ -89,7 +89,7 @@ to generate log files with :class:`expyfun.stimuli.TrackerUD` and
 :class:`expyfun.stimuli.TrackerDealer` information.
 
 
-.. code-block:: python
+.. code-block:: default
 
     std_args = ['test']  # experiment name
     std_kwargs = dict(full_screen=False, window_size=(1, 1), participant='foo',
@@ -127,7 +127,7 @@ to generate log files with :class:`expyfun.stimuli.TrackerUD` and
  .. code-block:: none
 
     exp_name: test
-    date: 2019-01-30 22_35_59.612049
+    date: 2019-03-17 23_52_01.389390
     file: /home/circleci/project/examples/experiments/tracker_dealer.py
     participant: foo
     session: 01
@@ -143,7 +143,7 @@ a list of objects. Similar reconstructions of single trackers can be done
 with :func:`expyfun.io.reconstruct_tracker`.
 
 
-.. code-block:: python
+.. code-block:: default
 
 
     td_tab = reconstruct_dealer(ec.data_fname)[0]
@@ -158,7 +158,7 @@ Plotting the Results
 ---------------------------
 
 
-.. code-block:: python
+.. code-block:: default
 
     axes = plt.subplots(2, 1)[1]
     for i in [0, 1]:
@@ -180,7 +180,7 @@ Plotting the Results
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.435 seconds)
+   **Total running time of the script:** ( 0 minutes  0.786 seconds)
 
 
 .. _sphx_glr_download_auto_examples_experiments_tracker_dealer.py:

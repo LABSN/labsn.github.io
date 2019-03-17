@@ -112,40 +112,40 @@ inprecise timing.</p>
 <img alt="../../_images/sphx_glr_keyrelease_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_keyrelease_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: KeyPressAndReleaseDemo
-date: 2019-01-30 22_35_58.150003
+date: 2019-03-17 23_51_59.723679
 file: /home/circleci/project/examples/experiments/keyrelease.py
 participant: foo
 session: 001
-2019-01-30 22:35:58,150 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-01-30 22:35:58,150 - INFO    - Expyfun: Setting up Pyglet audio
-2019-01-30 22:35:58,211 - INFO    - Expyfun: Setting up screen
-2019-01-30 22:35:58,232 - EXP     - Expyfun: Set screen visibility True
-2019-01-30 22:35:58,319 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-01-30 22:35:58,322 - INFO    - Expyfun: Initialization complete
-2019-01-30 22:35:58,322 - EXP     - Expyfun: Participant: foo
-2019-01-30 22:35:58,322 - EXP     - Expyfun: Session: 001
-2019-01-30 22:35:59,434 - INFO    - Expyfun: Exiting
-2019-01-30 22:35:59,436 - EXP     - Expyfun: Audio stopped and reset.
+2019-03-17 23:51:59,724 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-03-17 23:51:59,724 - INFO    - Expyfun: Setting up Pyglet audio
+2019-03-17 23:51:59,796 - INFO    - Expyfun: Setting up screen
+2019-03-17 23:51:59,816 - EXP     - Expyfun: Set screen visibility True
+2019-03-17 23:51:59,915 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-03-17 23:51:59,919 - INFO    - Expyfun: Initialization complete
+2019-03-17 23:51:59,919 - EXP     - Expyfun: Participant: foo
+2019-03-17 23:51:59,919 - EXP     - Expyfun: Session: 001
+2019-03-17 23:52:01,101 - INFO    - Expyfun: Exiting
+2019-03-17 23:52:01,105 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Jasper van den Bosch &lt;jasperb@uw.edu&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Jasper van den Bosch &lt;jasperb@uw.edu&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span><span class="p">,</span> <span class="n">analyze</span> <span class="k">as</span> <span class="n">ea</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span><span class="p">,</span> <span class="n">analyze</span> <span class="k">as</span> <span class="n">ea</span>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 <span class="n">isi</span> <span class="o">=</span> <span class="mf">0.5</span>
 <span class="n">wait_dur</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
 <span class="n">msg_dur</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
 
 <span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;KeyPressAndReleaseDemo&#39;</span><span class="p">,</span> <span class="n">screen_num</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                          <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">1280</span><span class="p">,</span> <span class="mi">960</span><span class="p">],</span> <span class="n">full_screen</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                          <span class="n">stim_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+                          <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">1280</span><span class="p">,</span> <span class="mi">960</span><span class="p">],</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                          <span class="n">stim_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span>
                           <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">response_device</span><span class="o">=</span><span class="s1">&#39;keyboard&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="n">isi</span><span class="p">)</span>
@@ -153,7 +153,7 @@ session: 001
     <span class="c1">###########################################</span>
     <span class="c1"># listen_presses / while loop / get_presses(kind=&#39;both&#39;)</span>
     <span class="n">instruction</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;Press and release some keys</span><span class="se">\n\n</span><span class="s2">listen_presses()&quot;</span>
-                   <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">while loop {}</span><span class="se">\n</span><span class="s2">&quot;</span>
+                   <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">while loop </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span>
                    <span class="s2">&quot;get_presses(kind=&#39;both&#39;, return_kinds=True)&quot;</span><span class="p">)</span>
     <span class="n">disp_time</span> <span class="o">=</span> <span class="n">wait_dur</span>
     <span class="n">countdown</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">current_time</span> <span class="o">+</span> <span class="n">disp_time</span>
@@ -168,12 +168,12 @@ session: 001
             <span class="c1"># redraw text with updated disp_time</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="n">instruction</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">disp_time</span><span class="p">))</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-    <span class="n">events</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">get_presses</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">return_kinds</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">events</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">get_presses</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">return_kinds</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">write_data_line</span><span class="p">(</span><span class="s1">&#39;listen / while / get_presses&#39;</span><span class="p">,</span> <span class="n">events</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">events</span><span class="p">):</span>
         <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;no keys pressed&#39;</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">message</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;{} {} after {} secs</span><span class="se">\n</span><span class="s1">&#39;</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> </span><span class="si">{}</span><span class="s1"> after </span><span class="si">{}</span><span class="s1"> secs</span><span class="se">\n</span><span class="s1">&#39;</span>
                    <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">events</span><span class="p">]</span>
         <span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">msg_dur</span><span class="p">)</span>
@@ -182,7 +182,7 @@ session: 001
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.444 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.631 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-keyrelease-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/e6d7e8e350f702f3a257527fe10ff5da/keyrelease.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">keyrelease.py</span></code></a></div>
@@ -204,7 +204,7 @@ session: 001
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

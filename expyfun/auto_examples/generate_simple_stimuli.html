@@ -108,14 +108,14 @@
 <p>This shows how to generate some simple stimuli. It will also play a couple
 of sample stimuli.</p>
 <img alt="../_images/sphx_glr_generate_simple_stimuli_001.png" class="sphx-glr-single-img" src="../_images/sphx_glr_generate_simple_stimuli_001.png" />
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">op</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">os</span> <span class="k">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">op</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="kn">from</span> <span class="nn">expyfun.io</span> <span class="kn">import</span> <a href="../generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5" title="View documentation for expyfun.io.write_hdf5"><span class="n">write_hdf5</span></a><span class="p">,</span> <a href="../generated/expyfun.io.write_wav.html#expyfun.io.write_wav" title="View documentation for expyfun.io.write_wav"><span class="n">write_wav</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="kn">import</span> <a href="../generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound" title="View documentation for expyfun.stimuli.play_sound"><span class="n">play_sound</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.io</span> <span class="k">import</span> <a href="../generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5" title="View documentation for expyfun.io.write_hdf5"><span class="n">write_hdf5</span></a><span class="p">,</span> <a href="../generated/expyfun.io.write_wav.html#expyfun.io.write_wav" title="View documentation for expyfun.io.write_wav"><span class="n">write_wav</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="k">import</span> <a href="../generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound" title="View documentation for expyfun.stimuli.play_sound"><span class="n">play_sound</span></a>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">generate_stimuli</span><span class="p">(</span><span class="n">num_trials</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">num_freqs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">stim_dur</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">min_freq</span><span class="o">=</span><span class="mf">500.0</span><span class="p">,</span>
@@ -160,13 +160,13 @@ of sample stimuli.</p>
 <span class="sd">    wavs : dict | None</span>
 <span class="sd">        The stimulus dictionary.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">rand_seed</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">rand_seed</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="n">rand_seed</span><span class="p">)</span>
 
     <span class="c1"># check input arguments</span>
-    <span class="k">if</span> <span class="n">save_as</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">save_as</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;dict&#39;</span><span class="p">,</span> <span class="s1">&#39;wav&#39;</span><span class="p">,</span> <span class="s1">&#39;hdf5&#39;</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">save_as</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">save_as</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;dict&#39;</span><span class="p">,</span> <span class="s1">&#39;wav&#39;</span><span class="p">,</span> <span class="s1">&#39;hdf5&#39;</span><span class="p">]:</span>
         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;&quot;save_as&quot; must be &quot;dict&quot;, &quot;wav&quot;, or &quot;hdf5&quot;&#39;</span><span class="p">)</span>
 
     <span class="n">fs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>
@@ -174,7 +174,7 @@ of sample stimuli.</p>
 
     <span class="c1"># frequencies equally spaced on a log-2 scale</span>
     <span class="n">freqs</span> <span class="o">=</span> <span class="n">min_freq</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">log2</span><span class="p">(</span><span class="n">max_freq</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">min_freq</span><span class="p">)),</span>
-                                   <span class="n">num_freqs</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+                                   <span class="n">num_freqs</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 
     <span class="c1"># strings for the filenames / dictionary keys</span>
     <span class="n">freq_names</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">freqs</span><span class="p">]</span>
@@ -193,7 +193,7 @@ of sample stimuli.</p>
         <span class="n">wav_dict</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;trial_order&#39;</span><span class="p">:</span> <span class="n">trial_order</span><span class="p">,</span> <span class="s1">&#39;freqs&#39;</span><span class="p">:</span> <span class="n">freqs</span><span class="p">,</span> <span class="s1">&#39;fs&#39;</span><span class="p">:</span> <span class="n">fs</span><span class="p">,</span>
                          <span class="s1">&#39;rms&#39;</span><span class="p">:</span> <span class="n">rms</span><span class="p">})</span>
         <a href="../generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5" title="View documentation for expyfun.io.write_hdf5"><span class="n">write_hdf5</span></a><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s1">&#39;equally_spaced_sinewaves.hdf5&#39;</span><span class="p">),</span>
-                   <span class="n">wav_dict</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+                   <span class="n">wav_dict</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">save_as</span> <span class="o">==</span> <span class="s1">&#39;wav&#39;</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
             <a href="../generated/expyfun.io.write_wav.html#expyfun.io.write_wav" title="View documentation for expyfun.io.write_wav"><span class="n">write_wav</span></a><span class="p">(</span><span class="n">op</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="s1">&#39;.wav&#39;</span><span class="p">),</span> <span class="n">wav_dict</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
@@ -201,13 +201,13 @@ of sample stimuli.</p>
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">wav_dict</span> <span class="o">=</span> <span class="n">generate_stimuli</span><span class="p">(</span><span class="n">save_as</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+    <span class="n">wav_dict</span> <span class="o">=</span> <span class="n">generate_stimuli</span><span class="p">(</span><span class="n">save_as</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
     <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="View documentation for matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><span class="n">wav_dict</span><span class="p">[</span><span class="s1">&#39;stim_0_500&#39;</span><span class="p">][:</span><span class="mi">1000</span><span class="p">])</span>
     <a href="../generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound" title="View documentation for expyfun.stimuli.play_sound"><span class="n">play_sound</span></a><span class="p">(</span><span class="n">wav_dict</span><span class="p">[</span><span class="s1">&#39;stim_0_500&#39;</span><span class="p">])</span>
     <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.137 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.431 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-generate-simple-stimuli-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../_downloads/6187199558ed6302b9798330cf1b35c4/generate_simple_stimuli.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">generate_simple_stimuli.py</span></code></a></div>
@@ -229,7 +229,7 @@ of sample stimuli.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

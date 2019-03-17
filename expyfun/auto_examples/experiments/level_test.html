@@ -114,44 +114,44 @@ distance.</p>
 <img alt="../../_images/sphx_glr_level_test_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_level_test_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: LevelTest
-date: 2019-01-30 22_35_53.555353
+date: 2019-03-17 23_51_54.074709
 file: /home/circleci/project/examples/experiments/level_test.py
 participant: s
 session: 0
-2019-01-30 22:35:53,555 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-01-30 22:35:53,555 - INFO    - Expyfun: Setting up Pyglet audio
-2019-01-30 22:35:53,602 - INFO    - Expyfun: Setting up screen
-2019-01-30 22:35:53,623 - EXP     - Expyfun: Set screen visibility True
-2019-01-30 22:35:53,684 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-01-30 22:35:53,687 - INFO    - Expyfun: Initialization complete
-2019-01-30 22:35:53,687 - EXP     - Expyfun: Participant: s
-2019-01-30 22:35:53,687 - EXP     - Expyfun: Session: 0
-2019-01-30 22:35:53,702 - EXP     - Expyfun: Loading 488280 samples to buffer
-2019-01-30 22:35:53,841 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-01-30 22:35:53,852 - EXP     - Expyfun: Audio stopped and reset.
-2019-01-30 22:35:53,852 - INFO    - Expyfun: Exiting
-2019-01-30 22:35:53,855 - EXP     - Expyfun: Audio stopped and reset.
+2019-03-17 23:51:54,075 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-03-17 23:51:54,075 - INFO    - Expyfun: Setting up Pyglet audio
+2019-03-17 23:51:54,142 - INFO    - Expyfun: Setting up screen
+2019-03-17 23:51:54,170 - EXP     - Expyfun: Set screen visibility True
+2019-03-17 23:51:54,268 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-03-17 23:51:54,272 - INFO    - Expyfun: Initialization complete
+2019-03-17 23:51:54,272 - EXP     - Expyfun: Participant: s
+2019-03-17 23:51:54,272 - EXP     - Expyfun: Session: 0
+2019-03-17 23:51:54,298 - EXP     - Expyfun: Loading 488280 samples to buffer
+2019-03-17 23:51:54,527 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-03-17 23:51:54,546 - EXP     - Expyfun: Audio stopped and reset.
+2019-03-17 23:51:54,546 - INFO    - Expyfun: Exiting
+2019-03-17 23:51:54,550 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Ross Maddox &lt;rkmaddox@uw.edu&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Ross Maddox &lt;rkmaddox@uw.edu&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="kn">import</span> <a href="../../generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="View documentation for expyfun.visual.Rectangle"><span class="n">Rectangle</span></a>
-<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="kn">as</span> <span class="nn">ea</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <a href="../../generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="View documentation for expyfun.visual.Rectangle"><span class="n">Rectangle</span></a>
+<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
-<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;LevelTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span>
-                          <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
-                          <span class="n">suppress_resamp</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">check_rms</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;LevelTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span>
+                          <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                          <span class="n">suppress_resamp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check_rms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">stim_db</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">tone</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="p">)</span> <span class="o">*</span>
             <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mf">1000.</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">fs</span><span class="p">)))</span>
@@ -160,14 +160,14 @@ session: 0
     <span class="n">cm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">_convert_units</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]],</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;pix&#39;</span><span class="p">),</span>
                  <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">dpi</span> <span class="o">/</span> <span class="mf">0.39370</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><span class="n">tone</span><span class="p">)</span>  <span class="c1"># RMS == 0.01</span>
-    <span class="n">pressed</span> <span class="o">=</span> <span class="bp">None</span>
-    <span class="n">screenshot</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">pressed</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">screenshot</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="k">while</span> <span class="n">pressed</span> <span class="o">!=</span> <span class="s1">&#39;8&#39;</span><span class="p">:</span>  <span class="c1"># enable a clean quit if required</span>
         <span class="n">square</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-        <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Width: {} cm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">cm</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-        <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Output level: {} dB&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">stim_db</span><span class="p">),</span> <span class="n">wrap</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-        <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span> <span class="k">if</span> <span class="n">screenshot</span> <span class="ow">is</span> <span class="bp">None</span> <span class="k">else</span> <span class="n">screenshot</span>
-        <span class="n">t1</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">(</span><span class="n">start_of_trial</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>  <span class="c1"># skip checks</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Width: </span><span class="si">{}</span><span class="s1"> cm&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">cm</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Output level: </span><span class="si">{}</span><span class="s1"> dB&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">stim_db</span><span class="p">),</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span> <span class="k">if</span> <span class="n">screenshot</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">screenshot</span>
+        <span class="n">t1</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">(</span><span class="n">start_of_trial</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># skip checks</span>
         <span class="n">pressed</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="mi">10</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="s1">&#39;8&#39;</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="mf">0.5</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span><span class="p">)</span>
@@ -176,7 +176,7 @@ session: 0
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.460 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.741 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-level-test-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/1613c61b367269a195b8fed43cf083cd/level_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">level_test.py</span></code></a></div>
@@ -198,7 +198,7 @@ session: 0
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

@@ -109,33 +109,33 @@
 <img alt="../../_images/sphx_glr_formatted_text_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_formatted_text_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: textDemo
-date: 2019-01-30 22_35_57.239773
+date: 2019-03-17 23_51_58.413835
 file: /home/circleci/project/examples/experiments/formatted_text.py
 participant: foo
 session: 001
-2019-01-30 22:35:57,240 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-01-30 22:35:57,240 - INFO    - Expyfun: Setting up Pyglet audio
-2019-01-30 22:35:57,285 - INFO    - Expyfun: Setting up screen
-2019-01-30 22:35:57,305 - EXP     - Expyfun: Set screen visibility True
-2019-01-30 22:35:57,366 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-01-30 22:35:57,369 - INFO    - Expyfun: Initialization complete
-2019-01-30 22:35:57,369 - EXP     - Expyfun: Participant: foo
-2019-01-30 22:35:57,369 - EXP     - Expyfun: Session: 001
-2019-01-30 22:35:57,639 - INFO    - Expyfun: Exiting
-2019-01-30 22:35:57,641 - EXP     - Expyfun: Audio stopped and reset.
+2019-03-17 23:51:58,414 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-03-17 23:51:58,414 - INFO    - Expyfun: Setting up Pyglet audio
+2019-03-17 23:51:58,488 - INFO    - Expyfun: Setting up screen
+2019-03-17 23:51:58,514 - EXP     - Expyfun: Set screen visibility True
+2019-03-17 23:51:58,607 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-03-17 23:51:58,610 - INFO    - Expyfun: Initialization complete
+2019-03-17 23:51:58,611 - EXP     - Expyfun: Participant: foo
+2019-03-17 23:51:58,611 - EXP     - Expyfun: Session: 001
+2019-03-17 23:51:58,933 - INFO    - Expyfun: Exiting
+2019-03-17 23:51:58,937 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Dan McCloy &lt;drmccloy@uw.edu&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Dan McCloy &lt;drmccloy@uw.edu&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <span class="n">building_doc</span>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="kn">import</span> <span class="n">_convert_color</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <span class="n">_convert_color</span>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 <span class="c1"># Colors</span>
 <span class="n">blue</span> <span class="o">=</span> <span class="n">_convert_color</span><span class="p">(</span><span class="s1">&#39;#00CEE9&#39;</span><span class="p">)</span>
@@ -146,9 +146,9 @@ session: 001
        <span class="s1">&#39;sentence, because it is specified as attr=False&#39;</span><span class="p">)</span>
 <span class="n">two</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Additional calls to ec.screen_text() can have different formatting,&#39;</span>
        <span class="s1">&#39;but have to be manually positioned.&#39;</span><span class="p">)</span>
-<span class="n">thr</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;This text can have {{color {0}}}different {{color {1}}}colors &#39;</span>
-       <span class="s1">&#39;speci{{color {2}}}fied inline, because its {{color {0}}}attr &#39;</span>
-       <span class="s1">&#39;{{color {2}}}argument is {{color {1}}}True. {{color {2}}}&#39;</span>
+<span class="n">thr</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;This text can have {{color </span><span class="si">{0}</span><span class="s1">}}different {{color </span><span class="si">{1}</span><span class="s1">}}colors &#39;</span>
+       <span class="s1">&#39;speci{{color </span><span class="si">{2}</span><span class="s1">}}fied inline, because its {{color </span><span class="si">{0}</span><span class="s1">}}attr &#39;</span>
+       <span class="s1">&#39;{{color </span><span class="si">{2}</span><span class="s1">}}argument is {{color </span><span class="si">{1}</span><span class="s1">}}True. {{color </span><span class="si">{2}</span><span class="s1">}}&#39;</span>
        <span class="s1">&#39;Specifying different typefaces or sizes inline is buggy and &#39;</span>
        <span class="s1">&#39;not recommended.&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">blue</span><span class="p">,</span> <span class="n">pink</span><span class="p">,</span> <span class="n">white</span><span class="p">)</span>
 <span class="n">fou</span> <span class="o">=</span> <span class="s1">&#39;Press any key to change all the text to pink using .set_color().&#39;</span>
@@ -156,9 +156,9 @@ session: 001
 <span class="n">max_wait</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
 
 <span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;textDemo&#39;</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span>
-                          <span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+                          <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># without this, first flip doesn&#39;t show on some systems</span>
-    <span class="n">txt_one</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="n">attr</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+    <span class="n">txt_one</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span> <span class="n">attr</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">txt_two</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="n">two</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> <span class="n">font_name</span><span class="o">=</span><span class="s1">&#39;Times New Roman&#39;</span><span class="p">,</span>
                              <span class="n">font_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#00CEE9&#39;</span><span class="p">)</span>
     <span class="n">txt_thr</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="n">thr</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2</span><span class="p">])</span>
@@ -172,7 +172,7 @@ session: 001
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.552 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.761 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-formatted-text-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/2e7b6dde0915cb0485699a554864251c/formatted_text.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">formatted_text.py</span></code></a></div>
@@ -194,7 +194,7 @@ session: 001
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>

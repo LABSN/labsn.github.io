@@ -114,17 +114,17 @@ functions <a class="reference internal" href="../../generated/expyfun.analyze.dp
 <li><img alt="../../_images/sphx_glr_analysis_demo_002.png" class="sphx-glr-multi-img first" src="../../_images/sphx_glr_analysis_demo_002.png" />
 </li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Dan McCloy &lt;drmccloy@uw.edu&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Dan McCloy &lt;drmccloy@uw.edu&gt;</span>
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="kn">as</span> <span class="nn">ea</span>
+<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
 
-<span class="k">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 <span class="c1"># simulate some 2AFC data</span>
 <span class="n">targets</span> <span class="o">=</span> <span class="mi">50</span>
@@ -149,7 +149,7 @@ functions <a class="reference internal" href="../../generated/expyfun.analyze.dp
 <span class="n">b_dprime</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.dprime.html#expyfun.analyze.dprime" title="View documentation for expyfun.analyze.dprime"><span class="n">ea</span><span class="o">.</span><span class="n">dprime</span></a><span class="p">(</span><span class="n">data</span><span class="p">[[</span><span class="s1">&#39;b_hit&#39;</span><span class="p">,</span> <span class="s1">&#39;b_miss&#39;</span><span class="p">,</span> <span class="s1">&#39;b_fa&#39;</span><span class="p">,</span> <span class="s1">&#39;b_cr&#39;</span><span class="p">]])</span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">ctrl</span><span class="o">=</span><span class="n">a_dprime</span><span class="p">,</span> <span class="n">test</span><span class="o">=</span><span class="n">b_dprime</span><span class="p">))</span>
 <span class="c1"># plot</span>
-<span class="n">subplt</span><span class="p">,</span> <span class="n">barplt</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" title="View documentation for expyfun.analyze.barplot"><span class="n">ea</span><span class="o">.</span><span class="n">barplot</span></a><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">err_bars</span><span class="o">=</span><span class="s1">&#39;sd&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="n">subplt</span><span class="p">,</span> <span class="n">barplt</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" title="View documentation for expyfun.analyze.barplot"><span class="n">ea</span><span class="o">.</span><span class="n">barplot</span></a><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">err_bars</span><span class="o">=</span><span class="s1">&#39;sd&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                             <span class="n">brackets</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)],</span> <span class="n">bracket_text</span><span class="o">=</span><span class="p">[</span><span class="sa">r</span><span class="s1">&#39;$p &lt; 10^{-9}$&#39;</span><span class="p">])</span>
 <span class="n">subplt</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_text</span><span class="p">(</span><span class="s1">&#39;d-prime +/- 1 s.d.&#39;</span><span class="p">)</span>
 <span class="n">subplt</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Each line represents a different subject&#39;</span><span class="p">)</span>
@@ -174,9 +174,9 @@ functions <a class="reference internal" href="../../generated/expyfun.analyze.dp
              <span class="n">rawscores_foil</span><span class="o">.</span><span class="n">ravel</span><span class="p">()]</span>
 <span class="n">dprimes</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.dprime.html#expyfun.analyze.dprime" title="View documentation for expyfun.analyze.dprime"><span class="n">ea</span><span class="o">.</span><span class="n">dprime</span></a><span class="p">(</span><span class="n">hmfc</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">results</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">dprimes</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">subjs</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">colnames</span><span class="p">)</span>
-<span class="n">subplt</span><span class="p">,</span> <span class="n">barplt</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" title="View documentation for expyfun.analyze.barplot"><span class="n">ea</span><span class="o">.</span><span class="n">barplot</span></a><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">err_bars</span><span class="o">=</span><span class="s1">&#39;sd&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+<span class="n">subplt</span><span class="p">,</span> <span class="n">barplt</span> <span class="o">=</span> <a href="../../generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" title="View documentation for expyfun.analyze.barplot"><span class="n">ea</span><span class="o">.</span><span class="n">barplot</span></a><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">err_bars</span><span class="o">=</span><span class="s1">&#39;sd&#39;</span><span class="p">,</span> <span class="n">lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                             <span class="n">groups</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)],</span> <span class="n">group_names</span><span class="o">=</span><span class="n">diffs</span><span class="p">,</span>
-                            <span class="n">bar_names</span><span class="o">=</span><span class="n">conds</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">bracket_group_lines</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                            <span class="n">bar_names</span><span class="o">=</span><span class="n">conds</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">bracket_group_lines</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                             <span class="n">brackets</span><span class="o">=</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
                                       <span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">)],</span>  <span class="c1"># [2, 3]</span>
                             <span class="n">bracket_text</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">,</span> <span class="s1">&#39;snafu&#39;</span><span class="p">,</span>
@@ -186,7 +186,7 @@ functions <a class="reference internal" href="../../generated/expyfun.analyze.dp
 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.696 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.290 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-analysis-analysis-demo-py">
 <div class="sphx-glr-download docutils container">
 <a class="reference download internal" download="" href="../../_downloads/6a2cb8c6121a52eb885afc3ed1be287d/analysis_demo.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">analysis_demo.py</span></code></a></div>
@@ -208,7 +208,7 @@ functions <a class="reference internal" href="../../generated/expyfun.analyze.dp
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-01-30.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
     </p>
   </div>
 </footer>
