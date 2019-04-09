@@ -27,28 +27,28 @@ ExperimentController class.
  .. code-block:: none
 
     exp_name: testExp
-    date: 2019-04-09 16_15_51.716390
+    date: 2019-04-09 16_19_23.230510
     file: /home/circleci/project/examples/basic_experiment.py
     participant: foo
     session: 001
-    2019-04-09 16:15:51,716 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-    2019-04-09 16:15:51,716 - INFO    - Expyfun: Setting up Pyglet audio
-    2019-04-09 16:15:51,772 - INFO    - Expyfun: Setting up screen
-    2019-04-09 16:15:51,794 - EXP     - Expyfun: Set screen visibility True
-    2019-04-09 16:15:51,863 - INFO    - Expyfun: Initializing dummy triggering mode
-    2019-04-09 16:15:51,868 - INFO    - Expyfun: Initialization complete
-    2019-04-09 16:15:51,868 - EXP     - Expyfun: Participant: foo
-    2019-04-09 16:15:51,868 - EXP     - Expyfun: Session: 001
-    2019-04-09 16:15:52,108 - EXP     - Expyfun: Loading 48828 samples to buffer
-    2019-04-09 16:15:52,209 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
-    2019-04-09 16:15:52,209 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-    2019-04-09 16:15:52,270 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-    2019-04-09 16:15:52,279 - WARNING - ec.trial_ok called before stimulus had stopped
-    2019-04-09 16:15:52,279 - EXP     - Expyfun: Trial OK
+    2019-04-09 16:19:23,230 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+    2019-04-09 16:19:23,231 - INFO    - Expyfun: Setting up Pyglet audio
+    2019-04-09 16:19:23,283 - INFO    - Expyfun: Setting up screen
+    2019-04-09 16:19:23,303 - EXP     - Expyfun: Set screen visibility True
+    2019-04-09 16:19:23,368 - INFO    - Expyfun: Initializing dummy triggering mode
+    2019-04-09 16:19:23,371 - INFO    - Expyfun: Initialization complete
+    2019-04-09 16:19:23,371 - EXP     - Expyfun: Participant: foo
+    2019-04-09 16:19:23,371 - EXP     - Expyfun: Session: 001
+    2019-04-09 16:19:23,572 - EXP     - Expyfun: Loading 48828 samples to buffer
+    2019-04-09 16:19:23,662 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
+    2019-04-09 16:19:23,662 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+    2019-04-09 16:19:23,722 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+    2019-04-09 16:19:23,731 - WARNING - ec.trial_ok called before stimulus had stopped
+    2019-04-09 16:19:23,731 - EXP     - Expyfun: Trial OK
     Presses:
     []
-    2019-04-09 16:15:52,280 - INFO    - Expyfun: Exiting
-    2019-04-09 16:15:52,282 - EXP     - Expyfun: Audio stopped and reset.
+    2019-04-09 16:19:23,731 - INFO    - Expyfun: Exiting
+    2019-04-09 16:19:23,734 - EXP     - Expyfun: Audio stopped and reset.
 
 
 
@@ -97,7 +97,7 @@ ExperimentController class.
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.724 seconds)
+   **Total running time of the script:** ( 0 minutes  0.653 seconds)
 
 
 .. _sphx_glr_download_auto_examples_basic_experiment.py:
