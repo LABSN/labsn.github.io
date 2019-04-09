@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>expyfun.analyze.fit_sigmoid &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -28,6 +23,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -96,7 +95,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="expyfun-analyze-fit-sigmoid">
 <h1>expyfun.analyze.fit_sigmoid<a class="headerlink" href="#expyfun-analyze-fit-sigmoid" title="Permalink to this headline">¶</a></h1>
@@ -109,37 +108,28 @@ function of a variable <code class="docutils literal notranslate"><span class="p
 will estimate the underlying sigmoidal response. Note that the fitting
 function can be sensitive to the shape of the data, so always inspect
 your results.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>x</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
-<dd><p class="first last">x-values along the sigmoid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">array-like</span></dt><dd><p>x-values along the sigmoid.</p>
 </dd>
-<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
-<dd><p class="first last">y-values at each location in the sigmoid.</p>
+<dt><strong>y</strong><span class="classifier">array-like</span></dt><dd><p>y-values at each location in the sigmoid.</p>
 </dd>
-<dt><strong>p0</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like | None</span></dt>
-<dd><p class="first last">Initial guesses for the fit. Can be None to estimate all parameters,
+<dt><strong>p0</strong><span class="classifier">array-like | None</span></dt><dd><p>Initial guesses for the fit. Can be None to estimate all parameters,
 or members of the array can be None to have these automatically
 estimated.</p>
 </dd>
-<dt><strong>fixed</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of str</span></dt>
-<dd><p class="first last">Which parameters should be fixed.</p>
+<dt><strong>fixed</strong><span class="classifier">list of str</span></dt><dd><p>Which parameters should be fixed.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>lower, upper, midpt, slope</strong> <span class="classifier-delimiter">:</span> <span class="classifier">floats</span></dt>
-<dd><p class="first last">See expyfun.analyze.sigmoid for descriptions.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>lower, upper, midpt, slope</strong><span class="classifier">floats</span></dt><dd><p>See expyfun.analyze.sigmoid for descriptions.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -156,7 +146,7 @@ estimated.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

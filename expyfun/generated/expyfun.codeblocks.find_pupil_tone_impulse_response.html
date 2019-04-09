@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>expyfun.codeblocks.find_pupil_tone_impulse_response &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,7 +96,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="expyfun-codeblocks-find-pupil-tone-impulse-response">
 <h1>expyfun.codeblocks.find_pupil_tone_impulse_response<a class="headerlink" href="#expyfun-codeblocks-find-pupil-tone-impulse-response" title="Permalink to this headline">¶</a></h1>
@@ -105,52 +104,38 @@
 <dt id="expyfun.codeblocks.find_pupil_tone_impulse_response">
 <code class="descclassname">expyfun.codeblocks.</code><code class="descname">find_pupil_tone_impulse_response</code><span class="sig-paren">(</span><em>ec</em>, <em>el</em>, <em>bgcolor</em>, <em>fcolor</em>, <em>prompt=True</em>, <em>verbose=None</em>, <em>targ_is_fm=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/codeblocks/_pupillometry.py#L130-L289"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.codeblocks.find_pupil_tone_impulse_response" title="Permalink to this definition">¶</a></dt>
 <dd><p>Find pupil impulse response using responses to tones</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController</span></dt>
-<dd><p class="first last">The experiment controller.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ec</strong><span class="classifier">instance of ExperimentController</span></dt><dd><p>The experiment controller.</p>
 </dd>
-<dt><strong>el</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of EyelinkController</span></dt>
-<dd><p class="first last">The Eyelink controller.</p>
+<dt><strong>el</strong><span class="classifier">instance of EyelinkController</span></dt><dd><p>The Eyelink controller.</p>
 </dd>
-<dt><strong>bgcolor</strong> <span class="classifier-delimiter">:</span> <span class="classifier">color</span></dt>
-<dd><p class="first last">Background color to use.</p>
+<dt><strong>bgcolor</strong><span class="classifier">color</span></dt><dd><p>Background color to use.</p>
 </dd>
-<dt><strong>fcolor</strong> <span class="classifier-delimiter">:</span> <span class="classifier">color</span></dt>
-<dd><p class="first last">Fixation dot color to use.</p>
+<dt><strong>fcolor</strong><span class="classifier">color</span></dt><dd><p>Fixation dot color to use.</p>
 </dd>
-<dt><strong>prompt</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">If True, a standard prompt message will be displayed.</p>
+<dt><strong>prompt</strong><span class="classifier">bool</span></dt><dd><p>If True, a standard prompt message will be displayed.</p>
 </dd>
-<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, str, int, or None</span></dt>
-<dd><p class="first last">If not None, override default verbose level (see expyfun.verbose).</p>
+<dt><strong>verbose</strong><span class="classifier">bool, str, int, or None</span></dt><dd><p>If not None, override default verbose level (see expyfun.verbose).</p>
 </dd>
-<dt><strong>targ_is_fm</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">If <code class="docutils literal notranslate"><span class="pre">True</span></code> then use frequency modulated tones as the target and
+<dt><strong>targ_is_fm</strong><span class="classifier">bool</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code> then use frequency modulated tones as the target and
 constant frequency tones as the non-target stimuli. Otherwise use
 constant frequency tones are targets and fm tones as non-targets.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>srf</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
-<dd><p class="first last">The pupil response function to sound.</p>
 </dd>
-<dt><strong>t</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
-<dd><p class="first last">The time points for the response function.</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>srf</strong><span class="classifier">array</span></dt><dd><p>The pupil response function to sound.</p>
 </dd>
-<dt><strong>std_err</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
-<dd><p class="first last">The standard error as a function of time.</p>
+<dt><strong>t</strong><span class="classifier">array</span></dt><dd><p>The time points for the response function.</p>
+</dd>
+<dt><strong>std_err</strong><span class="classifier">array</span></dt><dd><p>The standard error as a function of time.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>If <code class="docutils literal notranslate"><span class="pre">el.dummy_mode</span></code> is on, the test will run at around 10x the speed.</p>
 </dd></dl>
@@ -169,7 +154,7 @@ constant frequency tones are targets and fm tones as non-targets.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

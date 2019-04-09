@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>expyfun.stimuli.TrackerUD &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,7 +96,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="expyfun-stimuli-trackerud">
 <h1>expyfun.stimuli.TrackerUD<a class="headerlink" href="#expyfun-stimuli-trackerud" title="Permalink to this headline">¶</a></h1>
@@ -108,86 +107,68 @@
 <p>This class implements a standard up-down adaptive tracker object. Based on
 how it is configured, it can be used to run a fixed-step m-down n-up
 tracker (staircase), or it can implement a weighted up-down procedure.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>callback</strong> <span class="classifier-delimiter">:</span> <span class="classifier">callable | ExperimentController | None</span></dt>
-<dd><p class="first last">The function that will be used to print the data, usually to the
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>callback</strong><span class="classifier">callable | ExperimentController | None</span></dt><dd><p>The function that will be used to print the data, usually to the
 experiment .tab file. It should follow the prototype of
 <code class="docutils literal notranslate"><span class="pre">ExperimentController.write_data_line</span></code>. If an instance of
 <code class="docutils literal notranslate"><span class="pre">ExperimentController</span></code> is given, then it will take that object’s
 <code class="docutils literal notranslate"><span class="pre">write_data_line</span></code> function. If None is given, then it will not write
 the data anywhere.</p>
 </dd>
-<dt><strong>up</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">The number of wrong answers necessary to move the tracker level up.</p>
+<dt><strong>up</strong><span class="classifier">int</span></dt><dd><p>The number of wrong answers necessary to move the tracker level up.</p>
 </dd>
-<dt><strong>down</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">The number of correct answers necessary to move the tracker level down.</p>
+<dt><strong>down</strong><span class="classifier">int</span></dt><dd><p>The number of correct answers necessary to move the tracker level down.</p>
 </dd>
-<dt><strong>step_size_up</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | list of float</span></dt>
-<dd><p class="first last">The size of the step when the tracker moves up. If float it will stay
+<dt><strong>step_size_up</strong><span class="classifier">float | list of float</span></dt><dd><p>The size of the step when the tracker moves up. If float it will stay
 the same. If list of float then it will change when <code class="docutils literal notranslate"><span class="pre">change_indices</span></code>
 are encountered. See note below for more specific information on
 dynamic tracker parameters specified with a list.</p>
 </dd>
-<dt><strong>step_size_down</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | list of float</span></dt>
-<dd><p class="first last">The size of the step when the tracker moves down. If float it will stay
+<dt><strong>step_size_down</strong><span class="classifier">float | list of float</span></dt><dd><p>The size of the step when the tracker moves down. If float it will stay
 the same. If list of float then it will change when <code class="docutils literal notranslate"><span class="pre">change_indices</span></code>
 are encountered. See note below for more specific information on
 dynamic tracker parameters specified with a list.</p>
 </dd>
-<dt><strong>stop_reversals</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | np.inf</span></dt>
-<dd><p class="first last">The minimum number of reversals before the tracker stops. If
+<dt><strong>stop_reversals</strong><span class="classifier">int | np.inf</span></dt><dd><p>The minimum number of reversals before the tracker stops. If
 <code class="docutils literal notranslate"><span class="pre">stop_trials</span></code> is also specified, the tracker will stop when either
 condition is satisfied.</p>
 </dd>
-<dt><strong>stop_trials</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | np.inf</span></dt>
-<dd><p class="first last">The minimum number of trials before the tracker stops. If
+<dt><strong>stop_trials</strong><span class="classifier">int | np.inf</span></dt><dd><p>The minimum number of trials before the tracker stops. If
 <code class="docutils literal notranslate"><span class="pre">stop_reversals</span></code> is also specified, the tracker will stop when either
 condition is satisfied. Only use np.inf if you are sure that the
 tracker will reach the reversal stopping criteria without getting stuck
 on either x_min or x_max.</p>
 </dd>
-<dt><strong>start_value</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The starting level of the tracker.</p>
+<dt><strong>start_value</strong><span class="classifier">float</span></dt><dd><p>The starting level of the tracker.</p>
 </dd>
-<dt><strong>change_indices</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of int | None</span></dt>
-<dd><p class="first last">The points along the tracker to change its step sizes. Has an effect
+<dt><strong>change_indices</strong><span class="classifier">list of int | None</span></dt><dd><p>The points along the tracker to change its step sizes. Has an effect
 where <code class="docutils literal notranslate"><span class="pre">step_size_up</span></code> and <code class="docutils literal notranslate"><span class="pre">step_size_down</span></code> are
 lists. The length of <code class="docutils literal notranslate"><span class="pre">change_indices</span></code> must be the same as the
 length of <code class="docutils literal notranslate"><span class="pre">step_size_up</span></code> and <code class="docutils literal notranslate"><span class="pre">step_size_down</span></code> minus 1. See note
 below for more specific usage information. Should be None if static
 step sizes are used.</p>
 </dd>
-<dt><strong>change_rule</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Whether to change parameters based on ‘trials’ or ‘reversals’.</p>
+<dt><strong>change_rule</strong><span class="classifier">str</span></dt><dd><p>Whether to change parameters based on ‘trials’ or ‘reversals’.</p>
 </dd>
-<dt><strong>x_min</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The minimum value that the tracker level (<code class="docutils literal notranslate"><span class="pre">x</span></code>) is allowed to take.</p>
+<dt><strong>x_min</strong><span class="classifier">float</span></dt><dd><p>The minimum value that the tracker level (<code class="docutils literal notranslate"><span class="pre">x</span></code>) is allowed to take.</p>
 </dd>
-<dt><strong>x_max</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The maximum value that the tracker level (<code class="docutils literal notranslate"><span class="pre">x</span></code>) is allowed to take.</p>
+<dt><strong>x_max</strong><span class="classifier">float</span></dt><dd><p>The maximum value that the tracker level (<code class="docutils literal notranslate"><span class="pre">x</span></code>) is allowed to take.</p>
 </dd>
-<dt><strong>repeat_limit</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">How to treat trials that try to exceed either x_min or x_max.
+<dt><strong>repeat_limit</strong><span class="classifier">str</span></dt><dd><p>How to treat trials that try to exceed either x_min or x_max.
 <code class="docutils literal notranslate"><span class="pre">reversals</span></code> will consider these trials as reversals while staying at
 the same level. <code class="docutils literal notranslate"><span class="pre">ignore</span></code> does not consider these trials as reversals.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>tracker</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of TrackerUD</span></dt>
-<dd><p class="first last">The up-down tracker object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>tracker</strong><span class="classifier">instance of TrackerUD</span></dt><dd><p>The up-down tracker object.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>It is common to use dynamic parameters in an adaptive tracker. For example:
 the step size is often large for the first couple reversals to get in the
@@ -205,81 +186,59 @@ For the example given above:</p>
 <p>If static step sizes are used, both <code class="docutils literal notranslate"><span class="pre">step_size_up</span></code>
 and <code class="docutils literal notranslate"><span class="pre">step_size_down</span></code> must be scalars and <code class="docutils literal notranslate"><span class="pre">change_indices</span></code> must be
 None.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>down</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.n_reversals" title="expyfun.stimuli.TrackerUD.n_reversals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_reversals</span></code></a></dt>
-<dd><p class="first last">The number of reversals so far</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>down</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.n_reversals" title="expyfun.stimuli.TrackerUD.n_reversals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_reversals</span></code></a></dt><dd><p>The number of reversals so far</p>
 </dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.n_trials" title="expyfun.stimuli.TrackerUD.n_trials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_trials</span></code></a></dt>
-<dd><p class="first last">The number of trials so far</p>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.n_trials" title="expyfun.stimuli.TrackerUD.n_trials"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_trials</span></code></a></dt><dd><p>The number of trials so far</p>
 </dd>
-<dt><strong>repeat_limit</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.responses" title="expyfun.stimuli.TrackerUD.responses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">responses</span></code></a></dt>
-<dd><p class="first last">The response history</p>
+<dt><strong>repeat_limit</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.responses" title="expyfun.stimuli.TrackerUD.responses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">responses</span></code></a></dt><dd><p>The response history</p>
 </dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.reversal_inds" title="expyfun.stimuli.TrackerUD.reversal_inds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reversal_inds</span></code></a></dt>
-<dd><p class="first last">The trial indices which had reversals</p>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.reversal_inds" title="expyfun.stimuli.TrackerUD.reversal_inds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reversal_inds</span></code></a></dt><dd><p>The trial indices which had reversals</p>
 </dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.reversals" title="expyfun.stimuli.TrackerUD.reversals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reversals</span></code></a></dt>
-<dd><p class="first last">The reversal history (0 where there was no reversal)</p>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.reversals" title="expyfun.stimuli.TrackerUD.reversals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reversals</span></code></a></dt><dd><p>The reversal history (0 where there was no reversal)</p>
 </dd>
-<dt><strong>start_value</strong></dt>
-<dd></dd>
-<dt><strong>step_size_down</strong></dt>
-<dd></dd>
-<dt><strong>step_size_up</strong></dt>
-<dd></dd>
-<dt><strong>stop_reversals</strong></dt>
-<dd></dd>
-<dt><strong>stop_trials</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.stopped" title="expyfun.stimuli.TrackerUD.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></dt>
-<dd><p class="first last">Has the tracker stopped</p>
+<dt><strong>start_value</strong></dt><dd></dd>
+<dt><strong>step_size_down</strong></dt><dd></dd>
+<dt><strong>step_size_up</strong></dt><dd></dd>
+<dt><strong>stop_reversals</strong></dt><dd></dd>
+<dt><strong>stop_trials</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.stopped" title="expyfun.stimuli.TrackerUD.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></dt><dd><p>Has the tracker stopped</p>
 </dd>
-<dt><strong>up</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.x" title="expyfun.stimuli.TrackerUD.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></dt>
-<dd><p class="first last">The staircase</p>
+<dt><strong>up</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.x" title="expyfun.stimuli.TrackerUD.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></dt><dd><p>The staircase</p>
 </dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.x_current" title="expyfun.stimuli.TrackerUD.x_current"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x_current</span></code></a></dt>
-<dd><p class="first last">The current level</p>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.x_current" title="expyfun.stimuli.TrackerUD.x_current"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x_current</span></code></a></dt><dd><p>The current level</p>
 </dd>
-<dt><strong>x_max</strong></dt>
-<dd></dd>
-<dt><strong>x_min</strong></dt>
-<dd></dd>
+<dt><strong>x_max</strong></dt><dd></dd>
+<dt><strong>x_min</strong></dt><dd></dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.check_valid" title="expyfun.stimuli.TrackerUD.check_valid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_valid</span></code></a>(n_reversals)</td>
-<td>If last reversals contain reversals exceeding x_min or x_max.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerUD.check_valid" title="expyfun.stimuli.TrackerUD.check_valid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_valid</span></code></a>(n_reversals)</p></td>
+<td><p>If last reversals contain reversals exceeding x_min or x_max.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.plot" title="expyfun.stimuli.TrackerUD.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([ax,&nbsp;threshold,&nbsp;n_skip])</td>
-<td>Plot the adaptive track.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerUD.plot" title="expyfun.stimuli.TrackerUD.plot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot</span></code></a>([ax, threshold, n_skip])</p></td>
+<td><p>Plot the adaptive track.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.plot_thresh" title="expyfun.stimuli.TrackerUD.plot_thresh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_thresh</span></code></a>([n_skip,&nbsp;ax])</td>
-<td>Plot a line showing the threshold.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerUD.plot_thresh" title="expyfun.stimuli.TrackerUD.plot_thresh"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_thresh</span></code></a>([n_skip, ax])</p></td>
+<td><p>Plot a line showing the threshold.</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.respond" title="expyfun.stimuli.TrackerUD.respond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">respond</span></code></a>(correct)</td>
-<td>Update the tracker based on the last response.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerUD.respond" title="expyfun.stimuli.TrackerUD.respond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">respond</span></code></a>(correct)</p></td>
+<td><p>Update the tracker based on the last response.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerUD.threshold" title="expyfun.stimuli.TrackerUD.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code></a>([n_skip])</td>
-<td>Compute the track’s threshold.</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerUD.threshold" title="expyfun.stimuli.TrackerUD.threshold"><code class="xref py py-obj docutils literal notranslate"><span class="pre">threshold</span></code></a>([n_skip])</p></td>
+<td><p>Compute the track’s threshold.</p></td>
 </tr>
 </tbody>
 </table>
@@ -293,27 +252,21 @@ None.</p>
 <dt id="expyfun.stimuli.TrackerUD.check_valid">
 <code class="descname">check_valid</code><span class="sig-paren">(</span><em>n_reversals</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L311-L327"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.check_valid" title="Permalink to this definition">¶</a></dt>
 <dd><p>If last reversals contain reversals exceeding x_min or x_max.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>n_reversals</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">Number of reversals (starting from the end to check).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>n_reversals</strong><span class="classifier">int</span></dt><dd><p>Number of reversals (starting from the end to check).</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>valid</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">True if none of the reversals are at x_min or x_max and False
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>valid</strong><span class="classifier">bool</span></dt><dd><p>True if none of the reversals are at x_min or x_max and False
 otherwise.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
@@ -332,88 +285,66 @@ otherwise.</p>
 <dt id="expyfun.stimuli.TrackerUD.plot">
 <code class="descname">plot</code><span class="sig-paren">(</span><em>ax=None</em>, <em>threshold=True</em>, <em>n_skip=2</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L454-L492"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the adaptive track.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>ax</strong> <span class="classifier-delimiter">:</span> <span class="classifier">AxesSubplot | None</span></dt>
-<dd><p class="first last">The axes to make the plot on. If <code class="docutils literal notranslate"><span class="pre">None</span></code> defaults to current axes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ax</strong><span class="classifier">AxesSubplot | None</span></dt><dd><p>The axes to make the plot on. If <code class="docutils literal notranslate"><span class="pre">None</span></code> defaults to current axes.</p>
 </dd>
-<dt><strong>threshold</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">Whether to plot the estimated threshold on the axes. Default is
+<dt><strong>threshold</strong><span class="classifier">bool</span></dt><dd><p>Whether to plot the estimated threshold on the axes. Default is
 True.</p>
 </dd>
-<dt><strong>n_skip</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">See documentation for <code class="docutils literal notranslate"><span class="pre">TrackerUD.threshold</span></code>.</p>
+<dt><strong>n_skip</strong><span class="classifier">int</span></dt><dd><p>See documentation for <code class="docutils literal notranslate"><span class="pre">TrackerUD.threshold</span></code>.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>fig</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Figure</span></dt>
-<dd><p class="first last">The figure handle.</p>
 </dd>
-<dt><strong>ax</strong> <span class="classifier-delimiter">:</span> <span class="classifier">AxesSubplot</span></dt>
-<dd><p class="first last">The axes handle.</p>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>fig</strong><span class="classifier">Figure</span></dt><dd><p>The figure handle.</p>
 </dd>
-<dt><strong>lines</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of Line2D</span></dt>
-<dd><p class="first last">The handles to the staircase line and the reversal dots.</p>
+<dt><strong>ax</strong><span class="classifier">AxesSubplot</span></dt><dd><p>The axes handle.</p>
+</dd>
+<dt><strong>lines</strong><span class="classifier">list of Line2D</span></dt><dd><p>The handles to the staircase line and the reversal dots.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerUD.plot_thresh">
 <code class="descname">plot_thresh</code><span class="sig-paren">(</span><em>n_skip=2</em>, <em>ax=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L494-L515"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot_thresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a line showing the threshold.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>n_skip</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">See documentation for <code class="docutils literal notranslate"><span class="pre">TrackerUD.threshold</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>n_skip</strong><span class="classifier">int</span></dt><dd><p>See documentation for <code class="docutils literal notranslate"><span class="pre">TrackerUD.threshold</span></code>.</p>
 </dd>
-<dt><strong>ax</strong> <span class="classifier-delimiter">:</span> <span class="classifier">Axes</span></dt>
-<dd><p class="first last">The handle to the axes object. If None, the current axes will
+<dt><strong>ax</strong><span class="classifier">Axes</span></dt><dd><p>The handle to the axes object. If None, the current axes will
 be used.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>line</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list Line2D</span></dt>
-<dd><p class="first last">The handle to the threshold line, as returned from <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>line</strong><span class="classifier">list Line2D</span></dt><dd><p>The handle to the threshold line, as returned from <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerUD.respond">
 <code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L215-L309"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the tracker based on the last response.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>correct</strong> <span class="classifier-delimiter">:</span> <span class="classifier">boolean</span></dt>
-<dd><p class="first last">Was the most recent subject response correct?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>correct</strong><span class="classifier">boolean</span></dt><dd><p>Was the most recent subject response correct?</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
@@ -444,27 +375,21 @@ be used.</p>
 <dt id="expyfun.stimuli.TrackerUD.threshold">
 <code class="descname">threshold</code><span class="sig-paren">(</span><em>n_skip=2</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L517-L549"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the track’s threshold.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>n_skip</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">The number of reversals to skip at the beginning when computing
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>n_skip</strong><span class="classifier">int</span></dt><dd><p>The number of reversals to skip at the beginning when computing
 the threshold.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>threshold</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The handle to the threshold line.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>threshold</strong><span class="classifier">float</span></dt><dd><p>The handle to the threshold line.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>The threshold is computed as the average of the up reversals and the
 average of the down reversals. In this way if there’s an unequal number
@@ -501,7 +426,7 @@ wishes.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

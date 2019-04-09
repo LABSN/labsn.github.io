@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>expyfun.analyze.rt_chisq &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,7 +96,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="expyfun-analyze-rt-chisq">
 <h1>expyfun.analyze.rt_chisq<a class="headerlink" href="#expyfun-analyze-rt-chisq" title="Permalink to this headline">¶</a></h1>
@@ -105,33 +104,25 @@
 <dt id="expyfun.analyze.rt_chisq">
 <code class="descclassname">expyfun.analyze.</code><code class="descname">rt_chisq</code><span class="sig-paren">(</span><em>x</em>, <em>axis=None</em>, <em>warn=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L261-L315"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.rt_chisq" title="Permalink to this definition">¶</a></dt>
 <dd><p>Chi square fit for reaction times (a better summary statistic than mean)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>x</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
-<dd><p class="first last">Reaction time data to fit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">array-like</span></dt><dd><p>Reaction time data to fit.</p>
 </dd>
-<dt><strong>axis</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int | None</span></dt>
-<dd><p class="first last">The axis along which to calculate the chi-square fit. If none, <code class="docutils literal notranslate"><span class="pre">x</span></code>
+<dt><strong>axis</strong><span class="classifier">int | None</span></dt><dd><p>The axis along which to calculate the chi-square fit. If none, <code class="docutils literal notranslate"><span class="pre">x</span></code>
 will be flattened before fitting.</p>
 </dd>
-<dt><strong>warn</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">If True, warn about possible bad reaction times.</p>
+<dt><strong>warn</strong><span class="classifier">bool</span></dt><dd><p>If True, warn about possible bad reaction times.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>peak</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float | array-like</span></dt>
-<dd><p class="first last">The peak(s) of the fitted chi-square probability density function(s).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>peak</strong><span class="classifier">float | array-like</span></dt><dd><p>The peak(s) of the fitted chi-square probability density function(s).</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>Verify that it worked by plotting pdf vs hist (for 1-dimensional x):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -162,7 +153,7 @@ will be flattened before fitting.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

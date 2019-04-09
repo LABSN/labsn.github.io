@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Audio sample rate test &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="../../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,37 +96,30 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="sphx-glr-download-link-note admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Click <a class="reference internal" href="#sphx-glr-download-auto-examples-sync-sample-rate-test-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-sync-sample-rate-test-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="audio-sample-rate-test">
 <span id="sphx-glr-auto-examples-sync-sample-rate-test-py"></span><h1>Audio sample rate test<a class="headerlink" href="#audio-sample-rate-test" title="Permalink to this headline">¶</a></h1>
 <p>This example tests the TDT sample rate, which we expect to be <code class="docutils literal notranslate"><span class="pre">24414.0625</span></code>.
 To test this:</p>
 <ol class="arabic">
-<li><p class="first">Connect the TDT audio output to the sound card input. This can be on
+<li><p>Connect the TDT audio output to the sound card input. This can be on
 the same machine that the TDT is connected to, or a different one.
 In most cases you will need a 1/4” male to 1/8” male cable running from
-the TDT headphone monitor to the recording computer’s line input.</p>
-</li>
-<li><p class="first">Start Audacity on the sound-card machine.</p>
-</li>
-<li><p class="first">Configure the sound-card machine and/or Audacity to record from the sound
-card input.</p>
-</li>
-<li><p class="first">Tell Audacity to record.</p>
-</li>
-<li><p class="first">Run this script. It should take about 40 seconds at 24414 sample rate.</p>
-</li>
-<li><p class="first">When the script completes, stop the Audacity recording.</p>
-</li>
-<li><p class="first">Visually inspect the audacity recording for the time of the two sinc peaks.
-One peak should occur toward the beginning and the other toward the end.</p>
-</li>
-<li><p class="first">The sound that was played put 1e6 (1,000,000) samples between the two
+the TDT headphone monitor to the recording computer’s line input.</p></li>
+<li><p>Start Audacity on the sound-card machine.</p></li>
+<li><p>Configure the sound-card machine and/or Audacity to record from the sound
+card input.</p></li>
+<li><p>Tell Audacity to record.</p></li>
+<li><p>Run this script. It should take about 40 seconds at 24414 sample rate.</p></li>
+<li><p>When the script completes, stop the Audacity recording.</p></li>
+<li><p>Visually inspect the audacity recording for the time of the two sinc peaks.
+One peak should occur toward the beginning and the other toward the end.</p></li>
+<li><p>The sound that was played put 1e6 (1,000,000) samples between the two
 peaks. So you can get the effective sample rate as:</p>
 <div class="math notranslate nohighlight">
 \[f_s = \frac{1000000}{t_{stop} - t_{start}}\]</div>
@@ -141,28 +133,28 @@ e.g., an EEG system, the output can be split (or left/right outputs used) to
 test multiple system synchronization at once.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: FsTest
-date: 2019-03-17 23_52_34.009423
+date: 2019-04-09 16_16_29.996510
 file: /home/circleci/project/examples/sync/sample_rate_test.py
 participant: s
 session: 0
-2019-03-17 23:52:34,009 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-03-17 23:52:34,010 - INFO    - Expyfun: Setting up Pyglet audio
-2019-03-17 23:52:34,067 - INFO    - Expyfun: Setting up screen
-2019-03-17 23:52:34,087 - EXP     - Expyfun: Set screen visibility True
-2019-03-17 23:52:34,196 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-03-17 23:52:34,200 - INFO    - Expyfun: Initialization complete
-2019-03-17 23:52:34,200 - EXP     - Expyfun: Participant: s
-2019-03-17 23:52:34,200 - EXP     - Expyfun: Session: 0
-2019-03-17 23:52:34,203 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2019-03-17 23:52:34,204 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0]
-2019-03-17 23:52:34,242 - EXP     - Expyfun: Loading 2000002 samples to buffer
+2019-04-09 16:16:29,996 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-04-09 16:16:29,997 - INFO    - Expyfun: Setting up Pyglet audio
+2019-04-09 16:16:30,033 - INFO    - Expyfun: Setting up screen
+2019-04-09 16:16:30,046 - EXP     - Expyfun: Set screen visibility True
+2019-04-09 16:16:30,112 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-04-09 16:16:30,115 - INFO    - Expyfun: Initialization complete
+2019-04-09 16:16:30,115 - EXP     - Expyfun: Participant: s
+2019-04-09 16:16:30,115 - EXP     - Expyfun: Session: 0
+2019-04-09 16:16:30,117 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2019-04-09 16:16:30,117 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0]
+2019-04-09 16:16:30,154 - EXP     - Expyfun: Loading 2000002 samples to buffer
 Starting stimulus.
-2019-03-17 23:52:34,259 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-04-09 16:16:30,165 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
 Stimulus started. Please wait 41 seconds.
-2019-03-17 23:52:34,271 - EXP     - Expyfun: Audio stopped and reset.
+2019-04-09 16:16:30,172 - EXP     - Expyfun: Audio stopped and reset.
 Stimulus done.
-2019-03-17 23:52:34,271 - INFO    - Expyfun: Exiting
-2019-03-17 23:52:34,274 - EXP     - Expyfun: Audio stopped and reset.
+2019-04-09 16:16:30,172 - INFO    - Expyfun: Exiting
+2019-04-09 16:16:30,174 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -196,14 +188,16 @@ Stimulus done.
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Stimulus done.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.373 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.248 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sample-rate-test-py">
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" download="" href="../../_downloads/0d311e449740ac8be18be53d40b5ecff/sample_rate_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sample_rate_test.py</span></code></a></div>
-<div class="sphx-glr-download docutils container">
-<a class="reference download internal" download="" href="../../_downloads/9c616144b5bb902b70de7bcca8169db6/sample_rate_test.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sample_rate_test.ipynb</span></code></a></div>
+<p><a class="reference download internal" download="" href="../../_downloads/0d311e449740ac8be18be53d40b5ecff/sample_rate_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sample_rate_test.py</span></code></a></p>
 </div>
-<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/9c616144b5bb902b70de7bcca8169db6/sample_rate_test.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sample_rate_test.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
 </div>
 
 
@@ -218,7 +212,7 @@ Stimulus done.
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

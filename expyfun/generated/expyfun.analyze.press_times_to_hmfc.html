@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>expyfun.analyze.press_times_to_hmfc &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,7 +96,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="expyfun-analyze-press-times-to-hmfc">
 <h1>expyfun.analyze.press_times_to_hmfc<a class="headerlink" href="#expyfun-analyze-press-times-to-hmfc" title="Permalink to this headline">¶</a></h1>
@@ -105,58 +104,46 @@
 <dt id="expyfun.analyze.press_times_to_hmfc">
 <code class="descclassname">expyfun.analyze.</code><code class="descname">press_times_to_hmfc</code><span class="sig-paren">(</span><em>presses</em>, <em>targets</em>, <em>foils</em>, <em>tmin</em>, <em>tmax</em>, <em>return_type='counts'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L15-L119"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.press_times_to_hmfc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert press times to hits/misses/FA/CR and reaction times</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>presses</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
-<dd><p class="first last">List of press times (in seconds).</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>presses</strong><span class="classifier">list</span></dt><dd><p>List of press times (in seconds).</p>
 </dd>
-<dt><strong>targets</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
-<dd><p class="first last">List of target times.</p>
+<dt><strong>targets</strong><span class="classifier">list</span></dt><dd><p>List of target times.</p>
 </dd>
-<dt><strong>foils</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list</span></dt>
-<dd><p class="first last">List of foil (distractor) times.</p>
+<dt><strong>foils</strong><span class="classifier">list</span></dt><dd><p>List of foil (distractor) times.</p>
 </dd>
-<dt><strong>tmin</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Minimum time after a target/foil to consider a press, exclusive.</p>
+<dt><strong>tmin</strong><span class="classifier">float</span></dt><dd><p>Minimum time after a target/foil to consider a press, exclusive.</p>
 </dd>
-<dt><strong>tmax</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first">Maximum time after a target/foil to consider a press, inclusive.
+<dt><strong>tmax</strong><span class="classifier">float</span></dt><dd><p>Maximum time after a target/foil to consider a press, inclusive.
 The final bounds will be <span class="math notranslate nohighlight">\((t_{min}, t_{max}]\)</span>.</p>
-<div class="last admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Do do not rely on floating point arithmetic to get
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do do not rely on floating point arithmetic to get
 exclusive/inclusive bounds right consistently. Such
 exact equivalence in floating point arithmetic should
 not be relied upon.</p>
 </div>
 </dd>
-<dt><strong>return_type</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | list of str</span></dt>
-<dd><p class="first last">A list containing one or more of <code class="docutils literal notranslate"><span class="pre">['counts',</span> <span class="pre">'rts']</span></code> to return
+<dt><strong>return_type</strong><span class="classifier">str | list of str</span></dt><dd><p>A list containing one or more of <code class="docutils literal notranslate"><span class="pre">['counts',</span> <span class="pre">'rts']</span></code> to return
 a tuple of outputs (see below for description).
 Can also be a single string, in which case only the single
 requested type is returned (not within a tuple).</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>hmfco</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple</span></dt>
-<dd><p class="first last">5-element tuple of hits, misses, false alarms, correct rejections,
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>hmfco</strong><span class="classifier">tuple</span></dt><dd><p>5-element tuple of hits, misses, false alarms, correct rejections,
 and other presses (not within the window for a target or a masker).
 Only returned if <code class="docutils literal notranslate"><span class="pre">'counts'</span></code> is in <code class="docutils literal notranslate"><span class="pre">return_type</span></code>.</p>
 </dd>
-<dt><strong>rts</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple</span></dt>
-<dd><p class="first last">2-element tuple of reaction times for hits and false alarms.
+<dt><strong>rts</strong><span class="classifier">tuple</span></dt><dd><p>2-element tuple of reaction times for hits and false alarms.
 Only returned if <code class="docutils literal notranslate"><span class="pre">'rts'</span></code> is in <code class="docutils literal notranslate"><span class="pre">return_type</span></code>.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>Multiple presses within a single “target window” (i.e., between <code class="docutils literal notranslate"><span class="pre">tmin</span></code>
 and <code class="docutils literal notranslate"><span class="pre">tmax</span></code> of a target) or “masker window” get treated as a single
@@ -178,7 +165,7 @@ to “other” times.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>expyfun.EyelinkController &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,7 +96,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="expyfun-eyelinkcontroller">
 <h1>expyfun.EyelinkController<a class="headerlink" href="#expyfun-eyelinkcontroller" title="Permalink to this headline">¶</a></h1>
@@ -105,84 +104,67 @@
 <dt id="expyfun.EyelinkController">
 <em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">EyelinkController</code><span class="sig-paren">(</span><em>ec</em>, <em>link='default'</em>, <em>fs=1000</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L124-L718"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Eyelink communication and control methods</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController | None</span></dt>
-<dd><p class="first last">ExperimentController instance to interface with. Necessary for
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ec</strong><span class="classifier">instance of ExperimentController | None</span></dt><dd><p>ExperimentController instance to interface with. Necessary for
 doing calibrations.</p>
 </dd>
-<dt><strong>link</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
-<dd><p class="first last">If ‘default’, the default value will be read from EXPYFUN_EYELINK.
+<dt><strong>link</strong><span class="classifier">str | None</span></dt><dd><p>If ‘default’, the default value will be read from EXPYFUN_EYELINK.
 If None, dummy (simulation) mode will be used. If str, should be
 the network location of eyelink (e.g., “100.1.1.1”).</p>
 </dd>
-<dt><strong>fs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">Sample rate to use. Must be one of [250, 500, 1000, 2000].</p>
+<dt><strong>fs</strong><span class="classifier">int</span></dt><dd><p>Sample rate to use. Must be one of [250, 500, 1000, 2000].</p>
 </dd>
-<dt><strong>verbose</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool, str, int, or None</span></dt>
-<dd><p class="first last">If not None, override default verbose level (see expyfun.verbose).</p>
+<dt><strong>verbose</strong><span class="classifier">bool, str, int, or None</span></dt><dd><p>If not None, override default verbose level (see expyfun.verbose).</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>The data will be saved to the ExperimentController <code class="docutils literal notranslate"><span class="pre">output_dir</span></code>.
 If this was <cite>None</cite>, data will be saved to the current working dir.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>dummy_mode</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.EyelinkController.eye_used" title="expyfun.EyelinkController.eye_used"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eye_used</span></code></a></dt>
-<dd><p class="first last">Return the eye used ‘left’ or ‘right’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dummy_mode</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.EyelinkController.eye_used" title="expyfun.EyelinkController.eye_used"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eye_used</span></code></a></dt><dd><p>Return the eye used ‘left’ or ‘right’</p>
 </dd>
-<dt><a class="reference internal" href="#expyfun.EyelinkController.file_list" title="expyfun.EyelinkController.file_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">file_list</span></code></a></dt>
-<dd><p class="first last">The list of files started on the EyeLink</p>
+<dt><a class="reference internal" href="#expyfun.EyelinkController.file_list" title="expyfun.EyelinkController.file_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">file_list</span></code></a></dt><dd><p>The list of files started on the EyeLink</p>
 </dd>
-<dt><strong>fs</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.EyelinkController.recording" title="expyfun.EyelinkController.recording"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recording</span></code></a></dt>
-<dd><p class="first last">Returns boolean for whether or not the Eyelink is recording</p>
+<dt><strong>fs</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.EyelinkController.recording" title="expyfun.EyelinkController.recording"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recording</span></code></a></dt><dd><p>Returns boolean for whether or not the Eyelink is recording</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.calibrate" title="expyfun.EyelinkController.calibrate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calibrate</span></code></a>([beep,&nbsp;prompt])</td>
-<td>Calibrate the eyetracker</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.EyelinkController.calibrate" title="expyfun.EyelinkController.calibrate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calibrate</span></code></a>([beep, prompt])</p></td>
+<td><p>Calibrate the eyetracker</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.custom_calibration" title="expyfun.EyelinkController.custom_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">custom_calibration</span></code></a>([ctype,&nbsp;horiz,&nbsp;vert,&nbsp;…])</td>
-<td>Set Eyetracker to use a custom calibration sequence</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.EyelinkController.custom_calibration" title="expyfun.EyelinkController.custom_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">custom_calibration</span></code></a>([ctype, horiz, vert, …])</p></td>
+<td><p>Set Eyetracker to use a custom calibration sequence</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.get_eye_position" title="expyfun.EyelinkController.get_eye_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_eye_position</span></code></a>()</td>
-<td>The current eye position in pixels</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.EyelinkController.get_eye_position" title="expyfun.EyelinkController.get_eye_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_eye_position</span></code></a>()</p></td>
+<td><p>The current eye position in pixels</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.maintain_fix" title="expyfun.EyelinkController.maintain_fix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maintain_fix</span></code></a>(fix_pos,&nbsp;check_duration[,&nbsp;tol,&nbsp;…])</td>
-<td>Check to see if subject is fixating in a region.</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.EyelinkController.maintain_fix" title="expyfun.EyelinkController.maintain_fix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maintain_fix</span></code></a>(fix_pos, check_duration[, tol, …])</p></td>
+<td><p>Check to see if subject is fixating in a region.</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.stop" title="expyfun.EyelinkController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>()</td>
-<td>Stop Eyelink recording and close current file</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.EyelinkController.stop" title="expyfun.EyelinkController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>()</p></td>
+<td><p>Stop Eyelink recording and close current file</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.EyelinkController.transfer_remote_file" title="expyfun.EyelinkController.transfer_remote_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transfer_remote_file</span></code></a>(remote_name)</td>
-<td>Pull remote file (from Eyelink) to local machine</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.EyelinkController.transfer_remote_file" title="expyfun.EyelinkController.transfer_remote_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transfer_remote_file</span></code></a>(remote_name)</p></td>
+<td><p>Pull remote file (from Eyelink) to local machine</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.EyelinkController.wait_for_fix" title="expyfun.EyelinkController.wait_for_fix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_fix</span></code></a>(fix_pos[,&nbsp;fix_time,&nbsp;tol,&nbsp;…])</td>
-<td>Wait for gaze to settle within a defined region</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.EyelinkController.wait_for_fix" title="expyfun.EyelinkController.wait_for_fix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_fix</span></code></a>(fix_pos[, fix_time, tol, …])</p></td>
+<td><p>Wait for gaze to settle within a defined region</p></td>
 </tr>
 </tbody>
 </table>
@@ -195,33 +177,26 @@ If this was <cite>None</cite>, data will be saved to the current working dir.</p
 <dt id="expyfun.EyelinkController.calibrate">
 <code class="descname">calibrate</code><span class="sig-paren">(</span><em>beep=False</em>, <em>prompt=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L331-L382"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.calibrate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calibrate the eyetracker</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>beep</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">If True, beep for each calibration target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>beep</strong><span class="classifier">bool</span></dt><dd><p>If True, beep for each calibration target.</p>
 </dd>
-<dt><strong>prompt</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">If True, a standard screen prompt will be shown.</p>
+<dt><strong>prompt</strong><span class="classifier">bool</span></dt><dd><p>If True, a standard screen prompt will be shown.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str | None</span></dt>
-<dd><p class="first last">Filename on the Eyelink of the started data file.
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>fname</strong><span class="classifier">str | None</span></dt><dd><p>Filename on the Eyelink of the started data file.
 Will be None if start is None.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#expyfun.EyelinkController.custom_calibration" title="expyfun.EyelinkController.custom_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.custom_calibration</span></code></a>, <a class="reference internal" href="#expyfun.EyelinkController.stop" title="expyfun.EyelinkController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.stop</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#expyfun.EyelinkController.custom_calibration" title="expyfun.EyelinkController.custom_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.custom_calibration</span></code></a>, <a class="reference internal" href="#expyfun.EyelinkController.stop" title="expyfun.EyelinkController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.stop</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
 <p>At the start of this function, the previous Eyelink file will be
@@ -233,36 +208,27 @@ will be started.</p>
 <dt id="expyfun.EyelinkController.custom_calibration">
 <code class="descname">custom_calibration</code><span class="sig-paren">(</span><em>ctype='HV5'</em>, <em>horiz=0.6666666666666666</em>, <em>vert=0.6666666666666666</em>, <em>coordinates=None</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L592-L662"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.custom_calibration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set Eyetracker to use a custom calibration sequence</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>ctype</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Type of calibration. Currently ‘H3’, ‘HV5’, ‘HV9’, and ‘HV13’
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ctype</strong><span class="classifier">str</span></dt><dd><p>Type of calibration. Currently ‘H3’, ‘HV5’, ‘HV9’, and ‘HV13’
 are supported. If ‘custom’ coordinates can be directly input.</p>
 </dd>
-<dt><strong>horiz</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Horizontal distance (left and right, each) to use.</p>
+<dt><strong>horiz</strong><span class="classifier">float</span></dt><dd><p>Horizontal distance (left and right, each) to use.</p>
 </dd>
-<dt><strong>vert</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Vertical distance (up and down, each) to use.</p>
+<dt><strong>vert</strong><span class="classifier">float</span></dt><dd><p>Vertical distance (up and down, each) to use.</p>
 </dd>
-<dt><strong>coordinates</strong> <span class="classifier-delimiter">:</span> <span class="classifier">list of list of float or int</span></dt>
-<dd><p class="first last">List of coordinates to use for calibration. Each entry in the list
+<dt><strong>coordinates</strong><span class="classifier">list of list of float or int</span></dt><dd><p>List of coordinates to use for calibration. Each entry in the list
 must be a list with 2 elements corresponding to x and y position.</p>
 </dd>
-<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#expyfun.EyelinkController.calibrate" title="expyfun.EyelinkController.calibrate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.calibrate</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#expyfun.EyelinkController.calibrate" title="expyfun.EyelinkController.calibrate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.calibrate</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -270,19 +236,14 @@ must be a list with 2 elements corresponding to x and y position.</p>
 <dt id="expyfun.EyelinkController.eye_used">
 <code class="descname">eye_used</code><a class="headerlink" href="#expyfun.EyelinkController.eye_used" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the eye used ‘left’ or ‘right’</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>eye</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">‘left’ or ‘right’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>eye</strong><span class="classifier">str</span></dt><dd><p>‘left’ or ‘right’.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
@@ -295,23 +256,18 @@ must be a list with 2 elements corresponding to x and y position.</p>
 <dt id="expyfun.EyelinkController.get_eye_position">
 <code class="descname">get_eye_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L664-L694"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.get_eye_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current eye position in pixels</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>eye_pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array</span></dt>
-<dd><p class="first last">The current eye position. Will be [np.inf, np.inf] if the
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>eye_pos</strong><span class="classifier">array</span></dt><dd><p>The current eye position. Will be [np.inf, np.inf] if the
 eye is lost.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#expyfun.EyelinkController.wait_for_fix" title="expyfun.EyelinkController.wait_for_fix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.wait_for_fix</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#expyfun.EyelinkController.wait_for_fix" title="expyfun.EyelinkController.wait_for_fix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.wait_for_fix</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -323,48 +279,35 @@ eye is lost.</p>
 at least once in any given period. In other words it checks to make
 sure that the gaze falls in the target region at least every
 <cite>period</cite> seconds.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>fix_pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple (length 2)</span></dt>
-<dd><p class="first last">The screen position (in specified units) required.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fix_pos</strong><span class="classifier">tuple (length 2)</span></dt><dd><p>The screen position (in specified units) required.</p>
 </dd>
-<dt><strong>check_duration</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Total amount of time to check.</p>
+<dt><strong>check_duration</strong><span class="classifier">float</span></dt><dd><p>Total amount of time to check.</p>
 </dd>
-<dt><strong>tol</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The tolerance (in pixels) to consider the target hit.</p>
+<dt><strong>tol</strong><span class="classifier">float</span></dt><dd><p>The tolerance (in pixels) to consider the target hit.</p>
 </dd>
-<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Maximum time to wait (seconds) before returning.</p>
+<dt><strong>max_wait</strong><span class="classifier">float</span></dt><dd><p>Maximum time to wait (seconds) before returning.</p>
 </dd>
-<dt><strong>period</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Maximum time between gazes in region</p>
+<dt><strong>period</strong><span class="classifier">float</span></dt><dd><p>Maximum time between gazes in region</p>
 </dd>
-<dt><strong>check_interval</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Time to use between position checks (seconds).</p>
+<dt><strong>check_interval</strong><span class="classifier">float</span></dt><dd><p>Time to use between position checks (seconds).</p>
 </dd>
-<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Units for <cite>fix_pos</cite>. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units for <cite>fix_pos</cite>. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </dd>
-<dt><strong>stop_early</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">Whether to exit the function when fix_success is False or not.</p>
+<dt><strong>stop_early</strong><span class="classifier">bool</span></dt><dd><p>Whether to exit the function when fix_success is False or not.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>fix_success</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">Whether or not the subject successfully fixated throughout the
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>fix_success</strong><span class="classifier">bool</span></dt><dd><p>Whether or not the subject successfully fixated throughout the
 <cite>check_duration</cite>.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
@@ -378,8 +321,8 @@ sure that the gaze falls in the target region at least every
 <code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L313-L329"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop Eyelink recording and close current file</p>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#expyfun.EyelinkController.calibrate" title="expyfun.EyelinkController.calibrate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.calibrate</span></code></a>, <a class="reference internal" href="#expyfun.EyelinkController.transfer_remote_file" title="expyfun.EyelinkController.transfer_remote_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.transfer_remote_file</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#expyfun.EyelinkController.calibrate" title="expyfun.EyelinkController.calibrate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.calibrate</span></code></a>, <a class="reference internal" href="#expyfun.EyelinkController.transfer_remote_file" title="expyfun.EyelinkController.transfer_remote_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.transfer_remote_file</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -387,29 +330,23 @@ sure that the gaze falls in the target region at least every
 <dt id="expyfun.EyelinkController.transfer_remote_file">
 <code class="descname">transfer_remote_file</code><span class="sig-paren">(</span><em>remote_name</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L434-L456"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.transfer_remote_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pull remote file (from Eyelink) to local machine</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>remote_name</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">The filename on the Eyelink.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>remote_name</strong><span class="classifier">str</span></dt><dd><p>The filename on the Eyelink.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>fname</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">The filename on the local machine following the transfer.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>fname</strong><span class="classifier">str</span></dt><dd><p>The filename on the local machine following the transfer.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#expyfun.EyelinkController.stop" title="expyfun.EyelinkController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.stop</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#expyfun.EyelinkController.stop" title="expyfun.EyelinkController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.stop</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -417,44 +354,33 @@ sure that the gaze falls in the target region at least every
 <dt id="expyfun.EyelinkController.wait_for_fix">
 <code class="descname">wait_for_fix</code><span class="sig-paren">(</span><em>fix_pos</em>, <em>fix_time=0.0</em>, <em>tol=100.0</em>, <em>max_wait=inf</em>, <em>check_interval=0.001</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L478-L529"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.EyelinkController.wait_for_fix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for gaze to settle within a defined region</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>fix_pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple (length 2)</span></dt>
-<dd><p class="first last">The screen position (in specified units) required.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fix_pos</strong><span class="classifier">tuple (length 2)</span></dt><dd><p>The screen position (in specified units) required.</p>
 </dd>
-<dt><strong>fix_time</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Amount of time required to call a fixation.</p>
+<dt><strong>fix_time</strong><span class="classifier">float</span></dt><dd><p>Amount of time required to call a fixation.</p>
 </dd>
-<dt><strong>tol</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The tolerance (in pixels) to consider the target hit.</p>
+<dt><strong>tol</strong><span class="classifier">float</span></dt><dd><p>The tolerance (in pixels) to consider the target hit.</p>
 </dd>
-<dt><strong>max_wait</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Maximum time to wait (seconds) before returning.</p>
+<dt><strong>max_wait</strong><span class="classifier">float</span></dt><dd><p>Maximum time to wait (seconds) before returning.</p>
 </dd>
-<dt><strong>check_interval</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Time to use between position checks (seconds).</p>
+<dt><strong>check_interval</strong><span class="classifier">float</span></dt><dd><p>Time to use between position checks (seconds).</p>
 </dd>
-<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Units for <cite>fix_pos</cite>. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units for <cite>fix_pos</cite>. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>fix_success</strong> <span class="classifier-delimiter">:</span> <span class="classifier">bool</span></dt>
-<dd><p class="first last">Whether or not the subject successfully fixated.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>fix_success</strong><span class="classifier">bool</span></dt><dd><p>Whether or not the subject successfully fixated.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="#expyfun.EyelinkController.get_eye_position" title="expyfun.EyelinkController.get_eye_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.get_eye_position</span></code></a></p>
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#expyfun.EyelinkController.get_eye_position" title="expyfun.EyelinkController.get_eye_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">EyelinkController.get_eye_position</span></code></a></p>
 </div>
 </dd></dl>
 
@@ -474,7 +400,7 @@ sure that the gaze falls in the target region at least every
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

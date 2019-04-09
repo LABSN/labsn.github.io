@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>expyfun.stimuli.window_edges &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,7 +96,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="expyfun-stimuli-window-edges">
 <h1>expyfun.stimuli.window_edges<a class="headerlink" href="#expyfun-stimuli-window-edges" title="Permalink to this headline">¶</a></h1>
@@ -105,42 +104,31 @@
 <dt id="expyfun.stimuli.window_edges">
 <code class="descclassname">expyfun.stimuli.</code><code class="descname">window_edges</code><span class="sig-paren">(</span><em>sig</em>, <em>fs</em>, <em>dur=0.01</em>, <em>axis=-1</em>, <em>window='hann'</em>, <em>edges='both'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_stimuli.py#L14-L67"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.window_edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Window the edges of a signal (e.g., to prevent “pops”)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>sig</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
-<dd><p class="first last">The array to window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>sig</strong><span class="classifier">array-like</span></dt><dd><p>The array to window.</p>
 </dd>
-<dt><strong>fs</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The sample rate.</p>
+<dt><strong>fs</strong><span class="classifier">float</span></dt><dd><p>The sample rate.</p>
 </dd>
-<dt><strong>dur</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The duration to window on each edge. The default is 0.01 (10 ms).</p>
+<dt><strong>dur</strong><span class="classifier">float</span></dt><dd><p>The duration to window on each edge. The default is 0.01 (10 ms).</p>
 </dd>
-<dt><strong>axis</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">The axis to operate over.</p>
+<dt><strong>axis</strong><span class="classifier">int</span></dt><dd><p>The axis to operate over.</p>
 </dd>
-<dt><strong>window</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">The window to use. For a list of valid options, see
+<dt><strong>window</strong><span class="classifier">str</span></dt><dd><p>The window to use. For a list of valid options, see
 <code class="docutils literal notranslate"><span class="pre">scipy.signal.get_window()</span></code>, but can also be ‘dpss’.</p>
 </dd>
-<dt><strong>edges</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Can be <code class="docutils literal notranslate"><span class="pre">'leading'</span></code>, <code class="docutils literal notranslate"><span class="pre">'trailing'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'both'</span></code> (default).</p>
+<dt><strong>edges</strong><span class="classifier">str</span></dt><dd><p>Can be <code class="docutils literal notranslate"><span class="pre">'leading'</span></code>, <code class="docutils literal notranslate"><span class="pre">'trailing'</span></code>, or <code class="docutils literal notranslate"><span class="pre">'both'</span></code> (default).</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>windowed_sig</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
-<dd><p class="first last">The modified array (float64).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>windowed_sig</strong><span class="classifier">array-like</span></dt><dd><p>The modified array (float64).</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -157,7 +145,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

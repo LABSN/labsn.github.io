@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>Experiment drawing methods &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../../_static/doctools.js"></script>
     <script type="text/javascript" src="../../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,11 +96,11 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="sphx-glr-download-link-note admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-drawing-methods-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-drawing-methods-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="experiment-drawing-methods">
 <span id="sphx-glr-auto-examples-experiments-drawing-methods-py"></span><h1>Experiment drawing methods<a class="headerlink" href="#experiment-drawing-methods" title="Permalink to this headline">¶</a></h1>
@@ -109,20 +108,20 @@
 <img alt="../../_images/sphx_glr_drawing_methods_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_drawing_methods_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2019-03-17 23_51_52.642754
+date: 2019-04-09 16_15_56.115265
 file: /home/circleci/project/examples/experiments/drawing_methods.py
 participant: 2
 session: 1
-2019-03-17 23:51:52,643 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-03-17 23:51:52,643 - INFO    - Expyfun: Setting up Pyglet audio
-2019-03-17 23:51:52,705 - INFO    - Expyfun: Setting up screen
-2019-03-17 23:51:52,724 - EXP     - Expyfun: Set screen visibility True
-2019-03-17 23:51:52,817 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-03-17 23:51:52,820 - INFO    - Expyfun: Initialization complete
-2019-03-17 23:51:52,821 - EXP     - Expyfun: Participant: 2
-2019-03-17 23:51:52,821 - EXP     - Expyfun: Session: 1
-2019-03-17 23:51:53,848 - INFO    - Expyfun: Exiting
-2019-03-17 23:51:53,852 - EXP     - Expyfun: Audio stopped and reset.
+2019-04-09 16:15:56,115 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-04-09 16:15:56,115 - INFO    - Expyfun: Setting up Pyglet audio
+2019-04-09 16:15:56,163 - INFO    - Expyfun: Setting up screen
+2019-04-09 16:15:56,175 - EXP     - Expyfun: Set screen visibility True
+2019-04-09 16:15:56,234 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-04-09 16:15:56,237 - INFO    - Expyfun: Initialization complete
+2019-04-09 16:15:56,237 - EXP     - Expyfun: Participant: 2
+2019-04-09 16:15:56,237 - EXP     - Expyfun: Session: 1
+2019-04-09 16:15:57,125 - INFO    - Expyfun: Exiting
+2019-04-09 16:15:57,127 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -174,14 +173,16 @@ session: 1
 <a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.395 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.141 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-drawing-methods-py">
 <div class="sphx-glr-download docutils container">
-<a class="reference download internal" download="" href="../../_downloads/0fabb5a3713b8ff37a918a525fad3936/drawing_methods.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">drawing_methods.py</span></code></a></div>
-<div class="sphx-glr-download docutils container">
-<a class="reference download internal" download="" href="../../_downloads/85e7236845693a03554fbb8eb71527a3/drawing_methods.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">drawing_methods.ipynb</span></code></a></div>
+<p><a class="reference download internal" download="" href="../../_downloads/0fabb5a3713b8ff37a918a525fad3936/drawing_methods.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">drawing_methods.py</span></code></a></p>
 </div>
-<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.readthedocs.io">Gallery generated by Sphinx-Gallery</a></p>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/85e7236845693a03554fbb8eb71527a3/drawing_methods.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">drawing_methods.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
 </div>
 
 
@@ -196,7 +197,7 @@ session: 1
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

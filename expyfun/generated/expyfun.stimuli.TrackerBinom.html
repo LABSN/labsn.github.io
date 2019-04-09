@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>expyfun.stimuli.TrackerBinom &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,7 +96,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="expyfun-stimuli-trackerbinom">
 <h1>expyfun.stimuli.TrackerBinom<a class="headerlink" href="#expyfun-stimuli-trackerbinom" title="Permalink to this headline">¶</a></h1>
@@ -112,124 +111,91 @@ stimulus, they were not able to do a task, or they did not understand the
 task. This function’s main use is training: a subject may move on to the
 experiment when the null hypothesis that they aren’t doing the task has
 been rejected.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>callback</strong> <span class="classifier-delimiter">:</span> <span class="classifier">callable | ExperimentController | None</span></dt>
-<dd><p class="first last">The function that will be used to print the data, usually to the
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>callback</strong><span class="classifier">callable | ExperimentController | None</span></dt><dd><p>The function that will be used to print the data, usually to the
 experiment .tab file. It should follow the prototype of
 <code class="docutils literal notranslate"><span class="pre">ExperimentController.write_data_line</span></code>. If an instance of
 <code class="docutils literal notranslate"><span class="pre">ExperimentController</span></code> is given, then it will take that object’s
 <code class="docutils literal notranslate"><span class="pre">write_data_line</span></code> function. If <code class="docutils literal notranslate"><span class="pre">None</span></code> is given, then it will not
 write the data anywhere.</p>
 </dd>
-<dt><strong>alpha</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The p-value which is considered significant. Must be between 0 and 1.
+<dt><strong>alpha</strong><span class="classifier">float</span></dt><dd><p>The p-value which is considered significant. Must be between 0 and 1.
 Note that if <code class="docutils literal notranslate"><span class="pre">stop_early</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> there is the potential for
 multiple comparisons issues and a more stringent <code class="docutils literal notranslate"><span class="pre">alpha</span></code> should be
 considered.</p>
 </dd>
-<dt><strong>chance</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The chance level of the task being performed. Must be between 0 and 1.</p>
+<dt><strong>chance</strong><span class="classifier">float</span></dt><dd><p>The chance level of the task being performed. Must be between 0 and 1.</p>
 </dd>
-<dt><strong>max_trials</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">The maximum number of trials to run before stopping the track without
+<dt><strong>max_trials</strong><span class="classifier">int</span></dt><dd><p>The maximum number of trials to run before stopping the track without
 reaching <code class="docutils literal notranslate"><span class="pre">alpha</span></code>.</p>
 </dd>
-<dt><strong>min_trials</strong> <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd><p class="first last">The minimum number of trials to run before allowing the track to stop
+<dt><strong>min_trials</strong><span class="classifier">int</span></dt><dd><p>The minimum number of trials to run before allowing the track to stop
 on reaching <code class="docutils literal notranslate"><span class="pre">alpha</span></code>. Has no effect if <code class="docutils literal notranslate"><span class="pre">stop_early</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 </dd>
-<dt><strong>stop_early</strong> <span class="classifier-delimiter">:</span> <span class="classifier">boolean</span></dt>
-<dd><p class="first last">Whether to stop the adaptive track as soon as the track is not able to
+<dt><strong>stop_early</strong><span class="classifier">boolean</span></dt><dd><p>Whether to stop the adaptive track as soon as the track is not able to
 reach <code class="docutils literal notranslate"><span class="pre">alpha</span></code> even if the remaining responses are all correct and
 at least <code class="docutils literal notranslate"><span class="pre">min_trials</span></code> have been presented.</p>
 </dd>
-<dt><strong>x_current</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The level that you want to run the test at. This has no bearing on how
+<dt><strong>x_current</strong><span class="classifier">float</span></dt><dd><p>The level that you want to run the test at. This has no bearing on how
 the track runs, and it will never change, but it is both useful to
 document the level and required to exist if using <code class="docutils literal notranslate"><span class="pre">TrackerDealer</span></code>.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>tracker</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of TrackerBinom</span></dt>
-<dd><p class="first last">The binomial tracker object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>tracker</strong><span class="classifier">instance of TrackerBinom</span></dt><dd><p>The binomial tracker object.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Notes</p>
 <p>The task, unlike with an adaptive tracker, should be done all at one
 stimulus level, usually an easy one. The point of this tracker is to
 confirm that the subject understands the task instructions and is capable
 of following them.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>alpha</strong></dt>
-<dd></dd>
-<dt><strong>chance</strong></dt>
-<dd></dd>
-<dt><strong>max_p_val</strong></dt>
-<dd></dd>
-<dt><strong>max_trials</strong></dt>
-<dd></dd>
-<dt><strong>min_p_val</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_correct" title="expyfun.stimuli.TrackerBinom.n_correct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_correct</span></code></a></dt>
-<dd><p class="first last">The number of correct trials so far</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>alpha</strong></dt><dd></dd>
+<dt><strong>chance</strong></dt><dd></dd>
+<dt><strong>max_p_val</strong></dt><dd></dd>
+<dt><strong>max_trials</strong></dt><dd></dd>
+<dt><strong>min_p_val</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_correct" title="expyfun.stimuli.TrackerBinom.n_correct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_correct</span></code></a></dt><dd><p>The number of correct trials so far</p>
 </dd>
-<dt><strong>n_trials</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_wrong" title="expyfun.stimuli.TrackerBinom.n_wrong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_wrong</span></code></a></dt>
-<dd><p class="first last">The number of incorrect trials so far</p>
+<dt><strong>n_trials</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_wrong" title="expyfun.stimuli.TrackerBinom.n_wrong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_wrong</span></code></a></dt><dd><p>The number of incorrect trials so far</p>
 </dd>
-<dt><strong>p_val</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.pc" title="expyfun.stimuli.TrackerBinom.pc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pc</span></code></a></dt>
-<dd><p class="first last">Proportion correct (0-1, NaN before any responses made)</p>
+<dt><strong>p_val</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.pc" title="expyfun.stimuli.TrackerBinom.pc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pc</span></code></a></dt><dd><p>Proportion correct (0-1, NaN before any responses made)</p>
 </dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.responses" title="expyfun.stimuli.TrackerBinom.responses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">responses</span></code></a></dt>
-<dd><p class="first last">The response history</p>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.responses" title="expyfun.stimuli.TrackerBinom.responses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">responses</span></code></a></dt><dd><p>The response history</p>
 </dd>
-<dt><strong>stop_early</strong></dt>
-<dd></dd>
-<dt><strong>stop_rule</strong></dt>
-<dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.stopped" title="expyfun.stimuli.TrackerBinom.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></dt>
-<dd><p class="first last">Is the tracker stopped</p>
+<dt><strong>stop_early</strong></dt><dd></dd>
+<dt><strong>stop_rule</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.stopped" title="expyfun.stimuli.TrackerBinom.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></dt><dd><p>Is the tracker stopped</p>
 </dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.success" title="expyfun.stimuli.TrackerBinom.success"><code class="xref py py-obj docutils literal notranslate"><span class="pre">success</span></code></a></dt>
-<dd><p class="first last">Has the p-value reached significance</p>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.success" title="expyfun.stimuli.TrackerBinom.success"><code class="xref py py-obj docutils literal notranslate"><span class="pre">success</span></code></a></dt><dd><p>Has the p-value reached significance</p>
 </dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x" title="expyfun.stimuli.TrackerBinom.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></dt>
-<dd><p class="first last">Included only for compatibility with TrackerDealer</p>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x" title="expyfun.stimuli.TrackerBinom.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></dt><dd><p>Included only for compatibility with TrackerDealer</p>
 </dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x_current" title="expyfun.stimuli.TrackerBinom.x_current"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x_current</span></code></a></dt>
-<dd><p class="first last">Included only for compatibility with TrackerDealer</p>
+<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x_current" title="expyfun.stimuli.TrackerBinom.x_current"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x_current</span></code></a></dt><dd><p>Included only for compatibility with TrackerDealer</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.respond" title="expyfun.stimuli.TrackerBinom.respond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">respond</span></code></a>(correct)</td>
-<td>Update the tracker based on the last response.</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.respond" title="expyfun.stimuli.TrackerBinom.respond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">respond</span></code></a>(correct)</p></td>
+<td><p>Update the tracker based on the last response.</p></td>
 </tr>
 </tbody>
 </table>
@@ -261,19 +227,14 @@ of following them.</p>
 <dt id="expyfun.stimuli.TrackerBinom.respond">
 <code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L643-L679"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the tracker based on the last response.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>correct</strong> <span class="classifier-delimiter">:</span> <span class="classifier">boolean</span></dt>
-<dd><p class="first last">Was the most recent subject response correct?</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>correct</strong><span class="classifier">boolean</span></dt><dd><p>Was the most recent subject response correct?</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
@@ -322,7 +283,7 @@ of following them.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>

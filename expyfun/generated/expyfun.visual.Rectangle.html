@@ -2,8 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <title>expyfun.visual.Rectangle &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,10 +13,6 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="../_static/language_data.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -29,6 +24,10 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
   </head><body>
@@ -97,7 +96,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12 content">
+    <div class="body col-md-12 content" role="main">
       
   <div class="section" id="expyfun-visual-rectangle">
 <h1>expyfun.visual.Rectangle<a class="headerlink" href="#expyfun-visual-rectangle" title="Permalink to this headline">¶</a></h1>
@@ -105,64 +104,53 @@
 <dt id="expyfun.visual.Rectangle">
 <em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Rectangle</code><span class="sig-paren">(</span><em>ec</em>, <em>pos</em>, <em>units='norm'</em>, <em>fill_color='white'</em>, <em>line_color=None</em>, <em>line_width=1.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L450-L508"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Rectangle" title="Permalink to this definition">¶</a></dt>
 <dd><p>A rectangle</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
-<dt><strong>ec</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of ExperimentController</span></dt>
-<dd><p class="first last">Parent EC.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ec</strong><span class="classifier">instance of ExperimentController</span></dt><dd><p>Parent EC.</p>
 </dd>
-<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
-<dd><p class="first last">4-element array-like with X, Y center and width, height where x and y
+<dt><strong>pos</strong><span class="classifier">array-like</span></dt><dd><p>4-element array-like with X, Y center and width, height where x and y
 are coordinates of the center.</p>
 </dd>
-<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Units to use. These will apply to all spatial aspects of the drawing.
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units to use. These will apply to all spatial aspects of the drawing.
 shape e.g. size, position. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </dd>
-<dt><strong>fill_color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color | None</span></dt>
-<dd><p class="first last">Color to fill with. None is transparent.</p>
+<dt><strong>fill_color</strong><span class="classifier">matplotlib Color | None</span></dt><dd><p>Color to fill with. None is transparent.</p>
 </dd>
-<dt><strong>line_color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color | None</span></dt>
-<dd><p class="first last">Color of the border line. None is transparent.</p>
+<dt><strong>line_color</strong><span class="classifier">matplotlib Color | None</span></dt><dd><p>Color of the border line. None is transparent.</p>
 </dd>
-<dt><strong>line_width</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">Line width in pixels.</p>
+<dt><strong>line_width</strong><span class="classifier">float</span></dt><dd><p>Line width in pixels.</p>
 </dd>
 </dl>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>line</strong> <span class="classifier-delimiter">:</span> <span class="classifier">instance of Rectangle</span></dt>
-<dd><p class="first last">The rectangle object.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>line</strong><span class="classifier">instance of Rectangle</span></dt><dd><p>The rectangle object.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 <p class="rubric">Methods</p>
-<table border="1" class="longtable docutils">
+<table class="longtable docutils align-center">
 <colgroup>
-<col width="10%" />
-<col width="90%" />
+<col style="width: 10%" />
+<col style="width: 90%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.Rectangle.draw" title="expyfun.visual.Rectangle.draw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw</span></code></a>()</td>
-<td>Draw the object to the display buffer</td>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.visual.Rectangle.draw" title="expyfun.visual.Rectangle.draw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw</span></code></a>()</p></td>
+<td><p>Draw the object to the display buffer</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.Rectangle.set_fill_color" title="expyfun.visual.Rectangle.set_fill_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_fill_color</span></code></a>(fill_color)</td>
-<td>Set the object color</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.visual.Rectangle.set_fill_color" title="expyfun.visual.Rectangle.set_fill_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_fill_color</span></code></a>(fill_color)</p></td>
+<td><p>Set the object color</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.Rectangle.set_line_color" title="expyfun.visual.Rectangle.set_line_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_line_color</span></code></a>(line_color)</td>
-<td>Set the object color</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.visual.Rectangle.set_line_color" title="expyfun.visual.Rectangle.set_line_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_line_color</span></code></a>(line_color)</p></td>
+<td><p>Set the object color</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#expyfun.visual.Rectangle.set_line_width" title="expyfun.visual.Rectangle.set_line_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_line_width</span></code></a>(line_width)</td>
-<td>Set the line width in pixels</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.visual.Rectangle.set_line_width" title="expyfun.visual.Rectangle.set_line_width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_line_width</span></code></a>(line_width)</p></td>
+<td><p>Set the line width in pixels</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#expyfun.visual.Rectangle.set_pos" title="expyfun.visual.Rectangle.set_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_pos</span></code></a>(pos[,&nbsp;units])</td>
-<td>Set the position of the rectangle</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.visual.Rectangle.set_pos" title="expyfun.visual.Rectangle.set_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_pos</span></code></a>(pos[, units])</p></td>
+<td><p>Set the position of the rectangle</p></td>
 </tr>
 </tbody>
 </table>
@@ -182,80 +170,59 @@ shape e.g. size, position. See <code class="docutils literal notranslate"><span 
 <dt id="expyfun.visual.Rectangle.set_fill_color">
 <code class="descname">set_fill_color</code><span class="sig-paren">(</span><em>fill_color</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L279-L287"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Rectangle.set_fill_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the object color</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>fill_color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color | None</span></dt>
-<dd><p class="first last">The fill color. Use None for no fill.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fill_color</strong><span class="classifier">matplotlib Color | None</span></dt><dd><p>The fill color. Use None for no fill.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.Rectangle.set_line_color">
 <code class="descname">set_line_color</code><span class="sig-paren">(</span><em>line_color</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L289-L297"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Rectangle.set_line_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the object color</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>fill_color</strong> <span class="classifier-delimiter">:</span> <span class="classifier">matplotlib Color | None</span></dt>
-<dd><p class="first last">The fill color. Use None for no fill.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fill_color</strong><span class="classifier">matplotlib Color | None</span></dt><dd><p>The fill color. Use None for no fill.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.Rectangle.set_line_width">
 <code class="descname">set_line_width</code><span class="sig-paren">(</span><em>line_width</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L299-L311"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Rectangle.set_line_width" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the line width in pixels</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>line_width</strong> <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
-<dd><p class="first last">The line width. Must be given in pixels. Due to OpenGL
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>line_width</strong><span class="classifier">float</span></dt><dd><p>The line width. Must be given in pixels. Due to OpenGL
 limitations, it must be <cite>0.0 &lt;= line_width &lt;= 10.0</cite>.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.Rectangle.set_pos">
 <code class="descname">set_pos</code><span class="sig-paren">(</span><em>pos</em>, <em>units='norm'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L482-L508"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Rectangle.set_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the position of the rectangle</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
-<dt><strong>pos</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like</span></dt>
-<dd><p class="first last">X, Y, width, height of the rectangle.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>pos</strong><span class="classifier">array-like</span></dt><dd><p>X, Y, width, height of the rectangle.</p>
 </dd>
-<dt><strong>units</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
-<dd><p class="first last">Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units to use. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
 </dd>
 </dl>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -274,7 +241,7 @@ limitations, it must be <cite>0.0 &lt;= line_width &lt;= 10.0</cite>.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-03-17.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-09.<br/>
     </p>
   </div>
 </footer>
