@@ -16,9 +16,11 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="expyfun.TDTController" href="expyfun.TDTController.html" />
+    <link rel="next" title="expyfun.SoundCardController" href="expyfun.SoundCardController.html" />
     <link rel="prev" title="expyfun.EyelinkController" href="expyfun.EyelinkController.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../python_reference.html">API reference</a></li>
+                <li><a href="../getting_started.html">Getting started</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
-                <li><a href="../whats_new.html">What's new</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,23 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.ParallelTrigger</a></li>
 </ul>
 </ul>
 </li>
@@ -102,8 +117,8 @@
 <h1>expyfun.ParallelTrigger<a class="headerlink" href="#expyfun-paralleltrigger" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.ParallelTrigger">
-<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">ParallelTrigger</code><span class="sig-paren">(</span><em>mode='dummy'</em>, <em>address=None</em>, <em>high_duration=0.005</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L14-L137"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Parallel port and dummy triggering support</p>
+<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">ParallelTrigger</code><span class="sig-paren">(</span><em>mode='dummy'</em>, <em>address=None</em>, <em>high_duration=0.005</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L14-L138"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parallel port and dummy triggering support.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>When using the parallel port, calling
@@ -124,7 +139,7 @@ integer address like <code class="docutils literal notranslate"><span class="pre
 <dt><strong>high_duration</strong><span class="classifier">float</span></dt><dd><p>Amount of time (seconds) to leave the trigger high whenever
 sending a trigger.</p>
 </dd>
-<dt><strong>verbose</strong><span class="classifier">bool, str, int, or None</span></dt><dd><p>If not None, override default verbose level (see expyfun.verbose).</p>
+<dt><strong>verbose</strong><span class="classifier">bool, str, int, or None</span></dt><dd><p>If not None, override default verbose level.</p>
 </dd>
 </dl>
 </dd>
@@ -155,25 +170,26 @@ like <a class="reference external" href="http://www.highrez.co.uk/downloads/inpo
 <td><p>Release hardware interfaces</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ParallelTrigger.stamp_triggers" title="expyfun.ParallelTrigger.stamp_triggers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stamp_triggers</span></code></a>(triggers[, delay, wait_for_last])</p></td>
-<td><p>Stamp a list of triggers with a given inter-trigger delay</p></td>
+<td><p>Stamp a list of triggers with a given inter-trigger delay.</p></td>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="expyfun.ParallelTrigger.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>mode='dummy'</em>, <em>address=None</em>, <em>high_duration=0.005</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/../doc/&lt;string&gt;#L54-L101"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="attribute">
+<dt id="expyfun.ParallelTrigger.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ParallelTrigger.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ParallelTrigger.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L130-L134"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.close" title="Permalink to this definition">¶</a></dt>
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L131-L135"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Release hardware interfaces</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ParallelTrigger.stamp_triggers">
-<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>triggers</em>, <em>delay=0.03</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L112-L128"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.stamp_triggers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stamp a list of triggers with a given inter-trigger delay</p>
+<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>triggers</em>, <em>delay=0.03</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L113-L129"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stamp a list of triggers with a given inter-trigger delay.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">

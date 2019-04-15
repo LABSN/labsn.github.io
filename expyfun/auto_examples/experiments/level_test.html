@@ -19,6 +19,8 @@
     <link rel="next" title="Experiment using eye-tracking pupillometry" href="pupillometry_experiment_.html" />
     <link rel="prev" title="Experiment drawing methods" href="drawing_methods.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../../python_reference.html">API reference</a></li>
+                <li><a href="../../getting_started.html">Getting started</a></li>
                 <li><a href="../index.html">Examples</a></li>
-                <li><a href="../../whats_new.html">What's new</a></li>
+                <li><a href="../../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,23 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_reference.html">API Reference</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Sound level test and visual size calibration</a></li>
 </ul>
 </ul>
 </li>
@@ -113,23 +128,24 @@ distance.</p>
 <img alt="../../_images/sphx_glr_level_test_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_level_test_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: LevelTest
-date: 2019-04-15 20_00_54.417330
+date: 2019-04-15 22_49_46.922366
 file: /home/circleci/project/examples/experiments/level_test.py
 participant: s
 session: 0
-2019-04-15 20:00:54,417 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-04-15 20:00:54,417 - INFO    - Expyfun: Setting up Pyglet audio
-2019-04-15 20:00:54,462 - INFO    - Expyfun: Setting up screen
-2019-04-15 20:00:54,477 - EXP     - Expyfun: Set screen visibility True
-2019-04-15 20:00:54,534 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-04-15 20:00:54,536 - INFO    - Expyfun: Initialization complete
-2019-04-15 20:00:54,536 - EXP     - Expyfun: Participant: s
-2019-04-15 20:00:54,536 - EXP     - Expyfun: Session: 0
-2019-04-15 20:00:54,550 - EXP     - Expyfun: Loading 488280 samples to buffer
-2019-04-15 20:00:54,689 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-04-15 20:00:54,696 - EXP     - Expyfun: Audio stopped and reset.
-2019-04-15 20:00:54,696 - INFO    - Expyfun: Exiting
-2019-04-15 20:00:54,698 - EXP     - Expyfun: Audio stopped and reset.
+2019-04-15 22:49:46,922 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-04-15 22:49:46,923 - INFO    - Expyfun: Setting up sound card audio using pyglet backend
+2019-04-15 22:49:47,035 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100).Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2019-04-15 22:49:47,035 - INFO    - Expyfun: Setting up screen
+2019-04-15 22:49:47,051 - EXP     - Expyfun: Set screen visibility True
+2019-04-15 22:49:47,111 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-04-15 22:49:47,114 - INFO    - Expyfun: Initialization complete
+2019-04-15 22:49:47,114 - EXP     - Expyfun: Participant: s
+2019-04-15 22:49:47,114 - EXP     - Expyfun: Session: 0
+2019-04-15 22:49:47,138 - EXP     - Expyfun: Loading 882000 samples to buffer
+2019-04-15 22:49:47,275 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-04-15 22:49:47,285 - EXP     - Expyfun: Audio stopped and reset.
+2019-04-15 22:49:47,285 - INFO    - Expyfun: Exiting
+2019-04-15 22:49:47,287 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -141,22 +157,22 @@ session: 0
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <a href="../../generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="View documentation for expyfun.visual.Rectangle"><span class="n">Rectangle</span></a>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <span class="n">Rectangle</span>
 <span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
-<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;LevelTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;LevelTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">,</span>
                           <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">suppress_resamp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check_rms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">stim_db</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <span class="n">tone</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.01</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="p">)</span> <span class="o">*</span>
-            <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="mf">1000.</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">fs</span><span class="p">)))</span>
-    <span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">tone</span> <span class="o">*</span> <span class="n">tone</span><span class="p">)),</span> <span class="mf">0.01</span><span class="p">)</span>
-    <span class="n">square</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Rectangle.html#expyfun.visual.Rectangle" title="View documentation for expyfun.visual.Rectangle"><span class="n">Rectangle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-    <span class="n">cm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">_convert_units</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]],</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;pix&#39;</span><span class="p">),</span>
+    <span class="n">tone</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.01</span> <span class="o">*</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mf">2.</span><span class="p">)</span> <span class="o">*</span>
+            <a href="https://www.numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.pi" title="View documentation for numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">*</span> <span class="mf">1000.</span> <span class="o">*</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">fs</span><span class="p">)))</span>
+    <span class="k">assert</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.allclose.html#numpy.allclose" title="View documentation for numpy.allclose"><span class="n">np</span><span class="o">.</span><span class="n">allclose</span></a><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.mean.html#numpy.mean" title="View documentation for numpy.mean"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">tone</span> <span class="o">*</span> <span class="n">tone</span><span class="p">)),</span> <span class="mf">0.01</span><span class="p">)</span>
+    <span class="n">square</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+    <span class="n">cm</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.diff.html#numpy.diff" title="View documentation for numpy.diff"><span class="n">np</span><span class="o">.</span><span class="n">diff</span></a><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">_convert_units</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]],</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;pix&#39;</span><span class="p">),</span>
                  <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">dpi</span> <span class="o">/</span> <span class="mf">0.39370</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><span class="n">tone</span><span class="p">)</span>  <span class="c1"># RMS == 0.01</span>
     <span class="n">pressed</span> <span class="o">=</span> <span class="kc">None</span>
@@ -172,10 +188,10 @@ session: 0
         <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="mf">0.5</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 
-<a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.437 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.521 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-level-test-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1613c61b367269a195b8fed43cf083cd/level_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">level_test.py</span></code></a></p>

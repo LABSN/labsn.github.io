@@ -19,6 +19,8 @@
     <link rel="next" title="expyfun.stimuli.TrackerDealer" href="expyfun.stimuli.TrackerDealer.html" />
     <link rel="prev" title="expyfun.stimuli.CRMPreload" href="expyfun.stimuli.CRMPreload.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../python_reference.html">API reference</a></li>
+                <li><a href="../getting_started.html">Getting started</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
-                <li><a href="../whats_new.html">What's new</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,23 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.stimuli.TrackerBinom</a></li>
 </ul>
 </ul>
 </li>
@@ -102,7 +117,7 @@
 <h1>expyfun.stimuli.TrackerBinom<a class="headerlink" href="#expyfun-stimuli-trackerbinom" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.stimuli.TrackerBinom">
-<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">TrackerBinom</code><span class="sig-paren">(</span><em>callback</em>, <em>alpha</em>, <em>chance</em>, <em>max_trials</em>, <em>min_trials=0</em>, <em>stop_early=True</em>, <em>x_current=nan</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L555-L766"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">TrackerBinom</code><span class="sig-paren">(</span><em>callback</em>, <em>alpha</em>, <em>chance</em>, <em>max_trials</em>, <em>min_trials=0</em>, <em>stop_early=True</em>, <em>x_current=nan</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L556-L768"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Binomial hypothesis testing tracker</p>
 <p>This class implements a tracker that runs a test at each trial with the
 null hypothesis that the stimulus presented has no effect on the subject’s
@@ -199,10 +214,10 @@ of following them.</p>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="expyfun.stimuli.TrackerBinom.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>callback</em>, <em>alpha</em>, <em>chance</em>, <em>max_trials</em>, <em>min_trials=0</em>, <em>stop_early=True</em>, <em>x_current=nan</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L609-L641"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<dl class="attribute">
+<dt id="expyfun.stimuli.TrackerBinom.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -225,7 +240,7 @@ of following them.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.respond">
-<code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L643-L679"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.respond" title="Permalink to this definition">¶</a></dt>
+<code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L645-L681"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the tracker based on the last response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -19,6 +19,8 @@
     <link rel="next" title="expyfun.EyelinkController" href="expyfun.EyelinkController.html" />
     <link rel="prev" title="API Reference" href="../python_reference.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../python_reference.html">API reference</a></li>
+                <li><a href="../getting_started.html">Getting started</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
-                <li><a href="../whats_new.html">What's new</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,26 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.ExperimentController</a><ul>
+<li><a class="reference internal" href="#examples-using-expyfun-experimentcontroller">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.ExperimentController</span></code></a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -102,7 +120,7 @@
 <h1>expyfun.ExperimentController<a class="headerlink" href="#expyfun-experimentcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.ExperimentController">
-<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">ExperimentController</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em>, <em>safe_flipping=None</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L39-L2021"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">ExperimentController</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em>, <em>safe_flipping=None</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L40-L2060"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -110,11 +128,12 @@
 <dt><strong>exp_name</strong><span class="classifier">str</span></dt><dd><p>Name of the experiment.</p>
 </dd>
 <dt><strong>audio_controller</strong><span class="classifier">str | dict | None</span></dt><dd><p>If audio_controller is None, the type will be read from the system
-configuration file. If a string, can be ‘pyglet’ or ‘tdt’, and the
-remaining audio parameters will be read from the machine configuration
-file. If a dict, must include a key ‘TYPE’ that is either ‘pyglet’
-or ‘tdt’; the dict can contain other parameters specific to the TDT
-(see documentation for <a class="reference internal" href="expyfun.TDTController.html#expyfun.TDTController" title="expyfun.TDTController"><code class="xref py py-class docutils literal notranslate"><span class="pre">TDTController</span></code></a>).</p>
+configuration file. If a string, can be ‘sound_card’ or ‘tdt’,
+and the remaining audio parameters will be read from the
+machine configuration file. If a dict, must include a key ‘TYPE’ that
+is one of the supported types; the dict can contain other parameters
+specific to the backend (see <a class="reference internal" href="expyfun.TDTController.html#expyfun.TDTController" title="expyfun.TDTController"><code class="xref py py-class docutils literal notranslate"><span class="pre">TDTController</span></code></a> and
+<a class="reference internal" href="expyfun.SoundCardController.html#expyfun.SoundCardController" title="expyfun.SoundCardController"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoundCardController</span></code></a>).</p>
 </dd>
 <dt><strong>response_device</strong><span class="classifier">str | None</span></dt><dd><p>Must be ‘keyboard’, ‘cedrus’, or ‘tdt’.  If None, the type will be read
 from the machine configuration file.</p>
@@ -150,7 +169,10 @@ default handling of ‘escape’ in pyglet.</p>
 </dd>
 <dt><strong>participant</strong><span class="classifier">str | None</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a GUI will be used to acquire this information.</p>
 </dd>
-<dt><strong>session</strong><span class="classifier">str | None</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a GUI will be used to acquire this information.</p>
+<dt><strong>monitor</strong><span class="classifier">dict | None</span></dt><dd><p>Monitor properties. If dict, must include keys
+SCREEN_WIDTH, SCREEN_DISTANCE, and SCREEN_SIZE_PIX.
+Generally this can be <code class="docutils literal notranslate"><span class="pre">None</span></code> if the width and distance have been
+set properly for the machine in use.</p>
 </dd>
 <dt><strong>trigger_controller</strong><span class="classifier">str | None</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the type will be read from the system configuration file.
 If a string, must be ‘dummy’, ‘parallel’, or ‘tdt’. Note that by
@@ -158,9 +180,11 @@ default the mode is ‘dummy’, since setting up the parallel port
 can be a pain. Can also be a dict with entries ‘type’ (‘parallel’),
 ‘address’ (None), and ‘high_duration’ (0.005).</p>
 </dd>
+<dt><strong>session</strong><span class="classifier">str | None</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a GUI will be used to acquire this information.</p>
+</dd>
 <dt><strong>check_rms</strong><span class="classifier">str | None</span></dt><dd><p>Method to use in checking stimulus RMS to ensure appropriate levels.
 Possible values are <code class="docutils literal notranslate"><span class="pre">None</span></code>, <code class="docutils literal notranslate"><span class="pre">wholefile</span></code>, and <code class="docutils literal notranslate"><span class="pre">windowed</span></code> (the
-default); see <cite>set_rms_checking</cite> for details.</p>
+default); see <a class="reference internal" href="#expyfun.ExperimentController.set_rms_checking" title="expyfun.ExperimentController.set_rms_checking"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_rms_checking</span></code></a> for details.</p>
 </dd>
 <dt><strong>suppress_resamp</strong><span class="classifier">bool</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, will suppress resampling of stimuli to the sampling
 frequency of the sound output device.</p>
@@ -170,9 +194,11 @@ the expected version of the expyfun codebase is being used when running
 experiments. To override version checking (e.g., during development)
 use <code class="docutils literal notranslate"><span class="pre">version='dev'</span></code>.</p>
 </dd>
+<dt><strong>enable_video</strong><span class="classifier">bool</span></dt><dd><p>If True, enable video mode.</p>
+</dd>
 <dt><strong>safe_flipping</strong><span class="classifier">bool | None</span></dt><dd><p>If False, do not use <code class="docutils literal notranslate"><span class="pre">glFinish</span></code> when flipping. This can restore
 60 Hz on Linux systems where 30 Hz framerates occur, but the timing
-is not necessarily guaranteed, as the <cite>flip</cite> may return before the
+is not necessarily guaranteed, as the <a class="reference internal" href="#expyfun.ExperimentController.flip" title="expyfun.ExperimentController.flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code></a> may return before the
 stimulus has actually flipped (check with
 <a class="reference internal" href="../auto_examples/sync/sync_test.html#sphx-glr-auto-examples-sync-sync-test-py"><span class="std std-ref">A-V sync test</span></a>).</p>
 </dd>
@@ -241,38 +267,44 @@ information (based on the level of verbosity) printed to the console.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.close" title="expyfun.ExperimentController.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</p></td>
 <td><p>Close all connections in experiment controller.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.estimate_screen_fs" title="expyfun.ExperimentController.estimate_screen_fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_screen_fs</span></code></a>([n_rep])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.delete_video" title="expyfun.ExperimentController.delete_video"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delete_video</span></code></a>()</p></td>
+<td><p>Delete the video.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.estimate_screen_fs" title="expyfun.ExperimentController.estimate_screen_fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">estimate_screen_fs</span></code></a>([n_rep])</p></td>
 <td><p>Estimate screen refresh rate using repeated flip() calls</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.flip" title="expyfun.ExperimentController.flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code></a>([when])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.flip" title="expyfun.ExperimentController.flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code></a>([when])</p></td>
 <td><p>Flip screen, then run any “on-flip” functions.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.flush" title="expyfun.ExperimentController.flush"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flush</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.flush" title="expyfun.ExperimentController.flush"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flush</span></code></a>()</p></td>
 <td><p>Flush logs and data files</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_clicks</span></code></a>([live_buttons, timestamp, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.get_clicks" title="expyfun.ExperimentController.get_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_clicks</span></code></a>([live_buttons, timestamp, …])</p></td>
 <td><p>Get the entire keyboard / button box buffer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mouse_position</span></code></a>([units])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.get_mouse_position" title="expyfun.ExperimentController.get_mouse_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mouse_position</span></code></a>([units])</p></td>
 <td><p>Mouse position in screen coordinates</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.get_presses" title="expyfun.ExperimentController.get_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_presses</span></code></a>([live_keys, timestamp, …])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.get_presses" title="expyfun.ExperimentController.get_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_presses</span></code></a>([live_keys, timestamp, …])</p></td>
 <td><p>Get the entire keyboard / button box buffer.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.get_time" title="expyfun.ExperimentController.get_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.get_time" title="expyfun.ExperimentController.get_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_time</span></code></a>()</p></td>
 <td><p>Return current master clock time</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identify_trial</span></code></a>(**ids)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.identify_trial" title="expyfun.ExperimentController.identify_trial"><code class="xref py py-obj docutils literal notranslate"><span class="pre">identify_trial</span></code></a>(**ids)</p></td>
 <td><p>Identify trial type before beginning the trial</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_clicks</span></code></a>()</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_clicks</span></code></a>()</p></td>
 <td><p>Start listening for mouse clicks.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.listen_presses" title="expyfun.ExperimentController.listen_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_presses</span></code></a>()</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.listen_presses" title="expyfun.ExperimentController.listen_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_presses</span></code></a>()</p></td>
 <td><p>Start listening for keypresses.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_buffer</span></code></a>(samples)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_buffer</span></code></a>(samples)</p></td>
 <td><p>Load audio data into the audio buffer</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ExperimentController.load_video" title="expyfun.ExperimentController.load_video"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_video</span></code></a>(file_name[, pos, units, center])</p></td>
+<td><p>Load a video.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>()</p></td>
 <td><p>Start audio playback</p></td>
@@ -357,28 +389,15 @@ information (based on the level of verbosity) printed to the console.</p>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 62%" />
-<col style="width: 38%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>delete_video</strong></p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p><strong>load_video</strong></p></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<dl class="method">
-<dt id="expyfun.ExperimentController.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>exp_name</em>, <em>audio_controller=None</em>, <em>response_device=None</em>, <em>stim_rms=0.01</em>, <em>stim_fs=24414</em>, <em>stim_db=65</em>, <em>noise_db=45</em>, <em>output_dir='data'</em>, <em>window_size=None</em>, <em>screen_num=None</em>, <em>full_screen=True</em>, <em>force_quit=None</em>, <em>participant=None</em>, <em>monitor=None</em>, <em>trigger_controller=None</em>, <em>session=None</em>, <em>check_rms='windowed'</em>, <em>suppress_resamp=False</em>, <em>version=None</em>, <em>enable_video=False</em>, <em>safe_flipping=None</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/../doc/&lt;string&gt;#L127-L427"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.__init__" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="attribute">
+<dt id="expyfun.ExperimentController.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ExperimentController.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.call_on_every_flip">
-<code class="descname">call_on_every_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L672-L695"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_every_flip" title="Permalink to this definition">¶</a></dt>
+<code class="descname">call_on_every_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L688-L711"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_every_flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a function to be executed on every flip.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -394,15 +413,15 @@ functions will be cleared.</p>
 <p><a class="reference internal" href="#expyfun.ExperimentController.call_on_next_flip" title="expyfun.ExperimentController.call_on_next_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.call_on_next_flip</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
-<p>See <cite>flip_and_play</cite> for order of operations. Can be called multiple
+<p>See <em class="xref py py-obj">flip_and_play</em> for order of operations. Can be called multiple
 times to add multiple functions to the queue. If the function must be
-called with arguments, use <cite>functools.partial</cite> before passing to
-<cite>call_on_every_flip</cite>.</p>
+called with arguments, use <a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.partial" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> before passing to
+<a class="reference internal" href="#expyfun.ExperimentController.call_on_every_flip" title="expyfun.ExperimentController.call_on_every_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_on_every_flip</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.call_on_next_flip">
-<code class="descname">call_on_next_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L647-L670"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_next_flip" title="Permalink to this definition">¶</a></dt>
+<code class="descname">call_on_next_flip</code><span class="sig-paren">(</span><em>function</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L663-L686"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_next_flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a function to be executed on next flip only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -418,21 +437,21 @@ functions will be cleared.</p>
 <p><a class="reference internal" href="#expyfun.ExperimentController.call_on_every_flip" title="expyfun.ExperimentController.call_on_every_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.call_on_every_flip</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
-<p>See <cite>flip_and_play</cite> for order of operations. Can be called multiple
+<p>See <em class="xref py py-obj">flip_and_play</em> for order of operations. Can be called multiple
 times to add multiple functions to the queue. If the function must be
-called with arguments, use <cite>functools.partial</cite> before passing to
-<cite>call_on_next_flip</cite>.</p>
+called with arguments, use <a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.partial" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> before passing
+to <a class="reference internal" href="#expyfun.ExperimentController.call_on_next_flip" title="expyfun.ExperimentController.call_on_next_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_on_next_flip</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.check_force_quit">
-<code class="descname">check_force_quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1122-L1124"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.check_force_quit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">check_force_quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1151-L1153"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.check_force_quit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check to see if any force quit keys were pressed.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1915-L1918"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.close" title="Permalink to this definition">¶</a></dt>
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1955-L1958"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Close all connections in experiment controller.</p>
 </dd></dl>
 
@@ -449,8 +468,14 @@ called with arguments, use <cite>functools.partial</cite> before passing to
 </dd></dl>
 
 <dl class="method">
+<dt id="expyfun.ExperimentController.delete_video">
+<code class="descname">delete_video</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L841-L844"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.delete_video" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete the video.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="expyfun.ExperimentController.estimate_screen_fs">
-<code class="descname">estimate_screen_fs</code><span class="sig-paren">(</span><em>n_rep=10</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L928-L947"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.estimate_screen_fs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">estimate_screen_fs</code><span class="sig-paren">(</span><em>n_rep=10</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L957-L976"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.estimate_screen_fs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate screen refresh rate using repeated flip() calls</p>
 <p>Useful for verifying that a system is operating at the proper
 sample rate.</p>
@@ -473,7 +498,7 @@ the estimate but the more time will be consumed.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.flip">
-<code class="descname">flip</code><span class="sig-paren">(</span><em>when=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L871-L926"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flip" title="Permalink to this definition">¶</a></dt>
+<code class="descname">flip</code><span class="sig-paren">(</span><em>when=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L900-L955"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flip screen, then run any “on-flip” functions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -481,7 +506,7 @@ the estimate but the more time will be consumed.</p>
 <dt><strong>when</strong><span class="classifier">float | None</span></dt><dd><p>Time to flip. If None, flip immediately. Note that due to flip
 timing limitations, this is only a guaranteed <em>minimum</em> (not
 absolute) wait time before the flip completes. As a result, in
-some cases <cite>when</cite> should be set to a value smaller than your
+some cases <em class="xref py py-obj">when</em> should be set to a value smaller than your
 true intended flip time.</p>
 </dd>
 </dl>
@@ -499,13 +524,13 @@ true intended flip time.</p>
 </div>
 <p class="rubric">Notes</p>
 <p>Order of operations is: screen flip, functions added with
-<cite>call_on_next_flip</cite>, followed by functions added with
-<cite>call_on_every_flip</cite>.</p>
+<a class="reference internal" href="#expyfun.ExperimentController.call_on_next_flip" title="expyfun.ExperimentController.call_on_next_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_on_next_flip</span></code></a>, followed by functions added with
+<a class="reference internal" href="#expyfun.ExperimentController.call_on_every_flip" title="expyfun.ExperimentController.call_on_every_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_on_every_flip</span></code></a>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.flush">
-<code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1908-L1913"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flush" title="Permalink to this definition">¶</a></dt>
+<code class="descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1948-L1953"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flush" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flush logs and data files</p>
 </dd></dl>
 
@@ -517,7 +542,7 @@ true intended flip time.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.get_clicks">
-<code class="descname">get_clicks</code><span class="sig-paren">(</span><em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1196-L1230"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_clicks" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_clicks</code><span class="sig-paren">(</span><em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1225-L1259"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_clicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the entire keyboard / button box buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -526,11 +551,11 @@ true intended flip time.</p>
 <code class="docutils literal notranslate"><span class="pre">None</span></code> accepts all mouse clicks.</p>
 </dd>
 <dt><strong>timestamp</strong><span class="classifier">bool</span></dt><dd><p>Whether the mouse click should be timestamped. If True, returns the
-button click time relative to the value given in <cite>relative_to</cite>.</p>
+button click time relative to the value given in <em class="xref py py-obj">relative_to</em>.</p>
 </dd>
 <dt><strong>relative_to</strong><span class="classifier">None | float</span></dt><dd><p>A time relative to which timestamping is done. Ignored if
 timestamp==False.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the time
-<cite>listen_clicks</cite> was last called.</p>
+<a class="reference internal" href="#expyfun.ExperimentController.listen_clicks" title="expyfun.ExperimentController.listen_clicks"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_clicks</span></code></a> was last called.</p>
 </dd>
 </dl>
 </dd>
@@ -553,12 +578,12 @@ indicating the button clicked.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.get_mouse_position">
-<code class="descname">get_mouse_position</code><span class="sig-paren">(</span><em>units='pix'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1232-L1256"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_mouse_position" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_mouse_position</code><span class="sig-paren">(</span><em>units='pix'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1261-L1285"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_mouse_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mouse position in screen coordinates</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units to return. See <cite>check_units</cite> for options.</p>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units to return. See <a class="reference internal" href="expyfun.check_units.html#expyfun.check_units" title="expyfun.check_units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_units</span></code></a> for options.</p>
 </dd>
 </dl>
 </dd>
@@ -577,7 +602,7 @@ indicating the button clicked.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.get_presses">
-<code class="descname">get_presses</code><span class="sig-paren">(</span><em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>kind='presses'</em>, <em>return_kinds=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L984-L1031"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_presses" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_presses</code><span class="sig-paren">(</span><em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>kind='presses'</em>, <em>return_kinds=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1013-L1060"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the entire keyboard / button box buffer.</p>
 <p>This will also clear events that are not requested per <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p>
 <dl class="field-list simple">
@@ -588,11 +613,11 @@ types are cast as strings, so a list of ints will also work.
 <code class="docutils literal notranslate"><span class="pre">None</span></code> accepts all keypresses.</p>
 </dd>
 <dt><strong>timestamp</strong><span class="classifier">bool</span></dt><dd><p>Whether the keypress should be timestamped. If True, returns the
-button press time relative to the value given in <cite>relative_to</cite>.</p>
+button press time relative to the value given in <em class="xref py py-obj">relative_to</em>.</p>
 </dd>
 <dt><strong>relative_to</strong><span class="classifier">None | float</span></dt><dd><p>A time relative to which timestamping is done. Ignored if
 timestamp==False.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the time
-<cite>listen_presses</cite> was last called.</p>
+<a class="reference internal" href="#expyfun.ExperimentController.listen_presses" title="expyfun.ExperimentController.listen_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">listen_presses</span></code></a> was last called.</p>
 </dd>
 <dt><strong>kind</strong><span class="classifier">string</span></dt><dd><p>Which key events to return. One of <code class="docutils literal notranslate"><span class="pre">presses</span></code>, <code class="docutils literal notranslate"><span class="pre">releases</span></code> or
 <code class="docutils literal notranslate"><span class="pre">both</span></code>. (default <code class="docutils literal notranslate"><span class="pre">presses</span></code>)</p>
@@ -620,7 +645,7 @@ release event.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.get_time">
-<code class="descname">get_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1678-L1686"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_time" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1719-L1727"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return current master clock time</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -640,7 +665,7 @@ release event.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.identify_trial">
-<code class="descname">identify_trial</code><span class="sig-paren">(</span><em>**ids</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1789-L1824"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.identify_trial" title="Permalink to this definition">¶</a></dt>
+<code class="descname">identify_trial</code><span class="sig-paren">(</span><em>**ids</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1830-L1865"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.identify_trial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identify trial type before beginning the trial</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -662,7 +687,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.listen_clicks">
-<code class="descname">listen_clicks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1185-L1194"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_clicks" title="Permalink to this definition">¶</a></dt>
+<code class="descname">listen_clicks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1214-L1223"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_clicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start listening for mouse clicks.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -672,7 +697,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.listen_presses">
-<code class="descname">listen_presses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L973-L982"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_presses" title="Permalink to this definition">¶</a></dt>
+<code class="descname">listen_presses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1002-L1011"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start listening for keypresses.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -682,7 +707,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.load_buffer">
-<code class="descname">load_buffer</code><span class="sig-paren">(</span><em>samples</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1471-L1494"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.load_buffer" title="Permalink to this definition">¶</a></dt>
+<code class="descname">load_buffer</code><span class="sig-paren">(</span><em>samples</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1502-L1525"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.load_buffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load audio data into the audio buffer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -697,6 +722,26 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.play</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.set_stim_db" title="expyfun.ExperimentController.set_stim_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.set_stim_db</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.start_stimulus</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.stop</span></code></a></p>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.ExperimentController.load_video">
+<code class="descname">load_video</code><span class="sig-paren">(</span><em>file_name</em>, <em>pos=(0</em>, <em>0)</em>, <em>units='norm'</em>, <em>center=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L815-L839"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.load_video" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a video.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>The filename.</p>
+</dd>
+<dt><strong>pos</strong><span class="classifier">tuple</span></dt><dd><p>The screen position.</p>
+</dd>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units for <em class="xref py py-obj">pos</em>. See <a class="reference internal" href="expyfun.check_units.html#expyfun.check_units" title="expyfun.check_units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_units</span></code></a> for options.</p>
+</dd>
+<dt><strong>center</strong><span class="classifier">bool</span></dt><dd><p>If True, center the video.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
@@ -719,7 +764,7 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.play">
-<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1496-L1514"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.play" title="Permalink to this definition">¶</a></dt>
+<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1527-L1545"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start audio playback</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -737,7 +782,7 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.refocus">
-<code class="descname">refocus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1948-L1978"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.refocus" title="Permalink to this definition">¶</a></dt>
+<code class="descname">refocus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1987-L2017"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.refocus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attempt to grab operating system window manager / keyboard focus.</p>
 <p>This implements platform-specific trickery to bring the window to the
 top and capture keyboard focus in cases where keyboard input from a
@@ -752,7 +797,7 @@ subject is mandatory (e.g., when using keyboard as a response device).</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.screen_prompt">
-<code class="descname">screen_prompt</code><span class="sig-paren">(</span><em>text, max_wait=inf, min_wait=0, live_keys=None, timestamp=False, clear_after=True, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True, click=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L489-L561"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_prompt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">screen_prompt</code><span class="sig-paren">(</span><em>text, max_wait=inf, min_wait=0, live_keys=None, timestamp=False, clear_after=True, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True, click=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L503-L577"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_prompt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display text and (optionally) wait for user continuation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -770,7 +815,7 @@ avoiding subjects missing instructions.</p>
 If None, all buttons / keys will be accepted.  If an empty list,
 the prompt displays until max_wait seconds have passed.</p>
 </dd>
-<dt><strong>click</strong><span class="classifier">bool</span></dt><dd><p>Whether to use clicks to advance rather than key presses.</p>
+<dt><strong>timestamp</strong><span class="classifier">bool</span></dt><dd><p>If True, output the timestamp as well.</p>
 </dd>
 <dt><strong>clear_after</strong><span class="classifier">bool</span></dt><dd><p>If True, the screen will be cleared before returning.</p>
 </dd>
@@ -787,12 +832,14 @@ positive going up and right) the default is dead center (0, 0).</p>
 for multi-line text. Inappropriate for text requiring
 precise positioning or centering.</p>
 </dd>
-<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units for <cite>pos</cite>. See <cite>check_units</cite> for options. Applies to
-<cite>pos</cite> but not <cite>font_size</cite>.</p>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units for <em class="xref py py-obj">pos</em>. See <a class="reference internal" href="expyfun.check_units.html#expyfun.check_units" title="expyfun.check_units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_units</span></code></a> for options. Applies to
+<em class="xref py py-obj">pos</em> but not <em class="xref py py-obj">font_size</em>.</p>
 </dd>
 <dt><strong>attr</strong><span class="classifier">bool</span></dt><dd><p>Should the text be interpreted with pyglet’s <code class="docutils literal notranslate"><span class="pre">decode_attributed</span></code>
 method? This allows inline formatting for text color, e.g.,
 <code class="docutils literal notranslate"><span class="pre">'This</span> <span class="pre">is</span> <span class="pre">{color</span> <span class="pre">(255,</span> <span class="pre">0,</span> <span class="pre">0,</span> <span class="pre">255)}red</span> <span class="pre">text'</span></code>.</p>
+</dd>
+<dt><strong>click</strong><span class="classifier">bool</span></dt><dd><p>Whether to use clicks to advance rather than key presses.</p>
 </dd>
 </dl>
 </dd>
@@ -815,7 +862,7 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.screen_text">
-<code class="descname">screen_text</code><span class="sig-paren">(</span><em>text, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True, log_data=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L440-L487"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_text" title="Permalink to this definition">¶</a></dt>
+<code class="descname">screen_text</code><span class="sig-paren">(</span><em>text, pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', attr=True, log_data=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L454-L501"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show some text on the screen.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -835,8 +882,8 @@ positive going up and right) the default is dead center (0, 0).</p>
 for multi-line text. Inappropriate for text requiring
 precise positioning or centering.</p>
 </dd>
-<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units for <cite>pos</cite>. See <cite>check_units</cite> for options. Applies to
-<cite>pos</cite> but not <cite>font_size</cite>.</p>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units for <em class="xref py py-obj">pos</em>. See <a class="reference internal" href="expyfun.check_units.html#expyfun.check_units" title="expyfun.check_units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_units</span></code></a> for options. Applies to
+<em class="xref py py-obj">pos</em> but not <em class="xref py py-obj">font_size</em>.</p>
 </dd>
 <dt><strong>attr</strong><span class="classifier">bool</span></dt><dd><p>Should the text be interpreted with pyglet’s <code class="docutils literal notranslate"><span class="pre">decode_attributed</span></code>
 method? This allows inline formatting for text color, e.g.,
@@ -860,7 +907,7 @@ method? This allows inline formatting for text color, e.g.,
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.screenshot">
-<code class="descname">screenshot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L751-L770"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screenshot" title="Permalink to this definition">¶</a></dt>
+<code class="descname">screenshot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L766-L785"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screenshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Capture the current displayed buffer</p>
 <p>This method must be called <em>before</em> flipping, because it captures
 the back buffer.</p>
@@ -876,7 +923,7 @@ the back buffer.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_background_color">
-<code class="descname">set_background_color</code><span class="sig-paren">(</span><em>color='black'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L563-L584"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_background_color" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_background_color</code><span class="sig-paren">(</span><em>color='black'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L579-L600"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_background_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set and draw a solid background color</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -896,8 +943,16 @@ appropriate backgound color.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_noise_db">
-<code class="descname">set_noise_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1545-L1555"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_noise_db" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_noise_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1576-L1591"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_noise_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the level of the background noise</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>new_db</strong><span class="classifier">float</span></dt><dd><p>The new level.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="#expyfun.ExperimentController.start_noise" title="expyfun.ExperimentController.start_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.start_noise</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop_noise" title="expyfun.ExperimentController.stop_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.stop_noise</span></code></a></p>
@@ -906,7 +961,7 @@ appropriate backgound color.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_rms_checking">
-<code class="descname">set_rms_checking</code><span class="sig-paren">(</span><em>check_rms</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1643-L1658"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_rms_checking" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_rms_checking</code><span class="sig-paren">(</span><em>check_rms</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1684-L1699"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_rms_checking" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the RMS checking flag.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -924,8 +979,16 @@ whole, while <code class="docutils literal notranslate"><span class="pre">None</
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_stim_db">
-<code class="descname">set_stim_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1557-L1568"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_stim_db" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_stim_db</code><span class="sig-paren">(</span><em>new_db</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1593-L1609"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_stim_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the level of the stimuli</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>new_db</strong><span class="classifier">float</span></dt><dd><p>The new level.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <p><a class="reference internal" href="#expyfun.ExperimentController.load_buffer" title="expyfun.ExperimentController.load_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.load_buffer</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.play" title="expyfun.ExperimentController.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.play</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_stimulus" title="expyfun.ExperimentController.start_stimulus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.start_stimulus</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.stop" title="expyfun.ExperimentController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.stop</span></code></a></p>
@@ -934,14 +997,14 @@ whole, while <code class="docutils literal notranslate"><span class="pre">None</
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_visible">
-<code class="descname">set_visible</code><span class="sig-paren">(</span><em>visible=True</em>, <em>flip=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L949-L970"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_visible" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_visible</code><span class="sig-paren">(</span><em>visible=True</em>, <em>flip=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L978-L999"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_visible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the window visibility</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>visible</strong><span class="classifier">bool</span></dt><dd><p>The visibility.</p>
 </dd>
-<dt><strong>flip</strong><span class="classifier">bool</span></dt><dd><p>If <cite>visible</cite> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, call <cite>flip</cite> after setting visible.
+<dt><strong>flip</strong><span class="classifier">bool</span></dt><dd><p>If <em class="xref py py-obj">visible</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>, call <a class="reference internal" href="#expyfun.ExperimentController.flip" title="expyfun.ExperimentController.flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code></a> after setting visible.
 This fixes an issue with the window background color not
 being set properly for the first draw after setting visible;
 by default (at least on Linux) the background is black when
@@ -955,7 +1018,7 @@ had been set to.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.stamp_triggers">
-<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>ids</em>, <em>check='binary'</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1869-L1906"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>ids</em>, <em>check='binary'</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1909-L1946"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stamp binary values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -985,7 +1048,7 @@ subject to change!).</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.start_noise">
-<code class="descname">start_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1450-L1458"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.start_noise" title="Permalink to this definition">¶</a></dt>
+<code class="descname">start_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1481-L1489"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.start_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start the background masker noise</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -995,7 +1058,7 @@ subject to change!).</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.start_stimulus">
-<code class="descname">start_stimulus</code><span class="sig-paren">(</span><em>start_of_trial=True</em>, <em>flip=True</em>, <em>when=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L586-L645"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.start_stimulus" title="Permalink to this definition">¶</a></dt>
+<code class="descname">start_stimulus</code><span class="sig-paren">(</span><em>start_of_trial=True</em>, <em>flip=True</em>, <em>when=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L602-L661"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.start_stimulus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play audio, (optionally) flip screen, run any “on_flip” functions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1009,8 +1072,8 @@ stamped appropriately. Set to False only in cases where
 <dt><strong>when</strong><span class="classifier">float | None</span></dt><dd><p>Time to start stimulus. If None, start immediately.
 Note that due to flip timing limitations, this is only a
 guaranteed <em>minimum</em> (not absolute) wait time before the
-flip completes (if <cite>flip</cite> is <code class="docutils literal notranslate"><span class="pre">True</span></code>). As a result, in some
-cases <cite>when</cite> should be set to a value smaller than your true
+flip completes (if <a class="reference internal" href="#expyfun.ExperimentController.flip" title="expyfun.ExperimentController.flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flip</span></code></a> is <code class="docutils literal notranslate"><span class="pre">True</span></code>). As a result, in some
+cases <em class="xref py py-obj">when</em> should be set to a value smaller than your true
 intended flip time.</p>
 </dd>
 </dl>
@@ -1029,7 +1092,7 @@ intended flip time.</p>
 <p class="rubric">Notes</p>
 <p>Order of operations is: screen flip (optional), audio start, then
 (only if <code class="docutils literal notranslate"><span class="pre">flip=True</span></code>) additional functions added with
-<cite>call_on_next_flip</cite> and <cite>call_on_every_flip</cite>.</p>
+<a class="reference internal" href="#expyfun.ExperimentController.call_on_next_flip" title="expyfun.ExperimentController.call_on_next_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_on_next_flip</span></code></a> and <a class="reference internal" href="#expyfun.ExperimentController.call_on_every_flip" title="expyfun.ExperimentController.call_on_every_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_on_every_flip</span></code></a>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1046,7 +1109,7 @@ intended flip time.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.stop">
-<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1530-L1543"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1561-L1574"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop audio buffer playback and reset cursor to beginning of buffer</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1056,17 +1119,17 @@ intended flip time.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.stop_noise">
-<code class="descname">stop_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1460-L1469"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stop_noise" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stop_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1491-L1500"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stop_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop the background masker noise</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentControlller.set_noise_db</span></code>, <a class="reference internal" href="#expyfun.ExperimentController.start_noise" title="expyfun.ExperimentController.start_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.start_noise</span></code></a></p>
+<p><a class="reference internal" href="#expyfun.ExperimentController.set_noise_db" title="expyfun.ExperimentController.set_noise_db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.set_noise_db</span></code></a>, <a class="reference internal" href="#expyfun.ExperimentController.start_noise" title="expyfun.ExperimentController.start_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.start_noise</span></code></a></p>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.system_beep">
-<code class="descname">system_beep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1437-L1448"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.system_beep" title="Permalink to this definition">¶</a></dt>
+<code class="descname">system_beep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1468-L1479"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.system_beep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play a system beep</p>
 <p>This will play through the system audio, <em>not</em> through the
 audio controller (unless that is set to be the system audio).
@@ -1076,7 +1139,7 @@ eye-tracker calibration.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.text_input">
-<code class="descname">text_input</code><span class="sig-paren">(</span><em>stop_key='return', instruction_string='Type response below', pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', all_caps=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1126-L1181"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.text_input" title="Permalink to this definition">¶</a></dt>
+<code class="descname">text_input</code><span class="sig-paren">(</span><em>stop_key='return', instruction_string='Type response below', pos=[0, 0], color='white', font_name='Arial', font_size=24, wrap=True, units='norm', all_caps=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1155-L1210"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.text_input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows participant to input text and view on the screen.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1098,8 +1161,8 @@ positive going up and right) the default is dead center (0, 0).</p>
 for multi-line text. Inappropriate for text requiring
 precise positioning or centering.</p>
 </dd>
-<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units for <cite>pos</cite>. See <cite>check_units</cite> for options. Applies to
-<cite>pos</cite> but not <cite>font_size</cite>.</p>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units for <em class="xref py py-obj">pos</em>. See <a class="reference internal" href="expyfun.check_units.html#expyfun.check_units" title="expyfun.check_units"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_units</span></code></a> for options. Applies to
+<em class="xref py py-obj">pos</em> but not <em class="xref py py-obj">font_size</em>.</p>
 </dd>
 <dt><strong>all_caps</strong><span class="classifier">bool</span></dt><dd><p>Whether the text should be displayed in all caps.</p>
 </dd>
@@ -1116,12 +1179,14 @@ precise positioning or centering.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.toggle_cursor">
-<code class="descname">toggle_cursor</code><span class="sig-paren">(</span><em>visibility</em>, <em>flip=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1258-L1280"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.toggle_cursor" title="Permalink to this definition">¶</a></dt>
+<code class="descname">toggle_cursor</code><span class="sig-paren">(</span><em>visibility</em>, <em>flip=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1287-L1311"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.toggle_cursor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show or hide the mouse</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>visibility</strong><span class="classifier">bool</span></dt><dd><p>If True, show; if False, hide.</p>
+</dd>
+<dt><strong>flip</strong><span class="classifier">bool</span></dt><dd><p>If True, flip after toggling.</p>
 </dd>
 </dl>
 </dd>
@@ -1134,7 +1199,7 @@ precise positioning or centering.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.trial_ok">
-<code class="descname">trial_ok</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1826-L1847"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.trial_ok" title="Permalink to this definition">¶</a></dt>
+<code class="descname">trial_ok</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1867-L1887"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.trial_ok" title="Permalink to this definition">¶</a></dt>
 <dd><p>Report that the trial was okay and do post-trial tasks.</p>
 <p>For example, logs and data files can be flushed at the end of each
 trial.</p>
@@ -1146,7 +1211,7 @@ trial.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_for_click_on">
-<code class="descname">wait_for_click_on</code><span class="sig-paren">(</span><em>objects</em>, <em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1379-L1425"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_click_on" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_click_on</code><span class="sig-paren">(</span><em>objects</em>, <em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1410-L1456"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_click_on" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the first click after min_wait over a visual object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1163,11 +1228,11 @@ Supported types are: Rectangle, Circle</p>
 </dd>
 <dt><strong>timestamp</strong><span class="classifier">bool</span></dt><dd><p>Whether the mouse click should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
 the mouse click time relative to the value given in
-<cite>relative_to</cite>.</p>
+<em class="xref py py-obj">relative_to</em>.</p>
 </dd>
 <dt><strong>relative_to</strong><span class="classifier">None | float</span></dt><dd><p>A time relative to which timestamping is done. Ignored if
 <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the
-time <cite>wait_one_click</cite> was called.</p>
+time <a class="reference internal" href="#expyfun.ExperimentController.wait_one_click" title="expyfun.ExperimentController.wait_one_click"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_one_click</span></code></a> was called.</p>
 </dd>
 </dl>
 </dd>
@@ -1176,13 +1241,13 @@ time <cite>wait_one_click</cite> was called.</p>
 <dt><strong>clicked</strong><span class="classifier">tuple | str | None</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple (str, int, int, float)
 indicating the first valid button clicked and its timestamp (or
 <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable button was clicked
-between <cite>min_wait</cite> and <cite>max_wait</cite>). If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>,
+between <em class="xref py py-obj">min_wait</em> and <em class="xref py py-obj">max_wait</em>). If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>,
 returns a tuple (str, int, int) indicating the first button clicked
 (or <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable key was clicked).</p>
 </dd>
 <dt><strong>index</strong><span class="classifier">the index of the object in the list of objects that was clicked</span></dt><dd><p>on. Returns None if time ran out before a valid click. If objects
 were overlapping, it returns the index of the object that comes
-first in the <cite>objects</cite> argument.</p>
+first in the <em class="xref py py-obj">objects</em> argument.</p>
 </dd>
 </dl>
 </dd>
@@ -1191,7 +1256,7 @@ first in the <cite>objects</cite> argument.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_for_clicks">
-<code class="descname">wait_for_clicks</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1331-L1377"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_clicks" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_clicks</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1362-L1408"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_clicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all clicks between min_wait and max_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1237,7 +1302,7 @@ indicating the button clicked.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_for_presses">
-<code class="descname">wait_for_presses</code><span class="sig-paren">(</span><em>max_wait</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1075-L1113"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_presses</code><span class="sig-paren">(</span><em>max_wait</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1104-L1142"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all button presses between min_wait and max_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1253,11 +1318,11 @@ types are cast as strings, so a list of ints will also work.
 </dd>
 <dt><strong>timestamp</strong><span class="classifier">bool</span></dt><dd><p>Whether the keypresses should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
 the button press time relative to the value given in
-<cite>relative_to</cite>.</p>
+<em class="xref py py-obj">relative_to</em>.</p>
 </dd>
 <dt><strong>relative_to</strong><span class="classifier">None | float</span></dt><dd><p>A time relative to which timestamping is done. Ignored if
-<cite>timestamp</cite> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative
-to the time <cite>wait_for_presses</cite> was called.</p>
+<em class="xref py py-obj">timestamp</em> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative
+to the time <a class="reference internal" href="#expyfun.ExperimentController.wait_for_presses" title="expyfun.ExperimentController.wait_for_presses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_presses</span></code></a> was called.</p>
 </dd>
 </dl>
 </dd>
@@ -1278,7 +1343,7 @@ keys were pressed. Otherwise, returns a list of tuples
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_one_click">
-<code class="descname">wait_one_click</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1282-L1329"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_click" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_one_click</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_buttons=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em>, <em>visible=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1313-L1360"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_click" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns only the first mouse button clicked after min_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1296,7 +1361,7 @@ the mouse click time relative to the value given in
 </dd>
 <dt><strong>relative_to</strong><span class="classifier">None | float</span></dt><dd><p>A time relative to which timestamping is done. Ignored if
 <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the
-time <cite>wait_one_click</cite> was called.</p>
+time <a class="reference internal" href="#expyfun.ExperimentController.wait_one_click" title="expyfun.ExperimentController.wait_one_click"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_one_click</span></code></a> was called.</p>
 </dd>
 <dt><strong>visible</strong><span class="classifier">None | bool</span></dt><dd><p>Whether to show the cursor while in the function. <code class="docutils literal notranslate"><span class="pre">None</span></code> has no
 effect and is the default. A boolean will show it (or not) while
@@ -1310,7 +1375,7 @@ previous value afterwards.</p>
 <dt><strong>clicked</strong><span class="classifier">tuple | str | None</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple (str, int, int, float)
 indicating the first button clicked and its timestamp (or
 <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable button was clicked
-between <cite>min_wait</cite> and <cite>max_wait</cite>). If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>,
+between <em class="xref py py-obj">min_wait</em> and <em class="xref py py-obj">max_wait</em>). If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>,
 returns a tuple (str, int, int) indicating the first button clicked
 (or <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None,</span> <span class="pre">None)</span></code> if no acceptable key was clicked).</p>
 </dd>
@@ -1325,7 +1390,7 @@ returns a tuple (str, int, int) indicating the first button clicked
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_one_press">
-<code class="descname">wait_one_press</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1033-L1073"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_press" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_one_press</code><span class="sig-paren">(</span><em>max_wait=inf</em>, <em>min_wait=0.0</em>, <em>live_keys=None</em>, <em>timestamp=True</em>, <em>relative_to=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1062-L1102"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_press" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns only the first button pressed after min_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1341,11 +1406,11 @@ types are cast as strings, so a list of ints will also work.
 </dd>
 <dt><strong>timestamp</strong><span class="classifier">bool</span></dt><dd><p>Whether the keypress should be timestamped. If <code class="docutils literal notranslate"><span class="pre">True</span></code>, returns
 the button press time relative to the value given in
-<cite>relative_to</cite>.</p>
+<em class="xref py py-obj">relative_to</em>.</p>
 </dd>
 <dt><strong>relative_to</strong><span class="classifier">None | float</span></dt><dd><p>A time relative to which timestamping is done. Ignored if
 <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, timestamps are relative to the
-time <cite>wait_one_press</cite> was called.</p>
+time <a class="reference internal" href="#expyfun.ExperimentController.wait_one_press" title="expyfun.ExperimentController.wait_one_press"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_one_press</span></code></a> was called.</p>
 </dd>
 </dl>
 </dd>
@@ -1353,7 +1418,7 @@ time <cite>wait_one_press</cite> was called.</p>
 <dd class="field-even"><dl class="simple">
 <dt><strong>pressed</strong><span class="classifier">tuple | str | None</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">timestamp==True</span></code>, returns a tuple (str, float) indicating the
 first key pressed and its timestamp (or <code class="docutils literal notranslate"><span class="pre">(None,</span> <span class="pre">None)</span></code> if no
-acceptable key was pressed between <cite>min_wait</cite> and <cite>max_wait</cite>).
+acceptable key was pressed between <em class="xref py py-obj">min_wait</em> and <em class="xref py py-obj">max_wait</em>).
 If <code class="docutils literal notranslate"><span class="pre">timestamp==False</span></code>, returns a string indicating the first key
 pressed (or <code class="docutils literal notranslate"><span class="pre">None</span></code> if no acceptable key was pressed).</p>
 </dd>
@@ -1368,7 +1433,7 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_secs">
-<code class="descname">wait_secs</code><span class="sig-paren">(</span><em>secs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1738-L1751"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_secs" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_secs</code><span class="sig-paren">(</span><em>secs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1779-L1792"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_secs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait a specified number of seconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1386,7 +1451,7 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_until">
-<code class="descname">wait_until</code><span class="sig-paren">(</span><em>timestamp</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1753-L1787"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_until" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_until</code><span class="sig-paren">(</span><em>timestamp</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1794-L1828"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_until" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait until the given time is reached.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1398,7 +1463,7 @@ clock.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>remaining_time</strong><span class="classifier">float</span></dt><dd><p>The difference between <code class="docutils literal notranslate"><span class="pre">timestamp</span></code> and the time <cite>wait_until</cite>
+<dt><strong>remaining_time</strong><span class="classifier">float</span></dt><dd><p>The difference between <code class="docutils literal notranslate"><span class="pre">timestamp</span></code> and the time <a class="reference internal" href="#expyfun.ExperimentController.wait_until" title="expyfun.ExperimentController.wait_until"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_until</span></code></a>
 was called.</p>
 </dd>
 </dl>
@@ -1409,10 +1474,10 @@ was called.</p>
 <p><a class="reference internal" href="#expyfun.ExperimentController.wait_secs" title="expyfun.ExperimentController.wait_secs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController.wait_secs</span></code></a>, <a class="reference internal" href="expyfun.wait_secs.html#expyfun.wait_secs" title="expyfun.wait_secs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_secs</span></code></a></p>
 </div>
 <p class="rubric">Notes</p>
-<p>Unlike <cite>wait_secs</cite>, there is no guarantee of precise timing with this
+<p>Unlike <a class="reference internal" href="expyfun.wait_secs.html#expyfun.wait_secs" title="expyfun.wait_secs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_secs</span></code></a>, there is no guarantee of precise timing with this
 function. It is the responsibility of the user to do choose a
 reasonable timestamp (or equivalently, do a reasonably small amount of
-processing prior to calling <cite>wait_until</cite>).</p>
+processing prior to calling <a class="reference internal" href="#expyfun.ExperimentController.wait_until" title="expyfun.ExperimentController.wait_until"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_until</span></code></a>).</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1423,7 +1488,7 @@ processing prior to calling <cite>wait_until</cite>).</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.write_data_line">
-<code class="descname">write_data_line</code><span class="sig-paren">(</span><em>event_type</em>, <em>value=None</em>, <em>timestamp=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1688-L1715"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.write_data_line" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write_data_line</code><span class="sig-paren">(</span><em>event_type</em>, <em>value=None</em>, <em>timestamp=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1729-L1756"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.write_data_line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a line of data to the output CSV.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1444,6 +1509,77 @@ time the data line was written from the master clock.</p>
 
 </dd></dl>
 
+<div class="section" id="examples-using-expyfun-experimentcontroller">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.ExperimentController</span></code><a class="headerlink" href="#examples-using-expyfun-experimentcontroller" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates an (almost) minimum working example of the ExperimentController class..."><div class="figure align-center" id="id1">
+<img alt="../_images/sphx_glr_basic_experiment_thumb.png" src="../_images/sphx_glr_basic_experiment_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/basic_experiment.html#sphx-glr-auto-examples-basic-experiment-py"><span class="std std-ref">Run a very basic experiment</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates much of the basic functionality built into the ExperimentController c..."><div class="figure align-center" id="id2">
+<img alt="../_images/sphx_glr_simple_experiment_thumb.png" src="../_images/sphx_glr_simple_experiment_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/simple_experiment.html#sphx-glr-auto-examples-simple-experiment-py"><span class="std std-ref">Run a simple experiment</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="expyfun provides multiple methods for drawing simple screen objects. "><div class="figure align-center" id="id3">
+<img alt="../_images/sphx_glr_drawing_methods_thumb.png" src="../_images/sphx_glr_drawing_methods_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/drawing_methods.html#sphx-glr-auto-examples-experiments-drawing-methods-py"><span class="std std-ref">Experiment drawing methods</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example tests the audio level and video size. For audio, it produces an 80 db SPL 1000 Hz ..."><div class="figure align-center" id="id4">
+<img alt="../_images/sphx_glr_level_test_thumb.png" src="../_images/sphx_glr_level_test_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/level_test.html#sphx-glr-auto-examples-experiments-level-test-py"><span class="std std-ref">Sound level test and visual size calibration</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler..."><div class="figure align-center" id="id5">
+<img alt="../_images/sphx_glr_pupillometry_experiment__thumb.png" src="../_images/sphx_glr_pupillometry_experiment__thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/pupillometry_experiment_.html#sphx-glr-auto-examples-experiments-pupillometry-experiment-py"><span class="std std-ref">Experiment using eye-tracking pupillometry</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example shows how to display progress between trials using :class:`expyfun.visual.Progress..."><div class="figure align-center" id="id6">
+<img alt="../_images/sphx_glr_progress_bar_thumb.png" src="../_images/sphx_glr_progress_bar_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/progress_bar.html#sphx-glr-auto-examples-experiments-progress-bar-py"><span class="std std-ref">ProgressBar demo</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates differences between the Text and AttrText classes. "><div class="figure align-center" id="id7">
+<img alt="../_images/sphx_glr_formatted_text_thumb.png" src="../_images/sphx_glr_formatted_text_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/formatted_text.html#sphx-glr-auto-examples-experiments-formatted-text-py"><span class="std std-ref">Display text with different formatting methods</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates gathering key-releases as well as presses with the ExperimentControll..."><div class="figure align-center" id="id8">
+<img alt="../_images/sphx_glr_keyrelease_thumb.png" src="../_images/sphx_glr_keyrelease_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/keyrelease.html#sphx-glr-auto-examples-experiments-keyrelease-py"><span class="std std-ref">KeyPressAndRelease demo</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using :class:`expyfun.stimuli.Tracke..."><div class="figure align-center" id="id9">
+<img alt="../_images/sphx_glr_tracker_dealer_thumb.png" src="../_images/sphx_glr_tracker_dealer_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/tracker_dealer.html#sphx-glr-auto-examples-experiments-tracker-dealer-py"><span class="std std-ref">Adaptive tracking for two trial types and tracker reconstruction from .tab</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler..."><div class="figure align-center" id="id10">
+<img alt="../_images/sphx_glr_eyetracking_experiment__thumb.png" src="../_images/sphx_glr_eyetracking_experiment__thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/eyetracking_experiment_.html#sphx-glr-auto-examples-experiments-eyetracking-experiment-py"><span class="std std-ref">Experiment with eye-tracking</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the different mouse click functionality in the ExperimentController c..."><div class="figure align-center" id="id11">
+<img alt="../_images/sphx_glr_mouse_thumb.png" src="../_images/sphx_glr_mouse_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/mouse.html#sphx-glr-auto-examples-experiments-mouse-py"><span class="std std-ref">Mouse click demo</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the different keypress-gathering techniques available in the Experime..."><div class="figure align-center" id="id12">
+<img alt="../_images/sphx_glr_keypress_thumb.png" src="../_images/sphx_glr_keypress_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/keypress.html#sphx-glr-auto-examples-experiments-keypress-py"><span class="std std-ref">Keypress demo</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This shows how to play a video file in expyfun. It requires that AVbin has already been install..."><div class="figure align-center" id="id13">
+<img alt="../_images/sphx_glr_simple_video_thumb.png" src="../_images/sphx_glr_simple_video_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/stimuli/simple_video.html#sphx-glr-auto-examples-stimuli-simple-video-py"><span class="std std-ref">Play sample video file</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This shows how to use the CRM corpus functions."><div class="figure align-center" id="id14">
+<img alt="../_images/sphx_glr_crm_stimuli_thumb.png" src="../_images/sphx_glr_crm_stimuli_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/stimuli/crm_stimuli.html#sphx-glr-auto-examples-stimuli-crm-stimuli-py"><span class="std std-ref">Use the CRM corpus</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This shows how to control various properties of a video file in expyfun."><div class="figure align-center" id="id15">
+<img alt="../_images/sphx_glr_advanced_video_thumb.png" src="../_images/sphx_glr_advanced_video_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/stimuli/advanced_video.html#sphx-glr-auto-examples-stimuli-advanced-video-py"><span class="std std-ref">Play sample video file</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example tests the TDT sample rate, which we expect to be ``24414.0625``. To test this:"><div class="figure align-center" id="id16">
+<img alt="../_images/sphx_glr_sample_rate_test_thumb.png" src="../_images/sphx_glr_sample_rate_test_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/sync/sample_rate_test.html#sphx-glr-auto-examples-sync-sample-rate-test-py"><span class="std std-ref">Audio sample rate test</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example tests synchronization between the screen and the audio playback."><div class="figure align-center" id="id17">
+<img alt="../_images/sphx_glr_sync_test_thumb.png" src="../_images/sphx_glr_sync_test_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/sync/sync_test.html#sphx-glr-auto-examples-sync-sync-test-py"><span class="std std-ref">A-V sync test</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</div></div>
 </div>
 
 

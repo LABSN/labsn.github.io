@@ -16,9 +16,10 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="What’s new" href="../../whats_new.html" />
     <link rel="prev" title="Audio sample rate test" href="sample_rate_test.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +50,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../../python_reference.html">API reference</a></li>
+                <li><a href="../../getting_started.html">Getting started</a></li>
                 <li><a href="../index.html">Examples</a></li>
-                <li><a href="../../whats_new.html">What's new</a></li>
+                <li><a href="../../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +64,23 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_reference.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html">Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../whats_new.html">What’s new</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">A-V sync test</a></li>
 </ul>
 </ul>
 </li>
@@ -113,23 +127,24 @@ timings, whereas Compiz WMs did not (doubled timings).</p>
 <img alt="../../_images/sphx_glr_sync_test_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_sync_test_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: SyncTest
-date: 2019-04-15 20_01_26.616009
+date: 2019-04-15 22_50_20.622484
 file: /home/circleci/project/examples/sync/sync_test.py
 participant: s
 session: 0
-2019-04-15 20:01:26,616 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-04-15 20:01:26,616 - INFO    - Expyfun: Setting up Pyglet audio
-2019-04-15 20:01:26,649 - INFO    - Expyfun: Setting up screen
-2019-04-15 20:01:26,665 - EXP     - Expyfun: Set screen visibility True
-2019-04-15 20:01:26,727 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-04-15 20:01:26,731 - INFO    - Expyfun: Initialization complete
-2019-04-15 20:01:26,731 - EXP     - Expyfun: Participant: s
-2019-04-15 20:01:26,731 - EXP     - Expyfun: Session: 0
-2019-04-15 20:01:26,734 - EXP     - Expyfun: Loading 200 samples to buffer
-2019-04-15 20:01:26,801 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-04-15 20:01:27,093 - EXP     - Expyfun: Audio stopped and reset.
-2019-04-15 20:01:27,094 - INFO    - Expyfun: Exiting
-2019-04-15 20:01:27,096 - EXP     - Expyfun: Audio stopped and reset.
+2019-04-15 22:50:20,622 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-04-15 22:50:20,623 - INFO    - Expyfun: Setting up sound card audio using pyglet backend
+2019-04-15 22:50:20,750 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100).Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2019-04-15 22:50:20,750 - INFO    - Expyfun: Setting up screen
+2019-04-15 22:50:20,768 - EXP     - Expyfun: Set screen visibility True
+2019-04-15 22:50:20,852 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-04-15 22:50:20,855 - INFO    - Expyfun: Initialization complete
+2019-04-15 22:50:20,855 - EXP     - Expyfun: Participant: s
+2019-04-15 22:50:20,856 - EXP     - Expyfun: Session: 0
+2019-04-15 22:50:20,859 - EXP     - Expyfun: Loading 200 samples to buffer
+2019-04-15 22:50:20,920 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-04-15 22:50:21,222 - EXP     - Expyfun: Audio stopped and reset.
+2019-04-15 22:50:21,222 - INFO    - Expyfun: Exiting
+2019-04-15 22:50:21,224 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -141,23 +156,23 @@ session: 0
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="View documentation for expyfun.visual.Circle"><span class="n">Circle</span></a>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <span class="n">Circle</span>
 <span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
 <span class="c1"># Fullscreen MUST be used to guarantee flip accuracy!</span>
-<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;SyncTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">,</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;SyncTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">,</span>
                           <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">suppress_resamp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check_rms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">r_</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">99</span><span class="p">)])</span>  <span class="c1"># RMS == 0.01</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.r_.html#numpy.r_" title="View documentation for numpy.r_"><span class="n">np</span><span class="o">.</span><span class="n">r_</span></a><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="mi">99</span><span class="p">)])</span>  <span class="c1"># RMS == 0.01</span>
     <span class="n">pressed</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="n">screenshot</span> <span class="o">=</span> <span class="kc">None</span>
     <span class="c1"># Make a circle so that the photodiode can be centered on the screen</span>
-    <span class="n">circle</span> <span class="o">=</span> <a href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="View documentation for expyfun.visual.Circle"><span class="n">Circle</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+    <span class="n">circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
     <span class="k">while</span> <span class="n">pressed</span> <span class="o">!=</span> <span class="s1">&#39;8&#39;</span><span class="p">:</span>  <span class="c1"># enable a clean quit if required</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">set_background_color</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
         <span class="n">t1</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">(</span><span class="n">start_of_trial</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># skip checks</span>
@@ -173,10 +188,10 @@ session: 0
         <span class="n">pressed</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="s1">&#39;8&#39;</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 
-<a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.638 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.775 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sync-test-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/781d95886e23f9aea08cdf972135fc75/sync_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sync_test.py</span></code></a></p>

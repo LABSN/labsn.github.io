@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>expyfun.visual.Video &#8212; expyfun 2.0.0.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="expyfun.codeblocks.find_pupil_dynamic_range" href="expyfun.codeblocks.find_pupil_dynamic_range.html" />
+    <link rel="prev" title="expyfun.visual.Triangle" href="expyfun.visual.Triangle.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/favicon.ico"></span>
+          expyfun</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../getting_started.html">Getting started</a></li>
+                <li><a href="../auto_examples/index.html">Examples</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.visual.Video</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="expyfun-visual-video">
+<h1>expyfun.visual.Video<a class="headerlink" href="#expyfun-visual-video" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="expyfun.visual.Video">
+<em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Video</code><span class="sig-paren">(</span><em>ec</em>, <em>file_name</em>, <em>pos=(0</em>, <em>0)</em>, <em>units='norm'</em>, <em>scale=1.0</em>, <em>center=True</em>, <em>visible=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1050-L1309"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read video file and draw it to the screen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ec</strong><span class="classifier">instance of expyfun.ExperimentController</span></dt><dd></dd>
+<dt><strong>file_name</strong><span class="classifier">str</span></dt><dd><p>the video file path</p>
+</dd>
+<dt><strong>pos</strong><span class="classifier">array-like</span></dt><dd><p>2-element array-like with X, Y elements.</p>
+</dd>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units to use for the position. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+<dt><strong>scale</strong><span class="classifier">float | str</span></dt><dd><p>The scale factor. 1 is native size (pixel-to-pixel), 2 is twice as
+large, etc. If scale is a string, it must be either <code class="docutils literal notranslate"><span class="pre">'fill'</span></code>
+(which ensures the entire <code class="docutils literal notranslate"><span class="pre">ExperimentController</span></code> window is
+covered by the video, at the expense of some parts of the video
+potentially being offscreen), or <code class="docutils literal notranslate"><span class="pre">'fit'</span></code> (which scales maximally
+while ensuring none of the video is offscreen, and may result in
+letterboxing or pillarboxing).</p>
+</dd>
+<dt><strong>center</strong><span class="classifier">bool</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the elements of <code class="docutils literal notranslate"><span class="pre">pos</span></code> specify the position of the lower
+left corner of the video frame; otherwise they position the center of
+the frame.</p>
+</dd>
+<dt><strong>visible</strong><span class="classifier">bool</span></dt><dd><p>Whether to show the video when initialized. Can be toggled later using
+<a class="reference internal" href="#expyfun.visual.Video.set_visible" title="expyfun.visual.Video.set_visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Video.set_visible</span></code></a> method.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>None</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This is a somewhat pared-down implementation of video playback. Looping is
+not available, and the audio stream from the video file is discarded.
+Timing of individual frames is relegated to the pyglet media player’s
+internal clock. Recommended for use only in paradigms where the relative
+timing of audio and video are unimportant (e.g., if the video is merely
+entertainment for the participant during a passive auditory task).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dt</strong></dt><dd></dd>
+<dt><strong>duration</strong></dt><dd></dd>
+<dt><strong>finished</strong></dt><dd></dd>
+<dt><strong>frame_rate</strong></dt><dd></dd>
+<dt><strong>height</strong></dt><dd></dd>
+<dt><strong>playing</strong></dt><dd></dd>
+<dt><strong>position</strong></dt><dd></dd>
+<dt><strong>scale</strong></dt><dd></dd>
+<dt><strong>source_height</strong></dt><dd></dd>
+<dt><strong>source_width</strong></dt><dd></dd>
+<dt><strong>time</strong></dt><dd></dd>
+<dt><strong>time_offset</strong></dt><dd></dd>
+<dt><strong>width</strong></dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.visual.Video.draw" title="expyfun.visual.Video.draw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw</span></code></a>()</p></td>
+<td><p>Draw the video texture to the screen buffer.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.visual.Video.pause" title="expyfun.visual.Video.pause"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pause</span></code></a>()</p></td>
+<td><p>Halt video playback.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.visual.Video.play" title="expyfun.visual.Video.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>()</p></td>
+<td><p>Play video from current position.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.visual.Video.set_pos" title="expyfun.visual.Video.set_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_pos</span></code></a>(pos[, units, center])</p></td>
+<td><p>Set video position.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.visual.Video.set_scale" title="expyfun.visual.Video.set_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_scale</span></code></a>([scale])</p></td>
+<td><p>Set video scale.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.visual.Video.set_visible" title="expyfun.visual.Video.set_visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_visible</span></code></a>(show[, flip])</p></td>
+<td><p>Show/hide the video frame.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="expyfun.visual.Video.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Video.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Video.draw">
+<code class="descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1221-L1231"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.draw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draw the video texture to the screen buffer.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Video.pause">
+<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1133-L1150"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Halt video playback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>time</strong><span class="classifier">float</span></dt><dd><p>The timestamp (on the parent <code class="docutils literal notranslate"><span class="pre">ExperimentController</span></code> timeline) at
+which <code class="docutils literal notranslate"><span class="pre">pause()</span></code> was called.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Video.play">
+<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1115-L1131"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play video from current position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>time</strong><span class="classifier">float</span></dt><dd><p>The timestamp (on the parent <code class="docutils literal notranslate"><span class="pre">ExperimentController</span></code> timeline) at
+which <code class="docutils literal notranslate"><span class="pre">play()</span></code> was called.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Video.set_pos">
+<code class="descname">set_pos</code><span class="sig-paren">(</span><em>pos</em>, <em>units='norm'</em>, <em>center=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1191-L1214"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.set_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set video position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>pos</strong><span class="classifier">array-like</span></dt><dd><p>2-element array-like with X, Y elements.</p>
+</dd>
+<dt><strong>units</strong><span class="classifier">str</span></dt><dd><p>Units to use for the position. See <code class="docutils literal notranslate"><span class="pre">check_units</span></code> for options.</p>
+</dd>
+<dt><strong>center</strong><span class="classifier">bool</span></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">False</span></code>, the elements of <code class="docutils literal notranslate"><span class="pre">pos</span></code> specify the position of the
+lower left corner of the video frame; otherwise they position the
+center of the frame.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Video.set_scale">
+<code class="descname">set_scale</code><span class="sig-paren">(</span><em>scale=1.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1163-L1189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.set_scale" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set video scale.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>scale</strong><span class="classifier">float | str</span></dt><dd><p>The scale factor. 1 is native size (pixel-to-pixel), 2 is twice as
+large, etc. If scale is a string, it must be either <code class="docutils literal notranslate"><span class="pre">'fill'</span></code>
+(which ensures the entire <code class="docutils literal notranslate"><span class="pre">ExperimentController</span></code> window is
+covered by the video, at the expense of some parts of the video
+potentially being offscreen), or <code class="docutils literal notranslate"><span class="pre">'fit'</span></code> (which scales maximally
+while ensuring none of the video is offscreen, which may result in
+letterboxing).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="expyfun.visual.Video.set_visible">
+<code class="descname">set_visible</code><span class="sig-paren">(</span><em>show</em>, <em>flip=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1233-L1250"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.set_visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show/hide the video frame.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>show</strong><span class="classifier">bool</span></dt><dd><p>Show or hide.</p>
+</dd>
+<dt><strong>flip</strong><span class="classifier">bool</span></dt><dd><p>If True, flip after showing or hiding.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-15.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

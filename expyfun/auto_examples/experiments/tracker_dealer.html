@@ -19,6 +19,8 @@
     <link rel="next" title="Experiment with eye-tracking" href="eyetracking_experiment_.html" />
     <link rel="prev" title="KeyPressAndRelease demo" href="keyrelease.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../../python_reference.html">API reference</a></li>
+                <li><a href="../../getting_started.html">Getting started</a></li>
                 <li><a href="../index.html">Examples</a></li>
-                <li><a href="../../whats_new.html">What's new</a></li>
+                <li><a href="../../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,29 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_reference.html">API Reference</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Adaptive tracking for two trial types and tracker reconstruction from .tab</a><ul>
+<li><a class="reference internal" href="#defining-tracker-parameters">Defining Tracker Parameters</a></li>
+<li><a class="reference internal" href="#initializing-and-running-trackers">Initializing and Running Trackers</a></li>
+<li><a class="reference internal" href="#reconstructing-the-trackerdealer-object">Reconstructing the TrackerDealer Object</a></li>
+<li><a class="reference internal" href="#plotting-the-results">Plotting the Results</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -112,10 +133,10 @@ dealer from the .tab file logged by experiment controller with
 type: 1 &amp; 2).</p>
 <p>&#64;author: maddycapp27</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="k">import</span> <a href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="View documentation for expyfun.stimuli.TrackerUD"><span class="n">TrackerUD</span></a><span class="p">,</span> <a href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="View documentation for expyfun.stimuli.TrackerDealer"><span class="n">TrackerDealer</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.analyze</span> <span class="k">import</span> <a href="../../generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid" title="View documentation for expyfun.analyze.sigmoid"><span class="n">sigmoid</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.io</span> <span class="k">import</span> <a href="../../generated/expyfun.io.reconstruct_dealer.html#expyfun.io.reconstruct_dealer" title="View documentation for expyfun.io.reconstruct_dealer"><span class="n">reconstruct_dealer</span></a>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">ExperimentController</span>
+<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="k">import</span> <span class="n">TrackerUD</span><span class="p">,</span> <span class="n">TrackerDealer</span>
+<span class="kn">from</span> <span class="nn">expyfun.analyze</span> <span class="k">import</span> <span class="n">sigmoid</span>
+<span class="kn">from</span> <span class="nn">expyfun.io</span> <span class="k">import</span> <span class="n">reconstruct_dealer</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># define parameters of modeled subject (using sigmoid probability)</span>
@@ -138,7 +159,7 @@ until 5 reversals have occurred, then the up step size will be 3.))</p>
 <span class="n">step_size_up</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <span class="n">step_size_down</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="n">stop_reversals</span> <span class="o">=</span> <span class="mi">30</span>
-<span class="n">stop_trials</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span>
+<span class="n">stop_trials</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a>
 <span class="n">start_value</span> <span class="o">=</span> <span class="mi">45</span>
 <span class="n">change_indices</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 <span class="n">change_rule</span> <span class="o">=</span> <span class="s1">&#39;reversals&#39;</span>
@@ -148,7 +169,7 @@ until 5 reversals have occurred, then the up step size will be 3.))</p>
 <span class="c1"># parameters for the tracker dealer</span>
 <span class="n">max_lag</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">pace_rule</span> <span class="o">=</span> <span class="s1">&#39;reversals&#39;</span>
-<span class="n">rng_dealer</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># random seed to select trial type</span>
+<span class="n">rng_dealer</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.random.RandomState.html#numpy.random.RandomState" title="View documentation for numpy.random.RandomState"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># random seed to select trial type</span>
 </pre></div>
 </div>
 </div>
@@ -165,30 +186,30 @@ to generate log files with <a class="reference internal" href="../../generated/e
                   <span class="n">session</span><span class="o">=</span><span class="s1">&#39;01&#39;</span><span class="p">,</span> <span class="n">stim_db</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                   <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span>
 
-<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="o">*</span><span class="n">std_args</span><span class="p">,</span> <span class="o">**</span><span class="n">std_kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="o">*</span><span class="n">std_args</span><span class="p">,</span> <span class="o">**</span><span class="n">std_kwargs</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
 
     <span class="c1"># initialize two tracker objects--one for each trial type</span>
-    <span class="n">tr_ud</span> <span class="o">=</span> <span class="p">[</span><a href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="View documentation for expyfun.stimuli.TrackerUD"><span class="n">TrackerUD</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">up</span><span class="p">,</span> <span class="n">down</span><span class="p">,</span> <span class="n">step_size_up</span><span class="p">,</span> <span class="n">step_size_down</span><span class="p">,</span>
+    <span class="n">tr_ud</span> <span class="o">=</span> <span class="p">[</span><span class="n">TrackerUD</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">up</span><span class="p">,</span> <span class="n">down</span><span class="p">,</span> <span class="n">step_size_up</span><span class="p">,</span> <span class="n">step_size_down</span><span class="p">,</span>
                        <span class="n">stop_reversals</span><span class="p">,</span> <span class="n">stop_trials</span><span class="p">,</span> <span class="n">start_value</span><span class="p">,</span>
                        <span class="n">change_indices</span><span class="p">,</span> <span class="n">change_rule</span><span class="p">,</span> <span class="n">x_min</span><span class="p">,</span>
-                       <span class="n">x_max</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+                       <span class="n">x_max</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)]</span>
 
     <span class="c1"># initialize TrackerDealer object</span>
-    <span class="n">td</span> <span class="o">=</span> <a href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="View documentation for expyfun.stimuli.TrackerDealer"><span class="n">TrackerDealer</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">tr_ud</span><span class="p">,</span> <span class="n">max_lag</span><span class="p">,</span> <span class="n">pace_rule</span><span class="p">,</span> <span class="n">rng_dealer</span><span class="p">)</span>
+    <span class="n">td</span> <span class="o">=</span> <span class="n">TrackerDealer</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">tr_ud</span><span class="p">,</span> <span class="n">max_lag</span><span class="p">,</span> <span class="n">pace_rule</span><span class="p">,</span> <span class="n">rng_dealer</span><span class="p">)</span>
 
     <span class="c1"># Initialize human state</span>
-    <span class="n">rng_human</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># random seed for modeled subject</span>
+    <span class="n">rng_human</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.random.RandomState.html#numpy.random.RandomState" title="View documentation for numpy.random.RandomState"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># random seed for modeled subject</span>
 
     <span class="k">for</span> <span class="n">ss</span><span class="p">,</span> <span class="n">level</span> <span class="ow">in</span> <span class="n">td</span><span class="p">:</span>
         <span class="c1"># Get information of which trial type is next and what the level is at</span>
         <span class="c1"># that time from TrackerDealer</span>
-        <span class="n">td</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">rng_human</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <a href="../../generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid" title="View documentation for expyfun.analyze.sigmoid"><span class="n">sigmoid</span></a><span class="p">(</span><span class="n">level</span> <span class="o">-</span> <span class="n">true_thresh</span><span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">ss</span><span class="p">)],</span>
+        <span class="n">td</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><span class="n">rng_human</span><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">level</span> <span class="o">-</span> <span class="n">true_thresh</span><span class="p">[</span><span class="nb">sum</span><span class="p">(</span><span class="n">ss</span><span class="p">)],</span>
                                               <span class="n">lower</span><span class="o">=</span><span class="n">chance</span><span class="p">,</span> <span class="n">slope</span><span class="o">=</span><span class="n">slope</span><span class="p">))</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2019-04-15 20_01_00.568476
+date: 2019-04-15 22_49_53.151105
 file: /home/circleci/project/examples/experiments/tracker_dealer.py
 participant: foo
 session: 01
@@ -203,7 +224,7 @@ only be access through the object itself (not the log files alone). By using
 the analysis functions are accessible. Note that the function always returns
 a list of objects. Similar reconstructions of single trackers can be done
 with <a class="reference internal" href="../../generated/expyfun.io.reconstruct_tracker.html#expyfun.io.reconstruct_tracker" title="expyfun.io.reconstruct_tracker"><code class="xref py py-func docutils literal notranslate"><span class="pre">expyfun.io.reconstruct_tracker()</span></code></a>.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">td_tab</span> <span class="o">=</span> <a href="../../generated/expyfun.io.reconstruct_dealer.html#expyfun.io.reconstruct_dealer" title="View documentation for expyfun.io.reconstruct_dealer"><span class="n">reconstruct_dealer</span></a><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">data_fname</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">td_tab</span> <span class="o">=</span> <span class="n">reconstruct_dealer</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">data_fname</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -220,7 +241,7 @@ with <a class="reference internal" href="../../generated/expyfun.io.reconstruct_
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_tracker_dealer_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_tracker_dealer_001.png" />
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.455 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.464 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-tracker-dealer-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/a74475f4664f4ac15f24719c49d46765/tracker_dealer.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tracker_dealer.py</span></code></a></p>

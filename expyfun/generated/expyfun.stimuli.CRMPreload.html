@@ -19,6 +19,8 @@
     <link rel="next" title="expyfun.stimuli.TrackerBinom" href="expyfun.stimuli.TrackerBinom.html" />
     <link rel="prev" title="expyfun.wait_secs" href="expyfun.wait_secs.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../python_reference.html">API reference</a></li>
+                <li><a href="../getting_started.html">Getting started</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
-                <li><a href="../whats_new.html">What's new</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,26 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.stimuli.CRMPreload</a><ul>
+<li><a class="reference internal" href="#examples-using-expyfun-stimuli-crmpreload">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.CRMPreload</span></code></a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -102,7 +120,7 @@
 <h1>expyfun.stimuli.CRMPreload<a class="headerlink" href="#expyfun-stimuli-crmpreload" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.stimuli.CRMPreload">
-<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">CRMPreload</code><span class="sig-paren">(</span><em>fs</em>, <em>ref_rms=0.01</em>, <em>ramp_dur=0.01</em>, <em>stereo=False</em>, <em>path=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_crm.py#L448-L537"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.CRMPreload" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">CRMPreload</code><span class="sig-paren">(</span><em>fs</em>, <em>ref_rms=0.01</em>, <em>ramp_dur=0.01</em>, <em>stereo=False</em>, <em>path=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_crm.py#L448-L538"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.CRMPreload" title="Permalink to this definition">¶</a></dt>
 <dd><p>Store the CRM corpus in memory for fast access.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -136,15 +154,15 @@ where the raw CRM originals are stored.</p>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="expyfun.stimuli.CRMPreload.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>fs</em>, <em>ref_rms=0.01</em>, <em>ramp_dur=0.01</em>, <em>stereo=False</em>, <em>path=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_crm.py#L468-L489"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.CRMPreload.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<dl class="attribute">
+<dt id="expyfun.stimuli.CRMPreload.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.CRMPreload.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.stimuli.CRMPreload.sentence">
-<code class="descname">sentence</code><span class="sig-paren">(</span><em>sex</em>, <em>talker_num</em>, <em>callsign</em>, <em>color</em>, <em>number</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_crm.py#L491-L537"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.CRMPreload.sentence" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sentence</code><span class="sig-paren">(</span><em>sex</em>, <em>talker_num</em>, <em>callsign</em>, <em>color</em>, <em>number</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_crm.py#L492-L538"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.CRMPreload.sentence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a specific sentence from the pre-loaded data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -187,6 +205,13 @@ number argument.</p>
 
 </dd></dl>
 
+<div class="section" id="examples-using-expyfun-stimuli-crmpreload">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.CRMPreload</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-crmpreload" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="This shows how to use the CRM corpus functions."><div class="figure align-center" id="id1">
+<img alt="../_images/sphx_glr_crm_stimuli_thumb.png" src="../_images/sphx_glr_crm_stimuli_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/stimuli/crm_stimuli.html#sphx-glr-auto-examples-stimuli-crm-stimuli-py"><span class="std std-ref">Use the CRM corpus</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div></div>
 </div>
 
 

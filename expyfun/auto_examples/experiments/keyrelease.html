@@ -19,6 +19,8 @@
     <link rel="next" title="Adaptive tracking for two trial types and tracker reconstruction from .tab" href="tracker_dealer.html" />
     <link rel="prev" title="Adaptive tracking from above and below" href="tracker_dealer_doublesided.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../../python_reference.html">API reference</a></li>
+                <li><a href="../../getting_started.html">Getting started</a></li>
                 <li><a href="../index.html">Examples</a></li>
-                <li><a href="../../whats_new.html">What's new</a></li>
+                <li><a href="../../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,23 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_reference.html">API Reference</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">KeyPressAndRelease demo</a></li>
 </ul>
 </ul>
 </li>
@@ -111,20 +126,21 @@ inprecise timing.</p>
 <img alt="../../_images/sphx_glr_keyrelease_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_keyrelease_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: KeyPressAndReleaseDemo
-date: 2019-04-15 20_00_59.127785
+date: 2019-04-15 22_49_51.686027
 file: /home/circleci/project/examples/experiments/keyrelease.py
 participant: foo
 session: 001
-2019-04-15 20:00:59,128 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-04-15 20:00:59,128 - INFO    - Expyfun: Setting up Pyglet audio
-2019-04-15 20:00:59,164 - INFO    - Expyfun: Setting up screen
-2019-04-15 20:00:59,179 - EXP     - Expyfun: Set screen visibility True
-2019-04-15 20:00:59,259 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-04-15 20:00:59,263 - INFO    - Expyfun: Initialization complete
-2019-04-15 20:00:59,263 - EXP     - Expyfun: Participant: foo
-2019-04-15 20:00:59,263 - EXP     - Expyfun: Session: 001
-2019-04-15 20:01:00,386 - INFO    - Expyfun: Exiting
-2019-04-15 20:01:00,388 - EXP     - Expyfun: Audio stopped and reset.
+2019-04-15 22:49:51,686 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-04-15 22:49:51,687 - INFO    - Expyfun: Setting up sound card audio using pyglet backend
+2019-04-15 22:49:51,797 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100).Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-04-15 22:49:51,797 - INFO    - Expyfun: Setting up screen
+2019-04-15 22:49:51,811 - EXP     - Expyfun: Set screen visibility True
+2019-04-15 22:49:51,870 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-04-15 22:49:51,872 - INFO    - Expyfun: Initialization complete
+2019-04-15 22:49:51,873 - EXP     - Expyfun: Participant: foo
+2019-04-15 22:49:51,873 - EXP     - Expyfun: Session: 001
+2019-04-15 22:49:52,975 - INFO    - Expyfun: Exiting
+2019-04-15 22:49:52,977 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -134,7 +150,7 @@ session: 001
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">building_doc</span><span class="p">,</span> <span class="n">analyze</span> <span class="k">as</span> <span class="n">ea</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">building_doc</span><span class="p">,</span> <span class="n">analyze</span> <span class="k">as</span> <span class="n">ea</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
@@ -142,7 +158,7 @@ session: 001
 <span class="n">wait_dur</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
 <span class="n">msg_dur</span> <span class="o">=</span> <span class="mf">3.0</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
 
-<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="s1">&#39;KeyPressAndReleaseDemo&#39;</span><span class="p">,</span> <span class="n">screen_num</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;KeyPressAndReleaseDemo&#39;</span><span class="p">,</span> <span class="n">screen_num</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
                           <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">1280</span><span class="p">,</span> <span class="mi">960</span><span class="p">],</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                           <span class="n">stim_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span>
@@ -178,10 +194,10 @@ session: 001
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">msg_dur</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="n">isi</span><span class="p">)</span>
 
-<a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.417 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.445 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-keyrelease-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e6d7e8e350f702f3a257527fe10ff5da/keyrelease.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">keyrelease.py</span></code></a></p>

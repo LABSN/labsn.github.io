@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Expyfun home &#8212; expyfun 2.0.0.dev0 documentation</title>
+    <title>Expyfun &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
@@ -16,8 +16,10 @@
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="API Reference" href="python_reference.html" />
+    <link rel="next" title="Getting started" href="getting_started.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="_static/style.css " type="text/css" />
+<link rel="stylesheet" href="_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -48,9 +50,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="python_reference.html">API reference</a></li>
+                <li><a href="getting_started.html">Getting started</a></li>
                 <li><a href="auto_examples/index.html">Examples</a></li>
-                <li><a href="whats_new.html">What's new</a></li>
+                <li><a href="python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -62,10 +64,29 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Expyfun <em class="fa fa-headphones"></em></a><ul>
+<li><a class="reference internal" href="#purpose">Purpose</a></li>
+<li><a class="reference internal" href="#design-philosophy">Design philosophy</a></li>
+<li><a class="reference internal" href="#hardware-support">Hardware support</a></li>
+<li><a class="reference internal" href="#further-reading">Further reading</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -97,16 +118,58 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="expyfun-home">
-<h1>Expyfun home<a class="headerlink" href="#expyfun-home" title="Permalink to this headline">¶</a></h1>
-<p>This software is provided to facilitate LABS^N experiment coding.</p>
+  <div class="jumbotron"><div class="section" id="expyfun-headphones">
+<h1>Expyfun <em class="fa fa-headphones"></em><a class="headerlink" href="#expyfun-headphones" title="Permalink to this headline">¶</a></h1>
+<p>A high-precision auditory and visual stimulus delivery library for
+psychoacoustics in Python.</p>
+</div></div><div class="section" id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<p>Expyfun is desigend for use by a handful of labs (e.g., LABSN and ILABS at the
+University of Washington, AMP-LAB at University of Rochester, etc.).
+We welcome contributions from other labs if they serve this mission, but cannot
+work to support use cases that don’t fit those of the above labs at this time.</p>
+</div>
+<div class="section" id="design-philosophy">
+<h2>Design philosophy<a class="headerlink" href="#design-philosophy" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Adherence to Python community coding standards</p></li>
+<li><p>Unit testing and continuous integration</p></li>
+<li><p>Tight revision / version control</p></li>
+<li><p>Limit hardware support to simplify support cases</p></li>
+<li><p>Allow paradigm <em>development</em> to occur on any machine, for eventual
+<em>deployment</em> on machines specifically dedicated to experiments</p></li>
+</ul>
+</div>
+<div class="section" id="hardware-support">
+<h2>Hardware support<a class="headerlink" href="#hardware-support" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Tucker-Davis Technologies (TDT) hardware (RP2, RZ6) for:</p>
+<ul>
+<li><p>Precise auditory delivery</p></li>
+<li><p>Trigger stamping for integration with eye tracker/EEG/MEG systems</p></li>
+<li><p>TDT button box responses</p></li>
+</ul>
+</li>
+<li><p>EyeLink integration for pupillometry and eye tracking</p></li>
+<li><p>Parallel port triggering</p></li>
+<li><p>Keyboard responses</p></li>
+<li><p>Mouse responses</p></li>
+<li><p>Cedrus response boxes</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Support for high-precision sound card delivery is under development.</p>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="whats_new.html">What’s new</a></li>
 </ul>
+</div>
 </div>
 </div>
 

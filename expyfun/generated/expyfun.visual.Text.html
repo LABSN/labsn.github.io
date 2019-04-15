@@ -16,9 +16,11 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="expyfun.codeblocks.find_pupil_dynamic_range" href="expyfun.codeblocks.find_pupil_dynamic_range.html" />
+    <link rel="next" title="expyfun.visual.Triangle" href="expyfun.visual.Triangle.html" />
     <link rel="prev" title="expyfun.visual.Rectangle" href="expyfun.visual.Rectangle.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../python_reference.html">API reference</a></li>
+                <li><a href="../getting_started.html">Getting started</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
-                <li><a href="../whats_new.html">What's new</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,23 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.visual.Text</a></li>
 </ul>
 </ul>
 </li>
@@ -102,8 +117,8 @@
 <h1>expyfun.visual.Text<a class="headerlink" href="#expyfun-visual-text" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.visual.Text">
-<em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Text</code><span class="sig-paren">(</span><em>ec</em>, <em>text</em>, <em>pos=(0</em>, <em>0)</em>, <em>color='white'</em>, <em>font_name='Arial'</em>, <em>font_size=24</em>, <em>height=None</em>, <em>width='auto'</em>, <em>anchor_x='center'</em>, <em>anchor_y='center'</em>, <em>units='norm'</em>, <em>wrap=False</em>, <em>attr=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L38-L134"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Text" title="Permalink to this definition">¶</a></dt>
-<dd><p>A text object</p>
+<em class="property">class </em><code class="descclassname">expyfun.visual.</code><code class="descname">Text</code><span class="sig-paren">(</span><em>ec</em>, <em>text</em>, <em>pos=(0</em>, <em>0)</em>, <em>color='white'</em>, <em>font_name='Arial'</em>, <em>font_size=24</em>, <em>height=None</em>, <em>width='auto'</em>, <em>anchor_x='center'</em>, <em>anchor_y='center'</em>, <em>units='norm'</em>, <em>wrap=False</em>, <em>attr=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L48-L145"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Text" title="Permalink to this definition">¶</a></dt>
+<dd><p>A text object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
@@ -122,7 +137,7 @@
 <dt><strong>height</strong><span class="classifier">float | None</span></dt><dd><p>Height of the text region. None will automatically allocate the
 necessary size.</p>
 </dd>
-<dt><strong>width</strong><span class="classifier">float | None | str</span></dt><dd><p>Width (in pixels) of the text region. <cite>‘auto’</cite> will allocate 80% of
+<dt><strong>width</strong><span class="classifier">float | None | str</span></dt><dd><p>Width (in pixels) of the text region. <em class="xref py py-obj">‘auto’</em> will allocate 80% of
 the screen width, useful for instructions. None will automatically
 allocate sufficient space, but not that this disables text wrapping.</p>
 </dd>
@@ -167,21 +182,21 @@ formatting within <code class="docutils literal notranslate"><span class="pre">t
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="expyfun.visual.Text.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>ec</em>, <em>text</em>, <em>pos=(0</em>, <em>0)</em>, <em>color='white'</em>, <em>font_name='Arial'</em>, <em>font_size=24</em>, <em>height=None</em>, <em>width='auto'</em>, <em>anchor_x='center'</em>, <em>anchor_y='center'</em>, <em>units='norm'</em>, <em>wrap=False</em>, <em>attr=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L85-L116"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Text.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<dl class="attribute">
+<dt id="expyfun.visual.Text.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Text.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.Text.draw">
-<code class="descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L132-L134"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Text.draw" title="Permalink to this definition">¶</a></dt>
+<code class="descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L143-L145"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Text.draw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draw the object to the display buffer</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.Text.set_color">
-<code class="descname">set_color</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L118-L130"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Text.set_color" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_color</code><span class="sig-paren">(</span><em>color</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L129-L141"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Text.set_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the text color</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

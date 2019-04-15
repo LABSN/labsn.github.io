@@ -17,8 +17,10 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="expyfun.assert_version" href="expyfun.assert_version.html" />
-    <link rel="prev" title="expyfun.ParallelTrigger" href="expyfun.ParallelTrigger.html" />
+    <link rel="prev" title="expyfun.SoundCardController" href="expyfun.SoundCardController.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../python_reference.html">API reference</a></li>
+                <li><a href="../getting_started.html">Getting started</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
-                <li><a href="../whats_new.html">What's new</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,23 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.TDTController</a></li>
 </ul>
 </ul>
 </li>
@@ -102,8 +117,8 @@
 <h1>expyfun.TDTController<a class="headerlink" href="#expyfun-tdtcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.TDTController">
-<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">TDTController</code><span class="sig-paren">(</span><em>tdt_params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L63-L386"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController" title="Permalink to this definition">¶</a></dt>
-<dd><p>Interface for TDT audio output, stamping, and responses</p>
+<em class="property">class </em><code class="descclassname">expyfun.</code><code class="descname">TDTController</code><span class="sig-paren">(</span><em>tdt_params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L67-L380"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interface for TDT audio output, stamping, and responses.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This class should not be instantiated manually,
@@ -113,36 +128,31 @@ appropriate call to <a class="reference internal" href="expyfun.ExperimentContro
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>tdt_params</strong><span class="classifier">dict | None</span></dt><dd><p>A dictionary containing keys with string values:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>‘TYPE’: this should always be ‘tdt’.</p></li>
-<li><p>‘TDT_MODEL’: String name of the TDT model, can be ‘RM1’, ‘RP2’,
+<dt><strong>tdt_params</strong><span class="classifier">dict</span></dt><dd><p>A dictionary containing keys with string values:</p>
+<dl class="simple">
+<dt>‘TYPE’</dt><dd><p>This should always be ‘tdt’.</p>
+</dd>
+<dt>‘TDT_MODEL’</dt><dd><p>String name of the TDT model, can be ‘RM1’, ‘RP2’,
 ‘RP2legacy’, ‘RZ6’, or ‘dummy’ (default). For historical
 reasons, ‘RP2’ corresponds to the RP2.1, and ‘RP2legacy’
-corresponds to the first-revision RP2.</p></li>
-<li><p>‘TDT_CIRCUIT_PATH’: Path to the TDT circuit. Defaults to an
-internal expyfun circuit.</p></li>
-<li><p>‘TDT_INTERFACE’: Type of connection, either ‘USB’ (default)
-or ‘GB’).</p></li>
-<li><p>‘TDT_DELAY’: the delay (in ms) for the circuit (default: ‘0’).</p></li>
-<li><p>‘TDT_TRIG_DELAY’: additional delay for the triggers
-(default: ‘0’).</p></li>
-</ul>
-</div></blockquote>
-<p>Note that the defaults are overridden on individual machines by
+corresponds to the first-revision RP2.</p>
+</dd>
+<dt>‘TDT_CIRCUIT_PATH’</dt><dd><p>Path to the TDT circuit. Defaults to an internal expyfun circuit.</p>
+</dd>
+<dt>‘TDT_INTERFACE’</dt><dd><p>Type of connection, either ‘USB’ (default) or ‘GB’).</p>
+</dd>
+<dt>‘TDT_DELAY’</dt><dd><p>The delay (in ms) for the circuit (default: ‘0’).</p>
+</dd>
+<dt>‘TDT_TRIG_DELAY’</dt><dd><p>Additional delay for the triggers (default: ‘0’).</p>
+</dd>
+</dl>
+<p>The defaults are superseded on individual machines by
 the configuration file.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Attributes</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>tdt_obj</strong><span class="classifier">instance of a TDTObject.</span></dt><dd><p>The object containing all relevant info about the TDT in use.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
 <dt><a class="reference internal" href="#expyfun.TDTController.circuit" title="expyfun.TDTController.circuit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">circuit</span></code></a></dt><dd><p>TDT circuit path.</p>
 </dd>
 <dt><a class="reference internal" href="#expyfun.TDTController.fs" title="expyfun.TDTController.fs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fs</span></code></a></dt><dd><p>Playback frequency of the audio (samples / second).</p>
@@ -181,8 +191,8 @@ the configuration file.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#expyfun.TDTController.play" title="expyfun.TDTController.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>()</p></td>
 <td><p>Send the soft trigger to start the ring buffer playback.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.TDTController.set_noise_level" title="expyfun.TDTController.set_noise_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_noise_level</span></code></a>(new_level)</p></td>
-<td><p>Set the amplitude of stationary background noise.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.TDTController.set_noise_level" title="expyfun.TDTController.set_noise_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_noise_level</span></code></a>(level)</p></td>
+<td><p>Set the noise level.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#expyfun.TDTController.stamp_triggers" title="expyfun.TDTController.stamp_triggers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stamp_triggers</span></code></a>(triggers[, delay, wait_for_last])</p></td>
 <td><p>Stamp a list of triggers with a given inter-trigger delay</p></td>
@@ -204,17 +214,25 @@ the configuration file.</p>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="expyfun.TDTController.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><em>tdt_params</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L96-L209"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+<dl class="attribute">
+<dt id="expyfun.TDTController.__hash__">
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.TDTController.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.TDTController.check_force_quit">
-<code class="descname">check_force_quit</code><span class="sig-paren">(</span><em>keys=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L152-L170"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.check_force_quit" title="Permalink to this definition">¶</a></dt>
+<code class="descname">check_force_quit</code><span class="sig-paren">(</span><em>keys=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L210-L233"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.check_force_quit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compare key buffer to list of force-quit keys and quit if matched.</p>
 <p>This function always uses the keyboard, so is part of abstraction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>keys</strong><span class="classifier">list | None</span></dt><dd><p>Keys to check.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="attribute">
@@ -231,13 +249,35 @@ the configuration file.</p>
 
 <dl class="method">
 <dt id="expyfun.TDTController.get_presses">
-<code class="descname">get_presses</code><span class="sig-paren">(</span><em>live_keys</em>, <em>timestamp</em>, <em>relative_to</em>, <em>kind='presses'</em>, <em>return_kinds=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L105-L120"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.get_presses" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_presses</code><span class="sig-paren">(</span><em>live_keys</em>, <em>timestamp</em>, <em>relative_to</em>, <em>kind='presses'</em>, <em>return_kinds=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L106-L140"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.get_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current entire keyboard / button box buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>live_keys</strong><span class="classifier">list | None</span></dt><dd><p>Keys to check.</p>
+</dd>
+<dt><strong>timestamp</strong><span class="classifier">bool</span></dt><dd><p>If True, return timestamp.</p>
+</dd>
+<dt><strong>relative_to</strong><span class="classifier">float</span></dt><dd><p>Time to use as a reference.</p>
+</dd>
+<dt><strong>kind</strong><span class="classifier">str</span></dt><dd><p>Kind of presses.</p>
+</dd>
+<dt><strong>return_kinds</strong><span class="classifier">bool</span></dt><dd><p>If True, return kinds.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>presses</strong><span class="classifier">list</span></dt><dd><p>The presses (and possibly timestamps and/or types).</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.TDTController.halt">
-<code class="descname">halt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L362-L365"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.halt" title="Permalink to this definition">¶</a></dt>
+<code class="descname">halt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L356-L359"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.halt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wrapper for tdt.util.RPcoX.Halt().</p>
 </dd></dl>
 
@@ -249,13 +289,13 @@ the configuration file.</p>
 
 <dl class="method">
 <dt id="expyfun.TDTController.listen_presses">
-<code class="descname">listen_presses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L99-L103"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.listen_presses" title="Permalink to this definition">¶</a></dt>
+<code class="descname">listen_presses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L100-L104"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.listen_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start listening for keypresses.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.TDTController.load_buffer">
-<code class="descname">load_buffer</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L222-L235"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.load_buffer" title="Permalink to this definition">¶</a></dt>
+<code class="descname">load_buffer</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L211-L224"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.load_buffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load audio samples into TDT buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -276,7 +316,7 @@ array with dtype ‘float32’.</p>
 
 <dl class="method">
 <dt id="expyfun.TDTController.play">
-<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L237-L242"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.play" title="Permalink to this definition">¶</a></dt>
+<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L226-L231"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send the soft trigger to start the ring buffer playback.</p>
 </dd></dl>
 
@@ -288,13 +328,21 @@ array with dtype ‘float32’.</p>
 
 <dl class="method">
 <dt id="expyfun.TDTController.set_noise_level">
-<code class="descname">set_noise_level</code><span class="sig-paren">(</span><em>new_level</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L267-L270"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.set_noise_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the amplitude of stationary background noise.</p>
+<code class="descname">set_noise_level</code><span class="sig-paren">(</span><em>level</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L256-L264"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.set_noise_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the noise level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>level</strong><span class="classifier">float</span></dt><dd><p>The new level.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.TDTController.stamp_triggers">
-<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>triggers</em>, <em>delay=0.03</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L283-L300"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>triggers</em>, <em>delay=0.03</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L277-L294"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stamp a list of triggers with a given inter-trigger delay</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -313,32 +361,76 @@ with each entry an integer with fewer than 8 bits (max 255).</p>
 
 <dl class="method">
 <dt id="expyfun.TDTController.start_noise">
-<code class="descname">start_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L255-L259"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.start_noise" title="Permalink to this definition">¶</a></dt>
+<code class="descname">start_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L244-L248"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.start_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send the soft trigger to start the noise generator.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.TDTController.stop">
-<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L249-L253"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.stop" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L238-L242"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send the soft trigger to stop and reset the ring buffer playback.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.TDTController.stop_noise">
-<code class="descname">stop_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L261-L265"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.stop_noise" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stop_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L250-L254"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.stop_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send the soft trigger to stop the noise generator.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.TDTController.wait_for_presses">
-<code class="descname">wait_for_presses</code><span class="sig-paren">(</span><em>max_wait</em>, <em>min_wait</em>, <em>live_keys</em>, <em>timestamp</em>, <em>relative_to</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L140-L150"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_for_presses</code><span class="sig-paren">(</span><em>max_wait</em>, <em>min_wait</em>, <em>live_keys</em>, <em>timestamp</em>, <em>relative_to</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L179-L208"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all button presses between min_wait and max_wait.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>max_wait</strong><span class="classifier">float</span></dt><dd><p>Maxmimum time to wait.</p>
+</dd>
+<dt><strong>min_wait</strong><span class="classifier">float</span></dt><dd><p>Minimum time to wait.</p>
+</dd>
+<dt><strong>live_keys</strong><span class="classifier">list | None</span></dt><dd><p>Keys to consider.</p>
+</dd>
+<dt><strong>timestamp</strong><span class="classifier">bool</span></dt><dd><p>If True, return timestamps.</p>
+</dd>
+<dt><strong>relative_to</strong><span class="classifier">float</span></dt><dd><p>Time to use as a reference.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>pressed</strong><span class="classifier">list</span></dt><dd><p>The list of presses (and possibly timestamps).</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.TDTController.wait_one_press">
-<code class="descname">wait_one_press</code><span class="sig-paren">(</span><em>max_wait</em>, <em>min_wait</em>, <em>live_keys</em>, <em>timestamp</em>, <em>relative_to</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L122-L138"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.wait_one_press" title="Permalink to this definition">¶</a></dt>
+<code class="descname">wait_one_press</code><span class="sig-paren">(</span><em>max_wait</em>, <em>min_wait</em>, <em>live_keys</em>, <em>timestamp</em>, <em>relative_to</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L142-L177"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.wait_one_press" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the first button pressed after min_wait.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>max_wait</strong><span class="classifier">float</span></dt><dd><p>Maxmimum time to wait.</p>
+</dd>
+<dt><strong>min_wait</strong><span class="classifier">float</span></dt><dd><p>Minimum time to wait.</p>
+</dd>
+<dt><strong>live_keys</strong><span class="classifier">list | None</span></dt><dd><p>Keys to consider.</p>
+</dd>
+<dt><strong>timestamp</strong><span class="classifier">bool</span></dt><dd><p>If True, return timestamps.</p>
+</dd>
+<dt><strong>relative_to</strong><span class="classifier">float</span></dt><dd><p>Time to use as a reference.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>pressed</strong><span class="classifier">tuple | str | None</span></dt><dd><p>The press. Will be tuple if timestamp is True.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>

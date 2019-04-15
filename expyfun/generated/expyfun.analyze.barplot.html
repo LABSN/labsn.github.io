@@ -19,6 +19,8 @@
     <link rel="next" title="expyfun.analyze.box_off" href="expyfun.analyze.box_off.html" />
     <link rel="prev" title="expyfun.codeblocks.find_pupil_tone_impulse_response" href="expyfun.codeblocks.find_pupil_tone_impulse_response.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../python_reference.html">API reference</a></li>
+                <li><a href="../getting_started.html">Getting started</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
-                <li><a href="../whats_new.html">What's new</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,26 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.analyze.barplot</a><ul>
+<li><a class="reference internal" href="#examples-using-expyfun-analyze-barplot">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.barplot</span></code></a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -107,43 +125,43 @@
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>h</strong><span class="classifier">array-like</span></dt><dd><p>If <cite>h</cite> is 2-dimensional, heights will be calculated as means along
-the axis given by <cite>axis</cite>. If <cite>h</cite> is of lower dimension, it is
-treated as raw height values. If <cite>h</cite> is a <cite>pandas.DataFrame</cite> and
-<cite>bar_names</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, <cite>bar_names</cite> will be inferred from the
-DataFrame’s <cite>column</cite> labels (if <code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or <cite>index</cite> labels.</p>
+<dt><strong>h</strong><span class="classifier">array-like</span></dt><dd><p>If <em class="xref py py-obj">h</em> is 2-dimensional, heights will be calculated as means along
+the axis given by <em class="xref py py-obj">axis</em>. If <em class="xref py py-obj">h</em> is of lower dimension, it is
+treated as raw height values. If <em class="xref py py-obj">h</em> is a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v0.24.2)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> and
+<em class="xref py py-obj">bar_names</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, <em class="xref py py-obj">bar_names</em> will be inferred from the
+DataFrame’s <em class="xref py py-obj">column</em> labels (if <code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or <em class="xref py py-obj">index</em> labels.</p>
 </dd>
 <dt><strong>axis</strong><span class="classifier">int</span></dt><dd><p>The axis along which to calculate mean values to determine bar heights.
-Ignored if <cite>h</cite> is 0- or 1-dimensional.</p>
+Ignored if <em class="xref py py-obj">h</em> is 0- or 1-dimensional.</p>
 </dd>
-<dt><strong>ylim</strong><span class="classifier">tuple | None</span></dt><dd><p>y-axis limits passed to <cite>matplotlib.pyplot.subplot.set_ylim</cite>.</p>
+<dt><strong>ylim</strong><span class="classifier">tuple | None</span></dt><dd><p>y-axis limits passed to <em class="xref py py-obj">matplotlib.pyplot.subplot.set_ylim</em>.</p>
 </dd>
 <dt><strong>err_bars</strong><span class="classifier">str | array-like | None</span></dt><dd><p>Type of error bars to be added to the barplot. Possible values are
 <code class="docutils literal notranslate"><span class="pre">'sd'</span></code> for sample standard deviation, <code class="docutils literal notranslate"><span class="pre">'se'</span></code> for standard error of
 the mean, or <code class="docutils literal notranslate"><span class="pre">'ci'</span></code> for 95% confidence interval. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, no
 error bars will be plotted. Custom error bar heights are possible by
-passing an array-like object; in such cases <cite>err_bars</cite> must have the
-same dimensionality and shape as <cite>h</cite>.</p>
+passing an array-like object; in such cases <em class="xref py py-obj">err_bars</em> must have the
+same dimensionality and shape as <em class="xref py py-obj">h</em>.</p>
 </dd>
 <dt><strong>lines</strong><span class="classifier">bool</span></dt><dd><p>Whether to plot within-subject data as lines overlaid on the barplot.</p>
 </dd>
 <dt><strong>groups</strong><span class="classifier">list | None</span></dt><dd><p>List of lists containing the integers in <code class="docutils literal notranslate"><span class="pre">range(num_bars)</span></code>, with
-sub-lists indicating the desired grouping. For example, if <cite>h</cite> has
+sub-lists indicating the desired grouping. For example, if <em class="xref py py-obj">h</em> has
 has shape (10, 4) and <code class="docutils literal notranslate"><span class="pre">axis</span> <span class="pre">=</span> <span class="pre">-1</span></code> then “num_bars” is 4; if you want
 the first bar isolated and the remaining three grouped, then specify
 <code class="docutils literal notranslate"><span class="pre">groups=[[0],</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">3]]</span></code>.</p>
 </dd>
 <dt><strong>eq_group_widths</strong><span class="classifier">bool</span></dt><dd><p>Should all groups have the same width? If <code class="docutils literal notranslate"><span class="pre">False</span></code>, all bars will have
-the same width. Ignored if <cite>groups</cite> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, since the bar/group
+the same width. Ignored if <em class="xref py py-obj">groups</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, since the bar/group
 distinction is meaningless in that case.</p>
 </dd>
-<dt><strong>gap_size</strong><span class="classifier">float</span></dt><dd><p>Width of the gap between groups (if <cite>eq_group_width</cite> is <code class="docutils literal notranslate"><span class="pre">True</span></code>) or
+<dt><strong>gap_size</strong><span class="classifier">float</span></dt><dd><p>Width of the gap between groups (if <em class="xref py py-obj">eq_group_width</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code>) or
 between bars, expressed as a proportion [0,1) of group or bar width.
-Half the width of <cite>gap_size</cite> will be added between the outermost bars
+Half the width of <em class="xref py py-obj">gap_size</em> will be added between the outermost bars
 and the plot edges.</p>
 </dd>
 <dt><strong>brackets</strong><span class="classifier">list of tuples | None</span></dt><dd><p>Location of significance brackets. Scheme is similar to the
-specification of <cite>groups</cite>; a bracket between the first and second bar
+specification of <em class="xref py py-obj">groups</em>; a bracket between the first and second bar
 and another between the third and fourth bars would be specified as
 <code class="docutils literal notranslate"><span class="pre">brackets=[(0,</span> <span class="pre">1),</span> <span class="pre">(2,</span> <span class="pre">3)]</span></code>. Brackets between groups of bars instead
 of individual bars are specified as lists within the tuple:
@@ -171,11 +189,11 @@ capsize).</p>
 <dt><strong>line_kwargs</strong><span class="classifier">dict</span></dt><dd><p>Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot()</span></code> (e.g., color, marker,
 linestyle).</p>
 </dd>
-<dt><strong>pval_kwargs</strong><span class="classifier">dict</span></dt><dd><p>Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.annotate()</span></code> when drawing
-bracket labels.</p>
-</dd>
 <dt><strong>bracket_kwargs</strong><span class="classifier">dict</span></dt><dd><p>arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.plot()</span></code> (e.g., color, marker,
 linestyle).</p>
+</dd>
+<dt><strong>pval_kwargs</strong><span class="classifier">dict</span></dt><dd><p>Arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.annotate()</span></code> when drawing
+bracket labels.</p>
 </dd>
 <dt><strong>figure_kwargs</strong><span class="classifier">dict</span></dt><dd><p>arguments passed to <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.figure()</span></code> (e.g., figsize, dpi,
 frameon).</p>
@@ -184,7 +202,7 @@ frameon).</p>
 pleasing to the eye (<code class="docutils literal notranslate"><span class="pre">True</span></code>).</p>
 </dd>
 <dt><strong>fname</strong><span class="classifier">str | None</span></dt><dd><p>Path and name of output file. File type is inferred from the file
-extension of <cite>fname</cite> and should work for any of the types supported by
+extension of <em class="xref py py-obj">fname</em> and should work for any of the types supported by
 pyplot (pdf, eps, svg, png, raw).</p>
 </dd>
 <dt><strong>ax</strong><span class="classifier">matplotlib.pyplot.axes | None</span></dt><dd><p>A <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.axes</span></code> instance.  If <code class="docutils literal notranslate"><span class="pre">None</span></code>, a new figure with
@@ -223,6 +241,13 @@ bracket color: dark gray (30%)</p>
 </dl>
 </dd></dl>
 
+<div class="section" id="examples-using-expyfun-analyze-barplot">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.barplot</span></code><a class="headerlink" href="#examples-using-expyfun-analyze-barplot" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="This example simulates some 2AFC data and demonstrates the analysis functions :func:`expyfun.an..."><div class="figure align-center" id="id1">
+<img alt="../_images/sphx_glr_analysis_demo_thumb.png" src="../_images/sphx_glr_analysis_demo_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/analysis/analysis_demo.html#sphx-glr-auto-examples-analysis-analysis-demo-py"><span class="std std-ref">Analysis demo</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div><div style='clear:both'></div></div>
 </div>
 
 

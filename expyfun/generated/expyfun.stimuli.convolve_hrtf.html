@@ -19,6 +19,8 @@
     <link rel="next" title="expyfun.stimuli.compute_mls_impulse_response" href="expyfun.stimuli.compute_mls_impulse_response.html" />
     <link rel="prev" title="expyfun.stimuli.TrackerUD" href="expyfun.stimuli.TrackerUD.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../python_reference.html">API reference</a></li>
+                <li><a href="../getting_started.html">Getting started</a></li>
                 <li><a href="../auto_examples/index.html">Examples</a></li>
-                <li><a href="../whats_new.html">What's new</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,26 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">expyfun.stimuli.convolve_hrtf</a><ul>
+<li><a class="reference internal" href="#examples-using-expyfun-stimuli-convolve-hrtf">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.convolve_hrtf</span></code></a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -102,7 +120,7 @@
 <h1>expyfun.stimuli.convolve_hrtf<a class="headerlink" href="#expyfun-stimuli-convolve-hrtf" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.stimuli.convolve_hrtf">
-<code class="descclassname">expyfun.stimuli.</code><code class="descname">convolve_hrtf</code><span class="sig-paren">(</span><em>data</em>, <em>fs</em>, <em>angle</em>, <em>source='cipic'</em>, <em>interp=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_hrtf.py#L113-L210"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.convolve_hrtf" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">expyfun.stimuli.</code><code class="descname">convolve_hrtf</code><span class="sig-paren">(</span><em>data</em>, <em>fs</em>, <em>angle</em>, <em>source='cipic'</em>, <em>interp=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_hrtf.py#L112-L209"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.convolve_hrtf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convolve a signal with a head-related transfer function</p>
 <p>Technically we will be convolving with binaural room impulse
 responses (BRIRs), but HRTFs (freq-domain equiv. representations)
@@ -116,12 +134,12 @@ are the common terminology.</p>
 </dd>
 <dt><strong>angle</strong><span class="classifier">float</span></dt><dd><p>The azimuthal angle of the HRTF.</p>
 </dd>
-<dt><strong>source</strong><span class="classifier">str</span></dt><dd><p>Source to use for HRTFs. Currently <cite>‘barb’</cite> and <cite>‘cipic’</cite> are
-supported. The former is default for legacy purpose. <cite>‘cipic’</cite> is
+<dt><strong>source</strong><span class="classifier">str</span></dt><dd><p>Source to use for HRTFs. Currently <em class="xref py py-obj">‘barb’</em> and <em class="xref py py-obj">‘cipic’</em> are
+supported. The former is default for legacy purpose. <em class="xref py py-obj">‘cipic’</em> is
 recommended for new experiments.</p>
 </dd>
-<dt><strong>interp</strong><span class="classifier">bool</span></dt><dd><p>Parameter to determine whether to restrict use to known HRTF values or 
-to use an interpolated HRTF for angles not in the source; set to 
+<dt><strong>interp</strong><span class="classifier">bool</span></dt><dd><p>Parameter to determine whether to restrict use to known HRTF values or
+to use an interpolated HRTF for angles not in the source; set to
 False by default</p>
 </dd>
 </dl>
@@ -170,6 +188,13 @@ use be sent to:</p>
 California 1 Shields Avenue Davis, CA 95616-8553</p>
 </dd></dl>
 
+<div class="section" id="examples-using-expyfun-stimuli-convolve-hrtf">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.convolve_hrtf</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-convolve-hrtf" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="This shows the methods that we provide that facilitate generation of more advanced stimuli. "><div class="figure align-center" id="id1">
+<img alt="../_images/sphx_glr_advanced_stimuli_thumb.png" src="../_images/sphx_glr_advanced_stimuli_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/stimuli/advanced_stimuli.html#sphx-glr-auto-examples-stimuli-advanced-stimuli-py"><span class="std std-ref">Generate more advanced auditory stimuli</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div><div style='clear:both'></div></div>
 </div>
 
 

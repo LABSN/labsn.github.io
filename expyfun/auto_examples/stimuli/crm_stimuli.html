@@ -19,6 +19,8 @@
     <link rel="next" title="Play sample video file" href="advanced_video.html" />
     <link rel="prev" title="Generate vocoded stimuli" href="vocoded_stimuli.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -49,9 +51,9 @@
         <div class="collapse navbar-collapse nav-collapse">
           <ul class="nav navbar-nav">
             
-                <li><a href="../../python_reference.html">API reference</a></li>
+                <li><a href="../../getting_started.html">Getting started</a></li>
                 <li><a href="../index.html">Examples</a></li>
-                <li><a href="../../whats_new.html">What's new</a></li>
+                <li><a href="../../python_reference.html">API reference</a></li>
             
             
               <li class="dropdown globaltoc-container">
@@ -63,10 +65,26 @@
   <ul class="dropdown-menu globaltoc"
       role="menu"
       aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../python_reference.html">API Reference</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../index.html#synchronization">Synchronization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Use the CRM corpus</a><ul>
+<li><a class="reference internal" href="#prepare-the-corpus">Prepare the corpus</a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -107,9 +125,9 @@
 <p>This shows how to use the CRM corpus functions.</p>
 <p>&#64;author: rkmaddox</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">expyfun._utils</span> <span class="k">import</span> <span class="n">_TempDir</span>
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <span class="n">building_doc</span>
-<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="k">import</span> <span class="p">(</span><a href="../../generated/expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="View documentation for expyfun.stimuli.crm_prepare_corpus"><span class="n">crm_prepare_corpus</span></a><span class="p">,</span> <a href="../../generated/expyfun.stimuli.crm_sentence.html#expyfun.stimuli.crm_sentence" title="View documentation for expyfun.stimuli.crm_sentence"><span class="n">crm_sentence</span></a><span class="p">,</span> <a href="../../generated/expyfun.stimuli.crm_info.html#expyfun.stimuli.crm_info" title="View documentation for expyfun.stimuli.crm_info"><span class="n">crm_info</span></a><span class="p">,</span>
-                             <a href="../../generated/expyfun.stimuli.crm_response_menu.html#expyfun.stimuli.crm_response_menu" title="View documentation for expyfun.stimuli.crm_response_menu"><span class="n">crm_response_menu</span></a><span class="p">,</span> <span class="n">add_pad</span><span class="p">,</span> <a href="../../generated/expyfun.stimuli.CRMPreload.html#expyfun.stimuli.CRMPreload" title="View documentation for expyfun.stimuli.CRMPreload"><span class="n">CRMPreload</span></a><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="k">import</span> <span class="p">(</span><span class="n">crm_prepare_corpus</span><span class="p">,</span> <span class="n">crm_sentence</span><span class="p">,</span> <span class="n">crm_info</span><span class="p">,</span>
+                             <span class="n">crm_response_menu</span><span class="p">,</span> <span class="n">add_pad</span><span class="p">,</span> <span class="n">CRMPreload</span><span class="p">)</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -133,22 +151,22 @@ preparation is very fast, and a temp directory so that we don’t
 interfere with any other prepared corpuses. Your code will likely
 look like this line, and not appear in your actual experiment
 script:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><a href="../../generated/expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="View documentation for expyfun.stimuli.crm_prepare_corpus"><span class="n">crm_prepare_corpus</span></a><span class="p">(</span><span class="mi">24414</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">crm_prepare_corpus</span><span class="p">(</span><span class="mi">24414</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="../../generated/expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="View documentation for expyfun.stimuli.crm_prepare_corpus"><span class="n">crm_prepare_corpus</span></a><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">path_out</span><span class="o">=</span><span class="n">crm_path</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">crm_prepare_corpus</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">path_out</span><span class="o">=</span><span class="n">crm_path</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
                    <span class="n">talker_list</span><span class="o">=</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">sex</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">talker_num</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
                                 <span class="nb">dict</span><span class="p">(</span><span class="n">sex</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">talker_num</span><span class="o">=</span><span class="mi">0</span><span class="p">)])</span>
 
 <span class="c1"># print the valid callsigns</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valid callsigns are </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="../../generated/expyfun.stimuli.crm_info.html#expyfun.stimuli.crm_info" title="View documentation for expyfun.stimuli.crm_info"><span class="n">crm_info</span></a><span class="p">()[</span><span class="s1">&#39;callsign&#39;</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valid callsigns are </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">crm_info</span><span class="p">()[</span><span class="s1">&#39;callsign&#39;</span><span class="p">]))</span>
 
 <span class="c1"># read a sentence in from the hard drive</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <a href="../../generated/expyfun.stimuli.crm_sentence.html#expyfun.stimuli.crm_sentence" title="View documentation for expyfun.stimuli.crm_sentence"><span class="n">crm_sentence</span></a><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">crm_sentence</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
 
 <span class="c1"># preload all the talkers and get a second sentence from memory</span>
-<span class="n">crm</span> <span class="o">=</span> <a href="../../generated/expyfun.stimuli.CRMPreload.html#expyfun.stimuli.CRMPreload" title="View documentation for expyfun.stimuli.CRMPreload"><span class="n">CRMPreload</span></a><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
+<span class="n">crm</span> <span class="o">=</span> <span class="n">CRMPreload</span><span class="p">(</span><span class="n">fs</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
 <span class="n">x2</span> <span class="o">=</span> <span class="n">crm</span><span class="o">.</span><span class="n">sentence</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;ringo&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">)</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">add_pad</span><span class="p">([</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">],</span> <span class="n">alignment</span><span class="o">=</span><span class="s1">&#39;start&#39;</span><span class="p">)</span>
@@ -167,7 +185,7 @@ Valid callsigns are [&#39;charlie&#39;, &#39;ringo&#39;, &#39;laker&#39;, &#39;h
 </div>
 <p>Now we actually run the experiment.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">max_wait</span> <span class="o">=</span> <span class="mf">0.01</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mi">3</span>
-<span class="k">with</span> <a href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="View documentation for expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span>
         <span class="n">exp_name</span><span class="o">=</span><span class="s1">&#39;CRM corpus example&#39;</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">720</span><span class="p">,</span> <span class="mi">480</span><span class="p">),</span>
         <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span>
         <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stim_fs</span><span class="o">=</span><span class="mi">40000</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
@@ -182,43 +200,45 @@ Valid callsigns are [&#39;charlie&#39;, &#39;ringo&#39;, &#39;laker&#39;, &#39;h
     <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
 
-    <span class="n">resp</span> <span class="o">=</span> <a href="../../generated/expyfun.stimuli.crm_response_menu.html#expyfun.stimuli.crm_response_menu" title="View documentation for expyfun.stimuli.crm_response_menu"><span class="n">crm_response_menu</span></a><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">0.01</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">crm_response_menu</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">0.01</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">)</span>
     <span class="k">if</span> <span class="n">resp</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">):</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Incorrect.&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
 
-<a href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="View documentation for expyfun.analyze.plot_screen"><span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+<span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_crm_stimuli_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_crm_stimuli_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: CRM corpus example
-date: 2019-04-15 20_01_19.920841
+date: 2019-04-15 22_50_12.258197
 file: /home/circleci/project/examples/stimuli/crm_stimuli.py
 participant: foo
 session: foo
-2019-04-15 20:01:19,921 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-04-15 20:01:19,921 - INFO    - Expyfun: Setting up Pyglet audio
-2019-04-15 20:01:19,992 - INFO    - Expyfun: Setting up screen
-2019-04-15 20:01:20,004 - EXP     - Expyfun: Set screen visibility True
-2019-04-15 20:01:20,063 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-04-15 20:01:20,065 - INFO    - Expyfun: Initialization complete
-2019-04-15 20:01:20,066 - EXP     - Expyfun: Participant: foo
-2019-04-15 20:01:20,066 - EXP     - Expyfun: Session: foo
-2019-04-15 20:01:20,237 - WARNING - Expyfun: Stimulus max RMS (0.025983532855792944) exceeds stated RMS (0.01) by more than 6 dB.
-2019-04-15 20:01:20,237 - EXP     - Expyfun: Loading 161136 samples to buffer
-2019-04-15 20:01:20,238 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2019-04-15 20:01:20,239 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
-2019-04-15 20:01:20,239 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-04-15 20:01:23,708 - WARNING - ec.trial_ok called before stimulus had stopped
-2019-04-15 20:01:23,709 - EXP     - Expyfun: Trial OK
-2019-04-15 20:01:23,709 - INFO    - Expyfun: Exiting
-2019-04-15 20:01:23,711 - EXP     - Expyfun: Audio stopped and reset.
+2019-04-15 22:50:12,258 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-04-15 22:50:12,259 - INFO    - Expyfun: Setting up sound card audio using pyglet backend
+2019-04-15 22:50:12,398 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100).Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-04-15 22:50:12,398 - INFO    - Expyfun: Setting up screen
+2019-04-15 22:50:12,411 - EXP     - Expyfun: Set screen visibility True
+2019-04-15 22:50:12,485 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-04-15 22:50:12,488 - INFO    - Expyfun: Initialization complete
+2019-04-15 22:50:12,488 - EXP     - Expyfun: Participant: foo
+2019-04-15 22:50:12,488 - EXP     - Expyfun: Session: foo
+2019-04-15 22:50:12,600 - WARNING - Expyfun: Resampling 2 seconds of audio
+2019-04-15 22:50:13,688 - WARNING - Expyfun: Stimulus max RMS (0.025984206256894304) exceeds stated RMS (0.01) by more than 6 dB.
+2019-04-15 22:50:13,689 - EXP     - Expyfun: Loading 177652 samples to buffer
+2019-04-15 22:50:13,690 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2019-04-15 22:50:13,690 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
+2019-04-15 22:50:13,690 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-04-15 22:50:17,423 - WARNING - ec.trial_ok called before stimulus had stopped
+2019-04-15 22:50:17,423 - EXP     - Expyfun: Trial OK
+2019-04-15 22:50:17,423 - INFO    - Expyfun: Exiting
+2019-04-15 22:50:17,426 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.377 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.745 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-crm-stimuli-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/a55a5f59de5848b10f86e84682cb5559/crm_stimuli.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">crm_stimuli.py</span></code></a></p>
