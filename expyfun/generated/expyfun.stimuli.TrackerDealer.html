@@ -160,44 +160,15 @@ property, e.g. <code class="docutils literal notranslate"><span class="pre">deal
 <p>If dealing from TrackerBinom objects (which is probably not a good idea),
 <code class="docutils literal notranslate"><span class="pre">stop_early</span></code> must be <code class="docutils literal notranslate"><span class="pre">False</span></code> or else they cannot be ensured to keep
 pace.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>shape</strong></dt><dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.stopped" title="expyfun.stimuli.TrackerDealer.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></dt><dd><p>Are all the trackers stopped</p>
-</dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.trackers" title="expyfun.stimuli.TrackerDealer.trackers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">trackers</span></code></a></dt><dd><p>All of the tracker objects in the container</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.history" title="expyfun.stimuli.TrackerDealer.history"><code class="xref py py-obj docutils literal notranslate"><span class="pre">history</span></code></a>([include_skips])</p></td>
-<td><p>The history of the dealt trials and the responses</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.next" title="expyfun.stimuli.TrackerDealer.next"><code class="xref py py-obj docutils literal notranslate"><span class="pre">next</span></code></a>()</p></td>
-<td><p>Selects the tracker from which the next trial should be run</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.respond" title="expyfun.stimuli.TrackerDealer.respond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">respond</span></code></a>(correct)</p></td>
-<td><p>Update the current tracker based on the last response</p></td>
-</tr>
-</tbody>
-</table>
 <dl class="attribute">
 <dt id="expyfun.stimuli.TrackerDealer.__hash__">
-<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.__hash__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return hash(self).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.history">
-<code class="descname">history</code><span class="sig-paren">(</span><em>include_skips=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L942-L967"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.history" title="Permalink to this definition">¶</a></dt>
+<code class="descname">history</code><span class="sig-paren">(</span><em>self</em>, <em>include_skips=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L942-L967"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.history" title="Permalink to this definition">¶</a></dt>
 <dd><p>The history of the dealt trials and the responses</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -223,7 +194,7 @@ the ints in this list correspond the the raveled index.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.next">
-<code class="descname">next</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L869-L892"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.next" title="Permalink to this definition">¶</a></dt>
+<code class="descname">next</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L869-L892"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.next" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects the tracker from which the next trial should be run</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -239,7 +210,7 @@ the ints in this list correspond the the raveled index.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.respond">
-<code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L921-L940"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.respond" title="Permalink to this definition">¶</a></dt>
+<code class="descname">respond</code><span class="sig-paren">(</span><em>self</em>, <em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L921-L940"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the current tracker based on the last response</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -290,7 +261,7 @@ the ints in this list correspond the the raveled index.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-19.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-26.<br/>
     </p>
   </div>
 </footer>

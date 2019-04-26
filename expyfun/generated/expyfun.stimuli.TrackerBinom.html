@@ -171,52 +171,9 @@ document the level and required to exist if using <code class="docutils literal 
 stimulus level, usually an easy one. The point of this tracker is to
 confirm that the subject understands the task instructions and is capable
 of following them.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>alpha</strong></dt><dd></dd>
-<dt><strong>chance</strong></dt><dd></dd>
-<dt><strong>max_p_val</strong></dt><dd></dd>
-<dt><strong>max_trials</strong></dt><dd></dd>
-<dt><strong>min_p_val</strong></dt><dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_correct" title="expyfun.stimuli.TrackerBinom.n_correct"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_correct</span></code></a></dt><dd><p>The number of correct trials so far</p>
-</dd>
-<dt><strong>n_trials</strong></dt><dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.n_wrong" title="expyfun.stimuli.TrackerBinom.n_wrong"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_wrong</span></code></a></dt><dd><p>The number of incorrect trials so far</p>
-</dd>
-<dt><strong>p_val</strong></dt><dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.pc" title="expyfun.stimuli.TrackerBinom.pc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pc</span></code></a></dt><dd><p>Proportion correct (0-1, NaN before any responses made)</p>
-</dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.responses" title="expyfun.stimuli.TrackerBinom.responses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">responses</span></code></a></dt><dd><p>The response history</p>
-</dd>
-<dt><strong>stop_early</strong></dt><dd></dd>
-<dt><strong>stop_rule</strong></dt><dd></dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.stopped" title="expyfun.stimuli.TrackerBinom.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></dt><dd><p>Is the tracker stopped</p>
-</dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.success" title="expyfun.stimuli.TrackerBinom.success"><code class="xref py py-obj docutils literal notranslate"><span class="pre">success</span></code></a></dt><dd><p>Has the p-value reached significance</p>
-</dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x" title="expyfun.stimuli.TrackerBinom.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a></dt><dd><p>Included only for compatibility with TrackerDealer</p>
-</dd>
-<dt><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.x_current" title="expyfun.stimuli.TrackerBinom.x_current"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x_current</span></code></a></dt><dd><p>Included only for compatibility with TrackerDealer</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.stimuli.TrackerBinom.respond" title="expyfun.stimuli.TrackerBinom.respond"><code class="xref py py-obj docutils literal notranslate"><span class="pre">respond</span></code></a>(correct)</p></td>
-<td><p>Update the tracker based on the last response.</p></td>
-</tr>
-</tbody>
-</table>
 <dl class="attribute">
 <dt id="expyfun.stimuli.TrackerBinom.__hash__">
-<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.__hash__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return hash(self).</p>
 </dd></dl>
 
@@ -240,7 +197,7 @@ of following them.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.respond">
-<code class="descname">respond</code><span class="sig-paren">(</span><em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L645-L681"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.respond" title="Permalink to this definition">¶</a></dt>
+<code class="descname">respond</code><span class="sig-paren">(</span><em>self</em>, <em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L645-L681"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the tracker based on the last response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -298,7 +255,7 @@ of following them.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-19.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-26.<br/>
     </p>
   </div>
 </footer>

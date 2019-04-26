@@ -159,36 +159,21 @@ argument of <a class="reference internal" href="expyfun.ExperimentController.htm
 <p>The <code class="docutils literal notranslate"><span class="pre">parallel</span></code> module must also be installed.</p>
 <p>On Windows, you may need to download <code class="docutils literal notranslate"><span class="pre">inpout32.dll</span></code> from someplace
 like <a class="reference external" href="http://www.highrez.co.uk/downloads/inpout32/">http://www.highrez.co.uk/downloads/inpout32/</a>.</p>
-<p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.ParallelTrigger.close" title="expyfun.ParallelTrigger.close"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close</span></code></a>()</p></td>
-<td><p>Release hardware interfaces</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.ParallelTrigger.stamp_triggers" title="expyfun.ParallelTrigger.stamp_triggers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stamp_triggers</span></code></a>(triggers[, delay, wait_for_last])</p></td>
-<td><p>Stamp a list of triggers with a given inter-trigger delay.</p></td>
-</tr>
-</tbody>
-</table>
 <dl class="attribute">
 <dt id="expyfun.ParallelTrigger.__hash__">
-<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ParallelTrigger.__hash__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ParallelTrigger.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return hash(self).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ParallelTrigger.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L131-L135"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.close" title="Permalink to this definition">¶</a></dt>
+<code class="descname">close</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L131-L135"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Release hardware interfaces</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ParallelTrigger.stamp_triggers">
-<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>triggers</em>, <em>delay=0.03</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L113-L129"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stamp_triggers</code><span class="sig-paren">(</span><em>self</em>, <em>triggers</em>, <em>delay=0.03</em>, <em>wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L113-L129"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.stamp_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stamp a list of triggers with a given inter-trigger delay.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -221,7 +206,7 @@ with each entry an integer with fewer than 8 bits (max 255).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-19.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-26.<br/>
     </p>
   </div>
 </footer>

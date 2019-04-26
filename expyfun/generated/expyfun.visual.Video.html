@@ -148,7 +148,7 @@ the frame.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>None</strong></dt><dd></dd>
+<dt>None</dt><dd></dd>
 </dl>
 </dd>
 </dl>
@@ -159,67 +159,21 @@ Timing of individual frames is relegated to the pyglet media player’s
 internal clock. Recommended for use only in paradigms where the relative
 timing of audio and video are unimportant (e.g., if the video is merely
 entertainment for the participant during a passive auditory task).</p>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>dt</strong></dt><dd></dd>
-<dt><strong>duration</strong></dt><dd></dd>
-<dt><strong>finished</strong></dt><dd></dd>
-<dt><strong>frame_rate</strong></dt><dd></dd>
-<dt><strong>height</strong></dt><dd></dd>
-<dt><strong>playing</strong></dt><dd></dd>
-<dt><strong>position</strong></dt><dd></dd>
-<dt><strong>scale</strong></dt><dd></dd>
-<dt><strong>source_height</strong></dt><dd></dd>
-<dt><strong>source_width</strong></dt><dd></dd>
-<dt><strong>time</strong></dt><dd></dd>
-<dt><strong>time_offset</strong></dt><dd></dd>
-<dt><strong>width</strong></dt><dd></dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<table class="longtable docutils align-center">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.visual.Video.draw" title="expyfun.visual.Video.draw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw</span></code></a>()</p></td>
-<td><p>Draw the video texture to the screen buffer.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.visual.Video.pause" title="expyfun.visual.Video.pause"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pause</span></code></a>()</p></td>
-<td><p>Halt video playback.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.visual.Video.play" title="expyfun.visual.Video.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>()</p></td>
-<td><p>Play video from current position.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.visual.Video.set_pos" title="expyfun.visual.Video.set_pos"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_pos</span></code></a>(pos[, units, center])</p></td>
-<td><p>Set video position.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.visual.Video.set_scale" title="expyfun.visual.Video.set_scale"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_scale</span></code></a>([scale])</p></td>
-<td><p>Set video scale.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.visual.Video.set_visible" title="expyfun.visual.Video.set_visible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_visible</span></code></a>(show[, flip])</p></td>
-<td><p>Show/hide the video frame.</p></td>
-</tr>
-</tbody>
-</table>
 <dl class="attribute">
 <dt id="expyfun.visual.Video.__hash__">
-<code class="descname">__hash__</code><span class="sig-paren">(</span><em>$self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Video.__hash__" title="Permalink to this definition">¶</a></dt>
+<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.Video.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return hash(self).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.Video.draw">
-<code class="descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1221-L1231"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.draw" title="Permalink to this definition">¶</a></dt>
+<code class="descname">draw</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1221-L1231"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.draw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draw the video texture to the screen buffer.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.visual.Video.pause">
-<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1133-L1150"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.pause" title="Permalink to this definition">¶</a></dt>
+<code class="descname">pause</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1133-L1150"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.pause" title="Permalink to this definition">¶</a></dt>
 <dd><p>Halt video playback.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -234,7 +188,7 @@ which <code class="docutils literal notranslate"><span class="pre">pause()</span
 
 <dl class="method">
 <dt id="expyfun.visual.Video.play">
-<code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1115-L1131"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.play" title="Permalink to this definition">¶</a></dt>
+<code class="descname">play</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1115-L1131"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play video from current position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -249,7 +203,7 @@ which <code class="docutils literal notranslate"><span class="pre">play()</span>
 
 <dl class="method">
 <dt id="expyfun.visual.Video.set_pos">
-<code class="descname">set_pos</code><span class="sig-paren">(</span><em>pos</em>, <em>units='norm'</em>, <em>center=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1191-L1214"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.set_pos" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_pos</code><span class="sig-paren">(</span><em>self</em>, <em>pos</em>, <em>units='norm'</em>, <em>center=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1191-L1214"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.set_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set video position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -269,7 +223,7 @@ center of the frame.</p>
 
 <dl class="method">
 <dt id="expyfun.visual.Video.set_scale">
-<code class="descname">set_scale</code><span class="sig-paren">(</span><em>scale=1.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1163-L1189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.set_scale" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_scale</code><span class="sig-paren">(</span><em>self</em>, <em>scale=1.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1163-L1189"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.set_scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set video scale.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -289,7 +243,7 @@ letterboxing).</p>
 
 <dl class="method">
 <dt id="expyfun.visual.Video.set_visible">
-<code class="descname">set_visible</code><span class="sig-paren">(</span><em>show</em>, <em>flip=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1233-L1250"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.set_visible" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_visible</code><span class="sig-paren">(</span><em>self</em>, <em>show</em>, <em>flip=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1233-L1250"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.Video.set_visible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show/hide the video frame.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -319,7 +273,7 @@ letterboxing).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-19.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-04-26.<br/>
     </p>
   </div>
 </footer>
