@@ -120,7 +120,7 @@
 <h1>expyfun.stimuli.TrackerDealer<a class="headerlink" href="#expyfun-stimuli-trackerdealer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.stimuli.TrackerDealer">
-<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">TrackerDealer</code><span class="sig-paren">(</span><em>callback</em>, <em>trackers</em>, <em>max_lag=1</em>, <em>pace_rule='reversals'</em>, <em>rand=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L779-L983"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">expyfun.stimuli.</code><code class="sig-name descname">TrackerDealer</code><span class="sig-paren">(</span><em class="sig-param">callback</em>, <em class="sig-param">trackers</em>, <em class="sig-param">max_lag=1</em>, <em class="sig-param">pace_rule='reversals'</em>, <em class="sig-param">rand=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L779-L983"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for selecting and pacing independent simultaneous trackers</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -160,15 +160,15 @@ property, e.g. <code class="docutils literal notranslate"><span class="pre">deal
 <p>If dealing from TrackerBinom objects (which is probably not a good idea),
 <code class="docutils literal notranslate"><span class="pre">stop_early</span></code> must be <code class="docutils literal notranslate"><span class="pre">False</span></code> or else they cannot be ensured to keep
 pace.</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.__hash__">
-<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.__hash__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return hash(self).</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.history">
-<code class="descname">history</code><span class="sig-paren">(</span><em>self</em>, <em>include_skips=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L942-L967"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.history" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">history</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">include_skips=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L942-L967"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.history" title="Permalink to this definition">¶</a></dt>
 <dd><p>The history of the dealt trials and the responses</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -194,7 +194,7 @@ the ints in this list correspond the the raveled index.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.next">
-<code class="descname">next</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L869-L892"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.next" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">next</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L869-L892"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.next" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects the tracker from which the next trial should be run</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -210,7 +210,7 @@ the ints in this list correspond the the raveled index.</p>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.respond">
-<code class="descname">respond</code><span class="sig-paren">(</span><em>self</em>, <em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L921-L940"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.respond" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">respond</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L921-L940"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the current tracker based on the last response</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -222,15 +222,15 @@ the ints in this list correspond the the raveled index.</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.stopped">
-<code class="descname">stopped</code><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.stopped" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">stopped</code><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.stopped" title="Permalink to this definition">¶</a></dt>
 <dd><p>Are all the trackers stopped</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerDealer.trackers">
-<code class="descname">trackers</code><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.trackers" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">trackers</code><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.trackers" title="Permalink to this definition">¶</a></dt>
 <dd><p>All of the tracker objects in the container</p>
 </dd></dl>
 
@@ -238,11 +238,11 @@ the ints in this list correspond the the raveled index.</p>
 
 <div class="section" id="examples-using-expyfun-stimuli-trackerdealer">
 <h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerDealer</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-trackerdealer" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using :class:`expyfun.stimuli.Tracke..."><div class="figure align-center" id="id1">
+<div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using :class:`expyfun.stimuli.Tracke..."><div class="figure align-default" id="id1">
 <img alt="../_images/sphx_glr_tracker_dealer_doublesided_thumb.png" src="../_images/sphx_glr_tracker_dealer_doublesided_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/tracker_dealer_doublesided.html#sphx-glr-auto-examples-experiments-tracker-dealer-doublesided-py"><span class="std std-ref">Adaptive tracking from above and below</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using :class:`expyfun.stimuli.Tracke..."><div class="figure align-center" id="id2">
+</div><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using :class:`expyfun.stimuli.Tracke..."><div class="figure align-default" id="id2">
 <img alt="../_images/sphx_glr_tracker_dealer_thumb.png" src="../_images/sphx_glr_tracker_dealer_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/tracker_dealer.html#sphx-glr-auto-examples-experiments-tracker-dealer-py"><span class="std std-ref">Adaptive tracking for two trial types and tracker reconstruction from .tab</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
@@ -261,7 +261,7 @@ the ints in this list correspond the the raveled index.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-05-14.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-06-06.<br/>
     </p>
   </div>
 </footer>

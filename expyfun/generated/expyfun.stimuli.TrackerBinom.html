@@ -117,7 +117,7 @@
 <h1>expyfun.stimuli.TrackerBinom<a class="headerlink" href="#expyfun-stimuli-trackerbinom" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.stimuli.TrackerBinom">
-<em class="property">class </em><code class="descclassname">expyfun.stimuli.</code><code class="descname">TrackerBinom</code><span class="sig-paren">(</span><em>callback</em>, <em>alpha</em>, <em>chance</em>, <em>max_trials</em>, <em>min_trials=0</em>, <em>stop_early=True</em>, <em>x_current=nan</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L556-L768"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">expyfun.stimuli.</code><code class="sig-name descname">TrackerBinom</code><span class="sig-paren">(</span><em class="sig-param">callback</em>, <em class="sig-param">alpha</em>, <em class="sig-param">chance</em>, <em class="sig-param">max_trials</em>, <em class="sig-param">min_trials=0</em>, <em class="sig-param">stop_early=True</em>, <em class="sig-param">x_current=nan</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L556-L768"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Binomial hypothesis testing tracker</p>
 <p>This class implements a tracker that runs a test at each trial with the
 null hypothesis that the stimulus presented has no effect on the subject’s
@@ -171,33 +171,33 @@ document the level and required to exist if using <code class="docutils literal 
 stimulus level, usually an easy one. The point of this tracker is to
 confirm that the subject understands the task instructions and is capable
 of following them.</p>
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.__hash__">
-<code class="descname">__hash__</code><span class="sig-paren">(</span><em>self</em>, <em>/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.__hash__" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return hash(self).</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.n_correct">
-<code class="descname">n_correct</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.n_correct" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">n_correct</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.n_correct" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of correct trials so far</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.n_wrong">
-<code class="descname">n_wrong</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.n_wrong" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">n_wrong</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.n_wrong" title="Permalink to this definition">¶</a></dt>
 <dd><p>The number of incorrect trials so far</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.pc">
-<code class="descname">pc</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.pc" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">pc</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.pc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Proportion correct (0-1, NaN before any responses made)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.respond">
-<code class="descname">respond</code><span class="sig-paren">(</span><em>self</em>, <em>correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L645-L681"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.respond" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">respond</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">correct</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L645-L681"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the tracker based on the last response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -209,33 +209,33 @@ of following them.</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.responses">
-<code class="descname">responses</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.responses" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">responses</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.responses" title="Permalink to this definition">¶</a></dt>
 <dd><p>The response history</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.stopped">
-<code class="descname">stopped</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.stopped" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">stopped</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.stopped" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is the tracker stopped</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.success">
-<code class="descname">success</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.success" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">success</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.success" title="Permalink to this definition">¶</a></dt>
 <dd><p>Has the p-value reached significance</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.x">
-<code class="descname">x</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.x" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">x</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Included only for compatibility with TrackerDealer</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="method">
 <dt id="expyfun.stimuli.TrackerBinom.x_current">
-<code class="descname">x_current</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.x_current" title="Permalink to this definition">¶</a></dt>
+<em class="property">property </em><code class="sig-name descname">x_current</code><a class="headerlink" href="#expyfun.stimuli.TrackerBinom.x_current" title="Permalink to this definition">¶</a></dt>
 <dd><p>Included only for compatibility with TrackerDealer</p>
 </dd></dl>
 
@@ -255,7 +255,7 @@ of following them.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-05-14.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-06-06.<br/>
     </p>
   </div>
 </footer>

@@ -123,7 +123,8 @@
 of sample stimuli.</p>
 <img alt="../_images/sphx_glr_generate_simple_stimuli_001.png" class="sphx-glr-single-img" src="../_images/sphx_glr_generate_simple_stimuli_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/circleci/project/examples/generate_simple_stimuli.py:106: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show()
 </pre></div>
 </div>
 <div class="line-block">
@@ -182,9 +183,9 @@ of sample stimuli.</p>
 <span class="sd">        The stimulus dictionary.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="n">rand_seed</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">rng</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.random.RandomState.html#numpy.random.RandomState" title="View documentation for numpy.random.RandomState"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">()</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">rng</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.random.RandomState.html#numpy.random.RandomState" title="View documentation for numpy.random.RandomState"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="n">rand_seed</span><span class="p">)</span>
+        <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="n">rand_seed</span><span class="p">)</span>
 
     <span class="c1"># check input arguments</span>
     <span class="k">if</span> <span class="n">save_as</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">save_as</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;dict&#39;</span><span class="p">,</span> <span class="s1">&#39;wav&#39;</span><span class="p">,</span> <span class="s1">&#39;hdf5&#39;</span><span class="p">]:</span>
@@ -228,7 +229,7 @@ of sample stimuli.</p>
     <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.142 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.136 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-generate-simple-stimuli-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/6187199558ed6302b9798330cf1b35c4/generate_simple_stimuli.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">generate_simple_stimuli.py</span></code></a></p>
@@ -252,7 +253,7 @@ of sample stimuli.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-05-14.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-06-06.<br/>
     </p>
   </div>
 </footer>
