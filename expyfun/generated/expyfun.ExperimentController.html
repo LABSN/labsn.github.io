@@ -120,7 +120,7 @@
 <h1>expyfun.ExperimentController<a class="headerlink" href="#expyfun-experimentcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.ExperimentController">
-<em class="property">class </em><code class="sig-prename descclassname">expyfun.</code><code class="sig-name descname">ExperimentController</code><span class="sig-paren">(</span><em class="sig-param">exp_name</em>, <em class="sig-param">audio_controller=None</em>, <em class="sig-param">response_device=None</em>, <em class="sig-param">stim_rms=0.01</em>, <em class="sig-param">stim_fs=24414</em>, <em class="sig-param">stim_db=65</em>, <em class="sig-param">noise_db=45</em>, <em class="sig-param">output_dir='data'</em>, <em class="sig-param">window_size=None</em>, <em class="sig-param">screen_num=None</em>, <em class="sig-param">full_screen=True</em>, <em class="sig-param">force_quit=None</em>, <em class="sig-param">participant=None</em>, <em class="sig-param">monitor=None</em>, <em class="sig-param">trigger_controller=None</em>, <em class="sig-param">session=None</em>, <em class="sig-param">check_rms='windowed'</em>, <em class="sig-param">suppress_resamp=False</em>, <em class="sig-param">version=None</em>, <em class="sig-param">enable_video=False</em>, <em class="sig-param">safe_flipping=None</em>, <em class="sig-param">verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L40-L2060"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">expyfun.</code><code class="sig-name descname">ExperimentController</code><span class="sig-paren">(</span><em class="sig-param">exp_name</em>, <em class="sig-param">audio_controller=None</em>, <em class="sig-param">response_device=None</em>, <em class="sig-param">stim_rms=0.01</em>, <em class="sig-param">stim_fs=24414</em>, <em class="sig-param">stim_db=65</em>, <em class="sig-param">noise_db=45</em>, <em class="sig-param">output_dir='data'</em>, <em class="sig-param">window_size=None</em>, <em class="sig-param">screen_num=None</em>, <em class="sig-param">full_screen=True</em>, <em class="sig-param">force_quit=None</em>, <em class="sig-param">participant=None</em>, <em class="sig-param">monitor=None</em>, <em class="sig-param">trigger_controller=None</em>, <em class="sig-param">session=None</em>, <em class="sig-param">check_rms='windowed'</em>, <em class="sig-param">suppress_resamp=False</em>, <em class="sig-param">version=None</em>, <em class="sig-param">enable_video=False</em>, <em class="sig-param">safe_flipping=None</em>, <em class="sig-param">verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L40-L2062"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -282,7 +282,7 @@ to <a class="reference internal" href="#expyfun.ExperimentController.call_on_nex
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1955-L1958"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1957-L1960"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Close all connections in experiment controller.</p>
 </dd></dl>
 
@@ -367,7 +367,7 @@ true intended flip time.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.flush">
-<code class="sig-name descname">flush</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1948-L1953"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flush" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">flush</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1950-L1955"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flush" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flush logs and data files</p>
 </dd></dl>
 
@@ -498,7 +498,7 @@ release event.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.get_time">
-<code class="sig-name descname">get_time</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1719-L1727"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_time</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1721-L1729"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return current master clock time</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -518,7 +518,7 @@ release event.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.identify_trial">
-<code class="sig-name descname">identify_trial</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">**ids</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1830-L1865"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.identify_trial" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">identify_trial</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">**ids</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1832-L1867"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.identify_trial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identify trial type before beginning the trial</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -659,7 +659,7 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.refocus">
-<code class="sig-name descname">refocus</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1987-L2017"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.refocus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">refocus</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1989-L2019"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.refocus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attempt to grab operating system window manager / keyboard focus.</p>
 <p>This implements platform-specific trickery to bring the window to the
 top and capture keyboard focus in cases where keyboard input from a
@@ -845,7 +845,7 @@ appropriate background color.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.set_rms_checking">
-<code class="sig-name descname">set_rms_checking</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">check_rms</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1684-L1699"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_rms_checking" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_rms_checking</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">check_rms</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1686-L1701"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_rms_checking" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the RMS checking flag.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -907,7 +907,7 @@ had been set to.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.stamp_triggers">
-<code class="sig-name descname">stamp_triggers</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ids</em>, <em class="sig-param">check='binary'</em>, <em class="sig-param">wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1909-L1946"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stamp_triggers</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">ids</em>, <em class="sig-param">check='binary'</em>, <em class="sig-param">wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1911-L1948"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stamp binary values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1113,7 +1113,7 @@ precise positioning or centering.</p>
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.trial_ok">
-<code class="sig-name descname">trial_ok</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1867-L1887"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.trial_ok" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">trial_ok</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1869-L1889"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.trial_ok" title="Permalink to this definition">¶</a></dt>
 <dd><p>Report that the trial was okay and do post-trial tasks.</p>
 <p>For example, logs and data files can be flushed at the end of each
 trial.</p>
@@ -1371,7 +1371,7 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_secs">
-<code class="sig-name descname">wait_secs</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">secs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1779-L1792"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_secs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_secs</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">secs</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1781-L1794"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_secs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait a specified number of seconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1392,7 +1392,7 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.wait_until">
-<code class="sig-name descname">wait_until</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">timestamp</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1794-L1828"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_until" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_until</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">timestamp</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1796-L1830"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_until" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait until the given time is reached.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1432,7 +1432,7 @@ processing prior to calling <a class="reference internal" href="#expyfun.Experim
 
 <dl class="method">
 <dt id="expyfun.ExperimentController.write_data_line">
-<code class="sig-name descname">write_data_line</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">event_type</em>, <em class="sig-param">value=None</em>, <em class="sig-param">timestamp=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1729-L1756"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.write_data_line" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">write_data_line</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">event_type</em>, <em class="sig-param">value=None</em>, <em class="sig-param">timestamp=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1731-L1758"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.write_data_line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a line of data to the output CSV.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1475,7 +1475,7 @@ time the data line was written from the master clock.</p>
 <img alt="../_images/sphx_glr_pupillometry_experiment__thumb.png" src="../_images/sphx_glr_pupillometry_experiment__thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/pupillometry_experiment_.html#sphx-glr-auto-examples-experiments-pupillometry-experiment-py"><span class="std std-ref">Experiment using eye-tracking pupillometry</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This example shows how to display progress between trials using :class:`expyfun.visual.Progress..."><div class="figure align-default" id="id6">
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example shows how to display progress between trials using expyfun.visual.ProgressBar. "><div class="figure align-default" id="id6">
 <img alt="../_images/sphx_glr_progress_bar_thumb.png" src="../_images/sphx_glr_progress_bar_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/progress_bar.html#sphx-glr-auto-examples-experiments-progress-bar-py"><span class="std std-ref">ProgressBar demo</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
@@ -1487,7 +1487,7 @@ time the data line was written from the master clock.</p>
 <img alt="../_images/sphx_glr_keyrelease_thumb.png" src="../_images/sphx_glr_keyrelease_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/keyrelease.html#sphx-glr-auto-examples-experiments-keyrelease-py"><span class="std std-ref">KeyPressAndRelease demo</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using :class:`expyfun.stimuli.Tracke..."><div class="figure align-default" id="id9">
+</div><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><div class="figure align-default" id="id9">
 <img alt="../_images/sphx_glr_tracker_dealer_thumb.png" src="../_images/sphx_glr_tracker_dealer_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/tracker_dealer.html#sphx-glr-auto-examples-experiments-tracker-dealer-py"><span class="std std-ref">Adaptive tracking for two trial types and tracker reconstruction from .tab</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 </div>
@@ -1515,7 +1515,7 @@ time the data line was written from the master clock.</p>
 <img alt="../_images/sphx_glr_advanced_video_thumb.png" src="../_images/sphx_glr_advanced_video_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/stimuli/advanced_video.html#sphx-glr-auto-examples-stimuli-advanced-video-py"><span class="std std-ref">Play sample video file</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
 </div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="This example tests the TDT sample rate, which we expect to be ``24414.0625``. To test this:"><div class="figure align-default" id="id16">
+</div><div class="sphx-glr-thumbcontainer" tooltip="This example tests the TDT sample rate, which we expect to be 24414.0625. To test this:"><div class="figure align-default" id="id16">
 <img alt="../_images/sphx_glr_sample_rate_test_thumb.png" src="../_images/sphx_glr_sample_rate_test_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/sync/sample_rate_test.html#sphx-glr-auto-examples-sync-sample-rate-test-py"><span class="std std-ref">Audio sample rate test</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
 </div>
@@ -1538,7 +1538,7 @@ time the data line was written from the master clock.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-06-06.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-07-12.<br/>
     </p>
   </div>
 </footer>
