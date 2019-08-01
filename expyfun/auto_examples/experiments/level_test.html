@@ -128,24 +128,24 @@ distance.</p>
 <img alt="../../_images/sphx_glr_level_test_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_level_test_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: LevelTest
-date: 2019-07-12 17_17_19.928036
+date: 2019-08-01 19_02_19.594165
 file: /home/circleci/project/examples/experiments/level_test.py
 participant: s
 session: 0
-2019-07-12 17:17:19,928 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-07-12 17:17:19,929 - INFO    - Expyfun: Setting up sound card audio using pyglet backend
-2019-07-12 17:17:20,057 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100).Nothing will be done about this because suppress_resamp is &quot;True&quot;
-2019-07-12 17:17:20,058 - INFO    - Expyfun: Setting up screen
-2019-07-12 17:17:20,074 - EXP     - Expyfun: Set screen visibility True
-2019-07-12 17:17:20,142 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-07-12 17:17:20,144 - INFO    - Expyfun: Initialization complete
-2019-07-12 17:17:20,144 - EXP     - Expyfun: Participant: s
-2019-07-12 17:17:20,144 - EXP     - Expyfun: Session: 0
-2019-07-12 17:17:20,169 - EXP     - Expyfun: Loading 882000 samples to buffer
-2019-07-12 17:17:20,306 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-07-12 17:17:20,317 - EXP     - Expyfun: Audio stopped and reset.
-2019-07-12 17:17:20,317 - INFO    - Expyfun: Exiting
-2019-07-12 17:17:20,319 - EXP     - Expyfun: Audio stopped and reset.
+2019-08-01 19:02:19,594 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-08-01 19:02:19,595 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
+2019-08-01 19:02:19,841 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2019-08-01 19:02:19,841 - INFO    - Expyfun: Setting up screen
+2019-08-01 19:02:19,858 - EXP     - Expyfun: Set screen visibility True
+2019-08-01 19:02:19,926 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-08-01 19:02:19,929 - INFO    - Expyfun: Initialization complete
+2019-08-01 19:02:19,929 - EXP     - Expyfun: Participant: s
+2019-08-01 19:02:19,929 - EXP     - Expyfun: Session: 0
+2019-08-01 19:02:19,954 - EXP     - Expyfun: Loading 882000 samples to buffer
+2019-08-01 19:02:20,109 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-08-01 19:02:20,119 - EXP     - Expyfun: Audio stopped and reset.
+2019-08-01 19:02:20,120 - INFO    - Expyfun: Exiting
+2019-08-01 19:02:20,121 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -164,15 +164,15 @@ session: 0
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
-<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;LevelTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">,</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;LevelTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><a href="https://numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">,</span>
                           <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">suppress_resamp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check_rms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">stim_db</span><span class="o">=</span><span class="mi">80</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <span class="n">tone</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.01</span> <span class="o">*</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mf">2.</span><span class="p">)</span> <span class="o">*</span>
-            <a href="https://www.numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.pi" title="View documentation for numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">*</span> <span class="mf">1000.</span> <span class="o">*</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">fs</span><span class="p">)))</span>
-    <span class="k">assert</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.allclose.html#numpy.allclose" title="View documentation for numpy.allclose"><span class="n">np</span><span class="o">.</span><span class="n">allclose</span></a><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.mean.html#numpy.mean" title="View documentation for numpy.mean"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">tone</span> <span class="o">*</span> <span class="n">tone</span><span class="p">)),</span> <span class="mf">0.01</span><span class="p">)</span>
+    <span class="n">tone</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.01</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mf">2.</span><span class="p">)</span> <span class="o">*</span>
+            <a href="https://numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="View documentation for numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">*</span> <span class="mf">1000.</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">fs</span><span class="p">)))</span>
+    <span class="k">assert</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.allclose.html#numpy.allclose" title="View documentation for numpy.allclose"><span class="n">np</span><span class="o">.</span><span class="n">allclose</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.mean.html#numpy.mean" title="View documentation for numpy.mean"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">tone</span> <span class="o">*</span> <span class="n">tone</span><span class="p">)),</span> <span class="mf">0.01</span><span class="p">)</span>
     <span class="n">square</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
-    <span class="n">cm</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.diff.html#numpy.diff" title="View documentation for numpy.diff"><span class="n">np</span><span class="o">.</span><span class="n">diff</span></a><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">_convert_units</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]],</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;pix&#39;</span><span class="p">),</span>
+    <span class="n">cm</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.diff.html#numpy.diff" title="View documentation for numpy.diff"><span class="n">np</span><span class="o">.</span><span class="n">diff</span></a><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">_convert_units</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">]],</span> <span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;pix&#39;</span><span class="p">),</span>
                  <span class="n">axis</span><span class="o">=-</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">dpi</span> <span class="o">/</span> <span class="mf">0.39370</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><span class="n">tone</span><span class="p">)</span>  <span class="c1"># RMS == 0.01</span>
     <span class="n">pressed</span> <span class="o">=</span> <span class="kc">None</span>
@@ -191,7 +191,7 @@ session: 0
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.556 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.687 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-level-test-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1613c61b367269a195b8fed43cf083cd/level_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">level_test.py</span></code></a></p>
@@ -215,7 +215,7 @@ session: 0
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-07-12.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
     </p>
   </div>
 </footer>

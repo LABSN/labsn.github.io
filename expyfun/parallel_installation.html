@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Search &#8212; expyfun 2.0.0.dev0 documentation</title>
+    <title>Parallel port triggering &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/gallery.css" />
@@ -15,12 +15,7 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
-  <script type="text/javascript" src="_static/searchtools.js "></script>
-  <script type="text/javascript" src="searchindex.js "></script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
-  
+    <link rel="search" title="Search" href="search.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="_static/style.css " type="text/css" />
 <link rel="stylesheet" href="_static/font-awesome.css" type="text/css" />
@@ -33,7 +28,6 @@
 <script type="text/javascript" src="_static/js/jquery-fix.js "></script>
 <script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
 <script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
-
 
 
   </head><body>
@@ -84,7 +78,10 @@
      href="#">Page <b class="caret"></b></a>
   <ul class="dropdown-menu localtoc"
       role="menu"
-      aria-labelledby="dLabelLocalToc"></ul>
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Parallel port triggering</a></li>
+</ul>
+</ul>
 </li>
               
             
@@ -98,6 +95,13 @@
 
           
             
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
           
         </div>
     </div>
@@ -107,35 +111,52 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <h1 id="search-documentation">Search</h1>
-  <div id="fallback" class="admonition warning">
-  <script type="text/javascript">$('#fallback').hide();</script>
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  <p>
-    From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won't appear in the result list.
-  </p>
+  <div class="section" id="parallel-port-triggering">
+<span id="parallel-installation"></span><h1>Parallel port triggering<a class="headerlink" href="#parallel-port-triggering" title="Permalink to this headline">¶</a></h1>
+<p>A PCIe device such as “StarTech.com 1 Port PCI Express” should work.
+USB to parallel port adapters will not, due to hardware limitations of
+the devices ($10 ones on Amazon are only designed for printers) and the
+USB protocol itself, which is not designed for low-latency control.</p>
+<p>Instructions differ between Linux and Windows:</p>
+<ul>
+<li><dl>
+<dt><em class="fa fa-linux"></em> Linux</dt><dd><p>On Linux, you need <code class="docutils literal notranslate"><span class="pre">pyparallel</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install pyparallel
+</pre></div>
+</div>
+<p>You might also need some combination of the following:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">sudo</span> <span class="pre">modprobe</span> <span class="pre">ppdev</span></code></p></li>
+<li><p>Add user to lp group (<code class="docutils literal notranslate"><span class="pre">/etc/group</span></code>)</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">rmmod</span> <span class="pre">lp</span></code> (otherwise lp takes exclusive control)</p></li>
+<li><p>Edit <code class="docutils literal notranslate"><span class="pre">/etc/modprobe.d/blacklist.conf</span></code> to add blacklist <code class="docutils literal notranslate"><span class="pre">lp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">ls</span> <span class="pre">/dev/parport*</span></code> to get the parallel port address, e.g.
+<code class="docutils literal notranslate"><span class="pre">'/dev/parport0'</span></code>, and set this as <code class="docutils literal notranslate"><span class="pre">TRIGGER_ADDRESS</span></code> in the config.</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><em class="fa fa-windows"></em> Windows</dt><dd><p>If you are on a modern Windows system (i.e., 64-bit), you’ll need to:</p>
+<ul class="simple">
+<li><p>Download the latest “binaries” archive from the <a class="reference external" href="http://www.highrez.co.uk/downloads/inpout32/">InpOut32 site</a></p></li>
+<li><p>Extract the files</p></li>
+<li><p>Run the <code class="docutils literal notranslate"><span class="pre">Win32\InstallDriver.exe</span></code> file (yes, even though it’s in the
+Win32 directory)</p></li>
+<li><p>Rename the <strong>64-bit</strong> file <code class="docutils literal notranslate"><span class="pre">inpoutx64.dll</span></code> to <code class="docutils literal notranslate"><span class="pre">inpout32.dll</span></code></p></li>
+<li><p>Place this file in <code class="docutils literal notranslate"><span class="pre">C:\Windows\System32\</span></code></p></li>
+<li><p>Use the Device Manager (or some other method) to get the parallel port
+address (from Ports➡Properties➡Resources➡I/O Range), e.g. <code class="docutils literal notranslate"><span class="pre">0x378</span></code>
+or <code class="docutils literal notranslate"><span class="pre">0xCFF4</span></code>, and set this as <code class="docutils literal notranslate"><span class="pre">TRIGGER_ADDRESS</span></code> in the config.</p></li>
+<li><p>If you have trouble, you can interactively test your parallel port using
+the <a class="reference external" href="https://www.downtowndougbrown.com/2013/06/parallel-port-tester/">parallel port tester application</a>.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
 
-  
-  <form class="form-inline" action="" method="get">
-    <div class="form-group">
-      <input type="text" class="form-control" name="q" value="" />
-    </div>
-    <input type="submit" class="btn btn-default" value="search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
-  
-
-  
-  <div id="search-results">
-  
-  </div>
 
     </div>
       

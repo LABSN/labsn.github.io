@@ -204,7 +204,7 @@ Valid callsigns are [&#39;charlie&#39;, &#39;ringo&#39;, &#39;laker&#39;, &#39;h
     <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
 
-    <span class="n">resp</span> <span class="o">=</span> <span class="n">crm_response_menu</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">0.01</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">)</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">crm_response_menu</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">0.01</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <a href="https://numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">)</span>
     <span class="k">if</span> <span class="n">resp</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">):</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
@@ -217,34 +217,34 @@ Valid callsigns are [&#39;charlie&#39;, &#39;ringo&#39;, &#39;laker&#39;, &#39;h
 <img alt="../../_images/sphx_glr_crm_stimuli_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_crm_stimuli_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: CRM corpus example
-date: 2019-07-12 17_17_45.750811
+date: 2019-08-01 19_02_47.344327
 file: /home/circleci/project/examples/stimuli/crm_stimuli.py
 participant: foo
 session: foo
-2019-07-12 17:17:45,751 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-07-12 17:17:45,752 - INFO    - Expyfun: Setting up sound card audio using pyglet backend
-2019-07-12 17:17:45,881 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100).Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-07-12 17:17:45,881 - INFO    - Expyfun: Setting up screen
-2019-07-12 17:17:45,894 - EXP     - Expyfun: Set screen visibility True
-2019-07-12 17:17:45,952 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-07-12 17:17:45,955 - INFO    - Expyfun: Initialization complete
-2019-07-12 17:17:45,955 - EXP     - Expyfun: Participant: foo
-2019-07-12 17:17:45,955 - EXP     - Expyfun: Session: foo
-2019-07-12 17:17:46,059 - WARNING - Expyfun: Resampling 2 seconds of audio
-2019-07-12 17:17:47,181 - WARNING - Expyfun: Stimulus max RMS (0.025984206256894304) exceeds stated RMS (0.01) by more than 6 dB.
-/home/circleci/project/expyfun/_experiment_controller.py:1675: UserWarning: Expyfun: Stimulus max RMS (0.025984206256894304) exceeds stated RMS (0.01) by more than 6 dB.
+2019-08-01 19:02:47,344 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-08-01 19:02:47,345 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
+2019-08-01 19:02:47,611 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-08-01 19:02:47,612 - INFO    - Expyfun: Setting up screen
+2019-08-01 19:02:47,627 - EXP     - Expyfun: Set screen visibility True
+2019-08-01 19:02:47,706 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-08-01 19:02:47,709 - INFO    - Expyfun: Initialization complete
+2019-08-01 19:02:47,709 - EXP     - Expyfun: Participant: foo
+2019-08-01 19:02:47,709 - EXP     - Expyfun: Session: foo
+2019-08-01 19:02:47,827 - WARNING - Expyfun: Resampling 2 seconds of audio
+2019-08-01 19:02:47,922 - WARNING - Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
+/home/circleci/project/expyfun/_experiment_controller.py:1683: UserWarning: Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
   warnings.warn(warn_string)
-2019-07-12 17:17:47,182 - EXP     - Expyfun: Loading 177652 samples to buffer
-2019-07-12 17:17:47,183 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2019-07-12 17:17:47,183 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
-2019-07-12 17:17:47,183 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-07-12 17:17:50,626 - WARNING - ec.trial_ok called before stimulus had stopped
-2019-07-12 17:17:50,626 - EXP     - Expyfun: Trial OK
-2019-07-12 17:17:50,626 - INFO    - Expyfun: Exiting
-2019-07-12 17:17:50,628 - EXP     - Expyfun: Audio stopped and reset.
+2019-08-01 19:02:47,923 - EXP     - Expyfun: Loading 177652 samples to buffer
+2019-08-01 19:02:47,924 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2019-08-01 19:02:47,924 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
+2019-08-01 19:02:47,924 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-08-01 19:02:51,754 - WARNING - ec.trial_ok called before stimulus had stopped
+2019-08-01 19:02:51,754 - EXP     - Expyfun: Trial OK
+2019-08-01 19:02:51,754 - INFO    - Expyfun: Exiting
+2019-08-01 19:02:51,757 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.767 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.958 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-crm-stimuli-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/a55a5f59de5848b10f86e84682cb5559/crm_stimuli.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">crm_stimuli.py</span></code></a></p>
@@ -269,7 +269,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-07-12.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
     </p>
   </div>
 </footer>

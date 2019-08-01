@@ -124,30 +124,30 @@ ExperimentController class.</p>
 <img alt="../_images/sphx_glr_basic_experiment_001.png" class="sphx-glr-single-img" src="../_images/sphx_glr_basic_experiment_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: testExp
-date: 2019-07-12 17_17_13.291174
+date: 2019-08-01 19_02_12.755498
 file: /home/circleci/project/examples/basic_experiment.py
 participant: foo
 session: 001
-2019-07-12 17:17:13,291 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-07-12 17:17:13,516 - INFO    - Expyfun: Setting up sound card audio using pyglet backend
-2019-07-12 17:17:13,690 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100).Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-07-12 17:17:13,690 - INFO    - Expyfun: Setting up screen
-2019-07-12 17:17:13,710 - EXP     - Expyfun: Set screen visibility True
-2019-07-12 17:17:13,795 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-07-12 17:17:13,798 - INFO    - Expyfun: Initialization complete
-2019-07-12 17:17:13,799 - EXP     - Expyfun: Participant: foo
-2019-07-12 17:17:13,799 - EXP     - Expyfun: Session: 001
-2019-07-12 17:17:14,003 - WARNING - Expyfun: Resampling 1 seconds of audio
-2019-07-12 17:17:14,312 - EXP     - Expyfun: Loading 88200 samples to buffer
-2019-07-12 17:17:14,412 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
-2019-07-12 17:17:14,412 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2019-07-12 17:17:14,473 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-07-12 17:17:14,481 - WARNING - ec.trial_ok called before stimulus had stopped
-2019-07-12 17:17:14,481 - EXP     - Expyfun: Trial OK
+2019-08-01 19:02:12,755 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-08-01 19:02:12,973 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
+2019-08-01 19:02:13,220 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-08-01 19:02:13,220 - INFO    - Expyfun: Setting up screen
+2019-08-01 19:02:13,238 - EXP     - Expyfun: Set screen visibility True
+2019-08-01 19:02:13,330 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-08-01 19:02:13,333 - INFO    - Expyfun: Initialization complete
+2019-08-01 19:02:13,333 - EXP     - Expyfun: Participant: foo
+2019-08-01 19:02:13,333 - EXP     - Expyfun: Session: 001
+2019-08-01 19:02:13,543 - WARNING - Expyfun: Resampling 1 seconds of audio
+2019-08-01 19:02:13,811 - EXP     - Expyfun: Loading 88200 samples to buffer
+2019-08-01 19:02:13,908 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
+2019-08-01 19:02:13,908 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2019-08-01 19:02:13,969 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-08-01 19:02:13,975 - WARNING - ec.trial_ok called before stimulus had stopped
+2019-08-01 19:02:13,975 - EXP     - Expyfun: Trial OK
 Presses:
 []
-2019-07-12 17:17:14,481 - INFO    - Expyfun: Exiting
-2019-07-12 17:17:14,484 - EXP     - Expyfun: Audio stopped and reset.
+2019-08-01 19:02:13,975 - INFO    - Expyfun: Exiting
+2019-08-01 19:02:13,978 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -167,8 +167,8 @@ Presses:
 <span class="c1"># set configuration</span>
 <span class="n">fs</span> <span class="o">=</span> <span class="mf">24414.</span>  <span class="c1"># default for ExperimentController</span>
 <span class="n">dur</span> <span class="o">=</span> <span class="mf">1.0</span>
-<span class="n">tone</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.pi" title="View documentation for numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">fs</span> <span class="o">*</span> <span class="n">dur</span><span class="p">))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
-<span class="n">tone</span> <span class="o">*=</span> <span class="mf">0.01</span> <span class="o">*</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Set RMS to 0.01</span>
+<span class="n">tone</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="View documentation for numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">fs</span> <span class="o">*</span> <span class="n">dur</span><span class="p">))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
+<span class="n">tone</span> <span class="o">*=</span> <span class="mf">0.01</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Set RMS to 0.01</span>
 <span class="n">max_wait</span> <span class="o">=</span> <span class="mf">1.</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
 
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;testExp&#39;</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span>
@@ -190,7 +190,7 @@ Presses:
 <span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.352 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.347 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-basic-experiment-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/258049ebed87113720aacf743304a7c9/basic_experiment.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">basic_experiment.py</span></code></a></p>
@@ -214,7 +214,7 @@ Presses:
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-07-12.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
     </p>
   </div>
 </footer>

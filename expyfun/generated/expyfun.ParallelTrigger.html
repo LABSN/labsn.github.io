@@ -117,7 +117,7 @@
 <h1>expyfun.ParallelTrigger<a class="headerlink" href="#expyfun-paralleltrigger" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="expyfun.ParallelTrigger">
-<em class="property">class </em><code class="sig-prename descclassname">expyfun.</code><code class="sig-name descname">ParallelTrigger</code><span class="sig-paren">(</span><em class="sig-param">mode='dummy'</em>, <em class="sig-param">address=None</em>, <em class="sig-param">high_duration=0.005</em>, <em class="sig-param">verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L14-L138"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">expyfun.</code><code class="sig-name descname">ParallelTrigger</code><span class="sig-paren">(</span><em class="sig-param">mode='dummy'</em>, <em class="sig-param">address=None</em>, <em class="sig-param">high_duration=0.005</em>, <em class="sig-param">verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L14-L130"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parallel port and dummy triggering support.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -134,7 +134,9 @@ This can effect e.g. <a class="reference internal" href="expyfun.EyelinkControll
 </dd>
 <dt><strong>address</strong><span class="classifier">str | int | None</span></dt><dd><p>The address to use. On Linux this should be a string path like
 <code class="docutils literal notranslate"><span class="pre">'/dev/parport0'</span></code> (equivalent to None), on Windows it should be an
-integer address like <code class="docutils literal notranslate"><span class="pre">888</span></code> or <code class="docutils literal notranslate"><span class="pre">0x378</span></code> (equivalent to None).</p>
+integer address like <code class="docutils literal notranslate"><span class="pre">888</span></code> or <code class="docutils literal notranslate"><span class="pre">0x378</span></code> (equivalent to None).
+The config variable <code class="docutils literal notranslate"><span class="pre">TRIGGER_ADDRESS</span></code> can be used to set this
+permanently.</p>
 </dd>
 <dt><strong>high_duration</strong><span class="classifier">float</span></dt><dd><p>Amount of time (seconds) to leave the trigger high whenever
 sending a trigger.</p>
@@ -147,18 +149,6 @@ sending a trigger.</p>
 <p class="rubric">Notes</p>
 <p>Parallel port activation is enabled by using the <code class="docutils literal notranslate"><span class="pre">trigger_controller</span></code>
 argument of <a class="reference internal" href="expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.ExperimentController</span></code></a>.</p>
-<p>On Linux, parallel port may require some combination of the following:</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">modprobe</span> <span class="pre">ppdev</span></code></p></li>
-<li><p>Add user to <code class="docutils literal notranslate"><span class="pre">lp</span></code> group (<code class="docutils literal notranslate"><span class="pre">/etc/group</span></code>)</p></li>
-<li><p>Run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">rmmod</span> <span class="pre">lp</span></code> (otherwise <code class="docutils literal notranslate"><span class="pre">lp</span></code> takes exclusive control)</p></li>
-<li><p>Edit <code class="docutils literal notranslate"><span class="pre">/etc/modprobe.d/blacklist.conf</span></code> to add <code class="docutils literal notranslate"><span class="pre">blacklist</span> <span class="pre">lp</span></code></p></li>
-</ol>
-</div></blockquote>
-<p>The <code class="docutils literal notranslate"><span class="pre">parallel</span></code> module must also be installed.</p>
-<p>On Windows, you may need to download <code class="docutils literal notranslate"><span class="pre">inpout32.dll</span></code> from someplace
-like <a class="reference external" href="http://www.highrez.co.uk/downloads/inpout32/">http://www.highrez.co.uk/downloads/inpout32/</a>.</p>
 <dl class="method">
 <dt id="expyfun.ParallelTrigger.__hash__">
 <code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ParallelTrigger.__hash__" title="Permalink to this definition">¶</a></dt>
@@ -167,13 +157,13 @@ like <a class="reference external" href="http://www.highrez.co.uk/downloads/inpo
 
 <dl class="method">
 <dt id="expyfun.ParallelTrigger.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L131-L135"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L123-L127"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Release hardware interfaces</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="expyfun.ParallelTrigger.stamp_triggers">
-<code class="sig-name descname">stamp_triggers</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">triggers</em>, <em class="sig-param">delay=0.03</em>, <em class="sig-param">wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L113-L129"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stamp_triggers</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">triggers</em>, <em class="sig-param">delay=0.03</em>, <em class="sig-param">wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L105-L121"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.stamp_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stamp a list of triggers with a given inter-trigger delay.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -206,7 +196,7 @@ with each entry an integer with fewer than 8 bits (max 255).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-07-12.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
     </p>
   </div>
 </footer>

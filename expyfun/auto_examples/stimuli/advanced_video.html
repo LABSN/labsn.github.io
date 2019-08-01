@@ -124,21 +124,21 @@
 <img alt="../../_images/sphx_glr_advanced_video_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_advanced_video_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: advanced video example
-date: 2019-07-12 17_17_50.780519
+date: 2019-08-01 19_02_51.943887
 file: /home/circleci/project/examples/stimuli/advanced_video.py
 participant: foo
 session: foo
-2019-07-12 17:17:50,780 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-07-12 17:17:50,781 - INFO    - Expyfun: Setting up sound card audio using pyglet backend
-2019-07-12 17:17:50,887 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100).Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-07-12 17:17:50,888 - INFO    - Expyfun: Setting up screen
-2019-07-12 17:17:50,900 - EXP     - Expyfun: Set screen visibility True
-2019-07-12 17:17:50,948 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-07-12 17:17:50,951 - INFO    - Expyfun: Initialization complete
-2019-07-12 17:17:50,951 - EXP     - Expyfun: Participant: foo
-2019-07-12 17:17:50,951 - EXP     - Expyfun: Session: foo
-2019-07-12 17:17:53,119 - INFO    - Expyfun: Exiting
-2019-07-12 17:17:53,121 - EXP     - Expyfun: Audio stopped and reset.
+2019-08-01 19:02:51,944 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-08-01 19:02:51,945 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
+2019-08-01 19:02:52,154 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-08-01 19:02:52,154 - INFO    - Expyfun: Setting up screen
+2019-08-01 19:02:52,172 - EXP     - Expyfun: Set screen visibility True
+2019-08-01 19:02:52,236 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-08-01 19:02:52,239 - INFO    - Expyfun: Initialization complete
+2019-08-01 19:02:52,239 - EXP     - Expyfun: Participant: foo
+2019-08-01 19:02:52,239 - EXP     - Expyfun: Session: foo
+2019-08-01 19:02:54,453 - INFO    - Expyfun: Exiting
+2019-08-01 19:02:54,456 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -183,7 +183,7 @@ session: foo
             <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
                 <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_scale</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">scale</span> <span class="o">*</span> <span class="mf">0.99</span><span class="p">)</span>
             <span class="k">if</span> <span class="mi">4</span> <span class="o">&lt;</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-                <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">position</span> <span class="o">+</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.array.html#numpy.array" title="View documentation for numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">((</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>
+                <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">position</span> <span class="o">+</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.array.html#numpy.array" title="View documentation for numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">((</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>
         <span class="c1"># parse button presses</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">presses</span><span class="p">):</span>
             <span class="n">all_presses</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">presses</span><span class="p">)</span>
@@ -209,7 +209,7 @@ session: foo
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.471 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.659 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-advanced-video-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/2eb9334281c1c91a347b81f75e48baa6/advanced_video.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">advanced_video.py</span></code></a></p>
@@ -233,7 +233,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-07-12.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
     </p>
   </div>
 </footer>

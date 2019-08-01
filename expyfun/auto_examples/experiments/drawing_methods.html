@@ -123,21 +123,21 @@
 <img alt="../../_images/sphx_glr_drawing_methods_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_drawing_methods_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2019-07-12 17_17_18.671127
+date: 2019-08-01 19_02_18.229037
 file: /home/circleci/project/examples/experiments/drawing_methods.py
 participant: 2
 session: 1
-2019-07-12 17:17:18,671 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-07-12 17:17:18,672 - INFO    - Expyfun: Setting up sound card audio using pyglet backend
-2019-07-12 17:17:18,805 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100).Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-07-12 17:17:18,805 - INFO    - Expyfun: Setting up screen
-2019-07-12 17:17:18,818 - EXP     - Expyfun: Set screen visibility True
-2019-07-12 17:17:18,886 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-07-12 17:17:18,889 - INFO    - Expyfun: Initialization complete
-2019-07-12 17:17:18,889 - EXP     - Expyfun: Participant: 2
-2019-07-12 17:17:18,889 - EXP     - Expyfun: Session: 1
-2019-07-12 17:17:19,777 - INFO    - Expyfun: Exiting
-2019-07-12 17:17:19,779 - EXP     - Expyfun: Audio stopped and reset.
+2019-08-01 19:02:18,229 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-08-01 19:02:18,230 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
+2019-08-01 19:02:18,447 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-08-01 19:02:18,447 - INFO    - Expyfun: Setting up screen
+2019-08-01 19:02:18,462 - EXP     - Expyfun: Set screen visibility True
+2019-08-01 19:02:18,522 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-08-01 19:02:18,524 - INFO    - Expyfun: Initialization complete
+2019-08-01 19:02:18,525 - EXP     - Expyfun: Participant: 2
+2019-08-01 19:02:18,525 - EXP     - Expyfun: Session: 1
+2019-08-01 19:02:19,417 - INFO    - Expyfun: Exiting
+2019-08-01 19:02:19,419 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -161,7 +161,7 @@ session: 1
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 
     <span class="c1"># make an image with  alpha the x-dimension (columns), RGB upward</span>
-    <span class="n">img_buffer</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <span class="n">img_buffer</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
     <span class="n">img_buffer</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
     <span class="n">img_buffer</span><span class="p">[:,</span> <span class="mi">50</span><span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
     <span class="n">img_buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -189,7 +189,7 @@ session: 1
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.234 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.321 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-drawing-methods-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/0fabb5a3713b8ff37a918a525fad3936/drawing_methods.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">drawing_methods.py</span></code></a></p>
@@ -213,7 +213,7 @@ session: 1
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-07-12.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
     </p>
   </div>
 </footer>

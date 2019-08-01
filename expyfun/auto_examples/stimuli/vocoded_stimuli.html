@@ -123,16 +123,16 @@
 <p>&#64;author: larsoner</p>
 <img alt="../../_images/sphx_glr_vocoded_stimuli_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_vocoded_stimuli_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2019-07-12 17:17:41,094 - INFO    - Read WAV file with 1 channel and 414951 samples (format int16)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2019-08-01 19:02:42,001 - INFO    - Read WAV file with 1 channel and 414951 samples (format int16)
 /home/circleci/project/examples/stimuli/vocoded_stimuli.py:26: RuntimeWarning: invalid value encountered in true_divide
   data_noise = data_noise * 0.01 / rms(data_noise)
 /home/circleci/project/examples/stimuli/vocoded_stimuli.py:29: RuntimeWarning: invalid value encountered in true_divide
   data_tone = data_tone * 0.01 / rms(data_tone)
 /home/circleci/project/examples/stimuli/vocoded_stimuli.py:32: RuntimeWarning: invalid value encountered in true_divide
   data_click = data_click * 0.01 / rms(data_click)
-/home/circleci/project/expyfun/_sound_controllers/_pyglet.py:88: RuntimeWarning: invalid value encountered in less
+/home/circleci/project/expyfun/_sound_controllers/_pyglet.py:89: RuntimeWarning: invalid value encountered in less
   data[data &lt; -1] = -1
-/home/circleci/project/expyfun/_sound_controllers/_pyglet.py:89: RuntimeWarning: invalid value encountered in greater
+/home/circleci/project/expyfun/_sound_controllers/_pyglet.py:90: RuntimeWarning: invalid value encountered in greater
   data[data &gt; 1] = 1
 /home/circleci/project/examples/stimuli/vocoded_stimuli.py:60: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
   plt.show()
@@ -152,7 +152,7 @@
 
 <span class="n">data</span><span class="p">,</span> <span class="n">fs</span> <span class="o">=</span> <span class="n">read_wav</span><span class="p">(</span><span class="n">fetch_data_file</span><span class="p">(</span><span class="s1">&#39;audio/dream.wav&#39;</span><span class="p">))</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">window_edges</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">fs</span><span class="p">)</span>
-<span class="n">t</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">size</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">size</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>
 <span class="c1"># noise vocoder</span>
 <span class="n">data_noise</span> <span class="o">=</span> <span class="n">vocode</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;noise&#39;</span><span class="p">)</span>
 <span class="n">data_noise</span> <span class="o">=</span> <span class="n">data_noise</span> <span class="o">*</span> <span class="mf">0.01</span> <span class="o">/</span> <span class="n">rms</span><span class="p">(</span><span class="n">data_noise</span><span class="p">)</span>
@@ -192,7 +192,7 @@
 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="View documentation for matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.063 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.227 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-vocoded-stimuli-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/ebf01dbdfb8a774d967413c61824aaa2/vocoded_stimuli.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vocoded_stimuli.py</span></code></a></p>
@@ -216,7 +216,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-07-12.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
     </p>
   </div>
 </footer>
