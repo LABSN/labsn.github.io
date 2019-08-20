@@ -123,21 +123,21 @@
 <img alt="../../_images/sphx_glr_drawing_methods_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_drawing_methods_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2019-08-01 19_02_18.229037
+date: 2019-08-20 13_36_01.804605
 file: /home/circleci/project/examples/experiments/drawing_methods.py
 participant: 2
 session: 1
-2019-08-01 19:02:18,229 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-08-01 19:02:18,230 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
-2019-08-01 19:02:18,447 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-08-01 19:02:18,447 - INFO    - Expyfun: Setting up screen
-2019-08-01 19:02:18,462 - EXP     - Expyfun: Set screen visibility True
-2019-08-01 19:02:18,522 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-08-01 19:02:18,524 - INFO    - Expyfun: Initialization complete
-2019-08-01 19:02:18,525 - EXP     - Expyfun: Participant: 2
-2019-08-01 19:02:18,525 - EXP     - Expyfun: Session: 1
-2019-08-01 19:02:19,417 - INFO    - Expyfun: Exiting
-2019-08-01 19:02:19,419 - EXP     - Expyfun: Audio stopped and reset.
+2019-08-20 13:36:01,804 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-08-20 13:36:01,805 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
+2019-08-20 13:36:02,009 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-08-20 13:36:02,009 - INFO    - Expyfun: Setting up screen
+2019-08-20 13:36:02,022 - EXP     - Expyfun: Set screen visibility True
+2019-08-20 13:36:02,079 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-08-20 13:36:02,081 - INFO    - Expyfun: Initialization complete
+2019-08-20 13:36:02,081 - EXP     - Expyfun: Participant: 2
+2019-08-20 13:36:02,081 - EXP     - Expyfun: Session: 1
+2019-08-20 13:36:02,908 - INFO    - Expyfun: Exiting
+2019-08-20 13:36:02,910 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -161,13 +161,13 @@ session: 1
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 
     <span class="c1"># make an image with  alpha the x-dimension (columns), RGB upward</span>
-    <span class="n">img_buffer</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-    <span class="n">img_buffer</span><span class="p">[:,</span> <span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
-    <span class="n">img_buffer</span><span class="p">[:,</span> <span class="mi">50</span><span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
-    <span class="n">img_buffer</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <span class="n">img_buffer</span><span class="p">[</span><span class="n">ii</span> <span class="o">*</span> <span class="mi">40</span><span class="p">:(</span><span class="n">ii</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">40</span><span class="p">,</span> <span class="p">:,</span> <span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">RawImage</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">img_buffer</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">2.</span><span class="p">)</span>
+    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">[:,</span> <span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">[:,</span> <span class="mi">50</span><span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">ii</span></a> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">ii</span></a> <span class="o">*</span> <span class="mi">40</span><span class="p">:(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">ii</span></a> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">40</span><span class="p">,</span> <span class="p">:,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">ii</span></a><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">RawImage</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">2.</span><span class="p">)</span>
 
     <span class="c1"># make a line, rectangle, diamond, and circle</span>
     <span class="n">line</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]],</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span>
@@ -182,20 +182,20 @@ session: 1
     <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="p">[</span><span class="n">img</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">rect</span><span class="p">,</span> <span class="n">diamond</span><span class="p">,</span> <span class="n">circle</span><span class="p">]:</span>
         <span class="n">obj</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-    <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>  <span class="c1"># must be called *before* the flip</span>
+    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>  <span class="c1"># must be called *before* the flip</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_for_presses</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.321 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.166 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-drawing-methods-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/0fabb5a3713b8ff37a918a525fad3936/drawing_methods.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">drawing_methods.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/0d589daa0e676ba7f709be451e3eff2b/drawing_methods.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">drawing_methods.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/85e7236845693a03554fbb8eb71527a3/drawing_methods.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">drawing_methods.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/f0a44b9334c97416bd9afb84b9c86b64/drawing_methods.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">drawing_methods.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -213,7 +213,7 @@ session: 1
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-20.<br/>
     </p>
   </div>
 </footer>

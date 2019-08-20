@@ -124,21 +124,21 @@
 <img alt="../../_images/sphx_glr_advanced_video_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_advanced_video_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: advanced video example
-date: 2019-08-01 19_02_51.943887
+date: 2019-08-20 13_36_34.082096
 file: /home/circleci/project/examples/stimuli/advanced_video.py
 participant: foo
 session: foo
-2019-08-01 19:02:51,944 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-08-01 19:02:51,945 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
-2019-08-01 19:02:52,154 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-08-01 19:02:52,154 - INFO    - Expyfun: Setting up screen
-2019-08-01 19:02:52,172 - EXP     - Expyfun: Set screen visibility True
-2019-08-01 19:02:52,236 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-08-01 19:02:52,239 - INFO    - Expyfun: Initialization complete
-2019-08-01 19:02:52,239 - EXP     - Expyfun: Participant: foo
-2019-08-01 19:02:52,239 - EXP     - Expyfun: Session: foo
-2019-08-01 19:02:54,453 - INFO    - Expyfun: Exiting
-2019-08-01 19:02:54,456 - EXP     - Expyfun: Audio stopped and reset.
+2019-08-20 13:36:34,082 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-08-20 13:36:34,083 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
+2019-08-20 13:36:34,265 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-08-20 13:36:34,265 - INFO    - Expyfun: Setting up screen
+2019-08-20 13:36:34,278 - EXP     - Expyfun: Set screen visibility True
+2019-08-20 13:36:34,328 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-08-20 13:36:34,330 - INFO    - Expyfun: Initialization complete
+2019-08-20 13:36:34,331 - EXP     - Expyfun: Participant: foo
+2019-08-20 13:36:34,331 - EXP     - Expyfun: Session: foo
+2019-08-20 13:36:36,499 - INFO    - Expyfun: Exiting
+2019-08-20 13:36:36,501 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -151,43 +151,43 @@ session: foo
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 
-<span class="n">movie_path</span> <span class="o">=</span> <span class="n">fetch_data_file</span><span class="p">(</span><span class="s1">&#39;video/example-video.mp4&#39;</span><span class="p">)</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">movie_path</span></a> <span class="o">=</span> <span class="n">fetch_data_file</span><span class="p">(</span><span class="s1">&#39;video/example-video.mp4&#39;</span><span class="p">)</span>
 
-<span class="n">ec_args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">exp_name</span><span class="o">=</span><span class="s1">&#39;advanced video example&#39;</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">720</span><span class="p">,</span> <span class="mi">480</span><span class="p">),</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="View documentation for builtins.dict"><span class="n">ec_args</span></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">exp_name</span><span class="o">=</span><span class="s1">&#39;advanced video example&#39;</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">720</span><span class="p">,</span> <span class="mi">480</span><span class="p">),</span>
                <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
                <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">enable_video</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="s1">&#39;rgbcmyk&#39;</span><span class="p">]</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">colors</span></a> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="s1">&#39;rgbcmyk&#39;</span><span class="p">]</span>
 
-<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="o">**</span><span class="n">ec_args</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="View documentation for builtins.dict"><span class="n">ec_args</span></a><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">screen_period</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">estimate_screen_fs</span><span class="p">()</span>
-    <span class="n">all_presses</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">load_video</span><span class="p">(</span><span class="n">movie_path</span><span class="p">)</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">all_presses</span></a> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">load_video</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">movie_path</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_scale</span><span class="p">(</span><span class="s1">&#39;fill&#39;</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;press 1 during video to toggle pause.&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">listen_presses</span><span class="p">()</span>  <span class="c1"># to catch presses on first pass of while loop</span>
-    <span class="n">t_zero</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
-    <span class="n">this_sec</span> <span class="o">=</span> <span class="mi">0</span>
+    <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">t_zero</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+    <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">this_sec</span></a> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">finished</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">playing</span><span class="p">:</span>
-            <span class="n">fliptime</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+            <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">fliptime</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <span class="k">else</span><span class="p">:</span>  <span class="c1"># to catch presses reliably, need delay between loop executions</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="n">screen_period</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span>
-        <span class="n">presses</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">get_presses</span><span class="p">(</span><span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">relative_to</span><span class="o">=</span><span class="n">t_zero</span><span class="p">)</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">presses</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">get_presses</span><span class="p">(</span><span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">relative_to</span><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">t_zero</span></a><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">listen_presses</span><span class="p">()</span>
         <span class="c1"># change the background color every 1 second</span>
-        <span class="k">if</span> <span class="n">this_sec</span> <span class="o">!=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
-            <span class="n">this_sec</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
-            <span class="n">ec</span><span class="o">.</span><span class="n">set_background_color</span><span class="p">(</span><span class="n">colors</span><span class="p">[</span><span class="n">this_sec</span><span class="p">])</span>
+        <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">this_sec</span></a> <span class="o">!=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
+            <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">this_sec</span></a> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+            <span class="n">ec</span><span class="o">.</span><span class="n">set_background_color</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">colors</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">this_sec</span></a><span class="p">])</span>
         <span class="c1"># shrink the video, then move it rightward</span>
         <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">playing</span><span class="p">:</span>
             <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
                 <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_scale</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">scale</span> <span class="o">*</span> <span class="mf">0.99</span><span class="p">)</span>
             <span class="k">if</span> <span class="mi">4</span> <span class="o">&lt;</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-                <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">position</span> <span class="o">+</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.array.html#numpy.array" title="View documentation for numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">((</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>
+                <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">position</span> <span class="o">+</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.array.html#numpy.array" title="View documentation for numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">((</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>
         <span class="c1"># parse button presses</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">presses</span><span class="p">):</span>
-            <span class="n">all_presses</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">presses</span><span class="p">)</span>
-            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">presses</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># if even number of presses, do nothing</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">presses</span></a><span class="p">):</span>
+            <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">all_presses</span></a><span class="o">.</span><span class="n">extend</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">presses</span></a><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">presses</span></a><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># if even number of presses, do nothing</span>
                 <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">playing</span><span class="p">:</span>
                     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
                     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">pause</span><span class="p">()</span>
@@ -197,25 +197,25 @@ session: foo
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
                     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
-        <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>
+        <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>
         <span class="k">if</span> <span class="n">building_doc</span><span class="p">:</span>
             <span class="k">break</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">delete_video</span><span class="p">()</span>
-    <span class="n">preamble</span> <span class="o">=</span> <span class="s1">&#39;press times:&#39;</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">all_presses</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;no presses&#39;</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">{0:.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">all_presses</span><span class="p">])</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">preamble</span></a> <span class="o">=</span> <span class="s1">&#39;press times:&#39;</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">all_presses</span></a><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;no presses&#39;</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">msg</span></a> <span class="o">=</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;</span><span class="si">{0:.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">all_presses</span></a><span class="p">])</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">preamble</span><span class="p">,</span> <span class="n">msg</span><span class="p">]),</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">preamble</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">msg</span></a><span class="p">]),</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
 
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.659 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.486 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-advanced-video-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/2eb9334281c1c91a347b81f75e48baa6/advanced_video.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">advanced_video.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/df5bf05169b5b8f26a0bf9b99843c7f7/advanced_video.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">advanced_video.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/254ba1a06b87f50b3b9b95214ddfaf30/advanced_video.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">advanced_video.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/1b225f0ff2fc23a1bd5ee879a59ab296/advanced_video.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">advanced_video.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -233,7 +233,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-20.<br/>
     </p>
   </div>
 </footer>

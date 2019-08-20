@@ -125,21 +125,21 @@ already been installed.</p>
 <img alt="../../_images/sphx_glr_simple_video_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_simple_video_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: simple video example
-date: 2019-08-01 19_02_35.625098
+date: 2019-08-20 13_36_18.994651
 file: /home/circleci/project/examples/stimuli/simple_video.py
 participant: foo
 session: foo
-2019-08-01 19:02:35,625 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-08-01 19:02:35,626 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
-2019-08-01 19:02:35,871 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-08-01 19:02:35,872 - INFO    - Expyfun: Setting up screen
-2019-08-01 19:02:35,886 - EXP     - Expyfun: Set screen visibility True
-2019-08-01 19:02:35,949 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-08-01 19:02:35,952 - INFO    - Expyfun: Initialization complete
-2019-08-01 19:02:35,952 - EXP     - Expyfun: Participant: foo
-2019-08-01 19:02:35,952 - EXP     - Expyfun: Session: foo
-2019-08-01 19:02:37,159 - INFO    - Expyfun: Exiting
-2019-08-01 19:02:37,161 - EXP     - Expyfun: Audio stopped and reset.
+2019-08-20 13:36:18,994 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-08-20 13:36:18,995 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
+2019-08-20 13:36:19,195 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-08-20 13:36:19,196 - INFO    - Expyfun: Setting up screen
+2019-08-20 13:36:19,209 - EXP     - Expyfun: Set screen visibility True
+2019-08-20 13:36:19,259 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-08-20 13:36:19,262 - INFO    - Expyfun: Initialization complete
+2019-08-20 13:36:19,262 - EXP     - Expyfun: Participant: foo
+2019-08-20 13:36:19,262 - EXP     - Expyfun: Session: foo
+2019-08-20 13:36:20,431 - INFO    - Expyfun: Exiting
+2019-08-20 13:36:20,433 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -150,36 +150,36 @@ session: foo
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
-<span class="n">movie_path</span> <span class="o">=</span> <span class="n">fetch_data_file</span><span class="p">(</span><span class="s1">&#39;video/example-video.mp4&#39;</span><span class="p">)</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">movie_path</span></a> <span class="o">=</span> <span class="n">fetch_data_file</span><span class="p">(</span><span class="s1">&#39;video/example-video.mp4&#39;</span><span class="p">)</span>
 
-<span class="n">ec_args</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">exp_name</span><span class="o">=</span><span class="s1">&#39;simple video example&#39;</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">720</span><span class="p">,</span> <span class="mi">480</span><span class="p">),</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="View documentation for builtins.dict"><span class="n">ec_args</span></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">exp_name</span><span class="o">=</span><span class="s1">&#39;simple video example&#39;</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">720</span><span class="p">,</span> <span class="mi">480</span><span class="p">),</span>
                <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
                <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">enable_video</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 
-<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="o">**</span><span class="n">ec_args</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">load_video</span><span class="p">(</span><span class="n">movie_path</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="View documentation for builtins.dict"><span class="n">ec_args</span></a><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">load_video</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">movie_path</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_scale</span><span class="p">(</span><span class="s1">&#39;fit&#39;</span><span class="p">)</span>
-    <span class="n">t_zero</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+    <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">t_zero</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">finished</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">playing</span><span class="p">:</span>
-            <span class="n">fliptime</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-        <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>
+            <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">fliptime</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+        <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>
         <span class="k">if</span> <span class="n">building_doc</span><span class="p">:</span>
             <span class="k">break</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">delete_video</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;video over&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
 
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.914 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.806 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-simple-video-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/6ddd102b32353d433b8817777a0f2a67/simple_video.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">simple_video.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/b08534aecb65ddb96956804343d90fa4/simple_video.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">simple_video.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/867e0ace33bea512f1b7f677c77b5b35/simple_video.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">simple_video.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/11a391427bda6908394af12a575e3f67/simple_video.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">simple_video.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -197,7 +197,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-20.<br/>
     </p>
   </div>
 </footer>

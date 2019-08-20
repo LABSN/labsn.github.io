@@ -124,7 +124,7 @@
 <img alt="../../_images/sphx_glr_progress_bar_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_progress_bar_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: name
-date: 2019-08-01 19_02_20.399815
+date: 2019-08-20 13_36_03.778792
 file: /home/circleci/project/examples/experiments/progress_bar.py
 participant: foo
 session: foo
@@ -138,9 +138,9 @@ session: foo
 <span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">n_trials</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="n">max_wait</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <a href="https://numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a>
-<span class="n">wait_dur</span> <span class="o">=</span> <span class="mf">0.1</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.5</span>
+<a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">n_trials</span></a> <span class="o">=</span> <span class="mi">6</span>
+<a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a> <span class="o">=</span> <span class="mf">0.1</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a>
+<a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">wait_dur</span></a> <span class="o">=</span> <span class="mf">0.1</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.5</span>
 
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span> <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
                           <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span>
@@ -150,45 +150,45 @@ session: foo
     <span class="n">pb</span> <span class="o">=</span> <span class="n">ProgressBar</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-.</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">)</span>
 
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Press the number shown on the screen. Start by pressing&#39;</span>
-                     <span class="s1">&#39; 1.&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
+                     <span class="s1">&#39; 1.&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="p">)</span>
 
-    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="n">n_trials</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">n_trials</span></a><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
         <span class="c1"># subject does some task</span>
-        <span class="n">number</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-        <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">),</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">number</span></a> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">number</span></a><span class="p">),</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-        <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="n">number</span><span class="p">],</span> <span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">number</span></a><span class="p">],</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-        <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="n">wait_dur</span><span class="p">)</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">wait_dur</span></a><span class="p">)</span>
         <span class="c1"># only show progress bar every other trial</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="c1"># calculate percent done and update the bar object</span>
-            <span class="n">percent</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <span class="n">n_trials</span><span class="p">)</span>
-            <span class="n">pb</span><span class="o">.</span><span class="n">update_bar</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span>
+            <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">percent</span></a> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">/</span> <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">n_trials</span></a><span class="p">)</span>
+            <span class="n">pb</span><span class="o">.</span><span class="n">update_bar</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">percent</span></a><span class="p">)</span>
             <span class="c1"># display the progress bar with some text</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;You</span><span class="se">\&#39;</span><span class="s1">ve completed </span><span class="si">{}</span><span class="s1"> %. Press any key to proceed.&#39;</span>
-                           <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">percent</span><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">],</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                           <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">percent</span></a><span class="p">),</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">],</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                            <span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
             <span class="n">pb</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
             <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
-                <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>
+                <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
             <span class="c1"># subject uses any key press to proceed</span>
-            <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="n">max_wait</span><span class="o">=</span><span class="n">max_wait</span><span class="p">)</span>
+            <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;This example is complete.&#39;</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.294 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.186 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-progress-bar-py">
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/c83d103723b35925f9fdbb9e22991fe6/progress_bar.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">progress_bar.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/aa5f823fd06f8c92f5708b2f44d3c288/progress_bar.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">progress_bar.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/0a1c05d9fdfa5677bb0c2b8f0a5f2063/progress_bar.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">progress_bar.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/c596141f8234b087705423027467f80f/progress_bar.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">progress_bar.ipynb</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -206,7 +206,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-01.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-20.<br/>
     </p>
   </div>
 </footer>
