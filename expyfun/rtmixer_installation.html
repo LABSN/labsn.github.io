@@ -123,7 +123,6 @@ itself to be compiled from source (no pip wheels yet).</p>
 <ul>
 <li><dl>
 <dt><em class="fa fa-linux"></em> Linux / <em class="fa fa-apple"></em> macOS</dt><dd><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sudo apt install libportaudio2  <span class="c1"># only if on Linux!</span>
-<span class="gp">$</span> brew install portaudio  <span class="c1"># only if on OSX!</span>
 <span class="gp">$</span> pip install sounddevice
 <span class="gp">$</span> python -m sounddevice  <span class="c1"># just to see if it worked</span>
 <span class="gp">$</span> git clone git://github.com/spatialaudio/python-rtmixer
@@ -141,14 +140,9 @@ suitable macOS library path.</p>
 </dd>
 </dl>
 </li>
-<li><dl>
-<dt><em class="fa fa-windows"></em> Windows</dt><dd><p>Assuming you are on a modern Windows system (i.e., 64-bit):</p>
-<ul class="simple">
-<li><p>Download <code class="docutils literal notranslate"><span class="pre">libportaudio64bit.dll</span></code> from the <a class="reference external" href="https://github.com/spatialaudio/portaudio-binaries">PortAudio binaries site</a></p></li>
-<li><p>Rename it to <code class="docutils literal notranslate"><span class="pre">libportaudio.dll</span></code></p></li>
-<li><p>Place it in <code class="docutils literal notranslate"><span class="pre">C:\Windows\System32\</span></code></p></li>
-</ul>
-<p>Because Windows support for compiling is pretty bad, <code class="docutils literal notranslate"><span class="pre">python-rtmixer</span></code>
+<li><p><em class="fa fa-windows"></em> Windows</p>
+<blockquote>
+<div><p>Because Windows support for compiling is pretty bad, <code class="docutils literal notranslate"><span class="pre">python-rtmixer</span></code>
 probably will not install directly using <code class="docutils literal notranslate"><span class="pre">pip</span></code>, because you need
 Visual Studio (typically version 14.0+ should work). If you are running
 Python 3.7, you can use this precompiled binary for now:</p>
@@ -159,8 +153,7 @@ Python 3.7, you can use this precompiled binary for now:</p>
 </div>
 <p>If you are on Python 3.6 you can try
 <a class="reference external" href="https://staff.washington.edu/larsoner/rtmixer-0.0.0-cp36-cp36m-win_amd64.whl">this binary</a>.</p>
-</dd>
-</dl>
+</div></blockquote>
 </li>
 </ul>
 </div>
@@ -177,7 +170,7 @@ Python 3.7, you can use this precompiled binary for now:</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-21.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-22.<br/>
     </p>
   </div>
 </footer>
