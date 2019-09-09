@@ -155,25 +155,28 @@ if preferred):</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">numpy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pyglet</span></code>: 1.2.0 or later is recommended</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyglet</span></code>: 1.2.0 or later is recommended but 1.4.0 is not fully supported
+yet, so use e.g. <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">&quot;pyglet&lt;1.4&quot;</span></code>.</p></li>
 </ul>
 </li>
 <li><p>Optional libraries:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">rtmixer</span></code>: for high precision audio playback, see <a class="reference internal" href="rtmixer_installation.html#rtmixer-installation"><span class="std std-ref">Installing rtmixer</span></a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pyparallel</span></code> or <code class="docutils literal notranslate"><span class="pre">inpout32.dll</span></code>: for parallel port triggering, see
-<a class="reference internal" href="parallel_installation.html#parallel-installation"><span class="std std-ref">Parallel port triggering</span></a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">TDTpy</span></code>: if using TDT on Windows</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">mne</span></code>: for filtering/resampling – with CUDA if mne dependencies installed</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code>: Some plotting functions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rtmixer</span></code>: High precision audio playback, can be installed with
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">rtmixer</span></code>. On Linux you’ll also need the <code class="docutils literal notranslate"><span class="pre">libportaudio2</span></code>
+system package.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pyparallel</span></code> or <code class="docutils literal notranslate"><span class="pre">inpout32.dll</span></code>: Parallel port triggering,
+see <a class="reference internal" href="parallel_installation.html#parallel-installation"><span class="std std-ref">Parallel port triggering</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">TDTpy</span></code>: Using the TDT (only available on Windows).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mne</span></code>:  Filtering and resampling stimuli.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code>: Required for some plotting functions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">joblib</span></code>: Parallel processing</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">h5py</span></code>: HDF5 write/read</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">h5py</span></code>: HDF5-based writing and reading.</p></li>
 </ul>
 </li>
 <li><p>Optional system software:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">git</span></code>: command-line tools needed for automated version downloading</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">AVbin</span></code>: if playing compressed videos</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">git</span></code>: Command-line tools needed for automated version downloading.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AVbin</span></code>: For playing compressed videos.</p></li>
 </ul>
 </li>
 </ul>
@@ -182,9 +185,9 @@ if preferred):</p>
 <h3><a class="toc-backref" href="#id4">Expyfun</a><a class="headerlink" href="#expyfun" title="Permalink to this headline">¶</a></h3>
 <p>The recommended way to install expyfun on
 development machines is to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> the reposity then do:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> pip install -e .
-</pre></div>
-</div>
+<blockquote>
+<div><p>$ pip install -e .</p>
+</div></blockquote>
 <p>This allows you to stay up to date with updates, changes, and bugfixes,
 and easily switch between versions.</p>
 </div>
@@ -227,7 +230,7 @@ static version of expyfun once an experiment is in its finalized state.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-22.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-09-09.<br/>
     </p>
   </div>
 </footer>

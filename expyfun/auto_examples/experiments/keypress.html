@@ -124,21 +124,21 @@ in the ExperimentController class.</p>
 <img alt="../../_images/sphx_glr_keypress_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_keypress_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: KeypressDemo
-date: 2019-08-22 19_01_35.375136
+date: 2019-09-09 14_25_32.211446
 file: /home/circleci/project/examples/experiments/keypress.py
 participant: foo
 session: 001
-2019-08-22 19:01:35,375 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-08-22 19:01:35,376 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
-2019-08-22 19:01:35,597 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-08-22 19:01:35,597 - INFO    - Expyfun: Setting up screen
-2019-08-22 19:01:35,610 - EXP     - Expyfun: Set screen visibility True
-2019-08-22 19:01:35,668 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-08-22 19:01:35,670 - INFO    - Expyfun: Initialization complete
-2019-08-22 19:01:35,671 - EXP     - Expyfun: Participant: foo
-2019-08-22 19:01:35,671 - EXP     - Expyfun: Session: 001
-2019-08-22 19:01:39,354 - INFO    - Expyfun: Exiting
-2019-08-22 19:01:39,356 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-09 14:25:32,211 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-09-09 14:25:32,212 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2019-09-09 14:25:32,442 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-09-09 14:25:32,443 - INFO    - Expyfun: Setting up screen
+2019-09-09 14:25:32,461 - EXP     - Expyfun: Set screen visibility True
+2019-09-09 14:25:32,518 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-09-09 14:25:32,520 - INFO    - Expyfun: Initialization complete
+2019-09-09 14:25:32,520 - EXP     - Expyfun: Participant: foo
+2019-09-09 14:25:32,520 - EXP     - Expyfun: Session: 001
+2019-09-09 14:25:36,221 - INFO    - Expyfun: Exiting
+2019-09-09 14:25:36,223 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -183,7 +183,7 @@ session: 001
     <span class="c1"># wait_for_presses</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;press some keys</span><span class="se">\n\n</span><span class="s1">wait_for_presses(max_wait=</span><span class="si">{}</span><span class="s1">)&#39;</span>
                    <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">wait_dur</span></a><span class="p">))</span>
-    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">pressed</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_for_presses</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">wait_dur</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">write_data_line</span><span class="p">(</span><span class="s1">&#39;wait_for_presses&#39;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">pressed</span></a><span class="p">)</span>
@@ -303,10 +303,10 @@ session: 001
         <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">message</span></a> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">message</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">message</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">msg_dur</span></a><span class="p">)</span>
 
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.055 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.088 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-keypress-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/3459d59db28e5ae90ed60794c0aa77b3/keypress.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">keypress.py</span></code></a></p>
@@ -330,7 +330,7 @@ session: 001
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-22.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-09-09.<br/>
     </p>
   </div>
 </footer>

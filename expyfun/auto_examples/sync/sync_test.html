@@ -127,24 +127,24 @@ timings, whereas Compiz WMs did not (doubled timings).</p>
 <img alt="../../_images/sphx_glr_sync_test_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_sync_test_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: SyncTest
-date: 2019-08-22 19_01_59.023818
+date: 2019-09-09 14_25_57.448634
 file: /home/circleci/project/examples/sync/sync_test.py
 participant: s
 session: 0
-2019-08-22 19:01:59,024 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-08-22 19:01:59,025 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
-2019-08-22 19:01:59,214 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Nothing will be done about this because suppress_resamp is &quot;True&quot;
-2019-08-22 19:01:59,214 - INFO    - Expyfun: Setting up screen
-2019-08-22 19:01:59,231 - EXP     - Expyfun: Set screen visibility True
-2019-08-22 19:01:59,311 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-08-22 19:01:59,314 - INFO    - Expyfun: Initialization complete
-2019-08-22 19:01:59,314 - EXP     - Expyfun: Participant: s
-2019-08-22 19:01:59,314 - EXP     - Expyfun: Session: 0
-2019-08-22 19:01:59,317 - EXP     - Expyfun: Loading 200 samples to buffer
-2019-08-22 19:01:59,365 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-08-22 19:01:59,649 - EXP     - Expyfun: Audio stopped and reset.
-2019-08-22 19:01:59,649 - INFO    - Expyfun: Exiting
-2019-08-22 19:01:59,651 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-09 14:25:57,448 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-09-09 14:25:57,450 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2019-09-09 14:25:57,683 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2019-09-09 14:25:57,683 - INFO    - Expyfun: Setting up screen
+2019-09-09 14:25:57,700 - EXP     - Expyfun: Set screen visibility True
+2019-09-09 14:25:57,807 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-09-09 14:25:57,810 - INFO    - Expyfun: Initialization complete
+2019-09-09 14:25:57,810 - EXP     - Expyfun: Participant: s
+2019-09-09 14:25:57,810 - EXP     - Expyfun: Session: 0
+2019-09-09 14:25:57,813 - EXP     - Expyfun: Loading 200 samples to buffer
+2019-09-09 14:25:57,883 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-09-09 14:25:58,231 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-09 14:25:58,231 - INFO    - Expyfun: Exiting
+2019-09-09 14:25:58,234 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -165,17 +165,17 @@ session: 0
 
 <span class="c1"># Fullscreen MUST be used to guarantee flip accuracy!</span>
 <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">n_channels</span></a> <span class="o">=</span> <span class="mi">2</span>
-<a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">click_idx</span></a> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;SyncTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">,</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">click_idx</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;SyncTest&#39;</span><span class="p">,</span> <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">noise_db</span><span class="o">=-</span><a href="https://numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">,</span>
                           <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <span class="n">suppress_resamp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">check_rms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                           <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">n_channels</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">n_channels</span></a><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">click</span></a> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.r_.html#numpy.r_" title="View documentation for numpy.r_"><span class="n">np</span><span class="o">.</span><span class="n">r_</span></a><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="mi">99</span><span class="p">)]</span>  <span class="c1"># RMS = 0.01</span>
-    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">data</span></a> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">n_channels</span></a><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">click</span></a><span class="p">)))</span>
-    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">data</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">click_idx</span></a><span class="p">]</span> <span class="o">=</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">click</span></a>
-    <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">data</span></a><span class="p">)</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">click</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.r_.html#numpy.r_" title="View documentation for numpy.r_"><span class="n">np</span><span class="o">.</span><span class="n">r_</span></a><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="mi">99</span><span class="p">)]</span>  <span class="c1"># RMS = 0.01</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">data</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">n_channels</span></a><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">click</span></a><span class="p">)))</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">data</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">click_idx</span></a><span class="p">]</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">click</span></a>
+    <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">data</span></a><span class="p">)</span>
     <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a> <span class="o">=</span> <span class="kc">None</span>
-    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="kc">None</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="kc">None</span>
     <span class="c1"># Make a circle so that the photodiode can be centered on the screen</span>
     <span class="n">circle</span> <span class="o">=</span> <span class="n">Circle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
     <span class="k">while</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a> <span class="o">!=</span> <span class="s1">&#39;8&#39;</span><span class="p">:</span>  <span class="c1"># enable a clean quit if required</span>
@@ -186,17 +186,17 @@ session: 0
         <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">diff</span></a> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">t2</span></a> <span class="o">-</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">t1</span></a><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;IFI (ms): </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">diff</span></a><span class="p">),</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="n">circle</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-        <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span> <span class="k">if</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a>
+        <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span> <span class="k">if</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">stamp_triggers</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">refocus</span><span class="p">()</span>
         <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="s1">&#39;8&#39;</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.709 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.901 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sync-test-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/39dd3714bef9d11371c8a90ec603b492/sync_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sync_test.py</span></code></a></p>
@@ -220,7 +220,7 @@ session: 0
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-22.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-09-09.<br/>
     </p>
   </div>
 </footer>

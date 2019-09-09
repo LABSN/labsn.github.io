@@ -163,13 +163,13 @@ script:</p>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Valid callsigns are </span><span class="si">{0}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">crm_info</span><span class="p">()[</span><span class="s1">&#39;callsign&#39;</span><span class="p">]))</span>
 
 <span class="c1"># read a sentence in from the hard drive</span>
-<a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x1</span></a> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">crm_sentence</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">fs</span></a><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x1</span></a> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">crm_sentence</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">fs</span></a><span class="p">,</span> <span class="s1">&#39;m&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
 
 <span class="c1"># preload all the talkers and get a second sentence from memory</span>
 <span class="n">crm</span> <span class="o">=</span> <span class="n">CRMPreload</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">fs</span></a><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
-<a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x2</span></a> <span class="o">=</span> <span class="n">crm</span><span class="o">.</span><span class="n">sentence</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;ringo&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">)</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x2</span></a> <span class="o">=</span> <span class="n">crm</span><span class="o">.</span><span class="n">sentence</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;ringo&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">)</span>
 
-<a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x</span></a> <span class="o">=</span> <span class="n">add_pad</span><span class="p">([</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x1</span></a><span class="p">,</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x2</span></a><span class="p">],</span> <span class="n">alignment</span><span class="o">=</span><span class="s1">&#39;start&#39;</span><span class="p">)</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x</span></a> <span class="o">=</span> <span class="n">add_pad</span><span class="p">([</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x1</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x2</span></a><span class="p">],</span> <span class="n">alignment</span><span class="o">=</span><span class="s1">&#39;start&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p class="sphx-glr-script-out">Out:</p>
@@ -191,56 +191,56 @@ Valid callsigns are [&#39;charlie&#39;, &#39;ringo&#39;, &#39;laker&#39;, &#39;h
         <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">stim_fs</span><span class="o">=</span><span class="mi">40000</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;Report the color and number spoken by the female &#39;</span>
                    <span class="s1">&#39;talker.&#39;</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="p">)</span>
 
-    <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x</span></a><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">x</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[])</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.shape.html#numpy.ndarray.shape" title="View documentation for numpy.ndarray.shape"><span class="n">x</span><span class="o">.</span><span class="n">shape</span></a><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">fs</span></a><span class="p">))</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.shape.html#numpy.ndarray.shape" title="View documentation for numpy.ndarray.shape"><span class="n">x</span><span class="o">.</span><span class="n">shape</span></a><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">fs</span></a><span class="p">))</span>
 
-    <a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="View documentation for builtins.tuple"><span class="n">resp</span></a> <span class="o">=</span> <span class="n">crm_response_menu</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="o">=</span><span class="mf">0.01</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <a href="https://www.numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">)</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="View documentation for builtins.tuple"><span class="n">resp</span></a> <span class="o">=</span> <span class="n">crm_response_menu</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="o">=</span><span class="mf">0.01</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <a href="https://numpy.org/devdocs/reference/constants.html#numpy.inf" title="View documentation for numpy.inf"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">)</span>
     <span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="View documentation for builtins.tuple"><span class="n">resp</span></a> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;6&#39;</span><span class="p">):</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Correct!&#39;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Incorrect.&#39;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
 
-<span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
+<span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <img alt="../../_images/sphx_glr_crm_stimuli_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_crm_stimuli_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: CRM corpus example
-date: 2019-08-22 19_01_51.800524
+date: 2019-09-09 14_25_49.577381
 file: /home/circleci/project/examples/stimuli/crm_stimuli.py
 participant: foo
 session: foo
-2019-08-22 19:01:51,800 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-08-22 19:01:51,801 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
-2019-08-22 19:01:52,041 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-08-22 19:01:52,041 - INFO    - Expyfun: Setting up screen
-2019-08-22 19:01:52,054 - EXP     - Expyfun: Set screen visibility True
-2019-08-22 19:01:52,117 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-08-22 19:01:52,120 - INFO    - Expyfun: Initialization complete
-2019-08-22 19:01:52,120 - EXP     - Expyfun: Participant: foo
-2019-08-22 19:01:52,120 - EXP     - Expyfun: Session: foo
-2019-08-22 19:01:52,220 - WARNING - Expyfun: Resampling 2 seconds of audio
-2019-08-22 19:01:52,308 - WARNING - Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
-/home/circleci/project/expyfun/_experiment_controller.py:1683: UserWarning: Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
+2019-09-09 14:25:49,577 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-09-09 14:25:49,578 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2019-09-09 14:25:49,835 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-09-09 14:25:49,835 - INFO    - Expyfun: Setting up screen
+2019-09-09 14:25:49,856 - EXP     - Expyfun: Set screen visibility True
+2019-09-09 14:25:49,921 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-09-09 14:25:49,923 - INFO    - Expyfun: Initialization complete
+2019-09-09 14:25:49,924 - EXP     - Expyfun: Participant: foo
+2019-09-09 14:25:49,924 - EXP     - Expyfun: Session: foo
+2019-09-09 14:25:50,057 - WARNING - Expyfun: Resampling 2 seconds of audio
+2019-09-09 14:25:50,170 - WARNING - Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
+/home/circleci/project/expyfun/_experiment_controller.py:1704: UserWarning: Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
   warnings.warn(warn_string)
-2019-08-22 19:01:52,309 - EXP     - Expyfun: Loading 177652 samples to buffer
-2019-08-22 19:01:52,310 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2019-08-22 19:01:52,310 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
-2019-08-22 19:01:52,310 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-08-22 19:01:55,800 - WARNING - ec.trial_ok called before stimulus had stopped
-2019-08-22 19:01:55,800 - EXP     - Expyfun: Trial OK
-2019-08-22 19:01:55,800 - INFO    - Expyfun: Exiting
-2019-08-22 19:01:55,802 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-09 14:25:50,171 - EXP     - Expyfun: Loading 177652 samples to buffer
+2019-09-09 14:25:50,172 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2019-09-09 14:25:50,172 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
+2019-09-09 14:25:50,172 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-09-09 14:25:54,036 - WARNING - ec.trial_ok called before stimulus had stopped
+2019-09-09 14:25:54,037 - EXP     - Expyfun: Trial OK
+2019-09-09 14:25:54,037 - INFO    - Expyfun: Exiting
+2019-09-09 14:25:54,040 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.664 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  8.881 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-crm-stimuli-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/7d489216b49bb70746bfa094192a65c5/crm_stimuli.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">crm_stimuli.py</span></code></a></p>
@@ -265,7 +265,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-22.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-09-09.<br/>
     </p>
   </div>
 </footer>

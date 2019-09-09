@@ -124,21 +124,21 @@
 <img alt="../../_images/sphx_glr_advanced_video_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_advanced_video_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: advanced video example
-date: 2019-08-22 19_01_55.967032
+date: 2019-09-09 14_25_54.238149
 file: /home/circleci/project/examples/stimuli/advanced_video.py
 participant: foo
 session: foo
-2019-08-22 19:01:55,967 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-08-22 19:01:55,968 - INFO    - Expyfun: Setting up sound card audio using pyglet backend and 2 channels
-2019-08-22 19:01:56,161 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-08-22 19:01:56,162 - INFO    - Expyfun: Setting up screen
-2019-08-22 19:01:56,176 - EXP     - Expyfun: Set screen visibility True
-2019-08-22 19:01:56,234 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-08-22 19:01:56,237 - INFO    - Expyfun: Initialization complete
-2019-08-22 19:01:56,237 - EXP     - Expyfun: Participant: foo
-2019-08-22 19:01:56,237 - EXP     - Expyfun: Session: foo
-2019-08-22 19:01:58,431 - INFO    - Expyfun: Exiting
-2019-08-22 19:01:58,433 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-09 14:25:54,238 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-09-09 14:25:54,239 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2019-09-09 14:25:54,462 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-09-09 14:25:54,463 - INFO    - Expyfun: Setting up screen
+2019-09-09 14:25:54,482 - EXP     - Expyfun: Set screen visibility True
+2019-09-09 14:25:54,537 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-09-09 14:25:54,539 - INFO    - Expyfun: Initialization complete
+2019-09-09 14:25:54,540 - EXP     - Expyfun: Participant: foo
+2019-09-09 14:25:54,540 - EXP     - Expyfun: Session: foo
+2019-09-09 14:25:56,776 - INFO    - Expyfun: Exiting
+2019-09-09 14:25:56,778 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -183,7 +183,7 @@ session: foo
             <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
                 <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_scale</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">scale</span> <span class="o">*</span> <span class="mf">0.99</span><span class="p">)</span>
             <span class="k">if</span> <span class="mi">4</span> <span class="o">&lt;</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-                <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">position</span> <span class="o">+</span> <a href="https://www.numpy.org/devdocs/reference/generated/numpy.array.html#numpy.array" title="View documentation for numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">((</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>
+                <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">position</span> <span class="o">+</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.array.html#numpy.array" title="View documentation for numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">((</span><span class="mf">0.01</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>
         <span class="c1"># parse button presses</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">presses</span></a><span class="p">):</span>
             <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">all_presses</span></a><span class="o">.</span><span class="n">extend</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">presses</span></a><span class="p">)</span>
@@ -197,7 +197,7 @@ session: foo
                 <span class="k">else</span><span class="p">:</span>
                     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
                     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
-        <a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>
+        <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>
         <span class="k">if</span> <span class="n">building_doc</span><span class="p">:</span>
             <span class="k">break</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">delete_video</span><span class="p">()</span>
@@ -206,10 +206,10 @@ session: foo
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">preamble</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">msg</span></a><span class="p">]),</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
 
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://www.numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.530 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.610 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-advanced-video-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/df5bf05169b5b8f26a0bf9b99843c7f7/advanced_video.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">advanced_video.py</span></code></a></p>
@@ -233,7 +233,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-08-22.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-09-09.<br/>
     </p>
   </div>
 </footer>
