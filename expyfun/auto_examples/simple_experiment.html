@@ -16,8 +16,6 @@
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Parsing demo" href="analysis/parse_demo.html" />
-    <link rel="prev" title="Generate sample stimuli" href="generate_simple_stimuli.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../_static/style.css " type="text/css" />
 <link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
@@ -64,12 +62,7 @@
      href="../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../getting_started.html">Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Examples</a></li>
-</ul>
-</ul>
+      aria-labelledby="dLabelGlobalToc"></ul>
 </li>
               
                 <li class="dropdown">
@@ -131,77 +124,77 @@ This shows how to generate some simple stimuli. It will also play a couple
 of sample stimuli.
 
 exp_name: testExp
-date: 2019-09-26 15_15_33.830113
+date: 2019-09-26 18_56_31.549439
 file: /home/circleci/project/examples/simple_experiment.py
 participant: foo
 session: 001
-2019-09-26 15:15:33,830 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-09-26 15:15:33,831 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2019-09-26 15:15:34,039 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414.0625) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-09-26 15:15:34,039 - INFO    - Expyfun: Setting up screen
-2019-09-26 15:15:34,052 - EXP     - Expyfun: Set screen visibility True
-2019-09-26 15:15:34,110 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-09-26 15:15:34,112 - INFO    - Expyfun: Initialization complete
-2019-09-26 15:15:34,112 - EXP     - Expyfun: Participant: foo
-2019-09-26 15:15:34,112 - EXP     - Expyfun: Session: 001
-2019-09-26 15:15:34,114 - EXP     - Expyfun: Set screen visibility False
-2019-09-26 15:15:34,114 - EXP     - Expyfun: Set screen visibility True
-2019-09-26 15:15:34,639 - WARNING - Expyfun: Resampling 0 seconds of audio
-2019-09-26 15:15:34,655 - EXP     - Expyfun: Loading 44100 samples to buffer
-2019-09-26 15:15:34,656 - EXP     - Expyfun: Stamp trial ID to ec_id  : 2
-2019-09-26 15:15:34,656 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2019-09-26 15:15:34,656 - EXP     - Stamping TTL triggers: [4 4]
-2019-09-26 15:15:34,697 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-09-26 15:15:34,699 - EXP     - Stamping TTL triggers: [1]
-2019-09-26 15:15:34,709 - EXP     - Expyfun: Audio stopped and reset.
-2019-09-26 15:15:34,710 - EXP     - Expyfun: Trial OK
-2019-09-26 15:15:34,918 - WARNING - Expyfun: Resampling 0 seconds of audio
-2019-09-26 15:15:34,937 - EXP     - Expyfun: Loading 44100 samples to buffer
-2019-09-26 15:15:34,938 - EXP     - Expyfun: Stamp trial ID to ec_id  : 0
-2019-09-26 15:15:34,938 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2019-09-26 15:15:34,938 - EXP     - Stamping TTL triggers: [4 4]
-2019-09-26 15:15:34,978 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-09-26 15:15:34,980 - EXP     - Stamping TTL triggers: [1]
-2019-09-26 15:15:34,990 - EXP     - Expyfun: Audio stopped and reset.
-2019-09-26 15:15:34,991 - EXP     - Expyfun: Trial OK
-2019-09-26 15:15:35,196 - WARNING - Expyfun: Resampling 0 seconds of audio
-2019-09-26 15:15:35,212 - EXP     - Expyfun: Loading 44100 samples to buffer
-2019-09-26 15:15:35,213 - EXP     - Expyfun: Stamp trial ID to ec_id  : 0
-2019-09-26 15:15:35,213 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2019-09-26 15:15:35,213 - EXP     - Stamping TTL triggers: [4 4]
-2019-09-26 15:15:35,253 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-09-26 15:15:35,255 - EXP     - Stamping TTL triggers: [1]
-2019-09-26 15:15:35,265 - EXP     - Expyfun: Audio stopped and reset.
-2019-09-26 15:15:35,265 - EXP     - Expyfun: Trial OK
-2019-09-26 15:15:35,471 - WARNING - Expyfun: Resampling 0 seconds of audio
-2019-09-26 15:15:35,491 - EXP     - Expyfun: Loading 44100 samples to buffer
-2019-09-26 15:15:35,491 - EXP     - Expyfun: Stamp trial ID to ec_id  : 1
-2019-09-26 15:15:35,492 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2019-09-26 15:15:35,492 - EXP     - Stamping TTL triggers: [4 4]
-2019-09-26 15:15:35,532 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-09-26 15:15:35,534 - EXP     - Stamping TTL triggers: [1]
-2019-09-26 15:15:35,544 - EXP     - Expyfun: Audio stopped and reset.
-2019-09-26 15:15:35,544 - EXP     - Expyfun: Trial OK
-2019-09-26 15:15:35,750 - WARNING - Expyfun: Resampling 0 seconds of audio
-2019-09-26 15:15:35,769 - EXP     - Expyfun: Loading 44100 samples to buffer
-2019-09-26 15:15:35,769 - EXP     - Expyfun: Stamp trial ID to ec_id  : 1
-2019-09-26 15:15:35,769 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2019-09-26 15:15:35,770 - EXP     - Stamping TTL triggers: [4 4]
-2019-09-26 15:15:35,810 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-09-26 15:15:35,812 - EXP     - Stamping TTL triggers: [1]
-2019-09-26 15:15:35,822 - EXP     - Expyfun: Audio stopped and reset.
-2019-09-26 15:15:35,822 - EXP     - Expyfun: Trial OK
-2019-09-26 15:15:36,046 - WARNING - Expyfun: Resampling 3 seconds of audio
-2019-09-26 15:15:36,150 - EXP     - Expyfun: Loading 284226 samples to buffer
-2019-09-26 15:15:36,152 - EXP     - Expyfun: Stamp trial ID to ec_id  : multi-tone
-2019-09-26 15:15:36,153 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 1]
-2019-09-26 15:15:36,153 - EXP     - Stamping TTL triggers: [4 8]
-2019-09-26 15:15:36,193 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-09-26 15:15:36,195 - EXP     - Stamping TTL triggers: [1]
-2019-09-26 15:15:36,217 - WARNING - ec.trial_ok called before stimulus had stopped
-2019-09-26 15:15:36,217 - EXP     - Expyfun: Trial OK
-2019-09-26 15:15:36,229 - INFO    - Expyfun: Exiting
-2019-09-26 15:15:36,231 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-26 18:56:31,549 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-09-26 18:56:31,550 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2019-09-26 18:56:31,733 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414.0625) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-09-26 18:56:31,733 - INFO    - Expyfun: Setting up screen
+2019-09-26 18:56:31,761 - EXP     - Expyfun: Set screen visibility True
+2019-09-26 18:56:31,809 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-09-26 18:56:31,811 - INFO    - Expyfun: Initialization complete
+2019-09-26 18:56:31,811 - EXP     - Expyfun: Participant: foo
+2019-09-26 18:56:31,812 - EXP     - Expyfun: Session: 001
+2019-09-26 18:56:31,813 - EXP     - Expyfun: Set screen visibility False
+2019-09-26 18:56:31,813 - EXP     - Expyfun: Set screen visibility True
+2019-09-26 18:56:35,066 - WARNING - Expyfun: Resampling 0 seconds of audio
+2019-09-26 18:56:35,083 - EXP     - Expyfun: Loading 44100 samples to buffer
+2019-09-26 18:56:35,083 - EXP     - Expyfun: Stamp trial ID to ec_id  : 2
+2019-09-26 18:56:35,084 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2019-09-26 18:56:35,084 - EXP     - Stamping TTL triggers: [4 4]
+2019-09-26 18:56:35,124 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-09-26 18:56:35,125 - EXP     - Stamping TTL triggers: [1]
+2019-09-26 18:56:35,135 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-26 18:56:35,136 - EXP     - Expyfun: Trial OK
+2019-09-26 18:56:35,340 - WARNING - Expyfun: Resampling 0 seconds of audio
+2019-09-26 18:56:35,357 - EXP     - Expyfun: Loading 44100 samples to buffer
+2019-09-26 18:56:35,358 - EXP     - Expyfun: Stamp trial ID to ec_id  : 0
+2019-09-26 18:56:35,358 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2019-09-26 18:56:35,358 - EXP     - Stamping TTL triggers: [4 4]
+2019-09-26 18:56:35,398 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-09-26 18:56:35,399 - EXP     - Stamping TTL triggers: [1]
+2019-09-26 18:56:35,410 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-26 18:56:35,410 - EXP     - Expyfun: Trial OK
+2019-09-26 18:56:35,614 - WARNING - Expyfun: Resampling 0 seconds of audio
+2019-09-26 18:56:35,633 - EXP     - Expyfun: Loading 44100 samples to buffer
+2019-09-26 18:56:35,633 - EXP     - Expyfun: Stamp trial ID to ec_id  : 0
+2019-09-26 18:56:35,633 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2019-09-26 18:56:35,633 - EXP     - Stamping TTL triggers: [4 4]
+2019-09-26 18:56:35,674 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-09-26 18:56:35,675 - EXP     - Stamping TTL triggers: [1]
+2019-09-26 18:56:35,685 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-26 18:56:35,685 - EXP     - Expyfun: Trial OK
+2019-09-26 18:56:35,889 - WARNING - Expyfun: Resampling 0 seconds of audio
+2019-09-26 18:56:35,906 - EXP     - Expyfun: Loading 44100 samples to buffer
+2019-09-26 18:56:35,907 - EXP     - Expyfun: Stamp trial ID to ec_id  : 1
+2019-09-26 18:56:35,907 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2019-09-26 18:56:35,907 - EXP     - Stamping TTL triggers: [4 4]
+2019-09-26 18:56:35,947 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-09-26 18:56:35,948 - EXP     - Stamping TTL triggers: [1]
+2019-09-26 18:56:35,959 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-26 18:56:35,959 - EXP     - Expyfun: Trial OK
+2019-09-26 18:56:36,163 - WARNING - Expyfun: Resampling 0 seconds of audio
+2019-09-26 18:56:36,180 - EXP     - Expyfun: Loading 44100 samples to buffer
+2019-09-26 18:56:36,180 - EXP     - Expyfun: Stamp trial ID to ec_id  : 1
+2019-09-26 18:56:36,180 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2019-09-26 18:56:36,180 - EXP     - Stamping TTL triggers: [4 4]
+2019-09-26 18:56:36,221 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-09-26 18:56:36,222 - EXP     - Stamping TTL triggers: [1]
+2019-09-26 18:56:36,232 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-26 18:56:36,232 - EXP     - Expyfun: Trial OK
+2019-09-26 18:56:36,455 - WARNING - Expyfun: Resampling 3 seconds of audio
+2019-09-26 18:56:36,545 - EXP     - Expyfun: Loading 284226 samples to buffer
+2019-09-26 18:56:36,547 - EXP     - Expyfun: Stamp trial ID to ec_id  : multi-tone
+2019-09-26 18:56:36,547 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 1]
+2019-09-26 18:56:36,547 - EXP     - Stamping TTL triggers: [4 8]
+2019-09-26 18:56:36,587 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-09-26 18:56:36,589 - EXP     - Stamping TTL triggers: [1]
+2019-09-26 18:56:36,606 - WARNING - ec.trial_ok called before stimulus had stopped
+2019-09-26 18:56:36,606 - EXP     - Expyfun: Trial OK
+2019-09-26 18:56:36,614 - INFO    - Expyfun: Exiting
+2019-09-26 18:56:36,616 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -380,7 +373,7 @@ session: 001
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.510 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.185 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-simple-experiment-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/06bd4c1bd30f2d75e3696e5d349d7368/simple_experiment.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">simple_experiment.py</span></code></a></p>

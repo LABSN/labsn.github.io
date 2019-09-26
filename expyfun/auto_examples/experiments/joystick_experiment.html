@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Use joystick controls &#8212; expyfun 2.0.0.dev0 documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/favicon.ico"></span>
+          expyfun</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../getting_started.html">Getting started</a></li>
+                <li><a href="../index.html">Examples</a></li>
+                <li><a href="../../python_reference.html">API reference</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Use joystick controls</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-joystick-experiment-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="use-joystick-controls">
+<span id="sphx-glr-auto-examples-experiments-joystick-experiment-py"></span><h1>Use joystick controls<a class="headerlink" href="#use-joystick-controls" title="Permalink to this headline">¶</a></h1>
+<p>This example demonstrates how to use a joystick as an input device
+using button presses and continuous analog movement to control the position
+of a circle on the screen.</p>
+<img alt="../../_images/sphx_glr_joystick_experiment_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_joystick_experiment_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: joyExp
+date: 2019-09-26 18_56_45.805808
+file: /home/circleci/project/examples/experiments/joystick_experiment.py
+participant: foo
+session: 001
+2019-09-26 18:56:45,806 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-09-26 18:56:45,806 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2019-09-26 18:56:45,999 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-09-26 18:56:45,999 - INFO    - Expyfun: Setting up screen
+2019-09-26 18:56:46,028 - EXP     - Expyfun: Set screen visibility True
+2019-09-26 18:56:46,061 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-09-26 18:56:46,062 - INFO    - Expyfun: Initialization complete
+2019-09-26 18:56:46,062 - EXP     - Expyfun: Participant: foo
+2019-09-26 18:56:46,062 - EXP     - Expyfun: Session: 001
+2019-09-26 18:56:46,199 - INFO    - Expyfun: Exiting
+2019-09-26 18:56:46,202 - EXP     - Expyfun: Audio stopped and reset.
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larson.eric.d@gmail.com&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># License: BSD (3-clause)</span>
+
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <span class="n">building_doc</span>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <span class="n">Circle</span><span class="p">,</span> <span class="n">Text</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+
+<a href="https://docs.python.org/3/library/functions.html#bool" title="View documentation for builtins.bool"><span class="n">joystick</span></a> <span class="o">=</span> <span class="ow">not</span> <span class="n">building_doc</span>
+<a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">move_rate</span></a> <span class="o">=</span> <span class="mf">0.05</span>  <span class="c1"># map -1&lt;-&gt;1 stick range to something decent for 60Hz refresh</span>
+<a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">noise_thresh</span></a> <span class="o">=</span> <span class="mf">0.01</span>  <span class="c1"># permit slight miscalibration</span>
+<span class="c1"># on a Logitech Cordless Rumblepad, the right stick is the analog one,</span>
+<span class="c1"># and it has values stored in z and rz</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="View documentation for builtins.tuple"><span class="n">joy_keys</span></a> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span> <span class="s1">&#39;rz&#39;</span><span class="p">)</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;joyExp&#39;</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span>
+                          <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">,</span>
+                          <a href="https://docs.python.org/3/library/functions.html#bool" title="View documentation for builtins.bool"><span class="n">joystick</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#bool" title="View documentation for builtins.bool"><span class="n">joystick</span></a><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">circles</span></a> <span class="o">=</span> <span class="p">[</span><span class="n">Circle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span>
+               <span class="n">fill_color</span><span class="o">=</span><span class="p">(</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">),</span> <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">)]</span>
+    <span class="c1"># We use normalized units for &quot;pos&quot; so we need to compensate in movement</span>
+    <span class="c1"># so that X/Y movement is even</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">ratios</span></a> <span class="o">=</span> <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="n">ec</span><span class="o">.</span><span class="n">window_size_pix</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">window_size_pix</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span><span class="p">:</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">listen_joystick_button_presses</span><span class="p">()</span>
+    <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">count</span></a> <span class="o">=</span> <span class="mi">0</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="kc">None</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">pos</span></a> <span class="o">=</span> <span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]</span>
+    <span class="k">while</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a> <span class="o">!=</span> <span class="s1">&#39;2&#39;</span><span class="p">:</span>  <span class="c1"># enable a clean quit (button number 3)</span>
+        <span class="c1">#######################################################################</span>
+        <span class="c1"># Draw things</span>
+        <span class="n">Text</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">count</span></a><span class="p">),</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">pos</span></a><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+             <span class="n">anchor_x</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">anchor_y</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">circle</span> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">circles</span></a><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+            <span class="n">circle</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span> <span class="k">if</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a>
+        <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+
+        <span class="c1">#######################################################################</span>
+        <span class="c1"># Get presses</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span><span class="p">:</span>
+            <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">get_joystick_button_presses</span><span class="p">()</span>
+            <span class="n">ec</span><span class="o">.</span><span class="n">listen_joystick_button_presses</span><span class="p">()</span>  <span class="c1"># clear events</span>
+        <span class="k">else</span><span class="p">:</span>
+            <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;2&#39;</span><span class="p">,)]</span>
+        <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">count</span></a> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a><span class="p">)</span>
+
+        <span class="c1">#######################################################################</span>
+        <span class="c1"># Move the cursor</span>
+        <span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">idx</span></a><span class="p">,</span> <span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">key</span></a><span class="p">,</span> <span class="n">ratio</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="View documentation for builtins.tuple"><span class="n">joy_keys</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">ratios</span></a><span class="p">)):</span>
+            <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">delta</span></a> <span class="o">=</span> <span class="mf">0.</span> <span class="k">if</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="n">ec</span><span class="o">.</span><span class="n">get_joystick_value</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">key</span></a><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">abs</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">delta</span></a><span class="p">)</span> <span class="o">&gt;</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">noise_thresh</span></a><span class="p">:</span>  <span class="c1"># remove noise</span>
+                <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">pos</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">idx</span></a><span class="p">]</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span>
+                    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">pos</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">idx</span></a><span class="p">]</span> <span class="o">+</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">move_rate</span></a> <span class="o">*</span> <span class="n">ratio</span> <span class="o">*</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">delta</span></a><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">circles</span></a><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">pos</span></a><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a><span class="p">:</span>
+            <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">circles</span></a><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">Circle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span>
+                           <span class="n">fill_color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;w&#39;</span><span class="p">))</span>
+            <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">circles</span></a><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">pos</span></a><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;norm&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">circles</span></a><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+                <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">circles</span></a><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="View documentation for builtins.str"><span class="n">pressed</span></a><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># for exit condition</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">check_force_quit</span><span class="p">()</span>
+
+<span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.477 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-joystick-experiment-py">
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/b8ca79b480f0c9a9c201e05766a6a815/joystick_experiment.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">joystick_experiment.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/bec9c575dfc1d523eeaa8c0070bb171a/joystick_experiment.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">joystick_experiment.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-09-26.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

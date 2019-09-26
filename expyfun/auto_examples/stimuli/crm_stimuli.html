@@ -16,8 +16,6 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Play sample video file" href="advanced_video.html" />
-    <link rel="prev" title="Generate vocoded stimuli" href="vocoded_stimuli.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../../_static/style.css " type="text/css" />
 <link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
@@ -64,12 +62,7 @@
      href="../../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../python_reference.html">API Reference</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a></li>
-</ul>
-</ul>
+      aria-labelledby="dLabelGlobalToc"></ul>
 </li>
               
                 <li class="dropdown">
@@ -213,36 +206,36 @@ Valid callsigns are [&#39;charlie&#39;, &#39;ringo&#39;, &#39;laker&#39;, &#39;h
 <img alt="../../_images/sphx_glr_crm_stimuli_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_crm_stimuli_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: CRM corpus example
-date: 2019-09-26 15_16_03.896399
+date: 2019-09-26 18_57_01.251715
 file: /home/circleci/project/examples/stimuli/crm_stimuli.py
 participant: foo
 session: foo
-2019-09-26 15:16:03,896 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-09-26 15:16:03,897 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2019-09-26 15:16:04,101 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-09-26 15:16:04,101 - INFO    - Expyfun: Setting up screen
-2019-09-26 15:16:04,114 - EXP     - Expyfun: Set screen visibility True
-2019-09-26 15:16:04,172 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-09-26 15:16:04,175 - INFO    - Expyfun: Initialization complete
-2019-09-26 15:16:04,175 - EXP     - Expyfun: Participant: foo
-2019-09-26 15:16:04,175 - EXP     - Expyfun: Session: foo
-2019-09-26 15:16:04,271 - WARNING - Expyfun: Resampling 2 seconds of audio
-2019-09-26 15:16:04,356 - WARNING - Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
-/home/circleci/project/expyfun/_experiment_controller.py:1709: UserWarning: Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
+2019-09-26 18:57:01,251 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-09-26 18:57:01,252 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2019-09-26 18:57:01,583 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-09-26 18:57:01,584 - INFO    - Expyfun: Setting up screen
+2019-09-26 18:57:01,606 - EXP     - Expyfun: Set screen visibility True
+2019-09-26 18:57:01,636 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-09-26 18:57:01,637 - INFO    - Expyfun: Initialization complete
+2019-09-26 18:57:01,637 - EXP     - Expyfun: Participant: foo
+2019-09-26 18:57:01,637 - EXP     - Expyfun: Session: foo
+2019-09-26 18:57:01,716 - WARNING - Expyfun: Resampling 2 seconds of audio
+2019-09-26 18:57:01,804 - WARNING - Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
+/home/circleci/project/expyfun/_experiment_controller.py:1807: UserWarning: Expyfun: Stimulus max RMS (0.025984206255624417) exceeds stated RMS (0.01) by more than 6 dB.
   warnings.warn(warn_string)
-2019-09-26 15:16:04,357 - EXP     - Expyfun: Loading 177652 samples to buffer
-2019-09-26 15:16:04,358 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2019-09-26 15:16:04,359 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
-2019-09-26 15:16:04,359 - EXP     - Stamping TTL triggers: []
-2019-09-26 15:16:04,359 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-09-26 15:16:04,360 - EXP     - Stamping TTL triggers: [1]
-2019-09-26 15:16:07,766 - WARNING - ec.trial_ok called before stimulus had stopped
-2019-09-26 15:16:07,767 - EXP     - Expyfun: Trial OK
-2019-09-26 15:16:07,767 - INFO    - Expyfun: Exiting
-2019-09-26 15:16:07,769 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-26 18:57:01,805 - EXP     - Expyfun: Loading 177652 samples to buffer
+2019-09-26 18:57:01,806 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2019-09-26 18:57:01,806 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
+2019-09-26 18:57:01,806 - EXP     - Stamping TTL triggers: []
+2019-09-26 18:57:01,807 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2019-09-26 18:57:01,808 - EXP     - Stamping TTL triggers: [1]
+2019-09-26 18:57:04,691 - WARNING - ec.trial_ok called before stimulus had stopped
+2019-09-26 18:57:04,691 - EXP     - Expyfun: Trial OK
+2019-09-26 18:57:04,691 - INFO    - Expyfun: Exiting
+2019-09-26 18:57:04,694 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.662 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  7.326 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-crm-stimuli-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/7d489216b49bb70746bfa094192a65c5/crm_stimuli.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">crm_stimuli.py</span></code></a></p>

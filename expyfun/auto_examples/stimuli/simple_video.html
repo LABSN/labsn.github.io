@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Play sample video file &#8212; expyfun 2.0.0.dev0 documentation</title>
+    <title>Video playing made simple &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
@@ -16,8 +16,6 @@
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Do an adaptive track staircase" href="tracker_staircase.html" />
-    <link rel="prev" title="Generate more advanced auditory stimuli" href="advanced_stimuli.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../../_static/style.css " type="text/css" />
 <link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
@@ -64,12 +62,7 @@
      href="../../index.html">Site <b class="caret"></b></a>
   <ul class="dropdown-menu globaltoc"
       role="menu"
-      aria-labelledby="dLabelGlobalToc"><ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../getting_started.html">Getting started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../python_reference.html">API Reference</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Examples</a></li>
-</ul>
-</ul>
+      aria-labelledby="dLabelGlobalToc"></ul>
 </li>
               
                 <li class="dropdown">
@@ -81,7 +74,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Play sample video file</a></li>
+<li><a class="reference internal" href="#">Video playing made simple</a></li>
 </ul>
 </ul>
 </li>
@@ -117,29 +110,29 @@
 <p class="admonition-title">Note</p>
 <p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-stimuli-simple-video-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="play-sample-video-file">
-<span id="sphx-glr-auto-examples-stimuli-simple-video-py"></span><h1>Play sample video file<a class="headerlink" href="#play-sample-video-file" title="Permalink to this headline">¶</a></h1>
-<p>This shows how to play a video file in expyfun. It requires that AVbin has
-already been installed.</p>
+<div class="sphx-glr-example-title section" id="video-playing-made-simple">
+<span id="sphx-glr-auto-examples-stimuli-simple-video-py"></span><h1>Video playing made simple<a class="headerlink" href="#video-playing-made-simple" title="Permalink to this headline">¶</a></h1>
+<p>This shows how to play a video file in expyfun. It requires that FFmpeg
+(for Pyglet &gt;= 1.4) or AVBin (otherwise) has already been installed.</p>
 <p>&#64;author: drmccloy</p>
 <img alt="../../_images/sphx_glr_simple_video_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_simple_video_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: simple video example
-date: 2019-09-26 15_15_53.543062
+date: 2019-09-26 18_56_53.698753
 file: /home/circleci/project/examples/stimuli/simple_video.py
 participant: foo
 session: foo
-2019-09-26 15:15:53,543 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-09-26 15:15:53,544 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2019-09-26 15:15:53,735 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-09-26 15:15:53,735 - INFO    - Expyfun: Setting up screen
-2019-09-26 15:15:53,748 - EXP     - Expyfun: Set screen visibility True
-2019-09-26 15:15:53,796 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-09-26 15:15:53,799 - INFO    - Expyfun: Initialization complete
-2019-09-26 15:15:53,799 - EXP     - Expyfun: Participant: foo
-2019-09-26 15:15:53,799 - EXP     - Expyfun: Session: foo
-2019-09-26 15:15:54,948 - INFO    - Expyfun: Exiting
-2019-09-26 15:15:54,950 - EXP     - Expyfun: Audio stopped and reset.
+2019-09-26 18:56:53,699 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2019-09-26 18:56:53,700 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2019-09-26 18:56:53,906 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2019-09-26 18:56:53,906 - INFO    - Expyfun: Setting up screen
+2019-09-26 18:56:53,928 - EXP     - Expyfun: Set screen visibility True
+2019-09-26 18:56:53,954 - INFO    - Expyfun: Initializing dummy triggering mode
+2019-09-26 18:56:53,956 - INFO    - Expyfun: Initialization complete
+2019-09-26 18:56:53,956 - EXP     - Expyfun: Participant: foo
+2019-09-26 18:56:53,956 - EXP     - Expyfun: Session: foo
+2019-09-26 18:56:55,097 - INFO    - Expyfun: Exiting
+2019-09-26 18:56:55,099 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -173,7 +166,7 @@ session: foo
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.654 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.666 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-simple-video-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/b08534aecb65ddb96956804343d90fa4/simple_video.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">simple_video.py</span></code></a></p>
