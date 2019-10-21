@@ -113,8 +113,8 @@
 <h1>expyfun.io.reconstruct_tracker<a class="headerlink" href="#expyfun-io-reconstruct-tracker" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="expyfun.io.reconstruct_tracker">
-<code class="sig-prename descclassname">expyfun.io.</code><code class="sig-name descname">reconstruct_tracker</code><span class="sig-paren">(</span><em class="sig-param">fname</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L129-L181"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.reconstruct_tracker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reconstruct TrackerUD and TrackerBinom objects from .tab files.</p>
+<code class="sig-prename descclassname">expyfun.io.</code><code class="sig-name descname">reconstruct_tracker</code><span class="sig-paren">(</span><em class="sig-param">fname</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L129-L182"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.reconstruct_tracker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reconstruct TrackerUD, TrackerBinom, TrackerMHW objects from .tab files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
@@ -124,7 +124,7 @@
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>tr</strong><span class="classifier">list of TrackerUD or TrackerBinom</span></dt><dd><p>The tracker objects with all responses such that they are in their
+<dt><strong>tr</strong><span class="classifier">list of TrackerUD or TrackerBinom or TrackerMHW</span></dt><dd><p>The tracker objects with all responses such that they are in their
 stopped state (as long as the trackers were allowed to stop during
 the generation of the file.) If only one tracker is found in the file,
 it will still be stored in a list and will be accessible as <code class="docutils literal notranslate"><span class="pre">tr[0]</span></code>.</p>
@@ -155,7 +155,7 @@ it will still be stored in a list and will be accessible as <code class="docutil
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-10-16.<br/>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-10-21.<br/>
     </p>
   </div>
 </footer>

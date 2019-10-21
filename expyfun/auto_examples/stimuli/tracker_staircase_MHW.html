@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Do an adaptive track staircase with MHW procedure &#8212; expyfun 2.0.0.dev0 documentation</title>
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="../../_static/style.css " type="text/css" />
+<link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
+
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/favicon.ico"></span>
+          expyfun</a>
+        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="../../getting_started.html">Getting started</a></li>
+                <li><a href="../index.html">Examples</a></li>
+                <li><a href="../../python_reference.html">API reference</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"></ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Do an adaptive track staircase with MHW procedure</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="sphx-glr-download-link-note admonition note">
+<p class="admonition-title">Note</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-stimuli-tracker-staircase-mhw-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+</div>
+<div class="sphx-glr-example-title section" id="do-an-adaptive-track-staircase-with-mhw-procedure">
+<span id="sphx-glr-auto-examples-stimuli-tracker-staircase-mhw-py"></span><h1>Do an adaptive track staircase with MHW procedure<a class="headerlink" href="#do-an-adaptive-track-staircase-with-mhw-procedure" title="Permalink to this headline">¶</a></h1>
+<p>This shows how to make and use an adaptive track with the modified
+Hughson-Westlake (MHW) procedure using
+<a class="reference internal" href="../../generated/expyfun.stimuli.TrackerMHW.html#expyfun.stimuli.TrackerMHW" title="expyfun.stimuli.TrackerMHW"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerMHW</span></code></a>.</p>
+<img alt="../../_images/sphx_glr_tracker_staircase_MHW_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_tracker_staircase_MHW_001.png" />
+<p class="sphx-glr-script-out">Out:</p>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tracker_identify:                       {&quot;tracker_id&quot;: &quot;140194695684624-1571680242063069&quot;, &quot;tracker_type&quot;: &quot;TrackerMHW&quot;}
+tracker_140194695684624-1571680242063069_init:{&quot;callback&quot;: null, &quot;base_step&quot;: 5, &quot;factor_down&quot;: 2, &quot;factor_up_nr&quot;: 4, &quot;start_value&quot;: 80, &quot;x_min&quot;: 0, &quot;x_max&quot;: 120, &quot;n_up_stop&quot;: 2, &quot;repeat_limit&quot;: &quot;reversals&quot;}
+tracker_140194695684624-1571680242063069_respond:False
+tracker_140194695684624-1571680242063069_respond:False
+tracker_140194695684624-1571680242063069_respond:True
+tracker_140194695684624-1571680242063069_respond:False
+tracker_140194695684624-1571680242063069_respond:True
+tracker_140194695684624-1571680242063069_respond:False
+tracker_140194695684624-1571680242063069_respond:False
+/home/circleci/project/expyfun/stimuli/_tracker.py:1251: UserWarning: Tracker 140194695684624-1571680242063069 exceeded x_min or x_max bounds 1 times.
+  &#39;&#39;.format(self._tracker_id, self._limit_count))
+tracker_140194695684624-1571680242063069_stop:{&quot;responses&quot;: [0, 0, 1, 0, 1, 0, 0, 1], &quot;reversals&quot;: [0, 0, 1, 2, 3, 4, 0, 5], &quot;x&quot;: [80.0, 100.0, 120.0, 110.0, 115.0, 105.0, 110.0, 115.0], &quot;threshold&quot;: 115, &quot;n_correct_levels&quot;: {&quot;0&quot;: 0, &quot;5&quot;: 0, &quot;10&quot;: 0, &quot;15&quot;: 0, &quot;20&quot;: 0, &quot;25&quot;: 0, &quot;30&quot;: 0, &quot;35&quot;: 0, &quot;40&quot;: 0, &quot;45&quot;: 0, &quot;50&quot;: 0, &quot;55&quot;: 0, &quot;60&quot;: 0, &quot;65&quot;: 0, &quot;70&quot;: 0, &quot;75&quot;: 0, &quot;80&quot;: 0, &quot;85&quot;: 0, &quot;90&quot;: 0, &quot;95&quot;: 0, &quot;100&quot;: 0, &quot;105&quot;: 0, &quot;110&quot;: 0, &quot;115&quot;: 2, &quot;120&quot;: 1}}
+
+Text(0.5, 1.0, &#39;Adaptive track of model human (true threshold is 115)&#39;)
+</pre></div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="k">import</span> <span class="n">TrackerMHW</span>
+<span class="kn">from</span> <span class="nn">expyfun.analyze</span> <span class="k">import</span> <span class="n">sigmoid</span>
+
+
+<span class="c1"># Make a callback function that prints to the console, rather than log file</span>
+<span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">event_type</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+
+
+<span class="c1"># Define parameters for modeled human subject (sigmoid probability)</span>
+<a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">true_thresh</span></a> <span class="o">=</span> <span class="mi">115</span>
+<a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">slope</span></a> <span class="o">=</span> <span class="mf">0.8</span>
+<a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">chance</span></a> <span class="o">=</span> <span class="mf">0.08</span>  <span class="c1"># if you don&#39;t hear it, you don&#39;t respond</span>
+
+<span class="c1"># Make a tracker that uses the weighted up-down procedure to find 75%</span>
+<span class="n">tr</span> <span class="o">=</span> <span class="n">TrackerMHW</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#object" title="View documentation for builtins.object"><span class="n">callback</span></a><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">120</span><span class="p">,</span> <span class="n">base_step</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">start_value</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+
+<span class="c1"># Initialize human state</span>
+<a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="View documentation for numpy.random.RandomState"><span class="n">rng</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="View documentation for numpy.random.RandomState"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Do the task until the tracker stops</span>
+<span class="k">while</span> <span class="ow">not</span> <span class="n">tr</span><span class="o">.</span><span class="n">stopped</span><span class="p">:</span>
+    <span class="n">tr</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/random/generated/numpy.random.RandomState.rand.html#numpy.random.RandomState.rand" title="View documentation for numpy.random.RandomState.rand"><span class="n">rng</span><span class="o">.</span><span class="n">rand</span></a><span class="p">()</span> <span class="o">&lt;</span> <span class="n">sigmoid</span><span class="p">(</span><span class="n">tr</span><span class="o">.</span><span class="n">x_current</span> <span class="o">-</span> <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">true_thresh</span></a><span class="p">,</span>
+                                    <span class="n">lower</span><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">chance</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">slope</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">slope</span></a><span class="p">))</span>
+
+<span class="c1"># Plot the results</span>
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="View documentation for matplotlib.figure.Figure"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.SubplotBase.html#matplotlib.axes.SubplotBase" title="View documentation for matplotlib.axes.SubplotBase"><span class="n">ax</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">lines</span></a> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">lines</span></a> <span class="o">+=</span> <span class="n">tr</span><span class="o">.</span><span class="n">plot_thresh</span><span class="p">()</span>
+
+<a href="https://matplotlib.org/api/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title" title="View documentation for matplotlib.axes.Axes.set_title"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span></a><span class="p">(</span><span class="s1">&#39;Adaptive track of model human (true threshold is </span><span class="si">{}</span><span class="s1">)&#39;</span>
+             <span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">true_thresh</span></a><span class="p">))</span>
+</pre></div>
+</div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.096 seconds)</p>
+<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-tracker-staircase-mhw-py">
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/6bd093bd38b6a7b7b36b622b5e11d9d7/tracker_staircase_MHW.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tracker_staircase_MHW.py</span></code></a></p>
+</div>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/b914ea973ba8ef5c83d534bb68c7f8cb/tracker_staircase_MHW.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">tracker_staircase_MHW.ipynb</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-10-21.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
