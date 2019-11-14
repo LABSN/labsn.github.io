@@ -1,254 +1,381 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>mnefun.Params &mdash; mnefun 0.1.0.dev0 documentation</title>
-    
-    <link rel="stylesheet" href="../_static/navy.css" type="text/css" />
+    <meta charset="utf-8" />
+    <title>mnefun.Params &#8212; mnefun 0.1.0.dev0 documentation</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../',
-        VERSION:     '0.1.0.dev0',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-    <link rel="top" title="mnefun 0.1.0.dev0 documentation" href="../index.html" />
-    <link rel="up" title="API Reference" href="../python_reference.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="mnefun.do_processing" href="mnefun.do_processing.html" />
-    <link rel="prev" title="mnefun.anova_time" href="mnefun.anova_time.html" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
- 
+    <link rel="prev" title="API Reference" href="../python_reference.html" />
 
-  </head>
-  <body role="document">
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../np-modindex.html" title="Python Module Index"
-             >modules</a></li>
-        <li class="right" >
-          <a href="mnefun.do_processing.html" title="mnefun.do_processing"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="mnefun.anova_time.html" title="mnefun.anova_time"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">mnefun 0.1.0.dev0 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../python_reference.html" accesskey="U">API Reference</a> &raquo;</li> 
-      </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head><body>
+
+  <div id="navbar" class="('navbar',) navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/ilabs.png"></span>
+          mnefun</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0.dev0</b></span>
       </div>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
             
+                <li><a href="../overview.html">Overview</a></li>
+                <li><a href="../python_reference.html">API reference</a></li>
+                <li><a href="../whats_new.html">What's new</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
   <div class="section" id="mnefun-params">
 <h1>mnefun.Params<a class="headerlink" href="#mnefun-params" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="mnefun.Params">
-<em class="property">class </em><code class="descclassname">mnefun.</code><code class="descname">Params</code><span class="sig-paren">(</span><em>tmin=None</em>, <em>tmax=None</em>, <em>t_adjust=0</em>, <em>bmin=-0.2</em>, <em>bmax=0.0</em>, <em>n_jobs=6</em>, <em>lp_cut=55</em>, <em>decim=5</em>, <em>proj_sfreq=None</em>, <em>n_jobs_mkl=1</em>, <em>n_jobs_fir='cuda'</em>, <em>n_jobs_resample='cuda'</em>, <em>filter_length=32768</em>, <em>drop_thresh=1</em>, <em>epochs_type='fif'</em>, <em>fwd_mindist=2.0</em>, <em>bem_type='5120-5120-5120'</em>, <em>auto_bad=None</em>, <em>ecg_channel=None</em>, <em>eog_channel=None</em>, <em>plot_raw=False</em>, <em>match_fun=None</em>, <em>hp_cut=None</em>, <em>cov_method='empirical'</em>, <em>ssp_eog_reject=None</em>, <em>ssp_ecg_reject=None</em>, <em>baseline='individual'</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params" title="Permalink to this definition">¶</a></dt>
-<dd><p>Make a parameter structure for use with <cite>do_processing</cite></p>
-<p>This is technically a class, but it doesn&#8217;t currently have any methods
+<em class="property">class </em><code class="sig-prename descclassname">mnefun.</code><code class="sig-name descname">Params</code><span class="sig-paren">(</span><em class="sig-param">tmin=None</em>, <em class="sig-param">tmax=None</em>, <em class="sig-param">t_adjust=0</em>, <em class="sig-param">bmin=-0.2</em>, <em class="sig-param">bmax=0.0</em>, <em class="sig-param">n_jobs=6</em>, <em class="sig-param">lp_cut=55</em>, <em class="sig-param">decim=5</em>, <em class="sig-param">proj_sfreq=None</em>, <em class="sig-param">n_jobs_mkl=1</em>, <em class="sig-param">n_jobs_fir='cuda'</em>, <em class="sig-param">n_jobs_resample='cuda'</em>, <em class="sig-param">filter_length=32768</em>, <em class="sig-param">drop_thresh=1</em>, <em class="sig-param">epochs_type='fif'</em>, <em class="sig-param">fwd_mindist=2.0</em>, <em class="sig-param">bem_type='5120-5120-5120'</em>, <em class="sig-param">auto_bad=None</em>, <em class="sig-param">ecg_channel=None</em>, <em class="sig-param">eog_channel=None</em>, <em class="sig-param">plot_raw=False</em>, <em class="sig-param">match_fun=None</em>, <em class="sig-param">hp_cut=None</em>, <em class="sig-param">cov_method='empirical'</em>, <em class="sig-param">ssp_eog_reject=None</em>, <em class="sig-param">ssp_ecg_reject=None</em>, <em class="sig-param">baseline='individual'</em>, <em class="sig-param">reject_tmin=None</em>, <em class="sig-param">reject_tmax=None</em>, <em class="sig-param">lp_trans=0.5</em>, <em class="sig-param">hp_trans=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a parameter structure for use with <a class="reference internal" href="mnefun.do_processing.html#mnefun.do_processing" title="mnefun.do_processing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_processing</span></code></a></p>
+<p>This is technically a class, but it doesn’t currently have any methods
 other than init.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>tmin</strong> : float</p>
-<blockquote>
-<div><p>tmin for events.</p>
-</div></blockquote>
-<p><strong>tmax</strong> : float</p>
-<blockquote>
-<div><p>tmax for events.</p>
-</div></blockquote>
-<p><strong>t_adjust</strong> : float</p>
-<blockquote>
-<div><p>Adjustment for delays (e.g., -4e-3 compensates for a 4 ms delay
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>tmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>tmin for events.</p>
+</dd>
+<dt><strong>tmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>tmax for events.</p>
+</dd>
+<dt><strong>t_adjust</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Adjustment for delays (e.g., -4e-3 compensates for a 4 ms delay
 in the trigger.</p>
-</div></blockquote>
-<p><strong>bmin</strong> : float</p>
-<blockquote>
-<div><p>Lower limit for baseline compensation.</p>
-</div></blockquote>
-<p><strong>bmax</strong> : float</p>
-<blockquote>
-<div><p>Upper limit for baseline compensation.</p>
-</div></blockquote>
-<p><strong>n_jobs</strong> : int</p>
-<blockquote>
-<div><p>Number of jobs to use in parallel operations.</p>
-</div></blockquote>
-<p><strong>lp_cut</strong> : float</p>
-<blockquote>
-<div><p>Cutoff for lowpass filtering.</p>
-</div></blockquote>
-<p><strong>decim</strong> : int</p>
-<blockquote>
-<div><p>Amount to decimate the data after filtering when epoching data
+</dd>
+<dt><strong>bmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Lower limit for baseline compensation.</p>
+</dd>
+<dt><strong>bmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Upper limit for baseline compensation.</p>
+</dd>
+<dt><strong>n_jobs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of jobs to use in parallel operations.</p>
+</dd>
+<dt><strong>lp_cut</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Cutoff for lowpass filtering.</p>
+</dd>
+<dt><strong>decim</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Amount to decimate the data after filtering when epoching data
 (e.g., a factor of 5 on 1000 Hz data yields 200 Hz data).</p>
-</div></blockquote>
-<p><strong>proj_sfreq</strong> : float | None</p>
-<blockquote>
-<div><p>The sample freq to use for calculating projectors. Useful since
+</dd>
+<dt><strong>proj_sfreq</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The sample freq to use for calculating projectors. Useful since
 time points are not independent following low-pass. Also saves
 computation to downsample.</p>
-</div></blockquote>
-<p><strong>n_jobs_mkl</strong> : int</p>
-<blockquote>
-<div><p>Number of jobs to spawn in parallel for operations that can make
+</dd>
+<dt><strong>n_jobs_mkl</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Number of jobs to spawn in parallel for operations that can make
 use of MKL threading. If Numpy/Scipy has been compiled with MKL
 support, it is best to leave this at 1 or 2 since MKL will
 automatically spawn threads. Otherwise, n_cpu is a good choice.</p>
-</div></blockquote>
-<p><strong>n_jobs_fir</strong> : int | str</p>
-<blockquote>
-<div><p>Number of threads to use for FIR filtering. Can also be &#8216;cuda&#8217;
+</dd>
+<dt><strong>n_jobs_fir</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Number of threads to use for FIR filtering. Can also be ‘cuda’
 if the system supports CUDA.</p>
-</div></blockquote>
-<p><strong>n_jobs_resample</strong> : int | str</p>
-<blockquote>
-<div><p>Number of threads to use for resampling. Can also be &#8216;cuda&#8217;
+</dd>
+<dt><strong>n_jobs_resample</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Number of threads to use for resampling. Can also be ‘cuda’
 if the system supports CUDA.</p>
-</div></blockquote>
-<p><strong>filter_length</strong> : int</p>
-<blockquote>
-<div><p>Filter length to use in FIR filtering. Longer filters generally
+</dd>
+<dt><strong>filter_length</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Filter length to use in FIR filtering. Longer filters generally
 have better roll-off characteristics, but more ringing.</p>
-</div></blockquote>
-<p><strong>drop_thresh</strong> : float</p>
-<blockquote>
-<div><p>The percentage threshold to use when deciding whether or not to
+</dd>
+<dt><strong>drop_thresh</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>The percentage threshold to use when deciding whether or not to
 plot Epochs drop_log.</p>
-</div></blockquote>
-<p><strong>epochs_type</strong> : str | list</p>
-<blockquote>
-<div><p>Can be &#8216;fif&#8217;, &#8216;mat&#8217;, or a list containing both.</p>
-</div></blockquote>
-<p><strong>fwd_mindist</strong> : float</p>
-<blockquote>
-<div><p>Minimum distance for sources in the brain from the skull in order
+</dd>
+<dt><strong>epochs_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a></span></dt><dd><p>Can be ‘fif’, ‘mat’, or a list containing both.</p>
+</dd>
+<dt><strong>fwd_mindist</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Minimum distance for sources in the brain from the skull in order
 for them to be included in the forward solution source space.</p>
-</div></blockquote>
-<p><strong>bem_type</strong> : str</p>
-<blockquote>
-<div><p>Defaults to <code class="docutils literal"><span class="pre">'5120-5120-5120'</span></code>, use <code class="docutils literal"><span class="pre">'5120'</span></code> for a
+</dd>
+<dt><strong>bem_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Defaults to <code class="docutils literal notranslate"><span class="pre">'5120-5120-5120'</span></code>, use <code class="docutils literal notranslate"><span class="pre">'5120'</span></code> for a
 single-layer BEM.</p>
-</div></blockquote>
-<p><strong>auto_bad</strong> : float | None</p>
-<blockquote>
-<div><p>If not None, bad channels will be automatically excluded if
-they disqualify a proportion of events exceeding <code class="docutils literal"><span class="pre">autobad</span></code>.</p>
-</div></blockquote>
-<p><strong>ecg_channel</strong> : str | None</p>
-<blockquote>
-<div><p>The channel to use to detect ECG events. None will use ECG063.
-In lieu of an ECG recording, MEG1531 may work.</p>
-</div></blockquote>
-<p><strong>eog_channel</strong> : str</p>
-<blockquote>
-<div><p>The channel to use to detect EOG events. None will use EOG*.
+</dd>
+<dt><strong>auto_bad</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>If not None, bad channels will be automatically excluded if
+they disqualify a proportion of events exceeding <code class="docutils literal notranslate"><span class="pre">autobad</span></code>.</p>
+</dd>
+<dt><strong>auto_bad_reject</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Default is None. Must be defined if using Autoreject module to
+compute noisy sensor rejection criteria. Set to ‘auto’ to compute
+criteria automatically, or dictionary of channel keys and amplitude
+values e.g., dict(grad=1500e-13, mag=5000e-15, eeg=150e-6) to define
+rejection threshold(s). See
+<a class="reference external" href="http://autoreject.github.io/">http://autoreject.github.io/</a> for details.</p>
+</dd>
+<dt><strong>ecg_channel</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The channel to use to detect ECG events. None will use ECG063.
+In lieu of an ECG recording, MEG1531 may work.
+Can be a dict that maps subject names to channels.</p>
+</dd>
+<dt><strong>eog_channel</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The channel to use to detect EOG events. None will use EOG* channels.
 In lieu of an EOG recording, MEG1411 may work.</p>
-</div></blockquote>
-<p><strong>plot_raw</strong> : bool</p>
-<blockquote>
-<div><p>If True, plot the raw files with the ECG/EOG events overlaid.</p>
-</div></blockquote>
-<p><strong>match_fun</strong> : function | None</p>
-<blockquote>
-<div><p>If None, standard matching will be performed. If a function,
-must_match will be ignored, and <code class="docutils literal"><span class="pre">match_fun</span></code> will be called
+</dd>
+<dt><strong>plot_raw</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.8)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, plot the raw files with the ECG/EOG events overlaid.</p>
+</dd>
+<dt><strong>match_fun</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#callable" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">callable()</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>If None, standard matching will be performed. If a function,
+must_match will be ignored, and <code class="docutils literal notranslate"><span class="pre">match_fun</span></code> will be called
 to equalize event counts.</p>
-</div></blockquote>
-<p><strong>hp_cut</strong> : float | None</p>
-<blockquote>
-<div><p>Highpass cutoff in Hz. Use None for no highpassing.</p>
-</div></blockquote>
-<p><strong>cov_method</strong> : str</p>
-<blockquote>
-<div><p>Covariance calculation method.</p>
-</div></blockquote>
-<p><strong>ssp_eog_reject</strong> : dict | None</p>
-<blockquote>
-<div><p>Amplitude rejection criteria for EOG SSP computation. None will
+</dd>
+<dt><strong>hp_cut</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Highpass cutoff in Hz. Use None for no highpassing.</p>
+</dd>
+<dt><strong>cov_method</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Covariance calculation method.</p>
+</dd>
+<dt><strong>ssp_eog_reject</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Amplitude rejection criteria for EOG SSP computation. None will
 use the mne-python default.</p>
-</div></blockquote>
-<p><strong>ssp_ecg_reject</strong> : dict | None</p>
-<blockquote>
-<div><p>Amplitude rejection criteria for ECG SSP computation. None will
+</dd>
+<dt><strong>ssp_ecg_reject</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Amplitude rejection criteria for ECG SSP computation. None will
 use the mne-python default.</p>
-</div></blockquote>
-<p><strong>baseline</strong> : tuple | None | str</p>
-<blockquote>
-<div><p>Baseline to use. If &#8220;individual&#8221;, use <code class="docutils literal"><span class="pre">params.bmin</span></code> and
-<code class="docutils literal"><span class="pre">params.bmax</span></code>, otherwise pass as the baseline parameter to
-mne-python Epochs. <code class="docutils literal"><span class="pre">params.bmin</span></code> and <code class="docutils literal"><span class="pre">params.bmax</span></code> will always
+</dd>
+<dt><strong>baseline</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Baseline to use. If “individual”, use <code class="docutils literal notranslate"><span class="pre">params.bmin</span></code> and
+<code class="docutils literal notranslate"><span class="pre">params.bmax</span></code>, otherwise pass as the baseline parameter to
+mne-python Epochs. <code class="docutils literal notranslate"><span class="pre">params.bmin</span></code> and <code class="docutils literal notranslate"><span class="pre">params.bmax</span></code> will always
 be used for covariance calculation. This is useful e.g. when using
 a high-pass filter and no baselining is desired (but evoked
 covariances should still be calculated from the baseline period).</p>
-</div></blockquote>
-</td>
+</dd>
+<dt><strong>reject_tmin</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Reject minimum time to use when epoching. None will use <code class="docutils literal notranslate"><span class="pre">tmin</span></code>.</p>
+</dd>
+<dt><strong>reject_tmax</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Reject maximum time to use when epoching. None will use <code class="docutils literal notranslate"><span class="pre">tmax</span></code>.</p>
+</dd>
+<dt><strong>lp_trans</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Low-pass transition band.</p>
+</dd>
+<dt><strong>hp_trans</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>High-pass transition band.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl>
+<dt><strong>params</strong><span class="classifier">instance of <a class="reference internal" href="#mnefun.Params" title="mnefun.Params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Params</span></code></a></span></dt><dd><p>The parameters to use.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="mnefun.do_processing.html#mnefun.do_processing" title="mnefun.do_processing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_processing</span></code></a></dt><dd></dd>
+<dt><a class="reference external" href="https://mne.tools/dev/generated/mne.preprocessing.maxwell_filter.html#mne.preprocessing.maxwell_filter" title="(in MNE v0.20.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mne.preprocessing.maxwell_filter</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>Params has additional properties. Use <code class="docutils literal notranslate"><span class="pre">dir(params)</span></code> to see
+all the possible options.</p>
+<dl class="field-list">
+<dt class="field-odd">Attributes</dt>
+<dd class="field-odd"><dl>
+<dt><strong>movecomp</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Movement compensation to use. Can be ‘inter’ or None.</p>
+</dd>
+<dt><strong>sss_type</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>signal space separation method. Must be either ‘maxfilter’ or ‘python’</p>
+</dd>
+<dt><strong>int_order</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Order of internal component of spherical expansion. Default is 8.
+Value of 6 recomended for infant data.</p>
+</dd>
+<dt><strong>ext_order</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Order of external component of spherical expansion. Default is 3.</p>
+</dd>
+<dt><strong>tsss_dur</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Buffer length (in seconds) fpr Spatiotemporal SSS. Default is 60.
+however based on system specification a shorter buffer may be
+appropriate. For data containing excessive head movements e.g. young
+children a buffer size of 4s is recommended.</p>
+</dd>
+<dt><strong>st_correlation</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Correlation limit between inner and outer subspaces used to reject
+ovwrlapping intersecting inner/outer signals during spatiotemporal SSS.
+Default is .98 however a smaller value of .9 is recommended for infant/
+child data.</p>
+</dd>
+<dt><strong>trans_to</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://numpy.org/devdocs/glossary.html#term-array-like" title="(in NumPy v1.18.dev0)"><span>array_like</span></a>, (3,) | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The destination location for the head. Can be <code class="docutils literal notranslate"><span class="pre">None</span></code>, which
+will not change the head position, a string path to a FIF file
+containing a MEG device to head transformation, or a 3-element
+array giving the coordinates to translate to (with no rotations).
+Default is median head position across runs.</p>
+</dd>
+<dt><strong>sss_origin</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/glossary.html#term-array-like" title="(in NumPy v1.18.dev0)"><span>array_like</span></a>, shape (3,) | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Origin of internal and external multipolar moment space in meters.
+Default is center of sphere fit to digitized head points.</p>
+</dd>
+<dt><strong>fir_design</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Can be “firwin2” or “firwin”.</p>
+</dd>
+<dt><strong>autoreject_thresholds</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.8)"><span class="xref std std-ref">bool</span></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#False" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">False</span></code></a></span></dt><dd><p>If True use autoreject module to compute global rejection thresholds
+for epoching. Make sure autoreject module is installed. See
+<a class="reference external" href="http://autoreject.github.io/">http://autoreject.github.io/</a> for instructions.</p>
+</dd>
+<dt><strong>autoreject_types</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Default is (‘mag’, ‘grad’, ‘eeg’). Can set to (‘mag’, ‘grad’, ‘eeg’,
+‘eog) to use EOG channel rejection criterion from autoreject module to
+reject trials on basis of EOG.</p>
+</dd>
+<dt><strong>mf_autobad</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.8)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>Default False. If True use Maxfilter to automatically mark bad
+channels prior to SSS denoising.</p>
+</dd>
+<dt><strong>mf_badlimit</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Default Maxfilter threshold for noisy channel detection is 7.</p>
+</dd>
+<dt><strong>src_pos</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">float</span></code></a></span></dt><dd><p>Default is 7 mm. Defines source grid spacing for volumetric source
+space.</p>
+</dd>
+<dt><strong>on_missing</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Can set to ‘error’ | ‘warning’ | ‘ignore’. Default is ‘error’.
+Determine what to do if one or several event ids are not found in the
+recording during epoching. See mne.Epochs docstring for further
+details.</p>
+</dd>
+<dt><strong>compute_rank</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.8)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>Default is False. Set to True to compute rank of the noise covariance
+matrix during inverse kernel computation.</p>
+</dd>
+<dt><strong>eog_t_lims</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>The time limits for EOG calculation. Default (-0.25, 0.25).</p>
+</dd>
+<dt><strong>ecg_t_lims</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>The time limits for ECG calculation. Default(-0.08, 0.08).</p>
+</dd>
+<dt><strong>eog_f_lims</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Band-pass limits for EOG detection and calculation. Default (0, 2).</p>
+</dd>
+<dt><strong>ecg_f_lims</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></span></dt><dd><p>Band-pass limits for ECG detection and calculation. Default (5, 35).</p>
+</dd>
+<dt><strong>proj_nums</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>List of projector counts to use for ECG/EOG/ERM; each list contains
+three values for grad/mag/eeg channels.
+Can be a dict that maps subject names to projector counts to use.</p>
+</dd>
+<dt><strong>proj_meg</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Can be “separate” (default for backward compat) or “combined”
+(should be better for SSS’ed data).</p>
+</dd>
+<dt><strong>src</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">dict</span></code></a></span></dt><dd><p>Can start be:</p>
+<ul class="simple">
+<li><p>‘oct6’ to use a surface source space decimated using the 6th
+(or another integer) subdivision of an octahedron, or</p></li>
+<li><p>‘vol5’ to use a volumetric grid source space with 5mm (or another
+integer) spacing</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnefun.Params.convert_subjects" title="mnefun.Params.convert_subjects"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_subjects</span></code></a>(self, subj_template[, …])</p></td>
+<td><p>Convert subject names.</p></td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>params</strong> : instance of Params</p>
-<blockquote class="last">
-<div><p>The parameters to use.</p>
-</div></blockquote>
-</td>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnefun.Params.freeze" title="mnefun.Params.freeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">freeze</span></code></a>(self)</p></td>
+<td><p>Freeze the object so that only existing properties can be set</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnefun.Params.unfreeze" title="mnefun.Params.unfreeze"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unfreeze</span></code></a>(self)</p></td>
+<td><p>Unfreeze the object so that additional properties can be added</p></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition seealso">
-<p class="first admonition-title">See also</p>
-<p class="last"><a class="reference internal" href="mnefun.do_processing.html#mnefun.do_processing" title="mnefun.do_processing"><code class="xref py py-obj docutils literal"><span class="pre">do_processing</span></code></a></p>
-</div>
-<p class="rubric">Notes</p>
-<p>Params has additional properties. Use <code class="docutils literal"><span class="pre">dir(params)</span></code> to see
-all the possible options.
-.. automethod:: __init__</p>
+<dl class="method">
+<dt id="mnefun.Params.__hash__">
+<code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.__hash__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return hash(self).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mnefun.Params.convert_subjects">
+<code class="sig-name descname">convert_subjects</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">subj_template</em>, <em class="sig-param">struc_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.convert_subjects" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert subject names.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>subj_template</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Subject template to use.</p>
+</dd>
+<dt><strong>struc_template</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Structural template to use.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="mnefun.Params.freeze">
+<code class="sig-name descname">freeze</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.freeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Freeze the object so that only existing properties can be set</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="mnefun.Params.unfreeze">
+<code class="sig-name descname">unfreeze</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.unfreeze" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unfreeze the object so that additional properties can be added</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
 
 
-          </div>
-        </div>
-      </div>
-      <div class="clearer"></div>
     </div>
-    <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2015, mnefun Developers.
-      Last updated on May 29, 2015.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4a0+.
-    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2019, mnefun Developers.<br/>
+      Last updated on Nov 14, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+    </p>
+  </div>
+</footer>
   </body>
 </html>

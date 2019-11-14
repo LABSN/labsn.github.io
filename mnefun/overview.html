@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Overview &#8212; mnefun 0.1.0.dev0 documentation</title>
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Reference" href="python_reference.html" />
+    <link rel="prev" title="mnefun" href="index.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head><body>
+
+  <div id="navbar" class="('navbar',) navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html"><span><img src="_static/ilabs.png"></span>
+          mnefun</a>
+        <span class="navbar-text navbar-version pull-left"><b>0.1.0.dev0</b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+                <li><a href="#">Overview</a></li>
+                <li><a href="python_reference.html">API reference</a></li>
+                <li><a href="whats_new.html">What's new</a></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_reference.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="whats_new.html">What’s new</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+              <li class="hidden-sm"></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="body col-md-12 content" role="main">
+      
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>mnefun processing flow chart:</p>
+<div class="graphviz"><object data="_images/graphviz-3fdcbf83d4ae7453223ffb8b10983e383cc41904.svg" type="image/svg+xml" class="graphviz">
+<p class="warning">strict digraph &quot;mnefun flow diagram&quot; {
+	graph [bb=&quot;0,0,563.5,764&quot;];
+	node [fontname=Arial,
+		fontsize=9,
+		label=&quot;\N&quot;,
+		margin=&quot;0.2,0.1&quot;,
+		shape=box
+	];
+	edge [fontname=Arial,
+		fontsize=9
+	];
+	sco	 [fillcolor=&quot;#C37D8B&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;score.py&lt;/FONT&gt;&gt;,
+		pos=&quot;42.5,606&quot;,
+		style=filled,
+		width=0.98611];
+	lst	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/lists/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;ALL_*-eve.lst&lt;/FONT&gt;&gt;,
+		pos=&quot;47.5,522&quot;,
+		style=filled,
+		width=1.3194];
+	sco -&gt; lst	 [fontsize=11,
+		label=&lt;&lt;B&gt;2. do_score&lt;/B&gt;&gt;,
+		lp=&quot;75,564&quot;,
+		pos=&quot;e,46.417,540.19 43.585,587.77 44.234,576.88 45.072,562.79 45.806,550.46&quot;];
+	evo	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/inverse/, ./subj/epochs/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*-evo.fif, *-epo.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;79.5,102&quot;,
+		style=filled,
+		width=2.0278];
+	lst -&gt; evo	 [fontsize=11,
+		pos=&quot;e,68.128,120.26 47.5,503.98 47.5,486.97 47.5,460.75 47.5,438 47.5,438 47.5,438 47.5,186 47.5,166.23 55.339,145.45 63.257,129.51&quot;];
+	bem	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;structural/bem/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*-bem-sol.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;315.5,186&quot;,
+		style=filled,
+		width=1.2361];
+	fwd	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/forward/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*-fwd.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;315.5,102&quot;,
+		style=filled,
+		width=1.1944];
+	bem -&gt; fwd	 [fontsize=11,
+		pos=&quot;e,315.5,120.19 315.5,167.77 315.5,156.88 315.5,142.79 315.5,130.46&quot;];
+	inv	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/inverse/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*-inv.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;266.5,18&quot;,
+		style=filled,
+		width=1.1806];
+	fwd -&gt; inv	 [fontsize=11,
+		label=&lt;&lt;B&gt;12. gen_inv&lt;/B&gt;&gt;,
+		lp=&quot;323.5,60&quot;,
+		pos=&quot;e,277.11,36.191 304.87,83.773 298.25,72.436 289.63,57.652 282.23,44.972&quot;];
+	pbd	 [fillcolor=&quot;#C37D8B&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*_prebad.txt&lt;/FONT&gt;&gt;,
+		pos=&quot;240.5,606&quot;,
+		style=filled,
+		width=1.2222];
+	mfr	 [fillcolor=&quot;#A8A564&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;user&#64;kasga:/data00/user/subj/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*_raw.fif, *_prebad.txt&lt;/FONT&gt;&gt;,
+		pos=&quot;237.5,522&quot;,
+		style=filled,
+		width=2.1528];
+	pbd -&gt; mfr	 [fontsize=11,
+		pos=&quot;e,238.15,540.19 239.85,587.77 239.46,576.88 238.96,562.79 238.52,550.46&quot;];
+	mfs	 [fillcolor=&quot;#A8A564&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;user&#64;kasga:/data00/user/subj/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*_raw_sss.fif, *_log.txt&lt;/FONT&gt;&gt;,
+		pos=&quot;237.5,438&quot;,
+		style=filled,
+		width=2.1528];
+	mfr -&gt; mfs	 [fontsize=11,
+		label=&lt;&lt;B&gt;4. do_sss&lt;/B&gt;&gt;,
+		lp=&quot;262.5,480&quot;,
+		pos=&quot;e,237.5,456.19 237.5,503.77 237.5,492.88 237.5,478.79 237.5,466.46&quot;];
+	sss	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/sss_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*_raw_sss.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;342.5,354&quot;,
+		style=filled,
+		width=1.2778];
+	mfs -&gt; sss	 [fontsize=11,
+		label=&lt;&lt;B&gt;5. fetch_sss&lt;/B&gt;&gt;,
+		lp=&quot;327,396&quot;,
+		pos=&quot;e,319.65,372.28 260.03,419.98 275.15,407.88 295.26,391.79 311.83,378.53&quot;];
+	ssl	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/sss_log/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*_log.txt&lt;/FONT&gt;&gt;,
+		pos=&quot;235.5,354&quot;,
+		style=filled,
+		width=1.1944];
+	mfs -&gt; ssl	 [fontsize=11,
+		pos=&quot;e,235.93,372.19 237.07,419.77 236.81,408.88 236.47,394.79 236.18,382.46&quot;];
+	bad	 [fillcolor=&quot;#C37D8B&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/bads/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*_post-sss.txt&lt;/FONT&gt;&gt;,
+		pos=&quot;125.5,354&quot;,
+		style=filled,
+		width=1.3472];
+	pca	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/sss_pca_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*_raw_sss.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;202.5,186&quot;,
+		style=filled,
+		width=1.4028];
+	bad -&gt; pca	 [fontsize=11,
+		pos=&quot;e,202.78,204.26 147.95,335.87 161.35,323.76 177.46,306.68 186.5,288 197.72,264.81 201.39,235.51 202.44,214.27&quot;];
+	pro	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/sss_pca_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*-proj.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;126.5,270&quot;,
+		style=filled,
+		width=1.4028];
+	bad -&gt; pro	 [fontsize=11,
+		pos=&quot;e,126.28,288.19 125.72,335.77 125.85,324.88 126.01,310.79 126.16,298.46&quot;];
+	pca -&gt; evo	 [fontsize=11,
+		label=&lt;&lt;B&gt;9. write_epochs&lt;/B&gt;&gt;,
+		lp=&quot;159,144&quot;,
+		pos=&quot;e,90.703,120.29 151.68,169.36 139.83,164.2 127.7,157.77 117.5,150 109.68,144.04 102.54,136.12 96.625,128.43&quot;];
+	pca -&gt; fwd	 [fontsize=11,
+		pos=&quot;e,303.34,120.02 246.74,167.88 256.68,162.83 266.84,156.82 275.5,150 283.39,143.79 290.8,135.8 297.05,128.12&quot;];
+	cov	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/cov/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*-cov.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;211.5,102&quot;,
+		style=filled,
+		width=0.95833];
+	pca -&gt; cov	 [fontsize=11,
+		label=&lt;&lt;B&gt;10. gen_covs&lt;/B&gt;&gt;,
+		lp=&quot;241,144&quot;,
+		pos=&quot;e,208.76,120.29 203.78,167.74 204.48,158.77 205.41,147.81 206.5,138 206.78,135.48 207.1,132.86 207.43,130.23&quot;];
+	pro -&gt; pca	 [fontsize=11,
+		label=&lt;&lt;B&gt;8. apply_ssp&lt;/B&gt;&gt;,
+		lp=&quot;159.5,228&quot;,
+		pos=&quot;e,151.81,200.26 122.09,251.84 120.8,242.27 120.97,230.73 126.5,222 130.73,215.32 136.57,209.86 143.14,205.39&quot;];
+	cov -&gt; inv	 [fontsize=11,
+		pos=&quot;e,254.59,36.191 223.43,83.773 230.93,72.325 240.73,57.364 249.08,44.604&quot;];
+	tra	 [fillcolor=&quot;#C37D8B&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/trans/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*-trans.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;415.5,186&quot;,
+		style=filled,
+		width=1.0417];
+	tra -&gt; fwd	 [fontsize=11,
+		label=&lt;&lt;B&gt;11. gen_fwd&lt;/B&gt;&gt;,
+		lp=&quot;402.5,144&quot;,
+		pos=&quot;e,337.16,120.19 393.8,167.77 379.52,155.78 360.64,139.92 345,126.78&quot;];
+	acq	 [fillcolor=&quot;#61C5AD&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;user&#64;minea&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*_raw.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;137.5,718&quot;,
+		style=filled,
+		width=1.125];
+	raw	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;./subj/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*_raw.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;137.5,606&quot;,
+		style=filled,
+		width=1.1389];
+	acq -&gt; raw	 [fontsize=11,
+		label=&lt;&lt;B&gt;1. fetch_raw&lt;/B&gt;&gt;,
+		lp=&quot;169.5,648&quot;,
+		pos=&quot;e,137.5,624.15 137.5,699.51 137.5,681.73 137.5,654.62 137.5,634.16&quot;];
+	raw -&gt; lst	 [fontsize=11,
+		pos=&quot;e,84.065,540.19 128.73,587.69 123.5,578.07 116.19,566.54 107.5,558 103.01,553.59 97.872,549.49 92.541,545.75&quot;];
+	raw -&gt; mfr	 [fontsize=11,
+		label=&lt;&lt;B&gt;3. push_raw&lt;/B&gt;&gt;,
+		lp=&quot;202.5,564&quot;,
+		pos=&quot;e,196.49,540.04 147.33,587.55 153.13,577.89 161.16,566.37 170.5,558 175.65,553.38 181.5,549.14 187.55,545.33&quot;];
+	sss -&gt; pca	 [fontsize=11,
+		pos=&quot;e,219.39,204.27 329.9,335.94 323.4,326.82 315.23,315.67 307.5,306 280.79,272.59 248.06,235.79 226.32,211.86&quot;];
+	sss -&gt; pro	 [fontsize=11,
+		label=&lt;&lt;B&gt;7. gen_ssp&lt;/B&gt;&gt;,
+		lp=&quot;275,312&quot;,
+		pos=&quot;e,172.87,288.03 296.43,336.08 263.13,323.13 217.97,305.57 182.58,291.81&quot;];
+	sss -&gt; sss	 [fontsize=11,
+		label=&lt;&lt;B&gt;6. do_ch_fix&lt;/B&gt;&gt;,
+		lp=&quot;438.5,354&quot;,
+		pos=&quot;e,388.52,346.32 388.52,361.68 398.91,360.99 406.5,358.43 406.5,354 406.5,351.23 403.53,349.19 398.77,347.88&quot;];
+	src	 [fillcolor=&quot;#ADC7F7&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;9&quot;&gt;structural/bem/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;11&quot;&gt;*-oct-6-src.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;517.5,186&quot;,
+		style=filled,
+		width=1.2778];
+	src -&gt; fwd	 [fontsize=11,
+		pos=&quot;e,358.6,111.67 491.74,167.98 476.74,158.1 457.15,146.22 438.5,138 416.26,128.19 390.59,120.2 368.48,114.25&quot;];
+	legend	 [height=1.2778,
+		label=&lt;&lt;TABLE BORDER=&quot;0&quot; CELLBORDER=&quot;0&quot; CELLSPACING=&quot;4&quot; CELLPADDING=&quot;4&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#61C5AD&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Remote: acquisiton machine&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#C37D8B&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: user-created files&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#ADC7F7&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: pipeline-created files&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#A8A564&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Remote: SSS machine&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&gt;,
+		margin=0,
+		pos=&quot;273.5,718&quot;,
+		shape=plaintext,
+		width=2.1528];
+}</p></object></div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2013-2019, mnefun Developers.<br/>
+      Last updated on Nov 14, 2019.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
