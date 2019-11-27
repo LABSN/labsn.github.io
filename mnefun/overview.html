@@ -96,44 +96,87 @@
     <div class="body col-md-12 content" role="main">
       
   <div class="section" id="overview">
-<h1><a class="toc-backref" href="#id2">Overview</a><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<p>The processing pipeline steps and relationships are given below.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>At the very least, the following are missing:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">-annot.fif</span></code> creation</p></li>
-<li><p>custom <code class="docutils literal notranslate"><span class="pre">-annot.fif</span></code></p></li>
-<li><p>maxbad bad-channel computation and output</p></li>
-<li><p>autoreject support</p></li>
-<li><p>references to <a class="reference external" href="https://mne.tools/dev/python_reference.html#module-mne" title="(in MNE v0.20.dev0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mne</span></code></a> functions used</p></li>
-<li><p>extra projectors</p></li>
-<li><p>YAML schema options/list</p></li>
-</ul>
-</div>
+<span id="id1"></span><h1><a class="toc-backref" href="#id3">Overview</a><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>The processing pipeline steps and relationships are given below.
+All YAML parameters are described in their appropriate sections.</p>
 <div class="contents topic" id="contents">
 <p class="topic-title first">Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#overview" id="id2">Overview</a></p>
+<li><p><a class="reference internal" href="#overview" id="id3">Overview</a></p>
 <ul>
-<li><p><a class="reference internal" href="#flow-chart" id="id3">Flow chart</a></p></li>
-<li><p><a class="reference internal" href="#fetch-raw" id="id4">1. fetch_raw</a></p></li>
-<li><p><a class="reference internal" href="#do-score" id="id5">2. do_score</a></p></li>
-<li><p><a class="reference internal" href="#do-sss" id="id6">3. do_sss</a></p></li>
-<li><p><a class="reference internal" href="#do-ch-fix" id="id7">4. do_ch_fix</a></p></li>
-<li><p><a class="reference internal" href="#gen-ssp" id="id8">5. gen_ssp</a></p></li>
-<li><p><a class="reference internal" href="#apply-ssp" id="id9">6. apply_ssp</a></p></li>
-<li><p><a class="reference internal" href="#write-epochs" id="id10">7. write_epochs</a></p></li>
-<li><p><a class="reference internal" href="#gen-covs" id="id11">8. gen_covs</a></p></li>
-<li><p><a class="reference internal" href="#gen-fwd" id="id12">9. gen_fwd</a></p></li>
-<li><p><a class="reference internal" href="#gen-inv" id="id13">10. gen_inv</a></p></li>
-<li><p><a class="reference internal" href="#gen-report" id="id14">11. gen_report</a></p></li>
+<li><p><a class="reference internal" href="#flow-chart" id="id4">Flow chart</a></p>
+<ul>
+<li><p><a class="reference internal" href="#preparing-your-machine-for-head-position-estimation" id="id5">Preparing your machine for head position estimation</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#running-parameters" id="id6">Running parameters</a></p>
+<ul>
+<li><p><a class="reference internal" href="#general-general-options" id="id7"><code class="docutils literal notranslate"><span class="pre">general</span></code>: General options</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#fetch-raw" id="id8">1. fetch_raw</a></p>
+<ul>
+<li><p><a class="reference internal" href="#fetch-raw-raw-fetching-parameters" id="id9"><code class="docutils literal notranslate"><span class="pre">fetch_raw</span></code>: Raw fetching parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#do-score" id="id10">2. do_score</a></p>
+<ul>
+<li><p><a class="reference internal" href="#scoring-scoring-parameters" id="id11"><code class="docutils literal notranslate"><span class="pre">scoring</span></code>: Scoring parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#do-sss" id="id12">3. do_sss</a></p>
+<ul>
+<li><p><a class="reference internal" href="#preprocessing-multithreading-multithreading-parameters" id="id13"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">multithreading</span></code>: Multithreading parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-bads-bad-channel-parameters" id="id14"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">bads</span></code>: Bad-channel parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-head-position-estimation-head-position-estimation-parameters" id="id15"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">head_position_estimation</span></code>: Head position estimation parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-annotations-annotation-parameters" id="id16"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">annotations</span></code>: Annotation parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-sss-sss-parameters" id="id17"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">sss</span></code>: SSS parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#do-ch-fix" id="id18">4. do_ch_fix</a></p></li>
+<li><p><a class="reference internal" href="#gen-ssp" id="id19">5. gen_ssp</a></p>
+<ul>
+<li><p><a class="reference internal" href="#preprocessing-filtering-filtering-parameters" id="id20"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">filtering</span></code>: Filtering parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-ssp-ssp-creation-parameters" id="id21"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">ssp</span></code>: SSP creation parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#apply-ssp" id="id22">6. apply_ssp</a></p></li>
+<li><p><a class="reference internal" href="#write-epochs" id="id23">7. write_epochs</a></p>
+<ul>
+<li><p><a class="reference internal" href="#epoching-epoching-parameters" id="id24"><code class="docutils literal notranslate"><span class="pre">epoching</span></code>: Epoching parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#gen-covs" id="id25">8. gen_covs</a></p>
+<ul>
+<li><p><a class="reference internal" href="#covariance-covariance-parameters" id="id26"><code class="docutils literal notranslate"><span class="pre">covariance</span></code>: Covariance parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#gen-fwd" id="id27">9. gen_fwd</a></p>
+<ul>
+<li><p><a class="reference internal" href="#forward-forward-parameters" id="id28"><code class="docutils literal notranslate"><span class="pre">forward</span></code>: Forward parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#gen-inv" id="id29">10. gen_inv</a></p>
+<ul>
+<li><p><a class="reference internal" href="#inverse-inverse-parameters" id="id30"><code class="docutils literal notranslate"><span class="pre">inverse</span></code>: Inverse parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#gen-report" id="id31">11. gen_report</a></p>
+<ul>
+<li><p><a class="reference internal" href="#report-params-report-parameters" id="id32"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#filename-standardization" id="id33">Filename standardization</a></p>
+<ul>
+<li><p><a class="reference internal" href="#naming-file-naming-tags-and-folders" id="id34"><code class="docutils literal notranslate"><span class="pre">naming</span></code>: File naming tags and folders</a></p></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="flow-chart">
-<h2><a class="toc-backref" href="#id3">Flow chart</a><a class="headerlink" href="#flow-chart" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Flow chart</a><a class="headerlink" href="#flow-chart" title="Permalink to this headline">¶</a></h2>
 <div class="graphviz"><object data="_images/graphviz-bf88e458d0d91974241a637ccd2d9fe30105103c.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">strict digraph &quot;mnefun flow diagram&quot; {
 	graph [bb=&quot;0,0,564.5,669&quot;,
@@ -373,17 +416,99 @@
 		shape=plaintext,
 		width=2.1528];
 }</p></object></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>At the very least, the following are missing from this flowchart:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-annot.fif</span></code> creation</p></li>
+<li><p>custom <code class="docutils literal notranslate"><span class="pre">-annot.fif</span></code></p></li>
+<li><p>maxbad bad-channel computation and output</p></li>
+<li><p>autoreject support</p></li>
+<li><p>references to <a class="reference external" href="https://mne.tools/dev/python_reference.html#module-mne" title="(in MNE v0.20.dev0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">mne</span></code></a> functions used</p></li>
+<li><p>extra projectors</p></li>
+</ul>
+</div>
+<div class="section" id="preparing-your-machine-for-head-position-estimation">
+<h3><a class="toc-backref" href="#id5">Preparing your machine for head position estimation</a><a class="headerlink" href="#preparing-your-machine-for-head-position-estimation" title="Permalink to this headline">¶</a></h3>
+<p>Parameters for remotely connecting to SSS workstation (‘sws’) can be set
+by adding a file ~/.mnefun/mnefun.json with contents like:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir ~/.mnefun
+<span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;{&quot;sws_ssh&quot;:&quot;kasga&quot;, &quot;sws_dir&quot;:&quot;/data06/larsoner/sss_work&quot;, &quot;sws_port&quot;:22}&#39;</span> &gt; ~/.mnefun/mnefun.json
+</pre></div>
+</div>
+<p>This should be preferred to the old way, which was to set in each script
+when running on your machine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">params</span><span class="o">.</span><span class="n">sws_ssh</span> <span class="o">=</span> <span class="s1">&#39;kasga&#39;</span>
+<span class="n">params</span><span class="o">.</span><span class="n">sws_dir</span> <span class="o">=</span> <span class="s1">&#39;/data06/larsoner/sss_work&#39;</span>
+</pre></div>
+</div>
+<p>Using per-machine config files rather than per-script variables should
+help increase portability of scripts without hurting reproducibility
+(assuming we all use the same version of MaxFilter, which should be a
+safe assumption).</p>
+</div>
+</div>
+<div class="section" id="running-parameters">
+<h2><a class="toc-backref" href="#id6">Running parameters</a><a class="headerlink" href="#running-parameters" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-general-options">
+<h3><a class="toc-backref" href="#id7"><code class="docutils literal notranslate"><span class="pre">general</span></code>: General options</a><a class="headerlink" href="#general-general-options" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>work_dir<span class="classifier">str</span></dt><dd><p>Working directory, usually “.”.</p>
+</dd>
+<dt>subjects_dir<span class="classifier">str</span></dt><dd><p>Directory containing the structurals.</p>
+</dd>
+<dt>subject_indices<span class="classifier">list</span></dt><dd><p>Which subjects to process.</p>
+</dd>
+<dt>disp_files<span class="classifier">bool</span></dt><dd><p>Display status.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="fetch-raw">
-<h2><a class="toc-backref" href="#id4">1. fetch_raw</a><a class="headerlink" href="#fetch-raw" title="Permalink to this headline">¶</a></h2>
-<p>Fetches raw files from an acquisition machine.</p>
+<h2><a class="toc-backref" href="#id8">1. fetch_raw</a><a class="headerlink" href="#fetch-raw" title="Permalink to this headline">¶</a></h2>
+<p>Fetch raw files from an acquisition machine.</p>
+<div class="section" id="fetch-raw-raw-fetching-parameters">
+<h3><a class="toc-backref" href="#id9"><code class="docutils literal notranslate"><span class="pre">fetch_raw</span></code>: Raw fetching parameters</a><a class="headerlink" href="#fetch-raw-raw-fetching-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>subjects<span class="classifier">list of str</span></dt><dd><p>Subject names.</p>
+</dd>
+<dt>structurals<span class="classifier">list of str</span></dt><dd><p>List of subject structurals.</p>
+</dd>
+<dt>dates<span class="classifier">list of tuple or None</span></dt><dd><p>Dates to use for anonymization. Use “None” to more fully anonymize.</p>
+</dd>
+<dt>acq_ssh<span class="classifier">str</span></dt><dd><p>The acquisition machine SSH name.</p>
+</dd>
+<dt>acq_dir<span class="classifier">list of str</span></dt><dd><p>List of paths to search and fetch raw data.</p>
+</dd>
+<dt>acq_port<span class="classifier">int</span></dt><dd><p>Acquisition port.</p>
+</dd>
+<dt>run_names<span class="classifier">list of str</span></dt><dd><p>Run names for the paradigm.</p>
+</dd>
+<dt>runs_empty<span class="classifier">list of str</span></dt><dd><p>Empty room run names.</p>
+</dd>
+<dt>subject_run_indices<span class="classifier">list of array-like | None</span></dt><dd><p>Run indices to include for each subject. This can be a list
+(must be same length as <code class="docutils literal notranslate"><span class="pre">params.subjects</span></code>) or a dict (keys are subject
+strings, values are the run indices) including a defaultdict. None is an
+alias for “all runs”.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="do-score">
-<h2><a class="toc-backref" href="#id5">2. do_score</a><a class="headerlink" href="#do-score" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id10">2. do_score</a><a class="headerlink" href="#do-score" title="Permalink to this headline">¶</a></h2>
 <p>Do the scoring. This converts TTL triggers to meaningful events.</p>
+<div class="section" id="scoring-scoring-parameters">
+<h3><a class="toc-backref" href="#id11"><code class="docutils literal notranslate"><span class="pre">scoring</span></code>: Scoring parameters</a><a class="headerlink" href="#scoring-scoring-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>score<span class="classifier">callable | None</span></dt><dd><p>Scoring function used to slice data into trials.</p>
+</dd>
+<dt>on_process<span class="classifier">callable</span></dt><dd><p>Called at each processing step.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="do-sss">
-<span id="id1"></span><h2><a class="toc-backref" href="#id6">3. do_sss</a><a class="headerlink" href="#do-sss" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id12">3. do_sss</a><a class="headerlink" href="#do-sss" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Before running SSS, make SUBJ/raw_fif/SUBJ_prebad.txt file with
@@ -396,13 +521,136 @@ space-separated list of bad MEG channel numbers.</p>
 <li><p>Delete the file from the remote machine.</p></li>
 <li><p>Run SSS processing locally using <a class="reference external" href="https://mne.tools/dev/generated/mne.preprocessing.maxwell_filter.html#mne.preprocessing.maxwell_filter" title="(in MNE v0.20.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.preprocessing.maxwell_filter()</span></code></a>.</p></li>
 </ol>
+<div class="section" id="preprocessing-multithreading-multithreading-parameters">
+<h3><a class="toc-backref" href="#id13"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">multithreading</span></code>: Multithreading parameters</a><a class="headerlink" href="#preprocessing-multithreading-multithreading-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>n_jobs<span class="classifier">int</span></dt><dd><p>Number of jobs to use in parallel operations.</p>
+</dd>
+<dt>n_jobs_mkl<span class="classifier">int</span></dt><dd><p>Number of jobs to spawn in parallel for operations that can make
+use of MKL threading. If Numpy/Scipy has been compiled with MKL
+support, it is best to leave this at 1 or 2 since MKL will
+automatically spawn threads. Otherwise, n_cpu is a good choice.</p>
+</dd>
+<dt>n_jobs_fir<span class="classifier">int | str</span></dt><dd><p>Number of threads to use for FIR filtering. Can also be ‘cuda’
+if the system supports CUDA.</p>
+</dd>
+<dt>n_jobs_resample<span class="classifier">int | str</span></dt><dd><p>Number of threads to use for resampling. Can also be ‘cuda’
+if the system supports CUDA.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="preprocessing-bads-bad-channel-parameters">
+<h3><a class="toc-backref" href="#id14"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">bads</span></code>: Bad-channel parameters</a><a class="headerlink" href="#preprocessing-bads-bad-channel-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>mf_autobad<span class="classifier">bool</span></dt><dd><p>Default False. If True use Maxfilter to automatically mark bad
+channels prior to SSS denoising.</p>
+</dd>
+<dt>mf_badlimit<span class="classifier">int</span></dt><dd><p>MaxFilter threshold for noisy channel detection (default is 7).</p>
+</dd>
+<dt>auto_bad<span class="classifier">float | None</span></dt><dd><p>If not None, bad channels will be automatically excluded if
+they disqualify a proportion of events exceeding <code class="docutils literal notranslate"><span class="pre">autobad</span></code>.</p>
+</dd>
+<dt>auto_bad_reject<span class="classifier">str | dict | None</span></dt><dd><p>Default is None. Must be defined if using Autoreject module to
+compute noisy sensor rejection criteria. Set to ‘auto’ to compute
+criteria automatically, or dictionary of channel keys and amplitude
+values e.g., dict(grad=1500e-13, mag=5000e-15, eeg=150e-6) to define
+rejection threshold(s). See
+<a class="reference external" href="http://autoreject.github.io/">http://autoreject.github.io/</a> for details.</p>
+</dd>
+<dt>auto_bad_flat<span class="classifier">dict | None</span></dt><dd><p>Flat threshold for auto bad.</p>
+</dd>
+<dt>auto_bad_eeg_thresh<span class="classifier">float | None</span></dt><dd><p>Threshold for auto_bad EEG detection.</p>
+</dd>
+<dt>auto_bad_meg_thresh<span class="classifier">float | None</span></dt><dd><p>Threshold for auto_bad MEG detection.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="preprocessing-head-position-estimation-head-position-estimation-parameters">
+<h3><a class="toc-backref" href="#id15"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">head_position_estimation</span></code>: Head position estimation parameters</a><a class="headerlink" href="#preprocessing-head-position-estimation-head-position-estimation-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>coil_t_window<span class="classifier">float</span></dt><dd><p>Time window for coil position estimation.</p>
+</dd>
+<dt>coil_t_step_min<span class="classifier">float</span></dt><dd><p>Coil step min for head / cHPI coil position estimation.</p>
+</dd>
+<dt>coil_dist_limit<span class="classifier">float</span></dt><dd><p>Dist limit for coils.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="preprocessing-annotations-annotation-parameters">
+<h3><a class="toc-backref" href="#id16"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">annotations</span></code>: Annotation parameters</a><a class="headerlink" href="#preprocessing-annotations-annotation-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>coil_bad_count_duration_limit<span class="classifier">float</span></dt><dd><p>Remove segments with &lt; 3 good coils for at least this many sec.</p>
+</dd>
+<dt>rotation_limit<span class="classifier">float</span></dt><dd><p>Rotation limit (deg/s) for annotating bad segments.</p>
+</dd>
+<dt>translation_limit<span class="classifier">float</span></dt><dd><p>Head translation limit (m/s) for annotating bad segments.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="preprocessing-sss-sss-parameters">
+<h3><a class="toc-backref" href="#id17"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">sss</span></code>: SSS parameters</a><a class="headerlink" href="#preprocessing-sss-sss-parameters" title="Permalink to this headline">¶</a></h3>
+<dl>
+<dt>movecomp<span class="classifier">str | None</span></dt><dd><p>Movement compensation to use. Can be ‘inter’ or None.</p>
+</dd>
+<dt>sss_type<span class="classifier">str</span></dt><dd><p>signal space separation method. Must be either ‘maxfilter’ or ‘python’</p>
+</dd>
+<dt>int_order<span class="classifier">int</span></dt><dd><p>Order of internal component of spherical expansion. Default is 8.
+Value of 6 recomended for infant data.</p>
+</dd>
+<dt>ext_order<span class="classifier">int</span></dt><dd><p>Order of external component of spherical expansion. Default is 3.</p>
+</dd>
+<dt>sss_regularize<span class="classifier">str</span></dt><dd><p>SSS regularization, usually “in”.</p>
+</dd>
+<dt>tsss_dur<span class="classifier">float | None</span></dt><dd><p>Buffer length (in seconds) fpr Spatiotemporal SSS. Default is 60.
+however based on system specification a shorter buffer may be
+appropriate. For data containing excessive head movements e.g. young
+children a buffer size of 4s is recommended.</p>
+</dd>
+<dt>st_correlation<span class="classifier">float</span></dt><dd><p>Correlation limit between inner and outer subspaces used to reject
+ovwrlapping intersecting inner/outer signals during spatiotemporal SSS.
+Default is .98 however a smaller value of .9 is recommended for infant/
+child data.</p>
+</dd>
+<dt>filter_chpi<span class="classifier">str</span></dt><dd><p>Filter cHPI signals before SSS.</p>
+</dd>
+<dt>trans_to<span class="classifier">str | array-like, (3,) | None</span></dt><dd><p>The destination location for the head. Can be:</p>
+<dl class="simple">
+<dt>‘median’ (default)</dt><dd><p>Median (across runs) of the starting head positions.</p>
+</dd>
+<dt>‘twa’</dt><dd><p>Time-weighted average head position.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">None</span></code></dt><dd><p>Will not change the head position.</p>
+</dd>
+<dt>str</dt><dd><p>Path to a FIF file containing a MEG device to head transformation.</p>
+</dd>
+<dt>array-like</dt><dd><p>First three elements are coordinates to translate to.
+An optional fourth element gives the x-axis rotation (e.g., -30 means
+a backward 30° rotation).</p>
+</dd>
+</dl>
+</dd>
+<dt>sss_origin<span class="classifier">array-like, shape (3,) | str</span></dt><dd><p>Origin of internal and external multipolar moment space in meters.
+Default is center of sphere fit to digitized head points.</p>
+</dd>
+<dt>dig_with_eeg<span class="classifier">bool</span></dt><dd><p>If True, include EEG points in estimating the head origin.</p>
+</dd>
+<dt>ct_file<span class="classifier">str</span></dt><dd><p>Cross-talk file, usually “uw” to auto-load the UW file.</p>
+</dd>
+<dt>cal_file<span class="classifier">str</span></dt><dd><p>Calibration file, usually “uw” to auto-load the UW file.</p>
+</dd>
+<dt>sss_format<span class="classifier">str</span></dt><dd><p>Deprecated. SSS numerical format when using MaxFilter.</p>
+</dd>
+<dt>mf_args<span class="classifier">str</span></dt><dd><p>Deprecated. Extra arguments for MF SSS.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="do-ch-fix">
-<h2><a class="toc-backref" href="#id7">4. do_ch_fix</a><a class="headerlink" href="#do-ch-fix" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">4. do_ch_fix</a><a class="headerlink" href="#do-ch-fix" title="Permalink to this headline">¶</a></h2>
 <p>Fix EEG channel ordering, and also anonymize files.</p>
 </div>
 <div class="section" id="gen-ssp">
-<h2><a class="toc-backref" href="#id8">5. gen_ssp</a><a class="headerlink" href="#gen-ssp" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id19">5. gen_ssp</a><a class="headerlink" href="#gen-ssp" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Before running SSP, examine SSS’ed files and make
@@ -410,34 +658,318 @@ SUBJ/bads/bad_ch_SUBJ_post-sss.txt; usually, this should only
 contain EEG channels.</p>
 </div>
 <p>Generate SSP vectors.</p>
+<div class="section" id="preprocessing-filtering-filtering-parameters">
+<h3><a class="toc-backref" href="#id20"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">filtering</span></code>: Filtering parameters</a><a class="headerlink" href="#preprocessing-filtering-filtering-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>hp_cut<span class="classifier">float | None</span></dt><dd><p>Highpass cutoff in Hz. Use None for no highpassing.</p>
+</dd>
+<dt>hp_trans<span class="classifier">float</span></dt><dd><p>High-pass transition band.</p>
+</dd>
+<dt>lp_cut<span class="classifier">float</span></dt><dd><p>Cutoff for lowpass filtering.</p>
+</dd>
+<dt>lp_trans<span class="classifier">float</span></dt><dd><p>Low-pass transition band.</p>
+</dd>
+<dt>filter_length<span class="classifier">int | str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.20.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+</dd>
+<dt>fir_design<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.20.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+</dd>
+<dt>fir_window<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.20.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+</dd>
+<dt>phase<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.20.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="preprocessing-ssp-ssp-creation-parameters">
+<h3><a class="toc-backref" href="#id21"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">ssp</span></code>: SSP creation parameters</a><a class="headerlink" href="#preprocessing-ssp-ssp-creation-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>proj_nums<span class="classifier">list | dict</span></dt><dd><p>List of projector counts to use for ECG/EOG/ERM; each list contains
+three values for grad/mag/eeg channels.
+Can be a dict that maps subject names to projector counts to use.</p>
+</dd>
+<dt>proj_sfreq<span class="classifier">float | None</span></dt><dd><p>The sample freq to use for calculating projectors. Useful since
+time points are not independent following low-pass. Also saves
+computation to downsample.</p>
+</dd>
+<dt>proj_meg<span class="classifier">str</span></dt><dd><p>Can be “separate” (default for backward compat) or “combined”
+(should be better for SSS’ed data).</p>
+</dd>
+<dt>drop_thresh<span class="classifier">float</span></dt><dd><p>The percentage threshold to use when deciding whether or not to
+plot Epochs drop_log.</p>
+</dd>
+<dt>plot_raw<span class="classifier">bool</span></dt><dd><p>If True, plot the raw files with the ECG/EOG events overlaid.</p>
+</dd>
+<dt>ssp_eog_reject<span class="classifier">dict | None</span></dt><dd><p>Amplitude rejection criteria for EOG SSP computation. None will
+use the mne-python default.</p>
+</dd>
+<dt>ssp_ecg_reject<span class="classifier">dict | None</span></dt><dd><p>Amplitude rejection criteria for ECG SSP computation. None will
+use the mne-python default.</p>
+</dd>
+<dt>eog_channel<span class="classifier">str | dict | None</span></dt><dd><p>The channel to use to detect EOG events. None will use EOG* channels.
+In lieu of an EOG recording, MEG1411 may work.</p>
+</dd>
+<dt>ecg_channel<span class="classifier">str | dict | None</span></dt><dd><p>The channel to use to detect ECG events. None will use ECG063.
+In lieu of an ECG recording, MEG1531 may work.
+Can be a dict that maps subject names to channels.</p>
+</dd>
+<dt>eog_t_lims<span class="classifier">tuple</span></dt><dd><p>The time limits for EOG calculation. Default (-0.25, 0.25).</p>
+</dd>
+<dt>ecg_t_lims<span class="classifier">tuple</span></dt><dd><p>The time limits for ECG calculation. Default(-0.08, 0.08).</p>
+</dd>
+<dt>eog_f_lims<span class="classifier">tuple</span></dt><dd><p>Band-pass limits for EOG detection and calculation. Default (0, 2).</p>
+</dd>
+<dt>ecg_f_lims<span class="classifier">tuple</span></dt><dd><p>Band-pass limits for ECG detection and calculation. Default (5, 35).</p>
+</dd>
+<dt>eog_thresh<span class="classifier">float | dict | None</span></dt><dd><p>Threshold for EOG detection. Can vary per subject.</p>
+</dd>
+<dt>proj_ave<span class="classifier">bool</span></dt><dd><p>If True, average artifact epochs before computing proj.</p>
+</dd>
+<dt>proj_extra<span class="classifier">str | None</span></dt><dd><p>Extra projector filename to load for each subject.</p>
+</dd>
+<dt>get_projs_from<span class="classifier">list of int</span></dt><dd><p>Indices for runs to get projects from.</p>
+</dd>
+<dt>cont_lp<span class="classifier">float</span></dt><dd><p>Lowpass to use for continuous ERM projectors.</p>
+</dd>
+<dt>plot_drop_logs<span class="classifier">bool</span></dt><dd><p>If True, plot drop logs after preprocessing.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="apply-ssp">
-<h2><a class="toc-backref" href="#id9">6. apply_ssp</a><a class="headerlink" href="#apply-ssp" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id22">6. apply_ssp</a><a class="headerlink" href="#apply-ssp" title="Permalink to this headline">¶</a></h2>
 <p>Apply SSP vectors and filtering to the files.</p>
 </div>
 <div class="section" id="write-epochs">
-<h2><a class="toc-backref" href="#id10">7. write_epochs</a><a class="headerlink" href="#write-epochs" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id23">7. write_epochs</a><a class="headerlink" href="#write-epochs" title="Permalink to this headline">¶</a></h2>
 <p>Write epochs to disk.</p>
+<div class="section" id="epoching-epoching-parameters">
+<h3><a class="toc-backref" href="#id24"><code class="docutils literal notranslate"><span class="pre">epoching</span></code>: Epoching parameters</a><a class="headerlink" href="#epoching-epoching-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>tmin<span class="classifier">float</span></dt><dd><p>tmin for events.</p>
+</dd>
+<dt>tmax<span class="classifier">float</span></dt><dd><p>tmax for events.</p>
+</dd>
+<dt>t_adjust<span class="classifier">float</span></dt><dd><p>Adjustment for delays (e.g., -4e-3 compensates for a 4 ms delay
+in the trigger.</p>
+</dd>
+<dt>baseline<span class="classifier">tuple | None | str</span></dt><dd><p>Baseline to use. If “individual”, use <code class="docutils literal notranslate"><span class="pre">params.bmin</span></code> and
+<code class="docutils literal notranslate"><span class="pre">params.bmax</span></code>, otherwise pass as the baseline parameter to
+mne-python Epochs. <code class="docutils literal notranslate"><span class="pre">params.bmin</span></code> and <code class="docutils literal notranslate"><span class="pre">params.bmax</span></code> will always
+be used for covariance calculation. This is useful e.g. when using
+a high-pass filter and no baselining is desired (but evoked
+covariances should still be calculated from the baseline period).</p>
+</dd>
+<dt>bmin<span class="classifier">float</span></dt><dd><p>Lower limit for baseline compensation.</p>
+</dd>
+<dt>bmax<span class="classifier">float</span></dt><dd><p>Upper limit for baseline compensation.</p>
+</dd>
+<dt>decim<span class="classifier">int</span></dt><dd><p>Amount to decimate the data after filtering when epoching data
+(e.g., a factor of 5 on 1000 Hz data yields 200 Hz data).</p>
+</dd>
+<dt>epochs_type<span class="classifier">str | list</span></dt><dd><p>Can be ‘fif’, ‘mat’, or a list containing both.</p>
+</dd>
+<dt>match_fun<span class="classifier">callable | None</span></dt><dd><p>If None, standard matching will be performed. If a function,
+must_match will be ignored, and <code class="docutils literal notranslate"><span class="pre">match_fun</span></code> will be called
+to equalize event counts.</p>
+</dd>
+<dt>reject<span class="classifier">dict</span></dt><dd><p>Rejection parameters for epochs.</p>
+</dd>
+<dt>flat<span class="classifier">dict</span></dt><dd><p>Flat thresholds for epoch rejection.</p>
+</dd>
+<dt>reject_tmin<span class="classifier">float | None</span></dt><dd><p>Reject minimum time to use when epoching. None will use <code class="docutils literal notranslate"><span class="pre">tmin</span></code>.</p>
+</dd>
+<dt>reject_tmax<span class="classifier">float | None</span></dt><dd><p>Reject maximum time to use when epoching. None will use <code class="docutils literal notranslate"><span class="pre">tmax</span></code>.</p>
+</dd>
+<dt>on_missing<span class="classifier">string</span></dt><dd><p>Can set to ‘error’ | ‘warning’ | ‘ignore’. Default is ‘error’.
+Determine what to do if one or several event ids are not found in the
+recording during epoching. See mne.Epochs docstring for further
+details.</p>
+</dd>
+<dt>autoreject_thresholds<span class="classifier">bool | False</span></dt><dd><p>If True use autoreject module to compute global rejection thresholds
+for epoching. Make sure autoreject module is installed. See
+<a class="reference external" href="http://autoreject.github.io/">http://autoreject.github.io/</a> for instructions.</p>
+</dd>
+<dt>autoreject_types<span class="classifier">tuple</span></dt><dd><p>Default is (‘mag’, ‘grad’, ‘eeg’). Can set to (‘mag’, ‘grad’, ‘eeg’,
+‘eog) to use EOG channel rejection criterion from autoreject module to
+reject trials on basis of EOG.</p>
+</dd>
+<dt>reject_epochs_by_annot<span class="classifier">bool</span></dt><dd><p>If True, reject epochs by BAD annotations.</p>
+</dd>
+<dt>analyses<span class="classifier">list of str</span></dt><dd><p>Lists of analyses of interest.</p>
+</dd>
+<dt>in_names<span class="classifier">list of str</span></dt><dd><p>Names of input events.</p>
+</dd>
+<dt>in_numbers<span class="classifier">list of list of int</span></dt><dd><p>Event numbers (in scored event files) associated with each name.</p>
+</dd>
+<dt>out_names<span class="classifier">list of list of str</span></dt><dd><p>Event types to make out of old ones.</p>
+</dd>
+<dt>out_numbers<span class="classifier">list of list of int</span></dt><dd><p>Event numbers to convert to (e.g., [[1, 1, 2, 3, 3], …] would create
+three event types, where the first two and last two event types from
+the original list get collapsed over).</p>
+</dd>
+<dt>must_match<span class="classifier">list of int</span></dt><dd><p>Indices from the original in_names that must match in event counts
+before collapsing. Should eventually be expanded to allow for
+ratio-based collapsing.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="gen-covs">
-<h2><a class="toc-backref" href="#id11">8. gen_covs</a><a class="headerlink" href="#gen-covs" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id25">8. gen_covs</a><a class="headerlink" href="#gen-covs" title="Permalink to this headline">¶</a></h2>
 <p>Generate covariances.</p>
+<div class="section" id="covariance-covariance-parameters">
+<h3><a class="toc-backref" href="#id26"><code class="docutils literal notranslate"><span class="pre">covariance</span></code>: Covariance parameters</a><a class="headerlink" href="#covariance-covariance-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>cov_method<span class="classifier">str</span></dt><dd><p>Covariance calculation method.</p>
+</dd>
+<dt>compute_rank<span class="classifier">bool</span></dt><dd><p>Default is False. Set to True to compute rank of the noise covariance
+matrix during inverse kernel computation.</p>
+</dd>
+<dt>pick_events_cov<span class="classifier">callable | None</span></dt><dd><p>Function for picking covariance events.</p>
+</dd>
+<dt>cov_rank<span class="classifier">str | int</span></dt><dd><p>Cov rank to use, usually “auto”.</p>
+</dd>
+<dt>cov_rank_tol<span class="classifier">float</span></dt><dd><p>Tolerance for covariance rank computation.</p>
+</dd>
+<dt>force_erm_cov_rank_full<span class="classifier">bool</span></dt><dd><p>If True, force the ERM cov to be full rank.
+Usually not needed, but might help when the empty-room data
+is short and/or there are a lot of head movements.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="gen-fwd">
-<h2><a class="toc-backref" href="#id12">9. gen_fwd</a><a class="headerlink" href="#gen-fwd" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id27">9. gen_fwd</a><a class="headerlink" href="#gen-fwd" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Make SUBJ/trans/SUBJ-trans.fif using <a class="reference external" href="https://mne.tools/dev/generated/commands.html#gen-mne-coreg" title="(in MNE v0.20.dev0)"><span>mne coreg</span></a>.</p>
 </div>
 <p>Generate forward solutions (and source space if necessary).</p>
+<div class="section" id="forward-forward-parameters">
+<h3><a class="toc-backref" href="#id28"><code class="docutils literal notranslate"><span class="pre">forward</span></code>: Forward parameters</a><a class="headerlink" href="#forward-forward-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>bem_type<span class="classifier">str</span></dt><dd><p>Defaults to <code class="docutils literal notranslate"><span class="pre">'5120-5120-5120'</span></code>, use <code class="docutils literal notranslate"><span class="pre">'5120'</span></code> for a
+single-layer BEM.</p>
+</dd>
+<dt>src<span class="classifier">str | dict</span></dt><dd><p>Can start be:</p>
+<ul class="simple">
+<li><p>‘oct6’ to use a surface source space decimated using the 6th
+(or another integer) subdivision of an octahedron, or</p></li>
+<li><p>‘vol5’ to use a volumetric grid source space with 5mm (or another
+integer) spacing</p></li>
+</ul>
+</dd>
+<dt>src_pos<span class="classifier">float</span></dt><dd><p>Default is 7 mm. Defines source grid spacing for volumetric source
+space.</p>
+</dd>
+<dt>fwd_mindist<span class="classifier">float</span></dt><dd><p>Minimum distance (mm) for sources in the brain from the skull in order
+for them to be included in the forward solution source space.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="gen-inv">
-<h2><a class="toc-backref" href="#id13">10. gen_inv</a><a class="headerlink" href="#gen-inv" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id29">10. gen_inv</a><a class="headerlink" href="#gen-inv" title="Permalink to this headline">¶</a></h2>
 <p>Generate inverses.</p>
+<div class="section" id="inverse-inverse-parameters">
+<h3><a class="toc-backref" href="#id30"><code class="docutils literal notranslate"><span class="pre">inverse</span></code>: Inverse parameters</a><a class="headerlink" href="#inverse-inverse-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>inv_names<span class="classifier">list of str</span></dt><dd><p>Inverse names to use.</p>
+</dd>
+<dt>inv_runs<span class="classifier">list of int</span></dt><dd><p>Runs to use for each inverse.</p>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="gen-report">
-<h2><a class="toc-backref" href="#id14">11. gen_report</a><a class="headerlink" href="#gen-report" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id31">11. gen_report</a><a class="headerlink" href="#gen-report" title="Permalink to this headline">¶</a></h2>
 <p>Write <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v0.20.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> HTML of results to disk.</p>
+<div class="section" id="report-params-report-parameters">
+<h3><a class="toc-backref" href="#id32"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a><a class="headerlink" href="#report-params-report-parameters" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>chpi_snr<span class="classifier">bool</span></dt><dd><p>cHPI SNR (default True).</p>
+</dd>
+<dt>good_hpi_count<span class="classifier">bool</span></dt><dd><p>Number of good HPI coils (default True).</p>
+</dd>
+<dt>head_movement<span class="classifier">bool</span></dt><dd><p>Head movement (default True).</p>
+</dd>
+<dt>raw_segments<span class="classifier">bool</span></dt><dd><p>10 evenly spaced raw data segments (default True).</p>
+</dd>
+<dt>psd<span class="classifier">bool</span></dt><dd><p>Raw PSDs, often slow (default True).</p>
+</dd>
+<dt>ssp_topomaps<span class="classifier">bool</span></dt><dd><p>SSP topomaps (default True).</p>
+</dd>
+<dt>source_alignment<span class="classifier">bool</span></dt><dd><p>Source alignment (default True).</p>
+</dd>
+<dt>drop_log<span class="classifier">bool</span></dt><dd><p>Plot the epochs drop log (default True).</p>
+</dd>
+<dt>covariance<span class="classifier">bool</span></dt><dd><p>Covariance image and SVD plots.</p>
+</dd>
+<dt>bem<span class="classifier">bool</span></dt><dd><p>Plot the BEM.</p>
+</dd>
+<dt>snr<span class="classifier">dict</span></dt><dd><p>SNR plots, with keys ‘analysis’, ‘name’, and ‘inv’.</p>
+</dd>
+<dt>whitening<span class="classifier">dict</span></dt><dd><p>Whitening plots, with keys ‘analysis’, ‘name’, and ‘cov’.</p>
+</dd>
+<dt>sensor<span class="classifier">dict</span></dt><dd><p>Sensor topomaps, with keys ‘analysis’, ‘name’, and ‘times’.</p>
+</dd>
+<dt>source<span class="classifier">dict</span></dt><dd><p>Source plots, with keys ‘analysis’, ‘name’, ‘inv’, ‘times’, ‘views’,
+and ‘size’.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="filename-standardization">
+<h2><a class="toc-backref" href="#id33">Filename standardization</a><a class="headerlink" href="#filename-standardization" title="Permalink to this headline">¶</a></h2>
+<p>mnefun imposes custom standardized structure on filenames:</p>
+<div class="section" id="naming-file-naming-tags-and-folders">
+<h3><a class="toc-backref" href="#id34"><code class="docutils literal notranslate"><span class="pre">naming</span></code>: File naming tags and folders</a><a class="headerlink" href="#naming-file-naming-tags-and-folders" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>list_dir<span class="classifier">str</span></dt><dd><p>Directory for event lists, usually “lists”.</p>
+</dd>
+<dt>bad_dir<span class="classifier">str</span></dt><dd><p>Directory to use for bad channels, usually “bads”.</p>
+</dd>
+<dt>bad_tag<span class="classifier">str</span></dt><dd><p>Tag for bid channel filename, usually “_post-sss.txt”.</p>
+</dd>
+<dt>raw_dir<span class="classifier">str</span></dt><dd><p>Raw directory, usually “raw_fif”.</p>
+</dd>
+<dt>keep_orig<span class="classifier">bool</span></dt><dd><p>Keep original files after anonymization.</p>
+</dd>
+<dt>raw_fif_tag<span class="classifier">str</span></dt><dd><p>File tag for raw data, usually “_raw.fif”.</p>
+</dd>
+<dt>sss_fif_tag<span class="classifier">str</span></dt><dd><p>File tag for SSS-processed files, usually “_raw_sss.fif”.</p>
+</dd>
+<dt>sss_dir<span class="classifier">str</span></dt><dd><p>Directory to use for SSS processed files, usually “sss_fif”.</p>
+</dd>
+<dt>pca_dir<span class="classifier">str</span></dt><dd><p>Directory for processed files, usually “sss_pca_fif”.</p>
+</dd>
+<dt>epochs_dir<span class="classifier">str</span></dt><dd><p>Directory for epochs, usually “epochs”.</p>
+</dd>
+<dt>epochs_prefix<span class="classifier">str</span></dt><dd><p>The prefix to use for the <code class="docutils literal notranslate"><span class="pre">-epo.fif</span></code> file.</p>
+</dd>
+<dt>epochs_tag<span class="classifier">str</span></dt><dd><p>Tag for epoochs, usually ‘-epo’.</p>
+</dd>
+<dt>eq_tag<span class="classifier">str</span></dt><dd><p>Tag for equalized data, usually “eq”.</p>
+</dd>
+<dt>cov_dir<span class="classifier">str</span></dt><dd><p>Directory to use for covariances, usually “covariance”.</p>
+</dd>
+<dt>forward_dir<span class="classifier">str</span></dt><dd><p>Directory for forward solutions, usually “forward”.</p>
+</dd>
+<dt>trans_dir<span class="classifier">str</span></dt><dd><p>Directory to use for trans files, usually “trans”.</p>
+</dd>
+<dt>inverse_dir<span class="classifier">str</span></dt><dd><p>Directory for storing inverses, usually “inverse”.</p>
+</dd>
+<dt>inv_tag<span class="classifier">str</span></dt><dd><p>Tag for all inverses, usually “-sss”.</p>
+</dd>
+<dt>inv_erm_tag<span class="classifier">str</span></dt><dd><p>Tag for ERM inverse, usually “-erm”.</p>
+</dd>
+<dt>inv_fixed_tag<span class="classifier">str</span></dt><dd><p>Tag for fixed inverse, usually “-fixed”.</p>
+</dd>
+<dt>inv_loose_tag<span class="classifier">str</span></dt><dd><p>Tag for loose inverse, usually “”.</p>
+</dd>
+<dt>inv_free_tag<span class="classifier">str</span></dt><dd><p>Tag for free orientation inverse, usually “-free”.</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 
@@ -454,7 +986,7 @@ contain EEG channels.</p>
     </p>
     <p>
         &copy; Copyright 2013-2019, mnefun Developers.<br/>
-      Last updated on Nov 26, 2019.<br/>
+      Last updated on Nov 27, 2019.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.1.<br/>
     </p>
   </div>
