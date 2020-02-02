@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
@@ -108,7 +110,7 @@
       
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-eyetracking-experiment-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-eyetracking-experiment-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="experiment-with-eye-tracking">
 <span id="sphx-glr-auto-examples-experiments-eyetracking-experiment-py"></span><h1>Experiment with eye-tracking<a class="headerlink" href="#experiment-with-eye-tracking" title="Permalink to this headline">¶</a></h1>
@@ -120,7 +122,7 @@ using eye-tracking simpler.</p>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">EyelinkController</span><span class="p">,</span> <span class="n">visual</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">EyelinkController</span><span class="p">,</span> <span class="n">visual</span>
 <span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
@@ -140,8 +142,8 @@ using eye-tracking simpler.</p>
     <span class="c1"># make some circles to be drawn</span>
     <span class="n">radius</span> <span class="o">=</span> <span class="mf">7.5</span>  <span class="c1"># degrees</span>
     <span class="n">targ_rad</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c1"># degrees</span>
-    <span class="n">theta</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.linspace.html#numpy.linspace" title="View documentation for numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="View documentation for numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="View documentation for numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-    <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.cos.html#numpy.cos" title="View documentation for numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">radius</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">theta</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.linspace.html#numpy.linspace" title="numpy.linspace" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="numpy.pi" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="numpy.pi" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.cos.html#numpy.cos" title="numpy.cos" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">radius</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="numpy.sin" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
     <span class="n">big_circ</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Circle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="n">radius</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span>
                              <span class="n">fill_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>
                              <span class="n">line_width</span><span class="o">=</span><span class="mf">3.0</span><span class="p">)</span>
@@ -196,7 +198,7 @@ using eye-tracking simpler.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-10-21.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-02-02.<br/>
     </p>
   </div>
 </footer>

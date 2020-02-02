@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
@@ -108,7 +110,7 @@
       
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-basic-experiment-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-basic-experiment-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="run-a-very-basic-experiment">
 <span id="sphx-glr-auto-examples-basic-experiment-py"></span><h1>Run a very basic experiment<a class="headerlink" href="#run-a-very-basic-experiment" title="Permalink to this headline">¶</a></h1>
@@ -117,32 +119,32 @@ ExperimentController class.</p>
 <img alt="../_images/sphx_glr_basic_experiment_001.png" class="sphx-glr-single-img" src="../_images/sphx_glr_basic_experiment_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: testExp
-date: 2019-10-21 17_52_05.192804
+date: 2020-02-02 19_50_40.576382
 file: /home/circleci/project/examples/basic_experiment.py
 participant: foo
 session: 001
-2019-10-21 17:52:05,193 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-10-21 17:52:05,333 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2019-10-21 17:52:07,675 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-10-21 17:52:07,675 - INFO    - Expyfun: Setting up screen
-2019-10-21 17:52:07,706 - EXP     - Expyfun: Set screen visibility True
-2019-10-21 17:52:07,759 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-10-21 17:52:07,762 - INFO    - Expyfun: Initialization complete
-2019-10-21 17:52:07,763 - EXP     - Expyfun: Participant: foo
-2019-10-21 17:52:07,763 - EXP     - Expyfun: Session: 001
-2019-10-21 17:52:08,107 - WARNING - Expyfun: Resampling 1 seconds of audio
-2019-10-21 17:52:08,433 - EXP     - Expyfun: Loading 88200 samples to buffer
-2019-10-21 17:52:08,645 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
-2019-10-21 17:52:08,645 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2019-10-21 17:52:08,645 - EXP     - Stamping TTL triggers: [4 4]
-2019-10-21 17:52:08,686 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2019-10-21 17:52:08,688 - EXP     - Stamping TTL triggers: [1]
-2019-10-21 17:52:08,698 - WARNING - ec.trial_ok called before stimulus had stopped
-2019-10-21 17:52:08,699 - EXP     - Expyfun: Trial OK
+2020-02-02 19:50:40,576 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2020-02-02 19:50:40,676 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2020-02-02 19:50:40,863 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2020-02-02 19:50:40,864 - INFO    - Expyfun: Setting up screen
+2020-02-02 19:50:40,897 - EXP     - Expyfun: Set screen visibility True
+2020-02-02 19:50:40,934 - INFO    - Expyfun: Initializing dummy triggering mode
+2020-02-02 19:50:40,936 - INFO    - Expyfun: Initialization complete
+2020-02-02 19:50:40,936 - EXP     - Expyfun: Participant: foo
+2020-02-02 19:50:40,936 - EXP     - Expyfun: Session: 001
+2020-02-02 19:50:41,149 - WARNING - Expyfun: Resampling 1 seconds of audio
+2020-02-02 19:50:41,448 - EXP     - Expyfun: Loading 88200 samples to buffer
+2020-02-02 19:50:41,633 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
+2020-02-02 19:50:41,633 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2020-02-02 19:50:41,634 - EXP     - Stamping TTL triggers: [4 4]
+2020-02-02 19:50:41,674 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2020-02-02 19:50:41,676 - EXP     - Stamping TTL triggers: [1]
+2020-02-02 19:50:41,686 - WARNING - ec.trial_ok called before stimulus had stopped
+2020-02-02 19:50:41,686 - EXP     - Expyfun: Trial OK
 Presses:
 []
-2019-10-21 17:52:08,699 - INFO    - Expyfun: Exiting
-2019-10-21 17:52:08,702 - EXP     - Expyfun: Audio stopped and reset.
+2020-02-02 19:50:41,686 - INFO    - Expyfun: Exiting
+2020-02-02 19:50:41,689 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -154,38 +156,38 @@ Presses:
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <span class="n">building_doc</span>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="k">import</span> <span class="n">FixationDot</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
+<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="kn">import</span> <span class="n">FixationDot</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 <span class="c1"># set configuration</span>
-<a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">fs</span></a> <span class="o">=</span> <span class="mf">24414.</span>  <span class="c1"># default for ExperimentController</span>
-<a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">dur</span></a> <span class="o">=</span> <span class="mf">1.0</span>
-<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">tone</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="View documentation for numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="View documentation for numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="View documentation for numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="nb">int</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">fs</span></a> <span class="o">*</span> <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">dur</span></a><span class="p">))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">fs</span></a><span class="p">))</span>
-<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">tone</span></a> <span class="o">*=</span> <span class="mf">0.01</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="View documentation for numpy.sqrt"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Set RMS to 0.01</span>
-<a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a> <span class="o">=</span> <span class="mf">1.</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span>
+<a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a> <span class="o">=</span> <span class="mf">24414.</span>  <span class="c1"># default for ExperimentController</span>
+<a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dur</span></a> <span class="o">=</span> <span class="mf">1.0</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tone</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="numpy.sin" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">*</span> <span class="mi">1000</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><span class="nb">int</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a> <span class="o">*</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dur</span></a><span class="p">))</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">))</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tone</span></a> <span class="o">*=</span> <span class="mf">0.01</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sqrt.html#numpy.sqrt" title="numpy.sqrt" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># Set RMS to 0.01</span>
+<a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a> <span class="o">=</span> <span class="mf">1.</span> <span class="k">if</span> <span class="ow">not</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="mf">0.</span>
 
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="s1">&#39;testExp&#39;</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s1">&#39;001&#39;</span><span class="p">,</span>
                           <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s1">&#39;dev&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;Press a button when you hear the tone&#39;</span><span class="p">,</span>
-                     <a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">max_wait</span></a><span class="p">)</span>
+                     <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
 
     <span class="n">dot</span> <span class="o">=</span> <span class="n">FixationDot</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">tone</span></a><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tone</span></a><span class="p">)</span>
     <span class="n">dot</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>  <span class="c1"># only because we want to show it in the docs</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">()</span>  <span class="c1"># only because we want to show it in the docs</span>
 
     <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s1">&#39;tone&#39;</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>
-    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">presses</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_for_presses</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="View documentation for builtins.float"><span class="n">dur</span></a> <span class="k">if</span> <span class="ow">not</span> <span class="n">building_doc</span> <span class="k">else</span> <span class="mf">0.</span><span class="p">)</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">presses</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_for_presses</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dur</span></a> <span class="k">if</span> <span class="ow">not</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="mf">0.</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Presses:</span><span class="se">\n</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="View documentation for builtins.list"><span class="n">presses</span></a><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Presses:</span><span class="se">\n</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">presses</span></a><span class="p">))</span>
 
-<span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
+<span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  3.830 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.389 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-basic-experiment-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/1b04a5d2a7c4b7b57bdfeeef97c91d6e/basic_experiment.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">basic_experiment.py</span></code></a></p>
@@ -209,7 +211,7 @@ Presses:
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-10-21.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-02-02.<br/>
     </p>
   </div>
 </footer>

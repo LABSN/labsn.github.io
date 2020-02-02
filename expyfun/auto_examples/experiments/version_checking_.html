@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
@@ -108,7 +110,7 @@
       
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-version-checking-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-version-checking-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="version-checking-functions">
 <span id="sphx-glr-auto-examples-experiments-version-checking-py"></span><h1>Version checking functions<a class="headerlink" href="#version-checking-functions" title="Permalink to this headline">¶</a></h1>
@@ -119,7 +121,7 @@
 
 <span class="kn">import</span> <span class="nn">tempfile</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">download_version</span><span class="p">,</span> <span class="n">run_subprocess</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">download_version</span><span class="p">,</span> <span class="n">run_subprocess</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
@@ -129,7 +131,7 @@
 <span class="c1"># commit number) to the proper directory. Here we&#39;ll use a temporary</span>
 <span class="c1"># directory so we don&#39;t break any other code examples, but usually you&#39;d</span>
 <span class="c1"># want to do it in the experiment directory:</span>
-<span class="n">temp_dir</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkdtemp</span><span class="p">()</span>
+<span class="n">temp_dir</span> <span class="o">=</span> <a href="https://docs.python.org/3/library/tempfile.html#tempfile.mkdtemp" title="tempfile.mkdtemp" class="sphx-glr-backref-module-tempfile sphx-glr-backref-type-py-function"><span class="n">tempfile</span><span class="o">.</span><span class="n">mkdtemp</span></a><span class="p">()</span>
 <span class="n">download_version</span><span class="p">(</span><span class="s1">&#39;c18133c&#39;</span><span class="p">,</span> <span class="n">temp_dir</span><span class="p">)</span>
 
 <span class="c1"># Now we would normally need to restart Python so the next ``import expyfun``</span>
@@ -178,7 +180,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-10-21.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-02-02.<br/>
     </p>
   </div>
 </footer>

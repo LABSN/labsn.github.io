@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
@@ -108,7 +110,7 @@
       
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-drawing-methods-py"><span class="std std-ref">here</span></a> to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-drawing-methods-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="experiment-drawing-methods">
 <span id="sphx-glr-auto-examples-experiments-drawing-methods-py"></span><h1>Experiment drawing methods<a class="headerlink" href="#experiment-drawing-methods" title="Permalink to this headline">¶</a></h1>
@@ -116,21 +118,21 @@
 <img alt="../../_images/sphx_glr_drawing_methods_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_drawing_methods_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2019-10-21 17_52_13.284952
+date: 2020-02-02 19_50_45.313906
 file: /home/circleci/project/examples/experiments/drawing_methods.py
 participant: 2
 session: 1
-2019-10-21 17:52:13,285 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2019-10-21 17:52:13,286 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2019-10-21 17:52:13,527 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2019-10-21 17:52:13,527 - INFO    - Expyfun: Setting up screen
-2019-10-21 17:52:13,550 - EXP     - Expyfun: Set screen visibility True
-2019-10-21 17:52:13,583 - INFO    - Expyfun: Initializing dummy triggering mode
-2019-10-21 17:52:13,584 - INFO    - Expyfun: Initialization complete
-2019-10-21 17:52:13,584 - EXP     - Expyfun: Participant: 2
-2019-10-21 17:52:13,584 - EXP     - Expyfun: Session: 1
-2019-10-21 17:52:14,319 - INFO    - Expyfun: Exiting
-2019-10-21 17:52:14,323 - EXP     - Expyfun: Audio stopped and reset.
+2020-02-02 19:50:45,314 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2020-02-02 19:50:45,315 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2020-02-02 19:50:45,484 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2020-02-02 19:50:45,484 - INFO    - Expyfun: Setting up screen
+2020-02-02 19:50:45,507 - EXP     - Expyfun: Set screen visibility True
+2020-02-02 19:50:45,537 - INFO    - Expyfun: Initializing dummy triggering mode
+2020-02-02 19:50:45,539 - INFO    - Expyfun: Initialization complete
+2020-02-02 19:50:45,539 - EXP     - Expyfun: Participant: 2
+2020-02-02 19:50:45,539 - EXP     - Expyfun: Session: 1
+2020-02-02 19:50:46,227 - INFO    - Expyfun: Exiting
+2020-02-02 19:50:46,230 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -142,7 +144,7 @@ session: 1
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="k">import</span> <span class="n">visual</span><span class="p">,</span> <span class="n">ExperimentController</span>
+<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">visual</span><span class="p">,</span> <span class="n">ExperimentController</span>
 <span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
@@ -154,13 +156,13 @@ session: 1
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
 
     <span class="c1"># make an image with  alpha the x-dimension (columns), RGB upward</span>
-    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="View documentation for numpy.zeros"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">[:,</span> <span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
-    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">[:,</span> <span class="mi">50</span><span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
-    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">ii</span></a> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">ii</span></a> <span class="o">*</span> <span class="mi">40</span><span class="p">:(</span><a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">ii</span></a> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">40</span><span class="p">,</span> <span class="p">:,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="View documentation for builtins.int"><span class="n">ii</span></a><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
-    <span class="n">img</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">RawImage</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">img_buffer</span></a><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">2.</span><span class="p">)</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="numpy.zeros" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">[:,</span> <span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">[:,</span> <span class="mi">50</span><span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a> <span class="o">*</span> <span class="mi">40</span><span class="p">:(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">40</span><span class="p">,</span> <span class="p">:,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">RawImage</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">2.</span><span class="p">)</span>
 
     <span class="c1"># make a line, rectangle, diamond, and circle</span>
     <span class="n">line</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]],</span> <span class="n">units</span><span class="o">=</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span>
@@ -175,14 +177,14 @@ session: 1
     <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="p">[</span><span class="n">img</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span> <span class="n">rect</span><span class="p">,</span> <span class="n">diamond</span><span class="p">,</span> <span class="n">circle</span><span class="p">]:</span>
         <span class="n">obj</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
 
-    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">()</span>  <span class="c1"># must be called *before* the flip</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">()</span>  <span class="c1"># must be called *before* the flip</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_for_presses</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
 
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="View documentation for numpy.ndarray"><span class="n">screenshot</span></a><span class="p">)</span>
+<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.123 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.975 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-drawing-methods-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/0d589daa0e676ba7f709be451e3eff2b/drawing_methods.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">drawing_methods.py</span></code></a></p>
@@ -206,7 +208,7 @@ session: 1
       
     </p>
     <p>
-        &copy; Copyright 2013-2019, expyfun developers. Last updated on 2019-10-21.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-02-02.<br/>
     </p>
   </div>
 </footer>
