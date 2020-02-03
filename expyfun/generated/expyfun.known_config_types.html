@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>expyfun.io.read_tab &#8212; expyfun 2.0.0.dev0 documentation</title>
+    <title>expyfun.known_config_types &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
@@ -76,10 +76,7 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">expyfun.io.read_tab</a><ul>
-<li><a class="reference internal" href="#examples-using-expyfun-io-read-tab">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.io.read_tab</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#">expyfun.known_config_types</a></li>
 </ul>
 </ul>
 </li>
@@ -111,53 +108,17 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="expyfun-io-read-tab">
-<h1>expyfun.io.read_tab<a class="headerlink" href="#expyfun-io-read-tab" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
-<dt id="expyfun.io.read_tab">
-<code class="sig-prename descclassname">expyfun.io.</code><code class="sig-name descname">read_tab</code><span class="sig-paren">(</span><em class="sig-param">fname</em>, <em class="sig-param">group_start='trial_id'</em>, <em class="sig-param">group_end='trial_ok'</em>, <em class="sig-param">return_params=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L56-L126"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.io.read_tab" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read .tab file from expyfun output and segment into trials.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>fname</strong><span class="classifier">str</span></dt><dd><p>Input filename.</p>
-</dd>
-<dt><strong>group_start</strong><span class="classifier">str</span></dt><dd><p>Key to use to start a trial/row.</p>
-</dd>
-<dt><strong>group_end</strong><span class="classifier">str | None</span></dt><dd><p>Key to use to end a trial/row. If None, the next <code class="docutils literal notranslate"><span class="pre">group_start</span></code>
-will end the current group.</p>
-</dd>
-<dt><strong>return_params</strong><span class="classifier">bool</span></dt><dd><p>If True, return the JSON-parsed comment header.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>data</strong><span class="classifier">list of dict</span></dt><dd><p>The data, with a dict for each trial. Each value in the dict
-is a list of tuples (event, time) for each occurrence of that
-key.</p>
-</dd>
-<dt><strong>params</strong><span class="classifier">dict</span></dt><dd><p>The JSON-parsed comment header. Only returned if
-<code class="docutils literal notranslate"><span class="pre">return_params=True</span></code>.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><a class="reference internal" href="expyfun.io.read_tab_raw.html#expyfun.io.read_tab_raw" title="expyfun.io.read_tab_raw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_tab_raw</span></code></a></dt><dd></dd>
-</dl>
-</div>
+  <div class="section" id="expyfun-known-config-types">
+<h1>expyfun.known_config_types<a class="headerlink" href="#expyfun-known-config-types" title="Permalink to this headline">¶</a></h1>
+<dl class="data">
+<dt id="expyfun.known_config_types">
+<code class="sig-prename descclassname">expyfun.</code><code class="sig-name descname">known_config_types</code><em class="property"> = ('RESPONSE_DEVICE', 'AUDIO_CONTROLLER', 'DB_OF_SINE_AT_1KHZ_1RMS', 'EXPYFUN_EYELINK', 'SOUND_CARD_API', 'SOUND_CARD_API_OPTIONS', 'SOUND_CARD_BACKEND', 'SOUND_CARD_FS', 'SOUND_CARD_NAME', 'SOUND_CARD_FIXED_DELAY', 'SOUND_CARD_TRIGGER_CHANNELS', 'SOUND_CARD_TRIGGER_INSERTION', 'SOUND_CARD_TRIGGER_SCALE', 'TDT_CIRCUIT_PATH', 'TDT_DELAY', 'TDT_INTERFACE', 'TDT_MODEL', 'TDT_TRIG_DELAY', 'TRIGGER_CONTROLLER', 'TRIGGER_ADDRESS', 'WINDOW_SIZE', 'SCREEN_NUM', 'SCREEN_WIDTH', 'SCREEN_DISTANCE', 'SCREEN_SIZE_PIX', 'EXPYFUN_LOGGING_LEVEL')</em><a class="headerlink" href="#expyfun.known_config_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Built-in immutable sequence.</p>
+<p>If no argument is given, the constructor returns an empty tuple.
+If iterable is specified the tuple is initialized from iterable’s items.</p>
+<p>If the argument is a tuple, the return value is the same object.</p>
 </dd></dl>
 
-<div class="section" id="examples-using-expyfun-io-read-tab">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.io.read_tab</span></code><a class="headerlink" href="#examples-using-expyfun-io-read-tab" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This example shows some of the functionality of read_tab."><div class="figure align-default" id="id1">
-<img alt="../_images/sphx_glr_parse_demo_thumb.png" src="../_images/sphx_glr_parse_demo_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/analysis/parse_demo.html#sphx-glr-auto-examples-analysis-parse-demo-py"><span class="std std-ref">Parsing demo</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-</div><div style='clear:both'></div></div>
 </div>
 
 
