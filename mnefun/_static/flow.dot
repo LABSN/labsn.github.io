@@ -1,238 +1,313 @@
 strict digraph "mnefun flow diagram" {
-	graph [bb="0,0,564.5,669",
-		bgcolor="#00000000"
+	graph [bb="0,0,602.5,802",
+		bgcolor="#00000000",
+		nodesep=0.2,
+		ranksep=0.1
 	];
-	node [fontname=Arial,
-		fontsize=9,
+	node [fontname="sans-serif",
+		fontsize=8,
 		label="\N",
-		margin="0.2,0.1",
+		margin="0.1,0.05",
 		shape=box
 	];
-	edge [fontname=Arial,
-		fontsize=9
+	edge [fontname="sans-serif",
+		fontsize=8
 	];
+	{
+		graph [rank=same];
+		htm		 [fillcolor="#66CCEE",
+			fontcolor="#000000",
+			height=0.5,
+			label=<<FONT POINT-SIZE="8">./SUBJ/</FONT><BR/><FONT POINT-SIZE="10">subj_fil*_report.html</FONT>>,
+			pos="342,54.5",
+			style=filled,
+			width=1.5833];
+		legend		 [height=1.5139,
+			label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4" CELLPADDING="4"><TR><TD BGCOLOR="#4477AA">    </TD><TD ALIGN="left">Remote: acquisiton machine</TD></TR><TR><TD BGCOLOR="#EE6677">    </TD><TD ALIGN="left">Local: obligatory user-created files</TD></TR><TR><TD BGCOLOR="#FFD8DF">    </TD><TD ALIGN="left">Local: optional user-created files</TD></TR><TR><TD BGCOLOR="#66CCEE">    </TD><TD ALIGN="left">Local: pipeline-created files</TD></TR><TR><TD BGCOLOR="#CCBB44">    </TD><TD ALIGN="left">Remote: SSS machine (SWS)</TD></TR></TABLE>>,
+			margin=0,
+			pos="508,54.5",
+			shape=plaintext,
+			width=2.625];
+	}
 	sco	 [fillcolor="#EE6677",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./</FONT><BR/><FONT POINT-SIZE="11">score.py</FONT>>,
-		pos="44.5,511",
+		label=<<FONT POINT-SIZE="8">./</FONT><BR/><FONT POINT-SIZE="10">score.py</FONT>>,
+		pos="523,624",
 		style=filled,
-		width=0.98611];
+		width=0.77778];
 	lst	 [fillcolor="#66CCEE",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/lists/</FONT><BR/><FONT POINT-SIZE="11">ALL_*-eve.lst</FONT>>,
-		pos="47.5,427",
+		label=<<FONT POINT-SIZE="8">./SUBJ/lists/</FONT><BR/><FONT POINT-SIZE="10">ALL_*-eve.lst</FONT>>,
+		pos="520,536",
 		style=filled,
-		width=1.3194];
+		width=1.0972];
 	sco -> lst	 [URL="../overview.html#do-score",
-		fontsize=11,
+		fontsize=10,
 		label=<<B>2. do_score</B>>,
 		labeltooltip="2. do_score",
-		lp="76,469",
-		pos="e,46.85,445.19 45.151,492.77 45.54,481.88 46.043,467.79 46.484,455.46",
+		lp="554,580",
+		pos="e,520.62,554.21 522.38,605.77 521.97,593.85 521.43,578.04 520.97,564.48",
 		target=_top];
 	evo	 [fillcolor="#66CCEE",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/inverse/, ./subj/epochs/</FONT><BR/><FONT POINT-SIZE="11">*-evo.fif, *-epo.fif</FONT>>,
-		pos="81.5,102",
+		label=<<FONT POINT-SIZE="8">./SUBJ/inverse/, ./SUBJ/epochs/</FONT><BR/><FONT POINT-SIZE="10">*-evo.fif, *-epo.fif</FONT>>,
+		pos="422,207",
 		style=filled,
-		width=2.0278];
-	lst -> evo	 [fontsize=11,
-		pos="e,69.417,120.16 47.5,408.7 47.5,393.93 47.5,372.63 47.5,354 47.5,354 47.5,354 47.5,186 47.5,165.88 55.987,144.9 64.48,128.93"];
+		width=2.0139];
+	lst -> evo	 [fontsize=10,
+		pos="e,484.62,225.01 520,517.74 520,503.51 520,483.25 520,465.5 520,465.5 520,465.5 520,270 520,252.42 508.7,239.51 493.77,230.13"];
+	evo -> htm	 [fontsize=10,
+		label=gen_report,
+		labeltooltip=gen_report,
+		lp="424.5,144",
+		pos="e,351.48,72.569 412.51,188.91 398.56,162.31 372.41,112.47 356.17,81.52"];
+	mri	 [fillcolor="#66CCEE",
+		fontcolor="#000000",
+		height=0.5,
+		label="structural/mri/T1.mgz",
+		pos="118,333",
+		style=filled,
+		width=1.4861];
 	bem	 [fillcolor="#66CCEE",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">structural/bem/</FONT><BR/><FONT POINT-SIZE="11">*-bem-sol.fif</FONT>>,
-		pos="316.5,186",
+		label=<<FONT POINT-SIZE="8">structural/bem/</FONT><BR/><FONT POINT-SIZE="10">*-bem-sol.fif</FONT>>,
+		pos="134,270",
 		style=filled,
-		width=1.2361];
+		width=1.1111];
+	mri -> bem	 [fontsize=10,
+		label=Freesurfer,
+		labeltooltip=Freesurfer,
+		lp="144.5,301.5",
+		pos="e,123.01,288.04 117.41,314.67 117.57,310.24 117.99,305.45 120.06,297.72"];
+	tra	 [fillcolor="#EE6677",
+		fontcolor="#000000",
+		height=0.5,
+		label=<<FONT POINT-SIZE="8">./SUBJ/trans/</FONT><BR/><FONT POINT-SIZE="10">*-trans.fif</FONT>>,
+		pos="222,270",
+		style=filled,
+		width=0.94444];
+	mri -> tra	 [fontsize=10,
+		label="mne coreg",
+		labeltooltip="mne coreg",
+		lp="211,301.5",
+		pos="e,196.87,288.15 154.07,314.91 158.8,312.34 163.55,309.67 168,307 174.78,302.93 181.87,298.34 188.6,293.81"];
+	src	 [fillcolor="#66CCEE",
+		fontcolor="#000000",
+		height=0.5,
+		label=<<FONT POINT-SIZE="8">structural/bem/</FONT><BR/><FONT POINT-SIZE="10">*-src.fif</FONT>>,
+		pos="40,270",
+		style=filled,
+		width=1.1111];
+	mri -> src	 [fontsize=10,
+		pos="e,62.51,288.18 95.439,314.78 87.597,308.44 78.669,301.23 70.304,294.48"];
 	fwd	 [fillcolor="#66CCEE",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/forward/</FONT><BR/><FONT POINT-SIZE="11">*-fwd.fif</FONT>>,
-		pos="316.5,102",
+		label=<<FONT POINT-SIZE="8">./SUBJ/forward/</FONT><BR/><FONT POINT-SIZE="10">*-fwd.fif</FONT>>,
+		pos="218,207",
 		style=filled,
-		width=1.1944];
-	bem -> fwd	 [fontsize=11,
-		pos="e,316.5,120.19 316.5,167.77 316.5,156.88 316.5,142.79 316.5,130.46"];
+		width=1.0972];
+	bem -> fwd	 [fontsize=10,
+		pos="e,193.76,225.18 158.3,251.78 166.83,245.38 176.55,238.08 185.64,231.27"];
+	tra -> fwd	 [URL="../overview.html#gen-fwd",
+		fontsize=10,
+		label=<<B>9. gen_fwd</B>>,
+		labeltooltip="9. gen_fwd",
+		lp="250.5,238.5",
+		pos="e,218.89,225.07 220.55,251.82 220.35,249.2 220.17,246.53 220,244 219.81,241.11 219.63,238.09 219.45,235.09",
+		target=_top];
+	src -> fwd	 [fontsize=10,
+		pos="e,178.32,220.23 80.219,254.49 82.51,253.64 84.783,252.81 87,252 113.94,242.22 144.19,231.79 168.82,223.44"];
 	inv	 [fillcolor="#66CCEE",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/inverse/</FONT><BR/><FONT POINT-SIZE="11">*-inv.fif</FONT>>,
-		pos="267.5,18",
+		label=<<FONT POINT-SIZE="8">./SUBJ/inverse/</FONT><BR/><FONT POINT-SIZE="10">*-inv.fif</FONT>>,
+		pos="281,144",
 		style=filled,
-		width=1.1806];
+		width=1.0833];
 	fwd -> inv	 [URL="../overview.html#gen-inv",
-		fontsize=11,
+		fontsize=10,
 		label=<<B>10. gen_inv</B>>,
 		labeltooltip="10. gen_inv",
-		lp="324.5,60",
-		pos="e,278.11,36.191 305.87,83.773 299.25,72.436 290.63,57.652 283.23,44.972",
+		lp="257.5,175.5",
+		pos="e,241.97,156.84 218.68,188.64 219.71,182.19 221.83,175.25 226,170 228.2,167.23 230.77,164.74 233.57,162.5",
 		target=_top];
+	inv -> htm	 [fontsize=10,
+		pos="e,329.67,72.585 293.34,125.89 302.11,113.03 314.02,95.556 323.86,81.116"];
 	pbd	 [fillcolor="#EE6677",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/raw_fif/</FONT><BR/><FONT POINT-SIZE="11">*_prebad.txt</FONT>>,
-		pos="242.5,511",
+		label=<<FONT POINT-SIZE="8">./SUBJ/raw_fif/</FONT><BR/><FONT POINT-SIZE="10">*_prebad.txt</FONT>>,
+		pos="263,668",
 		style=filled,
-		width=1.2222];
+		width=1.0417];
 	mfp	 [fillcolor="#CCBB44",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">user@kasga:/data00/user/subj/</FONT><BR/><FONT POINT-SIZE="11">*_raw.pos</FONT>>,
-		pos="242.5,427",
+		label=<<FONT POINT-SIZE="8">user@kasga:/data00/user/SUBJ/</FONT><BR/><FONT POINT-SIZE="10">*_raw.pos, *_raw_maxbad.txt</FONT>>,
+		pos="261,580",
 		style=filled,
-		width=2.1528];
+		width=2.2083];
 	pbd -> mfp	 [URL="../overview.html#do-sss",
-		fontsize=11,
+		fontsize=10,
 		label=<<B>3. do_sss</B>>,
 		labeltooltip="3. do_sss",
-		lp="267.5,469",
-		pos="e,242.5,445.19 242.5,492.77 242.5,481.88 242.5,467.79 242.5,455.46",
+		lp="288,624",
+		pos="e,261.19,598.18 262.25,649.82 262.16,647.2 262.07,644.53 262,642 261.7,631.06 261.48,619.03 261.33,608.5",
 		target=_top];
 	sss	 [fillcolor="#66CCEE",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/sss_fif/</FONT><BR/><FONT POINT-SIZE="11">*_raw_sss.fif</FONT>>,
-		pos="242.5,354",
+		label=<<FONT POINT-SIZE="8">./SUBJ/sss_fif/</FONT><BR/><FONT POINT-SIZE="10">*_raw_sss.fif</FONT>>,
+		pos="339,439",
 		style=filled,
-		width=1.2778];
-	mfp -> sss	 [fontsize=11,
-		pos="e,242.5,372.09 242.5,408.96 242.5,400.88 242.5,391.18 242.5,382.18"];
+		width=1.0694];
+	mfp -> sss	 [fontsize=10,
+		pos="e,300.44,451.22 258,561.76 255.3,539.13 254.13,500.33 272,474 276.93,466.74 283.85,460.89 291.39,456.2"];
+	aan	 [fillcolor="#66CCEE",
+		fontcolor="#000000",
+		height=0.5,
+		label="./SUBJ/raw_fif/*-annot.fif",
+		pos="338,492",
+		style=filled,
+		width=1.625];
+	mfp -> aan	 [fontsize=10,
+		pos="e,322.07,510.21 276.95,561.77 288,549.14 302.87,532.15 315.17,518.09"];
 	sss -> sss	 [URL="../overview.html#do-ch-fix",
-		fontsize=11,
+		fontsize=10,
 		label=<<B>4. do_ch_fix</B>>,
 		labeltooltip="4. do_ch_fix",
-		lp="338.5,354",
-		pos="e,288.52,347.41 288.52,360.59 298.91,359.99 306.5,357.8 306.5,354 306.5,351.63 303.53,349.88 298.77,348.76",
-		target=_top];
-	pca	 [fillcolor="#66CCEE",
-		fontcolor="#000000",
-		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/sss_pca_fif/</FONT><BR/><FONT POINT-SIZE="11">*_raw_sss.fif</FONT>>,
-		pos="203.5,186",
-		style=filled,
-		width=1.4028];
-	sss -> pca	 [fontsize=11,
-		pos="e,213.36,204.02 249.1,335.77 251.54,326.81 253.31,315.84 251.5,306 245.36,272.64 229.73,236.83 217.97,213.1"];
-	pro	 [fillcolor="#66CCEE",
-		fontcolor="#000000",
-		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/sss_pca_fif/</FONT><BR/><FONT POINT-SIZE="11">*-proj.fif</FONT>>,
-		pos="126.5,270",
-		style=filled,
-		width=1.4028];
-	sss -> pro	 [URL="../overview.html#gen-ssp",
-		fontsize=11,
-		label=<<B>5. gen_ssp</B>>,
-		labeltooltip="5. gen_ssp",
-		lp="219,312",
-		pos="e,151.74,288.28 217.62,335.98 200.76,323.77 178.29,307.5 159.88,294.17",
+		lp="424,439",
+		pos="e,377.69,434.3 377.69,443.7 385.72,443.21 391.5,441.64 391.5,439 391.5,437.68 390.06,436.63 387.61,435.84",
 		target=_top];
 	bad	 [fillcolor="#EE6677",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/bads/</FONT><BR/><FONT POINT-SIZE="11">*_post-sss.txt</FONT>>,
-		pos="128.5,354",
+		label=<<FONT POINT-SIZE="8">./SUBJ/bads/</FONT><BR/><FONT POINT-SIZE="10">*_post-sss.txt</FONT>>,
+		pos="339,386",
 		style=filled,
-		width=1.3472];
-	bad -> pca	 [fontsize=11,
-		pos="e,203.44,204.21 149.49,335.9 162.26,323.68 177.74,306.47 186.5,288 197.56,264.69 201.56,235.41 202.94,214.2"];
-	bad -> pro	 [fontsize=11,
-		pos="e,126.93,288.19 128.07,335.77 127.81,324.88 127.47,310.79 127.18,298.46"];
+		width=1.1389];
+	sss -> bad	 [fontsize=10,
+		pos="e,339,404.09 339,420.76 339,418.66 339,416.47 339,414.27"];
+	pca	 [fillcolor="#66CCEE",
+		fontcolor="#000000",
+		height=0.5,
+		label=<<FONT POINT-SIZE="8">./SUBJ/sss_pca_fif/</FONT><BR/><FONT POINT-SIZE="10">*_raw_sss.fif</FONT>>,
+		pos="319,270",
+		style=filled,
+		width=1.2778];
+	sss -> pca	 [fontsize=10,
+		pos="e,365.04,283.89 377.63,432.32 407.31,426.3 444.74,416.49 454,404 463.53,391.14 459.8,382.91 454,368 438.26,327.54 423.96,320.32 \
+388,296 383.74,293.12 379.11,290.5 374.34,288.13"];
+	pro	 [fillcolor="#66CCEE",
+		fontcolor="#000000",
+		height=0.5,
+		label=<<FONT POINT-SIZE="8">./SUBJ/sss_pca_fif/</FONT><BR/><FONT POINT-SIZE="10">*-proj.fif</FONT>>,
+		pos="319,333",
+		style=filled,
+		width=1.2778];
+	sss -> pro	 [URL="../overview.html#gen-ssp",
+		fontsize=10,
+		label=<<B>5. gen_ssp</B>>,
+		labeltooltip="5. gen_ssp",
+		lp="421.5,386",
+		pos="e,365.13,348 373.01,420.61 378.66,415.97 383.73,410.44 387,404 394.25,389.74 395.33,381.66 387,368 383.6,362.42 378.99,357.69 373.76,\
+353.7",
+		target=_top];
+	pex	 [fillcolor="#FFD8DF",
+		fontcolor="#000000",
+		height=0.5,
+		label=<<FONT POINT-SIZE="8">./SUBJ/sss_pca_fif/</FONT><BR/><FONT POINT-SIZE="10">*-extra-proj.fif</FONT>>,
+		pos="238,386",
+		style=filled,
+		width=1.2778];
+	sss -> pex	 [fontsize=10,
+		pos="e,272.32,404.01 304.52,420.91 297.05,416.99 289.05,412.79 281.28,408.71"];
+	aan -> sss	 [fontsize=10,
+		pos="e,338.66,457.09 338.34,473.76 338.38,471.66 338.43,469.47 338.47,467.27"];
+	bad -> pca	 [fontsize=10,
+		pos="e,365.13,285.59 360.55,367.8 365.1,362.84 369.32,357.12 372,351 381.8,328.57 388.17,316.64 375,296 374.27,294.86 373.48,293.76 372.62,\
+292.72"];
+	bad -> pro	 [fontsize=10,
+		pos="e,325.83,351.09 332.12,367.76 331.23,365.4 330.3,362.95 329.37,360.48"];
 	pca -> evo	 [URL="../overview.html#write-epochs",
-		fontsize=11,
+		fontsize=10,
 		label=<<B>7. write_epochs</B>>,
 		labeltooltip="7. write_epochs",
-		lp="162,144",
-		pos="e,93.118,120.24 152.64,168.53 141.48,163.48 130.14,157.31 120.5,150 112.58,144 105.3,136.06 99.214,128.38",
+		lp="438.5,238.5",
+		pos="e,404.3,225.37 365.26,252.66 370.71,250.03 376.07,247.13 381,244 386.42,240.56 391.81,236.39 396.81,232.11",
 		target=_top];
-	pca -> fwd	 [fontsize=11,
-		pos="e,303.58,120.45 246.69,167.92 256.62,162.83 266.8,156.8 275.5,150 283.36,143.85 290.82,136 297.16,128.44"];
+	pca -> fwd	 [fontsize=10,
+		pos="e,257.79,221.16 302.68,251.97 296.09,245.4 288.13,238.3 280,233 275.94,230.35 271.56,227.87 267.08,225.59"];
 	cov	 [fillcolor="#66CCEE",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/cov/</FONT><BR/><FONT POINT-SIZE="11">*-cov.fif</FONT>>,
-		pos="213.5,102",
+		label=<<FONT POINT-SIZE="8">./SUBJ/cov/</FONT><BR/><FONT POINT-SIZE="10">*-cov.fif</FONT>>,
+		pos="305,207",
 		style=filled,
-		width=0.95833];
+		width=0.84722];
 	pca -> cov	 [URL="../overview.html#gen-covs",
-		fontsize=11,
+		fontsize=10,
 		label=<<B>8. gen_covs</B>>,
 		labeltooltip="8. gen_covs",
-		lp="240,144",
-		pos="e,211.33,120.19 205.67,167.77 206.97,156.88 208.64,142.79 210.11,130.46",
+		lp="345.5,238.5",
+		pos="e,309.09,225.4 314.95,251.78 313.8,246.6 312.52,240.83 311.27,235.21",
 		target=_top];
 	pro -> pca	 [URL="../overview.html#apply-ssp",
-		fontsize=11,
+		fontsize=10,
 		label=<<B>6. apply_ssp</B>>,
 		labeltooltip="6. apply_ssp",
-		lp="158.5,228",
-		pos="e,152.71,199.4 121.53,251.82 119.99,242.24 119.93,230.71 125.5,222 130.12,214.78 136.6,208.98 143.87,204.34",
+		lp="342,301.5",
+		pos="e,309.86,288.28 310.24,314.83 309.32,312.25 308.53,309.59 308,307 307.41,304.11 307.35,301.11 307.66,298.14",
 		target=_top];
-	cov -> inv	 [fontsize=11,
-		pos="e,255.81,36.191 225.22,83.773 232.58,72.325 242.19,57.364 250.4,44.604"];
-	tra	 [fillcolor="#EE6677",
-		fontcolor="#000000",
-		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/trans/</FONT><BR/><FONT POINT-SIZE="11">*-trans.fif</FONT>>,
-		pos="416.5,186",
-		style=filled,
-		width=1.0417];
-	tra -> fwd	 [URL="../overview.html#gen-fwd",
-		fontsize=11,
-		label=<<B>9. gen_fwd</B>>,
-		labeltooltip="9. gen_fwd",
-		lp="400.5,144",
-		pos="e,338.16,120.19 394.8,167.77 380.52,155.78 361.64,139.92 346,126.78",
-		target=_top];
+	cov -> htm	 [fontsize=10,
+		pos="e,341.21,72.756 315.58,188.71 319.75,180.74 324.2,171.15 327,162 335,135.83 338.75,104.75 340.5,82.761"];
+	cov -> inv	 [fontsize=10,
+		pos="e,288.01,162.4 298.06,188.78 296.04,183.47 293.78,177.55 291.59,171.79"];
 	acq	 [fillcolor="#4477AA",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">user@minea</FONT><BR/><FONT POINT-SIZE="11">*_raw.fif</FONT>>,
-		pos="139.5,623",
+		label=<<FONT POINT-SIZE="8">user@minea</FONT><BR/><FONT POINT-SIZE="10">*_raw.fif</FONT>>,
+		pos="354,784",
 		style=filled,
-		width=1.125];
+		width=0.94444];
 	raw	 [fillcolor="#66CCEE",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/raw_fif/</FONT><BR/><FONT POINT-SIZE="11">*_raw.fif</FONT>>,
-		pos="139.5,511",
+		label=<<FONT POINT-SIZE="8">./SUBJ/raw_fif/</FONT><BR/><FONT POINT-SIZE="10">*_raw.fif</FONT>>,
+		pos="354,721",
 		style=filled,
-		width=1.1389];
+		width=1.0417];
 	acq -> raw	 [URL="../overview.html#fetch-raw",
-		fontsize=11,
+		fontsize=10,
 		label=<<B>1. fetch_raw</B>>,
 		labeltooltip="1. fetch_raw",
-		lp="171.5,553",
-		pos="e,139.5,529.15 139.5,604.51 139.5,586.73 139.5,559.62 139.5,539.16",
+		lp="388.5,752.5",
+		pos="e,354,739.4 354,765.78 354,760.73 354,755.12 354,749.63",
 		target=_top];
-	raw -> lst	 [fontsize=11,
-		pos="e,86.319,445.06 131.21,492.6 126.21,482.96 119.14,471.43 110.5,463 105.89,458.5 100.6,454.35 95.09,450.61"];
-	raw -> mfp	 [fontsize=11,
-		pos="e,220.09,445.28 161.6,492.98 176.29,480.99 195.8,465.09 211.97,451.9"];
-	src	 [fillcolor="#66CCEE",
+	raw -> sco	 [fontsize=10,
+		pos="e,494.86,640.15 385.39,702.98 413.85,686.65 455.83,662.55 485.93,645.28"];
+	raw -> pbd	 [fontsize=10,
+		pos="e,293.92,686.01 322.94,702.91 316.5,699.16 309.62,695.15 302.91,691.25"];
+	raw -> mfp	 [fontsize=10,
+		pos="e,304.37,598.2 351.8,702.93 347.95,678.31 337.87,634.09 313,606 312.68,605.64 312.36,605.29 312.03,604.94"];
+	can	 [fillcolor="#FFD8DF",
 		fontcolor="#000000",
 		height=0.5,
-		label=<<FONT POINT-SIZE="9">structural/bem/</FONT><BR/><FONT POINT-SIZE="11">*-oct-6-src.fif</FONT>>,
-		pos="518.5,186",
+		label="./SUBJ/raw_fif/*-custom-annot.fif",
+		pos="414,624",
 		style=filled,
-		width=1.2778];
-	src -> fwd	 [fontsize=11,
-		pos="e,359.53,112.84 490.18,167.97 474.01,158.2 453.12,146.44 433.5,138 413.03,129.19 389.71,121.56 369.29,115.62"];
-	htm	 [fillcolor="#66CCEE",
-		fontcolor="#000000",
-		height=0.5,
-		label=<<FONT POINT-SIZE="9">./subj/</FONT><BR/><FONT POINT-SIZE="11">subj_fil*_report.html</FONT>>,
-		pos="260.5,623",
-		style=filled,
-		width=1.7361];
-	legend	 [height=1.2778,
-		label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="4" CELLPADDING="4"><TR><TD BGCOLOR="#4477AA">    </TD><TD ALIGN="left">Remote: acquisiton machine</TD></TR><TR><TD BGCOLOR="#EE6677">    </TD><TD ALIGN="left">Local: user-created files</TD></TR><TR><TD BGCOLOR="#66CCEE">    </TD><TD ALIGN="left">Local: pipeline-created files</TD></TR><TR><TD BGCOLOR="#CCBB44">    </TD><TD ALIGN="left">Remote: SSS machine</TD></TR></TABLE>>,
-		margin=0,
-		pos="418.5,623",
-		shape=plaintext,
-		width=2.1528];
+		width=2.0972];
+	raw -> can	 [fontsize=10,
+		pos="e,402.77,642.16 365.29,702.76 374.34,688.12 387.17,667.37 397.39,650.85"];
+	can -> sss	 [fontsize=10,
+		pos="e,377.67,451.83 418.06,605.64 423.64,575.51 430.27,514.83 404,474 399.61,467.18 393.42,461.59 386.59,457.04"];
+	pex -> pca	 [fontsize=10,
+		pos="e,292.59,288.17 242.48,367.87 246.81,352.76 254.43,331.16 266,315 271.2,307.73 277.83,300.91 284.62,294.87"];
+	pex -> pro	 [fontsize=10,
+		pos="e,291.35,351.09 265.88,367.76 271.28,364.22 277.02,360.47 282.65,356.78"];
 }
