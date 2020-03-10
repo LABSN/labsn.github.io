@@ -120,11 +120,8 @@ machine be named properly, which might not always be the case, for example
 when:</p>
 <ul class="simple">
 <li><p>files are named incorrectly (typos, inconsistently) during acquisition</p></li>
-<li><dl class="simple">
-<dt>runs are re-executed and saved with a different name</dt><dd><p>(e.g., <code class="docutils literal notranslate"><span class="pre">_redo_raw.fif</span></code>).</p>
-</dd>
-</dl>
-</li>
+<li><p>runs are re-executed and saved with a different name
+(e.g., <code class="docutils literal notranslate"><span class="pre">_redo_raw.fif</span></code>).</p></li>
 </ul>
 <p>But this should ideally be the exception and not the rule.</p>
 </div>
@@ -141,79 +138,79 @@ example of how to process data using mnefun.</p>
 <li><p><a class="reference internal" href="#overview" id="id3">Overview</a></p>
 <ul>
 <li><p><a class="reference internal" href="#flow-chart" id="id4">Flow chart</a></p></li>
-<li><p><a class="reference internal" href="#preparing-your-machine-for-maxwell-autobad-and-head-position-estimation" id="id5">Preparing your machine for Maxwell autobad and head position estimation</a></p></li>
-<li><p><a class="reference internal" href="#running-parameters" id="id6">Running parameters</a></p>
+<li><p><a class="reference internal" href="#running-parameters" id="id5">Running parameters</a></p>
 <ul>
-<li><p><a class="reference internal" href="#general-general-options" id="id7"><code class="docutils literal notranslate"><span class="pre">general</span></code>: General options</a></p></li>
+<li><p><a class="reference internal" href="#general-general-options" id="id6"><code class="docutils literal notranslate"><span class="pre">general</span></code>: General options</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#fetch-raw" id="id8">1. fetch_raw</a></p>
+<li><p><a class="reference internal" href="#fetch-raw" id="id7">1. fetch_raw</a></p>
 <ul>
-<li><p><a class="reference internal" href="#fetch-raw-raw-fetching-parameters" id="id9"><code class="docutils literal notranslate"><span class="pre">fetch_raw</span></code>: Raw fetching parameters</a></p></li>
+<li><p><a class="reference internal" href="#fetch-raw-raw-fetching-parameters" id="id8"><code class="docutils literal notranslate"><span class="pre">fetch_raw</span></code>: Raw fetching parameters</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#do-score" id="id10">2. do_score</a></p>
+<li><p><a class="reference internal" href="#do-score" id="id9">2. do_score</a></p>
 <ul>
-<li><p><a class="reference internal" href="#scoring-scoring-parameters" id="id11"><code class="docutils literal notranslate"><span class="pre">scoring</span></code>: Scoring parameters</a></p></li>
+<li><p><a class="reference internal" href="#scoring-scoring-parameters" id="id10"><code class="docutils literal notranslate"><span class="pre">scoring</span></code>: Scoring parameters</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#do-sss" id="id12">3. do_sss</a></p>
+<li><p><a class="reference internal" href="#do-sss" id="id11">3. do_sss</a></p>
 <ul>
-<li><p><a class="reference internal" href="#preprocessing-multithreading-multithreading-parameters" id="id13"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">multithreading</span></code>: Multithreading parameters</a></p></li>
-<li><p><a class="reference internal" href="#preprocessing-pre-sss-bads-automatic-bad-channel-detection" id="id14"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">pre-SSS</span> <span class="pre">bads</span></code>: Automatic bad channel detection</a></p></li>
-<li><p><a class="reference internal" href="#preprocessing-head-position-estimation-head-position-estimation-parameters" id="id15"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">head_position_estimation</span></code>: Head position estimation parameters</a></p></li>
-<li><p><a class="reference internal" href="#preprocessing-annotations-annotation-parameters" id="id16"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">annotations</span></code>: Annotation parameters</a></p></li>
-<li><p><a class="reference internal" href="#preprocessing-sss-sss-parameters" id="id17"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">sss</span></code>: SSS parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-multithreading-multithreading-parameters" id="id12"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">multithreading</span></code>: Multithreading parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-pre-sss-bads-automatic-bad-channel-detection" id="id13"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">pre-SSS</span> <span class="pre">bads</span></code>: Automatic bad channel detection</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-head-position-estimation-head-position-estimation-parameters" id="id14"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">head_position_estimation</span></code>: Head position estimation parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-annotations-annotation-parameters" id="id15"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">annotations</span></code>: Annotation parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-sss-sss-parameters" id="id16"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">sss</span></code>: SSS parameters</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#do-ch-fix" id="id18">4. do_ch_fix</a></p></li>
-<li><p><a class="reference internal" href="#gen-ssp" id="id19">5. gen_ssp</a></p>
+<li><p><a class="reference internal" href="#do-ch-fix" id="id17">4. do_ch_fix</a></p></li>
+<li><p><a class="reference internal" href="#gen-ssp" id="id18">5. gen_ssp</a></p>
 <ul>
-<li><p><a class="reference internal" href="#preprocessing-filtering-filtering-parameters" id="id20"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">filtering</span></code>: Filtering parameters</a></p></li>
-<li><p><a class="reference internal" href="#preprocessing-post-sss-bads-marking-bad-channels-during-ssp" id="id21"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">post-SSS</span> <span class="pre">bads</span></code>: Marking bad channels during SSP</a></p></li>
-<li><p><a class="reference internal" href="#preprocessing-ssp-ssp-creation-parameters" id="id22"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">ssp</span></code>: SSP creation parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-filtering-filtering-parameters" id="id19"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">filtering</span></code>: Filtering parameters</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-post-sss-bads-marking-bad-channels-during-ssp" id="id20"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">post-SSS</span> <span class="pre">bads</span></code>: Marking bad channels during SSP</a></p></li>
+<li><p><a class="reference internal" href="#preprocessing-ssp-ssp-creation-parameters" id="id21"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">ssp</span></code>: SSP creation parameters</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#apply-ssp" id="id23">6. apply_ssp</a></p></li>
-<li><p><a class="reference internal" href="#write-epochs" id="id24">7. write_epochs</a></p>
+<li><p><a class="reference internal" href="#apply-ssp" id="id22">6. apply_ssp</a></p></li>
+<li><p><a class="reference internal" href="#write-epochs" id="id23">7. write_epochs</a></p>
 <ul>
-<li><p><a class="reference internal" href="#epoching-epoching-parameters" id="id25"><code class="docutils literal notranslate"><span class="pre">epoching</span></code>: Epoching parameters</a></p></li>
+<li><p><a class="reference internal" href="#epoching-epoching-parameters" id="id24"><code class="docutils literal notranslate"><span class="pre">epoching</span></code>: Epoching parameters</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#gen-covs" id="id26">8. gen_covs</a></p>
+<li><p><a class="reference internal" href="#gen-covs" id="id25">8. gen_covs</a></p>
 <ul>
-<li><p><a class="reference internal" href="#covariance-covariance-parameters" id="id27"><code class="docutils literal notranslate"><span class="pre">covariance</span></code>: Covariance parameters</a></p></li>
+<li><p><a class="reference internal" href="#covariance-covariance-parameters" id="id26"><code class="docutils literal notranslate"><span class="pre">covariance</span></code>: Covariance parameters</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#gen-fwd" id="id28">9. gen_fwd</a></p>
+<li><p><a class="reference internal" href="#gen-fwd" id="id27">9. gen_fwd</a></p>
 <ul>
-<li><p><a class="reference internal" href="#forward-forward-parameters" id="id29"><code class="docutils literal notranslate"><span class="pre">forward</span></code>: Forward parameters</a></p></li>
+<li><p><a class="reference internal" href="#forward-forward-parameters" id="id28"><code class="docutils literal notranslate"><span class="pre">forward</span></code>: Forward parameters</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#gen-inv" id="id30">10. gen_inv</a></p>
+<li><p><a class="reference internal" href="#gen-inv" id="id29">10. gen_inv</a></p>
 <ul>
-<li><p><a class="reference internal" href="#inverse-inverse-parameters" id="id31"><code class="docutils literal notranslate"><span class="pre">inverse</span></code>: Inverse parameters</a></p></li>
+<li><p><a class="reference internal" href="#inverse-inverse-parameters" id="id30"><code class="docutils literal notranslate"><span class="pre">inverse</span></code>: Inverse parameters</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#gen-report" id="id32">11. gen_report</a></p>
+<li><p><a class="reference internal" href="#gen-report" id="id31">11. gen_report</a></p>
 <ul>
-<li><p><a class="reference internal" href="#report-params-report-parameters" id="id33"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a></p></li>
+<li><p><a class="reference internal" href="#report-params-report-parameters" id="id32"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#filename-standardization" id="id34">Filename standardization</a></p>
+<li><p><a class="reference internal" href="#filename-standardization" id="id33">Filename standardization</a></p>
 <ul>
-<li><p><a class="reference internal" href="#naming-file-naming-tags-and-folders" id="id35"><code class="docutils literal notranslate"><span class="pre">naming</span></code>: File naming tags and folders</a></p></li>
+<li><p><a class="reference internal" href="#naming-file-naming-tags-and-folders" id="id34"><code class="docutils literal notranslate"><span class="pre">naming</span></code>: File naming tags and folders</a></p></li>
 </ul>
 </li>
+<li><p><a class="reference internal" href="#preparing-your-machine-for-maxfilter-use" id="id35">Preparing your machine for MaxFilter use</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="flow-chart">
 <h2><a class="toc-backref" href="#id4">Flow chart</a><a class="headerlink" href="#flow-chart" title="Permalink to this headline">¶</a></h2>
-<div class="graphviz"><object data="_images/graphviz-4e34f31d4234839c39631536ea345c15d455b50e.svg" type="image/svg+xml" class="graphviz">
+<div class="graphviz"><object data="_images/graphviz-ca50620b7a6e3408d136d520f3ddbcd47825b51c.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">strict digraph &quot;mnefun flow diagram&quot; {
-	graph [bb=&quot;0,0,602.5,802&quot;,
+	graph [bb=&quot;0,0,558.5,869&quot;,
 		bgcolor=&quot;#00000000&quot;,
 		nodesep=0.2,
 		ranksep=0.1
@@ -233,13 +230,13 @@ example of how to process data using mnefun.</p>
 			fontcolor=&quot;#000000&quot;,
 			height=0.5,
 			label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;subj_fil*_report.html&lt;/FONT&gt;&gt;,
-			pos=&quot;342,54.5&quot;,
+			pos=&quot;233.5,44&quot;,
 			style=filled,
 			width=1.5833];
-		legend		 [height=1.5139,
-			label=&lt;&lt;TABLE BORDER=&quot;0&quot; CELLBORDER=&quot;0&quot; CELLSPACING=&quot;4&quot; CELLPADDING=&quot;4&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#4477AA&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Remote: acquisiton machine&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#EE6677&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: obligatory user-created files&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#FFD8DF&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: optional user-created files&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#66CCEE&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: pipeline-created files&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#CCBB44&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Remote: SSS machine (SWS)&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&gt;,
+		legend		 [height=1.2222,
+			label=&lt;&lt;TABLE BORDER=&quot;0&quot; CELLBORDER=&quot;0&quot; CELLSPACING=&quot;4&quot; CELLPADDING=&quot;4&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#CCBB44&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Remote: acquisiton machine&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#EE6677&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: obligatory user-created files&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#FFD8DF&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: optional user-created files&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#66CCEE&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: pipeline-created files&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&gt;,
 			margin=0,
-			pos=&quot;508,54.5&quot;,
+			pos=&quot;399.5,44&quot;,
 			shape=plaintext,
 			width=2.625];
 	}
@@ -247,341 +244,310 @@ example of how to process data using mnefun.</p>
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;score.py&lt;/FONT&gt;&gt;,
-		pos=&quot;523,624&quot;,
+		pos=&quot;76.5,691&quot;,
 		style=filled,
 		width=0.77778];
 	lst	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/lists/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;ALL_*-eve.lst&lt;/FONT&gt;&gt;,
-		pos=&quot;520,536&quot;,
+		pos=&quot;39.5,603&quot;,
 		style=filled,
 		width=1.0972];
 	sco -&gt; lst	 [URL=&quot;../overview.html#do-score&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;2. do_score&lt;/B&gt;&gt;,
 		labeltooltip=&quot;2. do_score&quot;,
-		lp=&quot;554,580&quot;,
-		pos=&quot;e,520.62,554.21 522.38,605.77 521.97,593.85 521.43,578.04 520.97,564.48&quot;,
+		lp=&quot;78.5,647&quot;,
+		pos=&quot;e,38.161,621.11 52.039,672.88 49.892,670.44 47.977,667.81 46.5,665 41.108,654.76 38.998,642.26 38.369,631.18&quot;,
 		target=_top];
 	evo	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/inverse/, ./SUBJ/epochs/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-evo.fif, *-epo.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;422,207&quot;,
+		pos=&quot;120.5,186&quot;,
 		style=filled,
 		width=2.0139];
 	lst -&gt; evo	 [fontsize=10,
-		pos=&quot;e,484.62,225.01 520,517.74 520,503.51 520,483.25 520,465.5 520,465.5 520,465.5 520,270 520,252.42 508.7,239.51 493.77,230.13&quot;];
-	evo -&gt; htm	 [fontsize=10,
-		label=gen_report,
-		labeltooltip=gen_report,
-		lp=&quot;424.5,144&quot;,
-		pos=&quot;e,351.48,72.569 412.51,188.91 398.56,162.31 372.41,112.47 356.17,81.52&quot;];
+		pos=&quot;e,72.913,204.17 39.5,584.8 39.5,567 39.5,539.14 39.5,515 39.5,515 39.5,515 39.5,249 39.5,232.17 50.528,219.18 64.446,209.5&quot;];
+	evo -&gt; htm	 [URL=&quot;../overview.html#gen-report&quot;,
+		fontsize=10,
+		label=&lt;&lt;B&gt;11. gen_report&lt;/B&gt;&gt;,
+		labeltooltip=&quot;11. gen_report&quot;,
+		lp=&quot;192,123&quot;,
+		pos=&quot;e,200.77,62.2 124.33,167.81 128.69,150.37 137.13,123.96 151.5,105 162.52,90.459 177.91,77.758 192.39,67.765&quot;,
+		target=_top];
 	mri	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
-		label=&quot;structural/mri/T1.mgz&quot;,
-		pos=&quot;118,333&quot;,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;structural/mri/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;T1.mgz&lt;/FONT&gt;&gt;,
+		pos=&quot;450.5,312&quot;,
 		style=filled,
-		width=1.4861];
+		width=1.0417];
 	bem	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;structural/bem/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-bem-sol.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;134,270&quot;,
+		pos=&quot;518.5,249&quot;,
 		style=filled,
 		width=1.1111];
 	mri -&gt; bem	 [fontsize=10,
 		label=Freesurfer,
 		labeltooltip=Freesurfer,
-		lp=&quot;144.5,301.5&quot;,
-		pos=&quot;e,123.01,288.04 117.41,314.67 117.57,310.24 117.99,305.45 120.06,297.72&quot;];
+		lp=&quot;513,280.5&quot;,
+		pos=&quot;e,498.64,267.4 470.17,293.78 476.74,287.69 484.18,280.8 491.22,274.28&quot;];
 	tra	 [fillcolor=&quot;#EE6677&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/trans/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-trans.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;222,270&quot;,
+		pos=&quot;336.5,249&quot;,
 		style=filled,
 		width=0.94444];
 	mri -&gt; tra	 [fontsize=10,
 		label=&quot;mne coreg&quot;,
 		labeltooltip=&quot;mne coreg&quot;,
-		lp=&quot;211,301.5&quot;,
-		pos=&quot;e,196.87,288.15 154.07,314.91 158.8,312.34 163.55,309.67 168,307 174.78,302.93 181.87,298.34 188.6,293.81&quot;];
+		lp=&quot;409.5,280.5&quot;,
+		pos=&quot;e,358.11,267.02 412.73,299.6 402.95,295.78 392.6,291.19 383.5,286 379.68,283.82 373.23,279.02 366.31,273.58&quot;];
 	src	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;structural/bem/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-src.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;40,270&quot;,
+		pos=&quot;424.5,249&quot;,
 		style=filled,
 		width=1.1111];
 	mri -&gt; src	 [fontsize=10,
-		pos=&quot;e,62.51,288.18 95.439,314.78 87.597,308.44 78.669,301.23 70.304,294.48&quot;];
+		pos=&quot;e,434.86,267.26 445.28,293.69 443.88,289.26 442.25,284.47 439.04,276.82&quot;];
 	fwd	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/forward/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-fwd.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;218,207&quot;,
+		pos=&quot;339.5,186&quot;,
 		style=filled,
 		width=1.0972];
 	bem -&gt; fwd	 [fontsize=10,
-		pos=&quot;e,193.76,225.18 158.3,251.78 166.83,245.38 176.55,238.08 185.64,231.27&quot;];
+		pos=&quot;e,379.22,199.06 478.28,233.5 475.99,232.64 473.72,231.81 471.5,231 444.29,221.09 413.68,210.62 388.8,202.27&quot;];
 	tra -&gt; fwd	 [URL=&quot;../overview.html#gen-fwd&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;9. gen_fwd&lt;/B&gt;&gt;,
 		labeltooltip=&quot;9. gen_fwd&quot;,
-		lp=&quot;250.5,238.5&quot;,
-		pos=&quot;e,218.89,225.07 220.55,251.82 220.35,249.2 220.17,246.53 220,244 219.81,241.11 219.63,238.09 219.45,235.09&quot;,
+		lp=&quot;368,217.5&quot;,
+		pos=&quot;e,338.62,204.4 337.37,230.78 337.61,225.73 337.88,220.12 338.14,214.63&quot;,
 		target=_top];
 	src -&gt; fwd	 [fontsize=10,
-		pos=&quot;e,178.32,220.23 80.219,254.49 82.51,253.64 84.783,252.81 87,252 113.94,242.22 144.19,231.79 168.82,223.44&quot;];
+		pos=&quot;e,379.31,198.39 416.14,230.75 412.4,224.17 407.49,217.1 401.5,212 397.55,208.63 393.1,205.65 388.44,203.02&quot;];
 	inv	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/inverse/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-inv.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;281,144&quot;,
+		pos=&quot;294.5,123&quot;,
 		style=filled,
 		width=1.0833];
 	fwd -&gt; inv	 [URL=&quot;../overview.html#gen-inv&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;10. gen_inv&lt;/B&gt;&gt;,
 		labeltooltip=&quot;10. gen_inv&quot;,
-		lp=&quot;257.5,175.5&quot;,
-		pos=&quot;e,241.97,156.84 218.68,188.64 219.71,182.19 221.83,175.25 226,170 228.2,167.23 230.77,164.74 233.57,162.5&quot;,
+		lp=&quot;351,154.5&quot;,
+		pos=&quot;e,307.64,141.4 326.48,167.78 322.51,162.21 318.05,155.97 313.75,149.95&quot;,
 		target=_top];
 	inv -&gt; htm	 [fontsize=10,
-		pos=&quot;e,329.67,72.585 293.34,125.89 302.11,113.03 314.02,95.556 323.86,81.116&quot;];
+		pos=&quot;e,247.57,62.223 280.35,104.68 272.5,94.507 262.59,81.678 253.91,70.438&quot;];
 	pbd	 [fillcolor=&quot;#EE6677&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_prebad.txt&lt;/FONT&gt;&gt;,
-		pos=&quot;263,668&quot;,
+		pos=&quot;245.5,735&quot;,
 		style=filled,
 		width=1.0417];
-	mfp	 [fillcolor=&quot;#CCBB44&quot;,
+	mfb	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
-		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;user&#64;kasga:/data00/user/SUBJ/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw.pos, *_raw_maxbad.txt&lt;/FONT&gt;&gt;,
-		pos=&quot;261,580&quot;,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw_maxbad.txt&lt;/FONT&gt;&gt;,
+		pos=&quot;170.5,647&quot;,
 		style=filled,
-		width=2.2083];
-	pbd -&gt; mfp	 [URL=&quot;../overview.html#do-sss&quot;,
+		width=1.4583];
+	pbd -&gt; mfb	 [URL=&quot;../overview.html#do-sss&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;3. do_sss&lt;/B&gt;&gt;,
 		labeltooltip=&quot;3. do_sss&quot;,
-		lp=&quot;288,624&quot;,
-		pos=&quot;e,261.19,598.18 262.25,649.82 262.16,647.2 262.07,644.53 262,642 261.7,631.06 261.48,619.03 261.33,608.5&quot;,
+		lp=&quot;208.5,691&quot;,
+		pos=&quot;e,169.64,665.2 207.9,726.39 198.38,722.53 189.02,716.97 182.5,709 174.85,699.64 171.56,686.84 170.3,675.31&quot;,
 		target=_top];
+	mfp	 [fillcolor=&quot;#66CCEE&quot;,
+		fontcolor=&quot;#000000&quot;,
+		height=0.5,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw.pos&lt;/FONT&gt;&gt;,
+		pos=&quot;201.5,559&quot;,
+		style=filled,
+		width=1.0417];
+	pbd -&gt; mfp	 [fontsize=10,
+		pos=&quot;e,210.05,577.03 244.03,716.73 242.02,695.4 237.69,659.17 229.5,629 225.6,614.65 219.65,599.25 214.23,586.55&quot;];
 	sss	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/sss_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw_sss.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;339,439&quot;,
+		pos=&quot;256.5,418&quot;,
 		style=filled,
 		width=1.0694];
+	pbd -&gt; sss	 [fontsize=10,
+		pos=&quot;e,266.45,436.07 255.66,716.73 264.36,699.35 275.5,672.18 275.5,647 275.5,647 275.5,647 275.5,471 275.5,462.38 273.25,453.42 270.29,\
+445.36&quot;];
+	mfb -&gt; mfp	 [fontsize=10,
+		pos=&quot;e,195.09,577.21 176.92,628.77 181.2,616.61 186.91,600.41 191.75,586.68&quot;];
+	mfb -&gt; sss	 [fontsize=10,
+		pos=&quot;e,217.87,424.68 159.92,628.86 139.87,591.86 101.76,506.63 141.5,453 149.74,441.87 180.34,432.88 207.9,426.79&quot;];
 	mfp -&gt; sss	 [fontsize=10,
-		pos=&quot;e,300.44,451.22 258,561.76 255.3,539.13 254.13,500.33 272,474 276.93,466.74 283.85,460.89 291.39,456.2&quot;];
+		pos=&quot;e,250.08,436.17 209.22,540.95 215.19,526.87 223.57,506.77 230.5,489 236.05,474.77 241.93,458.81 246.68,445.63&quot;];
 	aan	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
-		label=&quot;./SUBJ/raw_fif/*-annot.fif&quot;,
-		pos=&quot;338,492&quot;,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-annot.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;186.5,471&quot;,
 		style=filled,
-		width=1.625];
+		width=1.0417];
 	mfp -&gt; aan	 [fontsize=10,
-		pos=&quot;e,322.07,510.21 276.95,561.77 288,549.14 302.87,532.15 315.17,518.09&quot;];
+		pos=&quot;e,189.6,489.21 198.39,540.77 196.34,528.73 193.61,512.72 191.29,499.08&quot;];
 	sss -&gt; sss	 [URL=&quot;../overview.html#do-ch-fix&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;4. do_ch_fix&lt;/B&gt;&gt;,
 		labeltooltip=&quot;4. do_ch_fix&quot;,
-		lp=&quot;424,439&quot;,
-		pos=&quot;e,377.69,434.3 377.69,443.7 385.72,443.21 391.5,441.64 391.5,439 391.5,437.68 390.06,436.63 387.61,435.84&quot;,
+		lp=&quot;341.5,418&quot;,
+		pos=&quot;e,295.19,413.3 295.19,422.7 303.22,422.21 309,420.64 309,418 309,416.68 307.56,415.63 305.11,414.84&quot;,
 		target=_top];
 	bad	 [fillcolor=&quot;#EE6677&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/bads/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_post-sss.txt&lt;/FONT&gt;&gt;,
-		pos=&quot;339,386&quot;,
+		pos=&quot;189.5,365&quot;,
 		style=filled,
 		width=1.1389];
 	sss -&gt; bad	 [fontsize=10,
-		pos=&quot;e,339,404.09 339,420.76 339,418.66 339,416.47 339,414.27&quot;];
+		pos=&quot;e,212.37,383.09 233.44,399.76 229.18,396.39 224.68,392.83 220.23,389.31&quot;];
 	pca	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
-		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/sss_pca_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw_sss.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;319,270&quot;,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/sss_pca_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_fil55_raw_sss.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;234.5,249&quot;,
 		style=filled,
-		width=1.2778];
+		width=1.4306];
 	sss -&gt; pca	 [fontsize=10,
-		pos=&quot;e,365.04,283.89 377.63,432.32 407.31,426.3 444.74,416.49 454,404 463.53,391.14 459.8,382.91 454,368 438.26,327.54 423.96,320.32 \
-388,296 383.74,293.12 379.11,290.5 374.34,288.13&quot;];
+		pos=&quot;e,286.07,264.24 295.26,412.45 313.09,407.75 332.65,399.05 343.5,383 352.46,369.74 347.6,362.47 343.5,347 334.07,311.4 330.45,298.98 \
+302.5,275 300.13,272.97 297.59,271.08 294.92,269.34&quot;];
 	pro	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/sss_pca_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-proj.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;319,333&quot;,
+		pos=&quot;223.5,312&quot;,
 		style=filled,
 		width=1.2778];
 	sss -&gt; pro	 [URL=&quot;../overview.html#gen-ssp&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;5. gen_ssp&lt;/B&gt;&gt;,
 		labeltooltip=&quot;5. gen_ssp&quot;,
-		lp=&quot;421.5,386&quot;,
-		pos=&quot;e,365.13,348 373.01,420.61 378.66,415.97 383.73,410.44 387,404 394.25,389.74 395.33,381.66 387,368 383.6,362.42 378.99,357.69 373.76,\
-353.7&quot;,
+		lp=&quot;112,365&quot;,
+		pos=&quot;e,177.35,317.32 217.61,415.76 171.64,412.2 99.24,403.44 82.5,383 72.363,370.62 72.643,359.6 82.5,347 93.142,333.39 132.76,324.33 \
+167.31,318.84&quot;,
 		target=_top];
 	pex	 [fillcolor=&quot;#FFD8DF&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/sss_pca_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-extra-proj.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;238,386&quot;,
+		pos=&quot;290.5,365&quot;,
 		style=filled,
 		width=1.2778];
 	sss -&gt; pex	 [fontsize=10,
-		pos=&quot;e,272.32,404.01 304.52,420.91 297.05,416.99 289.05,412.79 281.28,408.71&quot;];
+		pos=&quot;e,278.89,383.09 268.2,399.76 269.88,397.15 271.63,394.42 273.38,391.69&quot;];
 	aan -&gt; sss	 [fontsize=10,
-		pos=&quot;e,338.66,457.09 338.34,473.76 338.38,471.66 338.43,469.47 338.47,467.27&quot;];
+		pos=&quot;e,232.6,436.09 210.59,452.76 215.04,449.39 219.75,445.83 224.39,442.31&quot;];
 	bad -&gt; pca	 [fontsize=10,
-		pos=&quot;e,365.13,285.59 360.55,367.8 365.1,362.84 369.32,357.12 372,351 381.8,328.57 388.17,316.64 375,296 374.27,294.86 373.48,293.76 372.62,\
-292.72&quot;];
+		pos=&quot;e,196.45,267.09 177.56,346.7 169.51,331.87 161.8,310.76 170.5,294 174.64,286.03 180.91,279.17 187.94,273.39&quot;];
 	bad -&gt; pro	 [fontsize=10,
-		pos=&quot;e,325.83,351.09 332.12,367.76 331.23,365.4 330.3,362.95 329.37,360.48&quot;];
+		pos=&quot;e,211.89,330.09 201.2,346.76 202.88,344.15 204.63,341.42 206.38,338.69&quot;];
 	pca -&gt; evo	 [URL=&quot;../overview.html#write-epochs&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;7. write_epochs&lt;/B&gt;&gt;,
 		labeltooltip=&quot;7. write_epochs&quot;,
-		lp=&quot;438.5,238.5&quot;,
-		pos=&quot;e,404.3,225.37 365.26,252.66 370.71,250.03 376.07,247.13 381,244 386.42,240.56 391.81,236.39 396.81,232.11&quot;,
+		lp=&quot;190,217.5&quot;,
+		pos=&quot;e,129.86,204.22 182.97,239.99 170.27,236.16 157.24,230.71 146.5,223 142.49,220.12 138.87,216.42 135.71,212.47&quot;,
 		target=_top];
 	pca -&gt; fwd	 [fontsize=10,
-		pos=&quot;e,257.79,221.16 302.68,251.97 296.09,245.4 288.13,238.3 280,233 275.94,230.35 271.56,227.87 267.08,225.59&quot;];
+		pos=&quot;e,323.24,204.13 286.26,230.86 291.21,228.47 296.03,225.85 300.5,223 305.74,219.66 310.9,215.55 315.66,211.3&quot;];
 	cov	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/cov/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-cov.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;305,207&quot;,
+		pos=&quot;237.5,186&quot;,
 		style=filled,
 		width=0.84722];
 	pca -&gt; cov	 [URL=&quot;../overview.html#gen-covs&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;8. gen_covs&lt;/B&gt;&gt;,
 		labeltooltip=&quot;8. gen_covs&quot;,
-		lp=&quot;345.5,238.5&quot;,
-		pos=&quot;e,309.09,225.4 314.95,251.78 313.8,246.6 312.52,240.83 311.27,235.21&quot;,
+		lp=&quot;269,217.5&quot;,
+		pos=&quot;e,236.62,204.4 235.37,230.78 235.61,225.73 235.88,220.12 236.14,214.63&quot;,
 		target=_top];
 	pro -&gt; pca	 [URL=&quot;../overview.html#apply-ssp&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;6. apply_ssp&lt;/B&gt;&gt;,
 		labeltooltip=&quot;6. apply_ssp&quot;,
-		lp=&quot;342,301.5&quot;,
-		pos=&quot;e,309.86,288.28 310.24,314.83 309.32,312.25 308.53,309.59 308,307 307.41,304.11 307.35,301.11 307.66,298.14&quot;,
+		lp=&quot;256.5,280.5&quot;,
+		pos=&quot;e,224.95,267.12 221.27,293.77 221.06,289.43 221.11,284.75 222.55,277.29&quot;,
 		target=_top];
+	pex -&gt; pca	 [fontsize=10,
+		pos=&quot;e,282.95,267.35 295.56,346.84 299.85,327.44 303.33,296.57 289.5,275 289.44,274.91 289.39,274.82 289.33,274.73&quot;];
+	pex -&gt; pro	 [fontsize=10,
+		pos=&quot;e,246.37,330.09 267.44,346.76 263.18,343.39 258.68,339.83 254.23,336.31&quot;];
 	cov -&gt; htm	 [fontsize=10,
-		pos=&quot;e,341.21,72.756 315.58,188.71 319.75,180.74 324.2,171.15 327,162 335,135.83 338.75,104.75 340.5,82.761&quot;];
+		pos=&quot;e,234.01,62.203 236.99,167.73 236.3,143.55 235.1,100.69 234.3,72.303&quot;];
 	cov -&gt; inv	 [fontsize=10,
-		pos=&quot;e,288.01,162.4 298.06,188.78 296.04,183.47 293.78,177.55 291.59,171.79&quot;];
-	acq	 [fillcolor=&quot;#4477AA&quot;,
+		pos=&quot;e,277.85,141.4 253.99,167.78 259.26,161.95 265.2,155.38 270.88,149.11&quot;];
+	acq	 [fillcolor=&quot;#CCBB44&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;user&#64;minea&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;354,784&quot;,
+		pos=&quot;245.5,851&quot;,
 		style=filled,
 		width=0.94444];
 	raw	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;354,721&quot;,
+		pos=&quot;245.5,788&quot;,
 		style=filled,
 		width=1.0417];
 	acq -&gt; raw	 [URL=&quot;../overview.html#fetch-raw&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;1. fetch_raw&lt;/B&gt;&gt;,
 		labeltooltip=&quot;1. fetch_raw&quot;,
-		lp=&quot;388.5,752.5&quot;,
-		pos=&quot;e,354,739.4 354,765.78 354,760.73 354,755.12 354,749.63&quot;,
+		lp=&quot;280,819.5&quot;,
+		pos=&quot;e,245.5,806.4 245.5,832.78 245.5,827.73 245.5,822.12 245.5,816.63&quot;,
 		target=_top];
 	raw -&gt; sco	 [fontsize=10,
-		pos=&quot;e,494.86,640.15 385.39,702.98 413.85,686.65 455.83,662.55 485.93,645.28&quot;];
+		pos=&quot;e,88.732,709.23 207.77,783.77 187.36,780.22 162.34,773.75 142.5,762 123.56,750.79 106.75,732.5 94.831,717.29&quot;];
 	raw -&gt; pbd	 [fontsize=10,
-		pos=&quot;e,293.92,686.01 322.94,702.91 316.5,699.16 309.62,695.15 302.91,691.25&quot;];
-	raw -&gt; mfp	 [fontsize=10,
-		pos=&quot;e,304.37,598.2 351.8,702.93 347.95,678.31 337.87,634.09 313,606 312.68,605.64 312.36,605.29 312.03,604.94&quot;];
+		pos=&quot;e,245.5,753.09 245.5,769.76 245.5,767.66 245.5,765.47 245.5,763.27&quot;];
+	raw -&gt; mfb	 [fontsize=10,
+		pos=&quot;e,166.22,665.11 217.22,769.81 198.56,755.83 176.03,734.6 167.5,709 163.95,698.34 163.79,686.08 164.84,675.29&quot;];
+	raw -&gt; sss	 [fontsize=10,
+		pos=&quot;e,285.57,436.12 283.16,769.91 295.21,761.35 305.5,749.73 305.5,735 305.5,735 305.5,735 305.5,471 305.5,460.47 300.22,451.15 293.14,\
+443.37&quot;];
 	can	 [fillcolor=&quot;#FFD8DF&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
-		label=&quot;./SUBJ/raw_fif/*-custom-annot.fif&quot;,
-		pos=&quot;414,624&quot;,
+		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-custom-annot.fif&lt;/FONT&gt;&gt;,
+		pos=&quot;370.5,515&quot;,
 		style=filled,
-		width=2.0972];
+		width=1.4444];
 	raw -&gt; can	 [fontsize=10,
-		pos=&quot;e,402.77,642.16 365.29,702.76 374.34,688.12 387.17,667.37 397.39,650.85&quot;];
+		pos=&quot;e,364.51,533.32 283.22,776.97 314.03,766.8 352.5,750.91 352.5,735 352.5,735 352.5,735 352.5,603 352.5,582.73 357.14,560.35 361.71,\
+543.23&quot;];
 	can -&gt; sss	 [fontsize=10,
-		pos=&quot;e,377.67,451.83 418.06,605.64 423.64,575.51 430.27,514.83 404,474 399.61,467.18 393.42,461.59 386.59,457.04&quot;];
-	pex -&gt; pca	 [fontsize=10,
-		pos=&quot;e,292.59,288.17 242.48,367.87 246.81,352.76 254.43,331.16 266,315 271.2,307.73 277.83,300.91 284.62,294.87&quot;];
-	pex -&gt; pro	 [fontsize=10,
-		pos=&quot;e,291.35,351.09 265.88,367.76 271.28,364.22 277.02,360.47 282.65,356.78&quot;];
+		pos=&quot;e,295.28,431.32 360.37,496.87 350.8,481.12 335.15,458.62 316.5,444 312.73,441.05 308.58,438.36 304.27,435.94&quot;];
 }</p></object></div>
 </div>
-<div class="section" id="preparing-your-machine-for-maxwell-autobad-and-head-position-estimation">
-<h2><a class="toc-backref" href="#id5">Preparing your machine for Maxwell autobad and head position estimation</a><a class="headerlink" href="#preparing-your-machine-for-maxwell-autobad-and-head-position-estimation" title="Permalink to this headline">¶</a></h2>
-<p>Parameters for remotely connecting to SSS workstation (‘sws’) can be set
-by adding a file ~/.mnefun/mnefun.json with contents like:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir ~/.mnefun
-<span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;{&quot;sws_ssh&quot;:&quot;kasga&quot;, &quot;sws_dir&quot;:&quot;/data06/larsoner/sss_work&quot;, &quot;sws_port&quot;:22}&#39;</span> &gt; ~/.mnefun/mnefun.json
-</pre></div>
-</div>
-<p>This should be preferred to the old way, which was to set in each script
-when running on your machine:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">params</span><span class="o">.</span><span class="n">sws_ssh</span> <span class="o">=</span> <span class="s1">&#39;kasga&#39;</span>
-<span class="n">params</span><span class="o">.</span><span class="n">sws_dir</span> <span class="o">=</span> <span class="s1">&#39;/data06/larsoner/sss_work&#39;</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Head position estimation is now available using
-<code class="docutils literal notranslate"><span class="pre">hp_type='python'</span></code>. Automatic bad channel detection like
-MaxFilter provides will also be available hopefully soon.</p>
-</div>
-<p>Using per-machine config files rather than per-script variables should
-help increase portability of scripts without hurting reproducibility
-(assuming we all use the same version of MaxFilter, which should be a
-safe assumption).</p>
-<p>To test that things are configured correctly, you can do:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -c <span class="s2">&quot;import mnefun; mnefun.check_sws()&quot;</span>
-<span class="go">On kasga: maxfilter -version (0 sec)</span>
-<span class="go">Output:</span>
-<span class="go">Revision: 2.2.15 Neuromag maxfilter Dec 11 2012 14:48:44</span>
-</pre></div>
-</div>
-<p>If you get an error:</p>
-<ol class="arabic">
-<li><p>Ensure that your file is correctly set up in <code class="docutils literal notranslate"><span class="pre">~/.mnefun/mnefun.json</span></code>.
-It needs to use standard quotation marks like <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, not fancy ones like
-<code class="docutils literal notranslate"><span class="pre">”</span></code> so ensure that your text editor (if you used one) did not use fancy
-quotation marks.</p></li>
-<li><p>Ensure that <code class="docutils literal notranslate"><span class="pre">maxwell_filter</span></code> is accessible as a command on the remote
-machine. Log into the remote machine and do:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> which maxfilter
-<span class="go">/neuro/bin/util/maxfilter</span>
-</pre></div>
-</div>
-<p>If you get no output with this command, it means that MaxFilter is not
-available on your PATH on the remote machine. To fix this, consider adding
-the following line to the end of your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> on the remote machine:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/neuro/bin/util:/neuro/bin/X11
-</pre></div>
-</div>
-</li>
-</ol>
-</div>
 <div class="section" id="running-parameters">
-<h2><a class="toc-backref" href="#id6">Running parameters</a><a class="headerlink" href="#running-parameters" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Running parameters</a><a class="headerlink" href="#running-parameters" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="general-general-options">
-<h3><a class="toc-backref" href="#id7"><code class="docutils literal notranslate"><span class="pre">general</span></code>: General options</a><a class="headerlink" href="#general-general-options" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6"><code class="docutils literal notranslate"><span class="pre">general</span></code>: General options</a><a class="headerlink" href="#general-general-options" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>work_dir<span class="classifier">str</span></dt><dd><p>Working directory, usually “.”.</p>
 </dd>
@@ -595,10 +561,10 @@ the following line to the end of your <code class="docutils literal notranslate"
 </div>
 </div>
 <div class="section" id="fetch-raw">
-<h2><a class="toc-backref" href="#id8">1. fetch_raw</a><a class="headerlink" href="#fetch-raw" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id7">1. fetch_raw</a><a class="headerlink" href="#fetch-raw" title="Permalink to this headline">¶</a></h2>
 <p>Fetch raw files from an acquisition machine.</p>
 <div class="section" id="fetch-raw-raw-fetching-parameters">
-<h3><a class="toc-backref" href="#id9"><code class="docutils literal notranslate"><span class="pre">fetch_raw</span></code>: Raw fetching parameters</a><a class="headerlink" href="#fetch-raw-raw-fetching-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8"><code class="docutils literal notranslate"><span class="pre">fetch_raw</span></code>: Raw fetching parameters</a><a class="headerlink" href="#fetch-raw-raw-fetching-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>subjects<span class="classifier">list of str</span></dt><dd><p>Subject names.</p>
 </dd>
@@ -625,10 +591,10 @@ alias for “all runs”.</p>
 </div>
 </div>
 <div class="section" id="do-score">
-<h2><a class="toc-backref" href="#id10">2. do_score</a><a class="headerlink" href="#do-score" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">2. do_score</a><a class="headerlink" href="#do-score" title="Permalink to this headline">¶</a></h2>
 <p>Do the scoring. This converts TTL triggers to meaningful events.</p>
 <div class="section" id="scoring-scoring-parameters">
-<h3><a class="toc-backref" href="#id11"><code class="docutils literal notranslate"><span class="pre">scoring</span></code>: Scoring parameters</a><a class="headerlink" href="#scoring-scoring-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id10"><code class="docutils literal notranslate"><span class="pre">scoring</span></code>: Scoring parameters</a><a class="headerlink" href="#scoring-scoring-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>score<span class="classifier">callable | None</span></dt><dd><p>Scoring function used to slice data into trials.</p>
 </dd>
@@ -638,7 +604,7 @@ alias for “all runs”.</p>
 </div>
 </div>
 <div class="section" id="do-sss">
-<span id="id2"></span><h2><a class="toc-backref" href="#id12">3. do_sss</a><a class="headerlink" href="#do-sss" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2><a class="toc-backref" href="#id11">3. do_sss</a><a class="headerlink" href="#do-sss" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Before running SSS, make <code class="docutils literal notranslate"><span class="pre">SUBJ/raw_fif/SUBJ_prebad.txt</span></code>
@@ -663,7 +629,7 @@ manually mark as bad) that have been saved as <code class="docutils literal notr
 disrupted by bad segments of data, and also ensures that the output files
 have the annotations (as they are preserved by <code class="docutils literal notranslate"><span class="pre">mnefun</span></code>).</p>
 <div class="section" id="preprocessing-multithreading-multithreading-parameters">
-<h3><a class="toc-backref" href="#id13"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">multithreading</span></code>: Multithreading parameters</a><a class="headerlink" href="#preprocessing-multithreading-multithreading-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id12"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">multithreading</span></code>: Multithreading parameters</a><a class="headerlink" href="#preprocessing-multithreading-multithreading-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>n_jobs<span class="classifier">int</span></dt><dd><p>Number of jobs to use in parallel operations.</p>
 </dd>
@@ -681,17 +647,20 @@ if the system supports CUDA.</p>
 </dl>
 </div>
 <div class="section" id="preprocessing-pre-sss-bads-automatic-bad-channel-detection">
-<h3><a class="toc-backref" href="#id14"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">pre-SSS</span> <span class="pre">bads</span></code>: Automatic bad channel detection</a><a class="headerlink" href="#preprocessing-pre-sss-bads-automatic-bad-channel-detection" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id13"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">pre-SSS</span> <span class="pre">bads</span></code>: Automatic bad channel detection</a><a class="headerlink" href="#preprocessing-pre-sss-bads-automatic-bad-channel-detection" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
-<dt>mf_autobad<span class="classifier">bool</span></dt><dd><p>Default False. If True use Maxfilter to automatically mark bad
-channels <em>prior to SSS</em>.</p>
+<dt>mf_autobad<span class="classifier">bool</span></dt><dd><p>Default False. If True use Maxwell-filtering-based automatic bad
+channel detection to mark bad channels <em>prior to SSS</em>.</p>
+</dd>
+<dt>mf_autobad_type<span class="classifier">str</span></dt><dd><p>Default ‘maxwell’. If ‘maxwell’, use MaxFilter to do automatic detection,
+if ‘python’ (preferred) use MNE-Python.</p>
 </dd>
 <dt>mf_badlimit<span class="classifier">int</span></dt><dd><p>MaxFilter threshold for noisy channel detection (default is 7).</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="preprocessing-head-position-estimation-head-position-estimation-parameters">
-<span id="preprocessing-hpe"></span><h3><a class="toc-backref" href="#id15"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">head_position_estimation</span></code>: Head position estimation parameters</a><a class="headerlink" href="#preprocessing-head-position-estimation-head-position-estimation-parameters" title="Permalink to this headline">¶</a></h3>
+<span id="preprocessing-hpe"></span><h3><a class="toc-backref" href="#id14"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">head_position_estimation</span></code>: Head position estimation parameters</a><a class="headerlink" href="#preprocessing-head-position-estimation-head-position-estimation-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>coil_t_window<span class="classifier">float</span></dt><dd><p>Time window for coil position estimation.</p>
 </dd>
@@ -704,7 +673,7 @@ channels <em>prior to SSS</em>.</p>
 </dl>
 </div>
 <div class="section" id="preprocessing-annotations-annotation-parameters">
-<span id="preprocessing-annotations"></span><h3><a class="toc-backref" href="#id16"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">annotations</span></code>: Annotation parameters</a><a class="headerlink" href="#preprocessing-annotations-annotation-parameters" title="Permalink to this headline">¶</a></h3>
+<span id="preprocessing-annotations"></span><h3><a class="toc-backref" href="#id15"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">annotations</span></code>: Annotation parameters</a><a class="headerlink" href="#preprocessing-annotations-annotation-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>coil_bad_count_duration_limit<span class="classifier">float</span></dt><dd><p>Remove segments with &lt; 3 good coils for at least this many sec.</p>
 </dd>
@@ -715,7 +684,7 @@ channels <em>prior to SSS</em>.</p>
 </dl>
 </div>
 <div class="section" id="preprocessing-sss-sss-parameters">
-<h3><a class="toc-backref" href="#id17"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">sss</span></code>: SSS parameters</a><a class="headerlink" href="#preprocessing-sss-sss-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id16"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">sss</span></code>: SSS parameters</a><a class="headerlink" href="#preprocessing-sss-sss-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>movecomp<span class="classifier">str | None</span></dt><dd><p>Movement compensation to use. Can be ‘inter’ or None.</p>
 </dd>
@@ -790,11 +759,11 @@ Default is center of sphere fit to digitized head points.</p>
 </div>
 </div>
 <div class="section" id="do-ch-fix">
-<h2><a class="toc-backref" href="#id18">4. do_ch_fix</a><a class="headerlink" href="#do-ch-fix" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id17">4. do_ch_fix</a><a class="headerlink" href="#do-ch-fix" title="Permalink to this headline">¶</a></h2>
 <p>Fix EEG channel ordering, and also anonymize files.</p>
 </div>
 <div class="section" id="gen-ssp">
-<h2><a class="toc-backref" href="#id19">5. gen_ssp</a><a class="headerlink" href="#gen-ssp" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id18">5. gen_ssp</a><a class="headerlink" href="#gen-ssp" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Before running SSP, examine SSS’ed files and make
@@ -808,7 +777,7 @@ rid of muscle movement artifacts in a verbal response paradigm), you can use
 <code class="docutils literal notranslate"><span class="pre">p.proj_extra</span></code>, which get applied before any other projectors are computed
 (e.g., ECG, blink).</p>
 <div class="section" id="preprocessing-filtering-filtering-parameters">
-<h3><a class="toc-backref" href="#id20"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">filtering</span></code>: Filtering parameters</a><a class="headerlink" href="#preprocessing-filtering-filtering-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id19"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">filtering</span></code>: Filtering parameters</a><a class="headerlink" href="#preprocessing-filtering-filtering-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>hp_cut<span class="classifier">float | None</span></dt><dd><p>Highpass cutoff in Hz. Use None for no highpassing.</p>
 </dd>
@@ -829,7 +798,7 @@ rid of muscle movement artifacts in a verbal response paradigm), you can use
 </dl>
 </div>
 <div class="section" id="preprocessing-post-sss-bads-marking-bad-channels-during-ssp">
-<span id="preprocessing-auto-bads"></span><h3><a class="toc-backref" href="#id21"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">post-SSS</span> <span class="pre">bads</span></code>: Marking bad channels during SSP</a><a class="headerlink" href="#preprocessing-post-sss-bads-marking-bad-channels-during-ssp" title="Permalink to this headline">¶</a></h3>
+<span id="preprocessing-auto-bads"></span><h3><a class="toc-backref" href="#id20"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">post-SSS</span> <span class="pre">bads</span></code>: Marking bad channels during SSP</a><a class="headerlink" href="#preprocessing-post-sss-bads-marking-bad-channels-during-ssp" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>auto_bad<span class="classifier">float | None</span></dt><dd><p>If not None, bad channels will be automatically excluded after SSS if
 they disqualify a proportion of events exceeding <code class="docutils literal notranslate"><span class="pre">auto_bad</span></code>.
@@ -853,7 +822,7 @@ are marked as bad.</p>
 </dl>
 </div>
 <div class="section" id="preprocessing-ssp-ssp-creation-parameters">
-<h3><a class="toc-backref" href="#id22"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">ssp</span></code>: SSP creation parameters</a><a class="headerlink" href="#preprocessing-ssp-ssp-creation-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id21"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">ssp</span></code>: SSP creation parameters</a><a class="headerlink" href="#preprocessing-ssp-ssp-creation-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>proj_nums<span class="classifier">list | dict</span></dt><dd><p>List of projector counts to use for ECG/EOG/ERM; each list contains
 three values for grad/mag/eeg channels.
@@ -909,14 +878,14 @@ Can be a dict that maps subject names to channels.</p>
 </div>
 </div>
 <div class="section" id="apply-ssp">
-<h2><a class="toc-backref" href="#id23">6. apply_ssp</a><a class="headerlink" href="#apply-ssp" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id22">6. apply_ssp</a><a class="headerlink" href="#apply-ssp" title="Permalink to this headline">¶</a></h2>
 <p>Apply SSP vectors and filtering to the files.</p>
 </div>
 <div class="section" id="write-epochs">
-<h2><a class="toc-backref" href="#id24">7. write_epochs</a><a class="headerlink" href="#write-epochs" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id23">7. write_epochs</a><a class="headerlink" href="#write-epochs" title="Permalink to this headline">¶</a></h2>
 <p>Write epochs to disk.</p>
 <div class="section" id="epoching-epoching-parameters">
-<h3><a class="toc-backref" href="#id25"><code class="docutils literal notranslate"><span class="pre">epoching</span></code>: Epoching parameters</a><a class="headerlink" href="#epoching-epoching-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id24"><code class="docutils literal notranslate"><span class="pre">epoching</span></code>: Epoching parameters</a><a class="headerlink" href="#epoching-epoching-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>tmin<span class="classifier">float</span></dt><dd><p>tmin for events.</p>
 </dd>
@@ -988,10 +957,10 @@ ratio-based collapsing.</p>
 </div>
 </div>
 <div class="section" id="gen-covs">
-<h2><a class="toc-backref" href="#id26">8. gen_covs</a><a class="headerlink" href="#gen-covs" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id25">8. gen_covs</a><a class="headerlink" href="#gen-covs" title="Permalink to this headline">¶</a></h2>
 <p>Generate covariances.</p>
 <div class="section" id="covariance-covariance-parameters">
-<h3><a class="toc-backref" href="#id27"><code class="docutils literal notranslate"><span class="pre">covariance</span></code>: Covariance parameters</a><a class="headerlink" href="#covariance-covariance-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id26"><code class="docutils literal notranslate"><span class="pre">covariance</span></code>: Covariance parameters</a><a class="headerlink" href="#covariance-covariance-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>cov_method<span class="classifier">str</span></dt><dd><p>Covariance calculation method.</p>
 </dd>
@@ -1012,14 +981,14 @@ is short and/or there are a lot of head movements.</p>
 </div>
 </div>
 <div class="section" id="gen-fwd">
-<h2><a class="toc-backref" href="#id28">9. gen_fwd</a><a class="headerlink" href="#gen-fwd" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id27">9. gen_fwd</a><a class="headerlink" href="#gen-fwd" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Make SUBJ/trans/SUBJ-trans.fif using <a class="reference external" href="https://mne.tools/dev/generated/commands.html#gen-mne-coreg" title="(in MNE v0.20.dev0)"><span>mne coreg</span></a>.</p>
 </div>
 <p>Generate forward solutions (and source space if necessary).</p>
 <div class="section" id="forward-forward-parameters">
-<h3><a class="toc-backref" href="#id29"><code class="docutils literal notranslate"><span class="pre">forward</span></code>: Forward parameters</a><a class="headerlink" href="#forward-forward-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id28"><code class="docutils literal notranslate"><span class="pre">forward</span></code>: Forward parameters</a><a class="headerlink" href="#forward-forward-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>bem_type<span class="classifier">str</span></dt><dd><p>Defaults to <code class="docutils literal notranslate"><span class="pre">'5120-5120-5120'</span></code>, use <code class="docutils literal notranslate"><span class="pre">'5120'</span></code> for a
 single-layer BEM.</p>
@@ -1042,10 +1011,10 @@ for them to be included in the forward solution source space.</p>
 </div>
 </div>
 <div class="section" id="gen-inv">
-<h2><a class="toc-backref" href="#id30">10. gen_inv</a><a class="headerlink" href="#gen-inv" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id29">10. gen_inv</a><a class="headerlink" href="#gen-inv" title="Permalink to this headline">¶</a></h2>
 <p>Generate inverses.</p>
 <div class="section" id="inverse-inverse-parameters">
-<h3><a class="toc-backref" href="#id31"><code class="docutils literal notranslate"><span class="pre">inverse</span></code>: Inverse parameters</a><a class="headerlink" href="#inverse-inverse-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id30"><code class="docutils literal notranslate"><span class="pre">inverse</span></code>: Inverse parameters</a><a class="headerlink" href="#inverse-inverse-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>inv_names<span class="classifier">list of str</span></dt><dd><p>Inverse names to use.</p>
 </dd>
@@ -1055,10 +1024,10 @@ for them to be included in the forward solution source space.</p>
 </div>
 </div>
 <div class="section" id="gen-report">
-<h2><a class="toc-backref" href="#id32">11. gen_report</a><a class="headerlink" href="#gen-report" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id31">11. gen_report</a><a class="headerlink" href="#gen-report" title="Permalink to this headline">¶</a></h2>
 <p>Write <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v0.20.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> HTML of results to disk.</p>
 <div class="section" id="report-params-report-parameters">
-<h3><a class="toc-backref" href="#id33"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a><a class="headerlink" href="#report-params-report-parameters" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id32"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a><a class="headerlink" href="#report-params-report-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>chpi_snr<span class="classifier">bool</span></dt><dd><p>cHPI SNR (default True).</p>
 </dd>
@@ -1093,10 +1062,10 @@ and ‘size’.</p>
 </div>
 </div>
 <div class="section" id="filename-standardization">
-<h2><a class="toc-backref" href="#id34">Filename standardization</a><a class="headerlink" href="#filename-standardization" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id33">Filename standardization</a><a class="headerlink" href="#filename-standardization" title="Permalink to this headline">¶</a></h2>
 <p>mnefun imposes custom standardized structure on filenames:</p>
 <div class="section" id="naming-file-naming-tags-and-folders">
-<h3><a class="toc-backref" href="#id35"><code class="docutils literal notranslate"><span class="pre">naming</span></code>: File naming tags and folders</a><a class="headerlink" href="#naming-file-naming-tags-and-folders" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id34"><code class="docutils literal notranslate"><span class="pre">naming</span></code>: File naming tags and folders</a><a class="headerlink" href="#naming-file-naming-tags-and-folders" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
 <dt>list_dir<span class="classifier">str</span></dt><dd><p>Directory for event lists, usually “lists”.</p>
 </dd>
@@ -1145,6 +1114,61 @@ and ‘size’.</p>
 </dl>
 </div>
 </div>
+<div class="section" id="preparing-your-machine-for-maxfilter-use">
+<h2><a class="toc-backref" href="#id35">Preparing your machine for MaxFilter use</a><a class="headerlink" href="#preparing-your-machine-for-maxfilter-use" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Head position estimation and bad channel detection are now
+available using <code class="docutils literal notranslate"><span class="pre">hp_type='python'</span></code> and
+<code class="docutils literal notranslate"><span class="pre">mf_autobad_type='python</span></code>, respectively.
+These are the preferred processing methods going forward
+(as of March 2020), and using MaxFilter should be considered
+deprecated.</p>
+</div>
+<p>Parameters for remotely connecting to SSS workstation (‘sws’) can be set
+by adding a file <em class="xref py py-obj">json</em> with contents like:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir ~/.mnefun
+<span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;{&quot;sws_ssh&quot;:&quot;kasga&quot;, &quot;sws_dir&quot;:&quot;/data06/larsoner/sss_work&quot;, &quot;sws_port&quot;:22}&#39;</span> &gt; ~/.mnefun/mnefun.json
+</pre></div>
+</div>
+<p>This should be preferred to the old way, which was to set in each script
+when running on your machine:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">params</span><span class="o">.</span><span class="n">sws_ssh</span> <span class="o">=</span> <span class="s1">&#39;kasga&#39;</span>
+<span class="n">params</span><span class="o">.</span><span class="n">sws_dir</span> <span class="o">=</span> <span class="s1">&#39;/data06/larsoner/sss_work&#39;</span>
+</pre></div>
+</div>
+<p>Using per-machine config files rather than per-script variables should
+help increase portability of scripts without hurting reproducibility
+(assuming we all use the same version of MaxFilter, which should be a
+safe assumption).</p>
+<p>To test that things are configured correctly, you can do:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -c <span class="s2">&quot;import mnefun; mnefun.check_sws()&quot;</span>
+<span class="go">On kasga: maxfilter -version (0 sec)</span>
+<span class="go">Output:</span>
+<span class="go">Revision: 2.2.15 Neuromag maxfilter Dec 11 2012 14:48:44</span>
+</pre></div>
+</div>
+<p>If you get an error:</p>
+<ol class="arabic">
+<li><p>Ensure that your file is correctly set up in <code class="docutils literal notranslate"><span class="pre">~/.mnefun/mnefun.json</span></code>.
+It needs to use standard quotation marks like <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>, not fancy ones like
+<code class="docutils literal notranslate"><span class="pre">”</span></code> so ensure that your text editor (if you used one) did not use fancy
+quotation marks.</p></li>
+<li><p>Ensure that <code class="docutils literal notranslate"><span class="pre">maxwell_filter</span></code> is accessible as a command on the remote
+machine. Log into the remote machine and do:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> which maxfilter
+<span class="go">/neuro/bin/util/maxfilter</span>
+</pre></div>
+</div>
+<p>If you get no output with this command, it means that MaxFilter is not
+available on your PATH on the remote machine. To fix this, consider adding
+the following line to the end of your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> on the remote machine:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/neuro/bin/util:/neuro/bin/X11
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 
 
@@ -1160,8 +1184,8 @@ and ‘size’.</p>
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Mar 04, 2020.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.3.<br/>
+      Last updated on Mar 10, 2020.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
     </p>
   </div>
 </footer>
