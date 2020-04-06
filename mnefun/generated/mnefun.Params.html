@@ -98,9 +98,9 @@
       
   <div class="section" id="mnefun-params">
 <h1>mnefun.Params<a class="headerlink" href="#mnefun-params" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="mnefun.Params">
-<em class="property">class </em><code class="sig-prename descclassname">mnefun.</code><code class="sig-name descname">Params</code><span class="sig-paren">(</span><em class="sig-param">tmin=None</em>, <em class="sig-param">tmax=None</em>, <em class="sig-param">t_adjust=0</em>, <em class="sig-param">bmin=-0.2</em>, <em class="sig-param">bmax=0.0</em>, <em class="sig-param">n_jobs=6</em>, <em class="sig-param">lp_cut=55</em>, <em class="sig-param">decim=5</em>, <em class="sig-param">proj_sfreq=None</em>, <em class="sig-param">n_jobs_mkl=1</em>, <em class="sig-param">n_jobs_fir='cuda'</em>, <em class="sig-param">n_jobs_resample='cuda'</em>, <em class="sig-param">filter_length=32768</em>, <em class="sig-param">drop_thresh=1</em>, <em class="sig-param">epochs_type='fif'</em>, <em class="sig-param">fwd_mindist=2.0</em>, <em class="sig-param">bem_type='5120-5120-5120'</em>, <em class="sig-param">auto_bad=None</em>, <em class="sig-param">ecg_channel=None</em>, <em class="sig-param">eog_channel=None</em>, <em class="sig-param">plot_raw=False</em>, <em class="sig-param">match_fun=None</em>, <em class="sig-param">hp_cut=None</em>, <em class="sig-param">cov_method='empirical'</em>, <em class="sig-param">ssp_eog_reject=None</em>, <em class="sig-param">ssp_ecg_reject=None</em>, <em class="sig-param">baseline='individual'</em>, <em class="sig-param">reject_tmin=None</em>, <em class="sig-param">reject_tmax=None</em>, <em class="sig-param">lp_trans=0.5</em>, <em class="sig-param">hp_trans=0.5</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">mnefun.</code><code class="sig-name descname">Params</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tmin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tmax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">t_adjust</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">bmin</span><span class="o">=</span><span class="default_value">- 0.2</span></em>, <em class="sig-param"><span class="n">bmax</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">n_jobs</span><span class="o">=</span><span class="default_value">6</span></em>, <em class="sig-param"><span class="n">lp_cut</span><span class="o">=</span><span class="default_value">55</span></em>, <em class="sig-param"><span class="n">decim</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">proj_sfreq</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_jobs_mkl</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">n_jobs_fir</span><span class="o">=</span><span class="default_value">'cuda'</span></em>, <em class="sig-param"><span class="n">n_jobs_resample</span><span class="o">=</span><span class="default_value">'cuda'</span></em>, <em class="sig-param"><span class="n">filter_length</span><span class="o">=</span><span class="default_value">32768</span></em>, <em class="sig-param"><span class="n">drop_thresh</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">epochs_type</span><span class="o">=</span><span class="default_value">'fif'</span></em>, <em class="sig-param"><span class="n">fwd_mindist</span><span class="o">=</span><span class="default_value">2.0</span></em>, <em class="sig-param"><span class="n">bem_type</span><span class="o">=</span><span class="default_value">'5120-5120-5120'</span></em>, <em class="sig-param"><span class="n">auto_bad</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ecg_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eog_channel</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">plot_raw</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">match_fun</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">hp_cut</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cov_method</span><span class="o">=</span><span class="default_value">'empirical'</span></em>, <em class="sig-param"><span class="n">ssp_eog_reject</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ssp_ecg_reject</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">baseline</span><span class="o">=</span><span class="default_value">'individual'</span></em>, <em class="sig-param"><span class="n">reject_tmin</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reject_tmax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lp_trans</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">hp_trans</span><span class="o">=</span><span class="default_value">0.5</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make a parameter structure for use with <a class="reference internal" href="mnefun.do_processing.html#mnefun.do_processing" title="mnefun.do_processing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_processing</span></code></a>.</p>
 <p>See the <a class="reference internal" href="../overview.html#overview"><span class="std std-ref">Overview</span></a> for a description of the options.</p>
 <p>Some params can be set on init, but it’s better to set them in
@@ -142,15 +142,15 @@ a YAML file.</p>
 </tr>
 </tbody>
 </table>
-<dl class="method">
+<dl class="py method">
 <dt id="mnefun.Params.__hash__">
 <code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return hash(self).</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="mnefun.Params.convert_subjects">
-<code class="sig-name descname">convert_subjects</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">subj_template</em>, <em class="sig-param">struc_template=None</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.convert_subjects" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">convert_subjects</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">subj_template</span></em>, <em class="sig-param"><span class="n">struc_template</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.convert_subjects" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert subject names.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -164,15 +164,15 @@ a YAML file.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="mnefun.Params.freeze">
-<code class="sig-name descname">freeze</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.freeze" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">freeze</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.freeze" title="Permalink to this definition">¶</a></dt>
 <dd><p>Freeze the object so that only existing properties can be set</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="mnefun.Params.save">
-<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">fname</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.save" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">fname</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.save" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save to a YAML file.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -184,9 +184,9 @@ a YAML file.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="mnefun.Params.unfreeze">
-<code class="sig-name descname">unfreeze</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.unfreeze" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">unfreeze</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.unfreeze" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unfreeze the object so that additional properties can be added</p>
 </dd></dl>
 
@@ -207,8 +207,8 @@ a YAML file.</p>
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Apr 02, 2020.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.4.<br/>
+      Last updated on Apr 06, 2020.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0.<br/>
     </p>
   </div>
 </footer>
