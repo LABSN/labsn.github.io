@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>Overview &#8212; mnefun 0.2.0.dev0 documentation</title>
@@ -208,9 +208,9 @@ example of how to process data using mnefun.</p>
 </div>
 <div class="section" id="flow-chart">
 <h2><a class="toc-backref" href="#id4">Flow chart</a><a class="headerlink" href="#flow-chart" title="Permalink to this headline">¶</a></h2>
-<div class="graphviz"><object data="_images/graphviz-ca50620b7a6e3408d136d520f3ddbcd47825b51c.svg" type="image/svg+xml" class="graphviz">
+<div class="graphviz"><object data="_images/graphviz-c4e731a5801112ccf8d7bd790f8bcb2071eda445.svg" type="image/svg+xml" class="graphviz">
 <p class="warning">strict digraph &quot;mnefun flow diagram&quot; {
-	graph [bb=&quot;0,0,558.5,869&quot;,
+	graph [bb=&quot;0,0,577.5,869&quot;,
 		bgcolor=&quot;#00000000&quot;,
 		nodesep=0.2,
 		ranksep=0.1
@@ -230,13 +230,13 @@ example of how to process data using mnefun.</p>
 			fontcolor=&quot;#000000&quot;,
 			height=0.5,
 			label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;subj_fil*_report.html&lt;/FONT&gt;&gt;,
-			pos=&quot;233.5,44&quot;,
+			pos=&quot;252.5,44&quot;,
 			style=filled,
 			width=1.5833];
 		legend		 [height=1.2222,
 			label=&lt;&lt;TABLE BORDER=&quot;0&quot; CELLBORDER=&quot;0&quot; CELLSPACING=&quot;4&quot; CELLPADDING=&quot;4&quot;&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#CCBB44&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Remote: acquisiton machine&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#EE6677&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: obligatory user-created files&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#FFD8DF&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: optional user-created files&lt;/TD&gt;&lt;/TR&gt;&lt;TR&gt;&lt;TD BGCOLOR=&quot;#66CCEE&quot;&gt;    &lt;/TD&gt;&lt;TD ALIGN=&quot;left&quot;&gt;Local: pipeline-created files&lt;/TD&gt;&lt;/TR&gt;&lt;/TABLE&gt;&gt;,
 			margin=0,
-			pos=&quot;399.5,44&quot;,
+			pos=&quot;418.5,44&quot;,
 			shape=plaintext,
 			width=2.625];
 	}
@@ -265,17 +265,17 @@ example of how to process data using mnefun.</p>
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/inverse/, ./SUBJ/epochs/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-evo.fif, *-epo.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;120.5,186&quot;,
+		pos=&quot;139.5,186&quot;,
 		style=filled,
 		width=2.0139];
 	lst -&gt; evo	 [fontsize=10,
-		pos=&quot;e,72.913,204.17 39.5,584.8 39.5,567 39.5,539.14 39.5,515 39.5,515 39.5,515 39.5,249 39.5,232.17 50.528,219.18 64.446,209.5&quot;];
+		pos=&quot;e,74.756,204.1 39.5,584.8 39.5,567 39.5,539.14 39.5,515 39.5,515 39.5,515 39.5,249 39.5,231.42 50.703,218.55 65.609,209.21&quot;];
 	evo -&gt; htm	 [URL=&quot;../overview.html#gen-report&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;11. gen_report&lt;/B&gt;&gt;,
 		labeltooltip=&quot;11. gen_report&quot;,
-		lp=&quot;192,123&quot;,
-		pos=&quot;e,200.77,62.2 124.33,167.81 128.69,150.37 137.13,123.96 151.5,105 162.52,90.459 177.91,77.758 192.39,67.765&quot;,
+		lp=&quot;211,123&quot;,
+		pos=&quot;e,219.77,62.2 143.33,167.81 147.69,150.37 156.13,123.96 170.5,105 181.52,90.459 196.91,77.758 211.39,67.765&quot;,
 		target=_top];
 	mri	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
@@ -288,76 +288,76 @@ example of how to process data using mnefun.</p>
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;structural/bem/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-bem-sol.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;518.5,249&quot;,
+		pos=&quot;537.5,249&quot;,
 		style=filled,
 		width=1.1111];
 	mri -&gt; bem	 [fontsize=10,
 		label=Freesurfer,
 		labeltooltip=Freesurfer,
-		lp=&quot;513,280.5&quot;,
-		pos=&quot;e,498.64,267.4 470.17,293.78 476.74,287.69 484.18,280.8 491.22,274.28&quot;];
+		lp=&quot;523,280.5&quot;,
+		pos=&quot;e,512.39,267.18 475.66,293.78 484.59,287.31 494.78,279.94 504.28,273.06&quot;];
 	tra	 [fillcolor=&quot;#EE6677&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/trans/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-trans.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;336.5,249&quot;,
+		pos=&quot;355.5,249&quot;,
 		style=filled,
 		width=0.94444];
 	mri -&gt; tra	 [fontsize=10,
 		label=&quot;mne coreg&quot;,
 		labeltooltip=&quot;mne coreg&quot;,
-		lp=&quot;409.5,280.5&quot;,
-		pos=&quot;e,358.11,267.02 412.73,299.6 402.95,295.78 392.6,291.19 383.5,286 379.68,283.82 373.23,279.02 366.31,273.58&quot;];
+		lp=&quot;417.5,280.5&quot;,
+		pos=&quot;e,370.41,267.02 412.82,297.99 405.47,294.55 398.03,290.53 391.5,286 386.6,282.59 381.81,278.45 377.4,274.19&quot;];
 	src	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;structural/bem/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-src.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;424.5,249&quot;,
+		pos=&quot;443.5,249&quot;,
 		style=filled,
 		width=1.1111];
 	mri -&gt; src	 [fontsize=10,
-		pos=&quot;e,434.86,267.26 445.28,293.69 443.88,289.26 442.25,284.47 439.04,276.82&quot;];
+		pos=&quot;e,445.54,267.4 448.48,293.78 447.91,288.73 447.29,283.12 446.68,277.63&quot;];
 	fwd	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/forward/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-fwd.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;339.5,186&quot;,
+		pos=&quot;358.5,186&quot;,
 		style=filled,
 		width=1.0972];
 	bem -&gt; fwd	 [fontsize=10,
-		pos=&quot;e,379.22,199.06 478.28,233.5 475.99,232.64 473.72,231.81 471.5,231 444.29,221.09 413.68,210.62 388.8,202.27&quot;];
+		pos=&quot;e,398.22,199.06 497.28,233.5 494.99,232.64 492.72,231.81 490.5,231 463.29,221.09 432.68,210.62 407.8,202.27&quot;];
 	tra -&gt; fwd	 [URL=&quot;../overview.html#gen-fwd&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;9. gen_fwd&lt;/B&gt;&gt;,
 		labeltooltip=&quot;9. gen_fwd&quot;,
-		lp=&quot;368,217.5&quot;,
-		pos=&quot;e,338.62,204.4 337.37,230.78 337.61,225.73 337.88,220.12 338.14,214.63&quot;,
+		lp=&quot;387,217.5&quot;,
+		pos=&quot;e,357.62,204.4 356.37,230.78 356.61,225.73 356.88,220.12 357.14,214.63&quot;,
 		target=_top];
 	src -&gt; fwd	 [fontsize=10,
-		pos=&quot;e,379.31,198.39 416.14,230.75 412.4,224.17 407.49,217.1 401.5,212 397.55,208.63 393.1,205.65 388.44,203.02&quot;];
+		pos=&quot;e,398.31,198.39 435.14,230.75 431.4,224.17 426.49,217.1 420.5,212 416.55,208.63 412.1,205.65 407.44,203.02&quot;];
 	inv	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/inverse/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-inv.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;294.5,123&quot;,
+		pos=&quot;313.5,123&quot;,
 		style=filled,
 		width=1.0833];
 	fwd -&gt; inv	 [URL=&quot;../overview.html#gen-inv&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;10. gen_inv&lt;/B&gt;&gt;,
 		labeltooltip=&quot;10. gen_inv&quot;,
-		lp=&quot;351,154.5&quot;,
-		pos=&quot;e,307.64,141.4 326.48,167.78 322.51,162.21 318.05,155.97 313.75,149.95&quot;,
+		lp=&quot;370,154.5&quot;,
+		pos=&quot;e,326.64,141.4 345.48,167.78 341.51,162.21 337.05,155.97 332.75,149.95&quot;,
 		target=_top];
 	inv -&gt; htm	 [fontsize=10,
-		pos=&quot;e,247.57,62.223 280.35,104.68 272.5,94.507 262.59,81.678 253.91,70.438&quot;];
+		pos=&quot;e,266.57,62.223 299.35,104.68 291.5,94.507 281.59,81.678 272.91,70.438&quot;];
 	pbd	 [fillcolor=&quot;#EE6677&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
-		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_prebad.txt&lt;/FONT&gt;&gt;,
-		pos=&quot;245.5,735&quot;,
+		label=&quot;params.mf_prebad[SUBJ]&quot;,
+		pos=&quot;236.5,735&quot;,
 		style=filled,
-		width=1.0417];
+		width=1.6806];
 	mfb	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
@@ -370,48 +370,49 @@ example of how to process data using mnefun.</p>
 		label=&lt;&lt;B&gt;3. do_sss&lt;/B&gt;&gt;,
 		labeltooltip=&quot;3. do_sss&quot;,
 		lp=&quot;208.5,691&quot;,
-		pos=&quot;e,169.64,665.2 207.9,726.39 198.38,722.53 189.02,716.97 182.5,709 174.85,699.64 171.56,686.84 170.3,675.31&quot;,
+		pos=&quot;e,169.85,665.04 190.47,716.97 187.5,714.61 184.79,711.97 182.5,709 175.12,699.43 171.87,686.6 170.56,675.1&quot;,
 		target=_top];
 	mfp	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw.pos&lt;/FONT&gt;&gt;,
-		pos=&quot;201.5,559&quot;,
+		pos=&quot;215.5,559&quot;,
 		style=filled,
 		width=1.0417];
 	pbd -&gt; mfp	 [fontsize=10,
-		pos=&quot;e,210.05,577.03 244.03,716.73 242.02,695.4 237.69,659.17 229.5,629 225.6,614.65 219.65,599.25 214.23,586.55&quot;];
+		pos=&quot;e,219.66,577.04 235.82,716.81 235.31,704.45 234.53,687.73 233.5,673 232.14,653.41 232.32,648.43 229.5,629 227.48,615.11 224.51,599.8 \
+221.82,587.06&quot;];
 	sss	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/sss_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw_sss.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;256.5,418&quot;,
+		pos=&quot;267.5,418&quot;,
 		style=filled,
 		width=1.0694];
 	pbd -&gt; sss	 [fontsize=10,
-		pos=&quot;e,266.45,436.07 255.66,716.73 264.36,699.35 275.5,672.18 275.5,647 275.5,647 275.5,647 275.5,471 275.5,462.38 273.25,453.42 270.29,\
-445.36&quot;];
+		pos=&quot;e,279.27,436.37 255.34,716.98 270.57,700.39 289.5,674.29 289.5,647 289.5,647 289.5,647 289.5,471 289.5,462.36 286.97,453.49 283.64,\
+445.54&quot;];
 	mfb -&gt; mfp	 [fontsize=10,
-		pos=&quot;e,195.09,577.21 176.92,628.77 181.2,616.61 186.91,600.41 191.75,586.68&quot;];
+		pos=&quot;e,206.19,577.21 179.82,628.77 186.1,616.5 194.49,600.1 201.55,586.28&quot;];
 	mfb -&gt; sss	 [fontsize=10,
-		pos=&quot;e,217.87,424.68 159.92,628.86 139.87,591.86 101.76,506.63 141.5,453 149.74,441.87 180.34,432.88 207.9,426.79&quot;];
+		pos=&quot;e,228.99,425.01 161.95,628.82 145.91,591.72 116.28,506.35 155.5,453 163.39,442.27 192.45,433.36 218.99,427.22&quot;];
 	mfp -&gt; sss	 [fontsize=10,
-		pos=&quot;e,250.08,436.17 209.22,540.95 215.19,526.87 223.57,506.77 230.5,489 236.05,474.77 241.93,458.81 246.68,445.63&quot;];
+		pos=&quot;e,262.03,436.23 223.53,540.73 229.59,526.7 237.95,506.77 244.5,489 249.66,474.99 254.83,459.22 258.96,446.1&quot;];
 	aan	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-annot.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;186.5,471&quot;,
+		pos=&quot;200.5,471&quot;,
 		style=filled,
 		width=1.0417];
 	mfp -&gt; aan	 [fontsize=10,
-		pos=&quot;e,189.6,489.21 198.39,540.77 196.34,528.73 193.61,512.72 191.29,499.08&quot;];
+		pos=&quot;e,203.6,489.21 212.39,540.77 210.34,528.73 207.61,512.72 205.29,499.08&quot;];
 	sss -&gt; sss	 [URL=&quot;../overview.html#do-ch-fix&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;4. do_ch_fix&lt;/B&gt;&gt;,
 		labeltooltip=&quot;4. do_ch_fix&quot;,
-		lp=&quot;341.5,418&quot;,
-		pos=&quot;e,295.19,413.3 295.19,422.7 303.22,422.21 309,420.64 309,418 309,416.68 307.56,415.63 305.11,414.84&quot;,
+		lp=&quot;352.5,418&quot;,
+		pos=&quot;e,306.19,413.3 306.19,422.7 314.22,422.21 320,420.64 320,418 320,416.68 318.56,415.63 316.11,414.84&quot;,
 		target=_top];
 	bad	 [fillcolor=&quot;#EE6677&quot;,
 		fontcolor=&quot;#000000&quot;,
@@ -421,22 +422,22 @@ example of how to process data using mnefun.</p>
 		style=filled,
 		width=1.1389];
 	sss -&gt; bad	 [fontsize=10,
-		pos=&quot;e,212.37,383.09 233.44,399.76 229.18,396.39 224.68,392.83 220.23,389.31&quot;];
+		pos=&quot;e,216.13,383.09 240.66,399.76 235.45,396.22 229.92,392.47 224.5,388.78&quot;];
 	pca	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/sss_pca_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_fil55_raw_sss.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;234.5,249&quot;,
+		pos=&quot;253.5,249&quot;,
 		style=filled,
 		width=1.4306];
 	sss -&gt; pca	 [fontsize=10,
-		pos=&quot;e,286.07,264.24 295.26,412.45 313.09,407.75 332.65,399.05 343.5,383 352.46,369.74 347.6,362.47 343.5,347 334.07,311.4 330.45,298.98 \
-302.5,275 300.13,272.97 297.59,271.08 294.92,269.34&quot;];
+		pos=&quot;e,305.02,264.82 306.25,409.53 320.47,404.35 335.12,396.09 343.5,383 352.13,369.53 345.14,362.92 343.5,347 340.15,314.49 350.08,299.55 \
+328.5,275 327.08,273.38 321.87,271 314.81,268.33&quot;];
 	pro	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/sss_pca_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-proj.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;223.5,312&quot;,
+		pos=&quot;252.5,312&quot;,
 		style=filled,
 		width=1.2778];
 	sss -&gt; pro	 [URL=&quot;../overview.html#gen-ssp&quot;,
@@ -444,8 +445,8 @@ example of how to process data using mnefun.</p>
 		label=&lt;&lt;B&gt;5. gen_ssp&lt;/B&gt;&gt;,
 		labeltooltip=&quot;5. gen_ssp&quot;,
 		lp=&quot;112,365&quot;,
-		pos=&quot;e,177.35,317.32 217.61,415.76 171.64,412.2 99.24,403.44 82.5,383 72.363,370.62 72.643,359.6 82.5,347 93.142,333.39 132.76,324.33 \
-167.31,318.84&quot;,
+		pos=&quot;e,206.39,315.08 228.72,416.29 180.04,413.25 100.7,404.96 82.5,383 72.292,370.68 72.391,359.4 82.5,347 96.762,329.5 152.56,320.5 \
+196.39,316.04&quot;,
 		target=_top];
 	pex	 [fillcolor=&quot;#FFD8DF&quot;,
 		fontcolor=&quot;#000000&quot;,
@@ -455,93 +456,93 @@ example of how to process data using mnefun.</p>
 		style=filled,
 		width=1.2778];
 	sss -&gt; pex	 [fontsize=10,
-		pos=&quot;e,278.89,383.09 268.2,399.76 269.88,397.15 271.63,394.42 273.38,391.69&quot;];
+		pos=&quot;e,282.65,383.09 275.42,399.76 276.44,397.4 277.5,394.95 278.57,392.48&quot;];
 	aan -&gt; sss	 [fontsize=10,
-		pos=&quot;e,232.6,436.09 210.59,452.76 215.04,449.39 219.75,445.83 224.39,442.31&quot;];
+		pos=&quot;e,244.63,436.09 223.56,452.76 227.82,449.39 232.32,445.83 236.77,442.31&quot;];
 	bad -&gt; pca	 [fontsize=10,
-		pos=&quot;e,196.45,267.09 177.56,346.7 169.51,331.87 161.8,310.76 170.5,294 174.64,286.03 180.91,279.17 187.94,273.39&quot;];
+		pos=&quot;e,224.11,267.11 188.55,346.95 188.55,331.89 190.42,310.31 199.5,294 203.72,286.41 209.77,279.57 216.3,273.64&quot;];
 	bad -&gt; pro	 [fontsize=10,
-		pos=&quot;e,211.89,330.09 201.2,346.76 202.88,344.15 204.63,341.42 206.38,338.69&quot;];
+		pos=&quot;e,230.99,330.09 211.18,346.76 215.09,343.48 219.21,340 223.29,336.57&quot;];
 	pca -&gt; evo	 [URL=&quot;../overview.html#write-epochs&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;7. write_epochs&lt;/B&gt;&gt;,
 		labeltooltip=&quot;7. write_epochs&quot;,
-		lp=&quot;190,217.5&quot;,
-		pos=&quot;e,129.86,204.22 182.97,239.99 170.27,236.16 157.24,230.71 146.5,223 142.49,220.12 138.87,216.42 135.71,212.47&quot;,
+		lp=&quot;209,217.5&quot;,
+		pos=&quot;e,148.86,204.22 201.97,239.99 189.27,236.16 176.24,230.71 165.5,223 161.49,220.12 157.87,216.42 154.71,212.47&quot;,
 		target=_top];
 	pca -&gt; fwd	 [fontsize=10,
-		pos=&quot;e,323.24,204.13 286.26,230.86 291.21,228.47 296.03,225.85 300.5,223 305.74,219.66 310.9,215.55 315.66,211.3&quot;];
+		pos=&quot;e,342.24,204.13 305.26,230.86 310.21,228.47 315.03,225.85 319.5,223 324.74,219.66 329.9,215.55 334.66,211.3&quot;];
 	cov	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/cov/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-cov.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;237.5,186&quot;,
+		pos=&quot;256.5,186&quot;,
 		style=filled,
 		width=0.84722];
 	pca -&gt; cov	 [URL=&quot;../overview.html#gen-covs&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;8. gen_covs&lt;/B&gt;&gt;,
 		labeltooltip=&quot;8. gen_covs&quot;,
-		lp=&quot;269,217.5&quot;,
-		pos=&quot;e,236.62,204.4 235.37,230.78 235.61,225.73 235.88,220.12 236.14,214.63&quot;,
+		lp=&quot;288,217.5&quot;,
+		pos=&quot;e,255.62,204.4 254.37,230.78 254.61,225.73 254.88,220.12 255.14,214.63&quot;,
 		target=_top];
 	pro -&gt; pca	 [URL=&quot;../overview.html#apply-ssp&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;6. apply_ssp&lt;/B&gt;&gt;,
 		labeltooltip=&quot;6. apply_ssp&quot;,
-		lp=&quot;256.5,280.5&quot;,
-		pos=&quot;e,224.95,267.12 221.27,293.77 221.06,289.43 221.11,284.75 222.55,277.29&quot;,
+		lp=&quot;282.5,280.5&quot;,
+		pos=&quot;e,249.56,267.12 249.08,293.94 248.54,289.61 248.17,284.91 248.62,277.39&quot;,
 		target=_top];
 	pex -&gt; pca	 [fontsize=10,
-		pos=&quot;e,282.95,267.35 295.56,346.84 299.85,327.44 303.33,296.57 289.5,275 289.44,274.91 289.39,274.82 289.33,274.73&quot;];
+		pos=&quot;e,305.07,264.37 303.8,346.71 316,327.48 330.14,297.01 315.5,275 314.63,273.69 313.68,272.45 312.67,271.28&quot;];
 	pex -&gt; pro	 [fontsize=10,
-		pos=&quot;e,246.37,330.09 267.44,346.76 263.18,343.39 258.68,339.83 254.23,336.31&quot;];
+		pos=&quot;e,265.47,330.09 277.42,346.76 275.49,344.07 273.47,341.24 271.45,338.42&quot;];
 	cov -&gt; htm	 [fontsize=10,
-		pos=&quot;e,234.01,62.203 236.99,167.73 236.3,143.55 235.1,100.69 234.3,72.303&quot;];
+		pos=&quot;e,253.01,62.203 255.99,167.73 255.3,143.55 254.1,100.69 253.3,72.303&quot;];
 	cov -&gt; inv	 [fontsize=10,
-		pos=&quot;e,277.85,141.4 253.99,167.78 259.26,161.95 265.2,155.38 270.88,149.11&quot;];
+		pos=&quot;e,296.85,141.4 272.99,167.78 278.26,161.95 284.2,155.38 289.88,149.11&quot;];
 	acq	 [fillcolor=&quot;#CCBB44&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;user&#64;minea&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;245.5,851&quot;,
+		pos=&quot;236.5,851&quot;,
 		style=filled,
 		width=0.94444];
 	raw	 [fillcolor=&quot;#66CCEE&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*_raw.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;245.5,788&quot;,
+		pos=&quot;236.5,788&quot;,
 		style=filled,
 		width=1.0417];
 	acq -&gt; raw	 [URL=&quot;../overview.html#fetch-raw&quot;,
 		fontsize=10,
 		label=&lt;&lt;B&gt;1. fetch_raw&lt;/B&gt;&gt;,
 		labeltooltip=&quot;1. fetch_raw&quot;,
-		lp=&quot;280,819.5&quot;,
-		pos=&quot;e,245.5,806.4 245.5,832.78 245.5,827.73 245.5,822.12 245.5,816.63&quot;,
+		lp=&quot;271,819.5&quot;,
+		pos=&quot;e,236.5,806.4 236.5,832.78 236.5,827.73 236.5,822.12 236.5,816.63&quot;,
 		target=_top];
 	raw -&gt; sco	 [fontsize=10,
-		pos=&quot;e,88.732,709.23 207.77,783.77 187.36,780.22 162.34,773.75 142.5,762 123.56,750.79 106.75,732.5 94.831,717.29&quot;];
+		pos=&quot;e,88.802,709.11 198.89,782.52 180.88,778.71 159.58,772.37 142.5,762 123.69,750.57 106.87,732.29 94.923,717.14&quot;];
 	raw -&gt; pbd	 [fontsize=10,
-		pos=&quot;e,245.5,753.09 245.5,769.76 245.5,767.66 245.5,765.47 245.5,763.27&quot;];
+		pos=&quot;e,236.5,753.09 236.5,769.76 236.5,767.66 236.5,765.47 236.5,763.27&quot;];
 	raw -&gt; mfb	 [fontsize=10,
-		pos=&quot;e,166.22,665.11 217.22,769.81 198.56,755.83 176.03,734.6 167.5,709 163.95,698.34 163.79,686.08 164.84,675.29&quot;];
+		pos=&quot;e,164.57,665.08 198.65,777.07 186.98,771.75 175.4,764.03 168.5,753 153.94,729.73 157.02,697.59 162.14,674.82&quot;];
 	raw -&gt; sss	 [fontsize=10,
-		pos=&quot;e,285.57,436.12 283.16,769.91 295.21,761.35 305.5,749.73 305.5,735 305.5,735 305.5,735 305.5,471 305.5,460.47 300.22,451.15 293.14,\
-443.37&quot;];
+		pos=&quot;e,298.95,436.22 274.11,779.31 296.08,771.76 319.5,758.25 319.5,735 319.5,735 319.5,735 319.5,471 319.5,460.37 314.1,451.08 306.78,\
+443.38&quot;];
 	can	 [fillcolor=&quot;#FFD8DF&quot;,
 		fontcolor=&quot;#000000&quot;,
 		height=0.5,
 		label=&lt;&lt;FONT POINT-SIZE=&quot;8&quot;&gt;./SUBJ/raw_fif/&lt;/FONT&gt;&lt;BR/&gt;&lt;FONT POINT-SIZE=&quot;10&quot;&gt;*-custom-annot.fif&lt;/FONT&gt;&gt;,
-		pos=&quot;370.5,515&quot;,
+		pos=&quot;384.5,515&quot;,
 		style=filled,
 		width=1.4444];
 	raw -&gt; can	 [fontsize=10,
-		pos=&quot;e,364.51,533.32 283.22,776.97 314.03,766.8 352.5,750.91 352.5,735 352.5,735 352.5,735 352.5,603 352.5,582.73 357.14,560.35 361.71,\
+		pos=&quot;e,378.51,533.32 274.1,780.29 312.5,771.31 366.5,755.11 366.5,735 366.5,735 366.5,735 366.5,603 366.5,582.73 371.14,560.35 375.71,\
 543.23&quot;];
 	can -&gt; sss	 [fontsize=10,
-		pos=&quot;e,295.28,431.32 360.37,496.87 350.8,481.12 335.15,458.62 316.5,444 312.73,441.05 308.58,438.36 304.27,435.94&quot;];
+		pos=&quot;e,306.24,430.21 374.43,496.79 364.9,480.99 349.28,458.45 330.5,444 325.87,440.44 320.69,437.29 315.34,434.52&quot;];
 }</p></object></div>
 </div>
 <div class="section" id="running-parameters">
@@ -558,6 +559,21 @@ example of how to process data using mnefun.</p>
 <dt>disp_files<span class="classifier">bool</span></dt><dd><p>Display status.</p>
 </dd>
 </dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Anywhere a <code class="docutils literal notranslate"><span class="pre">dict</span></code> is supported as an option (e.g.,
+<code class="docutils literal notranslate"><span class="pre">mf_prebad</span></code> or <code class="docutils literal notranslate"><span class="pre">proj_nums</span></code>), a special entry <code class="docutils literal notranslate"><span class="pre">'__default__'</span></code>
+can be used turn the dictionary into a
+<a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> instance.
+This is useful in cases where a single set of values works for most
+subjects, but a few need different ones. For example in YAML form:</p>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">proj_nums</span><span class="p">:</span> <span class="p p-Indicator">{</span>
+<span class="nt">  __default__</span><span class="p">:</span> <span class="p p-Indicator">[[</span><span class="nv">2</span><span class="p p-Indicator">,</span> <span class="nv">2</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">],</span> <span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span> <span class="nv">1</span><span class="p p-Indicator">,</span> <span class="nv">2</span><span class="p p-Indicator">],</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">]],</span>
+<span class="nt">  subj_08</span><span class="p">:</span> <span class="p p-Indicator">[[</span><span class="nv">2</span><span class="p p-Indicator">,</span> <span class="nv">2</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">],</span> <span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span> <span class="nv">1</span><span class="p p-Indicator">,</span> <span class="nv">3</span><span class="p p-Indicator">],</span> <span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">,</span> <span class="nv">0</span><span class="p p-Indicator">]],</span>
+  <span class="p p-Indicator">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="fetch-raw">
@@ -607,8 +623,10 @@ alias for “all runs”.</p>
 <span id="id2"></span><h2><a class="toc-backref" href="#id11">3. do_sss</a><a class="headerlink" href="#do-sss" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Before running SSS, make <code class="docutils literal notranslate"><span class="pre">SUBJ/raw_fif/SUBJ_prebad.txt</span></code>
-with space-separated list of bad MEG channel numbers.
+<p>Before running SSS, set <code class="docutils literal notranslate"><span class="pre">params.mf_prebad[SUBJ]</span></code> to a
+list of bad MEG channels (str), or (old way) create
+<em class="xref py py-obj">SUBJ/raw_fif/SUBJ_prebad.txt`</em> with space-separated list of bad
+MEG channel numbers (int).
 Using <code class="docutils literal notranslate"><span class="pre">p.mf_autobad=True</span></code> can help fill in missed bad channels,
 but is not as reliable as experienced analyst inspection.</p>
 </div>
@@ -649,6 +667,9 @@ if the system supports CUDA.</p>
 <div class="section" id="preprocessing-pre-sss-bads-automatic-bad-channel-detection">
 <h3><a class="toc-backref" href="#id13"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">pre-SSS</span> <span class="pre">bads</span></code>: Automatic bad channel detection</a><a class="headerlink" href="#preprocessing-pre-sss-bads-automatic-bad-channel-detection" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
+<dt>mf_prebad<span class="classifier">dict</span></dt><dd><p>Dict with subject keys, with each value being a list of str of bad
+MEG channels (e.g., <code class="docutils literal notranslate"><span class="pre">['MEG0121',</span> <span class="pre">'MEG1743']</span></code>).</p>
+</dd>
 <dt>mf_autobad<span class="classifier">bool</span></dt><dd><p>Default False. If True use Maxwell-filtering-based automatic bad
 channel detection to mark bad channels <em>prior to SSS</em>.</p>
 </dd>
@@ -1184,8 +1205,8 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Apr 06, 2020.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0.<br/>
+      Last updated on Apr 14, 2020.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.1.<br/>
     </p>
   </div>
 </footer>
