@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>expyfun.analyze.barplot &#8212; expyfun 2.0.0.dev0 documentation</title>
@@ -113,16 +113,16 @@
       
   <div class="section" id="expyfun-analyze-barplot">
 <h1>expyfun.analyze.barplot<a class="headerlink" href="#expyfun-analyze-barplot" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
+<dl class="py function">
 <dt id="expyfun.analyze.barplot">
-<code class="sig-prename descclassname">expyfun.analyze.</code><code class="sig-name descname">barplot</code><span class="sig-paren">(</span><em class="sig-param">h</em>, <em class="sig-param">axis=-1</em>, <em class="sig-param">ylim=None</em>, <em class="sig-param">err_bars=None</em>, <em class="sig-param">lines=False</em>, <em class="sig-param">groups=None</em>, <em class="sig-param">eq_group_widths=False</em>, <em class="sig-param">gap_size=0.2</em>, <em class="sig-param">brackets=None</em>, <em class="sig-param">bracket_text=None</em>, <em class="sig-param">bracket_inline=False</em>, <em class="sig-param">bracket_group_lines=False</em>, <em class="sig-param">bar_names=None</em>, <em class="sig-param">group_names=None</em>, <em class="sig-param">bar_kwargs=None</em>, <em class="sig-param">err_kwargs=None</em>, <em class="sig-param">line_kwargs=None</em>, <em class="sig-param">bracket_kwargs=None</em>, <em class="sig-param">pval_kwargs=None</em>, <em class="sig-param">figure_kwargs=None</em>, <em class="sig-param">smart_defaults=True</em>, <em class="sig-param">fname=None</em>, <em class="sig-param">ax=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_viz.py#L80-L457"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.barplot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">expyfun.analyze.</code><code class="sig-name descname">barplot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">h</span></em>, <em class="sig-param"><span class="n">axis</span><span class="o">=</span><span class="default_value">- 1</span></em>, <em class="sig-param"><span class="n">ylim</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">err_bars</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lines</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">groups</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eq_group_widths</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">gap_size</span><span class="o">=</span><span class="default_value">0.2</span></em>, <em class="sig-param"><span class="n">brackets</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bracket_text</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bracket_inline</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">bracket_group_lines</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">bar_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bar_kwargs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">err_kwargs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">line_kwargs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bracket_kwargs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pval_kwargs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">figure_kwargs</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">smart_defaults</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">fname</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_viz.py#L80-L457"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.analyze.barplot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes barplots w/ optional line overlays, grouping, &amp; signif. brackets.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>h</strong><span class="classifier">array-like</span></dt><dd><p>If <em class="xref py py-obj">h</em> is 2-dimensional, heights will be calculated as means along
 the axis given by <em class="xref py py-obj">axis</em>. If <em class="xref py py-obj">h</em> is of lower dimension, it is
-treated as raw height values. If <em class="xref py py-obj">h</em> is a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.0.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> and
+treated as raw height values. If <em class="xref py py-obj">h</em> is a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.0.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> and
 <em class="xref py py-obj">bar_names</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, <em class="xref py py-obj">bar_names</em> will be inferred from the
 DataFrame’s <em class="xref py py-obj">column</em> labels (if <code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or <em class="xref py py-obj">index</em> labels.</p>
 </dd>
@@ -239,7 +239,7 @@ bracket color: dark gray (30%)</p>
 <div class="section" id="examples-using-expyfun-analyze-barplot">
 <h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.barplot</span></code><a class="headerlink" href="#examples-using-expyfun-analyze-barplot" title="Permalink to this headline">¶</a></h2>
 <div class="sphx-glr-thumbcontainer" tooltip="This example simulates some 2AFC data and demonstrates the analysis functions expyfun.analyze.d..."><div class="figure align-default" id="id1">
-<img alt="../_images/sphx_glr_analysis_demo_thumb.png" src="../_images/sphx_glr_analysis_demo_thumb.png" />
+<img alt="Analysis demo" src="../_images/sphx_glr_analysis_demo_thumb.png" />
 <p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/analysis/analysis_demo.html#sphx-glr-auto-examples-analysis-analysis-demo-py"><span class="std std-ref">Analysis demo</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div><div style='clear:both'></div></div>
@@ -257,7 +257,7 @@ bracket color: dark gray (30%)</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-03-11.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-05-12.<br/>
     </p>
   </div>
 </footer>

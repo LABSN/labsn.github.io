@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>A-V sync test &#8212; expyfun 2.0.0.dev0 documentation</title>
@@ -140,30 +140,30 @@ you are using a projector, your computer screen resolution (and
 <code class="docutils literal notranslate"><span class="pre">&quot;SCREEN_SIZE_PIX&quot;</span></code>) are configured to use the native resolution of the
 projector, as resolution conversion can lead to visual display jitter.</p>
 </div>
-<img alt="../../_images/sphx_glr_sync_test_001.png" class="sphx-glr-single-img" src="../../_images/sphx_glr_sync_test_001.png" />
+<img alt="sync test" class="sphx-glr-single-img" src="../../_images/sphx_glr_sync_test_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: SyncTest
-date: 2020-03-11 18_20_54.399305
+date: 2020-05-12 19_54_04.741308
 file: /home/circleci/project/examples/sync/sync_test.py
 participant: s
 session: 0
-2020-03-11 18:20:54,399 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2020-03-11 18:20:54,400 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2020-03-11 18:20:54,586 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Nothing will be done about this because suppress_resamp is &quot;True&quot;
-2020-03-11 18:20:54,586 - INFO    - Expyfun: Setting up screen
-2020-03-11 18:20:54,617 - EXP     - Expyfun: Set screen visibility True
-2020-03-11 18:20:54,656 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f130e82b2d0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2020-03-11 18:20:54,656 - INFO    - Expyfun: Initializing dummy triggering mode
-2020-03-11 18:20:54,658 - INFO    - Expyfun: Initialization complete
-2020-03-11 18:20:54,658 - EXP     - Expyfun: Participant: s
-2020-03-11 18:20:54,658 - EXP     - Expyfun: Session: 0
-2020-03-11 18:20:54,660 - EXP     - Expyfun: Loading 200 samples to buffer
-2020-03-11 18:20:54,700 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2020-03-11 18:20:54,704 - EXP     - Stamping TTL triggers: [1]
-2020-03-11 18:20:55,010 - EXP     - Stamping TTL triggers: [2, 4, 8]
-2020-03-11 18:20:55,070 - EXP     - Expyfun: Audio stopped and reset.
-2020-03-11 18:20:55,071 - INFO    - Expyfun: Exiting
-2020-03-11 18:20:55,074 - EXP     - Expyfun: Audio stopped and reset.
+2020-05-12 19:54:04,741 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2020-05-12 19:54:04,742 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2020-05-12 19:54:04,902 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2020-05-12 19:54:04,902 - INFO    - Expyfun: Setting up screen
+2020-05-12 19:54:04,932 - EXP     - Expyfun: Set screen visibility True
+2020-05-12 19:54:04,967 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f23c11e6590&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2020-05-12 19:54:04,968 - INFO    - Expyfun: Initializing dummy triggering mode
+2020-05-12 19:54:04,969 - INFO    - Expyfun: Initialization complete
+2020-05-12 19:54:04,969 - EXP     - Expyfun: Participant: s
+2020-05-12 19:54:04,969 - EXP     - Expyfun: Session: 0
+2020-05-12 19:54:04,971 - EXP     - Expyfun: Loading 200 samples to buffer
+2020-05-12 19:54:05,000 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2020-05-12 19:54:05,003 - EXP     - Stamping TTL triggers: [1]
+2020-05-12 19:54:05,195 - EXP     - Stamping TTL triggers: [2, 4, 8]
+2020-05-12 19:54:05,256 - EXP     - Expyfun: Audio stopped and reset.
+2020-05-12 19:54:05,256 - INFO    - Expyfun: Exiting
+2020-05-12 19:54:05,259 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -216,12 +216,12 @@ session: 0
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.799 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.627 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sync-test-py">
-<div class="sphx-glr-download docutils container">
+<div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/39dd3714bef9d11371c8a90ec603b492/sync_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sync_test.py</span></code></a></p>
 </div>
-<div class="sphx-glr-download docutils container">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1007c3711ce115882a3f3231bf42c334/sync_test.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sync_test.ipynb</span></code></a></p>
 </div>
 </div>
@@ -240,7 +240,7 @@ session: 0
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-03-11.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-05-12.<br/>
     </p>
   </div>
 </footer>

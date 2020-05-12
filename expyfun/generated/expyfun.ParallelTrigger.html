@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
     <title>expyfun.ParallelTrigger &#8212; expyfun 2.0.0.dev0 documentation</title>
@@ -110,9 +110,9 @@
       
   <div class="section" id="expyfun-paralleltrigger">
 <h1>expyfun.ParallelTrigger<a class="headerlink" href="#expyfun-paralleltrigger" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="expyfun.ParallelTrigger">
-<em class="property">class </em><code class="sig-prename descclassname">expyfun.</code><code class="sig-name descname">ParallelTrigger</code><span class="sig-paren">(</span><em class="sig-param">mode='dummy'</em>, <em class="sig-param">address=None</em>, <em class="sig-param">trigger_duration=0.01</em>, <em class="sig-param">ec=None</em>, <em class="sig-param">verbose=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L14-L136"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">expyfun.</code><code class="sig-name descname">ParallelTrigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span><span class="o">=</span><span class="default_value">'dummy'</span></em>, <em class="sig-param"><span class="n">address</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trigger_duration</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">ec</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L14-L136"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parallel port and dummy triggering support.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -147,21 +147,21 @@ sending a trigger.</p>
 <p class="rubric">Notes</p>
 <p>Parallel port activation is enabled by using the <code class="docutils literal notranslate"><span class="pre">trigger_controller</span></code>
 argument of <a class="reference internal" href="expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.ExperimentController</span></code></a>.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="expyfun.ParallelTrigger.__hash__">
 <code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.ParallelTrigger.__hash__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return hash(self).</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="expyfun.ParallelTrigger.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L130-L133"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L130-L133"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Release hardware interfaces.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="expyfun.ParallelTrigger.stamp_triggers">
-<code class="sig-name descname">stamp_triggers</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">triggers</em>, <em class="sig-param">delay=None</em>, <em class="sig-param">wait_for_last=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L109-L128"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stamp_triggers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">triggers</span></em>, <em class="sig-param"><span class="n">delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">wait_for_last</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_trigger_controllers.py#L109-L128"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ParallelTrigger.stamp_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stamp a list of triggers with a given inter-trigger delay.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -195,7 +195,7 @@ If None, will use twice the trigger duration (50% duty cycle).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-03-11.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-05-12.<br/>
     </p>
   </div>
 </footer>
