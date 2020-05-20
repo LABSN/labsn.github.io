@@ -996,7 +996,12 @@ matrix during inverse kernel computation.</p>
 </dd>
 <dt>cov_rank<span class="classifier">str | int</span></dt><dd><p>Cov rank to use, usually “auto”.</p>
 </dd>
-<dt>cov_rank_tol<span class="classifier">float</span></dt><dd><p>Tolerance for covariance rank computation.</p>
+<dt>cov_rank_method<span class="classifier">str</span></dt><dd><p>Can be “estimate_rank” to use <code class="docutils literal notranslate"><span class="pre">mne.rank.estimate_rank</span></code>, or
+“compute_rank” to use <a class="reference external" href="https://mne.tools/dev/generated/mne.compute_rank.html#mne.compute_rank" title="(in MNE v0.21.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.compute_rank()</span></code></a>. The latter seems to
+work better for custom <code class="docutils literal notranslate"><span class="pre">tol</span></code> values by not row-normalizing data.</p>
+</dd>
+<dt>cov_rank_tol<span class="classifier">float | str</span></dt><dd><p>Tolerance for covariance rank computation. Can also be
+“auto” or “float32”, though these tend not to be very robust.</p>
 </dd>
 <dt>force_erm_cov_rank_full<span class="classifier">bool</span></dt><dd><p>If True, force the ERM cov to be full rank.
 Usually not needed, but might help when the empty-room data
@@ -1209,7 +1214,7 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on May 07, 2020.<br/>
+      Last updated on May 20, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.3.<br/>
     </p>
   </div>
