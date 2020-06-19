@@ -3,6 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audio sample rate test &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +15,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -143,32 +144,32 @@ e.g., an EEG system, the output can be split (or left/right outputs used) to
 test multiple system synchronization at once.</p>
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: FsTest
-date: 2020-05-12 19_54_04.332319
+date: 2020-06-19 20_54_17.177500
 file: /home/circleci/project/examples/sync/sample_rate_test.py
 participant: s
 session: 0
-2020-05-12 19:54:04,332 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2020-05-12 19:54:04,333 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2020-05-12 19:54:04,516 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Nothing will be done about this because suppress_resamp is &quot;True&quot;
-2020-05-12 19:54:04,517 - INFO    - Expyfun: Setting up screen
-2020-05-12 19:54:04,545 - EXP     - Expyfun: Set screen visibility True
-2020-05-12 19:54:04,577 - INFO    - Initialized [800 600] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f23c11e6590&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2020-05-12 19:54:04,577 - INFO    - Expyfun: Initializing dummy triggering mode
-2020-05-12 19:54:04,579 - INFO    - Expyfun: Initialization complete
-2020-05-12 19:54:04,579 - EXP     - Expyfun: Participant: s
-2020-05-12 19:54:04,579 - EXP     - Expyfun: Session: 0
-2020-05-12 19:54:04,580 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2020-05-12 19:54:04,580 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0]
-2020-05-12 19:54:04,580 - EXP     - Stamping TTL triggers: [4]
-2020-05-12 19:54:04,605 - EXP     - Expyfun: Loading 2000002 samples to buffer
+2020-06-19 20:54:17,177 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2020-06-19 20:54:17,178 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2020-06-19 20:54:17,330 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2020-06-19 20:54:17,330 - INFO    - Expyfun: Setting up screen
+2020-06-19 20:54:17,352 - EXP     - Expyfun: Set screen visibility True
+2020-06-19 20:54:17,384 - INFO    - Initialized [800 600] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f7c3ceab6d0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2020-06-19 20:54:17,385 - INFO    - Expyfun: Initializing dummy triggering mode
+2020-06-19 20:54:17,386 - INFO    - Expyfun: Initialization complete
+2020-06-19 20:54:17,386 - EXP     - Expyfun: Participant: s
+2020-06-19 20:54:17,386 - EXP     - Expyfun: Session: 0
+2020-06-19 20:54:17,387 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2020-06-19 20:54:17,387 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0]
+2020-06-19 20:54:17,387 - EXP     - Stamping TTL triggers: [4]
+2020-06-19 20:54:17,412 - EXP     - Expyfun: Loading 2000002 samples to buffer
 Starting stimulus.
-2020-05-12 19:54:04,616 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2020-05-12 19:54:04,617 - EXP     - Stamping TTL triggers: [1]
+2020-06-19 20:54:17,424 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2020-06-19 20:54:17,425 - EXP     - Stamping TTL triggers: [1]
 Stimulus started. Please wait 23 seconds.
-2020-05-12 19:54:04,627 - EXP     - Expyfun: Audio stopped and reset.
+2020-06-19 20:54:17,435 - EXP     - Expyfun: Audio stopped and reset.
 Stimulus done.
-2020-05-12 19:54:04,627 - INFO    - Expyfun: Exiting
-2020-05-12 19:54:04,630 - EXP     - Expyfun: Audio stopped and reset.
+2020-06-19 20:54:17,435 - INFO    - Expyfun: Exiting
+2020-06-19 20:54:17,437 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -202,7 +203,7 @@ Stimulus done.
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Stimulus done.&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.301 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.263 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sample-rate-test-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/da44bd5cd700ef8a755b5cffd4b81470/sample_rate_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sample_rate_test.py</span></code></a></p>
@@ -226,7 +227,7 @@ Stimulus done.
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-05-12.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-19.<br/>
     </p>
   </div>
 </footer>

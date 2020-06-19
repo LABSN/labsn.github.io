@@ -3,6 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video property control &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +15,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -119,22 +120,22 @@
 <img alt="advanced video" class="sphx-glr-single-img" src="../../_images/sphx_glr_advanced_video_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: advanced video example
-date: 2020-05-12 19_54_01.699955
+date: 2020-06-19 20_54_14.520215
 file: /home/circleci/project/examples/stimuli/advanced_video.py
 participant: foo
 session: foo
-2020-05-12 19:54:01,700 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2020-05-12 19:54:01,701 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2020-05-12 19:54:01,865 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2020-05-12 19:54:01,865 - INFO    - Expyfun: Setting up screen
-2020-05-12 19:54:01,887 - EXP     - Expyfun: Set screen visibility True
-2020-05-12 19:54:01,917 - INFO    - Initialized [720 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f23c11e6590&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2020-05-12 19:54:01,917 - INFO    - Expyfun: Initializing dummy triggering mode
-2020-05-12 19:54:01,918 - INFO    - Expyfun: Initialization complete
-2020-05-12 19:54:01,918 - EXP     - Expyfun: Participant: foo
-2020-05-12 19:54:01,918 - EXP     - Expyfun: Session: foo
-2020-05-12 19:54:04,098 - INFO    - Expyfun: Exiting
-2020-05-12 19:54:04,100 - EXP     - Expyfun: Audio stopped and reset.
+2020-06-19 20:54:14,520 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2020-06-19 20:54:14,521 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2020-06-19 20:54:14,668 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2020-06-19 20:54:14,668 - INFO    - Expyfun: Setting up screen
+2020-06-19 20:54:14,690 - EXP     - Expyfun: Set screen visibility True
+2020-06-19 20:54:14,717 - INFO    - Initialized [720 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f7c3ceab6d0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2020-06-19 20:54:14,718 - INFO    - Expyfun: Initializing dummy triggering mode
+2020-06-19 20:54:14,719 - INFO    - Expyfun: Initialization complete
+2020-06-19 20:54:14,719 - EXP     - Expyfun: Participant: foo
+2020-06-19 20:54:14,719 - EXP     - Expyfun: Session: foo
+2020-06-19 20:54:16,939 - INFO    - Expyfun: Exiting
+2020-06-19 20:54:16,942 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -142,7 +143,7 @@ session: foo
 </div>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="p">(</span><span class="n">ExperimentController</span><span class="p">,</span> <span class="n">fetch_data_file</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a><span class="p">,</span>
-                     <span class="n">analyze</span> <span class="k">as</span> <span class="n">ea</span><span class="p">)</span>
+                     <span class="n">analyze</span> <span class="k">as</span> <span class="n">ea</span><span class="p">,</span> <span class="n">visual</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
@@ -157,23 +158,33 @@ session: foo
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ec_args</span></a><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">screen_period</span> <span class="o">=</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">estimate_screen_fs</span><span class="p">()</span>
     <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">all_presses</span></a> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">fix</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">FixationDot</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="s2">&quot;Running ...&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">),</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
+    <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># don&#39;t have one yet</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">load_video</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">movie_path</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_scale</span><span class="p">(</span><span class="s1">&#39;fill&#39;</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s1">&#39;press 1 during video to toggle pause.&#39;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">listen_presses</span><span class="p">()</span>  <span class="c1"># to catch presses on first pass of while loop</span>
-    <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t_zero</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
-    <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">this_sec</span></a> <span class="o">=</span> <span class="mi">0</span>
+    <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t_zero</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">auto_draw</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">this_sec</span></a> <span class="o">=</span> <span class="mf">0.</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">finished</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">playing</span><span class="p">:</span>
-            <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fliptime</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>  <span class="c1"># to catch presses reliably, need delay between loop executions</span>
-            <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="n">screen_period</span> <span class="o">/</span> <span class="mi">5</span><span class="p">)</span>
+            <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;paused!&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">text</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="n">fix</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+        <span class="k">if</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">()</span>
+        <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fliptime</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">presses</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">get_presses</span><span class="p">(</span><span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">relative_to</span><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t_zero</span></a><span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">listen_presses</span><span class="p">()</span>
         <span class="c1"># change the background color every 1 second</span>
-        <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">this_sec</span></a> <span class="o">!=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
-            <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">this_sec</span></a> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
-            <span class="n">ec</span><span class="o">.</span><span class="n">set_background_color</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">colors</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">this_sec</span></a><span class="p">])</span>
+        <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">this_sec</span></a> <span class="o">!=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span><span class="p">):</span>
+            <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">this_sec</span></a> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span>
+                <span class="n">ec</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">colors</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">this_sec</span></a><span class="p">]),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">),</span> <span class="s1">&#39;k&#39;</span><span class="p">)</span>
+            <span class="n">ec</span><span class="o">.</span><span class="n">set_background_color</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">colors</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">this_sec</span></a><span class="p">])</span>
         <span class="c1"># shrink the video, then move it rightward</span>
         <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">playing</span><span class="p">:</span>
             <span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">time</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
@@ -185,15 +196,9 @@ session: foo
             <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">all_presses</span></a><span class="o">.</span><span class="n">extend</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">presses</span></a><span class="p">)</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">presses</span></a><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>  <span class="c1"># if even number of presses, do nothing</span>
                 <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">playing</span><span class="p">:</span>
-                    <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
                     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">pause</span><span class="p">()</span>
-                    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s1">&#39;pause!&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
-                                   <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-                    <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
                 <span class="k">else</span><span class="p">:</span>
-                    <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
-                    <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
-        <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">()</span>
+                    <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">(</span><span class="n">auto_draw</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a><span class="p">:</span>
             <span class="k">break</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">delete_video</span><span class="p">()</span>
@@ -205,7 +210,7 @@ session: foo
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.515 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.540 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-advanced-video-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/df5bf05169b5b8f26a0bf9b99843c7f7/advanced_video.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">advanced_video.py</span></code></a></p>
@@ -229,7 +234,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-05-12.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-19.<br/>
     </p>
   </div>
 </footer>

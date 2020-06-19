@@ -3,6 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Do an adaptive track staircase with MHW procedure &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +15,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -119,18 +120,18 @@ Hughson-Westlake (MHW) procedure using
 <a class="reference internal" href="../../generated/expyfun.stimuli.TrackerMHW.html#expyfun.stimuli.TrackerMHW" title="expyfun.stimuli.TrackerMHW"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerMHW</span></code></a>.</p>
 <img alt="Adaptive track of model human (true threshold is 115)" class="sphx-glr-single-img" src="../../_images/sphx_glr_tracker_staircase_MHW_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tracker_identify:                       {&quot;tracker_id&quot;: &quot;139789132725392-1589313231253221&quot;, &quot;tracker_type&quot;: &quot;TrackerMHW&quot;}
-tracker_139789132725392-1589313231253221_init:{&quot;callback&quot;: null, &quot;base_step&quot;: 5, &quot;factor_down&quot;: 2, &quot;factor_up_nr&quot;: 4, &quot;start_value&quot;: 80, &quot;x_min&quot;: 0, &quot;x_max&quot;: 120, &quot;n_up_stop&quot;: 2, &quot;repeat_limit&quot;: &quot;reversals&quot;}
-tracker_139789132725392-1589313231253221_respond:False
-tracker_139789132725392-1589313231253221_respond:False
-tracker_139789132725392-1589313231253221_respond:True
-tracker_139789132725392-1589313231253221_respond:False
-tracker_139789132725392-1589313231253221_respond:True
-tracker_139789132725392-1589313231253221_respond:False
-tracker_139789132725392-1589313231253221_respond:False
-/home/circleci/project/expyfun/stimuli/_tracker.py:1251: UserWarning: Tracker 139789132725392-1589313231253221 exceeded x_min or x_max bounds 1 times.
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tracker_identify:                       {&quot;tracker_id&quot;: &quot;140168039063248-1592600044027568&quot;, &quot;tracker_type&quot;: &quot;TrackerMHW&quot;}
+tracker_140168039063248-1592600044027568_init:{&quot;callback&quot;: null, &quot;base_step&quot;: 5, &quot;factor_down&quot;: 2, &quot;factor_up_nr&quot;: 4, &quot;start_value&quot;: 80, &quot;x_min&quot;: 0, &quot;x_max&quot;: 120, &quot;n_up_stop&quot;: 2, &quot;repeat_limit&quot;: &quot;reversals&quot;}
+tracker_140168039063248-1592600044027568_respond:False
+tracker_140168039063248-1592600044027568_respond:False
+tracker_140168039063248-1592600044027568_respond:True
+tracker_140168039063248-1592600044027568_respond:False
+tracker_140168039063248-1592600044027568_respond:True
+tracker_140168039063248-1592600044027568_respond:False
+tracker_140168039063248-1592600044027568_respond:False
+/home/circleci/project/expyfun/stimuli/_tracker.py:1251: UserWarning: Tracker 140168039063248-1592600044027568 exceeded x_min or x_max bounds 1 times.
   &#39;&#39;.format(self._tracker_id, self._limit_count))
-tracker_139789132725392-1589313231253221_stop:{&quot;responses&quot;: [0, 0, 1, 0, 1, 0, 0, 1], &quot;reversals&quot;: [0, 0, 1, 2, 3, 4, 0, 5], &quot;x&quot;: [80.0, 100.0, 120.0, 110.0, 115.0, 105.0, 110.0, 115.0], &quot;threshold&quot;: 115, &quot;n_correct_levels&quot;: {&quot;0&quot;: 0, &quot;5&quot;: 0, &quot;10&quot;: 0, &quot;15&quot;: 0, &quot;20&quot;: 0, &quot;25&quot;: 0, &quot;30&quot;: 0, &quot;35&quot;: 0, &quot;40&quot;: 0, &quot;45&quot;: 0, &quot;50&quot;: 0, &quot;55&quot;: 0, &quot;60&quot;: 0, &quot;65&quot;: 0, &quot;70&quot;: 0, &quot;75&quot;: 0, &quot;80&quot;: 0, &quot;85&quot;: 0, &quot;90&quot;: 0, &quot;95&quot;: 0, &quot;100&quot;: 0, &quot;105&quot;: 0, &quot;110&quot;: 0, &quot;115&quot;: 2, &quot;120&quot;: 1}}
+tracker_140168039063248-1592600044027568_stop:{&quot;responses&quot;: [0, 0, 1, 0, 1, 0, 0, 1], &quot;reversals&quot;: [0, 0, 1, 2, 3, 4, 0, 5], &quot;x&quot;: [80.0, 100.0, 120.0, 110.0, 115.0, 105.0, 110.0, 115.0], &quot;threshold&quot;: 115, &quot;n_correct_levels&quot;: {&quot;0&quot;: 0, &quot;5&quot;: 0, &quot;10&quot;: 0, &quot;15&quot;: 0, &quot;20&quot;: 0, &quot;25&quot;: 0, &quot;30&quot;: 0, &quot;35&quot;: 0, &quot;40&quot;: 0, &quot;45&quot;: 0, &quot;50&quot;: 0, &quot;55&quot;: 0, &quot;60&quot;: 0, &quot;65&quot;: 0, &quot;70&quot;: 0, &quot;75&quot;: 0, &quot;80&quot;: 0, &quot;85&quot;: 0, &quot;90&quot;: 0, &quot;95&quot;: 0, &quot;100&quot;: 0, &quot;105&quot;: 0, &quot;110&quot;: 0, &quot;115&quot;: 2, &quot;120&quot;: 1}}
 </pre></div>
 </div>
 <div class="line-block">
@@ -171,7 +172,7 @@ tracker_139789132725392-1589313231253221_stop:{&quot;responses&quot;: [0, 0, 1, 
              <span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.093 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.096 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-tracker-staircase-mhw-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/6bd093bd38b6a7b7b36b622b5e11d9d7/tracker_staircase_MHW.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tracker_staircase_MHW.py</span></code></a></p>
@@ -195,7 +196,7 @@ tracker_139789132725392-1589313231253221_stop:{&quot;responses&quot;: [0, 0, 1, 
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-05-12.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-19.<br/>
     </p>
   </div>
 </footer>

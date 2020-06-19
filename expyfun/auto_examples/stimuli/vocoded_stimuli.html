@@ -3,6 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generate vocoded stimuli &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +15,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -118,7 +119,7 @@
 <p>&#64;author: larsoner</p>
 <img alt="Original, Spectrogram" class="sphx-glr-single-img" src="../../_images/sphx_glr_vocoded_stimuli_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2020-05-12 19:53:52,551 - INFO    - Read WAV file with 1 channel and 414951 samples (format int16)
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>2020-06-19 20:54:05,617 - INFO    - Read WAV file with 1 channel and 414951 samples (format int16)
 /home/circleci/project/examples/stimuli/vocoded_stimuli.py:26: RuntimeWarning: invalid value encountered in true_divide
   data_noise = data_noise * 0.01 / rms(data_noise)
 /home/circleci/project/examples/stimuli/vocoded_stimuli.py:29: RuntimeWarning: invalid value encountered in true_divide
@@ -129,8 +130,6 @@
   data[data &lt; -1] = -1
 /home/circleci/project/expyfun/_sound_controllers/_pyglet.py:104: RuntimeWarning: invalid value encountered in greater
   data[data &gt; 1] = 1
-/home/circleci/project/examples/stimuli/vocoded_stimuli.py:60: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
-  plt.show()
 </pre></div>
 </div>
 <div class="line-block">
@@ -187,7 +186,7 @@
 <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.623 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.203 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-vocoded-stimuli-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/310970e4b970da3fd837c3f8cc5a0a9b/vocoded_stimuli.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">vocoded_stimuli.py</span></code></a></p>
@@ -211,7 +210,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-05-12.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-19.<br/>
     </p>
   </div>
 </footer>
