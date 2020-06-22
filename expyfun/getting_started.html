@@ -152,6 +152,7 @@ if preferred):</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">scipy</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pyglet</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pillow</span></code></p></li>
 </ul>
 </li>
 <li><p>Optional libraries:</p>
@@ -175,6 +176,13 @@ see <a class="reference internal" href="parallel_installation.html#parallel-inst
 </ul>
 </li>
 </ul>
+<p>To get started quickly, this should suffice for conda users on most systems:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> conda create -n expy <span class="nv">python</span><span class="o">=</span><span class="m">3</span> numpy scipy matplotlib pandas pyglet h5py joblib pillow
+<span class="gp">$</span> conda activate expy
+<span class="gp">$</span> pip install mne pyparallel rtmixer expyfun
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">expy</span></code> can be replaced with whatever name you find convenient.</p>
 </div>
 <div class="section" id="expyfun">
 <h3><a class="toc-backref" href="#id4">Expyfun</a><a class="headerlink" href="#expyfun" title="Permalink to this headline">¶</a></h3>
@@ -311,7 +319,7 @@ static version of expyfun once an experiment is in its finalized state.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-19.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-22.<br/>
     </p>
   </div>
 </footer>
