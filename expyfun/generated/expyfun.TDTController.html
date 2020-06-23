@@ -158,7 +158,7 @@ the configuration file.</p>
 
 <dl class="py method">
 <dt id="expyfun.TDTController.check_force_quit">
-<code class="sig-name descname">check_force_quit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">keys</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L211-L234"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.check_force_quit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_force_quit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">keys</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L213-L236"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.check_force_quit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compare key buffer to list of force-quit keys and quit if matched.</p>
 <p>This function always uses the keyboard, so is part of abstraction.</p>
 <dl class="field-list simple">
@@ -185,7 +185,7 @@ the configuration file.</p>
 
 <dl class="py method">
 <dt id="expyfun.TDTController.get_presses">
-<code class="sig-name descname">get_presses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">live_keys</span></em>, <em class="sig-param"><span class="n">timestamp</span></em>, <em class="sig-param"><span class="n">relative_to</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">'presses'</span></em>, <em class="sig-param"><span class="n">return_kinds</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L107-L141"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.get_presses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_presses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">live_keys</span></em>, <em class="sig-param"><span class="n">timestamp</span></em>, <em class="sig-param"><span class="n">relative_to</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">'presses'</span></em>, <em class="sig-param"><span class="n">return_kinds</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L109-L143"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.get_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current entire keyboard / button box buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -225,7 +225,7 @@ the configuration file.</p>
 
 <dl class="py method">
 <dt id="expyfun.TDTController.listen_presses">
-<code class="sig-name descname">listen_presses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L101-L105"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.listen_presses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">listen_presses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L103-L107"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.listen_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start listening for keypresses.</p>
 </dd></dl>
 
@@ -332,7 +332,7 @@ If None, will use twice the trigger duration (50% duty cycle).</p>
 
 <dl class="py method">
 <dt id="expyfun.TDTController.wait_for_presses">
-<code class="sig-name descname">wait_for_presses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">max_wait</span></em>, <em class="sig-param"><span class="n">min_wait</span></em>, <em class="sig-param"><span class="n">live_keys</span></em>, <em class="sig-param"><span class="n">timestamp</span></em>, <em class="sig-param"><span class="n">relative_to</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L180-L209"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_for_presses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">max_wait</span></em>, <em class="sig-param"><span class="n">min_wait</span></em>, <em class="sig-param"><span class="n">live_keys</span></em>, <em class="sig-param"><span class="n">timestamp</span></em>, <em class="sig-param"><span class="n">relative_to</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L182-L211"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return all button presses between min_wait and max_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -360,7 +360,7 @@ If None, will use twice the trigger duration (50% duty cycle).</p>
 
 <dl class="py method">
 <dt id="expyfun.TDTController.wait_one_press">
-<code class="sig-name descname">wait_one_press</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">max_wait</span></em>, <em class="sig-param"><span class="n">min_wait</span></em>, <em class="sig-param"><span class="n">live_keys</span></em>, <em class="sig-param"><span class="n">timestamp</span></em>, <em class="sig-param"><span class="n">relative_to</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L143-L178"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.wait_one_press" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">wait_one_press</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">max_wait</span></em>, <em class="sig-param"><span class="n">min_wait</span></em>, <em class="sig-param"><span class="n">live_keys</span></em>, <em class="sig-param"><span class="n">timestamp</span></em>, <em class="sig-param"><span class="n">relative_to</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_input_controllers.py#L145-L180"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.TDTController.wait_one_press" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the first button pressed after min_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -402,7 +402,7 @@ If None, will use twice the trigger duration (50% duty cycle).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-22.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-23.<br/>
     </p>
   </div>
 </footer>
