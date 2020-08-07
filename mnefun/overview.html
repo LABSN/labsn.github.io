@@ -1107,6 +1107,10 @@ and ‘size’.</p>
 <dt>post_fun<span class="classifier">callable</span></dt><dd><p>Function to run after adding all other Report sections. Must have the same
 signature as <code class="docutils literal notranslate"><span class="pre">pre_fun</span></code> above.</p>
 </dd>
+<dt>preload<span class="classifier">bool</span></dt><dd><p>If True (default False), load all raw data into memory before generating
+plots. Can help speed up computations like PSD estimates, but can also
+consume a large amount of memory.</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -1233,7 +1237,7 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Jul 23, 2020.<br/>
+      Last updated on Aug 07, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
     </p>
   </div>
