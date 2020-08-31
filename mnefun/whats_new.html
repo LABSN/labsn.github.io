@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What’s new &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -105,6 +105,14 @@ master branch and often an up-to-date MNE-Python <code class="docutils literal n
 <div class="section" id="id1">
 <h3>2020<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li><dl class="simple">
+<dt>2020/08/26:</dt><dd><p>Optimized window length for cHPI amplitude estimation by accounting for
+line frequency and its harmonics. The window for a standard minimum cHPI
+frequency of 83 Hz should now be longer (determined by the 60 Hz line
+component) making head position estimation more robust.</p>
+</dd>
+</dl>
+</li>
 <li><dl class="simple">
 <dt>2020/07/21:</dt><dd><p>Added support for <code class="docutils literal notranslate"><span class="pre">cont_hp</span></code> to allow high-pass filtering (in addition
 to existing low-pass filtering via <code class="docutils literal notranslate"><span class="pre">cont_lp</span></code>; thereby allowing band-pass
@@ -218,8 +226,8 @@ to aid in extracting volumetric ROIs until it’s formalized in MNE.</p>
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Aug 07, 2020.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.1.2.<br/>
+      Last updated on Aug 31, 2020.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
 </footer>
