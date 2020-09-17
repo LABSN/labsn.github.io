@@ -684,24 +684,24 @@ if ‘python’ (preferred) use MNE-Python.</p>
 <div class="section" id="preprocessing-head-position-estimation-head-position-estimation-parameters">
 <span id="preprocessing-hpe"></span><h3><a class="toc-backref" href="#id14"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">head_position_estimation</span></code>: Head position estimation parameters</a><a class="headerlink" href="#preprocessing-head-position-estimation-head-position-estimation-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
-<dt>coil_t_window<span class="classifier">float</span></dt><dd><p>Time window for coil position estimation.</p>
+<dt>coil_t_window<span class="classifier">float | dict</span></dt><dd><p>Time window for coil position estimation.</p>
 </dd>
-<dt>coil_t_step_min<span class="classifier">float</span></dt><dd><p>Coil step min for head / cHPI coil position estimation.</p>
+<dt>coil_t_step_min<span class="classifier">float | dict</span></dt><dd><p>Coil step min for head / cHPI coil position estimation.</p>
 </dd>
-<dt>coil_dist_limit<span class="classifier">float</span></dt><dd><p>Dist limit for coils.</p>
+<dt>coil_dist_limit<span class="classifier">float | dict</span></dt><dd><p>Dist limit for coils.</p>
 </dd>
-<dt>coil_gof_limit<span class="classifier">float</span></dt><dd><p>Goodness of fit limit for coils.</p>
+<dt>coil_gof_limit<span class="classifier">float | dict</span></dt><dd><p>Goodness of fit limit for coils.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="preprocessing-annotations-annotation-parameters">
 <span id="preprocessing-annotations"></span><h3><a class="toc-backref" href="#id15"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">annotations</span></code>: Annotation parameters</a><a class="headerlink" href="#preprocessing-annotations-annotation-parameters" title="Permalink to this headline">¶</a></h3>
 <dl class="simple">
-<dt>coil_bad_count_duration_limit<span class="classifier">float</span></dt><dd><p>Remove segments with &lt; 3 good coils for at least this many sec.</p>
+<dt>coil_bad_count_duration_limit<span class="classifier">float | dict</span></dt><dd><p>Remove segments with &lt; 3 good coils for at least this many sec.</p>
 </dd>
-<dt>rotation_limit<span class="classifier">float</span></dt><dd><p>Rotation limit (deg/s) for annotating bad segments.</p>
+<dt>rotation_limit<span class="classifier">float | dict</span></dt><dd><p>Rotation limit (deg/s) for annotating bad segments.</p>
 </dd>
-<dt>translation_limit<span class="classifier">float</span></dt><dd><p>Head translation limit (m/s) for annotating bad segments.</p>
+<dt>translation_limit<span class="classifier">float | dict</span></dt><dd><p>Head translation limit (m/s) for annotating bad segments.</p>
 </dd>
 </dl>
 </div>
@@ -1240,7 +1240,7 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Sep 15, 2020.<br/>
+      Last updated on Sep 17, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>

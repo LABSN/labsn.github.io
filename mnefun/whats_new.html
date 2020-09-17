@@ -106,6 +106,27 @@ master branch and often an up-to-date MNE-Python <code class="docutils literal n
 <h3>2020<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
+<dt>2020/09/16:</dt><dd><p>Added support for the following parameters to take dict (including
+defaultdict) so that subject-specific parameters can be used:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">coil_dist_limit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coil_gof_limit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coil_t_step_min</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coil_t_window</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rotation_limit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">translation_limit</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">coil_bad_count_duration_limit</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>2020/09/15:</dt><dd><p>Added support for <code class="docutils literal notranslate"><span class="pre">params.filter_chpi_t_window</span></code> for backward
+compatibility with when this was fixed to 0.2 (around Feb 2020).</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
 <dt>2020/08/26:</dt><dd><p>Optimized window length for cHPI amplitude estimation by accounting for
 line frequency and its harmonics. The window for a standard minimum cHPI
 frequency of 83 Hz should now be longer (determined by the 60 Hz line
@@ -226,7 +247,7 @@ to aid in extracting volumetric ROIs until it’s formalized in MNE.</p>
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Sep 15, 2020.<br/>
+      Last updated on Sep 17, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
