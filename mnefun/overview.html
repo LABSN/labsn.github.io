@@ -848,10 +848,25 @@ are marked as bad.</p>
 </div>
 <div class="section" id="preprocessing-ssp-ssp-creation-parameters">
 <h3><a class="toc-backref" href="#id21"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">ssp</span></code>: SSP creation parameters</a><a class="headerlink" href="#preprocessing-ssp-ssp-creation-parameters" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt>proj_nums<span class="classifier">list | dict</span></dt><dd><p>List of projector counts to use for ECG/EOG/ERM; each list contains
-three values for grad/mag/eeg channels.
-Can be a dict that maps subject names to projector counts to use.</p>
+<dl>
+<dt>proj_nums<span class="classifier">list | dict</span></dt><dd><p>List of projector counts to use for ECG/blink/ERM/HEOG/VEOG; each list
+contains three values for grad/mag/eeg channels.
+Can be a dict that maps subject names to projector counts to use.
+The order of computation and application is empty-room, ECG, blink,
+HEOG, VEOG.</p>
+<p>ECG, blink, and ERM are obligatory lists (though they can be lists of all
+zeros). Lists for HEOG and VEOG are optional. For example,
+if you want 1 blink, 2 HEOG, and 3 VEOG projectors (for a total of 6
+EOG-related projectors) for each channel type, you would do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="o">...</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+ <span class="p">[</span><span class="o">...</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]]</span>
+</pre></div>
+</div>
+<p>If you want just blink and HEOG, you can use a list of 4 lists instead of
+5 (or 3).</p>
 </dd>
 <dt>proj_sfreq<span class="classifier">float | None</span></dt><dd><p>The sample freq to use for calculating projectors. Useful since
 time points are not independent following low-pass. Also saves
@@ -871,8 +886,13 @@ use the mne-python default.</p>
 <dt>ssp_ecg_reject<span class="classifier">dict | None</span></dt><dd><p>Amplitude rejection criteria for ECG SSP computation. None will
 use the mne-python default.</p>
 </dd>
-<dt>eog_channel<span class="classifier">str | dict | None</span></dt><dd><p>The channel to use to detect EOG events. None will use EOG* channels.
+<dt>eog_channel<span class="classifier">str | dict | None</span></dt><dd><p>The channel to use to detect blink events. None will use EOG* channels.
 In lieu of an EOG recording, MEG1411 may work.</p>
+</dd>
+<dt>heog_channel<span class="classifier">str | dict | None</span></dt><dd><p>The channel to use to detect HEOG events. None will use EOG061.
+In lieu of an EOG recording, MEG1411 may work.</p>
+</dd>
+<dt>veog_channel<span class="classifier">str | dict | None</span></dt><dd><p>The channel to use to detect HEOG events. None will use EOG062.</p>
 </dd>
 <dt>ecg_channel<span class="classifier">str | dict | None</span></dt><dd><p>The channel to use to detect ECG events. None will use ECG063.
 In lieu of an ECG recording, MEG1531 may work.
@@ -1240,7 +1260,7 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Sep 28, 2020.<br/>
+      Last updated on Sep 29, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
