@@ -565,7 +565,7 @@ example of how to process data using mnefun.</p>
 <p>Anywhere a <code class="docutils literal notranslate"><span class="pre">dict</span></code> is supported as an option (e.g.,
 <code class="docutils literal notranslate"><span class="pre">mf_prebad</span></code> or <code class="docutils literal notranslate"><span class="pre">proj_nums</span></code>), a special entry <code class="docutils literal notranslate"><span class="pre">'__default__'</span></code>
 can be used turn the dictionary into a
-<a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> instance.
+<a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> instance.
 This is useful in cases where a single set of values works for most
 subjects, but a few need different ones. For example in YAML form:</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">proj_nums</span><span class="p">:</span> <span class="p p-Indicator">{</span>
@@ -898,22 +898,34 @@ In lieu of an EOG recording, MEG1411 may work.</p>
 In lieu of an ECG recording, MEG1531 may work.
 Can be a dict that maps subject names to channels.</p>
 </dd>
-<dt>eog_t_lims<span class="classifier">tuple</span></dt><dd><p>The time limits for EOG calculation. Default (-0.25, 0.25).</p>
+<dt>eog_t_lims<span class="classifier">tuple | dict</span></dt><dd><p>The time limits for EOG calculation. Default (-0.25, 0.25).</p>
 </dd>
-<dt>ecg_t_lims<span class="classifier">tuple</span></dt><dd><p>The time limits for ECG calculation. Default(-0.08, 0.08).</p>
+<dt>heog_t_lims<span class="classifier">tuple | dict</span></dt><dd><p>The time limits for HEOG calculation. Default (-0.25, 0.25).</p>
 </dd>
-<dt>eog_f_lims<span class="classifier">tuple</span></dt><dd><p>Band-pass limits for EOG detection and calculation. Default (0, 2).</p>
+<dt>veog_t_lims<span class="classifier">tuple | dict</span></dt><dd><p>The time limits for VEOG calculation. Default (-0.25, 0.25).</p>
 </dd>
-<dt>ecg_f_lims<span class="classifier">tuple</span></dt><dd><p>Band-pass limits for ECG detection and calculation. Default (5, 35).</p>
+<dt>ecg_t_lims<span class="classifier">tuple | dict</span></dt><dd><p>The time limits for ECG calculation. Default(-0.08, 0.08).</p>
+</dd>
+<dt>eog_f_lims<span class="classifier">tuple | dict</span></dt><dd><p>Band-pass limits for EOG detection and calculation. Default (0, 2).</p>
+</dd>
+<dt>heog_f_lims<span class="classifier">tuple | dict</span></dt><dd><p>Band-pass limits for HEOG detection and calculation. Default (0, 2).</p>
+</dd>
+<dt>veog_f_lims<span class="classifier">tuple | dict</span></dt><dd><p>Band-pass limits for VEOG detection and calculation. Default (0, 2).</p>
+</dd>
+<dt>ecg_f_lims<span class="classifier">tuple | dict</span></dt><dd><p>Band-pass limits for ECG detection and calculation. Default (5, 35).</p>
 </dd>
 <dt>eog_thresh<span class="classifier">float | dict | None</span></dt><dd><p>Threshold for EOG detection. Can vary per subject.</p>
+</dd>
+<dt>heog_thresh<span class="classifier">float | dict | None</span></dt><dd><p>Threshold for HEOG detection. Can vary per subject.</p>
+</dd>
+<dt>veog_thresh<span class="classifier">float | dict | None</span></dt><dd><p>Threshold for VEOG detection. Can vary per subject.</p>
 </dd>
 <dt>proj_ave<span class="classifier">bool</span></dt><dd><p>If True, average artifact epochs before computing proj.</p>
 </dd>
 <dt>proj_extra<span class="classifier">str | None</span></dt><dd><p>Extra projector filename to load for each subject, e.g.
 <code class="docutils literal notranslate"><span class="pre">extra-proj.fif</span></code> will load <code class="docutils literal notranslate"><span class="pre">SUBJ/sss_pca_fif/extra-proj.fif</span></code>.</p>
 </dd>
-<dt>get_projs_from<span class="classifier">list of int</span></dt><dd><p>Indices for runs to get projects from.</p>
+<dt>get_projs_from<span class="classifier">list of int | dict</span></dt><dd><p>Indices for runs to get projects from.</p>
 </dd>
 <dt>cont_hp<span class="classifier">float</span></dt><dd><p>Highpass to use for continuous ERM projectors (default None).</p>
 </dd>
@@ -1260,7 +1272,7 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Sep 29, 2020.<br/>
+      Last updated on Oct 22, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.2.1.<br/>
     </p>
   </div>
