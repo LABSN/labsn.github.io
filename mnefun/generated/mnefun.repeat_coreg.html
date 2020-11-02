@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mnefun.extract_expyfun_events &#8212; mnefun 0.2.0.dev0 documentation</title>
+    <title>mnefun.repeat_coreg &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -16,8 +16,8 @@
     <script src="../_static/language_data.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="mnefun.get_atlas_mapping" href="mnefun.get_atlas_mapping.html" />
-    <link rel="prev" title="mnefun.do_processing" href="mnefun.do_processing.html" />
+    <link rel="next" title="mnefun.run_sss_command" href="mnefun.run_sss_command.html" />
+    <link rel="prev" title="mnefun.read_params" href="mnefun.read_params.html" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -97,43 +97,39 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="mnefun-extract-expyfun-events">
-<h1>mnefun.extract_expyfun_events<a class="headerlink" href="#mnefun-extract-expyfun-events" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="mnefun-repeat-coreg">
+<h1>mnefun.repeat_coreg<a class="headerlink" href="#mnefun-repeat-coreg" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="mnefun.extract_expyfun_events">
-<code class="sig-prename descclassname">mnefun.</code><code class="sig-name descname">extract_expyfun_events</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fname</span></em>, <em class="sig-param"><span class="n">return_offsets</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.extract_expyfun_events" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extract expyfun-style serial-coded events from file</p>
+<dt id="mnefun.repeat_coreg">
+<code class="sig-prename descclassname">mnefun.</code><code class="sig-name descname">repeat_coreg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">subject</span></em>, <em class="sig-param"><span class="n">subjects_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subjects_dir_old</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.repeat_coreg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Repeat a mne coreg warping of an MRI.</p>
+<p>This is useful for example when bugs are fixed with
+<a class="reference external" href="https://mne.tools/dev/generated/mne.scale_mri.html#mne.scale_mri" title="(in MNE v0.22.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.scale_mri()</span></code></a>.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>fname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Filename to use.</p>
+<dt><strong>subject</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The subject name.</p>
 </dd>
-<dt><strong>return_offsets</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.9)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, return the time of each press relative to trial onset
-in addition to the press number.</p>
+<dt><strong>subjects_dir</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The subjects directory where the redone subject should go.
+The template/surrogate MRI must also be in this directory.</p>
+</dd>
+<dt><strong>subjects_dir_old</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The subjects directory where the old subject is.
+Can be None to use <code class="docutils literal notranslate"><span class="pre">subjects_dir</span></code>.</p>
+</dd>
+<dt><strong>overwrite</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.9)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True (default False), overwrite an existing subject directory
+if it exists.</p>
+</dd>
+<dt><strong>verbose</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The verbose level to use.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
-<dt><strong>events</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.20.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a></span></dt><dd><p>Array of events of shape (N, 3), re-coded such that 1 triggers
-are renamed according to their binary expyfun representation.</p>
-</dd>
-<dt><strong>presses</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.20.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>List of all press events that occurred between each one
-trigger. Each array has shape (N_presses,). If return_offset is True,
-then each array has shape (N_presses, 2), with the first column
-as the time offset from the trial trigger.</p>
-</dd>
-<dt><strong>orig_events</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.20.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a></span></dt><dd><p>Original events array.</p>
+<dt><strong>out_dir</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The output subject directory.</p>
 </dd>
 </dl>
 </dd>
 </dl>
-<p class="rubric">Notes</p>
-<p>When this function translates binary event codes into decimal integers, it
-adds 1 to the value of all events. This is done to prevent the occurrence
-of events with a value of 0 (which downstream processing would treat as
-non-events). If you need to convert the integer event codes back to binary,
-subtract 1 before doing so to yield the original binary values.</p>
 </dd></dl>
 
 </div>
