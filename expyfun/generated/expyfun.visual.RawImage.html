@@ -3,13 +3,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>expyfun.visual.RawImage &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -116,7 +117,7 @@
 <h1>expyfun.visual.RawImage<a class="headerlink" href="#expyfun-visual-rawimage" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="expyfun.visual.RawImage">
-<em class="property">class </em><code class="sig-prename descclassname">expyfun.visual.</code><code class="sig-name descname">RawImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ec</span></em>, <em class="sig-param"><span class="n">image_buffer</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">0, 0</span></em>, <em class="sig-param"><span class="n">scale</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L915-L1046"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">expyfun.visual.</code><code class="sig-name descname">RawImage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ec</span></em>, <em class="sig-param"><span class="n">image_buffer</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">(0, 0)</span></em>, <em class="sig-param"><span class="n">scale</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L915-L1046"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create image from array for on-screen display.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -142,12 +143,6 @@ large, etc.</p>
 </dd>
 </dl>
 <dl class="py method">
-<dt id="expyfun.visual.RawImage.__hash__">
-<code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.RawImage.__hash__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return hash(self).</p>
-</dd></dl>
-
-<dl class="py method">
 <dt id="expyfun.visual.RawImage.bounds">
 <em class="property">property </em><code class="sig-name descname">bounds</code><a class="headerlink" href="#expyfun.visual.RawImage.bounds" title="Permalink to this definition">¶</a></dt>
 <dd><p>Left, Right, Bottom, Top (in pixels) of the image.</p>
@@ -155,13 +150,13 @@ large, etc.</p>
 
 <dl class="py method">
 <dt id="expyfun.visual.RawImage.draw">
-<code class="sig-name descname">draw</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1017-L1025"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.draw" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1017-L1025"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.draw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draw the image to the buffer</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.visual.RawImage.get_rect">
-<code class="sig-name descname">get_rect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1027-L1046"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.get_rect" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_rect</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1027-L1046"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.get_rect" title="Permalink to this definition">¶</a></dt>
 <dd><p>X, Y center, Width, Height of image.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -181,7 +176,7 @@ large, etc.</p>
 
 <dl class="py method">
 <dt id="expyfun.visual.RawImage.set_image">
-<code class="sig-name descname">set_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">image_buffer</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L945-L973"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.set_image" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_image</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">image_buffer</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L945-L973"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.set_image" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set image buffer data</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -197,7 +192,7 @@ If <code class="docutils literal notranslate"><span class="pre">np.float64</span
 
 <dl class="py method">
 <dt id="expyfun.visual.RawImage.set_pos">
-<code class="sig-name descname">set_pos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L975-L989"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.set_pos" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_pos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L975-L989"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.set_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set image position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -213,7 +208,7 @@ If <code class="docutils literal notranslate"><span class="pre">np.float64</span
 
 <dl class="py method">
 <dt id="expyfun.visual.RawImage.set_scale">
-<code class="sig-name descname">set_scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">scale</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1004-L1015"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.set_scale" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scale</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L1004-L1015"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.RawImage.set_scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create image from array for on-screen display.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -249,7 +244,7 @@ large, etc.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-24.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-12-18.<br/>
     </p>
   </div>
 </footer>

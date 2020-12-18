@@ -3,13 +3,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>expyfun.visual.ConcentricCircles &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -116,7 +117,7 @@
 <h1>expyfun.visual.ConcentricCircles<a class="headerlink" href="#expyfun-visual-concentriccircles" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="expyfun.visual.ConcentricCircles">
-<em class="property">class </em><code class="sig-prename descclassname">expyfun.visual.</code><code class="sig-name descname">ConcentricCircles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ec</span></em>, <em class="sig-param"><span class="n">radii</span><span class="o">=</span><span class="default_value">0.2, 0.05</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">0, 0</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">'w', 'k'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L701-L817"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">expyfun.visual.</code><code class="sig-name descname">ConcentricCircles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ec</span></em>, <em class="sig-param"><span class="n">radii</span><span class="o">=</span><span class="default_value">(0.2, 0.05)</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">(0, 0)</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em>, <em class="sig-param"><span class="n">colors</span><span class="o">=</span><span class="default_value">('w', 'k')</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L701-L817"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles" title="Permalink to this definition">¶</a></dt>
 <dd><p>A set of filled concentric circles drawn without edges.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -144,20 +145,14 @@ See <code class="docutils literal notranslate"><span class="pre">check_units</sp
 </dd>
 </dl>
 <dl class="py method">
-<dt id="expyfun.visual.ConcentricCircles.__hash__">
-<code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.visual.ConcentricCircles.__hash__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return hash(self).</p>
-</dd></dl>
-
-<dl class="py method">
 <dt id="expyfun.visual.ConcentricCircles.draw">
-<code class="sig-name descname">draw</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L814-L817"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.draw" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">draw</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L814-L817"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.draw" title="Permalink to this definition">¶</a></dt>
 <dd><p>Draw the fixation dot.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.visual.ConcentricCircles.set_color">
-<code class="sig-name descname">set_color</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">color</span></em>, <em class="sig-param"><span class="n">idx</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L787-L797"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_color" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_color</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">color</span></em>, <em class="sig-param"><span class="n">idx</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L787-L797"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the color of one of the circles</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -173,7 +168,7 @@ See <code class="docutils literal notranslate"><span class="pre">check_units</sp
 
 <dl class="py method">
 <dt id="expyfun.visual.ConcentricCircles.set_colors">
-<code class="sig-name descname">set_colors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">colors</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L799-L812"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_colors" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_colors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">colors</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L799-L812"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_colors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the color of each circle.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -188,7 +183,7 @@ colors as the number of circles.</p>
 
 <dl class="py method">
 <dt id="expyfun.visual.ConcentricCircles.set_pos">
-<code class="sig-name descname">set_pos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L742-L753"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_pos" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_pos</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L742-L753"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the position of the circles</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -204,7 +199,7 @@ colors as the number of circles.</p>
 
 <dl class="py method">
 <dt id="expyfun.visual.ConcentricCircles.set_radii">
-<code class="sig-name descname">set_radii</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">radii</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L769-L785"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_radii" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_radii</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">radii</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L769-L785"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_radii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the color of each circle</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -221,7 +216,7 @@ number of radii as the number of circles.</p>
 
 <dl class="py method">
 <dt id="expyfun.visual.ConcentricCircles.set_radius">
-<code class="sig-name descname">set_radius</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">radius</span></em>, <em class="sig-param"><span class="n">idx</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L755-L767"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_radius" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_radius</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">radius</span></em>, <em class="sig-param"><span class="n">idx</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L755-L767"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.visual.ConcentricCircles.set_radius" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the radius of one of the circles</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -268,7 +263,7 @@ number of radii as the number of circles.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-24.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-12-18.<br/>
     </p>
   </div>
 </footer>

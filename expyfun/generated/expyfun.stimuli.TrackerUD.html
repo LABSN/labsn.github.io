@@ -3,13 +3,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>expyfun.stimuli.TrackerUD &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -202,14 +203,8 @@ For the example given above:</p>
 and <code class="docutils literal notranslate"><span class="pre">step_size_down</span></code> must be scalars and <code class="docutils literal notranslate"><span class="pre">change_indices</span></code> must be
 None.</p>
 <dl class="py method">
-<dt id="expyfun.stimuli.TrackerUD.__hash__">
-<code class="sig-name descname">__hash__</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">/</em><span class="sig-paren">)</span><a class="headerlink" href="#expyfun.stimuli.TrackerUD.__hash__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return hash(self).</p>
-</dd></dl>
-
-<dl class="py method">
 <dt id="expyfun.stimuli.TrackerUD.check_valid">
-<code class="sig-name descname">check_valid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">n_reversals</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L312-L328"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.check_valid" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check_valid</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_reversals</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L312-L328"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.check_valid" title="Permalink to this definition">¶</a></dt>
 <dd><p>If last reversals contain reversals exceeding x_min or x_max.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -242,7 +237,7 @@ otherwise.</p>
 
 <dl class="py method">
 <dt id="expyfun.stimuli.TrackerUD.plot">
-<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">n_skip</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L455-L493"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">n_skip</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L455-L493"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the adaptive track.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -271,7 +266,7 @@ True.</p>
 
 <dl class="py method">
 <dt id="expyfun.stimuli.TrackerUD.plot_thresh">
-<code class="sig-name descname">plot_thresh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">n_skip</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L495-L516"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot_thresh" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">plot_thresh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_skip</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">ax</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L495-L516"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot_thresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a line showing the threshold.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -294,7 +289,7 @@ be used.</p>
 
 <dl class="py method">
 <dt id="expyfun.stimuli.TrackerUD.respond">
-<code class="sig-name descname">respond</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">correct</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L216-L310"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.respond" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">respond</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">correct</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L216-L310"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the tracker based on the last response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -332,7 +327,7 @@ be used.</p>
 
 <dl class="py method">
 <dt id="expyfun.stimuli.TrackerUD.threshold">
-<code class="sig-name descname">threshold</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">n_skip</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L518-L550"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">threshold</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_skip</span><span class="o">=</span><span class="default_value">2</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L518-L550"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the track’s threshold.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -352,7 +347,7 @@ the threshold.</p>
 <p class="rubric">Notes</p>
 <p>The threshold is computed as the average of the up reversals and the
 average of the down reversals. In this way if there’s an unequal number
-of them the assymetry won’t bias the threshold estimate.</p>
+of them the asymmetry won’t bias the threshold estimate.</p>
 <p>This can also be used before the track is stopped if the experimenter
 wishes.</p>
 </dd></dl>
@@ -400,7 +395,7 @@ wishes.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-24.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-12-18.<br/>
     </p>
   </div>
 </footer>

@@ -3,13 +3,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mouse click demo &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -111,7 +112,8 @@
       
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-mouse-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-mouse-py"><span class="std std-ref">here</span></a>
+to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="mouse-click-demo">
 <span id="sphx-glr-auto-examples-experiments-mouse-py"></span><h1>Mouse click demo<a class="headerlink" href="#mouse-click-demo" title="Permalink to this headline">¶</a></h1>
@@ -120,22 +122,22 @@ in the ExperimentController class.</p>
 <img alt="mouse" class="sphx-glr-single-img" src="../../_images/sphx_glr_mouse_001.png" />
 <p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: MouseDemo
-date: 2020-06-24 13_36_04.879002
+date: 2020-12-18 19_45_16.848855
 file: /home/circleci/project/examples/experiments/mouse.py
 participant: foo
 session: 001
-2020-06-24 13:36:04,879 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2020-06-24 13:36:04,880 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2020-06-24 13:36:05,104 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2020-06-24 13:36:05,104 - INFO    - Expyfun: Setting up screen
-2020-06-24 13:36:05,126 - EXP     - Expyfun: Set screen visibility True
-2020-06-24 13:36:05,158 - INFO    - Initialized [640 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f51b214f8d0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2020-06-24 13:36:05,158 - INFO    - Expyfun: Initializing dummy triggering mode
-2020-06-24 13:36:05,160 - INFO    - Expyfun: Initialization complete
-2020-06-24 13:36:05,160 - EXP     - Expyfun: Participant: foo
-2020-06-24 13:36:05,160 - EXP     - Expyfun: Session: 001
-2020-06-24 13:36:07,023 - INFO    - Expyfun: Exiting
-2020-06-24 13:36:07,025 - EXP     - Expyfun: Audio stopped and reset.
+2020-12-18 19:45:16,849 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2020-12-18 19:45:16,849 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2020-12-18 19:45:17,032 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2020-12-18 19:45:17,032 - INFO    - Expyfun: Setting up screen
+2020-12-18 19:45:17,054 - EXP     - Expyfun: Set screen visibility True
+2020-12-18 19:45:17,084 - INFO    - Initialized [640 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f420b43a0d0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2020-12-18 19:45:17,085 - INFO    - Expyfun: Initializing dummy triggering mode
+2020-12-18 19:45:17,086 - INFO    - Expyfun: Initialization complete
+2020-12-18 19:45:17,086 - EXP     - Expyfun: Participant: foo
+2020-12-18 19:45:17,086 - EXP     - Expyfun: Session: 001
+2020-12-18 19:45:18,970 - INFO    - Expyfun: Exiting
+2020-12-18 19:45:18,973 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -234,7 +236,7 @@ session: 001
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.213 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.178 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-mouse-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/930c30f9f9eaa35797859e17fe5d9ec1/mouse.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mouse.py</span></code></a></p>
@@ -258,7 +260,7 @@ session: 001
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-06-24.<br/>
+        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-12-18.<br/>
     </p>
   </div>
 </footer>
