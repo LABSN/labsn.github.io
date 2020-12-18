@@ -642,7 +642,7 @@ locally), see <a class="reference internal" href="#preprocessing-hpe"><span clas
 <li><p>Annotate bad segments automatically, see <a class="reference internal" href="#preprocessing-annotations"><span class="std std-ref">preprocessing: annotations: Annotation parameters</span></a>.</p></li>
 <li><p>Add any custom annotations (e.g., for segments that operators want to
 manually mark as bad) that have been saved as <code class="docutils literal notranslate"><span class="pre">FILENAME-custom-annot.fif</span></code>.</p></li>
-<li><p>Run SSS processing locally using <a class="reference external" href="https://mne.tools/dev/generated/mne.preprocessing.maxwell_filter.html#mne.preprocessing.maxwell_filter" title="(in MNE v0.22.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.preprocessing.maxwell_filter()</span></code></a>.</p></li>
+<li><p>Run SSS processing locally using <a class="reference external" href="https://mne.tools/dev/generated/mne.preprocessing.maxwell_filter.html#mne.preprocessing.maxwell_filter" title="(in MNE v0.23.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.preprocessing.maxwell_filter()</span></code></a>.</p></li>
 </ol>
 <p>The addition of annotations <em>before</em> SSS ensures that tSSS operations are not
 disrupted by bad segments of data, and also ensures that the output files
@@ -812,13 +812,13 @@ rid of muscle movement artifacts in a verbal response paradigm), you can use
 </dd>
 <dt>lp_trans<span class="classifier">float</span></dt><dd><p>Low-pass transition band.</p>
 </dd>
-<dt>filter_length<span class="classifier">int | str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.22.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>filter_length<span class="classifier">int | str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.23.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
-<dt>fir_design<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.22.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>fir_design<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.23.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
-<dt>fir_window<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.22.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>fir_window<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.23.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
-<dt>phase<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.22.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>phase<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v0.23.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
 </dl>
 </div>
@@ -964,8 +964,10 @@ covariances should still be calculated from the baseline period).</p>
 </dd>
 <dt>bmax<span class="classifier">float</span></dt><dd><p>Upper limit for baseline compensation.</p>
 </dd>
-<dt>decim<span class="classifier">int</span></dt><dd><p>Amount to decimate the data after filtering when epoching data
-(e.g., a factor of 5 on 1000 Hz data yields 200 Hz data).</p>
+<dt>decim<span class="classifier">int | float | list</span></dt><dd><p>Amount to decimate the data after filtering when epoching data
+(e.g., a factor of 5 on 1000 Hz data yields 200 Hz data).
+If a float is used, it should be the destination sample rate
+(e.g., a value of 200. with 1000 Hz data will use  decim=5).</p>
 </dd>
 <dt>epochs_type<span class="classifier">str | list</span></dt><dd><p>Can be ‘fif’, ‘mat’, or a list containing both.</p>
 </dd>
@@ -1016,7 +1018,7 @@ ratio-based collapsing.</p>
 computed from every other trial, i.e., from even and odd trials separately.
 This can help assess the SNR of the data.</p>
 </dd>
-<dt>epochs_proj<span class="classifier">bool | ‘delayed’</span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">proj</span></code> argument in <a class="reference external" href="https://mne.tools/dev/generated/mne.Epochs.html#mne.Epochs" title="(in MNE v0.22.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Epochs</span></code></a>. Should be <code class="docutils literal notranslate"><span class="pre">'delayed'</span></code> if
+<dt>epochs_proj<span class="classifier">bool | ‘delayed’</span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">proj</span></code> argument in <a class="reference external" href="https://mne.tools/dev/generated/mne.Epochs.html#mne.Epochs" title="(in MNE v0.23.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Epochs</span></code></a>. Should be <code class="docutils literal notranslate"><span class="pre">'delayed'</span></code> if
 you want the option of plotting sensor-space data with no projectors.</p>
 </dd>
 </dl>
@@ -1038,7 +1040,7 @@ matrix during inverse kernel computation.</p>
 <dt>cov_rank<span class="classifier">str | int</span></dt><dd><p>Cov rank to use, usually “auto”.</p>
 </dd>
 <dt>cov_rank_method<span class="classifier">str</span></dt><dd><p>Can be “estimate_rank” to use <code class="docutils literal notranslate"><span class="pre">mne.rank.estimate_rank</span></code>, or
-“compute_rank” to use <a class="reference external" href="https://mne.tools/dev/generated/mne.compute_rank.html#mne.compute_rank" title="(in MNE v0.22.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.compute_rank()</span></code></a>. The latter seems to
+“compute_rank” to use <a class="reference external" href="https://mne.tools/dev/generated/mne.compute_rank.html#mne.compute_rank" title="(in MNE v0.23.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.compute_rank()</span></code></a>. The latter seems to
 work better for custom <code class="docutils literal notranslate"><span class="pre">tol</span></code> values by not row-normalizing data.</p>
 </dd>
 <dt>cov_rank_tol<span class="classifier">float | str</span></dt><dd><p>Tolerance for covariance rank computation. Can also be
@@ -1055,7 +1057,7 @@ is short and/or there are a lot of head movements.</p>
 <h2><a class="toc-backref" href="#id27">9. gen_fwd</a><a class="headerlink" href="#gen-fwd" title="Permalink to this headline">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Make SUBJ/trans/SUBJ-trans.fif using <a class="reference external" href="https://mne.tools/dev/generated/commands.html#mne-coreg" title="(in MNE v0.22.dev0)"><span>mne coreg</span></a>.</p>
+<p>Make SUBJ/trans/SUBJ-trans.fif using <a class="reference external" href="https://mne.tools/dev/generated/commands.html#mne-coreg" title="(in MNE v0.23.dev0)"><span>mne coreg</span></a>.</p>
 </div>
 <p>Generate forward solutions (and source space if necessary).</p>
 <div class="section" id="forward-forward-parameters">
@@ -1096,7 +1098,7 @@ for them to be included in the forward solution source space.</p>
 </div>
 <div class="section" id="gen-report">
 <h2><a class="toc-backref" href="#id31">11. gen_report</a><a class="headerlink" href="#gen-report" title="Permalink to this headline">¶</a></h2>
-<p>Write <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v0.22.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> HTML of results to disk.</p>
+<p>Write <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v0.23.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> HTML of results to disk.</p>
 <div class="section" id="report-params-report-parameters">
 <h3><a class="toc-backref" href="#id32"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a><a class="headerlink" href="#report-params-report-parameters" title="Permalink to this headline">¶</a></h3>
 <dl>
@@ -1272,7 +1274,7 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Dec 04, 2020.<br/>
+      Last updated on Dec 18, 2020.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
     </p>
   </div>
