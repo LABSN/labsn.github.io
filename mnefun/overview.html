@@ -13,7 +13,6 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/language_data.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API Reference" href="python_reference.html" />
@@ -780,6 +779,10 @@ Default is center of sphere fit to digitized head points.</p>
 </dd>
 <dt>mf_args<span class="classifier">str</span></dt><dd><p>Deprecated. Extra arguments for MF SSS.</p>
 </dd>
+<dt>cont_as_esss<span class="classifier">bool</span></dt><dd><p>If True (default False), use eSSS to improve the external basis estimate
+using continuous empty-room projectors (<code class="docutils literal notranslate"><span class="pre">proj_nums[2]</span></code>).
+Only supported when Python is used for SSS.</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -929,7 +932,16 @@ Can be a dict that maps subject names to channels.</p>
 </dd>
 <dt>cont_hp<span class="classifier">float</span></dt><dd><p>Highpass to use for continuous ERM projectors (default None).</p>
 </dd>
+<dt>cont_hp_trans<span class="classifier">float | None</span></dt><dd><p>Highpass transition bandwidth to use for continuous ERM projectors
+(default 0.5).</p>
+</dd>
 <dt>cont_lp<span class="classifier">float</span></dt><dd><p>Lowpass to use for continuous ERM projectors (default 5).</p>
+</dd>
+<dt>cont_lp_trans<span class="classifier">float | None</span></dt><dd><p>Lowpass transition bandwidth for continuous ERM projectors (default None).</p>
+</dd>
+<dt>cont_reject<span class="classifier">dict | None</span></dt><dd><p>Rejection parameters for continuous empty-room projection calculations.
+None (default) will use <code class="docutils literal notranslate"><span class="pre">params.reject</span></code>.
+This likely needs to be set when <code class="docutils literal notranslate"><span class="pre">cont_as_esss=True</span></code>.</p>
 </dd>
 <dt>plot_drop_logs<span class="classifier">bool</span></dt><dd><p>If True, plot drop logs after preprocessing.</p>
 </dd>
@@ -1217,8 +1229,8 @@ deprecated.</p>
 </div>
 <p>Parameters for remotely connecting to SSS workstation (‘sws’) can be set
 by adding a file <em class="xref py py-obj">json</em> with contents like:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir ~/.mnefun
-<span class="gp">$</span> <span class="nb">echo</span> <span class="s1">&#39;{&quot;sws_ssh&quot;:&quot;kasga&quot;, &quot;sws_dir&quot;:&quot;/data06/larsoner/sss_work&quot;, &quot;sws_port&quot;:22}&#39;</span> &gt; ~/.mnefun/mnefun.json
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir ~/.mnefun
+<span class="gp">$ </span><span class="nb">echo</span> <span class="s1">&#39;{&quot;sws_ssh&quot;:&quot;kasga&quot;, &quot;sws_dir&quot;:&quot;/data06/larsoner/sss_work&quot;, &quot;sws_port&quot;:22}&#39;</span> &gt; ~/.mnefun/mnefun.json
 </pre></div>
 </div>
 <p>This should be preferred to the old way, which was to set in each script
@@ -1232,7 +1244,7 @@ help increase portability of scripts without hurting reproducibility
 (assuming we all use the same version of MaxFilter, which should be a
 safe assumption).</p>
 <p>To test that things are configured correctly, you can do:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python -c <span class="s2">&quot;import mnefun; mnefun.check_sws()&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -c <span class="s2">&quot;import mnefun; mnefun.check_sws()&quot;</span>
 <span class="go">On kasga: maxfilter -version (0 sec)</span>
 <span class="go">Output:</span>
 <span class="go">Revision: 2.2.15 Neuromag maxfilter Dec 11 2012 14:48:44</span>
@@ -1246,7 +1258,7 @@ It needs to use standard quotation marks like <code class="docutils literal notr
 quotation marks.</p></li>
 <li><p>Ensure that <code class="docutils literal notranslate"><span class="pre">maxwell_filter</span></code> is accessible as a command on the remote
 machine. Log into the remote machine and do:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> which maxfilter
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>which maxfilter
 <span class="go">/neuro/bin/util/maxfilter</span>
 </pre></div>
 </div>
@@ -1273,9 +1285,9 @@ the following line to the end of your <code class="docutils literal notranslate"
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, mnefun Developers.<br/>
-      Last updated on Dec 18, 2020.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+        &copy; Copyright 2013-2021, mnefun Developers.<br/>
+      Last updated on Jan 19, 2021.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
     </p>
   </div>
 </footer>
