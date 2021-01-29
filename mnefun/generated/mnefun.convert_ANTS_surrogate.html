@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mnefun.repeat_coreg &#8212; mnefun 0.2.0.dev0 documentation</title>
+    <title>mnefun.convert_ANTS_surrogate &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
@@ -15,8 +15,8 @@
     <script src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="mnefun.run_sss_command" href="mnefun.run_sss_command.html" />
-    <link rel="prev" title="mnefun.read_params" href="mnefun.read_params.html" />
+    <link rel="next" title="mnefun.do_processing" href="mnefun.do_processing.html" />
+    <link rel="prev" title="mnefun.Params" href="mnefun.Params.html" />
 
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
@@ -96,47 +96,34 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="mnefun-repeat-coreg">
-<h1>mnefun.repeat_coreg<a class="headerlink" href="#mnefun-repeat-coreg" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="mnefun-convert-ants-surrogate">
+<h1>mnefun.convert_ANTS_surrogate<a class="headerlink" href="#mnefun-convert-ants-surrogate" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="mnefun.repeat_coreg">
-<code class="sig-prename descclassname">mnefun.</code><code class="sig-name descname">repeat_coreg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">subject</span></em>, <em class="sig-param"><span class="n">subjects_dir</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">subjects_dir_old</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">overwrite</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.repeat_coreg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Repeat a mne coreg warping of an MRI.</p>
-<p>This is useful for example when bugs are fixed with
-<a class="reference external" href="https://mne.tools/dev/generated/mne.scale_mri.html#mne.scale_mri" title="(in MNE v0.23.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.scale_mri()</span></code></a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This function should not be used when the parameters
-in <code class="docutils literal notranslate"><span class="pre">'MRI</span> <span class="pre">scaling</span> <span class="pre">parameters.cfg'</span></code> have been changed.</p>
-</div>
+<dt id="mnefun.convert_ANTS_surrogate">
+<code class="sig-prename descclassname">mnefun.</code><code class="sig-name descname">convert_ANTS_surrogate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">subject</span></em>, <em class="sig-param"><span class="n">trans</span></em>, <em class="sig-param"><span class="n">subjects_dir</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.convert_ANTS_surrogate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an old ANTS surrogate to a modern one.</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
 <dt><strong>subject</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The subject name.</p>
 </dd>
-<dt><strong>subjects_dir</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The subjects directory where the redone subject should go.
-The template/surrogate MRI must also be in this directory.</p>
+<dt><strong>trans</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The path to the subject’s MRI&lt;-&gt;head transformation.</p>
 </dd>
-<dt><strong>subjects_dir_old</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The subjects directory where the old subject is.
-Can be None to use <code class="docutils literal notranslate"><span class="pre">subjects_dir</span></code>.</p>
-</dd>
-<dt><strong>overwrite</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.9)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True (default False), overwrite an existing subject directory
-if it exists.</p>
-</dd>
-<dt><strong>verbose</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The verbose level to use.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><dl>
-<dt><strong>out_dir</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The output subject directory.</p>
+<dt><strong>subjects_dir</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The subjects dir that contains the old <code class="docutils literal notranslate"><span class="pre">subject</span></code> MRI.</p>
 </dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
-<p>The BEM is not processed, as it’s assumed that the same BEM will work
-and it does not need to be recomputed.</p>
+<p>The “old” templates are the ones created by Eric Larson around 2019 and
+only include volumetric source spaces. The “modern” templates come from the
+2021 NeuroImage paper by O’Reilly et al. and use the same templates,
+just processed differently. Given a surrogate created using the old
+template, this function will create an equivalent one for the new
+template. It operates in-place by first backing up (renaming) the MRI
+directory for the subject, copying the <code class="docutils literal notranslate"><span class="pre">-trans.fif</span></code> file to that
+directory, and then creating the new surrogate and overwriting the old
+trans file.</p>
 </dd></dl>
 
 </div>
