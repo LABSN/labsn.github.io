@@ -1010,6 +1010,9 @@ reject trials on basis of EOG.</p>
 </dd>
 <dt>reject_epochs_by_annot<span class="classifier">bool</span></dt><dd><p>If True, reject epochs by BAD annotations.</p>
 </dd>
+<dt>pick_events_autoreject<span class="classifier">callable | string | None</span></dt><dd><p>Function for picking autoreject events, or the string “restrict”
+to limit events to those with an id in <code class="docutils literal notranslate"><span class="pre">in_numbers</span></code>.</p>
+</dd>
 <dt>analyses<span class="classifier">list of str</span></dt><dd><p>Lists of analyses of interest.</p>
 </dd>
 <dt>in_names<span class="classifier">list of str</span></dt><dd><p>Names of input events.</p>
@@ -1047,7 +1050,8 @@ you want the option of plotting sensor-space data with no projectors.</p>
 <dt>compute_rank<span class="classifier">bool</span></dt><dd><p>Default is False. Set to True to compute rank of the noise covariance
 matrix during inverse kernel computation.</p>
 </dd>
-<dt>pick_events_cov<span class="classifier">callable | None</span></dt><dd><p>Function for picking covariance events.</p>
+<dt>pick_events_cov<span class="classifier">callable | string | None</span></dt><dd><p>Function for picking covariance events, or the string “restrict”
+to limit events to those with an id in <code class="docutils literal notranslate"><span class="pre">in_numbers</span></code>.</p>
 </dd>
 <dt>cov_rank<span class="classifier">str | int</span></dt><dd><p>Cov rank to use, usually “auto”.</p>
 </dd>
@@ -1286,8 +1290,8 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2021, mnefun Developers.<br/>
-      Last updated on Jan 29, 2021.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Last updated on Feb 23, 2021.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
     </p>
   </div>
 </footer>

@@ -102,7 +102,21 @@ master branch and often an up-to-date MNE-Python <code class="docutils literal n
 <div class="section" id="changelog">
 <h2>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="id1">
-<h3>2020<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>2021<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>2021/02/18:</dt><dd><p>Expanded <code class="docutils literal notranslate"><span class="pre">pick_events_cov</span></code> and added <code class="docutils literal notranslate"><span class="pre">pick_events_autoreject</span></code> to
+allow control over which events are chosen for the respective epoching
+steps. In lieu of a function, the string “restrict” is acceptable to
+choose event ids contained in <code class="docutils literal notranslate"><span class="pre">in_numbers</span></code>. (Events for final epoching
+are effectively selected with “restrict”.)</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>2020<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>2020/12/18:</dt><dd><p>Added <code class="docutils literal notranslate"><span class="pre">erm_proj_as_esss</span></code>, <code class="docutils literal notranslate"><span class="pre">erm_proj_lp_cut</span></code>, and <code class="docutils literal notranslate"><span class="pre">erm_proj_hp_cut</span></code>
@@ -221,8 +235,8 @@ acquisition directories and generate HTML reports.</p>
 </li>
 </ul>
 </div>
-<div class="section" id="id2">
-<h3>2019<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>2019<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>2019/12/02</dt><dd><p>Added <a class="reference internal" href="generated/mnefun.get_atlas_roi_mask.html#mnefun.get_atlas_roi_mask" title="mnefun.get_atlas_roi_mask"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_atlas_roi_mask()</span></code></a> and <a class="reference internal" href="generated/mnefun.get_atlas_mapping.html#mnefun.get_atlas_mapping" title="mnefun.get_atlas_mapping"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_atlas_mapping()</span></code></a>
@@ -273,8 +287,8 @@ to aid in extracting volumetric ROIs until it’s formalized in MNE.</p>
     </p>
     <p>
         &copy; Copyright 2013-2021, mnefun Developers.<br/>
-      Last updated on Jan 29, 2021.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.4.3.<br/>
+      Last updated on Feb 23, 2021.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
     </p>
   </div>
 </footer>
