@@ -105,6 +105,16 @@ master branch and often an up-to-date MNE-Python <code class="docutils literal n
 <h3>2021<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
+<dt>2021/02/23:</dt><dd><ul>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">acq_exclude</span></code> to allow excluding folder names when searching for
+files on a remote acquisition machine.</p></li>
+<li><p>Modified <code class="docutils literal notranslate"><span class="pre">fetch_raw=True</span></code> functionality to be more friendly to data
+being transferred to NFS mounts by not trying to set as many permissions.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
 <dt>2021/02/18:</dt><dd><p>Expanded <code class="docutils literal notranslate"><span class="pre">pick_events_cov</span></code> and added <code class="docutils literal notranslate"><span class="pre">pick_events_autoreject</span></code> to
 allow control over which events are chosen for the respective epoching
 steps. In lieu of a function, the string “restrict” is acceptable to
@@ -287,7 +297,7 @@ to aid in extracting volumetric ROIs until it’s formalized in MNE.</p>
     </p>
     <p>
         &copy; Copyright 2013-2021, mnefun Developers.<br/>
-      Last updated on Feb 26, 2021.<br/>
+      Last updated on Mar 01, 2021.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
     </p>
   </div>

@@ -581,7 +581,7 @@ subjects, but a few need different ones. For example in YAML form:</p>
 <p>Fetch raw files from an acquisition machine.</p>
 <div class="section" id="fetch-raw-raw-fetching-parameters">
 <h3><a class="toc-backref" href="#id8"><code class="docutils literal notranslate"><span class="pre">fetch_raw</span></code>: Raw fetching parameters</a><a class="headerlink" href="#fetch-raw-raw-fetching-parameters" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
+<dl>
 <dt>subjects<span class="classifier">list of str</span></dt><dd><p>Subject names.</p>
 </dd>
 <dt>structurals<span class="classifier">list of str</span></dt><dd><p>List of subject structurals.</p>
@@ -594,14 +594,27 @@ subjects, but a few need different ones. For example in YAML form:</p>
 </dd>
 <dt>acq_port<span class="classifier">int</span></dt><dd><p>Acquisition port.</p>
 </dd>
+<dt>acq_exclude<span class="classifier">list of str</span></dt><dd><p>Regular expressions to exclude when trying to find the correct remote
+directory. This can be useful for example if a subject was run more than
+once, or someone has done some preprocessing or made copies on the
+acquisition machine, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;genz_proc&#39;</span><span class="p">,</span> <span class="s1">&#39;genz_[0-9]+_[0-9]+a&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>which means “exclude anything with ‘genz_proc’; or anything with a
+substring that has ‘genz_’, followed by at least one number, followed by
+‘_’, followed by at least one number, followed by ‘a’” – the latter being
+useful when subjects should be named <code class="docutils literal notranslate"><span class="pre">genz100_9a</span></code> but have some duplicate
+directories named <code class="docutils literal notranslate"><span class="pre">genz_100_9a</span></code>.</p>
+</dd>
 <dt>run_names<span class="classifier">list of str</span></dt><dd><p>Run names for the paradigm.</p>
 </dd>
 <dt>runs_empty<span class="classifier">list of str</span></dt><dd><p>Empty room run names.</p>
 </dd>
-<dt>subject_run_indices<span class="classifier">list of array-like | None</span></dt><dd><p>Run indices to include for each subject. This can be a list
+<dt>subject_run_indices<span class="classifier">list of array-like | dict | None</span></dt><dd><p>Run indices to include for each subject. This can be a list
 (must be same length as <code class="docutils literal notranslate"><span class="pre">params.subjects</span></code>) or a dict (keys are subject
-strings, values are the run indices) including a defaultdict. None is an
-alias for “all runs”.</p>
+strings, values are the run indices) where missing subjects get all runs.
+None is an alias for “all runs”.</p>
 </dd>
 </dl>
 </div>
@@ -1290,7 +1303,7 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2021, mnefun Developers.<br/>
-      Last updated on Feb 26, 2021.<br/>
+      Last updated on Mar 01, 2021.<br/>
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.1.<br/>
     </p>
   </div>
