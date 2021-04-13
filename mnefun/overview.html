@@ -1021,7 +1021,8 @@ for epoching. Make sure autoreject module is installed. See
 ‘eog) to use EOG channel rejection criterion from autoreject module to
 reject trials on basis of EOG.</p>
 </dd>
-<dt>reject_epochs_by_annot<span class="classifier">bool</span></dt><dd><p>If True, reject epochs by BAD annotations.</p>
+<dt>reject_epochs_by_annot<span class="classifier">bool | str</span></dt><dd><p>If True, reject epochs by BAD annotations. If str, will reject epochs by
+annotations that match the given regular expression <code class="docutils literal notranslate"><span class="pre">str</span></code>.</p>
 </dd>
 <dt>pick_events_autoreject<span class="classifier">callable | string | None</span></dt><dd><p>Function for picking autoreject events, or the string “restrict”
 to limit events to those with an id in <code class="docutils literal notranslate"><span class="pre">in_numbers</span></code>.</p>
@@ -1048,6 +1049,11 @@ This can help assess the SNR of the data.</p>
 </dd>
 <dt>epochs_proj<span class="classifier">bool | ‘delayed’</span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">proj</span></code> argument in <a class="reference external" href="https://mne.tools/dev/generated/mne.Epochs.html#mne.Epochs" title="(in MNE v0.23.dev0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Epochs</span></code></a>. Should be <code class="docutils literal notranslate"><span class="pre">'delayed'</span></code> if
 you want the option of plotting sensor-space data with no projectors.</p>
+</dd>
+<dt>allow_resample<span class="classifier">bool</span></dt><dd><p>If True (default False), allow resampling raw instances (and events) to
+that of the first raw insntance in the case that raws do not all have a
+matching sample rate. This is useful when recordings were errantly
+performed at different sample rates.</p>
 </dd>
 </dl>
 </div>
@@ -1303,8 +1309,8 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2021, mnefun Developers.<br/>
-      Last updated on Mar 30, 2021.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.3.<br/>
+      Last updated on Apr 13, 2021.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
     </p>
   </div>
 </footer>
