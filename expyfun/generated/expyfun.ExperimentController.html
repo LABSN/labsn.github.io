@@ -15,8 +15,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -117,7 +115,7 @@
 <h1>expyfun.ExperimentController<a class="headerlink" href="#expyfun-experimentcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="expyfun.ExperimentController">
-<em class="property">class </em><code class="sig-prename descclassname">expyfun.</code><code class="sig-name descname">ExperimentController</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">exp_name</span></em>, <em class="sig-param"><span class="n">audio_controller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">response_device</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stim_rms</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">stim_fs</span><span class="o">=</span><span class="default_value">24414</span></em>, <em class="sig-param"><span class="n">stim_db</span><span class="o">=</span><span class="default_value">65</span></em>, <em class="sig-param"><span class="n">noise_db</span><span class="o">=</span><span class="default_value">45</span></em>, <em class="sig-param"><span class="n">output_dir</span><span class="o">=</span><span class="default_value">'data'</span></em>, <em class="sig-param"><span class="n">window_size</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">screen_num</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">full_screen</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">force_quit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">participant</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">trigger_controller</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">session</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">check_rms</span><span class="o">=</span><span class="default_value">'windowed'</span></em>, <em class="sig-param"><span class="n">suppress_resamp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_video</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">safe_flipping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n_channels</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">trigger_duration</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">joystick</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L43-L2228"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">expyfun.</span></code><code class="sig-name descname"><span class="pre">ExperimentController</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio_controller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_rms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24414</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">65</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_quit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">participant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monitor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_controller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_rms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'windowed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_resamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_video</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_flipping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joystick</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L43-L2228"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -222,7 +220,7 @@ a TDT is used).</p>
 information (based on the level of verbosity) printed to the console.</p>
 <dl class="py method">
 <dt id="expyfun.ExperimentController.call_on_every_flip">
-<code class="sig-name descname">call_on_every_flip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L728-L751"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_every_flip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">call_on_every_flip</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L728-L751"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_every_flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a function to be executed on every flip.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -248,7 +246,7 @@ called with arguments, use <a class="reference external" href="https://docs.pyth
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.call_on_next_flip">
-<code class="sig-name descname">call_on_next_flip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">function</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L703-L726"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_next_flip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">call_on_next_flip</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L703-L726"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.call_on_next_flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a function to be executed on next flip only.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -274,37 +272,37 @@ to <a class="reference internal" href="#expyfun.ExperimentController.call_on_nex
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.check_force_quit">
-<code class="sig-name descname">check_force_quit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1232-L1234"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.check_force_quit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">check_force_quit</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1232-L1234"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.check_force_quit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check to see if any force quit keys were pressed.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2123-L2126"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2123-L2126"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Close all connections in experiment controller.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.current_time">
-<em class="property">property </em><code class="sig-name descname">current_time</code><a class="headerlink" href="#expyfun.ExperimentController.current_time" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">current_time</span></code><a class="headerlink" href="#expyfun.ExperimentController.current_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timestamp from the experiment master clock.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.data_fname">
-<em class="property">property </em><code class="sig-name descname">data_fname</code><a class="headerlink" href="#expyfun.ExperimentController.data_fname" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">data_fname</span></code><a class="headerlink" href="#expyfun.ExperimentController.data_fname" title="Permalink to this definition">¶</a></dt>
 <dd><p>Date filename</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.delete_video">
-<code class="sig-name descname">delete_video</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L885-L888"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.delete_video" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">delete_video</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L885-L888"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.delete_video" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete the video.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.estimate_screen_fs">
-<code class="sig-name descname">estimate_screen_fs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_rep</span><span class="o">=</span><span class="default_value">10</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1038-L1057"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.estimate_screen_fs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">estimate_screen_fs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_rep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1038-L1057"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.estimate_screen_fs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate screen refresh rate using repeated flip() calls</p>
 <p>Useful for verifying that a system is operating at the proper
 sample rate.</p>
@@ -327,7 +325,7 @@ the estimate but the more time will be consumed.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.flip">
-<code class="sig-name descname">flip</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">when</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L981-L1036"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flip" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">flip</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">when</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L981-L1036"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.flip" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flip screen, then run any “on-flip” functions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -365,19 +363,19 @@ true intended flip time.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.flush">
-<code class="sig-name descname">flush</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2117-L2121"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.flush" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">flush</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2117-L2121"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.flush" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flush logs and data files.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.fs">
-<em class="property">property </em><code class="sig-name descname">fs</code><a class="headerlink" href="#expyfun.ExperimentController.fs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">fs</span></code><a class="headerlink" href="#expyfun.ExperimentController.fs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Playback frequency of the audio controller (samples / second).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.get_clicks">
-<code class="sig-name descname">get_clicks</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">live_buttons</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">relative_to</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1369-L1403"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_clicks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_clicks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">live_buttons</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1369-L1403"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.get_clicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the entire keyboard / button box buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -419,7 +417,7 @@ indicating the button clicked.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.get_joystick_button_presses">
-<code class="sig-name descname">get_joystick_button_presses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">relative_to</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">'presses'</span></em>, <em class="sig-param"><span class="n">return_kinds</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1303-L1339"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_joystick_button_presses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_joystick_button_presses</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'presses'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_kinds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1303-L1339"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.get_joystick_button_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the entire joystick buffer.</p>
 <p>This will also clear events that are not requested per <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p>
 <dl class="field-list simple">
@@ -460,7 +458,7 @@ press or release event.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.get_joystick_value">
-<code class="sig-name descname">get_joystick_value</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">kind</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1341-L1354"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_joystick_value" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_joystick_value</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kind</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1341-L1354"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.get_joystick_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the current joystick x direction.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -480,7 +478,7 @@ press or release event.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.get_mouse_position">
-<code class="sig-name descname">get_mouse_position</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'pix'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1405-L1429"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_mouse_position" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_mouse_position</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pix'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1405-L1429"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.get_mouse_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mouse position in screen coordinates</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -510,7 +508,7 @@ press or release event.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.get_presses">
-<code class="sig-name descname">get_presses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">live_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">relative_to</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">kind</span><span class="o">=</span><span class="default_value">'presses'</span></em>, <em class="sig-param"><span class="n">return_kinds</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1094-L1141"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_presses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_presses</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">live_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kind</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'presses'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_kinds</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1094-L1141"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.get_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the entire keyboard / button box buffer.</p>
 <p>This will also clear events that are not requested per <code class="docutils literal notranslate"><span class="pre">type</span></code>.</p>
 <dl class="field-list simple">
@@ -557,7 +555,7 @@ release event.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.get_time">
-<code class="sig-name descname">get_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1889-L1897"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.get_time" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_time</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1889-L1897"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.get_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return current master clock time</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -571,13 +569,13 @@ release event.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.id_types">
-<em class="property">property </em><code class="sig-name descname">id_types</code><a class="headerlink" href="#expyfun.ExperimentController.id_types" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">id_types</span></code><a class="headerlink" href="#expyfun.ExperimentController.id_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>Trial ID types needed for each trial.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.identify_trial">
-<code class="sig-name descname">identify_trial</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">ids</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1999-L2034"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.identify_trial" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">identify_trial</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">ids</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1999-L2034"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.identify_trial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identify trial type before beginning the trial</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -605,7 +603,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.listen_clicks">
-<code class="sig-name descname">listen_clicks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1358-L1367"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_clicks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">listen_clicks</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1358-L1367"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_clicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start listening for mouse clicks.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -619,7 +617,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.listen_joystick_button_presses">
-<code class="sig-name descname">listen_joystick_button_presses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1294-L1301"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_joystick_button_presses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">listen_joystick_button_presses</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1294-L1301"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_joystick_button_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start listening for joystick buttons.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -631,7 +629,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.listen_presses">
-<code class="sig-name descname">listen_presses</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1083-L1092"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_presses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">listen_presses</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1083-L1092"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.listen_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start listening for keypresses.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -645,7 +643,7 @@ its entries will be passed as keywords to the underlying function.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.load_buffer">
-<code class="sig-name descname">load_buffer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">samples</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1658-L1682"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.load_buffer" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">load_buffer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1658-L1682"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.load_buffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load audio data into the audio buffer</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -669,7 +667,7 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.load_video">
-<code class="sig-name descname">load_video</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_name</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">(0, 0)</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em>, <em class="sig-param"><span class="n">center</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L856-L883"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.load_video" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">load_video</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L856-L883"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.load_video" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a video.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -689,7 +687,7 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.move_mouse_to">
-<code class="sig-name descname">move_mouse_to</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1506-L1516"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.move_mouse_to" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">move_mouse_to</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1506-L1516"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.move_mouse_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Move the mouse position to the specified position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -705,25 +703,25 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.noise_db">
-<em class="property">property </em><code class="sig-name descname">noise_db</code><a class="headerlink" href="#expyfun.ExperimentController.noise_db" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">noise_db</span></code><a class="headerlink" href="#expyfun.ExperimentController.noise_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sound power in dB of the background noise.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.on_every_flip_functions">
-<em class="property">property </em><code class="sig-name descname">on_every_flip_functions</code><a class="headerlink" href="#expyfun.ExperimentController.on_every_flip_functions" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">on_every_flip_functions</span></code><a class="headerlink" href="#expyfun.ExperimentController.on_every_flip_functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current stack of functions called on every flip.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.on_next_flip_functions">
-<em class="property">property </em><code class="sig-name descname">on_next_flip_functions</code><a class="headerlink" href="#expyfun.ExperimentController.on_next_flip_functions" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">on_next_flip_functions</span></code><a class="headerlink" href="#expyfun.ExperimentController.on_next_flip_functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current stack of functions to be called on next flip.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.play">
-<code class="sig-name descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1684-L1702"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.play" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">play</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1684-L1702"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start audio playback</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -746,7 +744,7 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.refocus">
-<code class="sig-name descname">refocus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2155-L2185"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.refocus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">refocus</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2155-L2185"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.refocus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attempt to grab operating system window manager / keyboard focus.</p>
 <p>This implements platform-specific trickery to bring the window to the
 top and capture keyboard focus in cases where keyboard input from a
@@ -761,7 +759,7 @@ subject is mandatory (e.g., when using keyboard as a response device).</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.screen_prompt">
-<code class="sig-name descname">screen_prompt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">max_wait</span><span class="o">=</span><span class="default_value">inf</span></em>, <em class="sig-param"><span class="n">min_wait</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">live_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">clear_after</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">[0, 0]</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">'white'</span></em>, <em class="sig-param"><span class="n">font_name</span><span class="o">=</span><span class="default_value">'Arial'</span></em>, <em class="sig-param"><span class="n">font_size</span><span class="o">=</span><span class="default_value">24</span></em>, <em class="sig-param"><span class="n">wrap</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em>, <em class="sig-param"><span class="n">attr</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">click</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L543-L617"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_prompt" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">screen_prompt</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">live_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clear_after</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'white'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Arial'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">click</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L543-L617"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_prompt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display text and (optionally) wait for user continuation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -828,7 +826,7 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.screen_text">
-<code class="sig-name descname">screen_text</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">text</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">[0, 0]</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">'white'</span></em>, <em class="sig-param"><span class="n">font_name</span><span class="o">=</span><span class="default_value">'Arial'</span></em>, <em class="sig-param"><span class="n">font_size</span><span class="o">=</span><span class="default_value">24</span></em>, <em class="sig-param"><span class="n">wrap</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em>, <em class="sig-param"><span class="n">attr</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">log_data</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L494-L541"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_text" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">screen_text</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'white'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Arial'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L494-L541"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.screen_text" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show some text on the screen.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -875,7 +873,7 @@ method? This allows inline formatting for text color, e.g.,
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.screenshot">
-<code class="sig-name descname">screenshot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L806-L826"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.screenshot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">screenshot</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L806-L826"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.screenshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Capture the current displayed buffer</p>
 <p>This method must be called <em>before</em> flipping, because it captures
 the back buffer.</p>
@@ -891,7 +889,7 @@ the back buffer.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.set_background_color">
-<code class="sig-name descname">set_background_color</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">'black'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L619-L640"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_background_color" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_background_color</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'black'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L619-L640"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.set_background_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set and draw a solid background color</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -911,7 +909,7 @@ appropriate background color.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.set_noise_db">
-<code class="sig-name descname">set_noise_db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">new_db</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1733-L1748"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_noise_db" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_noise_db</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_db</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1733-L1748"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.set_noise_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the level of the background noise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -932,7 +930,7 @@ appropriate background color.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.set_rms_checking">
-<code class="sig-name descname">set_rms_checking</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">check_rms</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1853-L1869"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_rms_checking" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_rms_checking</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">check_rms</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1853-L1869"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.set_rms_checking" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the RMS checking flag.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -950,7 +948,7 @@ whole, while <code class="docutils literal notranslate"><span class="pre">None</
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.set_stim_db">
-<code class="sig-name descname">set_stim_db</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">new_db</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1750-L1766"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_stim_db" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_stim_db</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_db</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1750-L1766"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.set_stim_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the level of the stimuli.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -973,7 +971,7 @@ whole, while <code class="docutils literal notranslate"><span class="pre">None</
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.set_visible">
-<code class="sig-name descname">set_visible</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">visible</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">flip</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1059-L1080"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.set_visible" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_visible</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1059-L1080"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.set_visible" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the window visibility</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -994,7 +992,7 @@ had been set to.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.stamp_triggers">
-<code class="sig-name descname">stamp_triggers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ids</span></em>, <em class="sig-param"><span class="n">check</span><span class="o">=</span><span class="default_value">'binary'</span></em>, <em class="sig-param"><span class="n">wait_for_last</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2077-L2110"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">stamp_triggers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ids</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'binary'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_last</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2077-L2110"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stamp binary values</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1023,7 +1021,7 @@ on the type of triggering (TDT, sound card, or parallel).</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.start_noise">
-<code class="sig-name descname">start_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1637-L1645"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.start_noise" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">start_noise</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1637-L1645"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.start_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start the background masker noise</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1036,7 +1034,7 @@ on the type of triggering (TDT, sound card, or parallel).</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.start_stimulus">
-<code class="sig-name descname">start_stimulus</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">start_of_trial</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">flip</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">when</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L642-L701"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.start_stimulus" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">start_stimulus</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_of_trial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">when</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L642-L701"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.start_stimulus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play audio, (optionally) flip screen, run any “on_flip” functions.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1081,19 +1079,19 @@ intended flip time.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.stim_db">
-<em class="property">property </em><code class="sig-name descname">stim_db</code><a class="headerlink" href="#expyfun.ExperimentController.stim_db" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">stim_db</span></code><a class="headerlink" href="#expyfun.ExperimentController.stim_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sound power in dB of the stimuli.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.stim_fs">
-<em class="property">property </em><code class="sig-name descname">stim_fs</code><a class="headerlink" href="#expyfun.ExperimentController.stim_fs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">stim_fs</span></code><a class="headerlink" href="#expyfun.ExperimentController.stim_fs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sampling rate at which the stimuli were generated.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.stop">
-<code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1718-L1731"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">stop</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1718-L1731"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop audio buffer playback and reset cursor to beginning of buffer</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1108,7 +1106,7 @@ intended flip time.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.stop_noise">
-<code class="sig-name descname">stop_noise</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1647-L1656"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.stop_noise" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">stop_noise</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1647-L1656"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.stop_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop the background masker noise</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -1121,7 +1119,7 @@ intended flip time.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.system_beep">
-<code class="sig-name descname">system_beep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1624-L1635"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.system_beep" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">system_beep</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1624-L1635"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.system_beep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play a system beep</p>
 <p>This will play through the system audio, <em>not</em> through the
 audio controller (unless that is set to be the system audio).
@@ -1131,7 +1129,7 @@ eye-tracker calibration.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.text_input">
-<code class="sig-name descname">text_input</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">stop_key</span><span class="o">=</span><span class="default_value">'return'</span></em>, <em class="sig-param"><span class="n">instruction_string</span><span class="o">=</span><span class="default_value">'Type response below'</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">[0, 0]</span></em>, <em class="sig-param"><span class="n">color</span><span class="o">=</span><span class="default_value">'white'</span></em>, <em class="sig-param"><span class="n">font_name</span><span class="o">=</span><span class="default_value">'Arial'</span></em>, <em class="sig-param"><span class="n">font_size</span><span class="o">=</span><span class="default_value">24</span></em>, <em class="sig-param"><span class="n">wrap</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">units</span><span class="o">=</span><span class="default_value">'norm'</span></em>, <em class="sig-param"><span class="n">all_caps</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1236-L1291"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.text_input" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">text_input</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stop_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'return'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">instruction_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Type</span> <span class="pre">response</span> <span class="pre">below'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0,</span> <span class="pre">0]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'white'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Arial'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all_caps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1236-L1291"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.text_input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows participant to input text and view on the screen.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1171,7 +1169,7 @@ precise positioning or centering.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.toggle_cursor">
-<code class="sig-name descname">toggle_cursor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">visibility</span></em>, <em class="sig-param"><span class="n">flip</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1431-L1455"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.toggle_cursor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">toggle_cursor</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visibility</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1431-L1455"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.toggle_cursor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show or hide the mouse</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1197,7 +1195,7 @@ precise positioning or centering.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.trial_ok">
-<code class="sig-name descname">trial_ok</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2036-L2056"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.trial_ok" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">trial_ok</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L2036-L2056"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.trial_ok" title="Permalink to this definition">¶</a></dt>
 <dd><p>Report that the trial was okay and do post-trial tasks.</p>
 <p>For example, logs and data files can be flushed at the end of each
 trial.</p>
@@ -1213,7 +1211,7 @@ trial.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.wait_for_click_on">
-<code class="sig-name descname">wait_for_click_on</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">objects</span></em>, <em class="sig-param"><span class="n">max_wait</span><span class="o">=</span><span class="default_value">inf</span></em>, <em class="sig-param"><span class="n">min_wait</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">live_buttons</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">relative_to</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1566-L1612"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_click_on" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">wait_for_click_on</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">live_buttons</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1566-L1612"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_click_on" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the first click after min_wait over a visual object.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1258,7 +1256,7 @@ first in the <em class="xref py py-obj">objects</em> argument.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.wait_for_clicks">
-<code class="sig-name descname">wait_for_clicks</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">max_wait</span><span class="o">=</span><span class="default_value">inf</span></em>, <em class="sig-param"><span class="n">min_wait</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">live_buttons</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">relative_to</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visible</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1518-L1564"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_clicks" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">wait_for_clicks</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">live_buttons</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1518-L1564"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_clicks" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all clicks between min_wait and max_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1310,7 +1308,7 @@ indicating the button clicked.</p>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.wait_for_presses">
-<code class="sig-name descname">wait_for_presses</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">max_wait</span></em>, <em class="sig-param"><span class="n">min_wait</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">live_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">relative_to</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1185-L1223"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">wait_for_presses</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_wait</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">live_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1185-L1223"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_for_presses" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns all button presses between min_wait and max_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1355,7 +1353,7 @@ keys were pressed. Otherwise, returns a list of tuples
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.wait_one_click">
-<code class="sig-name descname">wait_one_click</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">max_wait</span><span class="o">=</span><span class="default_value">inf</span></em>, <em class="sig-param"><span class="n">min_wait</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">live_buttons</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">relative_to</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">visible</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1457-L1504"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_click" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">wait_one_click</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">live_buttons</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">visible</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1457-L1504"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_click" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns only the first mouse button clicked after min_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1408,7 +1406,7 @@ returns a tuple (str, int, int) indicating the first button clicked
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.wait_one_press">
-<code class="sig-name descname">wait_one_press</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">max_wait</span><span class="o">=</span><span class="default_value">inf</span></em>, <em class="sig-param"><span class="n">min_wait</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">live_keys</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">relative_to</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1143-L1183"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_press" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">wait_one_press</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">max_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">live_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_to</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1143-L1183"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_one_press" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns only the first button pressed after min_wait.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1455,7 +1453,7 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.wait_secs">
-<code class="sig-name descname">wait_secs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">secs</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1949-L1962"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_secs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">wait_secs</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">secs</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1949-L1962"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_secs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait a specified number of seconds.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1475,7 +1473,7 @@ pressed (or <code class="docutils literal notranslate"><span class="pre">None</s
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.wait_until">
-<code class="sig-name descname">wait_until</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timestamp</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1964-L1997"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_until" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">wait_until</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1964-L1997"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.wait_until" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait until the given time is reached.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1508,13 +1506,13 @@ processing prior to calling <a class="reference internal" href="#expyfun.Experim
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.window">
-<em class="property">property </em><code class="sig-name descname">window</code><a class="headerlink" href="#expyfun.ExperimentController.window" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">window</span></code><a class="headerlink" href="#expyfun.ExperimentController.window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pyglet visual window handle.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="expyfun.ExperimentController.write_data_line">
-<code class="sig-name descname">write_data_line</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">event_type</span></em>, <em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timestamp</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1899-L1926"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#expyfun.ExperimentController.write_data_line" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">write_data_line</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L1899-L1926"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController.write_data_line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add a line of data to the output CSV.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1628,7 +1626,7 @@ time the data line was written from the master clock.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2020, expyfun developers. Last updated on 2020-12-18.<br/>
+        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-04-27.<br/>
     </p>
   </div>
 </footer>
