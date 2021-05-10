@@ -3,13 +3,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>mnefun.run_sss_positions &#8212; mnefun 0.2.0.dev0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="../_static/default.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -96,11 +97,11 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="mnefun-run-sss-positions">
+  <section id="mnefun-run-sss-positions">
 <h1>mnefun.run_sss_positions<a class="headerlink" href="#mnefun-run-sss-positions" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="mnefun.run_sss_positions">
-<code class="sig-prename descclassname"><span class="pre">mnefun.</span></code><code class="sig-name descname"><span class="pre">run_sss_positions</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'kasga'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-force'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">22</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span>&#160; <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">work_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'~/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_step_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gof_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.98</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'error'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.run_sss_positions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="mnefun.run_sss_positions">
+<span class="sig-prename descclassname"><span class="pre">mnefun.</span></span><span class="sig-name descname"><span class="pre">run_sss_positions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname_in</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">host</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'kasga'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">opts</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'-force'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">22</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'</span>&#160; <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">work_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'~/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_window</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_step_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gof_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.98</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'error'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.run_sss_positions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run Maxfilter remotely and fetch resulting file</p>
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
@@ -133,7 +134,7 @@ stdout/stderr is printed while running.</p>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
     </div>
@@ -148,8 +149,8 @@ stdout/stderr is printed while running.</p>
     </p>
     <p>
         &copy; Copyright 2013-2021, mnefun Developers.<br/>
-      Last updated on May 03, 2021.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.5.4.<br/>
+      Last updated on May 10, 2021.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.0.<br/>
     </p>
   </div>
 </footer>
