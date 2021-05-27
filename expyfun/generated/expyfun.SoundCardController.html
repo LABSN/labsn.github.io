@@ -3,15 +3,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>expyfun.SoundCardController &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -108,11 +109,11 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="expyfun-soundcardcontroller">
+  <section id="expyfun-soundcardcontroller">
 <h1>expyfun.SoundCardController<a class="headerlink" href="#expyfun-soundcardcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="expyfun.SoundCardController">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">expyfun.</span></code><code class="sig-name descname"><span class="pre">SoundCardController</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L36-L404"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.SoundCardController">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">expyfun.</span></span><span class="sig-name descname"><span class="pre">SoundCardController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ec</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L36-L404"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use a sound card.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -199,14 +200,14 @@ interpreted as time from end of trial.</p>
 <p>Note that the defaults are superseded on individual machines by
 the configuration file.</p>
 <dl class="py method">
-<dt id="expyfun.SoundCardController.halt">
-<code class="sig-name descname"><span class="pre">halt</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L401-L404"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.halt" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.SoundCardController.halt">
+<span class="sig-name descname"><span class="pre">halt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L401-L404"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.halt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Halt.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.SoundCardController.load_buffer">
-<code class="sig-name descname"><span class="pre">load_buffer</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L217-L278"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.load_buffer" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.SoundCardController.load_buffer">
+<span class="sig-name descname"><span class="pre">load_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">samples</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L217-L278"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.load_buffer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load the buffer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -219,14 +220,14 @@ the configuration file.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.SoundCardController.play">
-<code class="sig-name descname"><span class="pre">play</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L364-L369"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.play" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.SoundCardController.play">
+<span class="sig-name descname"><span class="pre">play</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L364-L369"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.play" title="Permalink to this definition">¶</a></dt>
 <dd><p>Play.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.SoundCardController.set_noise_level">
-<code class="sig-name descname"><span class="pre">set_noise_level</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L385-L399"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.set_noise_level" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.SoundCardController.set_noise_level">
+<span class="sig-name descname"><span class="pre">set_noise_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L385-L399"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.set_noise_level" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the noise level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -239,8 +240,8 @@ the configuration file.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.SoundCardController.stamp_triggers">
-<code class="sig-name descname"><span class="pre">stamp_triggers</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">triggers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_last</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_trial_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L326-L362"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.SoundCardController.stamp_triggers">
+<span class="sig-name descname"><span class="pre">stamp_triggers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">triggers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wait_for_last</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_trial_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L326-L362"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.stamp_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stamp a list of triggers with a given inter-trigger delay.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -262,14 +263,14 @@ be stashed and appended to the 1 trigger for the sound onset.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.SoundCardController.start_noise">
-<code class="sig-name descname"><span class="pre">start_noise</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L191-L196"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.start_noise" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.SoundCardController.start_noise">
+<span class="sig-name descname"><span class="pre">start_noise</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L191-L196"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.start_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start noise.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.SoundCardController.stop">
-<code class="sig-name descname"><span class="pre">stop</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L371-L383"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.stop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.SoundCardController.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L371-L383"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -284,8 +285,8 @@ milliseconds of (variable) delay.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.SoundCardController.stop_noise">
-<code class="sig-name descname"><span class="pre">stop_noise</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L198-L211"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.stop_noise" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.SoundCardController.stop_noise">
+<span class="sig-name descname"><span class="pre">stop_noise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L198-L211"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.stop_noise" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop noise.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -301,7 +302,7 @@ milliseconds of (variable) delay.</p>
 
 </dd></dl>
 
-</div>
+</section>
 
 
     </div>
@@ -315,7 +316,7 @@ milliseconds of (variable) delay.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-05-05.<br/>
+        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-05-27.<br/>
     </p>
   </div>
 </footer>

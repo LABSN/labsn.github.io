@@ -3,15 +3,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>expyfun.EyelinkController &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -111,11 +112,11 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="expyfun-eyelinkcontroller">
+  <section id="expyfun-eyelinkcontroller">
 <h1>expyfun.EyelinkController<a class="headerlink" href="#expyfun-eyelinkcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="expyfun.EyelinkController">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">expyfun.</span></code><code class="sig-name descname"><span class="pre">EyelinkController</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L127-L718"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.EyelinkController">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">expyfun.</span></span><span class="sig-name descname"><span class="pre">EyelinkController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L127-L718"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Eyelink communication and control methods.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -138,8 +139,8 @@ the network location of eyelink (e.g., “100.1.1.1”).</p>
 <p>The data will be saved to the ExperimentController <code class="docutils literal notranslate"><span class="pre">output_dir</span></code>.
 If this was <em class="xref py py-obj">None</em>, data will be saved to the current working dir.</p>
 <dl class="py method">
-<dt id="expyfun.EyelinkController.calibrate">
-<code class="sig-name descname"><span class="pre">calibrate</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L335-L384"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.calibrate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.EyelinkController.calibrate">
+<span class="sig-name descname"><span class="pre">calibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L335-L384"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.calibrate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calibrate the eyetracker</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -171,8 +172,8 @@ will be started.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.EyelinkController.custom_calibration">
-<code class="sig-name descname"><span class="pre">custom_calibration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HV5'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horiz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L592-L662"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.custom_calibration" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.EyelinkController.custom_calibration">
+<span class="sig-name descname"><span class="pre">custom_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HV5'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horiz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L592-L662"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.custom_calibration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set Eyetracker to use a custom calibration sequence</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -200,9 +201,9 @@ must be a list with 2 elements corresponding to x and y position.</p>
 </div>
 </dd></dl>
 
-<dl class="py method">
-<dt id="expyfun.EyelinkController.eye_used">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">eye_used</span></code><a class="headerlink" href="#expyfun.EyelinkController.eye_used" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="expyfun.EyelinkController.eye_used">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">eye_used</span></span><a class="headerlink" href="#expyfun.EyelinkController.eye_used" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the eye used ‘left’ or ‘right’</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -214,15 +215,15 @@ must be a list with 2 elements corresponding to x and y position.</p>
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="expyfun.EyelinkController.file_list">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">file_list</span></code><a class="headerlink" href="#expyfun.EyelinkController.file_list" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="expyfun.EyelinkController.file_list">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">file_list</span></span><a class="headerlink" href="#expyfun.EyelinkController.file_list" title="Permalink to this definition">¶</a></dt>
 <dd><p>The list of files started on the EyeLink</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.EyelinkController.get_eye_position">
-<code class="sig-name descname"><span class="pre">get_eye_position</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L664-L694"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.get_eye_position" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.EyelinkController.get_eye_position">
+<span class="sig-name descname"><span class="pre">get_eye_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L664-L694"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.get_eye_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>The current eye position in pixels</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -242,8 +243,8 @@ eye is lost.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.EyelinkController.maintain_fix">
-<code class="sig-name descname"><span class="pre">maintain_fix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fix_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_early</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L533-L590"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.maintain_fix" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.EyelinkController.maintain_fix">
+<span class="sig-name descname"><span class="pre">maintain_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fix_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_early</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L533-L590"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.maintain_fix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check to see if subject is fixating in a region.</p>
 <p>This checks to make sure that the subjects gaze falls within a region
 at least once in any given period. In other words it checks to make
@@ -278,15 +279,15 @@ sure that the gaze falls in the target region at least every
 </dl>
 </dd></dl>
 
-<dl class="py method">
-<dt id="expyfun.EyelinkController.recording">
-<em class="property"><span class="pre">property</span> </em><code class="sig-name descname"><span class="pre">recording</span></code><a class="headerlink" href="#expyfun.EyelinkController.recording" title="Permalink to this definition">¶</a></dt>
+<dl class="py property">
+<dt class="sig sig-object py" id="expyfun.EyelinkController.recording">
+<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">recording</span></span><a class="headerlink" href="#expyfun.EyelinkController.recording" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns boolean for whether or not the Eyelink is recording</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.EyelinkController.stop">
-<code class="sig-name descname"><span class="pre">stop</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L317-L333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.stop" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.EyelinkController.stop">
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L317-L333"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop Eyelink recording and close current file</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -298,8 +299,8 @@ sure that the gaze falls in the target region at least every
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.EyelinkController.transfer_remote_file">
-<code class="sig-name descname"><span class="pre">transfer_remote_file</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_name</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L436-L458"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.transfer_remote_file" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.EyelinkController.transfer_remote_file">
+<span class="sig-name descname"><span class="pre">transfer_remote_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_name</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L436-L458"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.transfer_remote_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pull remote file (from Eyelink) to local machine</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -324,8 +325,8 @@ sure that the gaze falls in the target region at least every
 </dd></dl>
 
 <dl class="py method">
-<dt id="expyfun.EyelinkController.wait_for_fix">
-<code class="sig-name descname"><span class="pre">wait_for_fix</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fix_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L480-L531"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.wait_for_fix" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.EyelinkController.wait_for_fix">
+<span class="sig-name descname"><span class="pre">wait_for_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fix_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L480-L531"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.wait_for_fix" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for gaze to settle within a defined region</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -361,18 +362,22 @@ sure that the gaze falls in the target region at least every
 
 </dd></dl>
 
-<div class="section" id="examples-using-expyfun-eyelinkcontroller">
+<section id="examples-using-expyfun-eyelinkcontroller">
 <h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.EyelinkController</span></code><a class="headerlink" href="#examples-using-expyfun-eyelinkcontroller" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler..."><div class="figure align-default" id="id1">
+<div class="sphx-glr-thumbcontainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler..."><figure class="align-default" id="id1">
 <img alt="Experiment using eye-tracking pupillometry" src="../_images/sphx_glr_pupillometry_experiment__thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/pupillometry_experiment_.html#sphx-glr-auto-examples-experiments-pupillometry-experiment-py"><span class="std std-ref">Experiment using eye-tracking pupillometry</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-</div><div class="sphx-glr-thumbcontainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler..."><div class="figure align-default" id="id2">
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/pupillometry_experiment_.html#sphx-glr-auto-examples-experiments-pupillometry-experiment-py"><span class="std std-ref">Experiment using eye-tracking pupillometry</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div><div class="sphx-glr-thumbcontainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler..."><figure class="align-default" id="id2">
 <img alt="Experiment with eye-tracking" src="../_images/sphx_glr_eyetracking_experiment__thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/eyetracking_experiment_.html#sphx-glr-auto-examples-experiments-eyetracking-experiment-py"><span class="std std-ref">Experiment with eye-tracking</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div></div>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="../auto_examples/experiments/eyetracking_experiment_.html#sphx-glr-auto-examples-experiments-eyetracking-experiment-py"><span class="std std-ref">Experiment with eye-tracking</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div></section>
+</section>
 
 
     </div>
@@ -386,7 +391,7 @@ sure that the gaze falls in the target region at least every
       
     </p>
     <p>
-        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-05-05.<br/>
+        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-05-27.<br/>
     </p>
   </div>
 </footer>

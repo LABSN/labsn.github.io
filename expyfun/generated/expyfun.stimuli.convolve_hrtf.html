@@ -3,15 +3,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>expyfun.stimuli.convolve_hrtf &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -111,11 +112,11 @@
   <div class="row">
     <div class="body col-md-12 content" role="main">
       
-  <div class="section" id="expyfun-stimuli-convolve-hrtf">
+  <section id="expyfun-stimuli-convolve-hrtf">
 <h1>expyfun.stimuli.convolve_hrtf<a class="headerlink" href="#expyfun-stimuli-convolve-hrtf" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="expyfun.stimuli.convolve_hrtf">
-<code class="sig-prename descclassname"><span class="pre">expyfun.stimuli.</span></code><code class="sig-name descname"><span class="pre">convolve_hrtf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cipic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_hrtf.py#L113-L210"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.convolve_hrtf" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="expyfun.stimuli.convolve_hrtf">
+<span class="sig-prename descclassname"><span class="pre">expyfun.stimuli.</span></span><span class="sig-name descname"><span class="pre">convolve_hrtf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cipic'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_hrtf.py#L113-L210"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.convolve_hrtf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convolve a signal with a head-related transfer function</p>
 <p>Technically we will be convolving with binaural room impulse
 responses (BRIRs), but HRTFs (freq-domain equiv. representations)
@@ -183,14 +184,16 @@ use be sent to:</p>
 California 1 Shields Avenue Davis, CA 95616-8553</p>
 </dd></dl>
 
-<div class="section" id="examples-using-expyfun-stimuli-convolve-hrtf">
+<section id="examples-using-expyfun-stimuli-convolve-hrtf">
 <h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.convolve_hrtf</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-convolve-hrtf" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This shows the methods that we provide that facilitate generation of more advanced stimuli."><div class="figure align-default" id="id1">
+<div class="sphx-glr-thumbcontainer" tooltip="This shows the methods that we provide that facilitate generation of more advanced stimuli."><figure class="align-default" id="id1">
 <img alt="Generate more advanced auditory stimuli" src="../_images/sphx_glr_advanced_stimuli_thumb.png" />
-<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/stimuli/advanced_stimuli.html#sphx-glr-auto-examples-stimuli-advanced-stimuli-py"><span class="std std-ref">Generate more advanced auditory stimuli</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-</div><div style='clear:both'></div></div>
-</div>
+<figcaption>
+<p><span class="caption-text"><a class="reference internal" href="../auto_examples/stimuli/advanced_stimuli.html#sphx-glr-auto-examples-stimuli-advanced-stimuli-py"><span class="std std-ref">Generate more advanced auditory stimuli</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</div><div style='clear:both'></div></section>
+</section>
 
 
     </div>
@@ -204,7 +207,7 @@ California 1 Shields Avenue Davis, CA 95616-8553</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-05-05.<br/>
+        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-05-27.<br/>
     </p>
   </div>
 </footer>

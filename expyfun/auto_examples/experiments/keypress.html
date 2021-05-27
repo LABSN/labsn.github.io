@@ -3,15 +3,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Keypress demo &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -113,28 +114,28 @@
 <p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-keypress-py"><span class="std std-ref">here</span></a>
 to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="keypress-demo">
+<section class="sphx-glr-example-title" id="keypress-demo">
 <span id="sphx-glr-auto-examples-experiments-keypress-py"></span><h1>Keypress demo<a class="headerlink" href="#keypress-demo" title="Permalink to this headline">¶</a></h1>
 <p>This example demonstrates the different keypress-gathering techniques available
 in the ExperimentController class.</p>
 <img src="../../_images/sphx_glr_keypress_001.png" srcset="../../_images/sphx_glr_keypress_001.png" alt="keypress" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: KeypressDemo
-date: 2021-05-05 18_03_37.033358
+date: 2021-05-27 17_12_48.519490
 file: /home/circleci/project/examples/experiments/keypress.py
 participant: foo
 session: 001
-2021-05-05 18:03:37,033 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2021-05-05 18:03:37,034 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2021-05-05 18:03:37,275 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2021-05-05 18:03:37,275 - INFO    - Expyfun: Setting up screen
-2021-05-05 18:03:37,304 - EXP     - Expyfun: Set screen visibility True
-2021-05-05 18:03:37,353 - INFO    - Initialized [640 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f67a1ca55b0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2021-05-05 18:03:37,353 - INFO    - Expyfun: Initializing dummy triggering mode
-2021-05-05 18:03:37,354 - INFO    - Expyfun: Initialization complete
-2021-05-05 18:03:37,354 - EXP     - Expyfun: Participant: foo
-2021-05-05 18:03:37,355 - EXP     - Expyfun: Session: 001
-2021-05-05 18:03:41,074 - INFO    - Expyfun: Exiting
-2021-05-05 18:03:41,076 - EXP     - Expyfun: Audio stopped and reset.
+2021-05-27 17:12:48,519 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2021-05-27 17:12:48,521 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2021-05-27 17:12:48,748 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2021-05-27 17:12:48,748 - INFO    - Expyfun: Setting up screen
+2021-05-27 17:12:48,769 - EXP     - Expyfun: Set screen visibility True
+2021-05-27 17:12:48,805 - INFO    - Initialized [640 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f6e63fba250&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2021-05-27 17:12:48,806 - INFO    - Expyfun: Initializing dummy triggering mode
+2021-05-27 17:12:48,808 - INFO    - Expyfun: Initialization complete
+2021-05-27 17:12:48,808 - EXP     - Expyfun: Participant: foo
+2021-05-27 17:12:48,808 - EXP     - Expyfun: Session: 001
+2021-05-27 17:12:52,481 - INFO    - Expyfun: Exiting
+2021-05-27 17:12:52,483 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -302,7 +303,7 @@ session: 001
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.134 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  4.028 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-keypress-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/3459d59db28e5ae90ed60794c0aa77b3/keypress.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">keypress.py</span></code></a></p>
@@ -312,7 +313,7 @@ session: 001
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
-</div>
+</section>
 
 
     </div>
@@ -326,7 +327,7 @@ session: 001
       
     </p>
     <p>
-        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-05-05.<br/>
+        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-05-27.<br/>
     </p>
   </div>
 </footer>
