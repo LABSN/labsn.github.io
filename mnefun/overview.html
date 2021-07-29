@@ -639,7 +639,7 @@ None is an alias for “all runs”.</p>
 <p class="admonition-title">Warning</p>
 <p>Before running SSS, set <code class="docutils literal notranslate"><span class="pre">params.mf_prebad[SUBJ]</span></code> to a
 list of bad MEG channels (str), or (old way) create
-<em class="xref py py-obj">SUBJ/raw_fif/SUBJ_prebad.txt`</em> with space-separated list of bad
+<code class="docutils literal notranslate"><span class="pre">SUBJ/raw_fif/SUBJ_prebad.txt</span></code> with space-separated list of bad
 MEG channel numbers (int).
 Using <code class="docutils literal notranslate"><span class="pre">p.mf_autobad=True</span></code> can help fill in missed bad channels,
 but is not as reliable as experienced analyst inspection.</p>
@@ -1252,7 +1252,7 @@ These are the preferred processing methods going forward
 deprecated.</p>
 </div>
 <p>Parameters for remotely connecting to SSS workstation (‘sws’) can be set
-by adding a file <em class="xref py py-obj">json</em> with contents like:</p>
+by adding a file <code class="file docutils literal notranslate"><span class="pre">~/.mnefun/mnefun.json</span></code> with contents like:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir ~/.mnefun
 <span class="gp">$ </span><span class="nb">echo</span> <span class="s1">&#39;{&quot;sws_ssh&quot;:&quot;kasga&quot;, &quot;sws_dir&quot;:&quot;/data06/larsoner/sss_work&quot;, &quot;sws_port&quot;:22}&#39;</span> &gt; ~/.mnefun/mnefun.json
 </pre></div>
@@ -1310,8 +1310,8 @@ the following line to the end of your <code class="docutils literal notranslate"
     </p>
     <p>
         &copy; Copyright 2013-2021, mnefun Developers.<br/>
-      Last updated on Jul 09, 2021.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.0.3.<br/>
+      Last updated on Jul 29, 2021.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
     </p>
   </div>
 </footer>
