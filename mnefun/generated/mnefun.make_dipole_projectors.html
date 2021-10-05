@@ -23,9 +23,9 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js "></script>
 <script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
-<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
 <script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 <link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -106,17 +106,17 @@
 <dl class="field-list">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><dl>
-<dt><strong>info</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.Info.html#mne.Info" title="(in MNE v0.24.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Info</span></code></a></span></dt><dd><p>The measurement info.</p>
+<dt><strong>info</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.Info.html#mne.Info" title="(in MNE v0.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Info</span></code></a></span></dt><dd><p>The measurement info.</p>
 </dd>
 <dt><strong>pos</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a>, shape (n_dip, 3)</span></dt><dd><p>The dipole positions.</p>
 </dd>
 <dt><strong>ori</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.22.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a>, shape (n_dip, 3)</span></dt><dd><p>The dipole orientations.</p>
 </dd>
-<dt><strong>bem</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.bem.ConductorModel.html#mne.bem.ConductorModel" title="(in MNE v0.24.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConductorModel</span></code></a></span></dt><dd><p>The conductor model to use.</p>
+<dt><strong>bem</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.bem.ConductorModel.html#mne.bem.ConductorModel" title="(in MNE v0.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConductorModel</span></code></a></span></dt><dd><p>The conductor model to use.</p>
 </dd>
-<dt><strong>trans</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.transforms.Transform.html#mne.transforms.Transform" title="(in MNE v0.24.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transform</span></code></a></span></dt><dd><p>The mri-to-head transformation.</p>
+<dt><strong>trans</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.transforms.Transform.html#mne.transforms.Transform" title="(in MNE v0.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transform</span></code></a></span></dt><dd><p>The mri-to-head transformation.</p>
 </dd>
-<dt><strong>verbose</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.9)"><span class="xref std std-ref">bool</span></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>If not None, override default verbose level (see <a class="reference external" href="https://mne.tools/dev/generated/mne.verbose.html#mne.verbose" title="(in MNE v0.24.dev0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.verbose()</span></code></a>
+<dt><strong>verbose</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.9)"><span class="xref std std-ref">bool</span></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>If not None, override default verbose level (see <a class="reference external" href="https://mne.tools/dev/generated/mne.verbose.html#mne.verbose" title="(in MNE v0.24)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.verbose()</span></code></a>
 and <a class="reference external" href="https://docs.python.org/3/tutorial/stdlib2.html#tut-logging" title="(in Python v3.9)"><span class="xref std std-ref">Logging documentation</span></a> for more).
 If used, it should be passed as a keyword-argument only.</p>
 </dd>
@@ -124,7 +124,7 @@ If used, it should be passed as a keyword-argument only.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><dl>
-<dt><strong>projs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://mne.tools/dev/generated/mne.Projection.html#mne.Projection" title="(in MNE v0.24.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Projection</span></code></a></span></dt><dd><p>The projectors.</p>
+<dt><strong>projs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://mne.tools/dev/generated/mne.Projection.html#mne.Projection" title="(in MNE v0.24)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Projection</span></code></a></span></dt><dd><p>The projectors.</p>
 </dd>
 </dl>
 </dd>
@@ -146,8 +146,8 @@ If used, it should be passed as a keyword-argument only.</p>
     </p>
     <p>
         &copy; Copyright 2013-2021, mnefun Developers.<br/>
-      Last updated on Jul 29, 2021.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.2.<br/>
+      Last updated on Oct 05, 2021.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.2.0.<br/>
     </p>
   </div>
 </footer>
