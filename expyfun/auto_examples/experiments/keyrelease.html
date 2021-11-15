@@ -8,10 +8,10 @@
     <title>KeyPressAndRelease demo &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -27,9 +27,9 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-1.12.4.min.js "></script>
 <script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
-<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
 <script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
 
 
@@ -122,22 +122,22 @@ the ExperimentController class.</p>
 inprecise timing.</p>
 <img src="../../_images/sphx_glr_keyrelease_001.png" srcset="../../_images/sphx_glr_keyrelease_001.png" alt="keyrelease" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: KeyPressAndReleaseDemo
-date: 2021-07-16 18_35_46.213032
+date: 2021-11-15 18_07_59.898536
 file: /home/circleci/project/examples/experiments/keyrelease.py
 participant: foo
 session: 001
-2021-07-16 18:35:46,213 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2021-07-16 18:35:46,215 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2021-07-16 18:35:46,603 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2021-07-16 18:35:46,603 - INFO    - Expyfun: Setting up screen
-2021-07-16 18:35:46,648 - EXP     - Expyfun: Set screen visibility True
-2021-07-16 18:35:46,715 - INFO    - Initialized [1280  960] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f8abc0f5cd0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2021-07-16 18:35:46,715 - INFO    - Expyfun: Initializing dummy triggering mode
-2021-07-16 18:35:46,718 - INFO    - Expyfun: Initialization complete
-2021-07-16 18:35:46,719 - EXP     - Expyfun: Participant: foo
-2021-07-16 18:35:46,719 - EXP     - Expyfun: Session: 001
-2021-07-16 18:35:48,049 - INFO    - Expyfun: Exiting
-2021-07-16 18:35:48,054 - EXP     - Expyfun: Audio stopped and reset.
+2021-11-15 18:07:59,898 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2021-11-15 18:07:59,899 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2021-11-15 18:08:00,132 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2021-11-15 18:08:00,132 - INFO    - Expyfun: Setting up screen
+2021-11-15 18:08:00,157 - EXP     - Expyfun: Set screen visibility True
+2021-11-15 18:08:00,192 - INFO    - Initialized [1280  960] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f068d561f70&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2021-11-15 18:08:00,192 - INFO    - Expyfun: Initializing dummy triggering mode
+2021-11-15 18:08:00,193 - INFO    - Expyfun: Initialization complete
+2021-11-15 18:08:00,193 - EXP     - Expyfun: Participant: foo
+2021-11-15 18:08:00,194 - EXP     - Expyfun: Session: 001
+2021-11-15 18:08:01,389 - INFO    - Expyfun: Exiting
+2021-11-15 18:08:01,391 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -194,7 +194,7 @@ session: 001
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.001 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  1.610 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-keyrelease-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f7c6a80d813b83f6d159f7c6f906b195/keyrelease.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">keyrelease.py</span></code></a></p>
@@ -218,7 +218,7 @@ session: 001
       
     </p>
     <p>
-        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-07-16.<br/>
+        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-11-15.<br/>
     </p>
   </div>
 </footer>

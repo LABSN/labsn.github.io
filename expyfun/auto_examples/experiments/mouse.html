@@ -8,10 +8,10 @@
     <title>Mouse click demo &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -27,9 +27,9 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="../../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../../_static/js/jquery-1.12.4.min.js "></script>
 <script type="text/javascript" src="../../_static/js/jquery-fix.js "></script>
-<script type="text/javascript" src="../../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
 <script type="text/javascript" src="../../_static/bootstrap-sphinx.js "></script>
 
 
@@ -120,22 +120,22 @@ to download the full example code</p>
 in the ExperimentController class.</p>
 <img src="../../_images/sphx_glr_mouse_001.png" srcset="../../_images/sphx_glr_mouse_001.png" alt="mouse" class = "sphx-glr-single-img"/><p class="sphx-glr-script-out">Out:</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: MouseDemo
-date: 2021-07-16 18_35_50.671851
+date: 2021-11-15 18_08_03.067355
 file: /home/circleci/project/examples/experiments/mouse.py
 participant: foo
 session: 001
-2021-07-16 18:35:50,672 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2021-07-16 18:35:50,673 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2021-07-16 18:35:51,072 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2021-07-16 18:35:51,072 - INFO    - Expyfun: Setting up screen
-2021-07-16 18:35:51,113 - EXP     - Expyfun: Set screen visibility True
-2021-07-16 18:35:51,176 - INFO    - Initialized [640 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f8abc0f5cd0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2021-07-16 18:35:51,176 - INFO    - Expyfun: Initializing dummy triggering mode
-2021-07-16 18:35:51,178 - INFO    - Expyfun: Initialization complete
-2021-07-16 18:35:51,178 - EXP     - Expyfun: Participant: foo
-2021-07-16 18:35:51,178 - EXP     - Expyfun: Session: 001
-2021-07-16 18:35:53,309 - INFO    - Expyfun: Exiting
-2021-07-16 18:35:53,317 - EXP     - Expyfun: Audio stopped and reset.
+2021-11-15 18:08:03,067 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2021-11-15 18:08:03,068 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2021-11-15 18:08:03,284 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2021-11-15 18:08:03,284 - INFO    - Expyfun: Setting up screen
+2021-11-15 18:08:03,308 - EXP     - Expyfun: Set screen visibility True
+2021-11-15 18:08:03,340 - INFO    - Initialized [640 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f068d561f70&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2021-11-15 18:08:03,340 - INFO    - Expyfun: Initializing dummy triggering mode
+2021-11-15 18:08:03,341 - INFO    - Expyfun: Initialization complete
+2021-11-15 18:08:03,342 - EXP     - Expyfun: Participant: foo
+2021-11-15 18:08:03,342 - EXP     - Expyfun: Session: 001
+2021-11-15 18:08:05,182 - INFO    - Expyfun: Exiting
+2021-11-15 18:08:05,185 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -234,7 +234,7 @@ session: 001
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.752 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.179 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-mouse-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/930c30f9f9eaa35797859e17fe5d9ec1/mouse.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">mouse.py</span></code></a></p>
@@ -258,7 +258,7 @@ session: 001
       
     </p>
     <p>
-        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-07-16.<br/>
+        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-11-15.<br/>
     </p>
   </div>
 </footer>

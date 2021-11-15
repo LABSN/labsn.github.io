@@ -8,10 +8,10 @@
     <title>expyfun.ExperimentController &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -27,9 +27,9 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js "></script>
 <script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
-<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
 <script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
@@ -116,7 +116,7 @@
 <h1>expyfun.ExperimentController<a class="headerlink" href="#expyfun-experimentcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="expyfun.ExperimentController">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">expyfun.</span></span><span class="sig-name descname"><span class="pre">ExperimentController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio_controller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_rms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24414</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">65</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_quit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">participant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monitor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_controller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_rms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'windowed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_resamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_video</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_flipping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joystick</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L43-L2236"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyfun.</span></span><span class="sig-name descname"><span class="pre">ExperimentController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exp_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">audio_controller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response_device</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_rms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24414</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stim_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">65</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noise_db</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">45</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">window_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">screen_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">full_screen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">force_quit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">participant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monitor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_controller</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">session</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_rms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'windowed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_resamp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enable_video</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">safe_flipping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_channels</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trigger_duration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">joystick</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_experiment_controller.py#L43-L2236"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.ExperimentController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -241,7 +241,7 @@ functions will be cleared.</p>
 <p class="rubric">Notes</p>
 <p>See <em class="xref py py-obj">flip_and_play</em> for order of operations. Can be called multiple
 times to add multiple functions to the queue. If the function must be
-called with arguments, use <a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.partial" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> before passing to
+called with arguments, use <a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.partial" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> before passing to
 <a class="reference internal" href="#expyfun.ExperimentController.call_on_every_flip" title="expyfun.ExperimentController.call_on_every_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_on_every_flip</span></code></a>.</p>
 </dd></dl>
 
@@ -267,7 +267,7 @@ functions will be cleared.</p>
 <p class="rubric">Notes</p>
 <p>See <em class="xref py py-obj">flip_and_play</em> for order of operations. Can be called multiple
 times to add multiple functions to the queue. If the function must be
-called with arguments, use <a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.partial" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> before passing
+called with arguments, use <a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.partial" title="(in Python v3.10)"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> before passing
 to <a class="reference internal" href="#expyfun.ExperimentController.call_on_next_flip" title="expyfun.ExperimentController.call_on_next_flip"><code class="xref py py-obj docutils literal notranslate"><span class="pre">call_on_next_flip</span></code></a>.</p>
 </dd></dl>
 
@@ -285,13 +285,13 @@ to <a class="reference internal" href="#expyfun.ExperimentController.call_on_nex
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.current_time">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">current_time</span></span><a class="headerlink" href="#expyfun.ExperimentController.current_time" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">current_time</span></span><a class="headerlink" href="#expyfun.ExperimentController.current_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Timestamp from the experiment master clock.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.data_fname">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">data_fname</span></span><a class="headerlink" href="#expyfun.ExperimentController.data_fname" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data_fname</span></span><a class="headerlink" href="#expyfun.ExperimentController.data_fname" title="Permalink to this definition">¶</a></dt>
 <dd><p>Date filename</p>
 </dd></dl>
 
@@ -370,7 +370,7 @@ true intended flip time.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.fs">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fs</span></span><a class="headerlink" href="#expyfun.ExperimentController.fs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fs</span></span><a class="headerlink" href="#expyfun.ExperimentController.fs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Playback frequency of the audio controller (samples / second).</p>
 </dd></dl>
 
@@ -570,7 +570,7 @@ release event.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.id_types">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">id_types</span></span><a class="headerlink" href="#expyfun.ExperimentController.id_types" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">id_types</span></span><a class="headerlink" href="#expyfun.ExperimentController.id_types" title="Permalink to this definition">¶</a></dt>
 <dd><p>Trial ID types needed for each trial.</p>
 </dd></dl>
 
@@ -704,19 +704,19 @@ with shape (1, N), (2, N), or (N,) dtype float32.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.noise_db">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">noise_db</span></span><a class="headerlink" href="#expyfun.ExperimentController.noise_db" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noise_db</span></span><a class="headerlink" href="#expyfun.ExperimentController.noise_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sound power in dB of the background noise.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.on_every_flip_functions">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">on_every_flip_functions</span></span><a class="headerlink" href="#expyfun.ExperimentController.on_every_flip_functions" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">on_every_flip_functions</span></span><a class="headerlink" href="#expyfun.ExperimentController.on_every_flip_functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current stack of functions called on every flip.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.on_next_flip_functions">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">on_next_flip_functions</span></span><a class="headerlink" href="#expyfun.ExperimentController.on_next_flip_functions" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">on_next_flip_functions</span></span><a class="headerlink" href="#expyfun.ExperimentController.on_next_flip_functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current stack of functions to be called on next flip.</p>
 </dd></dl>
 
@@ -1081,13 +1081,13 @@ intended flip time.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.stim_db">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stim_db</span></span><a class="headerlink" href="#expyfun.ExperimentController.stim_db" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stim_db</span></span><a class="headerlink" href="#expyfun.ExperimentController.stim_db" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sound power in dB of the stimuli.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.stim_fs">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">stim_fs</span></span><a class="headerlink" href="#expyfun.ExperimentController.stim_fs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stim_fs</span></span><a class="headerlink" href="#expyfun.ExperimentController.stim_fs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sampling rate at which the stimuli were generated.</p>
 </dd></dl>
 
@@ -1508,7 +1508,7 @@ processing prior to calling <a class="reference internal" href="#expyfun.Experim
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.ExperimentController.window">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">window</span></span><a class="headerlink" href="#expyfun.ExperimentController.window" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">window</span></span><a class="headerlink" href="#expyfun.ExperimentController.window" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pyglet visual window handle.</p>
 </dd></dl>
 
@@ -1666,7 +1666,7 @@ time the data line was written from the master clock.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-07-16.<br/>
+        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-11-15.<br/>
     </p>
   </div>
 </footer>

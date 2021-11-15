@@ -8,10 +8,10 @@
     <title>expyfun.TDTController &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/gallery-rendered-html.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -27,9 +27,9 @@
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js "></script>
 <script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
-<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js "></script>
 <script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
 
 
@@ -113,7 +113,7 @@
 <h1>expyfun.TDTController<a class="headerlink" href="#expyfun-tdtcontroller" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="expyfun.TDTController">
-<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">expyfun.</span></span><span class="sig-name descname"><span class="pre">TDTController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdt_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L67-L400"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.TDTController" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyfun.</span></span><span class="sig-name descname"><span class="pre">TDTController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tdt_params</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ec</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_tdt_controller.py#L67-L400"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.TDTController" title="Permalink to this definition">¶</a></dt>
 <dd><p>Interface for TDT audio output, stamping, and responses.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -167,13 +167,13 @@ the configuration file.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.TDTController.circuit">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">circuit</span></span><a class="headerlink" href="#expyfun.TDTController.circuit" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">circuit</span></span><a class="headerlink" href="#expyfun.TDTController.circuit" title="Permalink to this definition">¶</a></dt>
 <dd><p>TDT circuit path.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.TDTController.fs">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">fs</span></span><a class="headerlink" href="#expyfun.TDTController.fs" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fs</span></span><a class="headerlink" href="#expyfun.TDTController.fs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Playback frequency of the audio (samples / second).</p>
 </dd></dl>
 
@@ -213,7 +213,7 @@ the configuration file.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.TDTController.interface">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">interface</span></span><a class="headerlink" href="#expyfun.TDTController.interface" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">interface</span></span><a class="headerlink" href="#expyfun.TDTController.interface" title="Permalink to this definition">¶</a></dt>
 <dd><p>String representation of TDT interface (‘USB’ or ‘GB’).</p>
 </dd></dl>
 
@@ -240,7 +240,7 @@ array with dtype ‘float32’.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.TDTController.model">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#expyfun.TDTController.model" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#expyfun.TDTController.model" title="Permalink to this definition">¶</a></dt>
 <dd><p>String representation of TDT model name (‘RM1’, ‘RP2’, etc).</p>
 </dd></dl>
 
@@ -252,7 +252,7 @@ array with dtype ‘float32’.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.TDTController.playing">
-<em class="property"><span class="pre">property</span> </em><span class="sig-name descname"><span class="pre">playing</span></span><a class="headerlink" href="#expyfun.TDTController.playing" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">playing</span></span><a class="headerlink" href="#expyfun.TDTController.playing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Is a sound currently playing</p>
 </dd></dl>
 
@@ -398,7 +398,7 @@ If None, will use twice the trigger duration (50% duty cycle).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-07-16.<br/>
+        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-11-15.<br/>
     </p>
   </div>
 </footer>
