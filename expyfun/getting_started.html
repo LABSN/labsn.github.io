@@ -177,15 +177,31 @@ see <a class="reference internal" href="parallel_installation.html#parallel-inst
 </li>
 </ul>
 <p>To get started quickly, this should suffice for conda users on most systems:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda create -n expy <span class="nv">python</span><span class="o">=</span><span class="m">3</span> numpy scipy matplotlib pandas pyglet h5py joblib pillow -c conda-forge
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda create -n expy mne pyglet -c conda-forge
 <span class="gp">$ </span>conda activate expy
-<span class="gp">$ </span>pip install mne pyparallel rtmixer expyfun
+<span class="gp">$ </span>pip install pyparallel rtmixer
+<span class="gp">$ </span>pip install git+https://github.com/labsn/expyfun
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">expy</span></code> can be replaced with whatever name you find convenient. If you
-cannot (or don’t want to) use conda-forge as a package source, remove
-<code class="docutils literal notranslate"><span class="pre">-c</span> <span class="pre">conda-forge</span></code> from the first command above, and move <code class="docutils literal notranslate"><span class="pre">pyglet</span></code> from the
-conda line to the pip line.</p>
+cannot (or don’t want to) use conda-forge as a package source, you’ll have to
+do this instead:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda create -n expy <span class="nv">python</span><span class="o">=</span><span class="m">3</span> numpy scipy matplotlib pandas h5py joblib pillow
+<span class="gp">$ </span>conda activate expy
+<span class="gp">$ </span>pip install mne pyglet pyparallel rtmixer
+<span class="gp">$ </span>pip install git+https://github.com/labsn/expyfun
+</pre></div>
+</div>
+<p>If you prefer using pip for everything, here are the minimum requirements:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install mne matplotlib pyglet pillow
+<span class="gp">$ </span>pip install git+https://github.com/labsn/expyfun
+</pre></div>
+</div>
+<p>and this does a full pip install of all required and optional dependencies:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install mne matplotlib pyglet pillow rtmixer pyparallel pandas joblib h5py TDTPy
+<span class="gp">$ </span>pip install git+https://github.com/labsn/expyfun
+</pre></div>
+</div>
 </section>
 <section id="expyfun">
 <h3><a class="toc-backref" href="#id4">Expyfun</a><a class="headerlink" href="#expyfun" title="Permalink to this headline">¶</a></h3>
@@ -268,36 +284,36 @@ an <code class="docutils literal notranslate"><span class="pre">expyfun.json</sp
 get the path to your config file. Some sample configurations:</p>
 <ul>
 <li><p>A TDT-based M/EEG+pupillometry machine:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="nt">&quot;AUDIO_CONTROLLER&quot;</span><span class="p">:</span> <span class="s2">&quot;tdt&quot;</span><span class="p">,</span>
-<span class="nt">&quot;EXPYFUN_EYELINK&quot;</span><span class="p">:</span> <span class="s2">&quot;100.1.1.1&quot;</span><span class="p">,</span>
-<span class="nt">&quot;RESPONSE_DEVICE&quot;</span><span class="p">:</span> <span class="s2">&quot;keyboard&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_DISTANCE&quot;</span><span class="p">:</span> <span class="s2">&quot;100&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_WIDTH&quot;</span><span class="p">:</span> <span class="s2">&quot;51&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TDT_DELAY&quot;</span><span class="p">:</span> <span class="s2">&quot;44&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TDT_INTERFACE&quot;</span><span class="p">:</span> <span class="s2">&quot;GB&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TDT_MODEL&quot;</span><span class="p">:</span> <span class="s2">&quot;RZ6&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TDT_TRIG_DELAY&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TRIGGER_CONTROLLER&quot;</span><span class="p">:</span> <span class="s2">&quot;tdt&quot;</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="nt">&quot;AUDIO_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tdt&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;EXPYFUN_EYELINK&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100.1.1.1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;RESPONSE_DEVICE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyboard&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SCREEN_DISTANCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SCREEN_WIDTH&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;51&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;TDT_DELAY&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;44&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;TDT_INTERFACE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GB&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;TDT_MODEL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RZ6&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;TDT_TRIG_DELAY&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;TRIGGER_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tdt&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
 <li><p>A sound-card-based EEG system:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="nt">&quot;AUDIO_CONTROLLER&quot;</span><span class="p">:</span> <span class="s2">&quot;sound_card&quot;</span><span class="p">,</span>
-<span class="nt">&quot;RESPONSE_DEVICE&quot;</span><span class="p">:</span> <span class="s2">&quot;keyboard&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_DISTANCE&quot;</span><span class="p">:</span> <span class="s2">&quot;50&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_SIZE_PIX&quot;</span><span class="p">:</span> <span class="s2">&quot;1920,1080&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_WIDTH&quot;</span><span class="p">:</span> <span class="s2">&quot;53&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_API&quot;</span><span class="p">:</span> <span class="s2">&quot;ASIO&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_BACKEND&quot;</span><span class="p">:</span> <span class="s2">&quot;rtmixer&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_FIXED_DELAY&quot;</span><span class="p">:</span> <span class="mf">0.03</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_FS&quot;</span><span class="p">:</span> <span class="mi">48000</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;ASIO Fireface USB&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_TRIGGER_CHANNELS&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-<span class="nt">&quot;TRIGGER_CONTROLLER&quot;</span><span class="p">:</span> <span class="s2">&quot;sound_card&quot;</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="nt">&quot;AUDIO_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sound_card&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;RESPONSE_DEVICE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyboard&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SCREEN_DISTANCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;50&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SCREEN_SIZE_PIX&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1920,1080&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SCREEN_WIDTH&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;53&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SOUND_CARD_API&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ASIO&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SOUND_CARD_BACKEND&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rtmixer&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SOUND_CARD_FIXED_DELAY&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.03</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SOUND_CARD_FS&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">48000</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SOUND_CARD_NAME&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ASIO Fireface USB&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;SOUND_CARD_TRIGGER_CHANNELS&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"></span>
+<span class="nt">&quot;TRIGGER_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sound_card&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -322,7 +338,7 @@ static version of expyfun once an experiment is in its finalized state.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2021, expyfun developers. Last updated on 2021-11-15.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-01-03.<br/>
     </p>
   </div>
 </footer>
