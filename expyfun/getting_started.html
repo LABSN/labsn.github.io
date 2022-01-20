@@ -177,7 +177,7 @@ see <a class="reference internal" href="parallel_installation.html#parallel-inst
 </li>
 </ul>
 <p>To get started quickly, this should suffice for conda users on most systems:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda create -n expy mne pyglet -c conda-forge
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda create -n expy mne <span class="s2">&quot;pyglet&lt;1.6&quot;</span> -c conda-forge
 <span class="gp">$ </span>conda activate expy
 <span class="gp">$ </span>pip install pyparallel rtmixer
 <span class="gp">$ </span>pip install git+https://github.com/labsn/expyfun
@@ -188,25 +188,30 @@ cannot (or don’t want to) use conda-forge as a package source, you’ll have t
 do this instead:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda create -n expy <span class="nv">python</span><span class="o">=</span><span class="m">3</span> numpy scipy matplotlib pandas h5py joblib pillow
 <span class="gp">$ </span>conda activate expy
-<span class="gp">$ </span>pip install mne pyglet pyparallel rtmixer
+<span class="gp">$ </span>pip install mne <span class="s2">&quot;pyglet&lt;1.6&quot;</span> pyparallel rtmixer
 <span class="gp">$ </span>pip install git+https://github.com/labsn/expyfun
 </pre></div>
 </div>
 <p>If you prefer using pip for everything, here are the minimum requirements:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install mne matplotlib pyglet pillow
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install mne matplotlib <span class="s2">&quot;pyglet&lt;1.6&quot;</span> pillow
 <span class="gp">$ </span>pip install git+https://github.com/labsn/expyfun
 </pre></div>
 </div>
 <p>and this does a full pip install of all required and optional dependencies:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install mne matplotlib pyglet pillow rtmixer pyparallel pandas joblib h5py TDTPy
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install mne matplotlib <span class="s2">&quot;pyglet&lt;1.6&quot;</span> pillow
+<span class="gp">$ </span>pip install rtmixer pyparallel pandas joblib h5py TDTPy
 <span class="gp">$ </span>pip install git+https://github.com/labsn/expyfun
 </pre></div>
 </div>
+<p>Note that the pyglet package for the recommended installs is constrained to version 1.5, as this
+will be the last version compatible with legacy OpenGL (see pypi.org/project/pyglet/). If
+you prefer to download pyglet via its github repository, please use the pyglet-1.5-maintenance
+branch.</p>
 </section>
 <section id="expyfun">
 <h3><a class="toc-backref" href="#id4">Expyfun</a><a class="headerlink" href="#expyfun" title="Permalink to this headline">¶</a></h3>
 <p>The recommended way to install expyfun on
-development machines is to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> the reposity then do:</p>
+development machines is to <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> the repository then do:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install -e .
 </pre></div>
 </div>
@@ -338,7 +343,7 @@ static version of expyfun once an experiment is in its finalized state.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-01-19.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-01-20.<br/>
     </p>
   </div>
 </footer>
