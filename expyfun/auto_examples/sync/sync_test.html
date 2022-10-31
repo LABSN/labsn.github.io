@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>A-V sync test &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -111,11 +113,11 @@
       
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-sync-sync-test-py"><span class="std std-ref">here</span></a>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-sync-sync-test-py"><span class="std std-ref">Go to the end</span></a>
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="a-v-sync-test">
-<span id="sphx-glr-auto-examples-sync-sync-test-py"></span><h1>A-V sync test<a class="headerlink" href="#a-v-sync-test" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-sync-sync-test-py"></span><h1>A-V sync test<a class="headerlink" href="#a-v-sync-test" title="Permalink to this heading">¶</a></h1>
 <p>This example tests synchronization between the screen and the auditory/visual
 playback. If a given machine (experimenta or development) is configured
 correctly:</p>
@@ -143,27 +145,27 @@ you are using a projector, your computer screen resolution (and
 projector, as resolution conversion can lead to visual display jitter.</p>
 </div>
 <img src="../../_images/sphx_glr_sync_test_001.png" srcset="../../_images/sphx_glr_sync_test_001.png" alt="sync test" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: SyncTest
-date: 2022-02-14 22_15_30.771840
+date: 2022-10-31 21_35_08.737998
 file: /home/circleci/project/examples/sync/sync_test.py
 participant: s
 session: 0
-2022-02-14 22:15:30,772 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2022-02-14 22:15:30,772 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2022-02-14 22:15:30,944 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100). Nothing will be done about this because suppress_resamp is &quot;True&quot;
-2022-02-14 22:15:30,944 - INFO    - Expyfun: Setting up screen
-2022-02-14 22:15:30,975 - EXP     - Expyfun: Set screen visibility True
-2022-02-14 22:15:31,009 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fdd859b8490&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2022-02-14 22:15:31,009 - INFO    - Expyfun: Initializing dummy triggering mode
-2022-02-14 22:15:31,010 - INFO    - Expyfun: Initialization complete
-2022-02-14 22:15:31,010 - EXP     - Expyfun: Participant: s
-2022-02-14 22:15:31,010 - EXP     - Expyfun: Session: 0
-2022-02-14 22:15:31,012 - EXP     - Expyfun: Loading 200 samples to buffer
-2022-02-14 22:15:31,046 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2022-02-14 22:15:31,049 - EXP     - Stamping TTL triggers: [1]
-2022-02-14 22:15:31,308 - EXP     - Stamping TTL triggers: [2, 4, 8]
-2022-02-14 22:15:31,369 - EXP     - Expyfun: Audio stopped and reset.
-2022-02-14 22:15:31,369 - INFO    - Expyfun: Exiting
-2022-02-14 22:15:31,373 - EXP     - Expyfun: Audio stopped and reset.
+2022-10-31 21:35:08,738 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2022-10-31 21:35:08,739 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2022-10-31 21:35:08,908 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2022-10-31 21:35:08,908 - INFO    - Expyfun: Setting up screen
+2022-10-31 21:35:08,939 - EXP     - Expyfun: Set screen visibility True
+2022-10-31 21:35:08,975 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f8093573fd0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2022-10-31 21:35:08,975 - INFO    - Expyfun: Initializing dummy triggering mode
+2022-10-31 21:35:08,976 - INFO    - Expyfun: Initialization complete
+2022-10-31 21:35:08,976 - EXP     - Expyfun: Participant: s
+2022-10-31 21:35:08,976 - EXP     - Expyfun: Session: 0
+2022-10-31 21:35:08,978 - EXP     - Expyfun: Loading 200 samples to buffer
+2022-10-31 21:35:09,006 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2022-10-31 21:35:09,009 - EXP     - Stamping TTL triggers: [1]
+2022-10-31 21:35:09,232 - EXP     - Stamping TTL triggers: [2, 4, 8]
+2022-10-31 21:35:09,293 - EXP     - Expyfun: Audio stopped and reset.
+2022-10-31 21:35:09,294 - INFO    - Expyfun: Exiting
+2022-10-31 21:35:09,297 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -214,8 +216,8 @@ session: 0
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.718 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sync-test-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.638 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sync-test-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/39dd3714bef9d11371c8a90ec603b492/sync_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sync_test.py</span></code></a></p>
 </div>
@@ -238,7 +240,7 @@ session: 0
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

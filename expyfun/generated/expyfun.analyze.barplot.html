@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.analyze.barplot &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,7 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.analyze.barplot</a><ul>
+<li><a class="reference internal" href="#expyfun.analyze.barplot"><code class="docutils literal notranslate"><span class="pre">barplot()</span></code></a></li>
 <li><a class="reference internal" href="#examples-using-expyfun-analyze-barplot">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.barplot</span></code></a></li>
 </ul>
 </li>
@@ -113,17 +116,17 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-analyze-barplot">
-<h1>expyfun.analyze.barplot<a class="headerlink" href="#expyfun-analyze-barplot" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.analyze.barplot<a class="headerlink" href="#expyfun-analyze-barplot" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.analyze.barplot">
-<span class="sig-prename descclassname"><span class="pre">expyfun.analyze.</span></span><span class="sig-name descname"><span class="pre">barplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_bars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eq_group_widths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bracket_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bracket_inline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bracket_group_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bracket_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pval_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_viz.py#L80-L457"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.analyze.barplot" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">expyfun.analyze.</span></span><span class="sig-name descname"><span class="pre">barplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ylim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_bars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eq_group_widths</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bracket_text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bracket_inline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bracket_group_lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bar_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">err_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bracket_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pval_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">figure_kwargs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smart_defaults</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_viz.py#L80-L457"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.analyze.barplot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Makes barplots w/ optional line overlays, grouping, &amp; signif. brackets.</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>h</strong><span class="classifier">array-like</span></dt><dd><p>If <em class="xref py py-obj">h</em> is 2-dimensional, heights will be calculated as means along
 the axis given by <em class="xref py py-obj">axis</em>. If <em class="xref py py-obj">h</em> is of lower dimension, it is
-treated as raw height values. If <em class="xref py py-obj">h</em> is a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.4.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> and
+treated as raw height values. If <em class="xref py py-obj">h</em> is a <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame" title="(in pandas v1.5.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code></a> and
 <em class="xref py py-obj">bar_names</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, <em class="xref py py-obj">bar_names</em> will be inferred from the
 DataFrame’s <em class="xref py py-obj">column</em> labels (if <code class="docutils literal notranslate"><span class="pre">axis=0</span></code>) or <em class="xref py py-obj">index</em> labels.</p>
 </dd>
@@ -206,7 +209,7 @@ a single subplot will be created.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt><strong>p</strong><span class="classifier">handle for the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.subplot</span></code> instance.</span></dt><dd></dd>
 <dt><strong>b</strong><span class="classifier">handle for the <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot.bar</span></code> instance.</span></dt><dd></dd>
@@ -238,11 +241,11 @@ bracket color: dark gray (30%)</p>
 </dd></dl>
 
 <section id="examples-using-expyfun-analyze-barplot">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.barplot</span></code><a class="headerlink" href="#examples-using-expyfun-analyze-barplot" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This example simulates some 2AFC data and demonstrates the analysis functions expyfun.analyze.d..."><img alt="Analysis demo" src="../_images/sphx_glr_analysis_demo_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.barplot</span></code><a class="headerlink" href="#examples-using-expyfun-analyze-barplot" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example simulates some 2AFC data and demonstrates the analysis functions expyfun.analyze.d..."><img alt="Analysis demo" src="../_images/sphx_glr_analysis_demo_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/analysis/analysis_demo.html#sphx-glr-auto-examples-analysis-analysis-demo-py"><span class="std std-ref">Analysis demo</span></a></p>
   <div class="sphx-glr-thumbnail-title">Analysis demo</div>
-</div><div style='clear:both'></div></section>
+</div></div><div style='clear:both'></div></section>
 </section>
 
 
@@ -257,7 +260,7 @@ bracket color: dark gray (30%)</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

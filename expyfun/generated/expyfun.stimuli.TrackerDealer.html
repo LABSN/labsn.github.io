@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.stimuli.TrackerDealer &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,14 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.stimuli.TrackerDealer</a><ul>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerDealer"><code class="docutils literal notranslate"><span class="pre">TrackerDealer</span></code></a><ul>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.history"><code class="docutils literal notranslate"><span class="pre">TrackerDealer.history()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.next"><code class="docutils literal notranslate"><span class="pre">TrackerDealer.next()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.respond"><code class="docutils literal notranslate"><span class="pre">TrackerDealer.respond()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.stopped"><code class="docutils literal notranslate"><span class="pre">TrackerDealer.stopped</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.trackers"><code class="docutils literal notranslate"><span class="pre">TrackerDealer.trackers</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#examples-using-expyfun-stimuli-trackerdealer">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerDealer</span></code></a></li>
 </ul>
 </li>
@@ -113,13 +123,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-stimuli-trackerdealer">
-<h1>expyfun.stimuli.TrackerDealer<a class="headerlink" href="#expyfun-stimuli-trackerdealer" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.stimuli.TrackerDealer<a class="headerlink" href="#expyfun-stimuli-trackerdealer" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="expyfun.stimuli.TrackerDealer">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyfun.stimuli.</span></span><span class="sig-name descname"><span class="pre">TrackerDealer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trackers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_lag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pace_rule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'reversals'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rand</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L779-L983"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class for selecting and pacing independent simultaneous trackers</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>callback</strong><span class="classifier">callable | ExperimentController | None</span></dt><dd><p>The function that will be used to print the data, usually to the
 experiment .tab file. It should follow the prototype of
@@ -143,7 +153,7 @@ seeded based on the current time.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>dealer</strong><span class="classifier">instance of TrackerDealer</span></dt><dd><p>The tracker dealer object.</p>
 </dd>
@@ -161,14 +171,14 @@ pace.</p>
 <span class="sig-name descname"><span class="pre">history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_skips</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L942-L967"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.history" title="Permalink to this definition">¶</a></dt>
 <dd><p>The history of the dealt trials and the responses</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>include_skips</strong><span class="classifier">bool</span></dt><dd><p>Whether or not to include trials where a tracker was dealt but
 no response was made.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>tracker_history</strong><span class="classifier">list of int</span></dt><dd><p>The index of which tracker was dealt on each trial. Note that
 the ints in this list correspond the the raveled index.</p>
@@ -187,7 +197,7 @@ the ints in this list correspond the the raveled index.</p>
 <span class="sig-name descname"><span class="pre">next</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L869-L892"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.next" title="Permalink to this definition">¶</a></dt>
 <dd><p>Selects the tracker from which the next trial should be run</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>subscripts</strong><span class="classifier">list-like</span></dt><dd><p>The position of the selected tracker.</p>
 </dd>
@@ -203,7 +213,7 @@ the ints in this list correspond the the raveled index.</p>
 <span class="sig-name descname"><span class="pre">respond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">correct</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L921-L940"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the current tracker based on the last response</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>correct</strong><span class="classifier">boolean</span></dt><dd><p>Was the most recent subject response correct?</p>
 </dd>
@@ -227,14 +237,14 @@ the ints in this list correspond the the raveled index.</p>
 </dd></dl>
 
 <section id="examples-using-expyfun-stimuli-trackerdealer">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerDealer</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-trackerdealer" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking from above and below" src="../_images/sphx_glr_tracker_dealer_doublesided_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerDealer</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-trackerdealer" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking from above and below" src="../_images/sphx_glr_tracker_dealer_doublesided_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/tracker_dealer_doublesided.html#sphx-glr-auto-examples-experiments-tracker-dealer-doublesided-py"><span class="std std-ref">Adaptive tracking from above and below</span></a></p>
   <div class="sphx-glr-thumbnail-title">Adaptive tracking from above and below</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking for two trial types and tracker reconstruction from .tab" src="../_images/sphx_glr_tracker_dealer_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/tracker_dealer.html#sphx-glr-auto-examples-experiments-tracker-dealer-py"><span class="std std-ref">Adaptive tracking for two trial types and tracker reconstruction from .tab</span></a></p>
   <div class="sphx-glr-thumbnail-title">Adaptive tracking for two trial types and tracker reconstruction from .tab</div>
-</div></section>
+</div></div></section>
 </section>
 
 
@@ -249,7 +259,7 @@ the ints in this list correspond the the raveled index.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

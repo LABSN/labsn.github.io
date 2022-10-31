@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.analyze.press_times_to_hmfc &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -78,7 +80,10 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.press_times_to_hmfc</a></li>
+<li><a class="reference internal" href="#">expyfun.analyze.press_times_to_hmfc</a><ul>
+<li><a class="reference internal" href="#expyfun.analyze.press_times_to_hmfc"><code class="docutils literal notranslate"><span class="pre">press_times_to_hmfc()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -111,13 +116,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-analyze-press-times-to-hmfc">
-<h1>expyfun.analyze.press_times_to_hmfc<a class="headerlink" href="#expyfun-analyze-press-times-to-hmfc" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.analyze.press_times_to_hmfc<a class="headerlink" href="#expyfun-analyze-press-times-to-hmfc" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.analyze.press_times_to_hmfc">
 <span class="sig-prename descclassname"><span class="pre">expyfun.analyze.</span></span><span class="sig-name descname"><span class="pre">press_times_to_hmfc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">presses</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targets</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">foils</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'counts'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L15-L119"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.analyze.press_times_to_hmfc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert press times to hits/misses/FA/CR and reaction times</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
 <dt><strong>presses</strong><span class="classifier">list</span></dt><dd><p>List of press times (in seconds).</p>
 </dd>
@@ -144,7 +149,7 @@ requested type is returned (not within a tuple).</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>hmfco</strong><span class="classifier">tuple</span></dt><dd><p>5-element tuple of hits, misses, false alarms, correct rejections,
 and other presses (not within the window for a target or a masker).
@@ -177,7 +182,7 @@ to “other” times.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

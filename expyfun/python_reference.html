@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>API Reference &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -117,10 +119,10 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="api-reference">
-<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading">¶</a></h1>
 <p>This is the classes and functions reference of expyfun. Functions are
 grouped by hardware control type.</p>
-<div class="contents local topic" id="contents">
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#experiment-control" id="id1">Experiment control</a></p></li>
 <li><p><a class="reference internal" href="#sound-stimulus-design" id="id2">Sound stimulus design</a></p></li>
@@ -128,16 +130,12 @@ grouped by hardware control type.</p>
 <li><p><a class="reference internal" href="#code-blocks" id="id4">Code blocks</a></p></li>
 <li><p><a class="reference internal" href="#analysis" id="id5">Analysis</a></p></li>
 </ul>
-</div>
+</nav>
 <span class="target" id="module-expyfun"></span><section id="experiment-control">
-<h2><a class="toc-backref" href="#id1">Experiment control</a><a class="headerlink" href="#experiment-control" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Experiment control</a><a class="headerlink" href="#experiment-control" title="Permalink to this heading">¶</a></h2>
 <p>Experiment control functions.</p>
 </section>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ExperimentController</span></code></a>(exp_name[, ...])</p></td>
 <td><p>Interface for hardware control (audio, buttonbox, eye tracker, etc.)</p></td>
@@ -190,14 +188,10 @@ grouped by hardware control type.</p>
 </tbody>
 </table>
 <span class="target" id="module-expyfun.stimuli"></span><section id="sound-stimulus-design">
-<h2><a class="toc-backref" href="#id2">Sound stimulus design</a><a class="headerlink" href="#sound-stimulus-design" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Sound stimulus design</a><a class="headerlink" href="#sound-stimulus-design" title="Permalink to this heading">¶</a></h2>
 <p>Experiment sound stimulus functions.</p>
 </section>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/expyfun.stimuli.CRMPreload.html#expyfun.stimuli.CRMPreload" title="expyfun.stimuli.CRMPreload"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CRMPreload</span></code></a>(fs[, ref_rms, ramp_dur, stereo, path])</p></td>
 <td><p>Store the CRM corpus in memory for fast access.</p></td>
@@ -256,14 +250,10 @@ grouped by hardware control type.</p>
 </tbody>
 </table>
 <span class="target" id="module-expyfun.io"></span><section id="file-i-o">
-<h2><a class="toc-backref" href="#id3">File I/O</a><a class="headerlink" href="#file-i-o" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">File I/O</a><a class="headerlink" href="#file-i-o" title="Permalink to this heading">¶</a></h2>
 <p>File reading and writing routines.</p>
 </section>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/expyfun.io.read_hdf5.html#expyfun.io.read_hdf5" title="expyfun.io.read_hdf5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_hdf5</span></code></a>(fname)</p></td>
 <td><p>Read python object from HDF5 format using h5io/h5py</p></td>
@@ -291,11 +281,7 @@ grouped by hardware control type.</p>
 </tr>
 </tbody>
 </table>
-<span class="target" id="module-expyfun.visual"></span><table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<span class="target" id="module-expyfun.visual"></span><table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="expyfun.visual.Circle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Circle</span></code></a>(ec[, radius, pos, units, n_edges, ...])</p></td>
 <td><p>A circle or ellipse.</p></td>
@@ -333,14 +319,10 @@ grouped by hardware control type.</p>
 </tbody>
 </table>
 <span class="target" id="module-expyfun.codeblocks"></span><section id="code-blocks">
-<h2><a class="toc-backref" href="#id4">Code blocks</a><a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Code blocks</a><a class="headerlink" href="#code-blocks" title="Permalink to this heading">¶</a></h2>
 <p>Basic building blocks for standard experimental protocols.</p>
 </section>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/expyfun.codeblocks.find_pupil_dynamic_range.html#expyfun.codeblocks.find_pupil_dynamic_range" title="expyfun.codeblocks.find_pupil_dynamic_range"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_pupil_dynamic_range</span></code></a>(ec, el[, prompt, ...])</p></td>
 <td><p>Find pupil dynamic range</p></td>
@@ -352,14 +334,10 @@ grouped by hardware control type.</p>
 </table>
 <p><a class="reference internal" href="#module-expyfun.analyze" title="expyfun.analyze"><code class="xref py py-mod docutils literal notranslate"><span class="pre">expyfun.analyze</span></code></a>:</p>
 <span class="target" id="module-expyfun.analyze"></span><section id="analysis">
-<h2><a class="toc-backref" href="#id5">Analysis</a><a class="headerlink" href="#analysis" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Analysis</a><a class="headerlink" href="#analysis" title="Permalink to this heading">¶</a></h2>
 <p>Tools for data analysis.</p>
 </section>
-<table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
+<table class="autosummary longtable docutils align-default">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/expyfun.analyze.barplot.html#expyfun.analyze.barplot" title="expyfun.analyze.barplot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">barplot</span></code></a>(h[, axis, ylim, err_bars, lines, ...])</p></td>
 <td><p>Makes barplots w/ optional line overlays, grouping, &amp; signif.</p></td>
@@ -410,7 +388,7 @@ grouped by hardware control type.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

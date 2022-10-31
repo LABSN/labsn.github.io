@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.analyze.sigmoid &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,7 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.analyze.sigmoid</a><ul>
+<li><a class="reference internal" href="#expyfun.analyze.sigmoid"><code class="docutils literal notranslate"><span class="pre">sigmoid()</span></code></a></li>
 <li><a class="reference internal" href="#examples-using-expyfun-analyze-sigmoid">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.sigmoid</span></code></a></li>
 </ul>
 </li>
@@ -113,13 +116,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-analyze-sigmoid">
-<h1>expyfun.analyze.sigmoid<a class="headerlink" href="#expyfun-analyze-sigmoid" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.analyze.sigmoid<a class="headerlink" href="#expyfun-analyze-sigmoid" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.analyze.sigmoid">
 <span class="sig-prename descclassname"><span class="pre">expyfun.analyze.</span></span><span class="sig-name descname"><span class="pre">sigmoid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midpt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slope</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L156-L183"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.analyze.sigmoid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate sigmoidal values along the x-axis</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>x</strong><span class="classifier">array-like</span></dt><dd><p>x-values to calculate the sigmoidal values from.</p>
 </dd>
@@ -133,7 +136,7 @@
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>y</strong><span class="classifier">array</span></dt><dd><p>The y-values of the sigmoid evaluated at x.</p>
 </dd>
@@ -143,8 +146,8 @@
 </dd></dl>
 
 <section id="examples-using-expyfun-analyze-sigmoid">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.sigmoid</span></code><a class="headerlink" href="#examples-using-expyfun-analyze-sigmoid" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking from above and below" src="../_images/sphx_glr_tracker_dealer_doublesided_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.sigmoid</span></code><a class="headerlink" href="#examples-using-expyfun-analyze-sigmoid" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking from above and below" src="../_images/sphx_glr_tracker_dealer_doublesided_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/tracker_dealer_doublesided.html#sphx-glr-auto-examples-experiments-tracker-dealer-doublesided-py"><span class="std std-ref">Adaptive tracking from above and below</span></a></p>
   <div class="sphx-glr-thumbnail-title">Adaptive tracking from above and below</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking for two trial types and tracker reconstruction from .tab" src="../_images/sphx_glr_tracker_dealer_thumb.png" />
@@ -156,7 +159,7 @@
 </div><div class="sphx-glr-thumbcontainer" tooltip="This shows how to make and use an adaptive track with the modified Hughson-Westlake (MHW) proce..."><img alt="Do an adaptive track staircase with MHW procedure" src="../_images/sphx_glr_tracker_staircase_MHW_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/stimuli/tracker_staircase_MHW.html#sphx-glr-auto-examples-stimuli-tracker-staircase-mhw-py"><span class="std std-ref">Do an adaptive track staircase with MHW procedure</span></a></p>
   <div class="sphx-glr-thumbnail-title">Do an adaptive track staircase with MHW procedure</div>
-</div><div style='clear:both'></div></section>
+</div></div><div style='clear:both'></div></section>
 </section>
 
 
@@ -171,7 +174,7 @@
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

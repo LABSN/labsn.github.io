@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.visual.ProgressBar &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,11 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.visual.ProgressBar</a><ul>
+<li><a class="reference internal" href="#expyfun.visual.ProgressBar"><code class="docutils literal notranslate"><span class="pre">ProgressBar</span></code></a><ul>
+<li><a class="reference internal" href="#expyfun.visual.ProgressBar.draw"><code class="docutils literal notranslate"><span class="pre">ProgressBar.draw()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.visual.ProgressBar.update_bar"><code class="docutils literal notranslate"><span class="pre">ProgressBar.update_bar()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#examples-using-expyfun-visual-progressbar">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.visual.ProgressBar</span></code></a></li>
 </ul>
 </li>
@@ -113,7 +120,7 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-visual-progressbar">
-<h1>expyfun.visual.ProgressBar<a class="headerlink" href="#expyfun-visual-progressbar" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.visual.ProgressBar<a class="headerlink" href="#expyfun-visual-progressbar" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="expyfun.visual.ProgressBar">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyfun.visual.</span></span><span class="sig-name descname"><span class="pre">ProgressBar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('g',</span> <span class="pre">'w')</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L858-L918"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.visual.ProgressBar" title="Permalink to this definition">¶</a></dt>
@@ -121,7 +128,7 @@
 <p>This uses two rectangles, one outline, and one solid to show how much
 progress has been made in the experiment.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>ec</strong><span class="classifier">instance of ExperimentController</span></dt><dd><p>Parent EC.</p>
 </dd>
@@ -148,7 +155,7 @@ white.</p>
 <span class="sig-name descname"><span class="pre">update_bar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">percent</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L901-L913"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.visual.ProgressBar.update_bar" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the progress of the bar.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>percent: float</strong></dt><dd><p>The percentage of the bar to be filled. Must be between 0 and 1.</p>
 </dd>
@@ -160,11 +167,11 @@ white.</p>
 </dd></dl>
 
 <section id="examples-using-expyfun-visual-progressbar">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.visual.ProgressBar</span></code><a class="headerlink" href="#examples-using-expyfun-visual-progressbar" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This example shows how to display progress between trials using expyfun.visual.ProgressBar."><img alt="ProgressBar demo" src="../_images/sphx_glr_progress_bar_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.visual.ProgressBar</span></code><a class="headerlink" href="#examples-using-expyfun-visual-progressbar" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example shows how to display progress between trials using expyfun.visual.ProgressBar."><img alt="ProgressBar demo" src="../_images/sphx_glr_progress_bar_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/progress_bar.html#sphx-glr-auto-examples-experiments-progress-bar-py"><span class="std std-ref">ProgressBar demo</span></a></p>
   <div class="sphx-glr-thumbnail-title">ProgressBar demo</div>
-</div></section>
+</div></div></section>
 </section>
 
 
@@ -179,7 +186,7 @@ white.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

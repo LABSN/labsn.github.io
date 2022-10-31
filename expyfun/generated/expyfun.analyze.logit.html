@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.analyze.logit &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -77,7 +79,10 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.logit</a></li>
+<li><a class="reference internal" href="#">expyfun.analyze.logit</a><ul>
+<li><a class="reference internal" href="#expyfun.analyze.logit"><code class="docutils literal notranslate"><span class="pre">logit()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -110,13 +115,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-analyze-logit">
-<h1>expyfun.analyze.logit<a class="headerlink" href="#expyfun-analyze-logit" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.analyze.logit<a class="headerlink" href="#expyfun-analyze-logit" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.analyze.logit">
 <span class="sig-prename descclassname"><span class="pre">expyfun.analyze.</span></span><span class="sig-name descname"><span class="pre">logit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prop</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_events</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L122-L153"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.analyze.logit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert proportion (expressed in the range [0, 1]) to logit.</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>prop</strong><span class="classifier">float | array-like</span></dt><dd><p>the occurrence proportion.</p>
 </dd>
@@ -126,7 +131,7 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
 <dt><strong>lgt</strong><span class="classifier"><code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>, with shape matching <code class="docutils literal notranslate"><span class="pre">numpy.array(prop).shape</span></code>.</span></dt><dd></dd>
 </dl>
@@ -135,7 +140,7 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference external" href="https://scipy.github.io/devdocs/reference/generated/scipy.special.logit.html#scipy.special.logit" title="(in SciPy v1.9.0.dev0+1476.1cfbdbc)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.special.logit</span></code></a></dt><dd></dd>
+<dt><a class="reference external" href="https://scipy.github.io/devdocs/reference/generated/scipy.special.logit.html#scipy.special.logit" title="(in SciPy v1.10.0.dev0+2115.99d0cb7)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.special.logit</span></code></a></dt><dd></dd>
 </dl>
 </div>
 </dd></dl>
@@ -154,7 +159,7 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

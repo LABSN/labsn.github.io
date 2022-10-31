@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.stimuli.texture_ERB &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,7 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.stimuli.texture_ERB</a><ul>
+<li><a class="reference internal" href="#expyfun.stimuli.texture_ERB"><code class="docutils literal notranslate"><span class="pre">texture_ERB()</span></code></a></li>
 <li><a class="reference internal" href="#examples-using-expyfun-stimuli-texture-erb">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.texture_ERB</span></code></a></li>
 </ul>
 </li>
@@ -113,13 +116,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-stimuli-texture-erb">
-<h1>expyfun.stimuli.texture_ERB<a class="headerlink" href="#expyfun-stimuli-texture-erb" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.stimuli.texture_ERB<a class="headerlink" href="#expyfun-stimuli-texture-erb" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.stimuli.texture_ERB">
 <span class="sig-prename descclassname"><span class="pre">expyfun.stimuli.</span></span><span class="sig-name descname"><span class="pre">texture_ERB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_freqs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_coh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">('inc',</span> <span class="pre">'nb',</span> <span class="pre">'inc',</span> <span class="pre">'nb')</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24414.0625</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SAM_freq</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_lims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(200,</span> <span class="pre">8000)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_texture.py#L43-L162"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.texture_ERB" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create ERB texture stimulus</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>n_freqs</strong><span class="classifier">int</span></dt><dd><p>Number of tones in mixture (default 20).</p>
 </dd>
@@ -146,7 +149,7 @@ envelope generation.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>x</strong><span class="classifier">ndarray, shape (n_samples,)</span></dt><dd><p>The stimulus, where <code class="docutils literal notranslate"><span class="pre">n_samples</span> <span class="pre">=</span> <span class="pre">len(seq)</span> <span class="pre">*</span> <span class="pre">(fs</span> <span class="pre">*</span> <span class="pre">dur)</span></code>
 (approximately).</p>
@@ -159,11 +162,11 @@ envelope generation.</p>
 </dd></dl>
 
 <section id="examples-using-expyfun-stimuli-texture-erb">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.texture_ERB</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-texture-erb" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This shows how to generate texture coherence stimuli."><img alt="Generate texture stimuli" src="../_images/sphx_glr_texture_stimuli_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.texture_ERB</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-texture-erb" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This shows how to generate texture coherence stimuli."><img alt="Generate texture stimuli" src="../_images/sphx_glr_texture_stimuli_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/stimuli/texture_stimuli.html#sphx-glr-auto-examples-stimuli-texture-stimuli-py"><span class="std std-ref">Generate texture stimuli</span></a></p>
   <div class="sphx-glr-thumbnail-title">Generate texture stimuli</div>
-</div><div style='clear:both'></div></section>
+</div></div><div style='clear:both'></div></section>
 </section>
 
 
@@ -178,7 +181,7 @@ envelope generation.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

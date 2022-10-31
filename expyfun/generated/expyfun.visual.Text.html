@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.visual.Text &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,11 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.visual.Text</a><ul>
+<li><a class="reference internal" href="#expyfun.visual.Text"><code class="docutils literal notranslate"><span class="pre">Text</span></code></a><ul>
+<li><a class="reference internal" href="#expyfun.visual.Text.draw"><code class="docutils literal notranslate"><span class="pre">Text.draw()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.visual.Text.set_color"><code class="docutils literal notranslate"><span class="pre">Text.set_color()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#examples-using-expyfun-visual-text">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.visual.Text</span></code></a></li>
 </ul>
 </li>
@@ -113,13 +120,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-visual-text">
-<h1>expyfun.visual.Text<a class="headerlink" href="#expyfun-visual-text" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.visual.Text<a class="headerlink" href="#expyfun-visual-text" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="expyfun.visual.Text">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyfun.visual.</span></span><span class="sig-name descname"><span class="pre">Text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0,</span> <span class="pre">0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'white'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Arial'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">24</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor_x</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'center'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor_y</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'center'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wrap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L48-L145"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.visual.Text" title="Permalink to this definition">¶</a></dt>
 <dd><p>A text object.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>ec</strong><span class="classifier">instance of ExperimentController</span></dt><dd><p>Parent EC.</p>
 </dd>
@@ -159,7 +166,7 @@ formatting within <code class="docutils literal notranslate"><span class="pre">t
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>text</strong><span class="classifier">instance of Text</span></dt><dd><p>The text object.</p>
 </dd>
@@ -177,7 +184,7 @@ formatting within <code class="docutils literal notranslate"><span class="pre">t
 <span class="sig-name descname"><span class="pre">set_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">color</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L129-L141"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.visual.Text.set_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the text color</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>color</strong><span class="classifier">matplotlib Color | None</span></dt><dd><p>The color. Use None for no color.</p>
 </dd>
@@ -189,8 +196,8 @@ formatting within <code class="docutils literal notranslate"><span class="pre">t
 </dd></dl>
 
 <section id="examples-using-expyfun-visual-text">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.visual.Text</span></code><a class="headerlink" href="#examples-using-expyfun-visual-text" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates differences between the Text and AttrText classes."><img alt="Display text with different formatting methods" src="../_images/sphx_glr_formatted_text_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.visual.Text</span></code><a class="headerlink" href="#examples-using-expyfun-visual-text" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates differences between the Text and AttrText classes."><img alt="Display text with different formatting methods" src="../_images/sphx_glr_formatted_text_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/formatted_text.html#sphx-glr-auto-examples-experiments-formatted-text-py"><span class="std std-ref">Display text with different formatting methods</span></a></p>
   <div class="sphx-glr-thumbnail-title">Display text with different formatting methods</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates how to use a joystick as an input device using button presses and con..."><img alt="Use joystick controls" src="../_images/sphx_glr_joystick_experiment_thumb.png" />
@@ -199,7 +206,7 @@ formatting within <code class="docutils literal notranslate"><span class="pre">t
 </div><div class="sphx-glr-thumbcontainer" tooltip="This shows how to control various properties of a video file in expyfun."><img alt="Video property control" src="../_images/sphx_glr_advanced_video_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/stimuli/advanced_video.html#sphx-glr-auto-examples-stimuli-advanced-video-py"><span class="std std-ref">Video property control</span></a></p>
   <div class="sphx-glr-thumbnail-title">Video property control</div>
-</div></section>
+</div></div></section>
 </section>
 
 
@@ -214,7 +221,7 @@ formatting within <code class="docutils literal notranslate"><span class="pre">t
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

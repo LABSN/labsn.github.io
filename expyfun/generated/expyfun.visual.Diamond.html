@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.visual.Diamond &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,14 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.visual.Diamond</a><ul>
+<li><a class="reference internal" href="#expyfun.visual.Diamond"><code class="docutils literal notranslate"><span class="pre">Diamond</span></code></a><ul>
+<li><a class="reference internal" href="#expyfun.visual.Diamond.draw"><code class="docutils literal notranslate"><span class="pre">Diamond.draw()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.visual.Diamond.set_fill_color"><code class="docutils literal notranslate"><span class="pre">Diamond.set_fill_color()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.visual.Diamond.set_line_color"><code class="docutils literal notranslate"><span class="pre">Diamond.set_line_color()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.visual.Diamond.set_line_width"><code class="docutils literal notranslate"><span class="pre">Diamond.set_line_width()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.visual.Diamond.set_pos"><code class="docutils literal notranslate"><span class="pre">Diamond.set_pos()</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#examples-using-expyfun-visual-diamond">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.visual.Diamond</span></code></a></li>
 </ul>
 </li>
@@ -113,13 +123,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-visual-diamond">
-<h1>expyfun.visual.Diamond<a class="headerlink" href="#expyfun-visual-diamond" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.visual.Diamond<a class="headerlink" href="#expyfun-visual-diamond" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="expyfun.visual.Diamond">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyfun.visual.</span></span><span class="sig-name descname"><span class="pre">Diamond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fill_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'white'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_color</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_width</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L537-L596"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.visual.Diamond" title="Permalink to this definition">¶</a></dt>
 <dd><p>A diamond.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>ec</strong><span class="classifier">instance of ExperimentController</span></dt><dd><p>Parent EC.</p>
 </dd>
@@ -137,7 +147,7 @@ shape e.g. size, position. See <code class="docutils literal notranslate"><span 
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>line</strong><span class="classifier">instance of Rectangle</span></dt><dd><p>The rectangle object.</p>
 </dd>
@@ -155,7 +165,7 @@ shape e.g. size, position. See <code class="docutils literal notranslate"><span 
 <span class="sig-name descname"><span class="pre">set_fill_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fill_color</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L298-L306"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.visual.Diamond.set_fill_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the object color</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>fill_color</strong><span class="classifier">matplotlib Color | None</span></dt><dd><p>The fill color. Use None for no fill.</p>
 </dd>
@@ -169,7 +179,7 @@ shape e.g. size, position. See <code class="docutils literal notranslate"><span 
 <span class="sig-name descname"><span class="pre">set_line_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_color</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L308-L316"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.visual.Diamond.set_line_color" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the object color</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>line_color</strong><span class="classifier">matplotlib Color | None</span></dt><dd><p>The fill color. Use None for no fill.</p>
 </dd>
@@ -183,7 +193,7 @@ shape e.g. size, position. See <code class="docutils literal notranslate"><span 
 <span class="sig-name descname"><span class="pre">set_line_width</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_width</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L318-L330"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.visual.Diamond.set_line_width" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the line width in pixels</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>line_width</strong><span class="classifier">float</span></dt><dd><p>The line width. Must be given in pixels. Due to OpenGL
 limitations, it must be <em class="xref py py-obj">0.0 &lt;= line_width &lt;= 10.0</em>.</p>
@@ -198,7 +208,7 @@ limitations, it must be <em class="xref py py-obj">0.0 &lt;= line_width &lt;= 10
 <span class="sig-name descname"><span class="pre">set_pos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/visual/_visual.py#L570-L596"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.visual.Diamond.set_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the position of the rectangle</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>pos</strong><span class="classifier">array-like</span></dt><dd><p>X, Y, width, height of the rectangle.</p>
 </dd>
@@ -212,14 +222,14 @@ limitations, it must be <em class="xref py py-obj">0.0 &lt;= line_width &lt;= 10
 </dd></dl>
 
 <section id="examples-using-expyfun-visual-diamond">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.visual.Diamond</span></code><a class="headerlink" href="#examples-using-expyfun-visual-diamond" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="expyfun provides multiple methods for drawing simple screen objects."><img alt="Experiment drawing methods" src="../_images/sphx_glr_drawing_methods_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.visual.Diamond</span></code><a class="headerlink" href="#examples-using-expyfun-visual-diamond" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="expyfun provides multiple methods for drawing simple screen objects."><img alt="Experiment drawing methods" src="../_images/sphx_glr_drawing_methods_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/drawing_methods.html#sphx-glr-auto-examples-experiments-drawing-methods-py"><span class="std std-ref">Experiment drawing methods</span></a></p>
   <div class="sphx-glr-thumbnail-title">Experiment drawing methods</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This example demonstrates the different mouse click functionality in the ExperimentController c..."><img alt="Mouse click demo" src="../_images/sphx_glr_mouse_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/mouse.html#sphx-glr-auto-examples-experiments-mouse-py"><span class="std std-ref">Mouse click demo</span></a></p>
   <div class="sphx-glr-thumbnail-title">Mouse click demo</div>
-</div></section>
+</div></div></section>
 </section>
 
 
@@ -234,7 +244,7 @@ limitations, it must be <em class="xref py py-obj">0.0 &lt;= line_width &lt;= 10
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

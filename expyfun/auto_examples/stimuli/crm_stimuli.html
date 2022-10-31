@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Use the CRM corpus &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -114,11 +116,11 @@
       
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-auto-examples-stimuli-crm-stimuli-py"><span class="std std-ref">here</span></a>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-stimuli-crm-stimuli-py"><span class="std std-ref">Go to the end</span></a>
 to download the full example code</p>
 </div>
 <section class="sphx-glr-example-title" id="use-the-crm-corpus">
-<span id="sphx-glr-auto-examples-stimuli-crm-stimuli-py"></span><h1>Use the CRM corpus<a class="headerlink" href="#use-the-crm-corpus" title="Permalink to this headline">¶</a></h1>
+<span id="sphx-glr-auto-examples-stimuli-crm-stimuli-py"></span><h1>Use the CRM corpus<a class="headerlink" href="#use-the-crm-corpus" title="Permalink to this heading">¶</a></h1>
 <p>This shows how to use the CRM corpus functions.</p>
 <p>&#64;author: rkmaddox</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">expyfun._utils</span> <span class="kn">import</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class"><span class="n">_TempDir</span></a>
@@ -135,7 +137,7 @@ to download the full example code</p>
 </pre></div>
 </div>
 <section id="prepare-the-corpus">
-<h2>Prepare the corpus<a class="headerlink" href="#prepare-the-corpus" title="Permalink to this headline">¶</a></h2>
+<h2>Prepare the corpus<a class="headerlink" href="#prepare-the-corpus" title="Permalink to this heading">¶</a></h2>
 <p>For simplicity, here we prepare just two talkers at the native 40000 Hz
 sampling rate.</p>
 <div class="admonition note">
@@ -207,38 +209,38 @@ Valid callsigns are [&#39;charlie&#39;, &#39;ringo&#39;, &#39;laker&#39;, &#39;h
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_crm_stimuli_001.png" srcset="../../_images/sphx_glr_crm_stimuli_001.png" alt="crm stimuli" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: CRM corpus example
-date: 2022-02-14 22_15_23.250906
+date: 2022-10-31 21_35_01.514075
 file: /home/circleci/project/examples/stimuli/crm_stimuli.py
 participant: foo
 session: foo
-2022-02-14 22:15:23,251 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2022-02-14 22:15:23,252 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2022-02-14 22:15:23,442 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2022-02-14 22:15:23,442 - INFO    - Expyfun: Setting up screen
-2022-02-14 22:15:23,466 - EXP     - Expyfun: Set screen visibility True
-2022-02-14 22:15:23,497 - INFO    - Initialized [720 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fdd859b8490&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2022-02-14 22:15:23,497 - INFO    - Expyfun: Initializing dummy triggering mode
-2022-02-14 22:15:23,497 - INFO    - Expyfun: Initialization complete
-2022-02-14 22:15:23,498 - EXP     - Expyfun: Participant: foo
-2022-02-14 22:15:23,498 - EXP     - Expyfun: Session: foo
-2022-02-14 22:15:23,601 - WARNING - Expyfun: Resampling 2.01 seconds of audio
-2022-02-14 22:15:23,647 - WARNING - Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
-/home/circleci/project/expyfun/_experiment_controller.py:1843: UserWarning: Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
+2022-10-31 21:35:01,514 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2022-10-31 21:35:01,515 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2022-10-31 21:35:01,701 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2022-10-31 21:35:01,702 - INFO    - Expyfun: Setting up screen
+2022-10-31 21:35:01,723 - EXP     - Expyfun: Set screen visibility True
+2022-10-31 21:35:01,754 - INFO    - Initialized [720 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f8093573fd0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2022-10-31 21:35:01,755 - INFO    - Expyfun: Initializing dummy triggering mode
+2022-10-31 21:35:01,755 - INFO    - Expyfun: Initialization complete
+2022-10-31 21:35:01,755 - EXP     - Expyfun: Participant: foo
+2022-10-31 21:35:01,755 - EXP     - Expyfun: Session: foo
+2022-10-31 21:35:01,834 - WARNING - Expyfun: Resampling 2.01 seconds of audio
+2022-10-31 21:35:01,879 - WARNING - Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
+/home/circleci/project/expyfun/_experiment_controller.py:1849: UserWarning: Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
   warnings.warn(warn_string)
-2022-02-14 22:15:23,648 - EXP     - Expyfun: Loading 177652 samples to buffer
-2022-02-14 22:15:23,650 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2022-02-14 22:15:23,650 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
-2022-02-14 22:15:23,650 - EXP     - Stamping TTL triggers: []
-2022-02-14 22:15:23,650 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2022-02-14 22:15:23,651 - EXP     - Stamping TTL triggers: [1]
-2022-02-14 22:15:26,527 - WARNING - ec.trial_ok called before stimulus had stopped
-2022-02-14 22:15:26,527 - EXP     - Expyfun: Trial OK
-2022-02-14 22:15:26,527 - INFO    - Expyfun: Exiting
-2022-02-14 22:15:26,530 - EXP     - Expyfun: Audio stopped and reset.
+2022-10-31 21:35:01,880 - EXP     - Expyfun: Loading 177652 samples to buffer
+2022-10-31 21:35:01,881 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2022-10-31 21:35:01,881 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
+2022-10-31 21:35:01,882 - EXP     - Stamping TTL triggers: []
+2022-10-31 21:35:01,882 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2022-10-31 21:35:01,883 - EXP     - Stamping TTL triggers: [1]
+2022-10-31 21:35:04,717 - WARNING - ec.trial_ok called before stimulus had stopped
+2022-10-31 21:35:04,717 - EXP     - Expyfun: Trial OK
+2022-10-31 21:35:04,717 - INFO    - Expyfun: Exiting
+2022-10-31 21:35:04,719 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  6.352 seconds)</p>
-<div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-crm-stimuli-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  5.911 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-crm-stimuli-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/7d489216b49bb70746bfa094192a65c5/crm_stimuli.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">crm_stimuli.py</span></code></a></p>
 </div>
@@ -262,7 +264,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

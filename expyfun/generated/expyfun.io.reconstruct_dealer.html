@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.io.reconstruct_dealer &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,7 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.io.reconstruct_dealer</a><ul>
+<li><a class="reference internal" href="#expyfun.io.reconstruct_dealer"><code class="docutils literal notranslate"><span class="pre">reconstruct_dealer()</span></code></a></li>
 <li><a class="reference internal" href="#examples-using-expyfun-io-reconstruct-dealer">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.io.reconstruct_dealer</span></code></a></li>
 </ul>
 </li>
@@ -113,7 +116,7 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-io-reconstruct-dealer">
-<h1>expyfun.io.reconstruct_dealer<a class="headerlink" href="#expyfun-io-reconstruct-dealer" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.io.reconstruct_dealer<a class="headerlink" href="#expyfun-io-reconstruct-dealer" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.io.reconstruct_dealer">
 <span class="sig-prename descclassname"><span class="pre">expyfun.io.</span></span><span class="sig-name descname"><span class="pre">reconstruct_dealer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/io/_parse.py#L198-L263"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.io.reconstruct_dealer" title="Permalink to this definition">¶</a></dt>
@@ -121,13 +124,13 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">reconstruct_tracker</span></code> function will be called to retrieve the
 trackers.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>fname</strong><span class="classifier">str</span></dt><dd><p>Input filename.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>dealer</strong><span class="classifier">list of TrackerDealer</span></dt><dd><p>The TrackerDealer objects with all responses such that they are in
 their stopped state. If only one dealer is found in the file, it will
@@ -139,11 +142,11 @@ still be stored in a list and will be assessible as <code class="docutils litera
 </dd></dl>
 
 <section id="examples-using-expyfun-io-reconstruct-dealer">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.io.reconstruct_dealer</span></code><a class="headerlink" href="#examples-using-expyfun-io-reconstruct-dealer" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking for two trial types and tracker reconstruction from .tab" src="../_images/sphx_glr_tracker_dealer_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.io.reconstruct_dealer</span></code><a class="headerlink" href="#examples-using-expyfun-io-reconstruct-dealer" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking for two trial types and tracker reconstruction from .tab" src="../_images/sphx_glr_tracker_dealer_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/tracker_dealer.html#sphx-glr-auto-examples-experiments-tracker-dealer-py"><span class="std std-ref">Adaptive tracking for two trial types and tracker reconstruction from .tab</span></a></p>
   <div class="sphx-glr-thumbnail-title">Adaptive tracking for two trial types and tracker reconstruction from .tab</div>
-</div><div style='clear:both'></div></section>
+</div></div><div style='clear:both'></div></section>
 </section>
 
 
@@ -158,7 +161,7 @@ still be stored in a list and will be assessible as <code class="docutils litera
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.analyze.format_pval &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -77,7 +79,10 @@
   <ul class="dropdown-menu localtoc"
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">expyfun.analyze.format_pval</a></li>
+<li><a class="reference internal" href="#">expyfun.analyze.format_pval</a><ul>
+<li><a class="reference internal" href="#expyfun.analyze.format_pval"><code class="docutils literal notranslate"><span class="pre">format_pval()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </ul>
 </li>
@@ -110,13 +115,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-analyze-format-pval">
-<h1>expyfun.analyze.format_pval<a class="headerlink" href="#expyfun-analyze-format-pval" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.analyze.format_pval<a class="headerlink" href="#expyfun-analyze-format-pval" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.analyze.format_pval">
 <span class="sig-prename descclassname"><span class="pre">expyfun.analyze.</span></span><span class="sig-name descname"><span class="pre">format_pval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pval</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">latex</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheme</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_viz.py#L10-L66"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.analyze.format_pval" title="Permalink to this definition">¶</a></dt>
 <dd><p>Format a p-value using one of several schemes.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>pval</strong><span class="classifier">float | array-like</span></dt><dd><p>The raw p-value(s).</p>
 </dd>
@@ -128,7 +133,7 @@
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>pv</strong><span class="classifier">str | np.objectarray</span></dt><dd><p>A string or array of strings of formatted p-values. If a list output is
 preferred, users may call <code class="docutils literal notranslate"><span class="pre">.tolist()</span></code> on the output of the function.</p>
@@ -152,7 +157,7 @@ preferred, users may call <code class="docutils literal notranslate"><span class
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

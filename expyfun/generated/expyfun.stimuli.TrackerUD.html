@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.stimuli.TrackerUD &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,22 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.stimuli.TrackerUD</a><ul>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD"><code class="docutils literal notranslate"><span class="pre">TrackerUD</span></code></a><ul>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.check_valid"><code class="docutils literal notranslate"><span class="pre">TrackerUD.check_valid()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.n_reversals"><code class="docutils literal notranslate"><span class="pre">TrackerUD.n_reversals</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.n_trials"><code class="docutils literal notranslate"><span class="pre">TrackerUD.n_trials</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.plot"><code class="docutils literal notranslate"><span class="pre">TrackerUD.plot()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.plot_thresh"><code class="docutils literal notranslate"><span class="pre">TrackerUD.plot_thresh()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.respond"><code class="docutils literal notranslate"><span class="pre">TrackerUD.respond()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.responses"><code class="docutils literal notranslate"><span class="pre">TrackerUD.responses</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.reversal_inds"><code class="docutils literal notranslate"><span class="pre">TrackerUD.reversal_inds</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.reversals"><code class="docutils literal notranslate"><span class="pre">TrackerUD.reversals</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.stopped"><code class="docutils literal notranslate"><span class="pre">TrackerUD.stopped</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.threshold"><code class="docutils literal notranslate"><span class="pre">TrackerUD.threshold()</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.x"><code class="docutils literal notranslate"><span class="pre">TrackerUD.x</span></code></a></li>
+<li><a class="reference internal" href="#expyfun.stimuli.TrackerUD.x_current"><code class="docutils literal notranslate"><span class="pre">TrackerUD.x_current</span></code></a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#examples-using-expyfun-stimuli-trackerud">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerUD</span></code></a></li>
 </ul>
 </li>
@@ -113,7 +131,7 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-stimuli-trackerud">
-<h1>expyfun.stimuli.TrackerUD<a class="headerlink" href="#expyfun-stimuli-trackerud" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.stimuli.TrackerUD<a class="headerlink" href="#expyfun-stimuli-trackerud" title="Permalink to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="expyfun.stimuli.TrackerUD">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyfun.stimuli.</span></span><span class="sig-name descname"><span class="pre">TrackerUD</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">up</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">down</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_size_up</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step_size_down</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_reversals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_trials</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change_indices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">change_rule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'reversals'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_min</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_max</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repeat_limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'reversals'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L42-L550"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD" title="Permalink to this definition">¶</a></dt>
@@ -122,7 +140,7 @@
 how it is configured, it can be used to run a fixed-step m-down n-up
 tracker (staircase), or it can implement a weighted up-down procedure.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>callback</strong><span class="classifier">callable | ExperimentController | None</span></dt><dd><p>The function that will be used to print the data, usually to the
 experiment .tab file. It should follow the prototype of
@@ -176,7 +194,7 @@ the same level. <code class="docutils literal notranslate"><span class="pre">ign
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>tracker</strong><span class="classifier">instance of TrackerUD</span></dt><dd><p>The up-down tracker object.</p>
 </dd>
@@ -206,13 +224,13 @@ None.</p>
 <span class="sig-name descname"><span class="pre">check_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_reversals</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L312-L328"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.check_valid" title="Permalink to this definition">¶</a></dt>
 <dd><p>If last reversals contain reversals exceeding x_min or x_max.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>n_reversals</strong><span class="classifier">int</span></dt><dd><p>Number of reversals (starting from the end to check).</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>valid</strong><span class="classifier">bool</span></dt><dd><p>True if none of the reversals are at x_min or x_max and False
 otherwise.</p>
@@ -239,7 +257,7 @@ otherwise.</p>
 <span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_skip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L455-L493"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot the adaptive track.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>ax</strong><span class="classifier">AxesSubplot | None</span></dt><dd><p>The axes to make the plot on. If <code class="docutils literal notranslate"><span class="pre">None</span></code> defaults to current axes.</p>
 </dd>
@@ -250,7 +268,7 @@ True.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>fig</strong><span class="classifier">Figure</span></dt><dd><p>The figure handle.</p>
 </dd>
@@ -268,7 +286,7 @@ True.</p>
 <span class="sig-name descname"><span class="pre">plot_thresh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_skip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ax</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L495-L516"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.plot_thresh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Plot a line showing the threshold.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>n_skip</strong><span class="classifier">int</span></dt><dd><p>See documentation for <code class="docutils literal notranslate"><span class="pre">TrackerUD.threshold</span></code>.</p>
 </dd>
@@ -277,7 +295,7 @@ be used.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>line</strong><span class="classifier">list Line2D</span></dt><dd><p>The handle to the threshold line, as returned from <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>.</p>
 </dd>
@@ -291,7 +309,7 @@ be used.</p>
 <span class="sig-name descname"><span class="pre">respond</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">correct</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L216-L310"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.respond" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update the tracker based on the last response.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>correct</strong><span class="classifier">boolean</span></dt><dd><p>Was the most recent subject response correct?</p>
 </dd>
@@ -329,14 +347,14 @@ be used.</p>
 <span class="sig-name descname"><span class="pre">threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_skip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L518-L550"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the track’s threshold.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>n_skip</strong><span class="classifier">int</span></dt><dd><p>The number of reversals to skip at the beginning when computing
 the threshold.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>threshold</strong><span class="classifier">float</span></dt><dd><p>The handle to the threshold line.</p>
 </dd>
@@ -366,8 +384,8 @@ wishes.</p>
 </dd></dl>
 
 <section id="examples-using-expyfun-stimuli-trackerud">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerUD</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-trackerud" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking from above and below" src="../_images/sphx_glr_tracker_dealer_doublesided_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerUD</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-trackerud" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking from above and below" src="../_images/sphx_glr_tracker_dealer_doublesided_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/tracker_dealer_doublesided.html#sphx-glr-auto-examples-experiments-tracker-dealer-doublesided-py"><span class="std std-ref">Adaptive tracking from above and below</span></a></p>
   <div class="sphx-glr-thumbnail-title">Adaptive tracking from above and below</div>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This file shows how to interleave multiple Tracker objects using expyfun.stimuli.TrackerDealer ..."><img alt="Adaptive tracking for two trial types and tracker reconstruction from .tab" src="../_images/sphx_glr_tracker_dealer_thumb.png" />
@@ -376,7 +394,7 @@ wishes.</p>
 </div><div class="sphx-glr-thumbcontainer" tooltip="This shows how to make and use an adaptive track using expyfun.stimuli.TrackerUD."><img alt="Do an adaptive track staircase" src="../_images/sphx_glr_tracker_staircase_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/stimuli/tracker_staircase.html#sphx-glr-auto-examples-stimuli-tracker-staircase-py"><span class="std std-ref">Do an adaptive track staircase</span></a></p>
   <div class="sphx-glr-thumbnail-title">Do an adaptive track staircase</div>
-</div></section>
+</div></div></section>
 </section>
 
 
@@ -391,7 +409,7 @@ wishes.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.stimuli.vocode &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,7 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.stimuli.vocode</a><ul>
+<li><a class="reference internal" href="#expyfun.stimuli.vocode"><code class="docutils literal notranslate"><span class="pre">vocode()</span></code></a></li>
 <li><a class="reference internal" href="#examples-using-expyfun-stimuli-vocode">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.vocode</span></code></a></li>
 </ul>
 </li>
@@ -113,13 +116,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-stimuli-vocode">
-<h1>expyfun.stimuli.vocode<a class="headerlink" href="#expyfun-stimuli-vocode" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.stimuli.vocode<a class="headerlink" href="#expyfun-stimuli-vocode" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.stimuli.vocode">
-<span class="sig-prename descclassname"><span class="pre">expyfun.stimuli.</span></span><span class="sig-name descname"><span class="pre">vocode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_lims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(200.0,</span> <span class="pre">8000.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'erb'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lp_cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">160.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lp_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'noise'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/../doc/&lt;string&gt;#L219-L283"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.vocode" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">expyfun.stimuli.</span></span><span class="sig-name descname"><span class="pre">vocode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_bands</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">16</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freq_lims</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(200.0,</span> <span class="pre">8000.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'erb'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lp_cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">160.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lp_order</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'noise'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seed</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/../doc/&lt;string&gt;#L219-L283"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.vocode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Vocode stimuli using a variety of methods</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>data</strong><span class="classifier">array-like</span></dt><dd><p>Data array.</p>
 </dd>
@@ -156,7 +159,7 @@ excite each band (when mode==”poisson”).</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>voc</strong><span class="classifier">array-like</span></dt><dd><p>Vocoded stimuli of the same shape as data.</p>
 </dd>
@@ -169,11 +172,11 @@ algorithm described by Zachary Smith (Cochlear Corp.).</p>
 </dd></dl>
 
 <section id="examples-using-expyfun-stimuli-vocode">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.vocode</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-vocode" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This shows how to make simple vocoded stimuli."><img alt="Generate vocoded stimuli" src="../_images/sphx_glr_vocoded_stimuli_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.vocode</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-vocode" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This shows how to make simple vocoded stimuli."><img alt="Generate vocoded stimuli" src="../_images/sphx_glr_vocoded_stimuli_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/stimuli/vocoded_stimuli.html#sphx-glr-auto-examples-stimuli-vocoded-stimuli-py"><span class="std std-ref">Generate vocoded stimuli</span></a></p>
   <div class="sphx-glr-thumbnail-title">Generate vocoded stimuli</div>
-</div><div style='clear:both'></div></section>
+</div></div><div style='clear:both'></div></section>
 </section>
 
 
@@ -188,7 +191,7 @@ algorithm described by Zachary Smith (Cochlear Corp.).</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

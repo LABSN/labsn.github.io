@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.analyze.dprime &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,7 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.analyze.dprime</a><ul>
+<li><a class="reference internal" href="#expyfun.analyze.dprime"><code class="docutils literal notranslate"><span class="pre">dprime()</span></code></a></li>
 <li><a class="reference internal" href="#examples-using-expyfun-analyze-dprime">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.dprime</span></code></a></li>
 </ul>
 </li>
@@ -113,13 +116,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-analyze-dprime">
-<h1>expyfun.analyze.dprime<a class="headerlink" href="#expyfun-analyze-dprime" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.analyze.dprime<a class="headerlink" href="#expyfun-analyze-dprime" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.analyze.dprime">
 <span class="sig-prename descclassname"><span class="pre">expyfun.analyze.</span></span><span class="sig-name descname"><span class="pre">dprime</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hmfc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zero_correction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_bias</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/analyze/_analyze.py#L319-L376"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.analyze.dprime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Estimate d′ and bias.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>hmfc</strong><span class="classifier">array-like</span></dt><dd><p>Hits, misses, false-alarms, and correct-rejections, in that order, as
 array-like data with last dimension having size 4.</p>
@@ -134,7 +137,7 @@ forced choice paradigms (see Notes).</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>dp</strong><span class="classifier">array-like</span></dt><dd><p>Array of dprimes with shape <code class="docutils literal notranslate"><span class="pre">hmfc.shape[:-1]</span></code>.</p>
 </dd>
@@ -162,20 +165,21 @@ two stimuli per trial (one in each interval) by dividing by <code class="docutil
 </pre></div>
 </div>
 <p class="rubric">References</p>
-<dl class="citation">
-<dt class="label" id="r22078f6a4c08-1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>Macmillan &amp; Creelman (2005). Detection theory: a user’s guide (2nd
+<div role="list" class="citation-list">
+<div class="citation" id="r22078f6a4c08-1" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Macmillan &amp; Creelman (2005). Detection theory: a user’s guide (2nd
 ed.). Mahwah, NJ: Lawrence Erlbaum Associates, pp. 166-170.</p>
-</dd>
-</dl>
+</div>
+</div>
 </dd></dl>
 
 <section id="examples-using-expyfun-analyze-dprime">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.dprime</span></code><a class="headerlink" href="#examples-using-expyfun-analyze-dprime" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This example simulates some 2AFC data and demonstrates the analysis functions expyfun.analyze.d..."><img alt="Analysis demo" src="../_images/sphx_glr_analysis_demo_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.analyze.dprime</span></code><a class="headerlink" href="#examples-using-expyfun-analyze-dprime" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This example simulates some 2AFC data and demonstrates the analysis functions expyfun.analyze.d..."><img alt="Analysis demo" src="../_images/sphx_glr_analysis_demo_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/analysis/analysis_demo.html#sphx-glr-auto-examples-analysis-analysis-demo-py"><span class="std std-ref">Analysis demo</span></a></p>
   <div class="sphx-glr-thumbnail-title">Analysis demo</div>
-</div><div style='clear:both'></div></section>
+</div></div><div style='clear:both'></div></section>
 </section>
 
 
@@ -190,7 +194,7 @@ ed.). Mahwah, NJ: Lawrence Erlbaum Associates, pp. 166-170.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>

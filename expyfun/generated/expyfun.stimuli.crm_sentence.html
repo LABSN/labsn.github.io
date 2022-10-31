@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>expyfun.stimuli.crm_sentence &#8212; expyfun 2.0.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -15,7 +15,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -78,6 +80,7 @@
       role="menu"
       aria-labelledby="dLabelLocalToc"><ul>
 <li><a class="reference internal" href="#">expyfun.stimuli.crm_sentence</a><ul>
+<li><a class="reference internal" href="#expyfun.stimuli.crm_sentence"><code class="docutils literal notranslate"><span class="pre">crm_sentence()</span></code></a></li>
 <li><a class="reference internal" href="#examples-using-expyfun-stimuli-crm-sentence">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.crm_sentence</span></code></a></li>
 </ul>
 </li>
@@ -113,13 +116,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="expyfun-stimuli-crm-sentence">
-<h1>expyfun.stimuli.crm_sentence<a class="headerlink" href="#expyfun-stimuli-crm-sentence" title="Permalink to this headline">¶</a></h1>
+<h1>expyfun.stimuli.crm_sentence<a class="headerlink" href="#expyfun-stimuli-crm-sentence" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="expyfun.stimuli.crm_sentence">
 <span class="sig-prename descclassname"><span class="pre">expyfun.stimuli.</span></span><span class="sig-name descname"><span class="pre">crm_sentence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sex</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">talker_num</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callsign</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ref_rms</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ramp_dur</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stereo</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_crm.py#L259-L334"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.crm_sentence" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a specific sentence from the hard drive.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
 <dt><strong>fs</strong><span class="classifier">float</span></dt><dd><p>The sampling rate of the corpus to load. You must have run
 <a class="reference internal" href="expyfun.stimuli.crm_prepare_corpus.html#expyfun.stimuli.crm_prepare_corpus" title="expyfun.stimuli.crm_prepare_corpus"><code class="xref py py-func docutils literal notranslate"><span class="pre">expyfun.stimuli.crm_prepare_corpus()</span></code></a> for that sampling
@@ -152,7 +155,7 @@ where the raw CRM originals are stored.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
 <dt><strong>sentence</strong><span class="classifier">array</span></dt><dd><p>The requested sentence data.</p>
 </dd>
@@ -176,11 +179,11 @@ number argument.</p>
 </dd></dl>
 
 <section id="examples-using-expyfun-stimuli-crm-sentence">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.crm_sentence</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-crm-sentence" title="Permalink to this headline">¶</a></h2>
-<div class="sphx-glr-thumbcontainer" tooltip="This shows how to use the CRM corpus functions."><img alt="Use the CRM corpus" src="../_images/sphx_glr_crm_stimuli_thumb.png" />
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.stimuli.crm_sentence</span></code><a class="headerlink" href="#examples-using-expyfun-stimuli-crm-sentence" title="Permalink to this heading">¶</a></h2>
+<div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="This shows how to use the CRM corpus functions."><img alt="Use the CRM corpus" src="../_images/sphx_glr_crm_stimuli_thumb.png" />
 <p><a class="reference internal" href="../auto_examples/stimuli/crm_stimuli.html#sphx-glr-auto-examples-stimuli-crm-stimuli-py"><span class="std std-ref">Use the CRM corpus</span></a></p>
   <div class="sphx-glr-thumbnail-title">Use the CRM corpus</div>
-</div><div style='clear:both'></div></section>
+</div></div><div style='clear:both'></div></section>
 </section>
 
 
@@ -195,7 +198,7 @@ number argument.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-02-14.<br/>
+        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-10-31.<br/>
     </p>
   </div>
 </footer>
