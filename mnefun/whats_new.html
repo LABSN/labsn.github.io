@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>What’s new &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -13,7 +13,9 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="mnefun.anova_time" href="generated/mnefun.anova_time.html" />
@@ -97,13 +99,13 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="what-s-new">
-<h1>What’s new<a class="headerlink" href="#what-s-new" title="Permalink to this headline">¶</a></h1>
+<h1>What’s new<a class="headerlink" href="#what-s-new" title="Permalink to this heading">¶</a></h1>
 <p>Using the latest features typically require being on an up-to-date <code class="docutils literal notranslate"><span class="pre">mnefun</span></code>
 <code class="docutils literal notranslate"><span class="pre">main</span></code> branch and often an up-to-date MNE-Python <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.</p>
 <section id="changelog">
-<h2>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h2>
+<h2>Changelog<a class="headerlink" href="#changelog" title="Permalink to this heading">¶</a></h2>
 <section id="id1">
-<h3>2021<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<h3>2021<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>2021/07/29:</dt><dd><p>Change <code class="docutils literal notranslate"><span class="pre">proj=False</span></code> to <code class="docutils literal notranslate"><span class="pre">proj='delayed'</span></code> when epoching during covariance
@@ -151,7 +153,7 @@ are effectively selected with “restrict”.)</p>
 </ul>
 </section>
 <section id="id2">
-<h3>2020<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<h3>2020<a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>2020/12/18:</dt><dd><p>Added <code class="docutils literal notranslate"><span class="pre">erm_proj_as_esss</span></code>, <code class="docutils literal notranslate"><span class="pre">erm_proj_lp_cut</span></code>, and <code class="docutils literal notranslate"><span class="pre">erm_proj_hp_cut</span></code>
@@ -234,7 +236,7 @@ sensor space responses without projection.</p>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>2020/05/26</dt><dd><p>Improved <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v1.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> generation for comparing conditions by using
+<dt>2020/05/26</dt><dd><p>Improved <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v1.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> generation for comparing conditions by using
 sliders and grouping by sensor types.</p>
 </dd>
 </dl>
@@ -271,7 +273,7 @@ acquisition directories and generate HTML reports.</p>
 </ul>
 </section>
 <section id="id3">
-<h3>2019<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<h3>2019<a class="headerlink" href="#id3" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>2019/12/02</dt><dd><p>Added <a class="reference internal" href="generated/mnefun.get_atlas_roi_mask.html#mnefun.get_atlas_roi_mask" title="mnefun.get_atlas_roi_mask"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_atlas_roi_mask()</span></code></a> and <a class="reference internal" href="generated/mnefun.get_atlas_mapping.html#mnefun.get_atlas_mapping" title="mnefun.get_atlas_mapping"><code class="xref py py-func docutils literal notranslate"><span class="pre">get_atlas_mapping()</span></code></a>
@@ -287,7 +289,7 @@ to aid in extracting volumetric ROIs until it’s formalized in MNE.</p>
 </ul>
 </section>
 <section id="prior">
-<h3>Prior<a class="headerlink" href="#prior" title="Permalink to this headline">¶</a></h3>
+<h3>Prior<a class="headerlink" href="#prior" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>2015-2019/12/01</dt><dd><p>A whole bunch of undocumented updates.</p>
@@ -322,8 +324,8 @@ to aid in extracting volumetric ROIs until it’s formalized in MNE.</p>
     </p>
     <p>
         &copy; Copyright 2013-2022, mnefun Developers.<br/>
-      Last updated on May 06, 2022.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br/>
+      Last updated on Oct 31, 2022.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br/>
     </p>
   </div>
 </footer>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>mnefun.make_dipole_projectors &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -13,7 +13,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="mnefun.read_params" href="mnefun.read_params.html" />
@@ -98,34 +100,34 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="mnefun-make-dipole-projectors">
-<h1>mnefun.make_dipole_projectors<a class="headerlink" href="#mnefun-make-dipole-projectors" title="Permalink to this headline">¶</a></h1>
+<h1>mnefun.make_dipole_projectors<a class="headerlink" href="#mnefun-make-dipole-projectors" title="Permalink to this heading">¶</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="mnefun.make_dipole_projectors">
 <span class="sig-prename descclassname"><span class="pre">mnefun.</span></span><span class="sig-name descname"><span class="pre">make_dipole_projectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ori</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bem</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.make_dipole_projectors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make dipole projectors.</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>info</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.Info.html#mne.Info" title="(in MNE v1.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Info</span></code></a></span></dt><dd><p>The measurement info.</p>
+<dt><strong>info</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.Info.html#mne.Info" title="(in MNE v1.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Info</span></code></a></span></dt><dd><p>The measurement info.</p>
 </dd>
-<dt><strong>pos</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.23.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a>, shape (n_dip, 3)</span></dt><dd><p>The dipole positions.</p>
+<dt><strong>pos</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a>, shape (n_dip, 3)</span></dt><dd><p>The dipole positions.</p>
 </dd>
-<dt><strong>ori</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.23.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a>, shape (n_dip, 3)</span></dt><dd><p>The dipole orientations.</p>
+<dt><strong>ori</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.24.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a>, shape (n_dip, 3)</span></dt><dd><p>The dipole orientations.</p>
 </dd>
-<dt><strong>bem</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.bem.ConductorModel.html#mne.bem.ConductorModel" title="(in MNE v1.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConductorModel</span></code></a></span></dt><dd><p>The conductor model to use.</p>
+<dt><strong>bem</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.bem.ConductorModel.html#mne.bem.ConductorModel" title="(in MNE v1.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConductorModel</span></code></a></span></dt><dd><p>The conductor model to use.</p>
 </dd>
-<dt><strong>trans</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.transforms.Transform.html#mne.transforms.Transform" title="(in MNE v1.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transform</span></code></a></span></dt><dd><p>The mri-to-head transformation.</p>
+<dt><strong>trans</strong><span class="classifier">instance of <a class="reference external" href="https://mne.tools/dev/generated/mne.transforms.Transform.html#mne.transforms.Transform" title="(in MNE v1.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Transform</span></code></a></span></dt><dd><p>The mri-to-head transformation.</p>
 </dd>
-<dt><strong>verbose</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.10)"><span class="xref std std-ref">bool</span></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Control verbosity of the logging output. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, use the default
-verbosity level. See the <a class="reference external" href="https://docs.python.org/3/tutorial/stdlib2.html#tut-logging" title="(in Python v3.10)"><span class="xref std std-ref">logging documentation</span></a> and
-<a class="reference external" href="https://mne.tools/dev/generated/mne.verbose.html#mne.verbose" title="(in MNE v1.1)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.verbose()</span></code></a> for details. Should only be passed as a keyword
+<dt><strong>verbose</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.11)"><span class="xref std std-ref">bool</span></a> | <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Control verbosity of the logging output. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, use the default
+verbosity level. See the <a class="reference external" href="https://docs.python.org/3/tutorial/stdlib2.html#tut-logging" title="(in Python v3.11)"><span class="xref std std-ref">logging documentation</span></a> and
+<a class="reference external" href="https://mne.tools/dev/generated/mne.verbose.html#mne.verbose" title="(in MNE v1.3)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.verbose()</span></code></a> for details. Should only be passed as a keyword
 argument.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>projs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.10)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://mne.tools/dev/generated/mne.Projection.html#mne.Projection" title="(in MNE v1.1)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Projection</span></code></a></span></dt><dd><p>The projectors.</p>
+<dt><strong>projs</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.11)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://mne.tools/dev/generated/mne.Projection.html#mne.Projection" title="(in MNE v1.3)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Projection</span></code></a></span></dt><dd><p>The projectors.</p>
 </dd>
 </dl>
 </dd>
@@ -147,8 +149,8 @@ argument.</p>
     </p>
     <p>
         &copy; Copyright 2013-2022, mnefun Developers.<br/>
-      Last updated on May 06, 2022.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br/>
+      Last updated on Oct 31, 2022.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br/>
     </p>
   </div>
 </footer>

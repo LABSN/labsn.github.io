@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>API Reference &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -13,7 +13,9 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="mnefun.Params" href="generated/mnefun.Params.html" />
@@ -98,16 +100,12 @@
     <div class="body col-md-12 content" role="main">
       
   <section id="module-mnefun">
-<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-mnefun" title="Permalink to this headline">¶</a></h1>
+<span id="api-reference"></span><h1>API Reference<a class="headerlink" href="#module-mnefun" title="Permalink to this heading">¶</a></h1>
 <p>This is the classes and functions reference of mnefun.</p>
 <section id="experiment-analysis">
-<h2>Experiment analysis<a class="headerlink" href="#experiment-analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Experiment analysis<a class="headerlink" href="#experiment-analysis" title="Permalink to this heading">¶</a></h2>
 <p>Classes:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mnefun.Params.html#mnefun.Params" title="mnefun.Params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Params</span></code></a>([tmin, tmax, t_adjust, bmin, bmax, ...])</p></td>
 <td><p>Make a parameter structure for use with <a class="reference internal" href="generated/mnefun.do_processing.html#mnefun.do_processing" title="mnefun.do_processing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_processing</span></code></a>.</p></td>
@@ -116,10 +114,6 @@
 </table>
 <p>Functions:</p>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mnefun.convert_ANTS_surrogate.html#mnefun.convert_ANTS_surrogate" title="mnefun.convert_ANTS_surrogate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_ANTS_surrogate</span></code></a>(subject, trans, ...)</p></td>
 <td><p>Convert an old ANTS surrogate to a modern one.</p></td>
@@ -164,12 +158,8 @@
 </table>
 </section>
 <section id="statistics-helpers">
-<h2>Statistics helpers<a class="headerlink" href="#statistics-helpers" title="Permalink to this headline">¶</a></h2>
+<h2>Statistics helpers<a class="headerlink" href="#statistics-helpers" title="Permalink to this heading">¶</a></h2>
 <table class="autosummary longtable docutils align-default">
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="generated/mnefun.anova_time.html#mnefun.anova_time" title="mnefun.anova_time"><code class="xref py py-obj docutils literal notranslate"><span class="pre">anova_time</span></code></a>(X[, transform, signed_p, gg])</p></td>
 <td><p>A mass-univariate two-way ANOVA (with time as a co-variate)</p></td>
@@ -192,8 +182,8 @@
     </p>
     <p>
         &copy; Copyright 2013-2022, mnefun Developers.<br/>
-      Last updated on May 06, 2022.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br/>
+      Last updated on Oct 31, 2022.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br/>
     </p>
   </div>
 </footer>
