@@ -13,12 +13,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
@@ -46,7 +43,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/favicon.ico"></span>
+        <a class="navbar-brand" href="../../index.html">
           expyfun</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
       </div>
@@ -121,22 +118,22 @@ to download the full example code</p>
 <p>This shows how to control various properties of a video file in expyfun.</p>
 <p>&#64;author: drmccloy</p>
 <img src="../../_images/sphx_glr_advanced_video_001.png" srcset="../../_images/sphx_glr_advanced_video_001.png" alt="advanced video" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: advanced video example
-date: 2022-11-01 16_38_19.827040
+date: 2023-01-09 16_43_49.447764
 file: /home/circleci/project/examples/stimuli/advanced_video.py
 participant: foo
 session: foo
-2022-11-01 16:38:19,827 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2022-11-01 16:38:19,828 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2022-11-01 16:38:19,986 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2022-11-01 16:38:19,986 - INFO    - Expyfun: Setting up screen
-2022-11-01 16:38:20,017 - EXP     - Expyfun: Set screen visibility True
-2022-11-01 16:38:20,030 - INFO    - Initialized [720 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fc151c83100&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2022-11-01 16:38:20,030 - INFO    - Expyfun: Initializing dummy triggering mode
-2022-11-01 16:38:20,030 - INFO    - Expyfun: Initialization complete
-2022-11-01 16:38:20,031 - EXP     - Expyfun: Participant: foo
-2022-11-01 16:38:20,031 - EXP     - Expyfun: Session: foo
-2022-11-01 16:38:22,159 - INFO    - Expyfun: Exiting
-2022-11-01 16:38:22,165 - EXP     - Expyfun: Audio stopped and reset.
+2023-01-09 16:43:49,447 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2023-01-09 16:43:49,448 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2023-01-09 16:43:49,600 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2023-01-09 16:43:49,600 - INFO    - Expyfun: Setting up screen
+2023-01-09 16:43:49,642 - EXP     - Expyfun: Set screen visibility True
+2023-01-09 16:43:49,654 - INFO    - Initialized [720 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fb586b8e860&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2023-01-09 16:43:49,655 - INFO    - Expyfun: Initializing dummy triggering mode
+2023-01-09 16:43:49,655 - INFO    - Expyfun: Initialization complete
+2023-01-09 16:43:49,656 - EXP     - Expyfun: Participant: foo
+2023-01-09 16:43:49,656 - EXP     - Expyfun: Session: foo
+2023-01-09 16:43:51,818 - INFO    - Expyfun: Exiting
+2023-01-09 16:43:51,824 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -211,7 +208,7 @@ session: foo
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.431 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  2.477 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-advanced-video-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/df5bf05169b5b8f26a0bf9b99843c7f7/advanced_video.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">advanced_video.py</span></code></a></p>
@@ -235,7 +232,7 @@ session: foo
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-11-01.<br/>
+        &copy; Copyright 2013-2023, expyfun developers. Last updated on 2023-01-09.<br/>
     </p>
   </div>
 </footer>

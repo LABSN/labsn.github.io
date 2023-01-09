@@ -13,12 +13,9 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
@@ -46,7 +43,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="../../index.html"><span><img src="../../_static/favicon.ico"></span>
+        <a class="navbar-brand" href="../../index.html">
           expyfun</a>
         <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
       </div>
@@ -120,22 +117,22 @@ to download the full example code</p>
 <span id="sphx-glr-auto-examples-experiments-formatted-text-py"></span><h1>Display text with different formatting methods<a class="headerlink" href="#display-text-with-different-formatting-methods" title="Permalink to this heading">¶</a></h1>
 <p>This example demonstrates differences between the Text and AttrText classes.</p>
 <img src="../../_images/sphx_glr_formatted_text_001.png" srcset="../../_images/sphx_glr_formatted_text_001.png" alt="formatted text" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: textDemo
-date: 2022-11-01 16_37_53.267837
+date: 2023-01-09 16_43_24.247631
 file: /home/circleci/project/examples/experiments/formatted_text.py
 participant: foo
 session: 001
-2022-11-01 16:37:53,268 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2022-11-01 16:37:53,268 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2022-11-01 16:37:53,456 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2022-11-01 16:37:53,456 - INFO    - Expyfun: Setting up screen
-2022-11-01 16:37:53,492 - EXP     - Expyfun: Set screen visibility True
-2022-11-01 16:37:53,506 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fc151c83100&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2022-11-01 16:37:53,506 - INFO    - Expyfun: Initializing dummy triggering mode
-2022-11-01 16:37:53,507 - INFO    - Expyfun: Initialization complete
-2022-11-01 16:37:53,507 - EXP     - Expyfun: Participant: foo
-2022-11-01 16:37:53,507 - EXP     - Expyfun: Session: 001
-2022-11-01 16:37:53,744 - INFO    - Expyfun: Exiting
-2022-11-01 16:37:53,747 - EXP     - Expyfun: Audio stopped and reset.
+2023-01-09 16:43:24,247 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2023-01-09 16:43:24,248 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2023-01-09 16:43:24,449 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2023-01-09 16:43:24,449 - INFO    - Expyfun: Setting up screen
+2023-01-09 16:43:24,483 - EXP     - Expyfun: Set screen visibility True
+2023-01-09 16:43:24,498 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fb586b8e860&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2023-01-09 16:43:24,498 - INFO    - Expyfun: Initializing dummy triggering mode
+2023-01-09 16:43:24,499 - INFO    - Expyfun: Initialization complete
+2023-01-09 16:43:24,500 - EXP     - Expyfun: Participant: foo
+2023-01-09 16:43:24,500 - EXP     - Expyfun: Session: 001
+2023-01-09 16:43:24,749 - INFO    - Expyfun: Exiting
+2023-01-09 16:43:24,752 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -185,7 +182,7 @@ session: 001
 <span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.563 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.595 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-formatted-text-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/2afe38ade4f9baa2e493604366e0861b/formatted_text.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">formatted_text.py</span></code></a></p>
@@ -209,7 +206,7 @@ session: 001
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, expyfun developers. Last updated on 2022-11-01.<br/>
+        &copy; Copyright 2013-2023, expyfun developers. Last updated on 2023-01-09.<br/>
     </p>
   </div>
 </footer>
