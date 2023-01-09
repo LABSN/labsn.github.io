@@ -11,12 +11,9 @@
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/default.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API Reference" href="python_reference.html" />
     <link rel="prev" title="mnefun" href="index.html" />
@@ -43,7 +40,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><span><img src="_static/ilabs.png"></span>
+        <a class="navbar-brand" href="index.html">
           mnefun</a>
         <span class="navbar-text navbar-version pull-left"><b>0.2.0.dev0</b></span>
       </div>
@@ -569,10 +566,10 @@ can be used turn the dictionary into a
 <a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">defaultdict</span></code></a> instance.
 This is useful in cases where a single set of values works for most
 subjects, but a few need different ones. For example in YAML form:</p>
-<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">proj_nums</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="w"></span>
-<span class="nt">  __default__</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">]],</span><span class="w"></span>
-<span class="nt">  subj_08</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">3</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">]],</span><span class="w"></span>
-<span class="w">  </span><span class="p p-Indicator">}</span><span class="w"></span>
+<div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">proj_nums</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span>
+<span class="nt">  __default__</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">]],</span>
+<span class="nt">  subj_08</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[[</span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">2</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">3</span><span class="p p-Indicator">],</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">0</span><span class="p p-Indicator">]],</span>
+<span class="w">  </span><span class="p p-Indicator">}</span>
 </pre></div>
 </div>
 </div>
@@ -656,7 +653,7 @@ locally), see <a class="reference internal" href="#preprocessing-hpe"><span clas
 <li><p>Annotate bad segments automatically, see <a class="reference internal" href="#preprocessing-annotations"><span class="std std-ref">preprocessing: annotations: Annotation parameters</span></a>.</p></li>
 <li><p>Add any custom annotations (e.g., for segments that operators want to
 manually mark as bad) that have been saved as <code class="docutils literal notranslate"><span class="pre">FILENAME-custom-annot.fif</span></code>.</p></li>
-<li><p>Run SSS processing locally using <a class="reference external" href="https://mne.tools/dev/generated/mne.preprocessing.maxwell_filter.html#mne.preprocessing.maxwell_filter" title="(in MNE v1.3)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.preprocessing.maxwell_filter()</span></code></a>.</p></li>
+<li><p>Run SSS processing locally using <a class="reference external" href="https://mne.tools/dev/generated/mne.preprocessing.maxwell_filter.html#mne.preprocessing.maxwell_filter" title="(in MNE v1.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.preprocessing.maxwell_filter()</span></code></a>.</p></li>
 </ol>
 <p>The addition of annotations <em>before</em> SSS ensures that tSSS operations are not
 disrupted by bad segments of data, and also ensures that the output files
@@ -830,13 +827,13 @@ rid of muscle movement artifacts in a verbal response paradigm), you can use
 </dd>
 <dt>lp_trans<span class="classifier">float</span></dt><dd><p>Low-pass transition band.</p>
 </dd>
-<dt>filter_length<span class="classifier">int | str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.3)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>filter_length<span class="classifier">int | str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
-<dt>fir_design<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.3)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>fir_design<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
-<dt>fir_window<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.3)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>fir_window<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
-<dt>phase<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.3)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>phase<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
 </dl>
 </section>
@@ -1049,7 +1046,7 @@ ratio-based collapsing.</p>
 computed from every other trial, i.e., from even and odd trials separately.
 This can help assess the SNR of the data.</p>
 </dd>
-<dt>epochs_proj<span class="classifier">bool | ‘delayed’</span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">proj</span></code> argument in <a class="reference external" href="https://mne.tools/dev/generated/mne.Epochs.html#mne.Epochs" title="(in MNE v1.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Epochs</span></code></a>. Should be <code class="docutils literal notranslate"><span class="pre">'delayed'</span></code> if
+<dt>epochs_proj<span class="classifier">bool | ‘delayed’</span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">proj</span></code> argument in <a class="reference external" href="https://mne.tools/dev/generated/mne.Epochs.html#mne.Epochs" title="(in MNE v1.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Epochs</span></code></a>. Should be <code class="docutils literal notranslate"><span class="pre">'delayed'</span></code> if
 you want the option of plotting sensor-space data with no projectors.</p>
 </dd>
 <dt>allow_resample<span class="classifier">bool</span></dt><dd><p>If True (default False), allow resampling raw instances (and events) to
@@ -1077,7 +1074,7 @@ to limit events to those with an id in <code class="docutils literal notranslate
 <dt>cov_rank<span class="classifier">str | int</span></dt><dd><p>Cov rank to use, usually “auto”.</p>
 </dd>
 <dt>cov_rank_method<span class="classifier">str</span></dt><dd><p>Can be “estimate_rank” to use <code class="docutils literal notranslate"><span class="pre">mne.rank.estimate_rank</span></code>, or
-“compute_rank” to use <a class="reference external" href="https://mne.tools/dev/generated/mne.compute_rank.html#mne.compute_rank" title="(in MNE v1.3)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.compute_rank()</span></code></a>. The latter seems to
+“compute_rank” to use <a class="reference external" href="https://mne.tools/dev/generated/mne.compute_rank.html#mne.compute_rank" title="(in MNE v1.4)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.compute_rank()</span></code></a>. The latter seems to
 work better for custom <code class="docutils literal notranslate"><span class="pre">tol</span></code> values by not row-normalizing data.</p>
 </dd>
 <dt>cov_rank_tol<span class="classifier">float | str</span></dt><dd><p>Tolerance for covariance rank computation. Can also be
@@ -1094,7 +1091,7 @@ is short and/or there are a lot of head movements.</p>
 <h2><a class="toc-backref" href="#id27" role="doc-backlink">9. gen_fwd</a><a class="headerlink" href="#gen-fwd" title="Permalink to this heading">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Make SUBJ/trans/SUBJ-trans.fif using <a class="reference external" href="https://mne.tools/dev/generated/commands.html#mne-coreg" title="(in MNE v1.3)"><span>mne coreg</span></a>.</p>
+<p>Make SUBJ/trans/SUBJ-trans.fif using <a class="reference external" href="https://mne.tools/dev/generated/commands.html#mne-coreg" title="(in MNE v1.4)"><span>mne coreg</span></a>.</p>
 </div>
 <p>Generate forward solutions (and source space if necessary).</p>
 <section id="forward-forward-parameters">
@@ -1135,7 +1132,7 @@ for them to be included in the forward solution source space.</p>
 </section>
 <section id="gen-report">
 <h2><a class="toc-backref" href="#id31" role="doc-backlink">11. gen_report</a><a class="headerlink" href="#gen-report" title="Permalink to this heading">¶</a></h2>
-<p>Write <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v1.3)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> HTML of results to disk.</p>
+<p>Write <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v1.4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> HTML of results to disk.</p>
 <section id="report-params-report-parameters">
 <h3><a class="toc-backref" href="#id32" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a><a class="headerlink" href="#report-params-report-parameters" title="Permalink to this heading">¶</a></h3>
 <dl>
@@ -1254,8 +1251,8 @@ deprecated.</p>
 </div>
 <p>Parameters for remotely connecting to SSS workstation (‘sws’) can be set
 by adding a file <code class="file docutils literal notranslate"><span class="pre">~/.mnefun/mnefun.json</span></code> with contents like:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir ~/.mnefun
-<span class="gp">$ </span><span class="nb">echo</span> <span class="s1">&#39;{&quot;sws_ssh&quot;:&quot;kasga&quot;, &quot;sws_dir&quot;:&quot;/data06/larsoner/sss_work&quot;, &quot;sws_port&quot;:22}&#39;</span> &gt; ~/.mnefun/mnefun.json
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>mkdir<span class="w"> </span>~/.mnefun
+<span class="gp">$ </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;{&quot;sws_ssh&quot;:&quot;kasga&quot;, &quot;sws_dir&quot;:&quot;/data06/larsoner/sss_work&quot;, &quot;sws_port&quot;:22}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>~/.mnefun/mnefun.json
 </pre></div>
 </div>
 <p>This should be preferred to the old way, which was to set in each script
@@ -1269,7 +1266,7 @@ help increase portability of scripts without hurting reproducibility
 (assuming we all use the same version of MaxFilter, which should be a
 safe assumption).</p>
 <p>To test that things are configured correctly, you can do:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -c <span class="s2">&quot;import mnefun; mnefun.check_sws()&quot;</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import mnefun; mnefun.check_sws()&quot;</span>
 <span class="go">On kasga: maxfilter -version (0 sec)</span>
 <span class="go">Output:</span>
 <span class="go">Revision: 2.2.15 Neuromag maxfilter Dec 11 2012 14:48:44</span>
@@ -1283,14 +1280,14 @@ It needs to use standard quotation marks like <code class="docutils literal notr
 quotation marks.</p></li>
 <li><p>Ensure that <code class="docutils literal notranslate"><span class="pre">maxwell_filter</span></code> is accessible as a command on the remote
 machine. Log into the remote machine and do:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>which maxfilter
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>which<span class="w"> </span>maxfilter
 <span class="go">/neuro/bin/util/maxfilter</span>
 </pre></div>
 </div>
 <p>If you get no output with this command, it means that MaxFilter is not
 available on your PATH on the remote machine. To fix this, consider adding
 the following line to the end of your <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> on the remote machine:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/neuro/bin/util:/neuro/bin/X11
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>:/neuro/bin/util:/neuro/bin/X11
 </pre></div>
 </div>
 </li>
@@ -1310,9 +1307,9 @@ the following line to the end of your <code class="docutils literal notranslate"
       
     </p>
     <p>
-        &copy; Copyright 2013-2022, mnefun Developers.<br/>
-      Last updated on Oct 31, 2022.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 5.3.0.<br/>
+        &copy; Copyright 2013-2023, mnefun Developers.<br/>
+      Last updated on Jan 09, 2023.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 6.1.2.<br/>
     </p>
   </div>
 </footer>
