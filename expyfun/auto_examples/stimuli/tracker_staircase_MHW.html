@@ -3,18 +3,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Do an adaptive track staircase with MHW procedure &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css?v=9afac83c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=50c73a79"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -118,18 +118,18 @@ to download the full example code</p>
 <p>This shows how to make and use an adaptive track with the modified
 Hughson-Westlake (MHW) procedure using
 <a class="reference internal" href="../../generated/expyfun.stimuli.TrackerMHW.html#expyfun.stimuli.TrackerMHW" title="expyfun.stimuli.TrackerMHW"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerMHW</span></code></a>.</p>
-<img src="../../_images/sphx_glr_tracker_staircase_MHW_001.png" srcset="../../_images/sphx_glr_tracker_staircase_MHW_001.png" alt="Adaptive track of model human (true threshold is 115)" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tracker_identify:                       {&quot;tracker_id&quot;: &quot;140414182031952-1673282617434857&quot;, &quot;tracker_type&quot;: &quot;TrackerMHW&quot;}
-tracker_140414182031952-1673282617434857_init:{&quot;callback&quot;: null, &quot;base_step&quot;: 5, &quot;factor_down&quot;: 2, &quot;factor_up_nr&quot;: 4, &quot;start_value&quot;: 80, &quot;x_min&quot;: 0, &quot;x_max&quot;: 120, &quot;n_up_stop&quot;: 2, &quot;repeat_limit&quot;: &quot;reversals&quot;}
-tracker_140414182031952-1673282617434857_respond:False
-tracker_140414182031952-1673282617434857_respond:False
-tracker_140414182031952-1673282617434857_respond:True
-tracker_140414182031952-1673282617434857_respond:False
-tracker_140414182031952-1673282617434857_respond:True
-tracker_140414182031952-1673282617434857_respond:False
-tracker_140414182031952-1673282617434857_respond:False
-/home/circleci/project/expyfun/stimuli/_tracker.py:1250: UserWarning: Tracker 140414182031952-1673282617434857 exceeded x_min or x_max bounds 1 times.
+<img src="../../_images/sphx_glr_tracker_staircase_MHW_001.png" srcset="../../_images/sphx_glr_tracker_staircase_MHW_001.png" alt="Adaptive track of model human (true threshold is 115)" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tracker_identify:                       {&quot;tracker_id&quot;: &quot;139750324763280-1690312115130718&quot;, &quot;tracker_type&quot;: &quot;TrackerMHW&quot;}
+tracker_139750324763280-1690312115130718_init:{&quot;callback&quot;: null, &quot;base_step&quot;: 5, &quot;factor_down&quot;: 2, &quot;factor_up_nr&quot;: 4, &quot;start_value&quot;: 80, &quot;x_min&quot;: 0, &quot;x_max&quot;: 120, &quot;n_up_stop&quot;: 2, &quot;repeat_limit&quot;: &quot;reversals&quot;}
+tracker_139750324763280-1690312115130718_respond:False
+tracker_139750324763280-1690312115130718_respond:False
+tracker_139750324763280-1690312115130718_respond:True
+tracker_139750324763280-1690312115130718_respond:False
+tracker_139750324763280-1690312115130718_respond:True
+tracker_139750324763280-1690312115130718_respond:False
+tracker_139750324763280-1690312115130718_respond:False
+/home/circleci/project/expyfun/stimuli/_tracker.py:1249: UserWarning: Tracker 139750324763280-1690312115130718 exceeded x_min or x_max bounds 1 times.
   warnings.warn(&#39;Tracker {} exceeded x_min or x_max bounds {} times.&#39;
-tracker_140414182031952-1673282617434857_stop:{&quot;responses&quot;: [0, 0, 1, 0, 1, 0, 0, 1], &quot;reversals&quot;: [0, 0, 1, 2, 3, 4, 0, 5], &quot;x&quot;: [80.0, 100.0, 120.0, 110.0, 115.0, 105.0, 110.0, 115.0], &quot;threshold&quot;: 115, &quot;n_correct_levels&quot;: {&quot;0&quot;: 0, &quot;5&quot;: 0, &quot;10&quot;: 0, &quot;15&quot;: 0, &quot;20&quot;: 0, &quot;25&quot;: 0, &quot;30&quot;: 0, &quot;35&quot;: 0, &quot;40&quot;: 0, &quot;45&quot;: 0, &quot;50&quot;: 0, &quot;55&quot;: 0, &quot;60&quot;: 0, &quot;65&quot;: 0, &quot;70&quot;: 0, &quot;75&quot;: 0, &quot;80&quot;: 0, &quot;85&quot;: 0, &quot;90&quot;: 0, &quot;95&quot;: 0, &quot;100&quot;: 0, &quot;105&quot;: 0, &quot;110&quot;: 0, &quot;115&quot;: 2, &quot;120&quot;: 1}}
+tracker_139750324763280-1690312115130718_stop:{&quot;responses&quot;: [0, 0, 1, 0, 1, 0, 0, 1], &quot;reversals&quot;: [0, 0, 1, 2, 3, 4, 0, 5], &quot;x&quot;: [80.0, 100.0, 120.0, 110.0, 115.0, 105.0, 110.0, 115.0], &quot;threshold&quot;: 115, &quot;n_correct_levels&quot;: {&quot;0&quot;: 0, &quot;5&quot;: 0, &quot;10&quot;: 0, &quot;15&quot;: 0, &quot;20&quot;: 0, &quot;25&quot;: 0, &quot;30&quot;: 0, &quot;35&quot;: 0, &quot;40&quot;: 0, &quot;45&quot;: 0, &quot;50&quot;: 0, &quot;55&quot;: 0, &quot;60&quot;: 0, &quot;65&quot;: 0, &quot;70&quot;: 0, &quot;75&quot;: 0, &quot;80&quot;: 0, &quot;85&quot;: 0, &quot;90&quot;: 0, &quot;95&quot;: 0, &quot;100&quot;: 0, &quot;105&quot;: 0, &quot;110&quot;: 0, &quot;115&quot;: 2, &quot;120&quot;: 1}}
 </pre></div>
 </div>
 <div class="line-block">
@@ -163,14 +163,14 @@ tracker_140414182031952-1673282617434857_stop:{&quot;responses&quot;: [0, 0, 1, 
                                     <span class="n">lower</span><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">chance</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slope</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slope</span></a><span class="p">))</span>
 
 <span class="c1"># Plot the results</span>
-<a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lines</span></a> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lines</span></a> <span class="o">=</span> <span class="n">tr</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lines</span></a> <span class="o">+=</span> <span class="n">tr</span><span class="o">.</span><span class="n">plot_thresh</span><span class="p">()</span>
 
 <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title" title="matplotlib.axes.Axes.set_title" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span></a><span class="p">(</span><span class="s1">&#39;Adaptive track of model human (true threshold is </span><span class="si">{}</span><span class="s1">)&#39;</span>
              <span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a><span class="p">))</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.100 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.091 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-tracker-staircase-mhw-py">
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/6bd093bd38b6a7b7b36b622b5e11d9d7/tracker_staircase_MHW.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tracker_staircase_MHW.py</span></code></a></p>
@@ -194,7 +194,7 @@ tracker_140414182031952-1673282617434857_stop:{&quot;responses&quot;: [0, 0, 1, 
       
     </p>
     <p>
-        &copy; Copyright 2013-2023, expyfun developers. Last updated on 2023-01-09.<br/>
+        &copy; Copyright 2013-2023, expyfun developers. Last updated on 2023-07-25.<br/>
     </p>
   </div>
 </footer>
