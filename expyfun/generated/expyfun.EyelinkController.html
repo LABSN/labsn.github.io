@@ -1,134 +1,442 @@
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="../" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>expyfun.EyelinkController &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=9afac83c" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=61a4c737" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=02819aa8" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=50c73a79"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
-    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../_static/documentation_options.js?v=8a32eaf7"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'generated/expyfun.EyelinkController';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="expyfun.ParallelTrigger" href="expyfun.ParallelTrigger.html" />
+    <link rel="prev" title="expyfun.ExperimentController" href="expyfun.ExperimentController.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../_static/style.css " type="text/css" />
 <link rel="stylesheet" href="../_static/font-awesome.css" type="text/css" />
 
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="../_static/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
-<script type="text/javascript" src="../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
 
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  </head><body>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">
-          expyfun</a>
-        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
-      </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-                <li><a href="../getting_started.html">Getting started</a></li>
-                <li><a href="../auto_examples/index.html">Examples</a></li>
-                <li><a href="../python_reference.html">API reference</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"></ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">expyfun.EyelinkController</a><ul>
-<li><a class="reference internal" href="#expyfun.EyelinkController"><code class="docutils literal notranslate"><span class="pre">EyelinkController</span></code></a><ul>
-<li><a class="reference internal" href="#expyfun.EyelinkController.calibrate"><code class="docutils literal notranslate"><span class="pre">EyelinkController.calibrate()</span></code></a></li>
-<li><a class="reference internal" href="#expyfun.EyelinkController.custom_calibration"><code class="docutils literal notranslate"><span class="pre">EyelinkController.custom_calibration()</span></code></a></li>
-<li><a class="reference internal" href="#expyfun.EyelinkController.eye_used"><code class="docutils literal notranslate"><span class="pre">EyelinkController.eye_used</span></code></a></li>
-<li><a class="reference internal" href="#expyfun.EyelinkController.file_list"><code class="docutils literal notranslate"><span class="pre">EyelinkController.file_list</span></code></a></li>
-<li><a class="reference internal" href="#expyfun.EyelinkController.get_eye_position"><code class="docutils literal notranslate"><span class="pre">EyelinkController.get_eye_position()</span></code></a></li>
-<li><a class="reference internal" href="#expyfun.EyelinkController.maintain_fix"><code class="docutils literal notranslate"><span class="pre">EyelinkController.maintain_fix()</span></code></a></li>
-<li><a class="reference internal" href="#expyfun.EyelinkController.recording"><code class="docutils literal notranslate"><span class="pre">EyelinkController.recording</span></code></a></li>
-<li><a class="reference internal" href="#expyfun.EyelinkController.stop"><code class="docutils literal notranslate"><span class="pre">EyelinkController.stop()</span></code></a></li>
-<li><a class="reference internal" href="#expyfun.EyelinkController.transfer_remote_file"><code class="docutils literal notranslate"><span class="pre">EyelinkController.transfer_remote_file()</span></code></a></li>
-<li><a class="reference internal" href="#expyfun.EyelinkController.wait_for_fix"><code class="docutils literal notranslate"><span class="pre">EyelinkController.wait_for_fix()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#examples-using-expyfun-eyelinkcontroller">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.EyelinkController</span></code></a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-            
-            
-            
-              <li class="hidden-sm"></li>
-            
-          </ul>
-
-          
-            
-<form class="navbar-form navbar-right" action="../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
-        </div>
-    </div>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
   </div>
 
-<div class="container">
-  <div class="row">
-    <div class="body col-md-12 content" role="main">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">expyfun</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
       
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../python_reference.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../auto_examples/index.html">
+    Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="External Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/LABSN/expyfun" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../python_reference.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../auto_examples/index.html">
+    Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="External Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/LABSN/expyfun" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="expyfun.ExperimentController.html">expyfun.ExperimentController</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">expyfun.EyelinkController</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.ParallelTrigger.html">expyfun.ParallelTrigger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.SoundCardController.html">expyfun.SoundCardController</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.TDTController.html">expyfun.TDTController</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.assert_version.html">expyfun.assert_version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.binary_to_decimals.html">expyfun.binary_to_decimals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.check_units.html">expyfun.check_units</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.decimals_to_binary.html">expyfun.decimals_to_binary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.download_version.html">expyfun.download_version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.get_config.html">expyfun.get_config</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.get_config_path.html">expyfun.get_config_path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.get_keyboard_input.html">expyfun.get_keyboard_input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.known_config_types.html">expyfun.known_config_types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.set_log_level.html">expyfun.set_log_level</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.set_config.html">expyfun.set_config</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.CRMPreload.html">expyfun.stimuli.CRMPreload</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.TrackerBinom.html">expyfun.stimuli.TrackerBinom</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.TrackerDealer.html">expyfun.stimuli.TrackerDealer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.TrackerUD.html">expyfun.stimuli.TrackerUD</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.TrackerMHW.html">expyfun.stimuli.TrackerMHW</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.convolve_hrtf.html">expyfun.stimuli.convolve_hrtf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.compute_mls_impulse_response.html">expyfun.stimuli.compute_mls_impulse_response</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.crm_info.html">expyfun.stimuli.crm_info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.crm_prepare_corpus.html">expyfun.stimuli.crm_prepare_corpus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.crm_response_menu.html">expyfun.stimuli.crm_response_menu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.crm_sentence.html">expyfun.stimuli.crm_sentence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.get_tdt_rates.html">expyfun.stimuli.get_tdt_rates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.play_sound.html">expyfun.stimuli.play_sound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.repeated_mls.html">expyfun.stimuli.repeated_mls</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.rms.html">expyfun.stimuli.rms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.texture_ERB.html">expyfun.stimuli.texture_ERB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.vocode.html">expyfun.stimuli.vocode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.stimuli.window_edges.html">expyfun.stimuli.window_edges</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="expyfun.io.read_hdf5.html">expyfun.io.read_hdf5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.io.read_tab_raw.html">expyfun.io.read_tab_raw</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.io.read_tab.html">expyfun.io.read_tab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.io.read_wav.html">expyfun.io.read_wav</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.io.write_hdf5.html">expyfun.io.write_hdf5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.io.write_wav.html">expyfun.io.write_wav</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.io.reconstruct_tracker.html">expyfun.io.reconstruct_tracker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.io.reconstruct_dealer.html">expyfun.io.reconstruct_dealer</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.Circle.html">expyfun.visual.Circle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.ConcentricCircles.html">expyfun.visual.ConcentricCircles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.Diamond.html">expyfun.visual.Diamond</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.FixationDot.html">expyfun.visual.FixationDot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.Line.html">expyfun.visual.Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.ProgressBar.html">expyfun.visual.ProgressBar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.RawImage.html">expyfun.visual.RawImage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.Rectangle.html">expyfun.visual.Rectangle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.Text.html">expyfun.visual.Text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.Triangle.html">expyfun.visual.Triangle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.visual.Video.html">expyfun.visual.Video</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="expyfun.codeblocks.find_pupil_dynamic_range.html">expyfun.codeblocks.find_pupil_dynamic_range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.codeblocks.find_pupil_tone_impulse_response.html">expyfun.codeblocks.find_pupil_tone_impulse_response</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.barplot.html">expyfun.analyze.barplot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.box_off.html">expyfun.analyze.box_off</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.dprime.html">expyfun.analyze.dprime</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.fit_sigmoid.html">expyfun.analyze.fit_sigmoid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.format_pval.html">expyfun.analyze.format_pval</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.logit.html">expyfun.analyze.logit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.plot_screen.html">expyfun.analyze.plot_screen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.press_times_to_hmfc.html">expyfun.analyze.press_times_to_hmfc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.restore_values.html">expyfun.analyze.restore_values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.rt_chisq.html">expyfun.analyze.rt_chisq</a></li>
+<li class="toctree-l1"><a class="reference internal" href="expyfun.analyze.sigmoid.html">expyfun.analyze.sigmoid</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="expyfun-eyelinkcontroller">
-<h1>expyfun.EyelinkController<a class="headerlink" href="#expyfun-eyelinkcontroller" title="Permalink to this heading">¶</a></h1>
+<h1>expyfun.EyelinkController<a class="headerlink" href="#expyfun-eyelinkcontroller" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="expyfun.EyelinkController">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyfun.</span></span><span class="sig-name descname"><span class="pre">EyelinkController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L126-L717"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">expyfun.</span></span><span class="sig-name descname"><span class="pre">EyelinkController</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'default'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L146-L797"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController" title="Link to this definition">#</a></dt>
 <dd><p>Eyelink communication and control methods.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -150,9 +458,50 @@ the network location of eyelink (e.g., “100.1.1.1”).</p>
 <p class="rubric">Notes</p>
 <p>The data will be saved to the ExperimentController <code class="docutils literal notranslate"><span class="pre">output_dir</span></code>.
 If this was <em class="xref py py-obj">None</em>, data will be saved to the current working dir.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Attributes<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dummy_mode</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.EyelinkController.eye_used" title="expyfun.EyelinkController.eye_used"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eye_used</span></code></a></dt><dd><p>Return the eye used ‘left’ or ‘right’</p>
+</dd>
+<dt><a class="reference internal" href="#expyfun.EyelinkController.file_list" title="expyfun.EyelinkController.file_list"><code class="xref py py-obj docutils literal notranslate"><span class="pre">file_list</span></code></a></dt><dd><p>The list of files started on the EyeLink</p>
+</dd>
+<dt><strong>fs</strong></dt><dd></dd>
+<dt><a class="reference internal" href="#expyfun.EyelinkController.recording" title="expyfun.EyelinkController.recording"><code class="xref py py-obj docutils literal notranslate"><span class="pre">recording</span></code></a></dt><dd><p>Returns boolean for whether or not the Eyelink is recording</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.EyelinkController.calibrate" title="expyfun.EyelinkController.calibrate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calibrate</span></code></a>([beep, prompt])</p></td>
+<td><p>Calibrate the eyetracker</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.EyelinkController.custom_calibration" title="expyfun.EyelinkController.custom_calibration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">custom_calibration</span></code></a>([ctype, horiz, vert, ...])</p></td>
+<td><p>Set Eyetracker to use a custom calibration sequence</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.EyelinkController.get_eye_position" title="expyfun.EyelinkController.get_eye_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_eye_position</span></code></a>()</p></td>
+<td><p>The current eye position in pixels</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.EyelinkController.maintain_fix" title="expyfun.EyelinkController.maintain_fix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maintain_fix</span></code></a>(fix_pos, check_duration[, tol, ...])</p></td>
+<td><p>Check to see if subject is fixating in a region.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.EyelinkController.stop" title="expyfun.EyelinkController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>()</p></td>
+<td><p>Stop Eyelink recording and close current file</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.EyelinkController.transfer_remote_file" title="expyfun.EyelinkController.transfer_remote_file"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transfer_remote_file</span></code></a>(remote_name)</p></td>
+<td><p>Pull remote file (from Eyelink) to local machine</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.EyelinkController.wait_for_fix" title="expyfun.EyelinkController.wait_for_fix"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_fix</span></code></a>(fix_pos[, fix_time, tol, ...])</p></td>
+<td><p>Wait for gaze to settle within a defined region</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.calibrate">
-<span class="sig-name descname"><span class="pre">calibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L334-L383"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.calibrate" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">calibrate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">beep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L360-L411"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.calibrate" title="Link to this definition">#</a></dt>
 <dd><p>Calibrate the eyetracker</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -185,7 +534,7 @@ will be started.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.custom_calibration">
-<span class="sig-name descname"><span class="pre">custom_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HV5'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horiz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L591-L661"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.custom_calibration" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">custom_calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ctype</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HV5'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horiz</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.6666666666666666</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinates</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L638-L739"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.custom_calibration" title="Link to this definition">#</a></dt>
 <dd><p>Set Eyetracker to use a custom calibration sequence</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -215,7 +564,7 @@ must be a list with 2 elements corresponding to x and y position.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.eye_used">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eye_used</span></span><a class="headerlink" href="#expyfun.EyelinkController.eye_used" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eye_used</span></span><a class="headerlink" href="#expyfun.EyelinkController.eye_used" title="Link to this definition">#</a></dt>
 <dd><p>Return the eye used ‘left’ or ‘right’</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -229,13 +578,13 @@ must be a list with 2 elements corresponding to x and y position.</p>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.file_list">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file_list</span></span><a class="headerlink" href="#expyfun.EyelinkController.file_list" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">file_list</span></span><a class="headerlink" href="#expyfun.EyelinkController.file_list" title="Link to this definition">#</a></dt>
 <dd><p>The list of files started on the EyeLink</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.get_eye_position">
-<span class="sig-name descname"><span class="pre">get_eye_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L663-L693"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.get_eye_position" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">get_eye_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L741-L774"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.get_eye_position" title="Link to this definition">#</a></dt>
 <dd><p>The current eye position in pixels</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
@@ -256,7 +605,7 @@ eye is lost.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.maintain_fix">
-<span class="sig-name descname"><span class="pre">maintain_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fix_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_early</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L532-L589"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.maintain_fix" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">maintain_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fix_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_duration</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">period</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_early</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L568-L636"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.maintain_fix" title="Link to this definition">#</a></dt>
 <dd><p>Check to see if subject is fixating in a region.</p>
 <p>This checks to make sure that the subjects gaze falls within a region
 at least once in any given period. In other words it checks to make
@@ -293,13 +642,13 @@ sure that the gaze falls in the target region at least every
 
 <dl class="py property">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.recording">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">recording</span></span><a class="headerlink" href="#expyfun.EyelinkController.recording" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">recording</span></span><a class="headerlink" href="#expyfun.EyelinkController.recording" title="Link to this definition">#</a></dt>
 <dd><p>Returns boolean for whether or not the Eyelink is recording</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.stop">
-<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L316-L332"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.stop" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">stop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L343-L358"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.stop" title="Link to this definition">#</a></dt>
 <dd><p>Stop Eyelink recording and close current file</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -312,7 +661,7 @@ sure that the gaze falls in the target region at least every
 
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.transfer_remote_file">
-<span class="sig-name descname"><span class="pre">transfer_remote_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_name</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L435-L457"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.transfer_remote_file" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">transfer_remote_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">remote_name</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L462-L483"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.transfer_remote_file" title="Link to this definition">#</a></dt>
 <dd><p>Pull remote file (from Eyelink) to local machine</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -338,7 +687,7 @@ sure that the gaze falls in the target region at least every
 
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.EyelinkController.wait_for_fix">
-<span class="sig-name descname"><span class="pre">wait_for_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fix_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L479-L530"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.wait_for_fix" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">wait_for_fix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fix_pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fix_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_wait</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">inf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_interval</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'norm'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_eyelink_controller.py#L507-L566"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.EyelinkController.wait_for_fix" title="Link to this definition">#</a></dt>
 <dd><p>Wait for gaze to settle within a defined region</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -375,7 +724,7 @@ sure that the gaze falls in the target region at least every
 </dd></dl>
 
 <section id="examples-using-expyfun-eyelinkcontroller">
-<h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.EyelinkController</span></code><a class="headerlink" href="#examples-using-expyfun-eyelinkcontroller" title="Permalink to this heading">¶</a></h2>
+<span id="sphx-glr-backreferences-expyfun-eyelinkcontroller"></span><h2>Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.EyelinkController</span></code><a class="headerlink" href="#examples-using-expyfun-eyelinkcontroller" title="Link to this heading">#</a></h2>
 <div class="sphx-glr-thumbnails"><div class="sphx-glr-thumbcontainer" tooltip="Integration with Eyelink functionality makes programming experiments using eye-tracking simpler..."><img alt="" src="../_images/sphx_glr_pupillometry_experiment__thumb.png" />
 <p><a class="reference internal" href="../auto_examples/experiments/pupillometry_experiment_.html#sphx-glr-auto-examples-experiments-pupillometry-experiment-py"><span class="std std-ref">Experiment using eye-tracking pupillometry</span></a></p>
   <div class="sphx-glr-thumbnail-title">Experiment using eye-tracking pupillometry</div>
@@ -386,20 +735,114 @@ sure that the gaze falls in the target region at least every
 </section>
 
 
-    </div>
-      
-  </div>
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="expyfun.ExperimentController.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">expyfun.ExperimentController</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="expyfun.ParallelTrigger.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">expyfun.ParallelTrigger</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2013-2023, expyfun developers. Last updated on 2023-07-25.<br/>
-    </p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-</footer>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController"><code class="docutils literal notranslate"><span class="pre">EyelinkController</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.calibrate"><code class="docutils literal notranslate"><span class="pre">EyelinkController.calibrate()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.custom_calibration"><code class="docutils literal notranslate"><span class="pre">EyelinkController.custom_calibration()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.eye_used"><code class="docutils literal notranslate"><span class="pre">EyelinkController.eye_used</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.file_list"><code class="docutils literal notranslate"><span class="pre">EyelinkController.file_list</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.get_eye_position"><code class="docutils literal notranslate"><span class="pre">EyelinkController.get_eye_position()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.maintain_fix"><code class="docutils literal notranslate"><span class="pre">EyelinkController.maintain_fix()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.recording"><code class="docutils literal notranslate"><span class="pre">EyelinkController.recording</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.stop"><code class="docutils literal notranslate"><span class="pre">EyelinkController.stop()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.transfer_remote_file"><code class="docutils literal notranslate"><span class="pre">EyelinkController.transfer_remote_file()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expyfun.EyelinkController.wait_for_fix"><code class="docutils literal notranslate"><span class="pre">EyelinkController.wait_for_fix()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples-using-expyfun-eyelinkcontroller">Examples using <code class="docutils literal notranslate"><span class="pre">expyfun.EyelinkController</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2013-2024, expyfun developers. Last updated on 2024-06-24.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>

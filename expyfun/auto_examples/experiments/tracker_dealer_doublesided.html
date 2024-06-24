@@ -1,133 +1,420 @@
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" data-content_root="../../" >
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Adaptive tracking from above and below &#8212; expyfun 2.0.0.dev0 documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
-    <link rel="stylesheet" type="text/css" href="../../_static/bootstrap-sphinx.css?v=9afac83c" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=61a4c737" />
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=02819aa8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=50c73a79"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
-    <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script src="../../_static/documentation_options.js?v=8a32eaf7"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'auto_examples/experiments/tracker_dealer_doublesided';</script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Experiment with eye-tracking" href="eyetracking_experiment_.html" />
+    <link rel="prev" title="ProgressBar demo" href="progress_bar.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../../_static/style.css " type="text/css" />
 <link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
 
-<meta charset='utf-8'>
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<script type="text/javascript" src="../../_static/js/jquery-1.12.4.min.js"></script>
-<script type="text/javascript" src="../../_static/js/jquery-fix.js"></script>
-<script type="text/javascript" src="../../_static/bootstrap-3.4.1/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
 
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-  </head><body>
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-  <div id="navbar" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../../index.html">
-          expyfun</a>
-        <span class="navbar-text navbar-version pull-left"><b>2.0.0.dev0</b></span>
-      </div>
-
-        <div class="collapse navbar-collapse nav-collapse">
-          <ul class="nav navbar-nav">
-            
-                <li><a href="../../getting_started.html">Getting started</a></li>
-                <li><a href="../index.html">Examples</a></li>
-                <li><a href="../../python_reference.html">API reference</a></li>
-            
-            
-              <li class="dropdown globaltoc-container">
-  <a role="button"
-     id="dLabelGlobalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="../../index.html">Site <b class="caret"></b></a>
-  <ul class="dropdown-menu globaltoc"
-      role="menu"
-      aria-labelledby="dLabelGlobalToc"></ul>
-</li>
-              
-                <li class="dropdown">
-  <a role="button"
-     id="dLabelLocalToc"
-     data-toggle="dropdown"
-     data-target="#"
-     href="#">Page <b class="caret"></b></a>
-  <ul class="dropdown-menu localtoc"
-      role="menu"
-      aria-labelledby="dLabelLocalToc"><ul>
-<li><a class="reference internal" href="#">Adaptive tracking from above and below</a><ul>
-<li><a class="reference internal" href="#defining-tracker-parameters">Defining Tracker Parameters</a></li>
-<li><a class="reference internal" href="#initializing-and-running-trackers">Initializing and Running Trackers</a></li>
-<li><a class="reference internal" href="#plotting-the-results">Plotting the Results</a></li>
-</ul>
-</li>
-</ul>
-</ul>
-</li>
-              
-            
-            
-            
-            
-            
-              <li class="hidden-sm"></li>
-            
-          </ul>
-
-          
-            
-<form class="navbar-form navbar-right" action="../../search.html" method="get">
- <div class="form-group">
-  <input type="text" name="q" class="form-control" placeholder="Search" />
- </div>
-  <input type="hidden" name="check_keywords" value="yes" />
-  <input type="hidden" name="area" value="default" />
-</form>
-          
-        </div>
-    </div>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
   </div>
 
-<div class="container">
-  <div class="row">
-    <div class="body col-md-12 content" role="main">
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">expyfun</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
       
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../python_reference.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="External Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/LABSN/expyfun" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav class="navbar-nav">
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item">
+  <a class="nav-link nav-internal" href="../../python_reference.html">
+    API Reference
+  </a>
+</li>
+
+
+<li class="nav-item pst-header-nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Examples
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="External Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/LABSN/expyfun" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../basic_experiment.html">Run a very basic experiment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../generate_simple_stimuli.html">Generate sample stimuli</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../simple_experiment.html">Run a simple experiment</a></li>
+</ul>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../analysis/index.html">Analysis examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/parse_demo.html">Parsing demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../analysis/analysis_demo.html">Analysis demo</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Experiments</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="version_checking_.html">Version checking functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="level_test.html">Sound level test and visual size calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pupillometry_experiment_.html">Experiment using eye-tracking pupillometry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drawing_methods.html">Experiment drawing methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyrelease.html">KeyPressAndRelease demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formatted_text.html">Display text with different formatting methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="progress_bar.html">ProgressBar demo</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Adaptive tracking from above and below</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eyetracking_experiment_.html">Experiment with eye-tracking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tracker_dealer.html">Adaptive tracking for two trial types and tracker reconstruction from .tab</a></li>
+<li class="toctree-l2"><a class="reference internal" href="joystick_experiment.html">Use joystick controls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mouse.html">Mouse click demo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keypress.html">Keypress demo</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../stimuli/index.html">Stimulus generation examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stimuli/advanced_stimuli.html">Generate more advanced auditory stimuli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stimuli/simple_video.html">Video playing made simple</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stimuli/tracker_staircase.html">Do an adaptive track staircase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stimuli/tracker_staircase_MHW.html">Do an adaptive track staircase with MHW procedure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stimuli/texture_stimuli.html">Generate texture stimuli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stimuli/vocoded_stimuli.html">Generate vocoded stimuli</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stimuli/crm_stimuli.html">Use the CRM corpus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stimuli/stimulus_power.html">Examine and manipulate stimulus power</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../stimuli/advanced_video.html">Video property control</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../sync/index.html">Synchronization tests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sync/sample_rate_test.html">Audio sample rate test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sync/sync_test.html">A-V sync test</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference internal" href="#sphx-glr-download-auto-examples-experiments-tracker-dealer-doublesided-py"><span class="std std-ref">Go to the end</span></a>
-to download the full example code</p>
+to download the full example code.</p>
 </div>
 <section class="sphx-glr-example-title" id="adaptive-tracking-from-above-and-below">
-<span id="sphx-glr-auto-examples-experiments-tracker-dealer-doublesided-py"></span><h1>Adaptive tracking from above and below<a class="headerlink" href="#adaptive-tracking-from-above-and-below" title="Permalink to this heading">¶</a></h1>
+<span id="sphx-glr-auto-examples-experiments-tracker-dealer-doublesided-py"></span><h1>Adaptive tracking from above and below<a class="headerlink" href="#adaptive-tracking-from-above-and-below" title="Link to this heading">#</a></h1>
 <p>This file shows how to interleave multiple Tracker objects using
 <a class="reference internal" href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerDealer</span></code></a> to simultaneously approach a threshold
 from both above and below.</p>
 <p>&#64;author: maddycapp27</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="kn">import</span> <span class="n">TrackerUD</span><span class="p">,</span> <span class="n">TrackerDealer</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
 <span class="kn">from</span> <span class="nn">expyfun.analyze</span> <span class="kn">import</span> <span class="n">sigmoid</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="kn">import</span> <span class="n">TrackerDealer</span><span class="p">,</span> <span class="n">TrackerUD</span>
 
 <span class="c1"># define parameters of modeled subject (using sigmoid probability)</span>
 <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># true thresholds for trial types 1 and 2</span>
@@ -136,7 +423,7 @@ from both above and below.</p>
 </pre></div>
 </div>
 <section id="defining-tracker-parameters">
-<h2>Defining Tracker Parameters<a class="headerlink" href="#defining-tracker-parameters" title="Permalink to this heading">¶</a></h2>
+<h2>Defining Tracker Parameters<a class="headerlink" href="#defining-tracker-parameters" title="Link to this heading">#</a></h2>
 <p>In this example, the tracker parameters are the same for each instance of
 the up-down adaptive tracker except for the start value. Each start value in
 the list will be given to a different tracker. The other parameters are
@@ -145,7 +432,7 @@ is larger by a factor of 3) and based on the number of reversals (the first
 element in each list is the step size until the number of reversals dictated
 by the second element in change_criteria have occurred (i.e. the up step size
 will be 9 until 5 reversals have occurred, then the up step size will be 3.))</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">up</span></a> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">up</span></a> <span class="o">=</span> <span class="mi">1</span>
 <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">down</span></a> <span class="o">=</span> <span class="mi">1</span>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_up</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_down</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -153,34 +440,48 @@ will be 9 until 5 reversals have occurred, then the up step size will be 3.))</p
 <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stop_trials</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">start_value</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_indices</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-<a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_rule</span></a> <span class="o">=</span> <span class="s1">&#39;reversals&#39;</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_rule</span></a> <span class="o">=</span> <span class="s2">&quot;reversals&quot;</span>
 <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_min</span></a> <span class="o">=</span> <span class="mi">0</span>
 <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_max</span></a> <span class="o">=</span> <span class="mi">90</span>
 
 
 <span class="c1"># callback function that prints to console</span>
 <span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">event_type</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;:&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">event_type</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
 
 
 <span class="c1"># parameters for the tracker dealer</span>
 <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_lag</span></a> <span class="o">=</span> <span class="mi">2</span>
-<a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pace_rule</span></a> <span class="o">=</span> <span class="s1">&#39;reversals&#39;</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pace_rule</span></a> <span class="o">=</span> <span class="s2">&quot;reversals&quot;</span>
 <a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rng_dealer</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># random seed for selecting trial type</span>
 </pre></div>
 </div>
 </section>
 <section id="initializing-and-running-trackers">
-<h2>Initializing and Running Trackers<a class="headerlink" href="#initializing-and-running-trackers" title="Permalink to this heading">¶</a></h2>
+<h2>Initializing and Running Trackers<a class="headerlink" href="#initializing-and-running-trackers" title="Link to this heading">#</a></h2>
 <p>The two trackers in this example use all of the same parameters except for
 the start value and then are passed into the dealer. After the dealer is
 created, the type of trial with the start value above or below the true
 threshold (returned as an index) and trial level for that trial can be
 acquired.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialize two tracker objects--one for each start value</span>
-<a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tr_ud</span></a> <span class="o">=</span> <span class="p">[</span><span class="n">TrackerUD</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">up</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">down</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_up</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_down</span></a><span class="p">,</span>
-                   <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stop_reversals</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stop_trials</span></a><span class="p">,</span> <span class="n">sv</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_indices</span></a><span class="p">,</span>
-                   <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_rule</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_min</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_max</span></a><span class="p">)</span> <span class="k">for</span> <span class="n">sv</span> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">start_value</span></a><span class="p">]</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialize two tracker objects--one for each start value</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tr_ud</span></a> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">TrackerUD</span><span class="p">(</span>
+        <span class="n">callback</span><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">up</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">down</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_up</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_down</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stop_reversals</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stop_trials</span></a><span class="p">,</span>
+        <span class="n">sv</span><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_indices</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_rule</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_min</span></a><span class="p">,</span>
+        <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_max</span></a><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">sv</span> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">start_value</span></a>
+<span class="p">]</span>
 
 <span class="c1"># initialize TrackerDealer object</span>
 <span class="n">td</span> <span class="o">=</span> <span class="n">TrackerDealer</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tr_ud</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_lag</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pace_rule</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rng_dealer</span></a><span class="p">)</span>
@@ -191,173 +492,175 @@ acquired.</p>
 <span class="k">for</span> <a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">_</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">level</span></a> <span class="ow">in</span> <span class="n">td</span><span class="p">:</span>
     <span class="c1"># Get information of which trial type is next and what the level is at</span>
     <span class="c1"># that time from TrackerDealer</span>
-    <span class="n">td</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rng_human</span></a><span class="o">.</span><span class="n">rand</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">sigmoid</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">level</span></a> <span class="o">-</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a><span class="p">,</span>
-                                          <span class="n">lower</span><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">chance</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slope</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slope</span></a><span class="p">))</span>
+    <span class="n">td</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span>
+        <a href="https://numpy.org/devdocs/reference/random/generated/numpy.random.RandomState.rand.html#numpy.random.RandomState.rand" title="numpy.random.RandomState.rand" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-method"><span class="n">rng_human</span><span class="o">.</span><span class="n">rand</span></a><span class="p">()</span> <span class="o">&lt;</span> <span class="n">sigmoid</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">level</span></a> <span class="o">-</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">chance</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slope</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slope</span></a><span class="p">)</span>
+    <span class="p">)</span>
 </pre></div>
 </div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tracker_identify:                       {&quot;tracker_id&quot;: &quot;139748790512864-1690312102257648&quot;, &quot;tracker_type&quot;: &quot;TrackerUD&quot;}
-tracker_139748790512864-1690312102257648_init:{&quot;callback&quot;: null, &quot;up&quot;: 1, &quot;down&quot;: 1, &quot;step_size_up&quot;: [9.0, 3.0], &quot;step_size_down&quot;: [3.0, 1.0], &quot;stop_reversals&quot;: 30, &quot;stop_trials&quot;: Infinity, &quot;start_value&quot;: 15, &quot;change_indices&quot;: [5], &quot;change_rule&quot;: &quot;reversals&quot;, &quot;x_min&quot;: 0.0, &quot;x_max&quot;: 90.0, &quot;repeat_limit&quot;: &quot;reversals&quot;}
-tracker_identify:                       {&quot;tracker_id&quot;: &quot;139748790505376-1690312102257848&quot;, &quot;tracker_type&quot;: &quot;TrackerUD&quot;}
-tracker_139748790505376-1690312102257848_init:{&quot;callback&quot;: null, &quot;up&quot;: 1, &quot;down&quot;: 1, &quot;step_size_up&quot;: [9.0, 3.0], &quot;step_size_down&quot;: [3.0, 1.0], &quot;stop_reversals&quot;: 30, &quot;stop_trials&quot;: Infinity, &quot;start_value&quot;: 45, &quot;change_indices&quot;: [5], &quot;change_rule&quot;: &quot;reversals&quot;, &quot;x_min&quot;: 0.0, &quot;x_max&quot;: 90.0, &quot;repeat_limit&quot;: &quot;reversals&quot;}
-dealer_identify:                        {&quot;dealer_id&quot;: 139748790511040}
-dealer_139748790511040_init:            {&quot;trackers&quot;: [&quot;139748790512864-1690312102257648&quot;, &quot;139748790505376-1690312102257848&quot;], &quot;shape&quot;: [2], &quot;max_lag&quot;: 2, &quot;pace_rule&quot;: &quot;reversals&quot;}
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790505376-1690312102257848_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790505376-1690312102257848_respond:False
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:True
-tracker_139748790512864-1690312102257648_respond:False
-tracker_139748790505376-1690312102257848_stop:{&quot;responses&quot;: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1], &quot;reversals&quot;: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 3, 4, 5, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 0, 11, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 14, 0, 0, 15, 16, 17, 0, 18, 0, 0, 19, 20, 21, 22, 0, 23, 24, 0, 25, 26, 27, 0, 28, 0, 0, 0, 29, 30], &quot;x&quot;: [45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 24.0, 21.0, 18.0, 27.0, 24.0, 21.0, 18.0, 15.0, 24.0, 21.0, 24.0, 23.0, 22.0, 25.0, 28.0, 27.0, 26.0, 29.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 24.0, 23.0, 22.0, 25.0, 28.0, 27.0, 26.0, 25.0, 28.0, 27.0, 30.0, 33.0, 32.0, 31.0, 30.0, 33.0, 32.0, 35.0, 34.0, 33.0, 36.0, 35.0, 34.0, 37.0, 36.0, 39.0, 42.0, 41.0, 40.0, 39.0, 38.0, 41.0]}
-tracker_139748790512864-1690312102257648_stop:{&quot;responses&quot;: [1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1], &quot;reversals&quot;: [0, 1, 0, 2, 0, 0, 3, 4, 5, 6, 0, 0, 7, 8, 0, 9, 10, 11, 12, 0, 0, 0, 0, 0, 0, 0, 13, 14, 15, 16, 0, 17, 18, 19, 0, 20, 0, 0, 0, 0, 0, 0, 21, 22, 0, 0, 0, 23, 24, 25, 26, 0, 0, 27, 28, 0, 0, 0, 0, 29, 30], &quot;x&quot;: [15.0, 12.0, 21.0, 30.0, 27.0, 24.0, 21.0, 30.0, 27.0, 30.0, 29.0, 28.0, 27.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 28.0, 27.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 36.0, 35.0, 34.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0]}
-dealer_139748790511040_stop:            {&quot;tracker_history&quot;: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0], &quot;response_history&quot;: [1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0], &quot;x_history&quot;: [15.0, 12.0, 45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 24.0, 21.0, 18.0, 27.0, 21.0, 30.0, 24.0, 21.0, 27.0, 18.0, 24.0, 21.0, 15.0, 24.0, 30.0, 27.0, 21.0, 30.0, 24.0, 23.0, 22.0, 29.0, 28.0, 27.0, 30.0, 25.0, 28.0, 27.0, 26.0, 29.0, 28.0, 29.0, 31.0, 32.0, 30.0, 31.0, 30.0, 29.0, 33.0, 32.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 27.0, 30.0, 29.0, 28.0, 27.0, 26.0, 26.0, 25.0, 25.0, 24.0, 23.0, 22.0, 28.0, 25.0, 28.0, 27.0, 27.0, 26.0, 25.0, 30.0, 28.0, 27.0, 29.0, 28.0, 31.0, 30.0, 33.0, 30.0, 32.0, 31.0, 30.0, 33.0, 33.0, 36.0, 35.0, 34.0, 32.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 35.0, 31.0, 34.0, 30.0, 33.0, 29.0, 28.0, 36.0, 31.0, 30.0, 35.0, 34.0, 33.0, 37.0, 36.0, 32.0, 31.0, 30.0, 33.0, 39.0, 42.0, 41.0, 32.0, 40.0, 39.0, 31.0, 38.0, 30.0, 29.0, 28.0, 41.0, 31.0]}
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tracker_identify:                       {&quot;tracker_id&quot;: &quot;140163379486992-1719258540592256&quot;, &quot;tracker_type&quot;: &quot;TrackerUD&quot;}
+tracker_140163379486992-1719258540592256_init:{&quot;callback&quot;: null, &quot;up&quot;: 1, &quot;down&quot;: 1, &quot;step_size_up&quot;: [9.0, 3.0], &quot;step_size_down&quot;: [3.0, 1.0], &quot;stop_reversals&quot;: 30, &quot;stop_trials&quot;: Infinity, &quot;start_value&quot;: 15, &quot;change_indices&quot;: [5], &quot;change_rule&quot;: &quot;reversals&quot;, &quot;x_min&quot;: 0.0, &quot;x_max&quot;: 90.0, &quot;repeat_limit&quot;: &quot;reversals&quot;}
+tracker_identify:                       {&quot;tracker_id&quot;: &quot;140163379493616-1719258540592466&quot;, &quot;tracker_type&quot;: &quot;TrackerUD&quot;}
+tracker_140163379493616-1719258540592466_init:{&quot;callback&quot;: null, &quot;up&quot;: 1, &quot;down&quot;: 1, &quot;step_size_up&quot;: [9.0, 3.0], &quot;step_size_down&quot;: [3.0, 1.0], &quot;stop_reversals&quot;: 30, &quot;stop_trials&quot;: Infinity, &quot;start_value&quot;: 45, &quot;change_indices&quot;: [5], &quot;change_rule&quot;: &quot;reversals&quot;, &quot;x_min&quot;: 0.0, &quot;x_max&quot;: 90.0, &quot;repeat_limit&quot;: &quot;reversals&quot;}
+dealer_identify:                        {&quot;dealer_id&quot;: 140163379490640}
+dealer_140163379490640_init:            {&quot;trackers&quot;: [&quot;140163379486992-1719258540592256&quot;, &quot;140163379493616-1719258540592466&quot;], &quot;shape&quot;: [2], &quot;max_lag&quot;: 2, &quot;pace_rule&quot;: &quot;reversals&quot;}
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379493616-1719258540592466_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379493616-1719258540592466_respond:False
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:True
+tracker_140163379486992-1719258540592256_respond:False
+tracker_140163379493616-1719258540592466_stop:{&quot;responses&quot;: [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1], &quot;reversals&quot;: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 3, 4, 5, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 0, 11, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 14, 0, 0, 15, 16, 17, 0, 18, 0, 0, 19, 20, 21, 22, 0, 23, 24, 0, 25, 26, 27, 0, 28, 0, 0, 0, 29, 30], &quot;x&quot;: [45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 24.0, 21.0, 18.0, 27.0, 24.0, 21.0, 18.0, 15.0, 24.0, 21.0, 24.0, 23.0, 22.0, 25.0, 28.0, 27.0, 26.0, 29.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 24.0, 23.0, 22.0, 25.0, 28.0, 27.0, 26.0, 25.0, 28.0, 27.0, 30.0, 33.0, 32.0, 31.0, 30.0, 33.0, 32.0, 35.0, 34.0, 33.0, 36.0, 35.0, 34.0, 37.0, 36.0, 39.0, 42.0, 41.0, 40.0, 39.0, 38.0, 41.0]}
+tracker_140163379486992-1719258540592256_stop:{&quot;responses&quot;: [1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1], &quot;reversals&quot;: [0, 1, 0, 2, 0, 0, 3, 4, 5, 6, 0, 0, 7, 8, 0, 9, 10, 11, 12, 0, 0, 0, 0, 0, 0, 0, 13, 14, 15, 16, 0, 17, 18, 19, 0, 20, 0, 0, 0, 0, 0, 0, 21, 22, 0, 0, 0, 23, 24, 25, 26, 0, 0, 27, 28, 0, 0, 0, 0, 29, 30], &quot;x&quot;: [15.0, 12.0, 21.0, 30.0, 27.0, 24.0, 21.0, 30.0, 27.0, 30.0, 29.0, 28.0, 27.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 28.0, 27.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 36.0, 35.0, 34.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0]}
+dealer_140163379490640_stop:            {&quot;tracker_history&quot;: [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0], &quot;response_history&quot;: [1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0], &quot;x_history&quot;: [15.0, 12.0, 45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 24.0, 21.0, 18.0, 27.0, 21.0, 30.0, 24.0, 21.0, 27.0, 18.0, 24.0, 21.0, 15.0, 24.0, 30.0, 27.0, 21.0, 30.0, 24.0, 23.0, 22.0, 29.0, 28.0, 27.0, 30.0, 25.0, 28.0, 27.0, 26.0, 29.0, 28.0, 29.0, 31.0, 32.0, 30.0, 31.0, 30.0, 29.0, 33.0, 32.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 27.0, 30.0, 29.0, 28.0, 27.0, 26.0, 26.0, 25.0, 25.0, 24.0, 23.0, 22.0, 28.0, 25.0, 28.0, 27.0, 27.0, 26.0, 25.0, 30.0, 28.0, 27.0, 29.0, 28.0, 31.0, 30.0, 33.0, 30.0, 32.0, 31.0, 30.0, 33.0, 33.0, 36.0, 35.0, 34.0, 32.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 35.0, 31.0, 34.0, 30.0, 33.0, 29.0, 28.0, 36.0, 31.0, 30.0, 35.0, 34.0, 33.0, 37.0, 36.0, 32.0, 31.0, 30.0, 33.0, 39.0, 42.0, 41.0, 32.0, 40.0, 39.0, 31.0, 38.0, 30.0, 29.0, 28.0, 41.0, 31.0]}
 </pre></div>
 </div>
 </section>
 <section id="plotting-the-results">
-<h2>Plotting the Results<a class="headerlink" href="#plotting-the-results" title="Permalink to this heading">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<h2>Plotting the Results<a class="headerlink" href="#plotting-the-results" title="Link to this heading">#</a></h2>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 <span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
-    <a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lines</span></a> <span class="o">=</span> <span class="n">td</span><span class="o">.</span><span class="n">trackers</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="o">=</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">],</span> <span class="n">n_skip</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lines</span></a> <span class="o">=</span> <span class="n">td</span><span class="o">.</span><span class="n">trackers</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="o">=</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">],</span> <span class="n">n_skip</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend" title="matplotlib.axes.Axes.legend" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span></a><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;best&#39;</span><span class="p">)</span>
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title" title="matplotlib.axes.Axes.set_title" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span></a><span class="p">(</span><span class="s1">&#39;Adaptive track with start value </span><span class="si">{}</span><span class="s1"> (true threshold &#39;</span>
-                 <span class="s1">&#39;is </span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">start_value</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">],</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a><span class="p">))</span>
-    <a href="https://matplotlib.org/stable/api/figure_api.html#matplotlib.figure.Figure.tight_layout" title="matplotlib.figure.Figure.tight_layout" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend" title="matplotlib.axes.Axes.legend" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span></a><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;best&quot;</span><span class="p">)</span>
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title" title="matplotlib.axes.Axes.set_title" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span></a><span class="p">(</span>
+        <span class="sa">f</span><span class="s2">&quot;Adaptive track with start value </span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">start_value</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">]</span><span class="si">}</span><span class="s2"> (true threshold &quot;</span>
+        <span class="sa">f</span><span class="s2">&quot;is </span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a><span class="si">}</span><span class="s2">)&quot;</span>
+    <span class="p">)</span>
+    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.tight_layout.html#matplotlib.figure.Figure.tight_layout" title="matplotlib.figure.Figure.tight_layout" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_tracker_dealer_doublesided_001.png" srcset="../../_images/sphx_glr_tracker_dealer_doublesided_001.png" alt="Adaptive track with start value 15 (true threshold is 30), Adaptive track with start value 45 (true threshold is 30)" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>/home/circleci/project/examples/experiments/tracker_dealer_doublesided.py:94: UserWarning: The figure layout has changed to tight
-  fig.tight_layout()
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.338 seconds)</p>
+<img src="../../_images/sphx_glr_tracker_dealer_doublesided_001.png" srcset="../../_images/sphx_glr_tracker_dealer_doublesided_001.png" alt="Adaptive track with start value 15 (true threshold is 30), Adaptive track with start value 45 (true threshold is 30)" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.263 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-tracker-dealer-doublesided-py">
+<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/46139842d61762308be96dee1b424c6d/tracker_dealer_doublesided.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">tracker_dealer_doublesided.ipynb</span></code></a></p>
+</div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/0b88d5459fcd7947f34922e63f506a26/tracker_dealer_doublesided.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">tracker_dealer_doublesided.py</span></code></a></p>
 </div>
-<div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/46139842d61762308be96dee1b424c6d/tracker_dealer_doublesided.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">tracker_dealer_doublesided.ipynb</span></code></a></p>
+<div class="sphx-glr-download sphx-glr-download-zip docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/84f48c5e76b71531c024e457b8822ca0/tracker_dealer_doublesided.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">tracker_dealer_doublesided.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -365,20 +668,103 @@ dealer_139748790511040_stop:            {&quot;tracker_history&quot;: [0, 0, 1, 
 </section>
 
 
-    </div>
-      
-  </div>
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="progress_bar.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ProgressBar demo</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="eyetracking_experiment_.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Experiment with eye-tracking</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-<footer class="footer">
-  <div class="container">
-    <p class="pull-right">
-      <a href="#">Back to top</a>
-      
-    </p>
-    <p>
-        &copy; Copyright 2013-2023, expyfun developers. Last updated on 2023-07-25.<br/>
-    </p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
   </div>
-</footer>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#defining-tracker-parameters">Defining Tracker Parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#initializing-and-running-trackers">Initializing and Running Trackers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plotting-the-results">Plotting the Results</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2013-2024, expyfun developers. Last updated on 2024-06-24.
+      <br/>
+    
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.3.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
   </body>
 </html>
