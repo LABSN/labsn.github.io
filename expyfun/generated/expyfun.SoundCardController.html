@@ -456,6 +456,36 @@ document.write(`
 </dl>
 </dd>
 </dl>
+<p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.SoundCardController.halt" title="expyfun.SoundCardController.halt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halt</span></code></a>()</p></td>
+<td><p>Halt.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.SoundCardController.load_buffer" title="expyfun.SoundCardController.load_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_buffer</span></code></a>(samples)</p></td>
+<td><p>Load the buffer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.SoundCardController.play" title="expyfun.SoundCardController.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>()</p></td>
+<td><p>Play.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.SoundCardController.set_noise_level" title="expyfun.SoundCardController.set_noise_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_noise_level</span></code></a>(level)</p></td>
+<td><p>Set the noise level.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.SoundCardController.stamp_triggers" title="expyfun.SoundCardController.stamp_triggers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stamp_triggers</span></code></a>(triggers[, delay, ...])</p></td>
+<td><p>Stamp a list of triggers with a given inter-trigger delay.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.SoundCardController.start_noise" title="expyfun.SoundCardController.start_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_noise</span></code></a>()</p></td>
+<td><p>Start noise.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.SoundCardController.stop" title="expyfun.SoundCardController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>([wait])</p></td>
+<td><p>Stop.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.SoundCardController.stop_noise" title="expyfun.SoundCardController.stop_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_noise</span></code></a>([wait])</p></td>
+<td><p>Stop noise.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p class="rubric">Notes</p>
 <p>Params should contain string values:</p>
 <ul class="simple">
@@ -524,36 +554,6 @@ interpreted as time from end of trial.</p>
 </ul>
 <p>Note that the defaults are superseded on individual machines by
 the configuration file.</p>
-<p class="rubric">Methods</p>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.SoundCardController.halt" title="expyfun.SoundCardController.halt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">halt</span></code></a>()</p></td>
-<td><p>Halt.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.SoundCardController.load_buffer" title="expyfun.SoundCardController.load_buffer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load_buffer</span></code></a>(samples)</p></td>
-<td><p>Load the buffer.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.SoundCardController.play" title="expyfun.SoundCardController.play"><code class="xref py py-obj docutils literal notranslate"><span class="pre">play</span></code></a>()</p></td>
-<td><p>Play.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.SoundCardController.set_noise_level" title="expyfun.SoundCardController.set_noise_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_noise_level</span></code></a>(level)</p></td>
-<td><p>Set the noise level.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.SoundCardController.stamp_triggers" title="expyfun.SoundCardController.stamp_triggers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stamp_triggers</span></code></a>(triggers[, delay, ...])</p></td>
-<td><p>Stamp a list of triggers with a given inter-trigger delay.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.SoundCardController.start_noise" title="expyfun.SoundCardController.start_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start_noise</span></code></a>()</p></td>
-<td><p>Start noise.</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#expyfun.SoundCardController.stop" title="expyfun.SoundCardController.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a>([wait])</p></td>
-<td><p>Stop.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#expyfun.SoundCardController.stop_noise" title="expyfun.SoundCardController.stop_noise"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop_noise</span></code></a>([wait])</p></td>
-<td><p>Stop noise.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.SoundCardController.halt">
 <span class="sig-name descname"><span class="pre">halt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/_sound_controllers/_sound_controller.py#L422-L427"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.SoundCardController.halt" title="Link to this definition">#</a></dt>
@@ -744,7 +744,7 @@ milliseconds of (variable) delay.</p>
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-08-05.
+      © Copyright 2013-2024, expyfun developers. Last updated on 2024-08-12.
       <br/>
     
   </p>

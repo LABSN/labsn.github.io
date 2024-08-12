@@ -465,22 +465,8 @@ seeded based on the current time.</p>
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Attributes<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>dealer</strong><span class="classifier">instance of TrackerDealer</span></dt><dd><p>The tracker dealer object.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>The trackers can be accessed like a numpy array through the trackers
-property, e.g. <code class="docutils literal notranslate"><span class="pre">dealer.trackers[0,</span> <span class="pre">1,</span> <span class="pre">:]</span></code>.</p>
-<p>If dealing from TrackerBinom objects (which is probably not a good idea),
-<code class="docutils literal notranslate"><span class="pre">stop_early</span></code> must be <code class="docutils literal notranslate"><span class="pre">False</span></code> or else they cannot be ensured to keep
-pace.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
 <dt><strong>shape</strong></dt><dd></dd>
 <dt><a class="reference internal" href="#expyfun.stimuli.TrackerDealer.stopped" title="expyfun.stimuli.TrackerDealer.stopped"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stopped</span></code></a></dt><dd><p>Are all the trackers stopped</p>
 </dd>
@@ -504,6 +490,20 @@ pace.</p>
 </tbody>
 </table>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>dealer</strong><span class="classifier">instance of TrackerDealer</span></dt><dd><p>The tracker dealer object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The trackers can be accessed like a numpy array through the trackers
+property, e.g. <code class="docutils literal notranslate"><span class="pre">dealer.trackers[0,</span> <span class="pre">1,</span> <span class="pre">:]</span></code>.</p>
+<p>If dealing from TrackerBinom objects (which is probably not a good idea),
+<code class="docutils literal notranslate"><span class="pre">stop_early</span></code> must be <code class="docutils literal notranslate"><span class="pre">False</span></code> or else they cannot be ensured to keep
+pace.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.stimuli.TrackerDealer.history">
 <span class="sig-name descname"><span class="pre">history</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_skips</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L999-L1026"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerDealer.history" title="Link to this definition">#</a></dt>
@@ -668,7 +668,7 @@ the ints in this list correspond the the raveled index.</p>
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-08-05.
+      © Copyright 2013-2024, expyfun developers. Last updated on 2024-08-12.
       <br/>
     
   </p>

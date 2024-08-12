@@ -477,22 +477,8 @@ the same level. <code class="docutils literal notranslate"><span class="pre">ign
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Attributes<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>tracker</strong><span class="classifier">instance of TrackerMHW</span></dt><dd><p>The up-down modified Hughson-Westlake tracker object.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>In the modified Hughson-Westlake procedure, the up-step is the base-step,
-(e.g., 5) and the down-step is 2 * base-step (e.g., 10), except when there
-is “no response” to the starting value. Then the up-step is 4 * base-step
-(e.g., 20) in order to quickly get within a suitable range for audibility
-and finding threshold.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
 <dt><strong>base_step</strong></dt><dd></dd>
 <dt><strong>factor_down</strong></dt><dd></dd>
 <dt><strong>factor_up_nr</strong></dt><dd></dd>
@@ -542,6 +528,20 @@ and finding threshold.</p>
 </tbody>
 </table>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tracker</strong><span class="classifier">instance of TrackerMHW</span></dt><dd><p>The up-down modified Hughson-Westlake tracker object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In the modified Hughson-Westlake procedure, the up-step is the base-step,
+(e.g., 5) and the down-step is 2 * base-step (e.g., 10), except when there
+is “no response” to the starting value. Then the up-step is 4 * base-step
+(e.g., 20) in order to quickly get within a suitable range for audibility
+and finding threshold.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.stimuli.TrackerMHW.check_valid">
 <span class="sig-name descname"><span class="pre">check_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_reversals</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L1293-L1308"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerMHW.check_valid" title="Link to this definition">#</a></dt>
@@ -780,7 +780,7 @@ be used.</p>
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-08-05.
+      © Copyright 2013-2024, expyfun developers. Last updated on 2024-08-12.
       <br/>
     
   </p>

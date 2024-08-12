@@ -498,34 +498,8 @@ the same level. <code class="docutils literal notranslate"><span class="pre">ign
 </dd>
 </dl>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Attributes<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>tracker</strong><span class="classifier">instance of TrackerUD</span></dt><dd><p>The up-down tracker object.</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Notes</p>
-<p>It is common to use dynamic parameters in an adaptive tracker. For example:
-the step size is often large for the first couple reversals to get in the
-right general area, and then it is reduced for the remainder of the track.
-This class allows that functionality by defining that parameter with a list
-of values rather than a scalar. The parameter will change to the next value
-in the list whenever a change criterion (number of trials or reversals) is
-encountered. This means that the length of the list defining a dynamic
-parameter must always be the 1 longer than that of <code class="docutils literal notranslate"><span class="pre">change_indices</span></code>.
-For the example given above:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span><span class="p">,</span> <span class="n">step_size_up</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> <span class="n">step_size_down</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> \
-<span class="n">change_indices</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">change_rule</span><span class="o">=</span><span class="s1">&#39;reversals&#39;</span><span class="p">,</span> <span class="o">...</span>
-</pre></div>
-</div>
-<p>would change the step sizes from 1 to 0.2 after two reversals.</p>
-<p>If static step sizes are used, both <code class="docutils literal notranslate"><span class="pre">step_size_up</span></code>
-and <code class="docutils literal notranslate"><span class="pre">step_size_down</span></code> must be scalars and <code class="docutils literal notranslate"><span class="pre">change_indices</span></code> must be
-None.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
 <dt><strong>down</strong></dt><dd></dd>
 <dt><a class="reference internal" href="#expyfun.stimuli.TrackerUD.n_reversals" title="expyfun.stimuli.TrackerUD.n_reversals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_reversals</span></code></a></dt><dd><p>The number of reversals so far</p>
 </dd>
@@ -576,6 +550,32 @@ None.</p>
 </tbody>
 </table>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>tracker</strong><span class="classifier">instance of TrackerUD</span></dt><dd><p>The up-down tracker object.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>It is common to use dynamic parameters in an adaptive tracker. For example:
+the step size is often large for the first couple reversals to get in the
+right general area, and then it is reduced for the remainder of the track.
+This class allows that functionality by defining that parameter with a list
+of values rather than a scalar. The parameter will change to the next value
+in the list whenever a change criterion (number of trials or reversals) is
+encountered. This means that the length of the list defining a dynamic
+parameter must always be the 1 longer than that of <code class="docutils literal notranslate"><span class="pre">change_indices</span></code>.
+For the example given above:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span><span class="p">,</span> <span class="n">step_size_up</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> <span class="n">step_size_down</span><span class="o">=</span><span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> \
+<span class="n">change_indices</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">change_rule</span><span class="o">=</span><span class="s1">&#39;reversals&#39;</span><span class="p">,</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>would change the step sizes from 1 to 0.2 after two reversals.</p>
+<p>If static step sizes are used, both <code class="docutils literal notranslate"><span class="pre">step_size_up</span></code>
+and <code class="docutils literal notranslate"><span class="pre">step_size_down</span></code> must be scalars and <code class="docutils literal notranslate"><span class="pre">change_indices</span></code> must be
+None.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="expyfun.stimuli.TrackerUD.check_valid">
 <span class="sig-name descname"><span class="pre">check_valid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_reversals</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/LABSN/expyfun/blob/master/expyfun/stimuli/_tracker.py#L340-L355"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#expyfun.stimuli.TrackerUD.check_valid" title="Link to this definition">#</a></dt>
@@ -845,7 +845,7 @@ wishes.</p>
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-08-05.
+      © Copyright 2013-2024, expyfun developers. Last updated on 2024-08-12.
       <br/>
     
   </p>
