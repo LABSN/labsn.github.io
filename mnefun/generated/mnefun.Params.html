@@ -8,10 +8,10 @@
     <title>mnefun.Params &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=77553476" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=b657a77f" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="../_static/default.css?v=95ff6b9d" />
     <script src="../_static/documentation_options.js?v=130a53a1"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="search" title="Search" href="../search.html" />
@@ -94,7 +94,38 @@
 
 <div class="container">
   <div class="row">
-    <div class="body col-md-12 content" role="main">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">mnefun.Params</a><ul>
+<li><a class="reference internal" href="#mnefun.Params"><code class="docutils literal notranslate"><span class="pre">Params</span></code></a><ul>
+<li><a class="reference internal" href="#mnefun.Params.convert_subjects"><code class="docutils literal notranslate"><span class="pre">Params.convert_subjects()</span></code></a></li>
+<li><a class="reference internal" href="#mnefun.Params.freeze"><code class="docutils literal notranslate"><span class="pre">Params.freeze()</span></code></a></li>
+<li><a class="reference internal" href="#mnefun.Params.save"><code class="docutils literal notranslate"><span class="pre">Params.save()</span></code></a></li>
+<li><a class="reference internal" href="#mnefun.Params.unfreeze"><code class="docutils literal notranslate"><span class="pre">Params.unfreeze()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="../python_reference.html" title="Previous Chapter: API Reference"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; API Reference</span>
+    </a>
+  </li>
+  <li>
+    <a href="mnefun.convert_ANTS_surrogate.html" title="Next Chapter: mnefun.convert_ANTS_surrogate"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">mnefun.conver... &raquo;</span>
+    </a>
+  </li>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
       
   <section id="mnefun-params">
 <h1>mnefun.Params<a class="headerlink" href="#mnefun-params" title="Link to this heading">¶</a></h1>
@@ -105,13 +136,6 @@
 <p>See the <a class="reference internal" href="../overview.html#overview"><span class="std std-ref">Overview</span></a> for a description of the options.</p>
 <p>Some params can be set on init, but it’s better to set them in
 a YAML file.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><a class="reference internal" href="mnefun.do_processing.html#mnefun.do_processing" title="mnefun.do_processing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_processing</span></code></a></dt><dd></dd>
-<dt><a class="reference internal" href="mnefun.read_params.html#mnefun.read_params" title="mnefun.read_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_params</span></code></a></dt><dd></dd>
-</dl>
-</div>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -138,6 +162,13 @@ a YAML file.</p>
 </tr>
 </tbody>
 </table>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="mnefun.do_processing.html#mnefun.do_processing" title="mnefun.do_processing"><code class="xref py py-obj docutils literal notranslate"><span class="pre">do_processing</span></code></a></dt><dd></dd>
+<dt><a class="reference internal" href="mnefun.read_params.html#mnefun.read_params" title="mnefun.read_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_params</span></code></a></dt><dd></dd>
+</dl>
+</div>
 <dl class="py method">
 <dt class="sig sig-object py" id="mnefun.Params.convert_subjects">
 <span class="sig-name descname"><span class="pre">convert_subjects</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subj_template</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">struc_template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnefun.Params.convert_subjects" title="Link to this definition">¶</a></dt>
@@ -196,9 +227,9 @@ a YAML file.</p>
       
     </p>
     <p>
-        &copy; Copyright 2013-2023, mnefun Developers.<br/>
-      Last updated on Nov 17, 2023.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.6.<br/>
+        &copy; Copyright 2013-2024, mnefun Developers.<br/>
+      Last updated on Sep 12, 2024.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.<br/>
     </p>
   </div>
 </footer>

@@ -8,10 +8,10 @@
     <title>Overview &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=77553476" />
     <link rel="stylesheet" type="text/css" href="_static/bootstrap-sphinx.css?v=b657a77f" />
-    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=fd3f3429" />
     <link rel="stylesheet" type="text/css" href="_static/default.css?v=95ff6b9d" />
     <script src="_static/documentation_options.js?v=130a53a1"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="search" title="Search" href="search.html" />
@@ -94,7 +94,85 @@
 
 <div class="container">
   <div class="row">
-    <div class="body col-md-12 content" role="main">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li><a class="reference internal" href="#">Overview</a><ul>
+<li><a class="reference internal" href="#flow-chart">Flow chart</a></li>
+<li><a class="reference internal" href="#running-parameters">Running parameters</a><ul>
+<li><a class="reference internal" href="#general-general-options"><code class="docutils literal notranslate"><span class="pre">general</span></code>: General options</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#fetch-raw">1. fetch_raw</a><ul>
+<li><a class="reference internal" href="#fetch-raw-raw-fetching-parameters"><code class="docutils literal notranslate"><span class="pre">fetch_raw</span></code>: Raw fetching parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#do-score">2. do_score</a><ul>
+<li><a class="reference internal" href="#scoring-scoring-parameters"><code class="docutils literal notranslate"><span class="pre">scoring</span></code>: Scoring parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#do-sss">3. do_sss</a><ul>
+<li><a class="reference internal" href="#preprocessing-multithreading-multithreading-parameters"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">multithreading</span></code>: Multithreading parameters</a></li>
+<li><a class="reference internal" href="#preprocessing-pre-sss-bads-automatic-bad-channel-detection"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">pre-SSS</span> <span class="pre">bads</span></code>: Automatic bad channel detection</a></li>
+<li><a class="reference internal" href="#preprocessing-head-position-estimation-head-position-estimation-parameters"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">head_position_estimation</span></code>: Head position estimation parameters</a></li>
+<li><a class="reference internal" href="#preprocessing-annotations-annotation-parameters"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">annotations</span></code>: Annotation parameters</a></li>
+<li><a class="reference internal" href="#preprocessing-sss-sss-parameters"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">sss</span></code>: SSS parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#do-ch-fix">4. do_ch_fix</a></li>
+<li><a class="reference internal" href="#gen-ssp">5. gen_ssp</a><ul>
+<li><a class="reference internal" href="#preprocessing-filtering-filtering-parameters"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">filtering</span></code>: Filtering parameters</a></li>
+<li><a class="reference internal" href="#preprocessing-post-sss-bads-marking-bad-channels-during-ssp"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">post-SSS</span> <span class="pre">bads</span></code>: Marking bad channels during SSP</a></li>
+<li><a class="reference internal" href="#preprocessing-ssp-ssp-creation-parameters"><code class="docutils literal notranslate"><span class="pre">preprocessing:</span> <span class="pre">ssp</span></code>: SSP creation parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#apply-ssp">6. apply_ssp</a></li>
+<li><a class="reference internal" href="#write-epochs">7. write_epochs</a><ul>
+<li><a class="reference internal" href="#epoching-epoching-parameters"><code class="docutils literal notranslate"><span class="pre">epoching</span></code>: Epoching parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gen-covs">8. gen_covs</a><ul>
+<li><a class="reference internal" href="#covariance-covariance-parameters"><code class="docutils literal notranslate"><span class="pre">covariance</span></code>: Covariance parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gen-fwd">9. gen_fwd</a><ul>
+<li><a class="reference internal" href="#forward-forward-parameters"><code class="docutils literal notranslate"><span class="pre">forward</span></code>: Forward parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gen-inv">10. gen_inv</a><ul>
+<li><a class="reference internal" href="#inverse-inverse-parameters"><code class="docutils literal notranslate"><span class="pre">inverse</span></code>: Inverse parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gen-report">11. gen_report</a><ul>
+<li><a class="reference internal" href="#report-params-report-parameters"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#filename-standardization">Filename standardization</a><ul>
+<li><a class="reference internal" href="#naming-file-naming-tags-and-folders"><code class="docutils literal notranslate"><span class="pre">naming</span></code>: File naming tags and folders</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#preparing-your-machine-for-maxfilter-use">Preparing your machine for MaxFilter use</a></li>
+</ul>
+</li>
+</ul>
+
+  <li>
+    <a href="index.html" title="Previous Chapter: mnefun"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; mnefun</span>
+    </a>
+  </li>
+  <li>
+    <a href="python_reference.html" title="Next Chapter: API Reference"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">API Reference &raquo;</span>
+    </a>
+  </li>
+<form action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
       
   <section id="overview">
 <span id="id1"></span><h1><a class="toc-backref" href="#id3" role="doc-backlink">Overview</a><a class="headerlink" href="#overview" title="Link to this heading">¶</a></h1>
@@ -653,7 +731,7 @@ locally), see <a class="reference internal" href="#preprocessing-hpe"><span clas
 <li><p>Annotate bad segments automatically, see <a class="reference internal" href="#preprocessing-annotations"><span class="std std-ref">preprocessing: annotations: Annotation parameters</span></a>.</p></li>
 <li><p>Add any custom annotations (e.g., for segments that operators want to
 manually mark as bad) that have been saved as <code class="docutils literal notranslate"><span class="pre">FILENAME-custom-annot.fif</span></code>.</p></li>
-<li><p>Run SSS processing locally using <a class="reference external" href="https://mne.tools/dev/generated/mne.preprocessing.maxwell_filter.html#mne.preprocessing.maxwell_filter" title="(in MNE v1.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.preprocessing.maxwell_filter()</span></code></a>.</p></li>
+<li><p>Run SSS processing locally using <a class="reference external" href="https://mne.tools/dev/generated/mne.preprocessing.maxwell_filter.html#mne.preprocessing.maxwell_filter" title="(in MNE v1.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.preprocessing.maxwell_filter()</span></code></a>.</p></li>
 </ol>
 <p>The addition of annotations <em>before</em> SSS ensures that tSSS operations are not
 disrupted by bad segments of data, and also ensures that the output files
@@ -827,13 +905,13 @@ rid of muscle movement artifacts in a verbal response paradigm), you can use
 </dd>
 <dt>lp_trans<span class="classifier">float</span></dt><dd><p>Low-pass transition band.</p>
 </dd>
-<dt>filter_length<span class="classifier">int | str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>filter_length<span class="classifier">int | str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
-<dt>fir_design<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>fir_design<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
-<dt>fir_window<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>fir_window<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
-<dt>phase<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
+<dt>phase<span class="classifier">str</span></dt><dd><p>See <a class="reference external" href="https://mne.tools/dev/generated/mne.filter.create_filter.html#mne.filter.create_filter" title="(in MNE v1.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.filter.create_filter()</span></code></a>.</p>
 </dd>
 </dl>
 </section>
@@ -1046,7 +1124,7 @@ ratio-based collapsing.</p>
 computed from every other trial, i.e., from even and odd trials separately.
 This can help assess the SNR of the data.</p>
 </dd>
-<dt>epochs_proj<span class="classifier">bool | ‘delayed’</span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">proj</span></code> argument in <a class="reference external" href="https://mne.tools/dev/generated/mne.Epochs.html#mne.Epochs" title="(in MNE v1.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Epochs</span></code></a>. Should be <code class="docutils literal notranslate"><span class="pre">'delayed'</span></code> if
+<dt>epochs_proj<span class="classifier">bool | ‘delayed’</span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">proj</span></code> argument in <a class="reference external" href="https://mne.tools/dev/generated/mne.Epochs.html#mne.Epochs" title="(in MNE v1.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Epochs</span></code></a>. Should be <code class="docutils literal notranslate"><span class="pre">'delayed'</span></code> if
 you want the option of plotting sensor-space data with no projectors.</p>
 </dd>
 <dt>allow_resample<span class="classifier">bool</span></dt><dd><p>If True (default False), allow resampling raw instances (and events) to
@@ -1074,7 +1152,7 @@ to limit events to those with an id in <code class="docutils literal notranslate
 <dt>cov_rank<span class="classifier">str | int</span></dt><dd><p>Cov rank to use, usually “auto”.</p>
 </dd>
 <dt>cov_rank_method<span class="classifier">str</span></dt><dd><p>Can be “estimate_rank” to use <code class="docutils literal notranslate"><span class="pre">mne.rank.estimate_rank</span></code>, or
-“compute_rank” to use <a class="reference external" href="https://mne.tools/dev/generated/mne.compute_rank.html#mne.compute_rank" title="(in MNE v1.6)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.compute_rank()</span></code></a>. The latter seems to
+“compute_rank” to use <a class="reference external" href="https://mne.tools/dev/generated/mne.compute_rank.html#mne.compute_rank" title="(in MNE v1.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">mne.compute_rank()</span></code></a>. The latter seems to
 work better for custom <code class="docutils literal notranslate"><span class="pre">tol</span></code> values by not row-normalizing data.</p>
 </dd>
 <dt>cov_rank_tol<span class="classifier">float | str</span></dt><dd><p>Tolerance for covariance rank computation. Can also be
@@ -1091,7 +1169,7 @@ is short and/or there are a lot of head movements.</p>
 <h2><a class="toc-backref" href="#id27" role="doc-backlink">9. gen_fwd</a><a class="headerlink" href="#gen-fwd" title="Link to this heading">¶</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Make SUBJ/trans/SUBJ-trans.fif using <a class="reference external" href="https://mne.tools/dev/generated/commands.html#mne-coreg" title="(in MNE v1.6)"><span>mne coreg</span></a>.</p>
+<p>Make SUBJ/trans/SUBJ-trans.fif using <a class="reference external" href="https://mne.tools/dev/generated/commands.html#mne-coreg" title="(in MNE v1.9)"><span>mne coreg</span></a>.</p>
 </div>
 <p>Generate forward solutions (and source space if necessary).</p>
 <section id="forward-forward-parameters">
@@ -1132,7 +1210,7 @@ for them to be included in the forward solution source space.</p>
 </section>
 <section id="gen-report">
 <h2><a class="toc-backref" href="#id31" role="doc-backlink">11. gen_report</a><a class="headerlink" href="#gen-report" title="Link to this heading">¶</a></h2>
-<p>Write <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v1.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> HTML of results to disk.</p>
+<p>Write <a class="reference external" href="https://mne.tools/dev/generated/mne.Report.html#mne.Report" title="(in MNE v1.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">mne.Report</span></code></a> HTML of results to disk.</p>
 <section id="report-params-report-parameters">
 <h3><a class="toc-backref" href="#id32" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">report_params</span></code>: Report parameters</a><a class="headerlink" href="#report-params-report-parameters" title="Link to this heading">¶</a></h3>
 <dl>
@@ -1307,9 +1385,9 @@ the following line to the end of your <code class="docutils literal notranslate"
       
     </p>
     <p>
-        &copy; Copyright 2013-2023, mnefun Developers.<br/>
-      Last updated on Nov 17, 2023.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 7.2.6.<br/>
+        &copy; Copyright 2013-2024, mnefun Developers.<br/>
+      Last updated on Sep 12, 2024.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.<br/>
     </p>
   </div>
 </footer>
