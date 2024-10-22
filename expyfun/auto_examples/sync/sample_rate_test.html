@@ -40,7 +40,7 @@
   <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../../_static/documentation_options.js?v=8a32eaf7"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'auto_examples/sync/sample_rate_test';</script>
@@ -433,32 +433,32 @@ yielding an effective sample rate of <code class="docutils literal notranslate">
 e.g., an EEG system, the output can be split (or left/right outputs used) to
 test multiple system synchronization at once.</p>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: FsTest
-date: 2024-10-08 13_43_17.192728
+date: 2024-10-22 00_00_31.341248
 file: /home/circleci/project/examples/sync/sample_rate_test.py
 participant: s
 session: 0
-2024-10-08 13:43:17,192 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2024-10-08 13:43:17,193 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2024-10-08 13:43:17,347 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Nothing will be done about this because suppress_resamp is &quot;True&quot;
-2024-10-08 13:43:17,347 - INFO    - Expyfun: Setting up screen
-2024-10-08 13:43:17,377 - EXP     - Expyfun: Set screen visibility True
-2024-10-08 13:43:17,389 - INFO    - Initialized [800 600] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f392c363f10&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2024-10-08 13:43:17,389 - INFO    - Expyfun: Initializing dummy triggering mode
-2024-10-08 13:43:17,390 - INFO    - Expyfun: Initialization complete
-2024-10-08 13:43:17,390 - EXP     - Expyfun: Participant: s
-2024-10-08 13:43:17,390 - EXP     - Expyfun: Session: 0
-2024-10-08 13:43:17,391 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2024-10-08 13:43:17,391 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0]
-2024-10-08 13:43:17,392 - EXP     - Stamping TTL triggers: [4]
-2024-10-08 13:43:17,418 - EXP     - Expyfun: Loading 2000002 samples to buffer
+2024-10-22 00:00:31,341 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2024-10-22 00:00:31,342 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2024-10-22 00:00:31,506 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2024-10-22 00:00:31,506 - INFO    - Expyfun: Setting up screen
+2024-10-22 00:00:31,536 - EXP     - Expyfun: Set screen visibility True
+2024-10-22 00:00:31,545 - INFO    - Initialized [800 600] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f07a6a599c0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2024-10-22 00:00:31,546 - INFO    - Expyfun: Initializing dummy triggering mode
+2024-10-22 00:00:31,547 - INFO    - Expyfun: Initialization complete
+2024-10-22 00:00:31,547 - EXP     - Expyfun: Participant: s
+2024-10-22 00:00:31,547 - EXP     - Expyfun: Session: 0
+2024-10-22 00:00:31,548 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2024-10-22 00:00:31,548 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0]
+2024-10-22 00:00:31,549 - EXP     - Stamping TTL triggers: [4]
+2024-10-22 00:00:31,575 - EXP     - Expyfun: Loading 2000002 samples to buffer
 Starting stimulus.
-2024-10-08 13:43:17,435 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2024-10-08 13:43:17,436 - EXP     - Stamping TTL triggers: [1]
+2024-10-22 00:00:31,587 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2024-10-22 00:00:31,588 - EXP     - Stamping TTL triggers: [1]
 Stimulus started. Please wait 23 seconds.
-2024-10-08 13:43:17,447 - EXP     - Expyfun: Audio stopped and reset.
+2024-10-22 00:00:31,599 - EXP     - Expyfun: Audio stopped and reset.
 Stimulus done.
-2024-10-08 13:43:17,447 - INFO    - Expyfun: Exiting
-2024-10-08 13:43:17,450 - EXP     - Expyfun: Audio stopped and reset.
+2024-10-22 00:00:31,599 - INFO    - Expyfun: Exiting
+2024-10-22 00:00:31,601 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -499,7 +499,7 @@ Stimulus done.
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Stimulus done.&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.261 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.263 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sample-rate-test-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/e061869644f3b8db0a99413bdc4f4d0c/sample_rate_test.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sample_rate_test.ipynb</span></code></a></p>
@@ -572,7 +572,7 @@ Stimulus done.
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-10-08.
+      © Copyright 2013-2024, expyfun developers. Last updated on 2024-10-21.
       <br/>
     
   </p>
