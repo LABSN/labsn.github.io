@@ -8,10 +8,10 @@
     <title>mnefun.run_sss_command &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=77553476" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=b657a77f" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/default.css?v=95ff6b9d" />
     <script src="../_static/documentation_options.js?v=130a53a1"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="search" title="Search" href="../search.html" />
@@ -130,37 +130,37 @@
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>fname_in</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The filename to process.</p>
+<dt><strong>fname_in</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The filename to process.</p>
 </dd>
-<dt><strong>options</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The command-line options for Maxfilter.</p>
+<dt><strong>options</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The command-line options for Maxfilter.</p>
 </dd>
-<dt><strong>fname_out</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Output filename to use to store the result on the local machine.
+<dt><strong>fname_out</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Output filename to use to store the result on the local machine.
 None will output to a temporary file.</p>
 </dd>
-<dt><strong>host</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The SSH/scp host to run the command on.</p>
+<dt><strong>host</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The SSH/scp host to run the command on.</p>
 </dd>
-<dt><strong>fname_pos</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">-hp</span> <span class="pre">fname_pos</span></code> to use with MaxFilter.</p>
+<dt><strong>fname_pos</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a> | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">-hp</span> <span class="pre">fname_pos</span></code> to use with MaxFilter.</p>
 </dd>
-<dt><strong>stdout</strong><span class="classifier">file-like | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Where to send stdout.</p>
+<dt><strong>stdout</strong><span class="classifier">file-like | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Where to send stdout.</p>
 </dd>
-<dt><strong>stderr</strong><span class="classifier">file-like | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Where to send stderr.</p>
+<dt><strong>stderr</strong><span class="classifier">file-like | <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">None</span></code></a></span></dt><dd><p>Where to send stderr.</p>
 </dd>
-<dt><strong>prefix</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The text to prefix to messages.</p>
+<dt><strong>prefix</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The text to prefix to messages.</p>
 </dd>
-<dt><strong>work_dir</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Where to store the temporary files.</p>
+<dt><strong>work_dir</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Where to store the temporary files.</p>
 </dd>
-<dt><strong>throw_error</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, throw an error if the command fails. If False,
+<dt><strong>throw_error</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, throw an error if the command fails. If False,
 return anyway, including the code.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>stdout</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The standard output of the <code class="docutils literal notranslate"><span class="pre">maxfilter</span></code> call.</p>
+<dt><strong>stdout</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The standard output of the <code class="docutils literal notranslate"><span class="pre">maxfilter</span></code> call.</p>
 </dd>
-<dt><strong>stderr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The standard error of the <code class="docutils literal notranslate"><span class="pre">maxfilter</span></code> call.</p>
+<dt><strong>stderr</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>The standard error of the <code class="docutils literal notranslate"><span class="pre">maxfilter</span></code> call.</p>
 </dd>
-<dt><strong>code</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Only returned if throw_error=False.</p>
+<dt><strong>code</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">int</span></code></a></span></dt><dd><p>Only returned if throw_error=False.</p>
 </dd>
 </dl>
 </dd>
@@ -182,8 +182,8 @@ return anyway, including the code.</p>
     </p>
     <p>
         &copy; Copyright 2013-2024, mnefun Developers.<br/>
-      Last updated on Sep 12, 2024.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.<br/>
+      Last updated on Dec 02, 2024.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3.<br/>
     </p>
   </div>
 </footer>

@@ -8,10 +8,10 @@
     <title>mnefun.extract_expyfun_events &#8212; mnefun 0.2.0.dev0 documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=77553476" />
     <link rel="stylesheet" type="text/css" href="../_static/bootstrap-sphinx.css?v=b657a77f" />
-    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../_static/default.css?v=95ff6b9d" />
     <script src="../_static/documentation_options.js?v=130a53a1"></script>
-    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="search" title="Search" href="../search.html" />
@@ -130,24 +130,24 @@
 <dl class="field-list">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl>
-<dt><strong>fname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Filename to use.</p>
+<dt><strong>fname</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">str</span></code></a></span></dt><dd><p>Filename to use.</p>
 </dd>
-<dt><strong>return_offsets</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.12)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, return the time of each press relative to trial onset
+<dt><strong>return_offsets</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bltin-boolean-values" title="(in Python v3.13)"><span class="xref std std-ref">bool</span></a></span></dt><dd><p>If True, return the time of each press relative to trial onset
 in addition to the press number.</p>
 </dd>
 </dl>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl>
-<dt><strong>events</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a></span></dt><dd><p>Array of events of shape (N, 3), re-coded such that 1 triggers
+<dt><strong>events</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a></span></dt><dd><p>Array of events of shape (N, 3), re-coded such that 1 triggers
 are renamed according to their binary expyfun representation.</p>
 </dd>
-<dt><strong>presses</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>List of all press events that occurred between each one
+<dt><strong>presses</strong><span class="classifier"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.13)"><code class="docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ndarray</span></code></a></span></dt><dd><p>List of all press events that occurred between each one
 trigger. Each array has shape (N_presses,). If return_offset is True,
 then each array has shape (N_presses, 2), with the first column
 as the time offset from the trial trigger.</p>
 </dd>
-<dt><strong>orig_events</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a></span></dt><dd><p>Original events array.</p>
+<dt><strong>orig_events</strong><span class="classifier"><a class="reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3.dev0)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">array</span></code></a></span></dt><dd><p>Original events array.</p>
 </dd>
 </dl>
 </dd>
@@ -175,8 +175,8 @@ subtract 1 before doing so to yield the original binary values.</p>
     </p>
     <p>
         &copy; Copyright 2013-2024, mnefun Developers.<br/>
-      Last updated on Sep 12, 2024.<br/>
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.0.2.<br/>
+      Last updated on Dec 02, 2024.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 8.1.3.<br/>
     </p>
   </div>
 </footer>
