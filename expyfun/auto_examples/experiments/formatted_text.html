@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -388,22 +388,22 @@ to download the full example code.</p>
 <span id="sphx-glr-auto-examples-experiments-formatted-text-py"></span><h1>Display text with different formatting methods<a class="headerlink" href="#display-text-with-different-formatting-methods" title="Link to this heading">#</a></h1>
 <p>This example demonstrates differences between the Text and AttrText classes.</p>
 <img src="../../_images/sphx_glr_formatted_text_001.png" srcset="../../_images/sphx_glr_formatted_text_001.png" alt="formatted text" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: textDemo
-date: 2024-12-23 22_40_15.728792
+date: 2025-01-06 23_24_30.909358
 file: /home/circleci/project/examples/experiments/formatted_text.py
 participant: foo
 session: 001
-2024-12-23 22:40:15,729 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2024-12-23 22:40:15,729 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2024-12-23 22:40:15,939 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2024-12-23 22:40:15,939 - INFO    - Expyfun: Setting up screen
-2024-12-23 22:40:15,971 - EXP     - Expyfun: Set screen visibility True
-2024-12-23 22:40:15,985 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f3a26f69ed0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2024-12-23 22:40:15,986 - INFO    - Expyfun: Initializing dummy triggering mode
-2024-12-23 22:40:15,988 - INFO    - Expyfun: Initialization complete
-2024-12-23 22:40:15,988 - EXP     - Expyfun: Participant: foo
-2024-12-23 22:40:15,988 - EXP     - Expyfun: Session: 001
-2024-12-23 22:40:16,230 - INFO    - Expyfun: Exiting
-2024-12-23 22:40:16,232 - EXP     - Expyfun: Audio stopped and reset.
+2025-01-06 23:24:30,909 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-01-06 23:24:30,910 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-01-06 23:24:31,107 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-01-06 23:24:31,107 - INFO    - Expyfun: Setting up screen
+2025-01-06 23:24:31,139 - EXP     - Expyfun: Set screen visibility True
+2025-01-06 23:24:31,153 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x70fe56362800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-01-06 23:24:31,153 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-01-06 23:24:31,154 - INFO    - Expyfun: Initialization complete
+2025-01-06 23:24:31,154 - EXP     - Expyfun: Participant: foo
+2025-01-06 23:24:31,154 - EXP     - Expyfun: Session: 001
+2025-01-06 23:24:31,382 - INFO    - Expyfun: Exiting
+2025-01-06 23:24:31,384 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -413,8 +413,8 @@ session: 001
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="kn">import</span> <span class="n">_convert_color</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.visual</span><span class="w"> </span><span class="kn">import</span> <span class="n">_convert_color</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
@@ -461,7 +461,7 @@ session: 001
 <span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.584 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.556 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-formatted-text-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/73049b1b5d1705e7811b474e386d1310/formatted_text.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">formatted_text.ipynb</span></code></a></p>
@@ -534,7 +534,7 @@ session: 001
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-12-23.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-06.
       <br/>
     
   </p>

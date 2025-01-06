@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -389,22 +389,22 @@ to download the full example code.</p>
 <p>This example demonstrates the different keypress-gathering techniques available
 in the ExperimentController class.</p>
 <img src="../../_images/sphx_glr_keypress_001.png" srcset="../../_images/sphx_glr_keypress_001.png" alt="keypress" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: KeypressDemo
-date: 2024-12-23 22_40_23.195209
+date: 2025-01-06 23_24_38.255080
 file: /home/circleci/project/examples/experiments/keypress.py
 participant: foo
 session: 001
-2024-12-23 22:40:23,195 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2024-12-23 22:40:23,196 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2024-12-23 22:40:23,413 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2024-12-23 22:40:23,413 - INFO    - Expyfun: Setting up screen
-2024-12-23 22:40:23,443 - EXP     - Expyfun: Set screen visibility True
-2024-12-23 22:40:23,452 - INFO    - Initialized [640 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f3a26f69ed0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2024-12-23 22:40:23,452 - INFO    - Expyfun: Initializing dummy triggering mode
-2024-12-23 22:40:23,453 - INFO    - Expyfun: Initialization complete
-2024-12-23 22:40:23,453 - EXP     - Expyfun: Participant: foo
-2024-12-23 22:40:23,453 - EXP     - Expyfun: Session: 001
-2024-12-23 22:40:27,044 - INFO    - Expyfun: Exiting
-2024-12-23 22:40:27,046 - EXP     - Expyfun: Audio stopped and reset.
+2025-01-06 23:24:38,255 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-01-06 23:24:38,256 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-01-06 23:24:38,451 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-01-06 23:24:38,451 - INFO    - Expyfun: Setting up screen
+2025-01-06 23:24:38,481 - EXP     - Expyfun: Set screen visibility True
+2025-01-06 23:24:38,490 - INFO    - Initialized [640 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x70fe56362800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-01-06 23:24:38,490 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-01-06 23:24:38,491 - INFO    - Expyfun: Initialization complete
+2025-01-06 23:24:38,492 - EXP     - Expyfun: Participant: foo
+2025-01-06 23:24:38,492 - EXP     - Expyfun: Session: 001
+2025-01-06 23:24:42,071 - INFO    - Expyfun: Exiting
+2025-01-06 23:24:42,073 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -414,8 +414,8 @@ session: 001
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
+<span class="kn">import</span><span class="w"> </span><span class="nn">expyfun.analyze</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ea</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
@@ -596,7 +596,7 @@ session: 001
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.885 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 3.853 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-keypress-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/3f74a61689c9b5ae11821837a5543077/keypress.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">keypress.ipynb</span></code></a></p>
@@ -669,7 +669,7 @@ session: 001
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-12-23.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-06.
       <br/>
     
   </p>

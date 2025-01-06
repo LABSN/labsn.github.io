@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -397,13 +397,13 @@ dealer from the .tab file logged by experiment controller with
 <p>In this case, a modeled human subject generates two curves (one for each trial
 type: 1 &amp; 2).</p>
 <p>&#64;author: maddycapp27</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">ExperimentController</span>
-<span class="kn">from</span> <span class="nn">expyfun.analyze</span> <span class="kn">import</span> <span class="n">sigmoid</span>
-<span class="kn">from</span> <span class="nn">expyfun.io</span> <span class="kn">import</span> <span class="n">reconstruct_dealer</span>
-<span class="kn">from</span> <span class="nn">expyfun.stimuli</span> <span class="kn">import</span> <span class="n">TrackerDealer</span><span class="p">,</span> <span class="n">TrackerUD</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.analyze</span><span class="w"> </span><span class="kn">import</span> <span class="n">sigmoid</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">reconstruct_dealer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.stimuli</span><span class="w"> </span><span class="kn">import</span> <span class="n">TrackerDealer</span><span class="p">,</span> <span class="n">TrackerUD</span>
 
 <span class="c1"># define parameters of modeled subject (using sigmoid probability)</span>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>  <span class="c1"># true thresholds for trial types 1 and 2</span>
@@ -495,7 +495,7 @@ to generate log files with <a class="reference internal" href="../../generated/e
 </pre></div>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2024-12-23 22_40_19.997645
+date: 2025-01-06 23_24_35.061332
 file: /home/circleci/project/examples/experiments/tracker_dealer.py
 participant: foo
 session: 01
@@ -528,7 +528,7 @@ with <a class="reference internal" href="../../generated/expyfun.io.reconstruct_
     <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.tight_layout.html#matplotlib.figure.Figure.tight_layout" title="matplotlib.figure.Figure.tight_layout" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>
 </pre></div>
 </div>
-<img src="../../_images/sphx_glr_tracker_dealer_001.png" srcset="../../_images/sphx_glr_tracker_dealer_001.png" alt="Adaptive track of model human trial type 1 (true threshold is 30), Adaptive track of model human trial type 2 (true threshold is 40)" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.516 seconds)</p>
+<img src="../../_images/sphx_glr_tracker_dealer_001.png" srcset="../../_images/sphx_glr_tracker_dealer_001.png" alt="Adaptive track of model human trial type 1 (true threshold is 30), Adaptive track of model human trial type 2 (true threshold is 40)" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.526 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-tracker-dealer-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/c47fa00d396af509b4fa21d80537300d/tracker_dealer.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">tracker_dealer.ipynb</span></code></a></p>
@@ -623,7 +623,7 @@ with <a class="reference internal" href="../../generated/expyfun.io.reconstruct_
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-12-23.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-06.
       <br/>
     
   </p>

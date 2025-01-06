@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -390,22 +390,22 @@ to download the full example code.</p>
 using button presses and continuous analog movement to control the position
 of a circle on the screen.</p>
 <img src="../../_images/sphx_glr_joystick_experiment_001.png" srcset="../../_images/sphx_glr_joystick_experiment_001.png" alt="joystick experiment" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: joyExp
-date: 2024-12-23 22_40_20.631686
+date: 2025-01-06 23_24_35.707869
 file: /home/circleci/project/examples/experiments/joystick_experiment.py
 participant: foo
 session: 001
-2024-12-23 22:40:20,631 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2024-12-23 22:40:20,632 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2024-12-23 22:40:20,828 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2024-12-23 22:40:20,828 - INFO    - Expyfun: Setting up screen
-2024-12-23 22:40:20,865 - EXP     - Expyfun: Set screen visibility True
-2024-12-23 22:40:20,879 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f3a26f69ed0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2024-12-23 22:40:20,879 - INFO    - Expyfun: Initializing dummy triggering mode
-2024-12-23 22:40:20,880 - INFO    - Expyfun: Initialization complete
-2024-12-23 22:40:20,880 - EXP     - Expyfun: Participant: foo
-2024-12-23 22:40:20,881 - EXP     - Expyfun: Session: 001
-2024-12-23 22:40:20,964 - INFO    - Expyfun: Exiting
-2024-12-23 22:40:20,973 - EXP     - Expyfun: Audio stopped and reset.
+2025-01-06 23:24:35,708 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-01-06 23:24:35,708 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-01-06 23:24:35,905 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-01-06 23:24:35,905 - INFO    - Expyfun: Setting up screen
+2025-01-06 23:24:35,937 - EXP     - Expyfun: Set screen visibility True
+2025-01-06 23:24:35,951 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x70fe56362800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-01-06 23:24:35,951 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-01-06 23:24:35,952 - INFO    - Expyfun: Initialization complete
+2025-01-06 23:24:35,953 - EXP     - Expyfun: Participant: foo
+2025-01-06 23:24:35,953 - EXP     - Expyfun: Session: 001
+2025-01-06 23:24:36,033 - INFO    - Expyfun: Exiting
+2025-01-06 23:24:36,038 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -415,8 +415,8 @@ session: 001
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
-<span class="kn">from</span> <span class="nn">expyfun.visual</span> <span class="kn">import</span> <span class="n">Circle</span><span class="p">,</span> <span class="n">Text</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.visual</span><span class="w"> </span><span class="kn">import</span> <span class="n">Circle</span><span class="p">,</span> <span class="n">Text</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
@@ -484,7 +484,7 @@ session: 001
 <span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.418 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.411 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-joystick-experiment-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/bec9c575dfc1d523eeaa8c0070bb171a/joystick_experiment.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">joystick_experiment.ipynb</span></code></a></p>
@@ -557,7 +557,7 @@ session: 001
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-12-23.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-06.
       <br/>
     
   </p>

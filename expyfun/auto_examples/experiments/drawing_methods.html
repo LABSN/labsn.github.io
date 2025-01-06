@@ -30,7 +30,7 @@
   <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
@@ -388,22 +388,22 @@ to download the full example code.</p>
 <span id="sphx-glr-auto-examples-experiments-drawing-methods-py"></span><h1>Experiment drawing methods<a class="headerlink" href="#experiment-drawing-methods" title="Link to this heading">#</a></h1>
 <p>expyfun provides multiple methods for drawing simple screen objects.</p>
 <img src="../../_images/sphx_glr_drawing_methods_001.png" srcset="../../_images/sphx_glr_drawing_methods_001.png" alt="drawing methods" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2024-12-23 22_40_13.226779
+date: 2025-01-06 23_24_28.411781
 file: /home/circleci/project/examples/experiments/drawing_methods.py
 participant: 2
 session: 1
-2024-12-23 22:40:13,226 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2024-12-23 22:40:13,227 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2024-12-23 22:40:13,418 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2024-12-23 22:40:13,418 - INFO    - Expyfun: Setting up screen
-2024-12-23 22:40:13,448 - EXP     - Expyfun: Set screen visibility True
-2024-12-23 22:40:13,456 - INFO    - Initialized [600 600] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f3a26f69ed0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2024-12-23 22:40:13,457 - INFO    - Expyfun: Initializing dummy triggering mode
-2024-12-23 22:40:13,458 - INFO    - Expyfun: Initialization complete
-2024-12-23 22:40:13,458 - EXP     - Expyfun: Participant: 2
-2024-12-23 22:40:13,458 - EXP     - Expyfun: Session: 1
-2024-12-23 22:40:14,050 - INFO    - Expyfun: Exiting
-2024-12-23 22:40:14,054 - EXP     - Expyfun: Audio stopped and reset.
+2025-01-06 23:24:28,411 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-01-06 23:24:28,412 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-01-06 23:24:28,599 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-01-06 23:24:28,599 - INFO    - Expyfun: Setting up screen
+2025-01-06 23:24:28,628 - EXP     - Expyfun: Set screen visibility True
+2025-01-06 23:24:28,640 - INFO    - Initialized [600 600] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x70fe56362800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-01-06 23:24:28,640 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-01-06 23:24:28,642 - INFO    - Expyfun: Initialization complete
+2025-01-06 23:24:28,642 - EXP     - Expyfun: Participant: 2
+2025-01-06 23:24:28,642 - EXP     - Expyfun: Session: 1
+2025-01-06 23:24:29,236 - INFO    - Expyfun: Exiting
+2025-01-06 23:24:29,241 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -413,10 +413,10 @@ session: 1
 <span class="c1">#</span>
 <span class="c1"># License: BSD (3-clause)</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">import</span> <span class="nn">expyfun.analyze</span> <span class="k">as</span> <span class="nn">ea</span>
-<span class="kn">from</span> <span class="nn">expyfun</span> <span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">visual</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">expyfun.analyze</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ea</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">visual</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
@@ -473,7 +473,7 @@ session: 1
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.874 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.876 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-drawing-methods-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f0a44b9334c97416bd9afb84b9c86b64/drawing_methods.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">drawing_methods.ipynb</span></code></a></p>
@@ -546,7 +546,7 @@ session: 1
 
   <p class="copyright">
     
-      © Copyright 2013-2024, expyfun developers. Last updated on 2024-12-23.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-06.
       <br/>
     
   </p>
