@@ -318,9 +318,9 @@
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Sound level test and visual size calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pupillometry_experiment_.html">Experiment using eye-tracking pupillometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drawing_methods.html">Experiment drawing methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="progress_bar.html">ProgressBar demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="keyrelease.html">KeyPressAndRelease demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="formatted_text.html">Display text with different formatting methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="progress_bar.html">ProgressBar demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tracker_dealer_doublesided.html">Adaptive tracking from above and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eyetracking_experiment_.html">Experiment with eye-tracking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tracker_dealer.html">Adaptive tracking for two trial types and tracker reconstruction from .tab</a></li>
@@ -393,26 +393,26 @@ measurement shouldn’t matter). For video, it produces a square that should be
 This of course depends on correct settings for monitor width, resolution, and
 distance.</p>
 <img src="../../_images/sphx_glr_level_test_001.png" srcset="../../_images/sphx_glr_level_test_001.png" alt="level test" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: LevelTest
-date: 2025-01-06 23_24_27.858644
+date: 2025-01-14 14_37_09.708121
 file: /home/circleci/project/examples/experiments/level_test.py
 participant: s
 session: 0
-2025-01-06 23:24:27,858 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2025-01-06 23:24:27,859 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2025-01-06 23:24:28,047 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Nothing will be done about this because suppress_resamp is &quot;True&quot;
-2025-01-06 23:24:28,047 - INFO    - Expyfun: Setting up screen
-2025-01-06 23:24:28,080 - EXP     - Expyfun: Set screen visibility True
-2025-01-06 23:24:28,094 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x70fe56362800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2025-01-06 23:24:28,094 - INFO    - Expyfun: Initializing dummy triggering mode
-2025-01-06 23:24:28,095 - INFO    - Expyfun: Initialization complete
-2025-01-06 23:24:28,095 - EXP     - Expyfun: Participant: s
-2025-01-06 23:24:28,096 - EXP     - Expyfun: Session: 0
-2025-01-06 23:24:28,110 - EXP     - Expyfun: Loading 882000 samples to buffer
-2025-01-06 23:24:28,194 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2025-01-06 23:24:28,196 - EXP     - Stamping TTL triggers: [1]
-2025-01-06 23:24:28,208 - EXP     - Expyfun: Audio stopped and reset.
-2025-01-06 23:24:28,208 - INFO    - Expyfun: Exiting
-2025-01-06 23:24:28,213 - EXP     - Expyfun: Audio stopped and reset.
+2025-01-14 14:37:09,708 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-01-14 14:37:09,709 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-01-14 14:37:09,905 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2025-01-14 14:37:09,906 - INFO    - Expyfun: Setting up screen
+2025-01-14 14:37:09,938 - EXP     - Expyfun: Set screen visibility True
+2025-01-14 14:37:09,952 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7d447554e800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-01-14 14:37:09,952 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-01-14 14:37:09,953 - INFO    - Expyfun: Initialization complete
+2025-01-14 14:37:09,954 - EXP     - Expyfun: Participant: s
+2025-01-14 14:37:09,954 - EXP     - Expyfun: Session: 0
+2025-01-14 14:37:09,969 - EXP     - Expyfun: Loading 882000 samples to buffer
+2025-01-14 14:37:10,065 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2025-01-14 14:37:10,067 - EXP     - Stamping TTL triggers: [1]
+2025-01-14 14:37:10,080 - EXP     - Expyfun: Audio stopped and reset.
+2025-01-14 14:37:10,081 - INFO    - Expyfun: Exiting
+2025-01-14 14:37:10,086 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -470,7 +470,7 @@ session: 0
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.432 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.454 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-level-test-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1b7b419935dd31ab1817b78d9f2eb583/level_test.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">level_test.ipynb</span></code></a></p>
@@ -543,7 +543,7 @@ session: 0
 
   <p class="copyright">
     
-      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-06.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-14.
       <br/>
     
   </p>

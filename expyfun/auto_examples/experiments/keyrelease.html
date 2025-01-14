@@ -50,7 +50,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Display text with different formatting methods" href="formatted_text.html" />
-    <link rel="prev" title="Experiment drawing methods" href="drawing_methods.html" />
+    <link rel="prev" title="ProgressBar demo" href="progress_bar.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../../_static/style.css " type="text/css" />
 <link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
@@ -318,9 +318,9 @@
 <li class="toctree-l2"><a class="reference internal" href="level_test.html">Sound level test and visual size calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pupillometry_experiment_.html">Experiment using eye-tracking pupillometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="drawing_methods.html">Experiment drawing methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="progress_bar.html">ProgressBar demo</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">KeyPressAndRelease demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="formatted_text.html">Display text with different formatting methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="progress_bar.html">ProgressBar demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tracker_dealer_doublesided.html">Adaptive tracking from above and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eyetracking_experiment_.html">Experiment with eye-tracking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tracker_dealer.html">Adaptive tracking for two trial types and tracker reconstruction from .tab</a></li>
@@ -391,22 +391,22 @@ the ExperimentController class.</p>
 <p>Please note that this currently only works for the keyboard, which has
 inprecise timing.</p>
 <img src="../../_images/sphx_glr_keyrelease_001.png" srcset="../../_images/sphx_glr_keyrelease_001.png" alt="keyrelease" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: KeyPressAndReleaseDemo
-date: 2025-01-06 23_24_29.394379
+date: 2025-01-14 14_37_14.481933
 file: /home/circleci/project/examples/experiments/keyrelease.py
 participant: foo
 session: 001
-2025-01-06 23:24:29,394 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2025-01-06 23:24:29,395 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2025-01-06 23:24:29,590 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2025-01-06 23:24:29,590 - INFO    - Expyfun: Setting up screen
-2025-01-06 23:24:29,620 - EXP     - Expyfun: Set screen visibility True
-2025-01-06 23:24:29,631 - INFO    - Initialized [1280  960] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x70fe56362800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2025-01-06 23:24:29,632 - INFO    - Expyfun: Initializing dummy triggering mode
-2025-01-06 23:24:29,633 - INFO    - Expyfun: Initialization complete
-2025-01-06 23:24:29,634 - EXP     - Expyfun: Participant: foo
-2025-01-06 23:24:29,634 - EXP     - Expyfun: Session: 001
-2025-01-06 23:24:30,716 - INFO    - Expyfun: Exiting
-2025-01-06 23:24:30,719 - EXP     - Expyfun: Audio stopped and reset.
+2025-01-14 14:37:14,482 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-01-14 14:37:14,482 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-01-14 14:37:14,708 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-01-14 14:37:14,708 - INFO    - Expyfun: Setting up screen
+2025-01-14 14:37:14,748 - EXP     - Expyfun: Set screen visibility True
+2025-01-14 14:37:14,761 - INFO    - Initialized [1280  960] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7d447554e800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-01-14 14:37:14,761 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-01-14 14:37:14,763 - INFO    - Expyfun: Initialization complete
+2025-01-14 14:37:14,764 - EXP     - Expyfun: Participant: foo
+2025-01-14 14:37:14,764 - EXP     - Expyfun: Session: 001
+2025-01-14 14:37:15,849 - INFO    - Expyfun: Exiting
+2025-01-14 14:37:15,852 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -465,7 +465,7 @@ session: 001
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a><span class="p">):</span>
         <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="s2">&quot;no keys pressed&quot;</span>
     <span class="k">else</span><span class="p">:</span>
-        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2"> after </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2"> secs</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="s2">&quot;&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a><span class="p">]</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2"> after </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2"> secs</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a><span class="p">]</span>
         <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">msg_dur</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">isi</span></a><span class="p">)</span>
@@ -473,7 +473,7 @@ session: 001
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.405 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.449 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-keyrelease-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/793713817e20ff9ef5f4ac45944df8fd/keyrelease.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">keyrelease.ipynb</span></code></a></p>
@@ -499,12 +499,12 @@ session: 001
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="drawing_methods.html"
+       href="progress_bar.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Experiment drawing methods</p>
+        <p class="prev-next-title">ProgressBar demo</p>
       </div>
     </a>
     <a class="right-next"
@@ -546,7 +546,7 @@ session: 001
 
   <p class="copyright">
     
-      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-06.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-14.
       <br/>
     
   </p>

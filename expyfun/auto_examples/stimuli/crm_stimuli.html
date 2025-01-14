@@ -322,9 +322,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../experiments/level_test.html">Sound level test and visual size calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../experiments/pupillometry_experiment_.html">Experiment using eye-tracking pupillometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../experiments/drawing_methods.html">Experiment drawing methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../experiments/progress_bar.html">ProgressBar demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../experiments/keyrelease.html">KeyPressAndRelease demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../experiments/formatted_text.html">Display text with different formatting methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../experiments/progress_bar.html">ProgressBar demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../experiments/tracker_dealer_doublesided.html">Adaptive tracking from above and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../experiments/eyetracking_experiment_.html">Experiment with eye-tracking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../experiments/tracker_dealer.html">Adaptive tracking for two trial types and tracker reconstruction from .tab</a></li>
@@ -437,7 +437,7 @@ script:</p>
 <span class="p">)</span>
 
 <span class="c1"># print the valid callsigns</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Valid callsigns are </span><span class="si">{</span><span class="n">crm_info</span><span class="p">()[</span><span class="s2">&quot;callsign&quot;</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Valid callsigns are </span><span class="si">{</span><span class="n">crm_info</span><span class="p">()[</span><span class="s1">&#39;callsign&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># read a sentence in from the hard drive</span>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x1</span></a> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">crm_sentence</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">,</span> <span class="s2">&quot;m&quot;</span><span class="p">,</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="s2">&quot;5&quot;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
@@ -472,7 +472,7 @@ Valid callsigns are [&#39;charlie&#39;, &#39;ringo&#39;, &#39;laker&#39;, &#39;h
     <span class="n">stim_fs</span><span class="o">=</span><span class="mi">40000</span><span class="p">,</span>
 <span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span>
-        <span class="s2">&quot;Report the color and number spoken by the female &quot;</span> <span class="s2">&quot;talker.&quot;</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">True</span>
+        <span class="s2">&quot;Report the color and number spoken by the female talker.&quot;</span><span class="p">,</span> <span class="n">wrap</span><span class="o">=</span><span class="kc">True</span>
     <span class="p">)</span>
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
@@ -494,37 +494,37 @@ Valid callsigns are [&#39;charlie&#39;, &#39;ringo&#39;, &#39;laker&#39;, &#39;h
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_crm_stimuli_001.png" srcset="../../_images/sphx_glr_crm_stimuli_001.png" alt="crm stimuli" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: CRM corpus example
-date: 2025-01-06 23_24_53.392668
+date: 2025-01-14 14_37_36.140592
 file: /home/circleci/project/examples/stimuli/crm_stimuli.py
 participant: foo
 session: foo
-2025-01-06 23:24:53,392 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2025-01-06 23:24:53,393 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2025-01-06 23:24:53,567 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2025-01-06 23:24:53,567 - INFO    - Expyfun: Setting up screen
-2025-01-06 23:24:53,597 - EXP     - Expyfun: Set screen visibility True
-2025-01-06 23:24:53,605 - INFO    - Initialized [720 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x70fe56362800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2025-01-06 23:24:53,605 - INFO    - Expyfun: Initializing dummy triggering mode
-2025-01-06 23:24:53,606 - INFO    - Expyfun: Initialization complete
-2025-01-06 23:24:53,606 - EXP     - Expyfun: Participant: foo
-2025-01-06 23:24:53,606 - EXP     - Expyfun: Session: foo
-2025-01-06 23:24:53,645 - WARNING - Expyfun: Resampling 2.01 seconds of audio
-2025-01-06 23:24:53,688 - WARNING - Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
-/home/circleci/project/expyfun/_experiment_controller.py:2041: UserWarning: Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
+2025-01-14 14:37:36,140 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-01-14 14:37:36,141 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-01-14 14:37:36,723 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-01-14 14:37:36,723 - INFO    - Expyfun: Setting up screen
+2025-01-14 14:37:36,754 - EXP     - Expyfun: Set screen visibility True
+2025-01-14 14:37:36,763 - INFO    - Initialized [720 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7d447554e800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-01-14 14:37:36,764 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-01-14 14:37:36,765 - INFO    - Expyfun: Initialization complete
+2025-01-14 14:37:36,765 - EXP     - Expyfun: Participant: foo
+2025-01-14 14:37:36,765 - EXP     - Expyfun: Session: foo
+2025-01-14 14:37:36,806 - WARNING - Expyfun: Resampling 2.01 seconds of audio
+2025-01-14 14:37:36,849 - WARNING - Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
+/home/circleci/project/expyfun/_experiment_controller.py:2037: UserWarning: Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
   warnings.warn(warn_string)
-2025-01-06 23:24:53,689 - EXP     - Expyfun: Loading 177652 samples to buffer
-2025-01-06 23:24:53,690 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2025-01-06 23:24:53,690 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
-2025-01-06 23:24:53,691 - EXP     - Stamping TTL triggers: []
-2025-01-06 23:24:53,691 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2025-01-06 23:24:53,692 - EXP     - Stamping TTL triggers: [1]
-2025-01-06 23:24:55,805 - WARNING - ec.trial_ok called before stimulus had stopped
-2025-01-06 23:24:55,805 - EXP     - Expyfun: Trial OK
-2025-01-06 23:24:55,805 - INFO    - Expyfun: Exiting
-2025-01-06 23:24:55,811 - EXP     - Expyfun: Audio stopped and reset.
+2025-01-14 14:37:36,850 - EXP     - Expyfun: Loading 177652 samples to buffer
+2025-01-14 14:37:36,851 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2025-01-14 14:37:36,851 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
+2025-01-14 14:37:36,851 - EXP     - Stamping TTL triggers: []
+2025-01-14 14:37:36,852 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2025-01-14 14:37:36,853 - EXP     - Stamping TTL triggers: [1]
+2025-01-14 14:37:38,978 - WARNING - ec.trial_ok called before stimulus had stopped
+2025-01-14 14:37:38,978 - EXP     - Expyfun: Trial OK
+2025-01-14 14:37:38,978 - INFO    - Expyfun: Exiting
+2025-01-14 14:37:38,984 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 4.993 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 5.639 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-crm-stimuli-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/8c6bbefe24fef6c4e024272ed2189529/crm_stimuli.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">crm_stimuli.ipynb</span></code></a></p>
@@ -616,7 +616,7 @@ session: foo
 
   <p class="copyright">
     
-      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-06.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-14.
       <br/>
     
   </p>

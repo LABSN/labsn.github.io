@@ -49,7 +49,7 @@
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="KeyPressAndRelease demo" href="keyrelease.html" />
+    <link rel="next" title="ProgressBar demo" href="progress_bar.html" />
     <link rel="prev" title="Experiment using eye-tracking pupillometry" href="pupillometry_experiment_.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../../_static/style.css " type="text/css" />
@@ -318,9 +318,9 @@
 <li class="toctree-l2"><a class="reference internal" href="level_test.html">Sound level test and visual size calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pupillometry_experiment_.html">Experiment using eye-tracking pupillometry</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Experiment drawing methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="progress_bar.html">ProgressBar demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="keyrelease.html">KeyPressAndRelease demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="formatted_text.html">Display text with different formatting methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="progress_bar.html">ProgressBar demo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tracker_dealer_doublesided.html">Adaptive tracking from above and below</a></li>
 <li class="toctree-l2"><a class="reference internal" href="eyetracking_experiment_.html">Experiment with eye-tracking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tracker_dealer.html">Adaptive tracking for two trial types and tracker reconstruction from .tab</a></li>
@@ -388,22 +388,22 @@ to download the full example code.</p>
 <span id="sphx-glr-auto-examples-experiments-drawing-methods-py"></span><h1>Experiment drawing methods<a class="headerlink" href="#experiment-drawing-methods" title="Link to this heading">#</a></h1>
 <p>expyfun provides multiple methods for drawing simple screen objects.</p>
 <img src="../../_images/sphx_glr_drawing_methods_001.png" srcset="../../_images/sphx_glr_drawing_methods_001.png" alt="drawing methods" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2025-01-06 23_24_28.411781
+date: 2025-01-14 14_37_10.285526
 file: /home/circleci/project/examples/experiments/drawing_methods.py
 participant: 2
 session: 1
-2025-01-06 23:24:28,411 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2025-01-06 23:24:28,412 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2025-01-06 23:24:28,599 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2025-01-06 23:24:28,599 - INFO    - Expyfun: Setting up screen
-2025-01-06 23:24:28,628 - EXP     - Expyfun: Set screen visibility True
-2025-01-06 23:24:28,640 - INFO    - Initialized [600 600] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x70fe56362800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2025-01-06 23:24:28,640 - INFO    - Expyfun: Initializing dummy triggering mode
-2025-01-06 23:24:28,642 - INFO    - Expyfun: Initialization complete
-2025-01-06 23:24:28,642 - EXP     - Expyfun: Participant: 2
-2025-01-06 23:24:28,642 - EXP     - Expyfun: Session: 1
-2025-01-06 23:24:29,236 - INFO    - Expyfun: Exiting
-2025-01-06 23:24:29,241 - EXP     - Expyfun: Audio stopped and reset.
+2025-01-14 14:37:10,285 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-01-14 14:37:10,286 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-01-14 14:37:10,502 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-01-14 14:37:10,502 - INFO    - Expyfun: Setting up screen
+2025-01-14 14:37:10,531 - EXP     - Expyfun: Set screen visibility True
+2025-01-14 14:37:10,540 - INFO    - Initialized [600 600] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7d447554e800&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-01-14 14:37:10,540 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-01-14 14:37:10,541 - INFO    - Expyfun: Initialization complete
+2025-01-14 14:37:10,541 - EXP     - Expyfun: Participant: 2
+2025-01-14 14:37:10,542 - EXP     - Expyfun: Session: 1
+2025-01-14 14:37:11,134 - INFO    - Expyfun: Exiting
+2025-01-14 14:37:11,138 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -473,7 +473,7 @@ session: 1
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.876 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.900 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-drawing-methods-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f0a44b9334c97416bd9afb84b9c86b64/drawing_methods.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">drawing_methods.ipynb</span></code></a></p>
@@ -508,11 +508,11 @@ session: 1
       </div>
     </a>
     <a class="right-next"
-       href="keyrelease.html"
+       href="progress_bar.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">KeyPressAndRelease demo</p>
+        <p class="prev-next-title">ProgressBar demo</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -546,7 +546,7 @@ session: 1
 
   <p class="copyright">
     
-      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-06.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-01-14.
       <br/>
     
   </p>
