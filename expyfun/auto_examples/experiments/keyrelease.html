@@ -344,6 +344,7 @@
 <li class="toctree-l1 has-children"><a class="reference internal" href="../sync/index.html">Synchronization tests</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../sync/sample_rate_test.html">Audio sample rate test</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sync/sync_test.html">A-V sync test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sync/sync_test_dualmon.html">A-V sync test</a></li>
 </ul>
 </details></li>
 </ul>
@@ -391,22 +392,22 @@ the ExperimentController class.</p>
 <p>Please note that this currently only works for the keyboard, which has
 inprecise timing.</p>
 <img src="../../_images/sphx_glr_keyrelease_001.png" srcset="../../_images/sphx_glr_keyrelease_001.png" alt="keyrelease" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: KeyPressAndReleaseDemo
-date: 2025-03-11 15_28_29.797612
+date: 2025-03-11 15_43_16.140733
 file: /home/circleci/project/examples/experiments/keyrelease.py
 participant: foo
 session: 001
-2025-03-11 15:28:29,797 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2025-03-11 15:28:29,798 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2025-03-11 15:28:30,002 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2025-03-11 15:28:30,002 - INFO    - Expyfun: Setting up screen
-2025-03-11 15:28:30,032 - EXP     - Expyfun: Set screen visibility True
-2025-03-11 15:28:30,044 - INFO    - Initialized [1280  960] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fe352cc7490&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2025-03-11 15:28:30,044 - INFO    - Expyfun: Initializing dummy triggering mode
-2025-03-11 15:28:30,046 - INFO    - Expyfun: Initialization complete
-2025-03-11 15:28:30,047 - EXP     - Expyfun: Participant: foo
-2025-03-11 15:28:30,047 - EXP     - Expyfun: Session: 001
-2025-03-11 15:28:31,132 - INFO    - Expyfun: Exiting
-2025-03-11 15:28:31,136 - EXP     - Expyfun: Audio stopped and reset.
+2025-03-11 15:43:16,140 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-03-11 15:43:16,141 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-03-11 15:43:16,363 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-03-11 15:43:16,363 - INFO    - Expyfun: Setting up screen
+2025-03-11 15:43:16,396 - EXP     - Expyfun: Set screen visibility True
+2025-03-11 15:43:16,410 - INFO    - Initialized [1280  960] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f1152c2f4c0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-03-11 15:43:16,410 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-03-11 15:43:16,412 - INFO    - Expyfun: Initialization complete
+2025-03-11 15:43:16,412 - EXP     - Expyfun: Participant: foo
+2025-03-11 15:43:16,412 - EXP     - Expyfun: Session: 001
+2025-03-11 15:43:17,507 - INFO    - Expyfun: Exiting
+2025-03-11 15:43:17,510 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -473,7 +474,7 @@ session: 001
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.432 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.452 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-keyrelease-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/793713817e20ff9ef5f4ac45944df8fd/keyrelease.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">keyrelease.ipynb</span></code></a></p>

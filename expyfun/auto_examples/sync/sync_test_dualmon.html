@@ -45,12 +45,11 @@
     <script src="../../_static/documentation_options.js?v=8a32eaf7"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'auto_examples/sync/sync_test';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'auto_examples/sync/sync_test_dualmon';</script>
     <link rel="icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="A-V sync test" href="sync_test_dualmon.html" />
-    <link rel="prev" title="Audio sample rate test" href="sample_rate_test.html" />
+    <link rel="prev" title="A-V sync test" href="sync_test.html" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="../../_static/style.css " type="text/css" />
 <link rel="stylesheet" href="../../_static/font-awesome.css" type="text/css" />
@@ -343,8 +342,8 @@
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Synchronization tests</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sample_rate_test.html">Audio sample rate test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sync_test.html">A-V sync test</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">A-V sync test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sync_test_dualmon.html">A-V sync test</a></li>
 </ul>
 </details></li>
 </ul>
@@ -382,11 +381,11 @@
                   
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference internal" href="#sphx-glr-download-auto-examples-sync-sync-test-py"><span class="std std-ref">Go to the end</span></a>
+<p><a class="reference internal" href="#sphx-glr-download-auto-examples-sync-sync-test-dualmon-py"><span class="std std-ref">Go to the end</span></a>
 to download the full example code.</p>
 </div>
 <section class="sphx-glr-example-title" id="a-v-sync-test">
-<span id="sphx-glr-auto-examples-sync-sync-test-py"></span><h1>A-V sync test<a class="headerlink" href="#a-v-sync-test" title="Link to this heading">#</a></h1>
+<span id="sphx-glr-auto-examples-sync-sync-test-dualmon-py"></span><h1>A-V sync test<a class="headerlink" href="#a-v-sync-test" title="Link to this heading">#</a></h1>
 <p>This example tests synchronization between the screen and the auditory/visual
 playback. If a given machine (experimenta or development) is configured
 correctly:</p>
@@ -413,28 +412,28 @@ you are using a projector, your computer screen resolution (and
 <code class="docutils literal notranslate"><span class="pre">&quot;SCREEN_SIZE_PIX&quot;</span></code>) are configured to use the native resolution of the
 projector, as resolution conversion can lead to visual display jitter.</p>
 </div>
-<img src="../../_images/sphx_glr_sync_test_001.png" srcset="../../_images/sphx_glr_sync_test_001.png" alt="sync test" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: SyncTest
-date: 2025-03-11 15_43_46.149848
-file: /home/circleci/project/examples/sync/sync_test.py
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: SyncTest
+date: 2025-03-11 15_43_46.818545
+file: /home/circleci/project/examples/sync/sync_test_dualmon.py
 participant: s
 session: 0
-2025-03-11 15:43:46,150 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2025-03-11 15:43:46,151 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2025-03-11 15:43:46,359 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Nothing will be done about this because suppress_resamp is &quot;True&quot;
-2025-03-11 15:43:46,359 - INFO    - Expyfun: Setting up screen
-2025-03-11 15:43:46,404 - EXP     - Expyfun: Set screen visibility True
-2025-03-11 15:43:46,421 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f1152c2f4c0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2025-03-11 15:43:46,421 - INFO    - Expyfun: Initializing dummy triggering mode
-2025-03-11 15:43:46,423 - INFO    - Expyfun: Initialization complete
-2025-03-11 15:43:46,423 - EXP     - Expyfun: Participant: s
-2025-03-11 15:43:46,423 - EXP     - Expyfun: Session: 0
-2025-03-11 15:43:46,425 - EXP     - Expyfun: Loading 200 samples to buffer
-2025-03-11 15:43:46,441 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2025-03-11 15:43:46,443 - EXP     - Stamping TTL triggers: [1]
-2025-03-11 15:43:46,538 - EXP     - Stamping TTL triggers: [2, 4, 8]
-2025-03-11 15:43:46,599 - EXP     - Expyfun: Audio stopped and reset.
-2025-03-11 15:43:46,599 - INFO    - Expyfun: Exiting
-2025-03-11 15:43:46,606 - EXP     - Expyfun: Audio stopped and reset.
+2025-03-11 15:43:46,818 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-03-11 15:43:46,819 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-03-11 15:43:46,988 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2025-03-11 15:43:46,988 - INFO    - Expyfun: Setting up screen
+2025-03-11 15:43:47,019 - EXP     - Expyfun: Set screen visibility True
+2025-03-11 15:43:47,034 - INFO    - Initialized [1000 1000] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7f1152c2f4c0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-03-11 15:43:47,034 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-03-11 15:43:47,036 - INFO    - Expyfun: Initialization complete
+2025-03-11 15:43:47,036 - EXP     - Expyfun: Participant: s
+2025-03-11 15:43:47,036 - EXP     - Expyfun: Session: 0
+2025-03-11 15:43:47,038 - EXP     - Expyfun: Loading 200 samples to buffer
+2025-03-11 15:43:47,049 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2025-03-11 15:43:47,053 - EXP     - Stamping TTL triggers: [1]
+2025-03-11 15:43:47,159 - EXP     - Stamping TTL triggers: [2, 4, 8]
+2025-03-11 15:43:47,220 - EXP     - Expyfun: Audio stopped and reset.
+2025-03-11 15:43:47,221 - INFO    - Expyfun: Exiting
+2025-03-11 15:43:47,228 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -446,21 +445,28 @@ session: 0
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">expyfun.analyze</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ea</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
 <span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.visual</span><span class="w"> </span><span class="kn">import</span> <span class="n">Circle</span><span class="p">,</span> <span class="n">Rectangle</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
+
+<a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">SCREEN</span></a> <span class="o">=</span> <span class="mi">0</span>
+<a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">FULL</span></a> <span class="o">=</span> <span class="kc">False</span>
+<a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">WIN_SIZE</span></a> <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>  <span class="c1"># or None for full screen if size matches config</span>
 
 <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n_channels</span></a> <span class="o">=</span> <span class="mi">2</span>
 <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">click_idx</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span>
     <span class="s2">&quot;SyncTest&quot;</span><span class="p">,</span>
-    <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">full_screen</span><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">FULL</span></a><span class="p">,</span>
     <span class="n">noise_db</span><span class="o">=-</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">,</span>
     <span class="n">participant</span><span class="o">=</span><span class="s2">&quot;s&quot;</span><span class="p">,</span>
     <span class="n">session</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span>
     <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
     <span class="n">suppress_resamp</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">check_rms</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">screen_num</span><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">SCREEN</span></a><span class="p">,</span>
+    <span class="n">window_size</span><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">WIN_SIZE</span></a><span class="p">,</span>
     <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n_channels</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n_channels</span></a><span class="p">,</span>
     <span class="n">version</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
 <span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
@@ -490,19 +496,19 @@ session: 0
         <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pressed</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="s2">&quot;8&quot;</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
 
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
+<span class="c1"># ea.plot_screen(screenshot)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.543 seconds)</p>
-<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sync-test-py">
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.413 seconds)</p>
+<div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sync-test-dualmon-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/1007c3711ce115882a3f3231bf42c334/sync_test.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sync_test.ipynb</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/1826082b14eccc87bfad9522cbfa2e25/sync_test_dualmon.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sync_test_dualmon.ipynb</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-python docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/39dd3714bef9d11371c8a90ec603b492/sync_test.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sync_test.py</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/96afa97c640ec4383fed6de6fabd89c4/sync_test_dualmon.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">sync_test_dualmon.py</span></code></a></p>
 </div>
 <div class="sphx-glr-download sphx-glr-download-zip docutils container">
-<p><a class="reference download internal" download="" href="../../_downloads/5fd5e0da525ce2de691f41b3842c16f5/sync_test.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">sync_test.zip</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/7de5a1beb95bc564bd409f721b9fb1bb/sync_test_dualmon.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zipped:</span> <span class="pre">sync_test_dualmon.zip</span></code></a></p>
 </div>
 </div>
 <p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
@@ -519,22 +525,13 @@ session: 0
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="sample_rate_test.html"
+       href="sync_test.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Audio sample rate test</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="sync_test_dualmon.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">A-V sync test</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
