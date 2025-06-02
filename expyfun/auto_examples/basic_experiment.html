@@ -390,33 +390,33 @@ to download the full example code.</p>
 <p>This example demonstrates an (almost) minimum working example of the
 ExperimentController class.</p>
 <img src="../_images/sphx_glr_basic_experiment_001.png" srcset="../_images/sphx_glr_basic_experiment_001.png" alt="basic experiment" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: testExp
-date: 2025-05-26 19_43_52.459261
+date: 2025-06-02 19_55_55.023765
 file: /home/circleci/project/examples/basic_experiment.py
 participant: foo
 session: 001
-2025-05-26 19:43:52,459 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2025-05-26 19:43:52,522 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2025-05-26 19:43:52,737 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2025-05-26 19:43:52,738 - INFO    - Expyfun: Setting up screen
-2025-05-26 19:43:52,893 - EXP     - Expyfun: Set screen visibility True
-2025-05-26 19:43:52,966 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fa4b8bd3490&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2025-05-26 19:43:52,966 - INFO    - Expyfun: Initializing dummy triggering mode
-2025-05-26 19:43:52,968 - INFO    - Expyfun: Initialization complete
-2025-05-26 19:43:52,968 - EXP     - Expyfun: Participant: foo
-2025-05-26 19:43:52,968 - EXP     - Expyfun: Session: 001
-2025-05-26 19:43:53,137 - WARNING - Expyfun: Resampling 1.0 seconds of audio
-2025-05-26 19:43:53,270 - EXP     - Expyfun: Loading 88200 samples to buffer
-2025-05-26 19:43:53,380 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
-2025-05-26 19:43:53,381 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2025-05-26 19:43:53,381 - EXP     - Stamping TTL triggers: [4 4]
-2025-05-26 19:43:53,422 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2025-05-26 19:43:53,423 - EXP     - Stamping TTL triggers: [1]
-2025-05-26 19:43:53,434 - WARNING - ec.trial_ok called before stimulus had stopped
-2025-05-26 19:43:53,434 - EXP     - Expyfun: Trial OK
+2025-06-02 19:55:55,023 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-06-02 19:55:55,086 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-06-02 19:55:55,297 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-06-02 19:55:55,297 - INFO    - Expyfun: Setting up screen
+2025-06-02 19:55:55,450 - EXP     - Expyfun: Set screen visibility True
+2025-06-02 19:55:55,502 - INFO    - Initialized [1400  900] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fa31267f490&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
+2025-06-02 19:55:55,503 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-06-02 19:55:55,505 - INFO    - Expyfun: Initialization complete
+2025-06-02 19:55:55,505 - EXP     - Expyfun: Participant: foo
+2025-06-02 19:55:55,505 - EXP     - Expyfun: Session: 001
+2025-06-02 19:55:55,670 - WARNING - Expyfun: Resampling 1.0 seconds of audio
+2025-06-02 19:55:55,800 - EXP     - Expyfun: Loading 88200 samples to buffer
+2025-06-02 19:55:55,907 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
+2025-06-02 19:55:55,908 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2025-06-02 19:55:55,908 - EXP     - Stamping TTL triggers: [4 4]
+2025-06-02 19:55:55,949 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2025-06-02 19:55:55,951 - EXP     - Stamping TTL triggers: [1]
+2025-06-02 19:55:55,961 - WARNING - ec.trial_ok called before stimulus had stopped
+2025-06-02 19:55:55,962 - EXP     - Expyfun: Trial OK
 Presses:
 []
-2025-05-26 19:43:53,434 - INFO    - Expyfun: Exiting
-2025-05-26 19:43:53,439 - EXP     - Expyfun: Audio stopped and reset.
+2025-06-02 19:55:55,962 - INFO    - Expyfun: Exiting
+2025-06-02 19:55:55,967 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -459,7 +459,7 @@ Presses:
 <span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.064 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.026 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-basic-experiment-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/5f9845cfb974c748f5e4c5b52de86adf/basic_experiment.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">basic_experiment.ipynb</span></code></a></p>
@@ -532,7 +532,7 @@ Presses:
 
   <p class="copyright">
     
-      © Copyright 2013-2025, expyfun developers. Last updated on 2025-05-26.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-06-02.
       <br/>
     
   </p>
