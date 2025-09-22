@@ -390,22 +390,22 @@ to download the full example code.</p>
 <p>This shows how to control various properties of a video file in expyfun.</p>
 <p>&#64;author: drmccloy</p>
 <img src="../../_images/sphx_glr_advanced_video_001.png" srcset="../../_images/sphx_glr_advanced_video_001.png" alt="advanced video" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: advanced video example
-date: 2025-09-17 20_05_09.235026
+date: 2025-09-22 19_06_13.149961
 file: /home/circleci/project/examples/stimuli/advanced_video.py
 participant: foo
 session: foo
-2025-09-17 20:05:09,235 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2025-09-17 20:05:09,236 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2025-09-17 20:05:09,407 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2025-09-17 20:05:09,407 - INFO    - Expyfun: Setting up screen
-2025-09-17 20:05:09,438 - EXP     - Expyfun: Set screen visibility True
-2025-09-17 20:05:09,450 - INFO    - Initialized [720 480] window on screen XlibScreen(display=&lt;pyglet.canvas.xlib.XlibDisplay object at 0x7fb3224874f0&gt;, x=0, y=0, width=1400, height=900, xinerama=0) with DPI 69.73
-2025-09-17 20:05:09,451 - INFO    - Expyfun: Initializing dummy triggering mode
-2025-09-17 20:05:09,453 - INFO    - Expyfun: Initialization complete
-2025-09-17 20:05:09,453 - EXP     - Expyfun: Participant: foo
-2025-09-17 20:05:09,453 - EXP     - Expyfun: Session: foo
-2025-09-17 20:05:11,593 - INFO    - Expyfun: Exiting
-2025-09-17 20:05:11,600 - EXP     - Expyfun: Audio stopped and reset.
+2025-09-22 19:06:13,150 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2025-09-22 19:06:13,151 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2025-09-22 19:06:13,322 - WARNING - Expyfun: Mismatch between reported stim sample rate (24414) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2025-09-22 19:06:13,323 - INFO    - Expyfun: Setting up screen
+2025-09-22 19:06:13,363 - EXP     - Expyfun: Set screen visibility True
+2025-09-22 19:06:13,370 - INFO    - Initialized [720 480] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7f25243d2dd0&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
+2025-09-22 19:06:13,370 - INFO    - Expyfun: Initializing dummy triggering mode
+2025-09-22 19:06:13,372 - INFO    - Expyfun: Initialization complete
+2025-09-22 19:06:13,372 - EXP     - Expyfun: Participant: foo
+2025-09-22 19:06:13,372 - EXP     - Expyfun: Session: foo
+2025-09-22 19:06:15,514 - INFO    - Expyfun: Exiting
+2025-09-22 19:06:15,521 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -443,7 +443,7 @@ session: foo
     <a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">screen_period</span></a> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">ec</span><span class="o">.</span><span class="n">estimate_screen_fs</span><span class="p">()</span>
     <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">all_presses</span></a> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
     <span class="n">fix</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">FixationDot</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
-    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="s2">&quot;Running ...&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">&quot;k&quot;</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="s2">&quot;Running ...&quot;</span><span class="p">,</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">),</span> <span class="s2">&quot;k&quot;</span><span class="p">)</span>
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># don&#39;t have one yet</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">load_video</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">movie_path</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_scale</span><span class="p">(</span><span class="s2">&quot;fill&quot;</span><span class="p">)</span>
@@ -493,7 +493,7 @@ session: foo
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.458 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.459 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-advanced-video-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1b225f0ff2fc23a1bd5ee879a59ab296/advanced_video.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">advanced_video.ipynb</span></code></a></p>
@@ -566,7 +566,7 @@ session: foo
 
   <p class="copyright">
     
-      © Copyright 2013-2025, expyfun developers. Last updated on 2025-09-17.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-09-22.
       <br/>
     
   </p>

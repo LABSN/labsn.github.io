@@ -497,8 +497,11 @@ you might want to do something like:</p>
 <p>The fixed, hardware-dependent settings for a given system get written to
 an <code class="docutils literal notranslate"><span class="pre">expyfun.json</span></code> file. You can use <a class="reference internal" href="generated/expyfun.get_config_path.html#expyfun.get_config_path" title="expyfun.get_config_path"><code class="xref py py-func docutils literal notranslate"><span class="pre">expyfun.get_config_path()</span></code></a> to
 get the path to your config file. Some sample configurations:</p>
-<dl>
-<dt>A TDT-based M/EEG+pupillometry machine</dt><dd><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<p>A TDT-based M/EEG+pupillometry machine (requires the <em class="xref py py-obj">TDT Drivers/RPvdsEx</em>
+and <em class="xref py py-obj">ActiveX Controls</em> to be installed, which can be obtained from
+<a class="reference external" href="https://www.tdt.com/support/downloads/">TDT downloads</a>):</p>
+<blockquote>
+<div><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="nt">&quot;AUDIO_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tdt&quot;</span><span class="p">,</span>
 <span class="nt">&quot;EXPYFUN_EYELINK&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100.1.1.1&quot;</span><span class="p">,</span>
 <span class="nt">&quot;RESPONSE_DEVICE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyboard&quot;</span><span class="p">,</span>
@@ -512,7 +515,8 @@ get the path to your config file. Some sample configurations:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</dd>
+</div></blockquote>
+<dl>
 <dt>A sound-card-based EEG system</dt><dd><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="nt">&quot;AUDIO_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sound_card&quot;</span><span class="p">,</span>
 <span class="nt">&quot;RESPONSE_DEVICE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyboard&quot;</span><span class="p">,</span>
@@ -622,7 +626,7 @@ static version of expyfun once an experiment is in its finalized state.</p>
 
   <p class="copyright">
     
-      © Copyright 2013-2025, expyfun developers. Last updated on 2025-09-17.
+      © Copyright 2013-2025, expyfun developers. Last updated on 2025-09-22.
       <br/>
     
   </p>
