@@ -439,27 +439,32 @@ you are using a projector, your computer screen resolution (and
 projector, as resolution conversion can lead to visual display jitter.</p>
 </div>
 <div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: SyncTest
-date: 2026-06-01 21_26_26.537172
+date: 2026-06-03 17_25_05.606394
 file: /home/circleci/project/examples/sync/sync_test_dualmon.py
 participant: s
 session: 0
-2026-06-01 21:26:26,537 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2026-06-01 21:26:26,621 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2026-06-01 21:26:26,711 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Nothing will be done about this because suppress_resamp is &quot;True&quot;
-2026-06-01 21:26:26,712 - INFO    - Expyfun: Setting up screen
-2026-06-01 21:26:26,780 - EXP     - Expyfun: Set screen visibility True
-2026-06-01 21:26:26,792 - INFO    - Initialized [1000 1000] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7ca535f0e9b0&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
-2026-06-01 21:26:26,792 - INFO    - Expyfun: Initializing dummy triggering mode
-2026-06-01 21:26:26,794 - INFO    - Expyfun: Initialization complete
-2026-06-01 21:26:26,794 - EXP     - Expyfun: Participant: s
-2026-06-01 21:26:26,794 - EXP     - Expyfun: Session: 0
-2026-06-01 21:26:26,797 - EXP     - Expyfun: Loading 200 samples to buffer
-2026-06-01 21:26:26,801 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2026-06-01 21:26:26,809 - EXP     - Stamping TTL triggers: [1]
-2026-06-01 21:26:26,921 - EXP     - Stamping TTL triggers: [2, 4, 8]
-2026-06-01 21:26:26,983 - EXP     - Expyfun: Audio stopped and reset.
-2026-06-01 21:26:26,983 - INFO    - Expyfun: Exiting
-2026-06-01 21:26:26,991 - EXP     - Expyfun: Audio stopped and reset.
+2026-06-03 17:25:05,606 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2026-06-03 17:25:05,689 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2026-06-03 17:25:05,752 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Nothing will be done about this because suppress_resamp is &quot;True&quot;
+2026-06-03 17:25:05,752 - INFO    - Expyfun: Setting up screen
+2026-06-03 17:25:05,800 - EXP     - Expyfun: Set screen visibility True
+2026-06-03 17:25:05,811 - INFO    - Initialized [1000 1000] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x75810975e9e0&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
+2026-06-03 17:25:05,811 - INFO    - Expyfun: Initializing dummy triggering mode
+2026-06-03 17:25:05,813 - INFO    - Expyfun: Initialization complete
+2026-06-03 17:25:05,813 - EXP     - Expyfun: Participant: s
+2026-06-03 17:25:05,813 - EXP     - Expyfun: Session: 0
+2026-06-03 17:25:05,816 - EXP     - Expyfun: Loading 200 samples to buffer
+2026-06-03 17:25:05,818 - EXP     - Expyfun: Stamp trial ID to ec_id    : 1
+2026-06-03 17:25:05,818 - EXP     - Expyfun: Stamp trial ID to ttl_id   : [1]
+2026-06-03 17:25:05,818 - EXP     - Stamping TTL triggers: [8]
+2026-06-03 17:25:05,839 - EXP     - Expyfun: Stamp trial ID to vpixx_id : (255, 0, 0)
+2026-06-03 17:25:05,842 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2026-06-03 17:25:05,848 - EXP     - Stamping TTL triggers: [1]
+2026-06-03 17:25:05,960 - EXP     - Stamping TTL triggers: [2, 4, 8]
+2026-06-03 17:25:06,021 - EXP     - Expyfun: Audio stopped and reset.
+2026-06-03 17:25:06,021 - EXP     - Expyfun: Trial OK
+2026-06-03 17:25:06,021 - INFO    - Expyfun: Exiting
+2026-06-03 17:25:06,030 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -473,8 +478,6 @@ session: 0
 
 <span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
 <span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.visual</span><span class="w"> </span><span class="kn">import</span> <span class="n">Circle</span><span class="p">,</span> <span class="n">Rectangle</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
 <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">SCREEN</span></a> <span class="o">=</span> <span class="mi">0</span>
 <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">FULL</span></a> <span class="o">=</span> <span class="kc">False</span>
@@ -495,6 +498,7 @@ session: 0
     <span class="n">window_size</span><span class="o">=</span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">WIN_SIZE</span></a><span class="p">,</span>
     <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n_channels</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n_channels</span></a><span class="p">,</span>
     <span class="n">version</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="n">use_vpixx</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>  <span class="c1"># 50x50 pixel square, so it&#39;s obvious</span>
 <span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">click</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.r_.html#numpy.r_" title="numpy.r_" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">r_</span></a><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="numpy.zeros" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">(</span><span class="mi">99</span><span class="p">)]</span>  <span class="c1"># RMS = 0.01</span>
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">data</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="numpy.zeros" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">n_channels</span></a><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">click</span></a><span class="p">)))</span>
@@ -507,8 +511,13 @@ session: 0
     <span class="c1"># Make a rectangle that is the standard credit card size</span>
     <span class="n">rect</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">8.56</span><span class="p">,</span> <span class="mf">5.398</span><span class="p">],</span> <span class="s2">&quot;cm&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&quot;#AA3377&quot;</span><span class="p">)</span>
     <span class="k">while</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pressed</span></a> <span class="o">!=</span> <span class="s2">&quot;8&quot;</span><span class="p">:</span>  <span class="c1"># enable a clean quit if required</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span>
+            <span class="n">ec_id</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>  <span class="c1"># dummy</span>
+            <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>  <span class="c1"># dummy</span>
+            <span class="n">vpixx_id</span><span class="o">=</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>  <span class="c1"># full red, so it&#39;s obvious</span>
+        <span class="p">)</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">set_background_color</span><span class="p">(</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
-        <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t1</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">(</span><span class="n">start_of_trial</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># skip checks</span>
+        <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t1</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">set_background_color</span><span class="p">(</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
         <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t2</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">diff</span></a> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t2</span></a> <span class="o">-</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t1</span></a><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
@@ -521,11 +530,10 @@ session: 0
         <span class="n">ec</span><span class="o">.</span><span class="n">refocus</span><span class="p">()</span>
         <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pressed</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="ow">not</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="s2">&quot;8&quot;</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-
-<span class="c1"># ea.plot_screen(screenshot)</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.457 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.427 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-sync-sync-test-dualmon-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/1826082b14eccc87bfad9522cbfa2e25/sync_test_dualmon.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">sync_test_dualmon.ipynb</span></code></a></p>
@@ -589,7 +597,7 @@ session: 0
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-06-01.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-06-03.
       <br/>
     
   </p>
