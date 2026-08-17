@@ -416,7 +416,7 @@ to download the full example code.</p>
 <p>This example shows how to display progress between trials using
 <a class="reference internal" href="../../generated/expyfun.visual.ProgressBar.html#expyfun.visual.ProgressBar" title="expyfun.visual.ProgressBar"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.visual.ProgressBar</span></code></a>.</p>
 <img src="../../_images/sphx_glr_progress_bar_001.png" srcset="../../_images/sphx_glr_progress_bar_001.png" alt="progress bar" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: name
-date: 2026-08-10 20_55_31.544010
+date: 2026-08-17 21_22_49.184870
 file: /home/circleci/project/examples/experiments/progress_bar.py
 participant: foo
 session: foo
@@ -436,18 +436,18 @@ session: foo
 <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wait_dur</span></a> <span class="o">=</span> <span class="mf">0.1</span> <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="mf">0.5</span>
 
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span>
-    <span class="s2">&quot;name&quot;</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">"dev"</span><span class="p">,</span>
     <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
     <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">session</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
-    <span class="n">participant</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+    <span class="n">session</span><span class="o">=</span><span class="s2">"foo"</span><span class="p">,</span>
+    <span class="n">participant</span><span class="o">=</span><span class="s2">"foo"</span><span class="p">,</span>
 <span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="c1"># initialize the progress bar</span>
-    <span class="n">pb</span> <span class="o">=</span> <span class="n">ProgressBar</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;norm&quot;</span><span class="p">)</span>
+    <span class="n">pb</span> <span class="o">=</span> <span class="n">ProgressBar</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="s2">"norm"</span><span class="p">)</span>
 
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span>
-        <span class="s2">&quot;Press the number shown on the screen. Start by pressing 1.&quot;</span><span class="p">,</span>
+        <span class="s2">"Press the number shown on the screen. Start by pressing 1."</span><span class="p">,</span>
         <span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
         <span class="n">live_keys</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span>
         <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">,</span>
@@ -468,7 +468,7 @@ session: foo
             <span class="n">pb</span><span class="o">.</span><span class="n">update_bar</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">percent</span></a><span class="p">)</span>
             <span class="c1"># display the progress bar with some text</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s2">&quot;You&#39;ve completed </span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">percent</span></a><span class="si">}</span><span class="s2"> %. Press any key to proceed.&quot;</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s2">"You've completed </span><span class="si">{</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">percent</span></a><span class="si">}</span><span class="s2"> %. Press any key to proceed."</span><span class="p">,</span>
                 <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>
                 <span class="n">wrap</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                 <span class="n">font_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
@@ -479,14 +479,14 @@ session: foo
             <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
             <span class="c1"># subject uses any key press to proceed</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">wait_one_press</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s2">&quot;This example is complete.&quot;</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s2">"This example is complete."</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.927 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 2.946 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-progress-bar-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/c596141f8234b087705423027467f80f/progress_bar.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">progress_bar.ipynb</span></code></a></p>
@@ -559,7 +559,7 @@ session: foo
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-10.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-17.
       <br/>
     
   </p>

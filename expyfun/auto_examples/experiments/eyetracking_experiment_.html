@@ -428,24 +428,24 @@ using eye-tracking simpler.</p>
 
 
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span>
-    <span class="s2">&quot;testExp&quot;</span><span class="p">,</span>
+    <span class="s2">"testExp"</span><span class="p">,</span>
     <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">participant</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
-    <span class="n">session</span><span class="o">=</span><span class="s2">&quot;001&quot;</span><span class="p">,</span>
+    <span class="n">participant</span><span class="o">=</span><span class="s2">"foo"</span><span class="p">,</span>
+    <span class="n">session</span><span class="o">=</span><span class="s2">"001"</span><span class="p">,</span>
     <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">"dev"</span><span class="p">,</span>
 <span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">el</span> <span class="o">=</span> <span class="n">EyelinkController</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span>
-        <span class="s2">&quot;Welcome to the experiment!</span><span class="se">\n\n</span><span class="s2">First, we will &quot;</span>
-        <span class="s2">&quot;perform a screen calibration.</span><span class="se">\n\n</span><span class="s2">Press a button &quot;</span>
-        <span class="s2">&quot;to continue.&quot;</span>
+        <span class="s2">"Welcome to the experiment!</span><span class="se">\n\n</span><span class="s2">First, we will "</span>
+        <span class="s2">"perform a screen calibration.</span><span class="se">\n\n</span><span class="s2">Press a button "</span>
+        <span class="s2">"to continue."</span>
     <span class="p">)</span>
     <span class="n">el</span><span class="o">.</span><span class="n">calibrate</span><span class="p">()</span>  <span class="c1"># by default this starts recording EyeLink data</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span>
-        <span class="s2">&quot;Excellent! Now, follow the red circle around the edge &quot;</span>
-        <span class="s2">&quot;of the big white circle.</span><span class="se">\n\n</span><span class="s2">Press a button to &quot;</span>
-        <span class="s2">&quot;continue&quot;</span>
+        <span class="s2">"Excellent! Now, follow the red circle around the edge "</span>
+        <span class="s2">"of the big white circle.</span><span class="se">\n\n</span><span class="s2">Press a button to "</span>
+        <span class="s2">"continue"</span>
     <span class="p">)</span>
 
     <span class="c1"># make some circles to be drawn</span>
@@ -457,13 +457,13 @@ using eye-tracking simpler.</p>
         <span class="n">ec</span><span class="p">,</span>
         <span class="n">radius</span><span class="p">,</span>
         <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-        <span class="n">units</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span>
+        <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">,</span>
         <span class="n">fill_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-        <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>
+        <span class="n">line_color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
         <span class="n">line_width</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">targ_circ</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Circle</span><span class="p">(</span>
-        <span class="n">ec</span><span class="p">,</span> <span class="n">targ_rad</span><span class="p">,</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span>
+        <span class="n">ec</span><span class="p">,</span> <span class="n">targ_rad</span><span class="p">,</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">"red"</span>
     <span class="p">)</span>
     <span class="n">fix_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 
@@ -471,20 +471,20 @@ using eye-tracking simpler.</p>
     <span class="n">big_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">targ_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s2">&quot;Circle&quot;</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">el_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s2">"Circle"</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">el_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>  <span class="c1"># automatically stamps to EL</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">(</span><span class="n">fix_pos</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial fixation failed&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">(</span><span class="n">fix_pos</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Initial fixation failed"</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">:])):</span>
-        <span class="n">targ_circ</span><span class="o">.</span><span class="n">set_pos</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">)</span>
+        <span class="n">targ_circ</span><span class="o">.</span><span class="n">set_pos</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">)</span>
         <span class="n">big_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
         <span class="n">targ_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Fixation </span><span class="si">{</span><span class="n">ii</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> failed&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Fixation </span><span class="si">{</span><span class="n">ii</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> failed"</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
     <span class="n">el</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>  <span class="c1"># stop recording to save the file</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">&quot;All done!&quot;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">"All done!"</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
     <span class="c1"># eyelink auto-closes (el.close()) because it gets registered with EC</span>
 
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
@@ -562,7 +562,7 @@ using eye-tracking simpler.</p>
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-10.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-17.
       <br/>
     
   </p>

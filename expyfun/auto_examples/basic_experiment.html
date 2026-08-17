@@ -416,33 +416,33 @@ to download the full example code.</p>
 <p>This example demonstrates an (almost) minimum working example of the
 ExperimentController class.</p>
 <img src="../_images/sphx_glr_basic_experiment_001.png" srcset="../_images/sphx_glr_basic_experiment_001.png" alt="basic experiment" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: testExp
-date: 2026-08-10 20_55_25.586721
+date: 2026-08-17 21_22_42.727031
 file: /home/circleci/project/examples/basic_experiment.py
 participant: foo
 session: 001
-2026-08-10 20:55:25,586 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2026-08-10 20:55:25,851 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2026-08-10 20:55:25,918 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2026-08-10 20:55:25,918 - INFO    - Expyfun: Setting up screen
-2026-08-10 20:55:26,016 - EXP     - Expyfun: Set screen visibility True
-2026-08-10 20:55:26,026 - INFO    - Initialized [1400  900] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7b3bd17329b0&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
-2026-08-10 20:55:26,027 - INFO    - Expyfun: Initializing dummy triggering mode
-2026-08-10 20:55:26,029 - INFO    - Expyfun: Initialization complete
-2026-08-10 20:55:26,029 - EXP     - Expyfun: Participant: foo
-2026-08-10 20:55:26,029 - EXP     - Expyfun: Session: 001
-2026-08-10 20:55:26,231 - WARNING - Expyfun: Resampling 0.51 seconds of audio
-2026-08-10 20:55:26,398 - EXP     - Expyfun: Loading 44860 samples to buffer
-2026-08-10 20:55:26,467 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
-2026-08-10 20:55:26,467 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
-2026-08-10 20:55:26,467 - EXP     - Stamping TTL triggers: [4 4]
-2026-08-10 20:55:26,508 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2026-08-10 20:55:26,511 - EXP     - Stamping TTL triggers: [1]
-2026-08-10 20:55:26,521 - WARNING - ec.trial_ok called before stimulus had stopped
-2026-08-10 20:55:26,521 - EXP     - Expyfun: Trial OK
+2026-08-17 21:22:42,727 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2026-08-17 21:22:43,091 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2026-08-17 21:22:43,164 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2026-08-17 21:22:43,164 - INFO    - Expyfun: Setting up screen
+2026-08-17 21:22:43,265 - EXP     - Expyfun: Set screen visibility True
+2026-08-17 21:22:43,277 - INFO    - Initialized [1400  900] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7cd788032d70&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
+2026-08-17 21:22:43,278 - INFO    - Expyfun: Initializing dummy triggering mode
+2026-08-17 21:22:43,281 - INFO    - Expyfun: Initialization complete
+2026-08-17 21:22:43,281 - EXP     - Expyfun: Participant: foo
+2026-08-17 21:22:43,281 - EXP     - Expyfun: Session: 001
+2026-08-17 21:22:43,495 - WARNING - Expyfun: Resampling 0.51 seconds of audio
+2026-08-17 21:22:43,717 - EXP     - Expyfun: Loading 44860 samples to buffer
+2026-08-17 21:22:43,808 - EXP     - Expyfun: Stamp trial ID to ec_id  : tone
+2026-08-17 21:22:43,808 - EXP     - Expyfun: Stamp trial ID to ttl_id : [0, 0]
+2026-08-17 21:22:43,808 - EXP     - Stamping TTL triggers: [4 4]
+2026-08-17 21:22:43,849 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2026-08-17 21:22:43,852 - EXP     - Stamping TTL triggers: [1]
+2026-08-17 21:22:43,863 - WARNING - ec.trial_ok called before stimulus had stopped
+2026-08-17 21:22:43,863 - EXP     - Expyfun: Trial OK
 Presses:
 []
-2026-08-10 20:55:26,521 - INFO    - Expyfun: Exiting
-2026-08-10 20:55:26,528 - EXP     - Expyfun: Audio stopped and reset.
+2026-08-17 21:22:43,863 - INFO    - Expyfun: Exiting
+2026-08-17 21:22:43,872 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -467,25 +467,25 @@ Presses:
 <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a> <span class="o">=</span> <span class="mf">1.0</span> <span class="k">if</span> <span class="ow">not</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="mf">0.0</span>
 
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span>
-    <span class="s2">&quot;testExp&quot;</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s2">&quot;001&quot;</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span>
+    <span class="s2">"testExp"</span><span class="p">,</span> <span class="n">participant</span><span class="o">=</span><span class="s2">"foo"</span><span class="p">,</span> <span class="n">session</span><span class="o">=</span><span class="s2">"001"</span><span class="p">,</span> <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="s2">"dev"</span>
 <span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">&quot;Press a button when you hear the tone&quot;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">"Press a button when you hear the tone"</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
 
     <span class="n">dot</span> <span class="o">=</span> <span class="n">FixationDot</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tone</span></a><span class="p">)</span>
     <span class="n">dot</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">()</span>  <span class="c1"># only because we want to show it in the docs</span>
 
-    <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s2">&quot;tone&quot;</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s2">"tone"</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">])</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>
     <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">presses</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">wait_for_presses</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">dur</span></a> <span class="k">if</span> <span class="ow">not</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="mf">0.0</span><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Presses:</span><span class="se">\n</span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">presses</span></a><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Presses:</span><span class="se">\n</span><span class="si">{</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">presses</span></a><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.024 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.238 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-basic-experiment-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/5f9845cfb974c748f5e4c5b52de86adf/basic_experiment.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">basic_experiment.ipynb</span></code></a></p>
@@ -558,7 +558,7 @@ Presses:
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-10.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-17.
       <br/>
     
   </p>

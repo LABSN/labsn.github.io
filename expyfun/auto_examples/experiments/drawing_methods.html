@@ -415,23 +415,23 @@ to download the full example code.</p>
 <span id="sphx-glr-auto-examples-experiments-drawing-methods-py"></span><h1>Experiment drawing methods<a class="headerlink" href="#experiment-drawing-methods" title="Link to this heading">#</a></h1>
 <p>expyfun provides multiple methods for drawing simple screen objects.</p>
 <img src="../../_images/sphx_glr_drawing_methods_001.png" srcset="../../_images/sphx_glr_drawing_methods_001.png" alt="drawing methods" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2026-08-10 20_55_30.603521
+date: 2026-08-17 21_22_48.213993
 file: /home/circleci/project/examples/experiments/drawing_methods.py
 participant: 2
 session: 1
-2026-08-10 20:55:30,603 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2026-08-10 20:55:30,669 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2026-08-10 20:55:30,729 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2026-08-10 20:55:30,729 - INFO    - Expyfun: Setting up screen
-2026-08-10 20:55:30,771 - EXP     - Expyfun: Set screen visibility True
-2026-08-10 20:55:30,775 - INFO    - Initialized [600 600] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7b3bd17329b0&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
-2026-08-10 20:55:30,775 - INFO    - Expyfun: Initializing dummy triggering mode
-2026-08-10 20:55:30,776 - INFO    - Expyfun: Initialization complete
-2026-08-10 20:55:30,776 - EXP     - Expyfun: Participant: 2
-2026-08-10 20:55:30,776 - EXP     - Expyfun: Session: 1
-Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7b3a9834e2c0&gt;
-2026-08-10 20:55:31,387 - INFO    - Expyfun: Exiting
-2026-08-10 20:55:31,393 - EXP     - Expyfun: Audio stopped and reset.
+2026-08-17 21:22:48,214 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2026-08-17 21:22:48,287 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2026-08-17 21:22:48,350 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2026-08-17 21:22:48,350 - INFO    - Expyfun: Setting up screen
+2026-08-17 21:22:48,392 - EXP     - Expyfun: Set screen visibility True
+2026-08-17 21:22:48,396 - INFO    - Initialized [600 600] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7cd788032d70&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
+2026-08-17 21:22:48,397 - INFO    - Expyfun: Initializing dummy triggering mode
+2026-08-17 21:22:48,398 - INFO    - Expyfun: Initialization complete
+2026-08-17 21:22:48,398 - EXP     - Expyfun: Participant: 2
+2026-08-17 21:22:48,398 - EXP     - Expyfun: Session: 1
+Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7cd788031300&gt;
+2026-08-17 21:22:49,019 - INFO    - Expyfun: Exiting
+2026-08-17 21:22:49,024 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -450,15 +450,15 @@ Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7b3a9834e2c0&gt;
 
 
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span>
-    <span class="s2">&quot;test&quot;</span><span class="p">,</span>
-    <span class="n">session</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
-    <span class="n">participant</span><span class="o">=</span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+    <span class="s2">"test"</span><span class="p">,</span>
+    <span class="n">session</span><span class="o">=</span><span class="s2">"1"</span><span class="p">,</span>
+    <span class="n">participant</span><span class="o">=</span><span class="s2">"2"</span><span class="p">,</span>
     <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">],</span>
     <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">"dev"</span><span class="p">,</span>
 <span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><span class="s2">"hello"</span><span class="p">)</span>
 
     <span class="c1"># make an image with  alpha the x-dimension (columns), RGB upward</span>
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.zeros.html#numpy.zeros" title="numpy.zeros" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">zeros</span></a><span class="p">((</span><span class="mi">120</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
@@ -473,21 +473,21 @@ Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7b3a9834e2c0&gt;
     <span class="n">line</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Line</span><span class="p">(</span>
         <span class="n">ec</span><span class="p">,</span>
         <span class="p">[[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]],</span>
-        <span class="n">units</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span>
-        <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span>
+        <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">,</span>
+        <span class="n">line_color</span><span class="o">=</span><span class="s2">"w"</span><span class="p">,</span>
         <span class="n">line_width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="n">rect</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+    <span class="n">rect</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Rectangle</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">"y"</span><span class="p">)</span>
     <span class="n">diamond</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Diamond</span><span class="p">(</span>
         <span class="n">ec</span><span class="p">,</span>
         <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
-        <span class="n">units</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span>
+        <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">,</span>
         <span class="n">fill_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-        <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span>
+        <span class="n">line_color</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">,</span>
         <span class="n">line_width</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span>
     <span class="p">)</span>
     <span class="n">circle</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Circle</span><span class="p">(</span>
-        <span class="n">ec</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;deg&quot;</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mf">2.0</span>
+        <span class="n">ec</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">,</span> <span class="n">line_color</span><span class="o">=</span><span class="s2">"w"</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">"k"</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mf">2.0</span>
     <span class="p">)</span>
 
     <span class="c1"># do the drawing, then flip</span>
@@ -501,7 +501,7 @@ Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7b3a9834e2c0&gt;
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.835 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.857 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-drawing-methods-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f0a44b9334c97416bd9afb84b9c86b64/drawing_methods.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">drawing_methods.ipynb</span></code></a></p>
@@ -574,7 +574,7 @@ Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7b3a9834e2c0&gt;
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-10.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-17.
       <br/>
     
   </p>

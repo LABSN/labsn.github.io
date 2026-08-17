@@ -407,7 +407,7 @@ see <a class="reference internal" href="parallel_installation.html#parallel-inst
 </li>
 </ul>
 <p>To get started quickly, this should suffice for conda users on most systems:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>expy<span class="w"> </span>mne<span class="w"> </span><span class="s2">&quot;pyglet&lt;1.6&quot;</span><span class="w"> </span>-c<span class="w"> </span>conda-forge
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>expy<span class="w"> </span>mne<span class="w"> </span><span class="s2">"pyglet&lt;1.6"</span><span class="w"> </span>-c<span class="w"> </span>conda-forge
 <span class="gp">$ </span>conda<span class="w"> </span>activate<span class="w"> </span>expy
 <span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>pyparallel<span class="w"> </span>rtmixer
 <span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/labsn/expyfun
@@ -418,17 +418,17 @@ cannot (or don’t want to) use conda-forge as a package source, you’ll have t
 do this instead:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>expy<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span><span class="w"> </span>numpy<span class="w"> </span>scipy<span class="w"> </span>matplotlib<span class="w"> </span>pandas<span class="w"> </span>h5py<span class="w"> </span>joblib<span class="w"> </span>pillow
 <span class="gp">$ </span>conda<span class="w"> </span>activate<span class="w"> </span>expy
-<span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>mne<span class="w"> </span><span class="s2">&quot;pyglet&lt;1.6&quot;</span><span class="w"> </span>pyparallel<span class="w"> </span>rtmixer
+<span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>mne<span class="w"> </span><span class="s2">"pyglet&lt;1.6"</span><span class="w"> </span>pyparallel<span class="w"> </span>rtmixer
 <span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/labsn/expyfun
 </pre></div>
 </div>
 <p>If you prefer using pip for everything, here are the minimum requirements:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>mne<span class="w"> </span>matplotlib<span class="w"> </span><span class="s2">&quot;pyglet&lt;1.6&quot;</span><span class="w"> </span>pillow
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>mne<span class="w"> </span>matplotlib<span class="w"> </span><span class="s2">"pyglet&lt;1.6"</span><span class="w"> </span>pillow
 <span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/labsn/expyfun
 </pre></div>
 </div>
 <p>and this does a full pip install of all required and optional dependencies:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>mne<span class="w"> </span>matplotlib<span class="w"> </span><span class="s2">&quot;pyglet&lt;1.6&quot;</span><span class="w"> </span>pillow
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>mne<span class="w"> </span>matplotlib<span class="w"> </span><span class="s2">"pyglet&lt;1.6"</span><span class="w"> </span>pillow
 <span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>rtmixer<span class="w"> </span>pyparallel<span class="w"> </span>pandas<span class="w"> </span>joblib<span class="w"> </span>h5py<span class="w"> </span>TDTPy
 <span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>git+https://github.com/labsn/expyfun
 </pre></div>
@@ -501,7 +501,7 @@ auditory stimuli and triggering. Possibilities can be seen by looking at
 <a class="reference internal" href="generated/expyfun.known_config_types.html#expyfun.known_config_types" title="expyfun.known_config_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">expyfun.known_config_types</span></code></a>. Your current system configuration can be
 viewed by doing:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expyfun</span><span class="o">.</span><span class="n">get_config</span><span class="p">()</span>
-<span class="go">{&#39;SCREEN_DISTANCE&#39;: &#39;61.0&#39;, &#39;SCREEN_SIZE_PIX&#39;: &#39;1920,1200&#39;, &#39;SCREEN_WIDTH&#39;: &#39;52.0&#39;, &#39;SOUND_CARD_BACKEND&#39;: &#39;rtmixer&#39;}</span>
+<span class="go">{'SCREEN_DISTANCE': '61.0', 'SCREEN_SIZE_PIX': '1920,1200', 'SCREEN_WIDTH': '52.0', 'SOUND_CARD_BACKEND': 'rtmixer'}</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -509,7 +509,7 @@ viewed by doing:</p>
 <p>If this returns <code class="docutils literal notranslate"><span class="pre">{}</span></code>, you have not written any config values yet. This
 means that the standard <code class="docutils literal notranslate"><span class="pre">expyfun.json</span></code> file might not exist, and
 you might want to do something like:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expyfun</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span><span class="s1">&#39;SCREEN_SIZE_PIX&#39;</span><span class="p">,</span> <span class="s1">&#39;1920,1200&#39;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expyfun</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span><span class="s1">'SCREEN_SIZE_PIX'</span><span class="p">,</span> <span class="s1">'1920,1200'</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>To initialize the <code class="docutils literal notranslate"><span class="pre">expyfun.json</span></code> file.</p>
@@ -522,34 +522,34 @@ and <em class="xref py py-obj">ActiveX Controls</em> to be installed, which can 
 <a class="reference external" href="https://www.tdt.com/support/downloads/">TDT downloads</a>):</p>
 <blockquote>
 <div><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="nt">&quot;AUDIO_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tdt&quot;</span><span class="p">,</span>
-<span class="nt">&quot;EXPYFUN_EYELINK&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100.1.1.1&quot;</span><span class="p">,</span>
-<span class="nt">&quot;RESPONSE_DEVICE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyboard&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_DISTANCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_WIDTH&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;51&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TDT_DELAY&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;44&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TDT_INTERFACE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GB&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TDT_MODEL&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RZ6&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TDT_TRIG_DELAY&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">,</span>
-<span class="nt">&quot;TRIGGER_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tdt&quot;</span>
+<span class="nt">"AUDIO_CONTROLLER"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tdt"</span><span class="p">,</span>
+<span class="nt">"EXPYFUN_EYELINK"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100.1.1.1"</span><span class="p">,</span>
+<span class="nt">"RESPONSE_DEVICE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"keyboard"</span><span class="p">,</span>
+<span class="nt">"SCREEN_DISTANCE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span>
+<span class="nt">"SCREEN_WIDTH"</span><span class="p">:</span><span class="w"> </span><span class="s2">"51"</span><span class="p">,</span>
+<span class="nt">"TDT_DELAY"</span><span class="p">:</span><span class="w"> </span><span class="s2">"44"</span><span class="p">,</span>
+<span class="nt">"TDT_INTERFACE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GB"</span><span class="p">,</span>
+<span class="nt">"TDT_MODEL"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RZ6"</span><span class="p">,</span>
+<span class="nt">"TDT_TRIG_DELAY"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span>
+<span class="nt">"TRIGGER_CONTROLLER"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tdt"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
 <dl>
 <dt>A sound-card-based EEG system</dt><dd><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="nt">&quot;AUDIO_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sound_card&quot;</span><span class="p">,</span>
-<span class="nt">&quot;RESPONSE_DEVICE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyboard&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_DISTANCE&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;50&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_SIZE_PIX&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1920,1080&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SCREEN_WIDTH&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;53&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_API&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ASIO&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_BACKEND&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;rtmixer&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_FIXED_DELAY&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.03</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_FS&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">48000</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_NAME&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ASIO Fireface USB&quot;</span><span class="p">,</span>
-<span class="nt">&quot;SOUND_CARD_TRIGGER_CHANNELS&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
-<span class="nt">&quot;TRIGGER_CONTROLLER&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sound_card&quot;</span>
+<span class="nt">"AUDIO_CONTROLLER"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sound_card"</span><span class="p">,</span>
+<span class="nt">"RESPONSE_DEVICE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"keyboard"</span><span class="p">,</span>
+<span class="nt">"SCREEN_DISTANCE"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span><span class="p">,</span>
+<span class="nt">"SCREEN_SIZE_PIX"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1920,1080"</span><span class="p">,</span>
+<span class="nt">"SCREEN_WIDTH"</span><span class="p">:</span><span class="w"> </span><span class="s2">"53"</span><span class="p">,</span>
+<span class="nt">"SOUND_CARD_API"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ASIO"</span><span class="p">,</span>
+<span class="nt">"SOUND_CARD_BACKEND"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rtmixer"</span><span class="p">,</span>
+<span class="nt">"SOUND_CARD_FIXED_DELAY"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.03</span><span class="p">,</span>
+<span class="nt">"SOUND_CARD_FS"</span><span class="p">:</span><span class="w"> </span><span class="mi">48000</span><span class="p">,</span>
+<span class="nt">"SOUND_CARD_NAME"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ASIO Fireface USB"</span><span class="p">,</span>
+<span class="nt">"SOUND_CARD_TRIGGER_CHANNELS"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="nt">"TRIGGER_CONTROLLER"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sound_card"</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -646,7 +646,7 @@ deploying a static version of expyfun once an experiment is in its finalized sta
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-10.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-17.
       <br/>
     
   </p>

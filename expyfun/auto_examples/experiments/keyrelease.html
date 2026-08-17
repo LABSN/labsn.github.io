@@ -418,22 +418,22 @@ the ExperimentController class.</p>
 <p>Please note that this currently only works for the keyboard, which has
 inprecise timing.</p>
 <img src="../../_images/sphx_glr_keyrelease_001.png" srcset="../../_images/sphx_glr_keyrelease_001.png" alt="keyrelease" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: KeyPressAndReleaseDemo
-date: 2026-08-10 20_55_34.574520
+date: 2026-08-17 21_22_52.245645
 file: /home/circleci/project/examples/experiments/keyrelease.py
 participant: foo
 session: 001
-2026-08-10 20:55:34,574 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2026-08-10 20:55:34,640 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2026-08-10 20:55:34,701 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2026-08-10 20:55:34,701 - INFO    - Expyfun: Setting up screen
-2026-08-10 20:55:34,742 - EXP     - Expyfun: Set screen visibility True
-2026-08-10 20:55:34,750 - INFO    - Initialized [1280  960] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7b3bd17329b0&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
-2026-08-10 20:55:34,750 - INFO    - Expyfun: Initializing dummy triggering mode
-2026-08-10 20:55:34,751 - INFO    - Expyfun: Initialization complete
-2026-08-10 20:55:34,751 - EXP     - Expyfun: Participant: foo
-2026-08-10 20:55:34,751 - EXP     - Expyfun: Session: 001
-2026-08-10 20:55:35,830 - INFO    - Expyfun: Exiting
-2026-08-10 20:55:35,836 - EXP     - Expyfun: Audio stopped and reset.
+2026-08-17 21:22:52,245 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2026-08-17 21:22:52,318 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2026-08-17 21:22:52,379 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2026-08-17 21:22:52,379 - INFO    - Expyfun: Setting up screen
+2026-08-17 21:22:52,420 - EXP     - Expyfun: Set screen visibility True
+2026-08-17 21:22:52,429 - INFO    - Initialized [1280  960] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7cd788032d70&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
+2026-08-17 21:22:52,429 - INFO    - Expyfun: Initializing dummy triggering mode
+2026-08-17 21:22:52,431 - INFO    - Expyfun: Initialization complete
+2026-08-17 21:22:52,431 - EXP     - Expyfun: Participant: foo
+2026-08-17 21:22:52,431 - EXP     - Expyfun: Session: 001
+2026-08-17 21:22:53,516 - INFO    - Expyfun: Exiting
+2026-08-17 21:22:53,523 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -453,26 +453,26 @@ session: 001
 <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">msg_dur</span></a> <span class="o">=</span> <span class="mf">3.0</span> <span class="k">if</span> <span class="ow">not</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="mf">0.0</span>
 
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span>
-    <span class="s2">&quot;KeyPressAndReleaseDemo&quot;</span><span class="p">,</span>
+    <span class="s2">"KeyPressAndReleaseDemo"</span><span class="p">,</span>
     <span class="n">screen_num</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">window_size</span><span class="o">=</span><span class="p">[</span><span class="mi">1280</span><span class="p">,</span> <span class="mi">960</span><span class="p">],</span>
     <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">stim_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">noise_db</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">participant</span><span class="o">=</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
-    <span class="n">session</span><span class="o">=</span><span class="s2">&quot;001&quot;</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;dev&quot;</span><span class="p">,</span>
-    <span class="n">response_device</span><span class="o">=</span><span class="s2">&quot;keyboard&quot;</span><span class="p">,</span>
+    <span class="n">participant</span><span class="o">=</span><span class="s2">"foo"</span><span class="p">,</span>
+    <span class="n">session</span><span class="o">=</span><span class="s2">"001"</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">"dev"</span><span class="p">,</span>
+    <span class="n">response_device</span><span class="o">=</span><span class="s2">"keyboard"</span><span class="p">,</span>
 <span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">isi</span></a><span class="p">)</span>
 
     <span class="c1">###########################################</span>
-    <span class="c1"># listen_presses / while loop / get_presses(kind=&#39;both&#39;)</span>
+    <span class="c1"># listen_presses / while loop / get_presses(kind='both')</span>
     <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">instruction</span></a> <span class="o">=</span> <span class="p">(</span>
-        <span class="s2">&quot;Press and release some keys</span><span class="se">\n\n</span><span class="s2">listen_presses()&quot;</span>
-        <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">while loop </span><span class="si">{}</span><span class="se">\n</span><span class="s2">&quot;</span>
-        <span class="s2">&quot;get_presses(kind=&#39;both&#39;, return_kinds=True)&quot;</span>
+        <span class="s2">"Press and release some keys</span><span class="se">\n\n</span><span class="s2">listen_presses()"</span>
+        <span class="s2">"</span><span class="se">\n</span><span class="s2">while loop </span><span class="si">{}</span><span class="se">\n</span><span class="s2">"</span>
+        <span class="s2">"get_presses(kind='both', return_kinds=True)"</span>
     <span class="p">)</span>
     <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">disp_time</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wait_dur</span></a>
     <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">countdown</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">current_time</span> <span class="o">+</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">disp_time</span></a>
@@ -487,20 +487,20 @@ session: 001
             <span class="c1"># redraw text with updated disp_time</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">screen_text</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">instruction</span></a><span class="o">.</span><span class="n">format</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">disp_time</span></a><span class="p">))</span>
             <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">get_presses</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;both&quot;</span><span class="p">,</span> <span class="n">return_kinds</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">write_data_line</span><span class="p">(</span><span class="s2">&quot;listen / while / get_presses&quot;</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a><span class="p">)</span>
+    <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">get_presses</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">"both"</span><span class="p">,</span> <span class="n">return_kinds</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">write_data_line</span><span class="p">(</span><span class="s2">"listen / while / get_presses"</span><span class="p">,</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a><span class="p">):</span>
-        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="s2">&quot;no keys pressed&quot;</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="s2">"no keys pressed"</span>
     <span class="k">else</span><span class="p">:</span>
-        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2"> after </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2"> secs</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a><span class="p">]</span>
-        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a><span class="p">)</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">r</span><span class="si">}</span><span class="s2"> after </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="si">}</span><span class="s2"> secs</span><span class="se">\n</span><span class="s2">"</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">r</span> <span class="ow">in</span> <a href="https://docs.python.org/3/library/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">events</span></a><span class="p">]</span>
+        <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a> <span class="o">=</span> <span class="s2">""</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">message</span></a><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">msg_dur</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">isi</span></a><span class="p">)</span>
 
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.341 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.355 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-keyrelease-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/793713817e20ff9ef5f4ac45944df8fd/keyrelease.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">keyrelease.ipynb</span></code></a></p>
@@ -573,7 +573,7 @@ session: 001
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-10.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-08-17.
       <br/>
     
   </p>
