@@ -421,8 +421,8 @@ to download the full example code.</p>
 <p>&#64;author: rkmaddox</p>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
-<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun._utils</span><span class="w"> </span><span class="kn">import</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class"><span class="n">_TempDir</span></a>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">analyze</span><span class="p">,</span> <a href="https://docs.python.org/3/builtins/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a>
+<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun._utils</span><span class="w"> </span><span class="kn">import</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class"><span class="n">_TempDir</span></a>
 <span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.stimuli</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">CRMPreload</span><span class="p">,</span>
     <span class="n">add_pad</span><span class="p">,</span>
@@ -434,8 +434,8 @@ to download the full example code.</p>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
-<span class="n">crm_path</span> <span class="o">=</span> <a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class"><span class="n">_TempDir</span></a><span class="p">()</span>
-<a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a> <span class="o">=</span> <span class="mi">40000</span>
+<span class="n">crm_path</span> <span class="o">=</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class"><span class="n">_TempDir</span></a><span class="p">()</span>
+<a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a> <span class="o">=</span> <span class="mi">40000</span>
 </pre></div>
 </div>
 <section id="prepare-the-corpus">
@@ -457,7 +457,7 @@ script:</p>
 </div>
 </div>
 <div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">crm_prepare_corpus</span><span class="p">(</span>
-    <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">,</span>
+    <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">,</span>
     <span class="n">path_out</span><span class="o">=</span><span class="n">crm_path</span><span class="p">,</span>
     <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
     <span class="n">talker_list</span><span class="o">=</span><span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">sex</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">talker_num</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="nb">dict</span><span class="p">(</span><span class="n">sex</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">talker_num</span><span class="o">=</span><span class="mi">0</span><span class="p">)],</span>
@@ -467,10 +467,10 @@ script:</p>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Valid callsigns are </span><span class="si">{</span><span class="n">crm_info</span><span class="p">()[</span><span class="s1">'callsign'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
 
 <span class="c1"># read a sentence in from the hard drive</span>
-<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x1</span></a> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">crm_sentence</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">,</span> <span class="s2">"m"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="s2">"5"</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
+<a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x1</span></a> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">crm_sentence</span><span class="p">(</span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">,</span> <span class="s2">"m"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">,</span> <span class="s2">"r"</span><span class="p">,</span> <span class="s2">"5"</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
 
 <span class="c1"># preload all the talkers and get a second sentence from memory</span>
-<span class="n">crm</span> <span class="o">=</span> <span class="n">CRMPreload</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
+<span class="n">crm</span> <span class="o">=</span> <span class="n">CRMPreload</span><span class="p">(</span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">crm_path</span><span class="p">)</span>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x2</span></a> <span class="o">=</span> <span class="n">crm</span><span class="o">.</span><span class="n">sentence</span><span class="p">(</span><span class="s2">"f"</span><span class="p">,</span> <span class="s2">"0"</span><span class="p">,</span> <span class="s2">"ringo"</span><span class="p">,</span> <span class="s2">"green"</span><span class="p">,</span> <span class="s2">"6"</span><span class="p">)</span>
 
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x</span></a> <span class="o">=</span> <span class="n">add_pad</span><span class="p">([</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x1</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x2</span></a><span class="p">],</span> <span class="n">alignment</span><span class="o">=</span><span class="s2">"start"</span><span class="p">)</span>
@@ -487,7 +487,7 @@ Valid callsigns are ['charlie', 'ringo', 'laker', 'hopper', 'arrow', 'tiger', 'e
 </pre></div>
 </div>
 <p>Now we actually run the experiment.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a> <span class="o">=</span> <span class="mf">0.01</span> <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="mi">3</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a> <span class="o">=</span> <span class="mf">0.01</span> <span class="k">if</span> <a href="https://docs.python.org/3/builtins/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <span class="mi">3</span>
 <span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span>
     <span class="n">exp_name</span><span class="o">=</span><span class="s2">"CRM corpus example"</span><span class="p">,</span>
     <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">720</span><span class="p">,</span> <span class="mi">480</span><span class="p">),</span>
@@ -503,55 +503,55 @@ Valid callsigns are ['charlie', 'ringo', 'laker', 'hopper', 'arrow', 'tiger', 'e
     <span class="p">)</span>
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
 
     <span class="n">ec</span><span class="o">.</span><span class="n">load_buffer</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[])</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x</span><span class="o">.</span><span class="n">shape</span></a><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">))</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">wait_secs</span><span class="p">(</span><a href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x</span><span class="o">.</span><span class="n">shape</span></a><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fs</span></a><span class="p">))</span>
 
-    <a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">resp</span></a> <span class="o">=</span> <span class="n">crm_response_menu</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><span class="mf">0.01</span> <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">)</span>
-    <span class="k">if</span> <a href="https://docs.python.org/3/library/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">resp</span></a> <span class="o">==</span> <span class="p">(</span><span class="s2">"g"</span><span class="p">,</span> <span class="s2">"6"</span><span class="p">):</span>
-        <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">"Correct!"</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
+    <a href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">resp</span></a> <span class="o">=</span> <span class="n">crm_response_menu</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><span class="mf">0.01</span> <span class="k">if</span> <a href="https://docs.python.org/3/builtins/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a> <span class="k">else</span> <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="p">)</span>
+    <span class="k">if</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">resp</span></a> <span class="o">==</span> <span class="p">(</span><span class="s2">"g"</span><span class="p">,</span> <span class="s2">"6"</span><span class="p">):</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">"Correct!"</span><span class="p">,</span> <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">"Incorrect."</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
+        <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">"Incorrect."</span><span class="p">,</span> <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="o">=</span><a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_wait</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
 
 <span class="n">analyze</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
 <img src="../../_images/sphx_glr_crm_stimuli_001.png" srcset="../../_images/sphx_glr_crm_stimuli_001.png" alt="crm stimuli" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: CRM corpus example
-date: 2026-09-07 21_02_49.505768
+date: 2026-09-14 21_03_49.932266
 file: /home/circleci/project/examples/stimuli/crm_stimuli.py
 participant: foo
 session: foo
-2026-09-07 21:02:49,506 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2026-09-07 21:02:49,582 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2026-09-07 21:02:49,758 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2026-09-07 21:02:49,758 - INFO    - Expyfun: Setting up screen
-2026-09-07 21:02:49,811 - EXP     - Expyfun: Set screen visibility True
-2026-09-07 21:02:49,817 - INFO    - Initialized [720 480] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7252d6902d70&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
-2026-09-07 21:02:49,817 - INFO    - Expyfun: Initializing dummy triggering mode
-2026-09-07 21:02:49,819 - INFO    - Expyfun: Initialization complete
-2026-09-07 21:02:49,819 - EXP     - Expyfun: Participant: foo
-2026-09-07 21:02:49,819 - EXP     - Expyfun: Session: foo
-2026-09-07 21:02:49,863 - WARNING - Expyfun: Resampling 2.01 seconds of audio
-2026-09-07 21:02:49,908 - WARNING - Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
+2026-09-14 21:03:49,932 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2026-09-14 21:03:50,023 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2026-09-14 21:03:50,250 - WARNING - Expyfun: Mismatch between reported stim sample rate (40000) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2026-09-14 21:03:50,250 - INFO    - Expyfun: Setting up screen
+2026-09-14 21:03:50,295 - EXP     - Expyfun: Set screen visibility True
+2026-09-14 21:03:50,303 - INFO    - Initialized [720 480] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7404d107ad70&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
+2026-09-14 21:03:50,303 - INFO    - Expyfun: Initializing dummy triggering mode
+2026-09-14 21:03:50,305 - INFO    - Expyfun: Initialization complete
+2026-09-14 21:03:50,305 - EXP     - Expyfun: Participant: foo
+2026-09-14 21:03:50,305 - EXP     - Expyfun: Session: foo
+2026-09-14 21:03:50,351 - WARNING - Expyfun: Resampling 2.01 seconds of audio
+2026-09-14 21:03:50,395 - WARNING - Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
 /home/circleci/project/expyfun/_experiment_controller.py:2150: UserWarning: Expyfun: Stimulus max RMS (0.025984056293964386) exceeds stated RMS (0.01) by more than 6 dB.
   warnings.warn(warn_string)
-2026-09-07 21:02:49,909 - EXP     - Expyfun: Loading 177652 samples to buffer
-2026-09-07 21:02:49,910 - EXP     - Expyfun: Stamp trial ID to ec_id  :
-2026-09-07 21:02:49,910 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
-2026-09-07 21:02:49,910 - EXP     - Stamping TTL triggers: []
-2026-09-07 21:02:49,911 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
-2026-09-07 21:02:49,912 - EXP     - Stamping TTL triggers: [1]
-2026-09-07 21:02:52,082 - WARNING - ec.trial_ok called before stimulus had stopped
-2026-09-07 21:02:52,082 - EXP     - Expyfun: Trial OK
-2026-09-07 21:02:52,082 - INFO    - Expyfun: Exiting
-2026-09-07 21:02:52,090 - EXP     - Expyfun: Audio stopped and reset.
+2026-09-14 21:03:50,396 - EXP     - Expyfun: Loading 177652 samples to buffer
+2026-09-14 21:03:50,398 - EXP     - Expyfun: Stamp trial ID to ec_id  :
+2026-09-14 21:03:50,398 - EXP     - Expyfun: Stamp trial ID to ttl_id : []
+2026-09-14 21:03:50,398 - EXP     - Stamping TTL triggers: []
+2026-09-14 21:03:50,398 - EXP     - Expyfun: Starting stimuli: flipping screen and playing audio
+2026-09-14 21:03:50,402 - EXP     - Stamping TTL triggers: [1]
+2026-09-14 21:03:52,579 - WARNING - ec.trial_ok called before stimulus had stopped
+2026-09-14 21:03:52,579 - EXP     - Expyfun: Trial OK
+2026-09-14 21:03:52,579 - INFO    - Expyfun: Exiting
+2026-09-14 21:03:52,586 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 25.778 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 25.987 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-crm-stimuli-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/8c6bbefe24fef6c4e024272ed2189529/crm_stimuli.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">crm_stimuli.ipynb</span></code></a></p>
@@ -643,7 +643,7 @@ session: foo
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-07.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-14.
       <br/>
     
   </p>

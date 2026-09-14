@@ -415,23 +415,23 @@ to download the full example code.</p>
 <span id="sphx-glr-auto-examples-experiments-drawing-methods-py"></span><h1>Experiment drawing methods<a class="headerlink" href="#experiment-drawing-methods" title="Link to this heading">#</a></h1>
 <p>expyfun provides multiple methods for drawing simple screen objects.</p>
 <img src="../../_images/sphx_glr_drawing_methods_001.png" srcset="../../_images/sphx_glr_drawing_methods_001.png" alt="drawing methods" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: test
-date: 2026-09-07 21_02_03.788936
+date: 2026-09-14 21_03_03.200550
 file: /home/circleci/project/examples/experiments/drawing_methods.py
 participant: 2
 session: 1
-2026-09-07 21:02:03,789 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2026-09-07 21:02:03,857 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2026-09-07 21:02:03,921 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2026-09-07 21:02:03,921 - INFO    - Expyfun: Setting up screen
-2026-09-07 21:02:03,964 - EXP     - Expyfun: Set screen visibility True
-2026-09-07 21:02:03,968 - INFO    - Initialized [600 600] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7252d6902d70&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
-2026-09-07 21:02:03,969 - INFO    - Expyfun: Initializing dummy triggering mode
-2026-09-07 21:02:03,971 - INFO    - Expyfun: Initialization complete
-2026-09-07 21:02:03,971 - EXP     - Expyfun: Participant: 2
-2026-09-07 21:02:03,971 - EXP     - Expyfun: Session: 1
-Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7252d6901300&gt;
-2026-09-07 21:02:04,606 - INFO    - Expyfun: Exiting
-2026-09-07 21:02:04,611 - EXP     - Expyfun: Audio stopped and reset.
+2026-09-14 21:03:03,200 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2026-09-14 21:03:03,281 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2026-09-14 21:03:03,351 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2026-09-14 21:03:03,351 - INFO    - Expyfun: Setting up screen
+2026-09-14 21:03:03,392 - EXP     - Expyfun: Set screen visibility True
+2026-09-14 21:03:03,401 - INFO    - Initialized [600 600] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7404d107ad70&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
+2026-09-14 21:03:03,401 - INFO    - Expyfun: Initializing dummy triggering mode
+2026-09-14 21:03:03,402 - INFO    - Expyfun: Initialization complete
+2026-09-14 21:03:03,402 - EXP     - Expyfun: Participant: 2
+2026-09-14 21:03:03,403 - EXP     - Expyfun: Session: 1
+Skipping fill for &lt;expyfun.visual._visual.Line object at 0x740369d4cf70&gt;
+2026-09-14 21:03:04,040 - INFO    - Expyfun: Exiting
+2026-09-14 21:03:04,045 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
@@ -465,8 +465,8 @@ Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7252d6901300&gt;
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">[:,</span> <span class="p">:</span><span class="mi">50</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">[:,</span> <span class="mi">50</span><span class="p">:,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0.5</span>
     <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">for</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-        <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">[</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a> <span class="o">*</span> <span class="mi">40</span> <span class="p">:</span> <span class="p">(</span><a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">40</span><span class="p">,</span> <span class="p">:,</span> <a href="https://docs.python.org/3/library/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="k">for</span> <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">[</span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a> <span class="o">*</span> <span class="mi">40</span> <span class="p">:</span> <span class="p">(</span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">40</span><span class="p">,</span> <span class="p">:,</span> <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ii</span></a><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0</span>
     <span class="n">img</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">RawImage</span><span class="p">(</span><span class="n">ec</span><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">img_buffer</span></a><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mf">2.0</span><span class="p">)</span>
 
     <span class="c1"># make a line, rectangle, diamond, and circle</span>
@@ -501,7 +501,7 @@ Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7252d6901300&gt;
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.869 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.892 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-drawing-methods-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/f0a44b9334c97416bd9afb84b9c86b64/drawing_methods.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">drawing_methods.ipynb</span></code></a></p>
@@ -574,7 +574,7 @@ Skipping fill for &lt;expyfun.visual._visual.Line object at 0x7252d6901300&gt;
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-07.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-14.
       <br/>
     
   </p>

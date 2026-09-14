@@ -417,35 +417,35 @@ to download the full example code.</p>
 (for Pyglet &gt;= 1.4) or AVBin (otherwise) has already been installed.</p>
 <p>&#64;author: drmccloy</p>
 <img src="../../_images/sphx_glr_simple_video_001.png" srcset="../../_images/sphx_glr_simple_video_001.png" alt="simple video" class = "sphx-glr-single-img"/><div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>exp_name: simple video example
-date: 2026-09-07 21_02_18.864388
+date: 2026-09-14 21_03_18.945407
 file: /home/circleci/project/examples/stimuli/simple_video.py
 participant: foo
 session: foo
-2026-09-07 21:02:18,864 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
-2026-09-07 21:02:18,934 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
-2026-09-07 21:02:19,001 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
-2026-09-07 21:02:19,001 - INFO    - Expyfun: Setting up screen
-2026-09-07 21:02:19,042 - EXP     - Expyfun: Set screen visibility True
-2026-09-07 21:02:19,047 - INFO    - Initialized [720 480] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7252d6902d70&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
-2026-09-07 21:02:19,047 - INFO    - Expyfun: Initializing dummy triggering mode
-2026-09-07 21:02:19,048 - INFO    - Expyfun: Initialization complete
-2026-09-07 21:02:19,048 - EXP     - Expyfun: Participant: foo
-2026-09-07 21:02:19,048 - EXP     - Expyfun: Session: foo
-2026-09-07 21:02:20,177 - INFO    - Expyfun: Exiting
-2026-09-07 21:02:20,183 - EXP     - Expyfun: Audio stopped and reset.
+2026-09-14 21:03:18,945 - INFO    - Expyfun: Using version 2.0.0.dev0 (requested dev)
+2026-09-14 21:03:19,027 - INFO    - Expyfun: Setting up sound card using pyglet backend with 2 playback channels
+2026-09-14 21:03:19,115 - WARNING - Expyfun: Mismatch between reported stim sample rate (48000.0) and device sample rate (44100.0). Experiment Controller will resample for you, but this takes a non-trivial amount of processing time and may compromise your experimental timing and/or cause artifacts.
+2026-09-14 21:03:19,115 - INFO    - Expyfun: Setting up screen
+2026-09-14 21:03:19,157 - EXP     - Expyfun: Set screen visibility True
+2026-09-14 21:03:19,167 - INFO    - Initialized [720 480] window on screen XlibScreenXrandr(display=&lt;pyglet.display.xlib.XlibDisplay object at 0x7404d107ad70&gt;, x=0, y=0, width=1400, height=900) with DPI 69.73
+2026-09-14 21:03:19,167 - INFO    - Expyfun: Initializing dummy triggering mode
+2026-09-14 21:03:19,168 - INFO    - Expyfun: Initialization complete
+2026-09-14 21:03:19,169 - EXP     - Expyfun: Participant: foo
+2026-09-14 21:03:19,169 - EXP     - Expyfun: Session: foo
+2026-09-14 21:03:20,336 - INFO    - Expyfun: Exiting
+2026-09-14 21:03:20,344 - EXP     - Expyfun: Audio stopped and reset.
 </pre></div>
 </div>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a><span class="p">,</span> <span class="n">fetch_data_file</span>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <a href="https://docs.python.org/3/builtins/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a><span class="p">,</span> <span class="n">fetch_data_file</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">analyze</span> <span class="k">as</span> <span class="n">ea</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
 
-<a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">movie_path</span></a> <span class="o">=</span> <span class="n">fetch_data_file</span><span class="p">(</span><span class="s2">"video/example-video.mp4"</span><span class="p">)</span>
+<a href="https://docs.python.org/3/builtins/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">movie_path</span></a> <span class="o">=</span> <span class="n">fetch_data_file</span><span class="p">(</span><span class="s2">"video/example-video.mp4"</span><span class="p">)</span>
 
-<a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ec_args</span></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+<a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ec_args</span></a> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
     <span class="n">exp_name</span><span class="o">=</span><span class="s2">"simple video example"</span><span class="p">,</span>
     <span class="n">window_size</span><span class="o">=</span><span class="p">(</span><span class="mi">720</span><span class="p">,</span> <span class="mi">480</span><span class="p">),</span>
     <span class="n">full_screen</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -456,16 +456,16 @@ session: foo
 <span class="p">)</span>
 <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="kc">None</span>
 
-<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="o">**</span><a href="https://docs.python.org/3/library/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ec_args</span></a><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">load_video</span><span class="p">(</span><a href="https://docs.python.org/3/library/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">movie_path</span></a><span class="p">)</span>
+<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span><span class="o">**</span><a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ec_args</span></a><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
+    <span class="n">ec</span><span class="o">.</span><span class="n">load_video</span><span class="p">(</span><a href="https://docs.python.org/3/builtins/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">movie_path</span></a><span class="p">)</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">set_scale</span><span class="p">(</span><span class="s2">"fit"</span><span class="p">)</span>
-    <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t_zero</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
+    <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">t_zero</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">play</span><span class="p">()</span>
     <span class="k">while</span> <span class="ow">not</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">finished</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">ec</span><span class="o">.</span><span class="n">video</span><span class="o">.</span><span class="n">playing</span><span class="p">:</span>
-            <a href="https://docs.python.org/3/library/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fliptime</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
+            <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fliptime</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
         <span class="k">if</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">()</span>
-        <span class="k">if</span> <a href="https://docs.python.org/3/library/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a><span class="p">:</span>
+        <span class="k">if</span> <a href="https://docs.python.org/3/builtins/functions.html#bool" title="builtins.bool" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">building_doc</span></a><span class="p">:</span>
             <span class="k">break</span>
         <span class="n">ec</span><span class="o">.</span><span class="n">check_force_quit</span><span class="p">()</span>
     <span class="n">ec</span><span class="o">.</span><span class="n">delete_video</span><span class="p">()</span>
@@ -475,7 +475,7 @@ session: foo
 <span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">screenshot</span></a><span class="p">)</span>
 </pre></div>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.540 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 1.647 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-stimuli-simple-video-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/11a391427bda6908394af12a575e3f67/simple_video.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">simple_video.ipynb</span></code></a></p>
@@ -548,7 +548,7 @@ session: foo
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-07.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-14.
       <br/>
     
   </p>
