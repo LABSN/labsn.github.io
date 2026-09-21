@@ -31,7 +31,7 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
@@ -421,18 +421,17 @@ to download the full example code.</p>
 <a class="reference internal" href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><code class="xref py py-class docutils literal notranslate"><span class="pre">expyfun.stimuli.TrackerDealer</span></code></a> to simultaneously approach a threshold
 from both above and below.</p>
 <p>&#64;author: maddycapp27</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.analyze</span><span class="w"> </span><span class="kn">import</span> <span class="n">sigmoid</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.stimuli</span><span class="w"> </span><span class="kn">import</span> <span class="n">TrackerDealer</span><span class="p">,</span> <span class="n">TrackerUD</span>
-
-<span class="c1"># define parameters of modeled subject (using sigmoid probability)</span>
-<a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># true thresholds for trial types 1 and 2</span>
-<a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slope</span></a> <span class="o">=</span> <span class="mf">0.1</span>
-<a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">chance</span></a> <span class="o">=</span> <span class="mf">0.5</span>
-</pre></div>
-</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="nn">.</span><span class="nn">pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span><span class="w">
+</span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="w">
+</span><span class="w">
+</span><span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="nn">.</span><span class="nn">analyze</span><span class="w"> </span><span class="kn">import</span> <a class="sphx-glr-backref-module-expyfun-analyze sphx-glr-backref-type-py-function reference internal" href="../../generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid" title="expyfun.analyze.sigmoid"><span class="n">sigmoid</span></a><span class="w">
+</span><span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="nn">.</span><span class="nn">stimuli</span><span class="w"> </span><span class="kn">import</span> <a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-class reference internal" href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><span class="n">TrackerDealer</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-class reference internal" href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><span class="n">TrackerUD</span></a><span class="w">
+</span><span class="w">
+</span><span class="c1"># define parameters of modeled subject (using sigmoid probability)</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">true_thresh</span></a> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># true thresholds for trial types 1 and 2</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="float"><span class="n">slope</span></a> <span class="o">=</span> <span class="mf">0.1</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="float"><span class="n">chance</span></a> <span class="o">=</span> <span class="mf">0.5</span><span class="w">
+</span></pre></div></div>
 <section id="defining-tracker-parameters">
 <h2>Defining Tracker Parameters<a class="headerlink" href="#defining-tracker-parameters" title="Link to this heading">#</a></h2>
 <p>In this example, the tracker parameters are the same for each instance of
@@ -443,30 +442,29 @@ is larger by a factor of 3) and based on the number of reversals (the first
 element in each list is the step size until the number of reversals dictated
 by the second element in change_criteria have occurred (i.e. the up step size
 will be 9 until 5 reversals have occurred, then the up step size will be 3.))</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">up</span></a> <span class="o">=</span> <span class="mi">1</span>
-<a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">down</span></a> <span class="o">=</span> <span class="mi">1</span>
-<a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_up</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_down</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stop_reversals</span></a> <span class="o">=</span> <span class="mi">30</span>
-<a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stop_trials</span></a> <span class="o">=</span> <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a>
-<a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">start_value</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span>
-<a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_indices</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span>
-<a href="https://docs.python.org/3/builtins/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_rule</span></a> <span class="o">=</span> <span class="s2">"reversals"</span>
-<a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_min</span></a> <span class="o">=</span> <span class="mi">0</span>
-<a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_max</span></a> <span class="o">=</span> <span class="mi">90</span>
-
-
-<span class="c1"># callback function that prints to console</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">event_type</span><span class="p">)</span> <span class="o">+</span> <span class="s2">":"</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">))</span>
-
-
-<span class="c1"># parameters for the tracker dealer</span>
-<a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_lag</span></a> <span class="o">=</span> <span class="mi">2</span>
-<a href="https://docs.python.org/3/builtins/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pace_rule</span></a> <span class="o">=</span> <span class="s2">"reversals"</span>
-<a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rng_dealer</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># random seed for selecting trial type</span>
-</pre></div>
-</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">up</span></a> <span class="o">=</span> <span class="mi">1</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">down</span></a> <span class="o">=</span> <span class="mi">1</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">step_size_up</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">step_size_down</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">stop_reversals</span></a> <span class="o">=</span> <span class="mi">30</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="float"><span class="n">stop_trials</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="float"><span class="n">np</span><span class="o">.</span><span class="n">inf</span></a><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">start_value</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">45</span><span class="p">]</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">change_indices</span></a> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="str"><span class="n">change_rule</span></a> <span class="o">=</span> <span class="s2">&quot;</span><span class="s2">reversals</span><span class="s2">&quot;</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">x_min</span></a> <span class="o">=</span> <span class="mi">0</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">x_max</span></a> <span class="o">=</span> <span class="mi">90</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="c1"># callback function that prints to console</span><span class="w">
+</span><span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">timestamp</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="p">:</span><span class="w">
+</span>    <span class="nb">print</span><span class="p">(</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">event_type</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="s2">:</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="p">)</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="c1"># parameters for the tracker dealer</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">max_lag</span></a> <span class="o">=</span> <span class="mi">2</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="str"><span class="n">pace_rule</span></a> <span class="o">=</span> <span class="s2">&quot;</span><span class="s2">reversals</span><span class="s2">&quot;</span><span class="w">
+</span><a class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState"><span class="n">rng_dealer</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class reference external" href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="mi">4</span><span class="p">)</span>  <span class="c1"># random seed for selecting trial type</span><span class="w">
+</span></pre></div></div>
 </section>
 <section id="initializing-and-running-trackers">
 <h2>Initializing and Running Trackers<a class="headerlink" href="#initializing-and-running-trackers" title="Link to this heading">#</a></h2>
@@ -475,194 +473,192 @@ the start value and then are passed into the dealer. After the dealer is
 created, the type of trial with the start value above or below the true
 threshold (returned as an index) and trial level for that trial can be
 acquired.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># initialize two tracker objects--one for each start value</span>
-<a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tr_ud</span></a> <span class="o">=</span> <span class="p">[</span>
-    <span class="n">TrackerUD</span><span class="p">(</span>
-        <span class="n">callback</span><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">up</span></a><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">down</span></a><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_up</span></a><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">step_size_down</span></a><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stop_reversals</span></a><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">stop_trials</span></a><span class="p">,</span>
-        <span class="n">sv</span><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_indices</span></a><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">change_rule</span></a><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_min</span></a><span class="p">,</span>
-        <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">x_max</span></a><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="k">for</span> <span class="n">sv</span> <span class="ow">in</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">start_value</span></a>
-<span class="p">]</span>
-
-<span class="c1"># initialize TrackerDealer object</span>
-<span class="n">td</span> <span class="o">=</span> <span class="n">TrackerDealer</span><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">tr_ud</span></a><span class="p">,</span> <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">max_lag</span></a><span class="p">,</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#str" title="builtins.str" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">pace_rule</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rng_dealer</span></a><span class="p">)</span>
-
-<span class="c1"># Initialize human state</span>
-<a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">rng_human</span></a> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># random seed for modeled subject</span>
-
-<span class="k">for</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="builtins.tuple" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">_</span></a><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">level</span></a> <span class="ow">in</span> <span class="n">td</span><span class="p">:</span>
-    <span class="c1"># Get information of which trial type is next and what the level is at</span>
-    <span class="c1"># that time from TrackerDealer</span>
-    <span class="n">td</span><span class="o">.</span><span class="n">respond</span><span class="p">(</span>
-        <a href="https://numpy.org/devdocs/reference/random/generated/numpy.random.RandomState.rand.html#numpy.random.RandomState.rand" title="numpy.random.RandomState.rand" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-method"><span class="n">rng_human</span><span class="o">.</span><span class="n">rand</span></a><span class="p">()</span> <span class="o">&lt;</span> <span class="n">sigmoid</span><span class="p">(</span><a href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute"><span class="n">level</span></a> <span class="o">-</span> <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">chance</span></a><span class="p">,</span> <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slope</span></a><span class="o">=</span><a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">slope</span></a><span class="p">)</span>
-    <span class="p">)</span>
-</pre></div>
-</div>
-<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tracker_identify:                       {"tracker_id": "127558013056336-1789419789530000", "tracker_type": "TrackerUD"}
-tracker_127558013056336-1789419789530000_init:{"callback": null, "up": 1, "down": 1, "step_size_up": [9.0, 3.0], "step_size_down": [3.0, 1.0], "stop_reversals": 30, "stop_trials": Infinity, "start_value": 15, "change_indices": [5], "change_rule": "reversals", "x_min": 0.0, "x_max": 90.0, "repeat_limit": "reversals"}
-tracker_identify:                       {"tracker_id": "127558013051632-1789419789530212", "tracker_type": "TrackerUD"}
-tracker_127558013051632-1789419789530212_init:{"callback": null, "up": 1, "down": 1, "step_size_up": [9.0, 3.0], "step_size_down": [3.0, 1.0], "stop_reversals": 30, "stop_trials": Infinity, "start_value": 45, "change_indices": [5], "change_rule": "reversals", "x_min": 0.0, "x_max": 90.0, "repeat_limit": "reversals"}
-dealer_identify:                        {"dealer_id": 127563521287712}
-dealer_127563521287712_init:            {"trackers": ["127558013056336-1789419789530000", "127558013051632-1789419789530212"], "shape": [2], "max_lag": 2, "pace_rule": "reversals"}
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013051632-1789419789530212_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013051632-1789419789530212_respond:False
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:True
-tracker_127558013056336-1789419789530000_respond:False
-tracker_127558013051632-1789419789530212_stop:{"responses": [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1], "reversals": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 3, 4, 5, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 0, 11, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 14, 0, 0, 15, 16, 17, 0, 18, 0, 0, 19, 20, 21, 22, 0, 23, 24, 0, 25, 26, 27, 0, 28, 0, 0, 0, 29, 30], "x": [45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 24.0, 21.0, 18.0, 27.0, 24.0, 21.0, 18.0, 15.0, 24.0, 21.0, 24.0, 23.0, 22.0, 25.0, 28.0, 27.0, 26.0, 29.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 24.0, 23.0, 22.0, 25.0, 28.0, 27.0, 26.0, 25.0, 28.0, 27.0, 30.0, 33.0, 32.0, 31.0, 30.0, 33.0, 32.0, 35.0, 34.0, 33.0, 36.0, 35.0, 34.0, 37.0, 36.0, 39.0, 42.0, 41.0, 40.0, 39.0, 38.0, 41.0]}
-tracker_127558013056336-1789419789530000_stop:{"responses": [1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1], "reversals": [0, 1, 0, 2, 0, 0, 3, 4, 5, 6, 0, 0, 7, 8, 0, 9, 10, 11, 12, 0, 0, 0, 0, 0, 0, 0, 13, 14, 15, 16, 0, 17, 18, 19, 0, 20, 0, 0, 0, 0, 0, 0, 21, 22, 0, 0, 0, 23, 24, 25, 26, 0, 0, 27, 28, 0, 0, 0, 0, 29, 30], "x": [15.0, 12.0, 21.0, 30.0, 27.0, 24.0, 21.0, 30.0, 27.0, 30.0, 29.0, 28.0, 27.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 28.0, 27.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 36.0, 35.0, 34.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0]}
-dealer_127563521287712_stop:            {"tracker_history": [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0], "response_history": [1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0], "x_history": [15.0, 12.0, 45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 24.0, 21.0, 18.0, 27.0, 21.0, 30.0, 24.0, 21.0, 27.0, 18.0, 24.0, 21.0, 15.0, 24.0, 30.0, 27.0, 21.0, 30.0, 24.0, 23.0, 22.0, 29.0, 28.0, 27.0, 30.0, 25.0, 28.0, 27.0, 26.0, 29.0, 28.0, 29.0, 31.0, 32.0, 30.0, 31.0, 30.0, 29.0, 33.0, 32.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 27.0, 30.0, 29.0, 28.0, 27.0, 26.0, 26.0, 25.0, 25.0, 24.0, 23.0, 22.0, 28.0, 25.0, 28.0, 27.0, 27.0, 26.0, 25.0, 30.0, 28.0, 27.0, 29.0, 28.0, 31.0, 30.0, 33.0, 30.0, 32.0, 31.0, 30.0, 33.0, 33.0, 36.0, 35.0, 34.0, 32.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 35.0, 31.0, 34.0, 30.0, 33.0, 29.0, 28.0, 36.0, 31.0, 30.0, 35.0, 34.0, 33.0, 37.0, 36.0, 32.0, 31.0, 30.0, 33.0, 39.0, 42.0, 41.0, 32.0, 40.0, 39.0, 31.0, 38.0, 30.0, 29.0, 28.0, 41.0, 31.0]}
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span class="c1"># initialize two tracker objects--one for each start value</span><span class="w">
+</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">tr_ud</span></a> <span class="o">=</span> <span class="p">[</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-class reference internal" href="../../generated/expyfun.stimuli.TrackerUD.html#expyfun.stimuli.TrackerUD" title="expyfun.stimuli.TrackerUD"><span class="n">TrackerUD</span></a><span class="p">(</span><span class="w">
+</span>        <span class="n">callback</span><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">up</span></a><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">down</span></a><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">step_size_up</span></a><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">step_size_down</span></a><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">stop_reversals</span></a><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="float"><span class="n">stop_trials</span></a><span class="p">,</span><span class="w">
+</span>        <span class="n">sv</span><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">change_indices</span></a><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="str"><span class="n">change_rule</span></a><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">x_min</span></a><span class="p">,</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">x_max</span></a><span class="p">,</span><span class="w">
+</span>    <span class="p">)</span><span class="w">
+</span>    <span class="k">for</span> <span class="n">sv</span> <span class="ow">in</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">start_value</span></a><span class="w">
+</span><span class="p">]</span><span class="w">
+</span><span class="w">
+</span><span class="c1"># initialize TrackerDealer object</span><span class="w">
+</span><a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-class sphx-glr-backref-instance reference internal" href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><span class="n">td</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-class reference internal" href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><span class="n">TrackerDealer</span></a><span class="p">(</span><span class="n">callback</span><span class="p">,</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">tr_ud</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">max_lag</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="str"><span class="n">pace_rule</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState"><span class="n">rng_dealer</span></a><span class="p">)</span><span class="w">
+</span><span class="w">
+</span><span class="c1"># Initialize human state</span><span class="w">
+</span><a class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState"><span class="n">rng_human</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class reference external" href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  <span class="c1"># random seed for modeled subject</span><span class="w">
+</span><span class="w">
+</span><span class="k">for</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#tuple" title="tuple"><span class="n">_</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute reference external" href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64"><span class="n">level</span></a> <span class="ow">in</span> <a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-class sphx-glr-backref-instance reference internal" href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer" title="expyfun.stimuli.TrackerDealer"><span class="n">td</span></a><span class="p">:</span><span class="w">
+</span>    <span class="c1"># Get information of which trial type is next and what the level is at</span><span class="w">
+</span>    <span class="c1"># that time from TrackerDealer</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-method reference internal" href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer.respond" title="expyfun.stimuli.TrackerDealer.respond"><span class="n">td</span><span class="o">.</span><span class="n">respond</span></a><span class="p">(</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-method reference external" href="https://numpy.org/devdocs/reference/random/generated/numpy.random.RandomState.rand.html#numpy.random.RandomState.rand" title="numpy.random.RandomState.rand"><span class="n">rng_human</span><span class="o">.</span><span class="n">rand</span></a><span class="p">(</span><span class="p">)</span> <span class="o">&lt;</span> <a class="sphx-glr-backref-module-expyfun-analyze sphx-glr-backref-type-py-function reference internal" href="../../generated/expyfun.analyze.sigmoid.html#expyfun.analyze.sigmoid" title="expyfun.analyze.sigmoid"><span class="n">sigmoid</span></a><span class="p">(</span><a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-attribute reference external" href="https://numpy.org/devdocs/reference/arrays.scalars.html#numpy.float64" title="numpy.float64"><span class="n">level</span></a> <span class="o">-</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">true_thresh</span></a><span class="p">,</span> <span class="n">lower</span><span class="o">=</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="float"><span class="n">chance</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="float"><span class="n">slope</span></a><span class="o">=</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="float"><span class="n">slope</span></a><span class="p">)</span><span class="w">
+</span>    <span class="p">)</span><span class="w">
+</span></pre></div></div>
+<div class="sphx-glr-script-out highlight-none notranslate"><div class="highlight"><pre><span></span>tracker_identify:                       {"tracker_id": "139031424205056-1790023956762812", "tracker_type": "TrackerUD"}
+tracker_139031424205056-1790023956762812_init:{"callback": null, "up": 1, "down": 1, "step_size_up": [9.0, 3.0], "step_size_down": [3.0, 1.0], "stop_reversals": 30, "stop_trials": Infinity, "start_value": 15, "change_indices": [5], "change_rule": "reversals", "x_min": 0.0, "x_max": 90.0, "repeat_limit": "reversals"}
+tracker_identify:                       {"tracker_id": "139031424214848-1790023956763138", "tracker_type": "TrackerUD"}
+tracker_139031424214848-1790023956763138_init:{"callback": null, "up": 1, "down": 1, "step_size_up": [9.0, 3.0], "step_size_down": [3.0, 1.0], "stop_reversals": 30, "stop_trials": Infinity, "start_value": 45, "change_indices": [5], "change_rule": "reversals", "x_min": 0.0, "x_max": 90.0, "repeat_limit": "reversals"}
+dealer_identify:                        {"dealer_id": 139031424205392}
+dealer_139031424205392_init:            {"trackers": ["139031424205056-1790023956762812", "139031424214848-1790023956763138"], "shape": [2], "max_lag": 2, "pace_rule": "reversals"}
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424214848-1790023956763138_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424214848-1790023956763138_respond:False
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:True
+tracker_139031424205056-1790023956762812_respond:False
+tracker_139031424214848-1790023956763138_stop:{"responses": [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1], "reversals": [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 3, 4, 5, 6, 0, 7, 0, 8, 0, 9, 0, 10, 0, 0, 11, 12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 0, 14, 0, 0, 15, 16, 17, 0, 18, 0, 0, 19, 20, 21, 22, 0, 23, 24, 0, 25, 26, 27, 0, 28, 0, 0, 0, 29, 30], "x": [45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 24.0, 21.0, 18.0, 27.0, 24.0, 21.0, 18.0, 15.0, 24.0, 21.0, 24.0, 23.0, 22.0, 25.0, 28.0, 27.0, 26.0, 29.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 24.0, 23.0, 22.0, 25.0, 28.0, 27.0, 26.0, 25.0, 28.0, 27.0, 30.0, 33.0, 32.0, 31.0, 30.0, 33.0, 32.0, 35.0, 34.0, 33.0, 36.0, 35.0, 34.0, 37.0, 36.0, 39.0, 42.0, 41.0, 40.0, 39.0, 38.0, 41.0]}
+tracker_139031424205056-1790023956762812_stop:{"responses": [1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1], "reversals": [0, 1, 0, 2, 0, 0, 3, 4, 5, 6, 0, 0, 7, 8, 0, 9, 10, 11, 12, 0, 0, 0, 0, 0, 0, 0, 13, 14, 15, 16, 0, 17, 18, 19, 0, 20, 0, 0, 0, 0, 0, 0, 21, 22, 0, 0, 0, 23, 24, 25, 26, 0, 0, 27, 28, 0, 0, 0, 0, 29, 30], "x": [15.0, 12.0, 21.0, 30.0, 27.0, 24.0, 21.0, 30.0, 27.0, 30.0, 29.0, 28.0, 27.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 27.0, 26.0, 25.0, 28.0, 27.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 36.0, 35.0, 34.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 33.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0]}
+dealer_139031424205392_stop:            {"tracker_history": [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0], "response_history": [1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0], "x_history": [15.0, 12.0, 45.0, 42.0, 39.0, 36.0, 33.0, 30.0, 27.0, 24.0, 21.0, 18.0, 27.0, 21.0, 30.0, 24.0, 21.0, 27.0, 18.0, 24.0, 21.0, 15.0, 24.0, 30.0, 27.0, 21.0, 30.0, 24.0, 23.0, 22.0, 29.0, 28.0, 27.0, 30.0, 25.0, 28.0, 27.0, 26.0, 29.0, 28.0, 29.0, 31.0, 32.0, 30.0, 31.0, 30.0, 29.0, 33.0, 32.0, 32.0, 31.0, 30.0, 29.0, 28.0, 31.0, 27.0, 30.0, 29.0, 28.0, 27.0, 26.0, 26.0, 25.0, 25.0, 24.0, 23.0, 22.0, 28.0, 25.0, 28.0, 27.0, 27.0, 26.0, 25.0, 30.0, 28.0, 27.0, 29.0, 28.0, 31.0, 30.0, 33.0, 30.0, 32.0, 31.0, 30.0, 33.0, 33.0, 36.0, 35.0, 34.0, 32.0, 33.0, 32.0, 31.0, 30.0, 29.0, 32.0, 35.0, 31.0, 34.0, 30.0, 33.0, 29.0, 28.0, 36.0, 31.0, 30.0, 35.0, 34.0, 33.0, 37.0, 36.0, 32.0, 31.0, 30.0, 33.0, 39.0, 42.0, 41.0, 32.0, 40.0, 39.0, 31.0, 38.0, 30.0, 29.0, 28.0, 41.0, 31.0]}
 </pre></div>
 </div>
 </section>
 <section id="plotting-the-results">
 <h2>Plotting the Results<a class="headerlink" href="#plotting-the-results" title="Link to this heading">#</a></h2>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a> <span class="o">=</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
-<span class="k">for</span> <a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]:</span>
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">fig</span></a><span class="p">,</span> <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="p">,</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">lines</span></a> <span class="o">=</span> <span class="n">td</span><span class="o">.</span><span class="n">trackers</span><span class="o">.</span><span class="n">ravel</span><span class="p">()[</span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">ax</span></a><span class="o">=</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">axes</span></a><span class="p">[</span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">],</span> <span class="n">n_skip</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend" title="matplotlib.axes.Axes.legend" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span></a><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">"best"</span><span class="p">)</span>
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title" title="matplotlib.axes.Axes.set_title" class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span></a><span class="p">(</span>
-        <span class="sa">f</span><span class="s2">"Adaptive track with start value </span><span class="si">{</span><a href="https://docs.python.org/3/builtins/stdtypes.html#list" title="builtins.list" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">start_value</span></a><span class="p">[</span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">i</span></a><span class="p">]</span><span class="si">}</span><span class="s2"> (true threshold "</span>
-        <span class="sa">f</span><span class="s2">"is </span><span class="si">{</span><a href="https://docs.python.org/3/builtins/functions.html#int" title="builtins.int" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">true_thresh</span></a><span class="si">}</span><span class="s2">)"</span>
-    <span class="p">)</span>
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.tight_layout.html#matplotlib.figure.Figure.tight_layout" title="matplotlib.figure.Figure.tight_layout" class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-method"><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">()</span>
-</pre></div>
-</div>
-<img src="../../_images/sphx_glr_tracker_dealer_doublesided_001.png" srcset="../../_images/sphx_glr_tracker_dealer_doublesided_001.png" alt="Adaptive track with start value 15 (true threshold is 30), Adaptive track with start value 45 (true threshold is 30)" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.282 seconds)</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><span class="n">axes</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.subplots.html#matplotlib.pyplot.subplots" title="matplotlib.pyplot.subplots"><span class="n">plt</span><span class="o">.</span><span class="n">subplots</span></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w">
+</span><span class="k">for</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">i</span></a> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="p">:</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.html#matplotlib.figure.Figure" title="matplotlib.figure.Figure"><span class="n">fig</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><span class="n">ax</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">lines</span></a> <span class="o">=</span> <a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-property reference internal" href="../../generated/expyfun.stimuli.TrackerDealer.html#expyfun.stimuli.TrackerDealer.trackers" title="expyfun.stimuli.TrackerDealer.trackers"><span class="n">td</span><span class="o">.</span><span class="n">trackers</span><span class="o">.</span><span class="n">ravel</span></a><span class="p">(</span><span class="p">)</span><span class="p">[</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">i</span></a><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><a class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.html#matplotlib.axes.Axes" title="matplotlib.axes.Axes"><span class="n">ax</span></a><span class="o">=</span><a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ndarray.html#numpy.ndarray" title="numpy.ndarray"><span class="n">axes</span></a><span class="p">[</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">i</span></a><span class="p">]</span><span class="p">,</span> <span class="n">n_skip</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span><span class="w">
+</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html#matplotlib.axes.Axes.legend" title="matplotlib.axes.Axes.legend"><span class="n">ax</span><span class="o">.</span><span class="n">legend</span></a><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">best</span><span class="s2">&quot;</span><span class="p">)</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-matplotlib-axes sphx-glr-backref-type-py-method reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_title.html#matplotlib.axes.Axes.set_title" title="matplotlib.axes.Axes.set_title"><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span></a><span class="p">(</span><span class="w">
+</span>        <span class="sa">f</span><span class="s2">&quot;</span><span class="s2">Adaptive track with start value </span><span class="si">{</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#list" title="list"><span class="n">start_value</span></a><span class="p">[</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">i</span></a><span class="p">]</span><span class="si">}</span><span class="s2"> (true threshold </span><span class="s2">&quot;</span><span class="w">
+</span>        <span class="sa">f</span><span class="s2">&quot;</span><span class="s2">is </span><span class="si">{</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#int" title="int"><span class="n">true_thresh</span></a><span class="si">}</span><span class="s2">)</span><span class="s2">&quot;</span><span class="w">
+</span>    <span class="p">)</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-matplotlib-figure sphx-glr-backref-type-py-method reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.figure.Figure.tight_layout.html#matplotlib.figure.Figure.tight_layout" title="matplotlib.figure.Figure.tight_layout"><span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span></a><span class="p">(</span><span class="p">)</span><span class="w">
+</span></pre></div></div>
+<img src="../../_images/sphx_glr_tracker_dealer_doublesided_001.png" srcset="../../_images/sphx_glr_tracker_dealer_doublesided_001.png" alt="Adaptive track with start value 15 (true threshold is 30), Adaptive track with start value 45 (true threshold is 30)" class = "sphx-glr-single-img"/><p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.408 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-tracker-dealer-doublesided-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/46139842d61762308be96dee1b424c6d/tracker_dealer_doublesided.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">tracker_dealer_doublesided.ipynb</span></code></a></p>
@@ -756,7 +752,7 @@ dealer_127563521287712_stop:            {"tracker_history": [0, 0, 1, 1, 1, 1, 1
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-14.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-21.
       <br/>
     
   </p>

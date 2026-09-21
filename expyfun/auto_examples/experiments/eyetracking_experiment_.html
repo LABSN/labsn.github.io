@@ -31,7 +31,7 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
@@ -415,81 +415,80 @@ to download the full example code.</p>
 <span id="sphx-glr-auto-examples-experiments-eyetracking-experiment-py"></span><h1>Experiment with eye-tracking<a class="headerlink" href="#experiment-with-eye-tracking" title="Link to this heading">#</a></h1>
 <p>Integration with Eyelink functionality makes programming experiments
 using eye-tracking simpler.</p>
-<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Author: Eric Larson &lt;larsoner@uw.edu&gt;</span>
-<span class="c1">#</span>
-<span class="c1"># License: BSD (3-clause)</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">expyfun.analyze</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ea</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExperimentController</span><span class="p">,</span> <span class="n">EyelinkController</span><span class="p">,</span> <span class="n">visual</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
-
-
-<span class="k">with</span> <span class="n">ExperimentController</span><span class="p">(</span>
-    <span class="s2">"testExp"</span><span class="p">,</span>
-    <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">participant</span><span class="o">=</span><span class="s2">"foo"</span><span class="p">,</span>
-    <span class="n">session</span><span class="o">=</span><span class="s2">"001"</span><span class="p">,</span>
-    <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">"dev"</span><span class="p">,</span>
-<span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span>
-    <span class="n">el</span> <span class="o">=</span> <span class="n">EyelinkController</span><span class="p">(</span><span class="n">ec</span><span class="p">)</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span>
-        <span class="s2">"Welcome to the experiment!</span><span class="se">\n\n</span><span class="s2">First, we will "</span>
-        <span class="s2">"perform a screen calibration.</span><span class="se">\n\n</span><span class="s2">Press a button "</span>
-        <span class="s2">"to continue."</span>
-    <span class="p">)</span>
-    <span class="n">el</span><span class="o">.</span><span class="n">calibrate</span><span class="p">()</span>  <span class="c1"># by default this starts recording EyeLink data</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span>
-        <span class="s2">"Excellent! Now, follow the red circle around the edge "</span>
-        <span class="s2">"of the big white circle.</span><span class="se">\n\n</span><span class="s2">Press a button to "</span>
-        <span class="s2">"continue"</span>
-    <span class="p">)</span>
-
-    <span class="c1"># make some circles to be drawn</span>
-    <span class="n">radius</span> <span class="o">=</span> <span class="mf">7.5</span>  <span class="c1"># degrees</span>
-    <span class="n">targ_rad</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c1"># degrees</span>
-    <span class="n">theta</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.linspace.html#numpy.linspace" title="numpy.linspace" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="numpy.pi" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="numpy.pi" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
-    <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.cos.html#numpy.cos" title="numpy.cos" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">theta</span><span class="p">),</span> <span class="n">radius</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="numpy.sin" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
-    <span class="n">big_circ</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Circle</span><span class="p">(</span>
-        <span class="n">ec</span><span class="p">,</span>
-        <span class="n">radius</span><span class="p">,</span>
-        <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
-        <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">,</span>
-        <span class="n">fill_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
-        <span class="n">line_color</span><span class="o">=</span><span class="s2">"white"</span><span class="p">,</span>
-        <span class="n">line_width</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span>
-    <span class="p">)</span>
-    <span class="n">targ_circ</span> <span class="o">=</span> <span class="n">visual</span><span class="o">.</span><span class="n">Circle</span><span class="p">(</span>
-        <span class="n">ec</span><span class="p">,</span> <span class="n">targ_rad</span><span class="p">,</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">"red"</span>
-    <span class="p">)</span>
-    <span class="n">fix_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-    <span class="c1"># start out by waiting for a 1 sec fixation at the start</span>
-    <span class="n">big_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="n">targ_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-    <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">()</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s2">"Circle"</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">el_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">()</span>  <span class="c1"># automatically stamps to EL</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">(</span><span class="n">fix_pos</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Initial fixation failed"</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">:])):</span>
-        <span class="n">targ_circ</span><span class="o">.</span><span class="n">set_pos</span><span class="p">((</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">),</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">)</span>
-        <span class="n">big_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-        <span class="n">targ_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
-        <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">()</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">"deg"</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Fixation </span><span class="si">{</span><span class="n">ii</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> failed"</span><span class="p">)</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">()</span>
-    <span class="n">el</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>  <span class="c1"># stop recording to save the file</span>
-    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">"All done!"</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
-    <span class="c1"># eyelink auto-closes (el.close()) because it gets registered with EC</span>
-
-<span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span>
-</pre></div>
-</div>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span class="c1"># Author: Eric Larson &lt;larsoner&#64;uw.edu&gt;</span><span class="w">
+</span><span class="c1">#</span><span class="w">
+</span><span class="c1"># License: BSD (3-clause)</span><span class="w">
+</span><span class="w">
+</span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="w">
+</span><span class="w">
+</span><span class="kn">import</span><span class="w"> </span><span class="nn">expyfun</span><span class="nn">.</span><span class="nn">analyze</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ea</span><span class="w">
+</span><span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="w"> </span><span class="kn">import</span> <a class="sphx-glr-backref-module-expyfun sphx-glr-backref-type-py-class sphx-glr-backref-instance reference internal" href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-expyfun sphx-glr-backref-type-py-class sphx-glr-backref-instance reference internal" href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController" title="expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">,</span> <span class="n">visual</span><span class="w">
+</span><span class="w">
+</span><span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="str"><span class="vm">__doc__</span></a><span class="p">)</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="k">with</span> <a class="sphx-glr-backref-module-expyfun sphx-glr-backref-type-py-class sphx-glr-backref-instance reference internal" href="../../generated/expyfun.ExperimentController.html#expyfun.ExperimentController" title="expyfun.ExperimentController"><span class="n">ExperimentController</span></a><span class="p">(</span><span class="w">
+</span>    <span class="s2">&quot;</span><span class="s2">testExp</span><span class="s2">&quot;</span><span class="p">,</span><span class="w">
+</span>    <span class="n">full_screen</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="w">
+</span>    <span class="n">participant</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">foo</span><span class="s2">&quot;</span><span class="p">,</span><span class="w">
+</span>    <span class="n">session</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">001</span><span class="s2">&quot;</span><span class="p">,</span><span class="w">
+</span>    <span class="n">output_dir</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="w">
+</span>    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">dev</span><span class="s2">&quot;</span><span class="p">,</span><span class="w">
+</span><span class="p">)</span> <span class="k">as</span> <span class="n">ec</span><span class="p">:</span><span class="w">
+</span>    <span class="n">el</span> <span class="o">=</span> <a class="sphx-glr-backref-module-expyfun sphx-glr-backref-type-py-class sphx-glr-backref-instance reference internal" href="../../generated/expyfun.EyelinkController.html#expyfun.EyelinkController" title="expyfun.EyelinkController"><span class="n">EyelinkController</span></a><span class="p">(</span><span class="n">ec</span><span class="p">)</span><span class="w">
+</span>    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="w">
+</span>        <span class="s2">&quot;</span><span class="s2">Welcome to the experiment!</span><span class="se">\n</span><span class="se">\n</span><span class="s2">First, we will </span><span class="s2">&quot;</span><span class="w">
+</span>        <span class="s2">&quot;</span><span class="s2">perform a screen calibration.</span><span class="se">\n</span><span class="se">\n</span><span class="s2">Press a button </span><span class="s2">&quot;</span><span class="w">
+</span>        <span class="s2">&quot;</span><span class="s2">to continue.</span><span class="s2">&quot;</span><span class="w">
+</span>    <span class="p">)</span><span class="w">
+</span>    <span class="n">el</span><span class="o">.</span><span class="n">calibrate</span><span class="p">(</span><span class="p">)</span>  <span class="c1"># by default this starts recording EyeLink data</span><span class="w">
+</span>    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="w">
+</span>        <span class="s2">&quot;</span><span class="s2">Excellent! Now, follow the red circle around the edge </span><span class="s2">&quot;</span><span class="w">
+</span>        <span class="s2">&quot;</span><span class="s2">of the big white circle.</span><span class="se">\n</span><span class="se">\n</span><span class="s2">Press a button to </span><span class="s2">&quot;</span><span class="w">
+</span>        <span class="s2">&quot;</span><span class="s2">continue</span><span class="s2">&quot;</span><span class="w">
+</span>    <span class="p">)</span><span class="w">
+</span><span class="w">
+</span>    <span class="c1"># make some circles to be drawn</span><span class="w">
+</span>    <span class="n">radius</span> <span class="o">=</span> <span class="mf">7.5</span>  <span class="c1"># degrees</span><span class="w">
+</span>    <span class="n">targ_rad</span> <span class="o">=</span> <span class="mf">0.2</span>  <span class="c1"># degrees</span><span class="w">
+</span>    <span class="n">theta</span> <span class="o">=</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function reference external" href="https://numpy.org/devdocs/reference/generated/numpy.linspace.html#numpy.linspace" title="numpy.linspace"><span class="n">np</span><span class="o">.</span><span class="n">linspace</span></a><span class="p">(</span><a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data reference external" href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">/</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.5</span> <span class="o">*</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data reference external" href="https://numpy.org/devdocs/reference/constants.html#numpy.pi" title="numpy.pi"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a><span class="p">,</span> <span class="mi">200</span><span class="p">)</span><span class="w">
+</span>    <span class="n">x_pos</span><span class="p">,</span> <span class="n">y_pos</span> <span class="o">=</span> <span class="n">radius</span> <span class="o">*</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data reference external" href="https://numpy.org/devdocs/reference/generated/numpy.cos.html#numpy.cos" title="numpy.cos"><span class="n">np</span><span class="o">.</span><span class="n">cos</span></a><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="p">,</span> <span class="n">radius</span> <span class="o">*</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-data reference external" href="https://numpy.org/devdocs/reference/generated/numpy.sin.html#numpy.sin" title="numpy.sin"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="n">theta</span><span class="p">)</span><span class="w">
+</span>    <span class="n">big_circ</span> <span class="o">=</span> <a class="sphx-glr-backref-module-expyfun-visual sphx-glr-backref-type-py-class sphx-glr-backref-instance reference internal" href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="w">
+</span>        <span class="n">ec</span><span class="p">,</span><span class="w">
+</span>        <span class="n">radius</span><span class="p">,</span><span class="w">
+</span>        <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="p">,</span><span class="w">
+</span>        <span class="n">units</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">deg</span><span class="s2">&quot;</span><span class="p">,</span><span class="w">
+</span>        <span class="n">fill_color</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span><span class="w">
+</span>        <span class="n">line_color</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">white</span><span class="s2">&quot;</span><span class="p">,</span><span class="w">
+</span>        <span class="n">line_width</span><span class="o">=</span><span class="mf">3.0</span><span class="p">,</span><span class="w">
+</span>    <span class="p">)</span><span class="w">
+</span>    <span class="n">targ_circ</span> <span class="o">=</span> <a class="sphx-glr-backref-module-expyfun-visual sphx-glr-backref-type-py-class sphx-glr-backref-instance reference internal" href="../../generated/expyfun.visual.Circle.html#expyfun.visual.Circle" title="expyfun.visual.Circle"><span class="n">visual</span><span class="o">.</span><span class="n">Circle</span></a><span class="p">(</span><span class="w">
+</span>        <span class="n">ec</span><span class="p">,</span> <span class="n">targ_rad</span><span class="p">,</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">,</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">)</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">deg</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fill_color</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">red</span><span class="s2">&quot;</span><span class="w">
+</span>    <span class="p">)</span><span class="w">
+</span>    <span class="n">fix_pos</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">,</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">)</span><span class="w">
+</span><span class="w">
+</span>    <span class="c1"># start out by waiting for a 1 sec fixation at the start</span><span class="w">
+</span>    <span class="n">big_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="p">)</span><span class="w">
+</span>    <span class="n">targ_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="p">)</span><span class="w">
+</span>    <span class="n">screenshot</span> <span class="o">=</span> <span class="n">ec</span><span class="o">.</span><span class="n">screenshot</span><span class="p">(</span><span class="p">)</span><span class="w">
+</span>    <span class="n">ec</span><span class="o">.</span><span class="n">identify_trial</span><span class="p">(</span><span class="n">ec_id</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">Circle</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">ttl_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">,</span> <span class="n">el_id</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="p">)</span><span class="w">
+</span>    <span class="n">ec</span><span class="o">.</span><span class="n">start_stimulus</span><span class="p">(</span><span class="p">)</span>  <span class="c1"># automatically stamps to EL</span><span class="w">
+</span>    <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">(</span><span class="n">fix_pos</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">deg</span><span class="s2">&quot;</span><span class="p">)</span><span class="p">:</span><span class="w">
+</span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="s2">Initial fixation failed</span><span class="s2">&quot;</span><span class="p">)</span><span class="w">
+</span>    <span class="k">for</span> <span class="n">ii</span><span class="p">,</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="p">]</span><span class="p">,</span> <span class="n">y_pos</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="p">]</span><span class="p">)</span><span class="p">)</span><span class="p">:</span><span class="w">
+</span>        <span class="n">targ_circ</span><span class="o">.</span><span class="n">set_pos</span><span class="p">(</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">deg</span><span class="s2">&quot;</span><span class="p">)</span><span class="w">
+</span>        <span class="n">big_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="p">)</span><span class="w">
+</span>        <span class="n">targ_circ</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="p">)</span><span class="w">
+</span>        <span class="n">ec</span><span class="o">.</span><span class="n">flip</span><span class="p">(</span><span class="p">)</span><span class="w">
+</span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">el</span><span class="o">.</span><span class="n">wait_for_fix</span><span class="p">(</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">]</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">5.0</span><span class="p">,</span> <span class="n">units</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">deg</span><span class="s2">&quot;</span><span class="p">)</span><span class="p">:</span><span class="w">
+</span>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="s2">Fixation </span><span class="si">{</span><span class="n">ii</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="si">}</span><span class="s2"> failed</span><span class="s2">&quot;</span><span class="p">)</span><span class="w">
+</span>    <span class="n">ec</span><span class="o">.</span><span class="n">trial_ok</span><span class="p">(</span><span class="p">)</span><span class="w">
+</span>    <span class="n">el</span><span class="o">.</span><span class="n">stop</span><span class="p">(</span><span class="p">)</span>  <span class="c1"># stop recording to save the file</span><span class="w">
+</span>    <span class="n">ec</span><span class="o">.</span><span class="n">screen_prompt</span><span class="p">(</span><span class="s2">&quot;</span><span class="s2">All done!</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">max_wait</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span><span class="w">
+</span>    <span class="c1"># eyelink auto-closes (el.close()) because it gets registered with EC</span><span class="w">
+</span><span class="w">
+</span><a class="sphx-glr-backref-module-expyfun-analyze sphx-glr-backref-type-py-function reference internal" href="../../generated/expyfun.analyze.plot_screen.html#expyfun.analyze.plot_screen" title="expyfun.analyze.plot_screen"><span class="n">ea</span><span class="o">.</span><span class="n">plot_screen</span></a><span class="p">(</span><span class="n">screenshot</span><span class="p">)</span><span class="w">
+</span></pre></div></div>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-experiments-eyetracking-experiment-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../../_downloads/5e220db6cf630005a223de12fbdb74ed/eyetracking_experiment_.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">eyetracking_experiment_.ipynb</span></code></a></p>
@@ -562,7 +561,7 @@ using eye-tracking simpler.</p>
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-14.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-21.
       <br/>
     
   </p>

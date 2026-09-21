@@ -31,7 +31,7 @@
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=a95f357e85573c9b56d5" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=fd6457a4" />
+    <link rel="stylesheet" type="text/css" href="../_static/sg_gallery.css?v=c83e6b79" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-binder.css?v=f4aeca0c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-dataframe.css?v=2082cf3c" />
     <link rel="stylesheet" type="text/css" href="../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
@@ -415,121 +415,120 @@ to download the full example code.</p>
 <span id="sphx-glr-auto-examples-generate-simple-stimuli-py"></span><h1>Generate sample stimuli<a class="headerlink" href="#generate-sample-stimuli" title="Link to this heading">#</a></h1>
 <p>This shows how to generate some simple stimuli. It will also play a couple
 of sample stimuli.</p>
-<img src="../_images/sphx_glr_generate_simple_stimuli_001.png" srcset="../_images/sphx_glr_generate_simple_stimuli_001.png" alt="generate simple stimuli" class = "sphx-glr-single-img"/><div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">op</span>
+<img src="../_images/sphx_glr_generate_simple_stimuli_001.png" srcset="../_images/sphx_glr_generate_simple_stimuli_001.png" alt="generate simple stimuli" class = "sphx-glr-single-img"/><div class="highlight-Python notranslate"><div class="highlight"><pre><span class="kn">from</span><span class="w"> </span><span class="nn">os</span><span class="w"> </span><span class="kn">import</span> <span class="n">path</span> <span class="k">as</span> <span class="n">op</span><span class="w">
+</span><span class="w">
+</span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib</span><span class="nn">.</span><span class="nn">pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span><span class="w">
+</span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span><span class="w">
+</span><span class="w">
+</span><span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="nn">.</span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <a class="sphx-glr-backref-module-expyfun-io sphx-glr-backref-type-py-function reference internal" href="../generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5" title="expyfun.io.write_hdf5"><span class="n">write_hdf5</span></a><span class="p">,</span> <a class="sphx-glr-backref-module-expyfun-io sphx-glr-backref-type-py-function reference internal" href="../generated/expyfun.io.write_wav.html#expyfun.io.write_wav" title="expyfun.io.write_wav"><span class="n">write_wav</span></a><span class="w">
+</span><span class="kn">from</span><span class="w"> </span><span class="nn">expyfun</span><span class="nn">.</span><span class="nn">stimuli</span><span class="w"> </span><span class="kn">import</span> <a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-function reference internal" href="../generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound" title="expyfun.stimuli.play_sound"><span class="n">play_sound</span></a><span class="w">
+</span><span class="w">
+</span><span class="nb">print</span><span class="p">(</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="str"><span class="vm">__doc__</span></a><span class="p">)</span><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="k">def</span><span class="w"> </span><span class="nf">generate_stimuli</span><span class="p">(</span><span class="w">
+</span>    <span class="n">num_trials</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="w">
+</span>    <span class="n">num_freqs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span><span class="w">
+</span>    <span class="n">stim_dur</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="w">
+</span>    <span class="n">min_freq</span><span class="o">=</span><span class="mf">500.0</span><span class="p">,</span><span class="w">
+</span>    <span class="n">max_freq</span><span class="o">=</span><span class="mf">4000.0</span><span class="p">,</span><span class="w">
+</span>    <span class="n">fs</span><span class="o">=</span><span class="mf">24414.0625</span><span class="p">,</span><span class="w">
+</span>    <span class="n">rms</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span><span class="w">
+</span>    <span class="n">output_dir</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">.</span><span class="s2">&quot;</span><span class="p">,</span><span class="w">
+</span>    <span class="n">save_as</span><span class="o">=</span><span class="s2">&quot;</span><span class="s2">hdf5</span><span class="s2">&quot;</span><span class="p">,</span><span class="w">
+</span>    <span class="n">rand_seed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="w">
+</span><span class="p">)</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;Make some sine waves and save in various formats. Optimized for saving
+    as MAT files, but can also save directly as WAV files, or can return a
+    python dictionary with sinewave data as values.
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+    Parameters
+    ----------
+    num_trials : int
+        Number of trials you want in your experiment. Ignored if save_as is
+        not 'mat'.
+    num_freqs : int
+        Number of frequencies (equally-spaced on a log2-scale) at which to
+        generate tones.
+    stim_dur : float
+        Duration of the tones in seconds.
+    min_freq : float
+        Frequency of the lowest tone in Hertz.
+    max_freq : float
+        Frequency of the highest tone in Hertz.
+    fs : float | None
+        Sampling frequency of resulting sinewaves.  Defaults to 24414.0625 (a
+        standard rate for TDTs).
+    rms : float
+        RMS amplitude to which all sinwaves will be scaled.
+    output_dir : str
+        Directory to output the files into.
+    save_as : str | None
+        Format in which to return the sinewaves. 'dict' returns sinewave arrays
+        as values in a python dictionary; 'wav' saves them as WAV files at
+        sampling frequency 'fs'; 'mat' saves them as a MAT file along with
+        related variables 'fs', 'freqs', 'trial_order', and 'rms'.
+        None will not save any data.
+    rand_seed : int | None
+        Seed for the random number generator.
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">write_hdf5</span><span class="p">,</span> <span class="n">write_wav</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">expyfun.stimuli</span><span class="w"> </span><span class="kn">import</span> <span class="n">play_sound</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="vm">__doc__</span><span class="p">)</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">generate_stimuli</span><span class="p">(</span>
-    <span class="n">num_trials</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-    <span class="n">num_freqs</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-    <span class="n">stim_dur</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-    <span class="n">min_freq</span><span class="o">=</span><span class="mf">500.0</span><span class="p">,</span>
-    <span class="n">max_freq</span><span class="o">=</span><span class="mf">4000.0</span><span class="p">,</span>
-    <span class="n">fs</span><span class="o">=</span><span class="mf">24414.0625</span><span class="p">,</span>
-    <span class="n">rms</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
-    <span class="n">output_dir</span><span class="o">=</span><span class="s2">"."</span><span class="p">,</span>
-    <span class="n">save_as</span><span class="o">=</span><span class="s2">"hdf5"</span><span class="p">,</span>
-    <span class="n">rand_seed</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-<span class="p">):</span>
-<span class="w">    </span><span class="sd">"""Make some sine waves and save in various formats. Optimized for saving</span>
-<span class="sd">    as MAT files, but can also save directly as WAV files, or can return a</span>
-<span class="sd">    python dictionary with sinewave data as values.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    num_trials : int</span>
-<span class="sd">        Number of trials you want in your experiment. Ignored if save_as is</span>
-<span class="sd">        not 'mat'.</span>
-<span class="sd">    num_freqs : int</span>
-<span class="sd">        Number of frequencies (equally-spaced on a log2-scale) at which to</span>
-<span class="sd">        generate tones.</span>
-<span class="sd">    stim_dur : float</span>
-<span class="sd">        Duration of the tones in seconds.</span>
-<span class="sd">    min_freq : float</span>
-<span class="sd">        Frequency of the lowest tone in Hertz.</span>
-<span class="sd">    max_freq : float</span>
-<span class="sd">        Frequency of the highest tone in Hertz.</span>
-<span class="sd">    fs : float | None</span>
-<span class="sd">        Sampling frequency of resulting sinewaves.  Defaults to 24414.0625 (a</span>
-<span class="sd">        standard rate for TDTs).</span>
-<span class="sd">    rms : float</span>
-<span class="sd">        RMS amplitude to which all sinwaves will be scaled.</span>
-<span class="sd">    output_dir : str</span>
-<span class="sd">        Directory to output the files into.</span>
-<span class="sd">    save_as : str | None</span>
-<span class="sd">        Format in which to return the sinewaves. 'dict' returns sinewave arrays</span>
-<span class="sd">        as values in a python dictionary; 'wav' saves them as WAV files at</span>
-<span class="sd">        sampling frequency 'fs'; 'mat' saves them as a MAT file along with</span>
-<span class="sd">        related variables 'fs', 'freqs', 'trial_order', and 'rms'.</span>
-<span class="sd">        None will not save any data.</span>
-<span class="sd">    rand_seed : int | None</span>
-<span class="sd">        Seed for the random number generator.</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    wavs : dict | None</span>
-<span class="sd">        The stimulus dictionary.</span>
-<span class="sd">    """</span>
-    <span class="k">if</span> <span class="n">rand_seed</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">rng</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">rng</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState" class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="n">rand_seed</span><span class="p">)</span>
-
-    <span class="c1"># check input arguments</span>
-    <span class="k">if</span> <span class="n">save_as</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">save_as</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"dict"</span><span class="p">,</span> <span class="s2">"wav"</span><span class="p">,</span> <span class="s2">"hdf5"</span><span class="p">]:</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'"save_as" must be "dict", "wav", or "hdf5"'</span><span class="p">)</span>
-
-    <span class="n">fs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span>
-    <span class="n">t</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.round.html#numpy.round" title="numpy.round" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">round</span></a><span class="p">(</span><span class="n">stim_dur</span> <span class="o">*</span> <span class="n">fs</span><span class="p">))</span> <span class="o">/</span> <span class="n">fs</span>
-
-    <span class="c1"># frequencies equally spaced on a log-2 scale</span>
-    <span class="n">freqs</span> <span class="o">=</span> <span class="n">min_freq</span> <span class="o">*</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.logspace.html#numpy.logspace" title="numpy.logspace" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">logspace</span></a><span class="p">(</span>
-        <span class="mi">0</span><span class="p">,</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">log2</span></a><span class="p">(</span><span class="n">max_freq</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">min_freq</span><span class="p">)),</span> <span class="n">num_freqs</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span>
-    <span class="p">)</span>
-
-    <span class="c1"># strings for the filenames / dictionary keys</span>
-    <span class="n">freq_names</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">))</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">freqs</span><span class="p">]</span>
-    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"stim_</span><span class="si">%s</span><span class="s2">_</span><span class="si">%s</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">freq_names</span><span class="p">)]</span>
-
-    <span class="c1"># generate sinewaves &amp; RMS normalize</span>
-    <span class="n">wavs</span> <span class="o">=</span> <span class="p">[</span><a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <a href="https://docs.python.org/3/builtins/functions.html#float" title="builtins.float" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">*</span> <span class="n">f</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">freqs</span><span class="p">]</span>
-    <span class="n">wavs</span> <span class="o">=</span> <span class="p">[</span><span class="n">rms</span> <span class="o">/</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><a href="https://numpy.org/devdocs/reference/generated/numpy.mean.html#numpy.mean" title="numpy.mean" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">w</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">wavs</span><span class="p">]</span>
-
-    <span class="c1"># collect into dictionary &amp; save</span>
-    <a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wav_dict</span></a> <span class="o">=</span> <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="n">w</span> <span class="k">for</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">wavs</span><span class="p">)}</span>
-    <span class="k">if</span> <span class="n">save_as</span> <span class="o">==</span> <span class="s2">"hdf5"</span><span class="p">:</span>
-        <span class="n">num_reps</span> <span class="o">=</span> <span class="n">num_trials</span> <span class="o">//</span> <span class="n">num_freqs</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="n">trials</span> <span class="o">=</span> <a href="https://numpy.org/devdocs/reference/generated/numpy.tile.html#numpy.tile" title="numpy.tile" class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function"><span class="n">np</span><span class="o">.</span><span class="n">tile</span></a><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_freqs</span><span class="p">),</span> <span class="n">num_reps</span><span class="p">)</span>
-        <span class="n">trial_order</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">trials</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">num_trials</span><span class="p">])</span>
-        <a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wav_dict</span></a><span class="o">.</span><span class="n">update</span><span class="p">(</span>
-            <span class="p">{</span><span class="s2">"trial_order"</span><span class="p">:</span> <span class="n">trial_order</span><span class="p">,</span> <span class="s2">"freqs"</span><span class="p">:</span> <span class="n">freqs</span><span class="p">,</span> <span class="s2">"fs"</span><span class="p">:</span> <span class="n">fs</span><span class="p">,</span> <span class="s2">"rms"</span><span class="p">:</span> <span class="n">rms</span><span class="p">}</span>
-        <span class="p">)</span>
-        <span class="n">write_hdf5</span><span class="p">(</span>
-            <a href="https://docs.python.org/3/library/os.path.html#os.path.join" title="os.path.join" class="sphx-glr-backref-module-os-path sphx-glr-backref-type-py-function"><span class="n">op</span><span class="o">.</span><span class="n">join</span></a><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s2">"equally_spaced_sinewaves.hdf5"</span><span class="p">),</span>
-            <a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wav_dict</span></a><span class="p">,</span>
-            <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-        <span class="p">)</span>
-    <span class="k">elif</span> <span class="n">save_as</span> <span class="o">==</span> <span class="s2">"wav"</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
-            <span class="n">write_wav</span><span class="p">(</span><a href="https://docs.python.org/3/library/os.path.html#os.path.join" title="os.path.join" class="sphx-glr-backref-module-os-path sphx-glr-backref-type-py-function"><span class="n">op</span><span class="o">.</span><span class="n">join</span></a><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="s2">".wav"</span><span class="p">),</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wav_dict</span></a><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="nb">int</span><span class="p">(</span><span class="n">fs</span><span class="p">))</span>
-    <span class="k">return</span> <a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wav_dict</span></a>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-    <a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wav_dict</span></a> <span class="o">=</span> <span class="n">generate_stimuli</span><span class="p">(</span><span class="n">save_as</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wav_dict</span></a><span class="p">[</span><span class="s2">"stim_0_500"</span><span class="p">][:</span><span class="mi">1000</span><span class="p">])</span>
-    <span class="n">play_sound</span><span class="p">(</span><a href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="builtins.dict" class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance"><span class="n">wav_dict</span></a><span class="p">[</span><span class="s2">"stim_0_500"</span><span class="p">])</span>
-    <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show" class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">()</span>
-</pre></div>
-</div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.176 seconds)</p>
+    Returns
+    -------
+    wavs : dict | None
+        The stimulus dictionary.
+    &quot;&quot;&quot;</span><span class="w">
+</span>    <span class="k">if</span> <span class="n">rand_seed</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span><span class="w">
+</span>        <span class="n">rng</span> <span class="o">=</span> <a class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class reference external" href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="p">)</span><span class="w">
+</span>    <span class="k">else</span><span class="p">:</span><span class="w">
+</span>        <span class="n">rng</span> <span class="o">=</span> <a class="sphx-glr-backref-module-numpy-random sphx-glr-backref-type-py-class reference external" href="https://numpy.org/devdocs/reference/random/legacy.html#numpy.random.RandomState" title="numpy.random.RandomState"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span></a><span class="p">(</span><span class="n">rand_seed</span><span class="p">)</span><span class="w">
+</span><span class="w">
+</span>    <span class="c1"># check input arguments</span><span class="w">
+</span>    <span class="k">if</span> <span class="n">save_as</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">save_as</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;</span><span class="s2">dict</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s2">wav</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s2">hdf5</span><span class="s2">&quot;</span><span class="p">]</span><span class="p">:</span><span class="w">
+</span>        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">'</span><span class="s1">&quot;</span><span class="s1">save_as</span><span class="s1">&quot;</span><span class="s1"> must be </span><span class="s1">&quot;</span><span class="s1">dict</span><span class="s1">&quot;</span><span class="s1">, </span><span class="s1">&quot;</span><span class="s1">wav</span><span class="s1">&quot;</span><span class="s1">, or </span><span class="s1">&quot;</span><span class="s1">hdf5</span><span class="s1">&quot;</span><span class="s1">'</span><span class="p">)</span><span class="w">
+</span><span class="w">
+</span>    <span class="n">fs</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span><span class="w">
+</span>    <span class="n">t</span> <span class="o">=</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function reference external" href="https://numpy.org/devdocs/reference/generated/numpy.arange.html#numpy.arange" title="numpy.arange"><span class="n">np</span><span class="o">.</span><span class="n">arange</span></a><span class="p">(</span><a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function reference external" href="https://numpy.org/devdocs/reference/generated/numpy.round.html#numpy.round" title="numpy.round"><span class="n">np</span><span class="o">.</span><span class="n">round</span></a><span class="p">(</span><span class="n">stim_dur</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span><span class="p">)</span> <span class="o">/</span> <span class="n">fs</span><span class="w">
+</span><span class="w">
+</span>    <span class="c1"># frequencies equally spaced on a log-2 scale</span><span class="w">
+</span>    <span class="n">freqs</span> <span class="o">=</span> <span class="n">min_freq</span> <span class="o">*</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function reference external" href="https://numpy.org/devdocs/reference/generated/numpy.logspace.html#numpy.logspace" title="numpy.logspace"><span class="n">np</span><span class="o">.</span><span class="n">logspace</span></a><span class="p">(</span><span class="w">
+</span>        <span class="mi">0</span><span class="p">,</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc"><span class="n">np</span><span class="o">.</span><span class="n">log2</span></a><span class="p">(</span><span class="n">max_freq</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">min_freq</span><span class="p">)</span><span class="p">)</span><span class="p">,</span> <span class="n">num_freqs</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="mi">2</span><span class="w">
+</span>    <span class="p">)</span><span class="w">
+</span><span class="w">
+</span>    <span class="c1"># strings for the filenames / dictionary keys</span><span class="w">
+</span>    <span class="n">freq_names</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">freqs</span><span class="p">]</span><span class="w">
+</span>    <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;</span><span class="s2">stim_</span><span class="si">%s</span><span class="s2">_</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">freq_names</span><span class="p">)</span><span class="p">]</span><span class="w">
+</span><span class="w">
+</span>    <span class="c1"># generate sinewaves &amp; RMS normalize</span><span class="w">
+</span>    <span class="n">wavs</span> <span class="o">=</span> <span class="p">[</span><a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc"><span class="n">np</span><span class="o">.</span><span class="n">sin</span></a><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/functions.html#float" title="float"><span class="n">np</span><span class="o">.</span><span class="n">pi</span></a> <span class="o">*</span> <span class="n">f</span> <span class="o">*</span> <span class="n">t</span><span class="p">)</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">freqs</span><span class="p">]</span><span class="w">
+</span>    <span class="n">wavs</span> <span class="o">=</span> <span class="p">[</span><span class="n">rms</span> <span class="o">/</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://numpy.org/devdocs/reference/generated/numpy.ufunc.html#numpy.ufunc" title="numpy.ufunc"><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span></a><span class="p">(</span><a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function reference external" href="https://numpy.org/devdocs/reference/generated/numpy.mean.html#numpy.mean" title="numpy.mean"><span class="n">np</span><span class="o">.</span><span class="n">mean</span></a><span class="p">(</span><span class="n">w</span><span class="o">*</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span><span class="p">)</span> <span class="o">*</span> <span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">wavs</span><span class="p">]</span><span class="w">
+</span><span class="w">
+</span>    <span class="c1"># collect into dictionary &amp; save</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">wav_dict</span></a> <span class="o">=</span> <span class="p">{</span><span class="n">n</span><span class="p">:</span> <span class="n">w</span> <span class="k">for</span> <span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="n">wavs</span><span class="p">)</span><span class="p">}</span><span class="w">
+</span>    <span class="k">if</span> <span class="n">save_as</span> <span class="o">==</span> <span class="s2">&quot;</span><span class="s2">hdf5</span><span class="s2">&quot;</span><span class="p">:</span><span class="w">
+</span>        <span class="n">num_reps</span> <span class="o">=</span> <span class="n">num_trials</span> <span class="o">/</span><span class="o">/</span> <span class="n">num_freqs</span> <span class="o">+</span> <span class="mi">1</span><span class="w">
+</span>        <span class="n">trials</span> <span class="o">=</span> <a class="sphx-glr-backref-module-numpy sphx-glr-backref-type-py-function reference external" href="https://numpy.org/devdocs/reference/generated/numpy.tile.html#numpy.tile" title="numpy.tile"><span class="n">np</span><span class="o">.</span><span class="n">tile</span></a><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_freqs</span><span class="p">)</span><span class="p">,</span> <span class="n">num_reps</span><span class="p">)</span><span class="w">
+</span>        <span class="n">trial_order</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">trials</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">num_trials</span><span class="p">]</span><span class="p">)</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">wav_dict</span></a><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="w">
+</span>            <span class="p">{</span><span class="s2">&quot;</span><span class="s2">trial_order</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">trial_order</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s2">freqs</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">freqs</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s2">fs</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">fs</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s2">rms</span><span class="s2">&quot;</span><span class="p">:</span> <span class="n">rms</span><span class="p">}</span><span class="w">
+</span>        <span class="p">)</span><span class="w">
+</span>        <a class="sphx-glr-backref-module-expyfun-io sphx-glr-backref-type-py-function reference internal" href="../generated/expyfun.io.write_hdf5.html#expyfun.io.write_hdf5" title="expyfun.io.write_hdf5"><span class="n">write_hdf5</span></a><span class="p">(</span><span class="w">
+</span>            <a class="sphx-glr-backref-module-os-path sphx-glr-backref-type-py-function reference external" href="https://docs.python.org/3/library/os.path.html#os.path.join" title="os.path.join"><span class="n">op</span><span class="o">.</span><span class="n">join</span></a><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s2">equally_spaced_sinewaves.hdf5</span><span class="s2">&quot;</span><span class="p">)</span><span class="p">,</span><span class="w">
+</span>            <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">wav_dict</span></a><span class="p">,</span><span class="w">
+</span>            <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="w">
+</span>        <span class="p">)</span><span class="w">
+</span>    <span class="k">elif</span> <span class="n">save_as</span> <span class="o">==</span> <span class="s2">&quot;</span><span class="s2">wav</span><span class="s2">&quot;</span><span class="p">:</span><span class="w">
+</span>        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span><span class="w">
+</span>            <a class="sphx-glr-backref-module-expyfun-io sphx-glr-backref-type-py-function reference internal" href="../generated/expyfun.io.write_wav.html#expyfun.io.write_wav" title="expyfun.io.write_wav"><span class="n">write_wav</span></a><span class="p">(</span><a class="sphx-glr-backref-module-os-path sphx-glr-backref-type-py-function reference external" href="https://docs.python.org/3/library/os.path.html#os.path.join" title="os.path.join"><span class="n">op</span><span class="o">.</span><span class="n">join</span></a><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="s2">.wav</span><span class="s2">&quot;</span><span class="p">)</span><span class="p">,</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">wav_dict</span></a><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">fs</span><span class="p">)</span><span class="p">)</span><span class="w">
+</span>    <span class="k">return</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">wav_dict</span></a><span class="w">
+</span><span class="w">
+</span><span class="w">
+</span><span class="k">if</span> <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#str" title="str"><span class="vm">__name__</span></a> <span class="o">==</span> <span class="s2">&quot;</span><span class="s2">__main__</span><span class="s2">&quot;</span><span class="p">:</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">wav_dict</span></a> <span class="o">=</span> <span class="n">generate_stimuli</span><span class="p">(</span><span class="n">save_as</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot" title="matplotlib.pyplot.plot"><span class="n">plt</span><span class="o">.</span><span class="n">plot</span></a><span class="p">(</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">wav_dict</span></a><span class="p">[</span><span class="s2">&quot;</span><span class="s2">stim_0_500</span><span class="s2">&quot;</span><span class="p">]</span><span class="p">[</span><span class="p">:</span><span class="mi">1000</span><span class="p">]</span><span class="p">)</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-expyfun-stimuli sphx-glr-backref-type-py-function reference internal" href="../generated/expyfun.stimuli.play_sound.html#expyfun.stimuli.play_sound" title="expyfun.stimuli.play_sound"><span class="n">play_sound</span></a><span class="p">(</span><a class="sphx-glr-backref-module-builtins sphx-glr-backref-type-py-class sphx-glr-backref-instance reference external" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">wav_dict</span></a><span class="p">[</span><span class="s2">&quot;</span><span class="s2">stim_0_500</span><span class="s2">&quot;</span><span class="p">]</span><span class="p">)</span><span class="w">
+</span>    <a class="sphx-glr-backref-module-matplotlib-pyplot sphx-glr-backref-type-py-function reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html#matplotlib.pyplot.show" title="matplotlib.pyplot.show"><span class="n">plt</span><span class="o">.</span><span class="n">show</span></a><span class="p">(</span><span class="p">)</span><span class="w">
+</span></pre></div></div>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> (0 minutes 0.182 seconds)</p>
 <div class="sphx-glr-footer sphx-glr-footer-example docutils container" id="sphx-glr-download-auto-examples-generate-simple-stimuli-py">
 <div class="sphx-glr-download sphx-glr-download-jupyter docutils container">
 <p><a class="reference download internal" download="" href="../_downloads/8d68ef160c2df4467a9c6b1b8d01c50d/generate_simple_stimuli.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Jupyter</span> <span class="pre">notebook:</span> <span class="pre">generate_simple_stimuli.ipynb</span></code></a></p>
@@ -602,7 +601,7 @@ of sample stimuli.</p>
 
   <p class="copyright">
     
-      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-14.
+      © Copyright 2013-2026, expyfun developers. Last updated on 2026-09-21.
       <br/>
     
   </p>
